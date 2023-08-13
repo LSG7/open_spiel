@@ -27,12 +27,12 @@ from open_spiel.python.algorithms.rnad import rnad
 class RNADTest(absltest.TestCase):
 
   def test_run_kuhn(self):
-    solver = rnad.RNaDSolver(rnad.RNaDConfig(game_name="kuhn_poker"))
+    solver = rnad.RNaDSolver(rnad.RNaDConfig(game_name="battleship"))
     for _ in range(10):
       solver.step()
 
   def test_serialization(self):
-    solver = rnad.RNaDSolver(rnad.RNaDConfig(game_name="kuhn_poker"))
+    solver = rnad.RNaDSolver(rnad.RNaDConfig(game_name="battleship"))
     solver.step()
 
     state_bytes = pickle.dumps(solver)
