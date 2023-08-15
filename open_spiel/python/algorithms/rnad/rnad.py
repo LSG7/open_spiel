@@ -925,13 +925,20 @@ class RNaDSolver(policy_lib.Policy):
 
   def step(self):
     """One step of the algorithm, that plays the game and improves params."""
+    
+    # 1
     timestep = self.collect_batch_trajectory()
+
+    # 2
     alpha, update_target_net = self._entropy_schedule(self.learner_steps)
+
+    # 3
     (self.params, self.params_target, self.params_prev, self.params_prev_,
      self.optimizer, self.optimizer_target), logs = self.update_parameters(
          self.params, self.params_target, self.params_prev, self.params_prev_,
          self.optimizer, self.optimizer_target, timestep, alpha,
          self.learner_steps, update_target_net)
+    
     self.learner_steps += 1
     logs.update({
         "actor_steps": self.actor_steps,
