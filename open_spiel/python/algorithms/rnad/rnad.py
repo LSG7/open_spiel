@@ -1050,6 +1050,8 @@ class RNaDSolver(policy_lib.Policy):
     # Concatenate all the timesteps together to form a single rollout [T, B, ..]
     return jax.tree_util.tree_map(lambda *xs: np.stack(xs, axis=0), *timesteps)
 
+  ## State 마다 EnvStep 을 만들고
+  #  EnvStep 들을 하나의 EnvStep 으로 합친다.
   def _batch_of_states_as_env_step(self,
                                    states: Sequence[pyspiel.State]) -> EnvStep:
     envs = [self._state_as_env_step(state) for state in states]
