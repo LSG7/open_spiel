@@ -158,6 +158,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a99eaa153eefbd1136b3fd31452dce2d8"><td class="memItemLeft" align="right" valign="top">chex.Array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrnad_1_1_r_na_d_solver.html#a99eaa153eefbd1136b3fd31452dce2d8">_network_jit_apply_and_post_process</a> (self, <a class="el" href="namespacernad.html#a15a6ef7238a04e75a602d40ec95d33b7">Params</a> <a class="el" href="classrnad_1_1_r_na_d_solver.html#a8353e8e19311cea73f001bce6a115b09">params</a>, <a class="el" href="classrnad_1_1_env_step.html">EnvStep</a> env_step)</td></tr>
 <tr class="separator:a99eaa153eefbd1136b3fd31452dce2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b72cc4a3225f2e68db88faffafb68a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrnad_1_1_env_step.html">EnvStep</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3">_batch_of_states_as_env_step</a> (self, Sequence[pyspiel.State] states)</td></tr>
+<tr class="memdesc:a8b72cc4a3225f2e68db88faffafb68a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">State 마다 EnvStep 을 만들고 EnvStep 들을 하나의 EnvStep 으로 합친다.  <br /></td></tr>
 <tr class="separator:a8b72cc4a3225f2e68db88faffafb68a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70a42642a06248923ee2d380f7272e87"><td class="memItemLeft" align="right" valign="top">Sequence[pyspiel.State]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrnad_1_1_r_na_d_solver.html#a70a42642a06248923ee2d380f7272e87">_batch_of_states_apply_action</a> (self, Sequence[pyspiel.State] states, chex.Array actions)</td></tr>
 <tr class="separator:a70a42642a06248923ee2d380f7272e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -324,11 +325,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <pre class="fragment">Apply a batch of `actions` to a parallel list of `states`.</pre> 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01051">1051</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01060">1060</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">References <a class="el" href="rnad_8py_source.html#l01062">rnad.RNaDSolver._play_chance()</a>, and <a class="el" href="rnad_8py_source.html#l00724">rnad.RNaDSolver.actor_steps</a>.</p>
+<p class="reference">References <a class="el" href="rnad_8py_source.html#l01071">rnad.RNaDSolver._play_chance()</a>, and <a class="el" href="rnad_8py_source.html#l00724">rnad.RNaDSolver.actor_steps</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01021">rnad.RNaDSolver.collect_batch_trajectory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01028">rnad.RNaDSolver.collect_batch_trajectory()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -388,17 +389,19 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01046">1046</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p>State 마다 EnvStep 을 만들고 EnvStep 들을 하나의 EnvStep 으로 합친다. </p>
 
-<p class="reference">References <a class="el" href="rnad_8py_source.html#l00953">rnad.RNaDSolver._state_as_env_step()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01055">1055</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00985">rnad.RNaDSolver.action_probabilities()</a>, and <a class="el" href="rnad_8py_source.html#l01021">rnad.RNaDSolver.collect_batch_trajectory()</a>.</p>
+<p class="reference">References <a class="el" href="rnad_8py_source.html#l00960">rnad.RNaDSolver._state_as_env_step()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00992">rnad.RNaDSolver.action_probabilities()</a>, and <a class="el" href="rnad_8py_source.html#l01028">rnad.RNaDSolver.collect_batch_trajectory()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrnad_1_1_r_na_d_solver_a8b72cc4a3225f2e68db88faffafb68a3_cgraph.png" border="0" usemap="#aclassrnad_1_1_r_na_d_solver_a8b72cc4a3225f2e68db88faffafb68a3_cgraph" alt=""/></div>
 <map name="aclassrnad_1_1_r_na_d_solver_a8b72cc4a3225f2e68db88faffafb68a3_cgraph" id="aclassrnad_1_1_r_na_d_solver_a8b72cc4a3225f2e68db88faffafb68a3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,172,46"/>
+<area shape="rect" title="State 마다 EnvStep 을 만들고 EnvStep 들을 하나의 EnvStep 으로 합친다." alt="" coords="5,5,172,46"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a66dd86f5745812c182809c07d252fac7" title=" " alt="" coords="220,5,383,46"/>
 <area shape="poly" title=" " alt="" coords="172,23,205,23,205,28,172,28"/>
 </map>
@@ -408,7 +411,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrnad_1_1_r_na_d_solver_a8b72cc4a3225f2e68db88faffafb68a3_icgraph.png" border="0" usemap="#aclassrnad_1_1_r_na_d_solver_a8b72cc4a3225f2e68db88faffafb68a3_icgraph" alt=""/></div>
 <map name="aclassrnad_1_1_r_na_d_solver_a8b72cc4a3225f2e68db88faffafb68a3_icgraph" id="aclassrnad_1_1_r_na_d_solver_a8b72cc4a3225f2e68db88faffafb68a3_icgraph">
-<area shape="rect" title=" " alt="" coords="419,73,585,113"/>
+<area shape="rect" title="State 마다 EnvStep 을 만들고 EnvStep 들을 하나의 EnvStep 으로 합친다." alt="" coords="419,73,585,113"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#afa3a90d417810e30aa88658cc301d698" title=" " alt="" coords="207,39,370,80"/>
 <area shape="poly" title=" " alt="" coords="404,80,370,75,370,70,405,75"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a67406399354c5cd4ab48461dbdd486b9" title=" " alt="" coords="206,105,371,145"/>
@@ -464,11 +467,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00998">998</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01005">1005</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
 <p class="reference">References <a class="el" href="rnad_8py_source.html#l00720">rnad.RNaDSolver.config</a>, and <a class="el" href="rnad_8py_source.html#l00758">rnad.RNaDSolver.network</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00985">rnad.RNaDSolver.action_probabilities()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00992">rnad.RNaDSolver.action_probabilities()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -516,7 +519,7 @@ Must *not* be called from under a jitted function!
 Returns:
   A fresh rng_key.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00942">942</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00949">949</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
 <p class="reference">References <a class="el" href="rnad_8py_source.html#l00731">rnad.RNaDSolver._rngkey</a>.</p>
 
@@ -563,11 +566,11 @@ Returns:
   The same input state object, but updated. The state is returned
   only for convenience, to allow chaining function calls.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01062">1062</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01071">1071</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
 <p class="reference">References <a class="el" href="rnad_8py_source.html#l00732">rnad.RNaDSolver._np_rng</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01053">rnad.RNaDSolver._batch_of_states_apply_action()</a>, and <a class="el" href="rnad_8py_source.html#l01021">rnad.RNaDSolver.collect_batch_trajectory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01062">rnad.RNaDSolver._batch_of_states_apply_action()</a>, and <a class="el" href="rnad_8py_source.html#l01028">rnad.RNaDSolver.collect_batch_trajectory()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -620,18 +623,18 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00953">953</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00960">960</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
 <p class="reference">References <a class="el" href="rnad_8py_source.html#l00737">rnad.RNaDSolver._ex_state</a>, and <a class="el" href="rnad_8py_source.html#l00720">rnad.RNaDSolver.config</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01047">rnad.RNaDSolver._batch_of_states_as_env_step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01056">rnad.RNaDSolver._batch_of_states_as_env_step()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrnad_1_1_r_na_d_solver_a66dd86f5745812c182809c07d252fac7_icgraph.png" border="0" usemap="#aclassrnad_1_1_r_na_d_solver_a66dd86f5745812c182809c07d252fac7_icgraph" alt=""/></div>
 <map name="aclassrnad_1_1_r_na_d_solver_a66dd86f5745812c182809c07d252fac7_icgraph" id="aclassrnad_1_1_r_na_d_solver_a66dd86f5745812c182809c07d252fac7_icgraph">
 <area shape="rect" title=" " alt="" coords="633,73,797,113"/>
-<area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3" title=" " alt="" coords="419,73,585,113"/>
+<area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3" title="State 마다 EnvStep 을 만들고 EnvStep 들을 하나의 EnvStep 으로 합친다." alt="" coords="419,73,585,113"/>
 <area shape="poly" title=" " alt="" coords="619,96,586,96,586,90,619,90"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#afa3a90d417810e30aa88658cc301d698" title=" " alt="" coords="207,39,370,80"/>
 <area shape="poly" title=" " alt="" coords="404,80,370,75,370,70,405,75"/>
@@ -680,9 +683,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns action probabilities dict for a single batch.</pre> 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00983">983</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00990">990</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">References <a class="el" href="rnad_8py_source.html#l01047">rnad.RNaDSolver._batch_of_states_as_env_step()</a>, <a class="el" href="rnad_8py_source.html#l00999">rnad.RNaDSolver._network_jit_apply_and_post_process()</a>, and <a class="el" href="rnad_8py_source.html#l00770">rnad.RNaDSolver.params_target</a>.</p>
+<p class="reference">References <a class="el" href="rnad_8py_source.html#l01056">rnad.RNaDSolver._batch_of_states_as_env_step()</a>, <a class="el" href="rnad_8py_source.html#l01006">rnad.RNaDSolver._network_jit_apply_and_post_process()</a>, and <a class="el" href="rnad_8py_source.html#l00770">rnad.RNaDSolver.params_target</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="policy_8py_source.html#l00145">policy.Policy.__call__()</a>, and <a class="el" href="policy_8py_source.html#l00158">policy.Policy.to_tabular()</a>.</p>
 <div class="dynheader">
@@ -691,7 +694,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classrnad_1_1_r_na_d_solver_afa3a90d417810e30aa88658cc301d698_cgraph.png" border="0" usemap="#aclassrnad_1_1_r_na_d_solver_afa3a90d417810e30aa88658cc301d698_cgraph" alt=""/></div>
 <map name="aclassrnad_1_1_r_na_d_solver_afa3a90d417810e30aa88658cc301d698_cgraph" id="aclassrnad_1_1_r_na_d_solver_afa3a90d417810e30aa88658cc301d698_cgraph">
 <area shape="rect" title=" " alt="" coords="5,39,168,79"/>
-<area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3" title=" " alt="" coords="227,5,394,46"/>
+<area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3" title="State 마다 EnvStep 을 만들고 EnvStep 들을 하나의 EnvStep 으로 합친다." alt="" coords="227,5,394,46"/>
 <area shape="poly" title=" " alt="" coords="168,44,212,38,213,43,169,50"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a99eaa153eefbd1136b3fd31452dce2d8" title=" " alt="" coords="216,71,405,111"/>
 <area shape="poly" title=" " alt="" coords="169,68,201,73,200,78,168,73"/>
@@ -740,11 +743,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01005">1005</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01012">1012</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
 <p class="reference">References <a class="el" href="rnad_8py_source.html#l00732">rnad.RNaDSolver._np_rng</a>, <a class="el" href="rnad_8py_source.html#l00758">rnad.RNaDSolver.network</a>, and <a class="el" href="rnad_8py_source.html#l00769">rnad.RNaDSolver.params</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01021">rnad.RNaDSolver.collect_batch_trajectory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01028">rnad.RNaDSolver.collect_batch_trajectory()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -776,9 +779,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01021">1021</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l01028">1028</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">References <a class="el" href="rnad_8py_source.html#l01053">rnad.RNaDSolver._batch_of_states_apply_action()</a>, <a class="el" href="rnad_8py_source.html#l01047">rnad.RNaDSolver._batch_of_states_as_env_step()</a>, <a class="el" href="rnad_8py_source.html#l00736">rnad.RNaDSolver._game</a>, <a class="el" href="rnad_8py_source.html#l01062">rnad.RNaDSolver._play_chance()</a>, <a class="el" href="rnad_8py_source.html#l01005">rnad.RNaDSolver.actor_step()</a>, and <a class="el" href="rnad_8py_source.html#l00720">rnad.RNaDSolver.config</a>.</p>
+<p class="reference">References <a class="el" href="rnad_8py_source.html#l01062">rnad.RNaDSolver._batch_of_states_apply_action()</a>, <a class="el" href="rnad_8py_source.html#l01056">rnad.RNaDSolver._batch_of_states_as_env_step()</a>, <a class="el" href="rnad_8py_source.html#l00736">rnad.RNaDSolver._game</a>, <a class="el" href="rnad_8py_source.html#l01071">rnad.RNaDSolver._play_chance()</a>, <a class="el" href="rnad_8py_source.html#l01012">rnad.RNaDSolver.actor_step()</a>, and <a class="el" href="rnad_8py_source.html#l00720">rnad.RNaDSolver.config</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00926">rnad.RNaDSolver.step()</a>.</p>
 <div class="dynheader">
@@ -791,7 +794,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="142,89,243,49,245,54,144,94"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a4ce161ca6549f1f9126106bee2f45075" title=" " alt="" coords="458,31,616,71"/>
 <area shape="poly" title=" " alt="" coords="171,98,443,61,443,66,171,104"/>
-<area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3" title=" " alt="" coords="230,120,396,161"/>
+<area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3" title="State 마다 EnvStep 을 만들고 EnvStep 들을 하나의 EnvStep 으로 합친다." alt="" coords="230,120,396,161"/>
 <area shape="poly" title=" " alt="" coords="171,120,215,125,214,131,170,125"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a62c8930792f82d22e07b16e93a6c4249" title=" " alt="" coords="219,185,407,211"/>
 <area shape="poly" title=" " alt="" coords="131,131,220,170,243,178,242,183,218,175,129,136"/>
@@ -958,7 +961,7 @@ Here is the call graph for this function:</div>
 <pre class="fragment">One step of the algorithm, that plays the game and improves params.</pre> 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00926">926</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">References <a class="el" href="rnad_8py_source.html#l00761">rnad.RNaDSolver._entropy_schedule</a>, <a class="el" href="rnad_8py_source.html#l00724">rnad.RNaDSolver.actor_steps</a>, <a class="el" href="rnad_8py_source.html#l01021">rnad.RNaDSolver.collect_batch_trajectory()</a>, <a class="el" href="rnad_8py_source.html#l00723">rnad.RNaDSolver.learner_steps</a>, <a class="el" href="rnad_8py_source.html#l00775">rnad.RNaDSolver.optimizer</a>, <a class="el" href="rnad_8py_source.html#l00783">rnad.RNaDSolver.optimizer_target</a>, <a class="el" href="rnad_8py_source.html#l00769">rnad.RNaDSolver.params</a>, <a class="el" href="rnad_8py_source.html#l00771">rnad.RNaDSolver.params_prev</a>, <a class="el" href="rnad_8py_source.html#l00772">rnad.RNaDSolver.params_prev_</a>, <a class="el" href="rnad_8py_source.html#l00770">rnad.RNaDSolver.params_target</a>, and <a class="el" href="rnad_8py_source.html#l00853">rnad.RNaDSolver.update_parameters()</a>.</p>
+<p class="reference">References <a class="el" href="rnad_8py_source.html#l00761">rnad.RNaDSolver._entropy_schedule</a>, <a class="el" href="rnad_8py_source.html#l00724">rnad.RNaDSolver.actor_steps</a>, <a class="el" href="rnad_8py_source.html#l01028">rnad.RNaDSolver.collect_batch_trajectory()</a>, <a class="el" href="rnad_8py_source.html#l00723">rnad.RNaDSolver.learner_steps</a>, <a class="el" href="rnad_8py_source.html#l00775">rnad.RNaDSolver.optimizer</a>, <a class="el" href="rnad_8py_source.html#l00783">rnad.RNaDSolver.optimizer_target</a>, <a class="el" href="rnad_8py_source.html#l00769">rnad.RNaDSolver.params</a>, <a class="el" href="rnad_8py_source.html#l00771">rnad.RNaDSolver.params_prev</a>, <a class="el" href="rnad_8py_source.html#l00772">rnad.RNaDSolver.params_prev_</a>, <a class="el" href="rnad_8py_source.html#l00770">rnad.RNaDSolver.params_target</a>, and <a class="el" href="rnad_8py_source.html#l00853">rnad.RNaDSolver.update_parameters()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -973,7 +976,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="343,89,445,49,446,54,345,94"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a4ce161ca6549f1f9126106bee2f45075" title=" " alt="" coords="659,31,817,71"/>
 <area shape="poly" title=" " alt="" coords="372,98,644,61,645,66,372,104"/>
-<area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3" title=" " alt="" coords="431,120,597,161"/>
+<area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a8b72cc4a3225f2e68db88faffafb68a3" title="State 마다 EnvStep 을 만들고 EnvStep 들을 하나의 EnvStep 으로 합친다." alt="" coords="431,120,597,161"/>
 <area shape="poly" title=" " alt="" coords="372,120,416,125,416,131,371,125"/>
 <area shape="rect" href="classrnad_1_1_r_na_d_solver.html#a62c8930792f82d22e07b16e93a6c4249" title=" " alt="" coords="420,185,608,211"/>
 <area shape="poly" title=" " alt="" coords="345,131,373,143,397,157,421,170,442,177,440,183,419,175,394,162,371,148,343,136"/>
@@ -1132,7 +1135,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00737">737</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00953">rnad.RNaDSolver._state_as_env_step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00960">rnad.RNaDSolver._state_as_env_step()</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1161,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00736">736</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01021">rnad.RNaDSolver.collect_batch_trajectory()</a>, and <a class="el" href="rnad_8py_source.html#l00788">rnad.RNaDSolver.loss()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01028">rnad.RNaDSolver.collect_batch_trajectory()</a>, and <a class="el" href="rnad_8py_source.html#l00788">rnad.RNaDSolver.loss()</a>.</p>
 
 </div>
 </div>
@@ -1210,7 +1213,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00732">732</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l01062">rnad.RNaDSolver._play_chance()</a>, and <a class="el" href="rnad_8py_source.html#l01005">rnad.RNaDSolver.actor_step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l01071">rnad.RNaDSolver._play_chance()</a>, and <a class="el" href="rnad_8py_source.html#l01012">rnad.RNaDSolver.actor_step()</a>.</p>
 
 </div>
 </div>
@@ -1236,7 +1239,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00731">731</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, and <a class="el" href="rnad_8py_source.html#l00942">rnad.RNaDSolver._next_rng_key()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, and <a class="el" href="rnad_8py_source.html#l00949">rnad.RNaDSolver._next_rng_key()</a>.</p>
 
 </div>
 </div>
@@ -1254,7 +1257,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00724">724</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l01053">rnad.RNaDSolver._batch_of_states_apply_action()</a>, and <a class="el" href="rnad_8py_source.html#l00926">rnad.RNaDSolver.step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l01062">rnad.RNaDSolver._batch_of_states_apply_action()</a>, and <a class="el" href="rnad_8py_source.html#l00926">rnad.RNaDSolver.step()</a>.</p>
 
 </div>
 </div>
@@ -1272,7 +1275,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00720">720</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l00999">rnad.RNaDSolver._network_jit_apply_and_post_process()</a>, <a class="el" href="rnad_8py_source.html#l00953">rnad.RNaDSolver._state_as_env_step()</a>, <a class="el" href="rnad_8py_source.html#l01021">rnad.RNaDSolver.collect_batch_trajectory()</a>, and <a class="el" href="rnad_8py_source.html#l00788">rnad.RNaDSolver.loss()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l01006">rnad.RNaDSolver._network_jit_apply_and_post_process()</a>, <a class="el" href="rnad_8py_source.html#l00960">rnad.RNaDSolver._state_as_env_step()</a>, <a class="el" href="rnad_8py_source.html#l01028">rnad.RNaDSolver.collect_batch_trajectory()</a>, and <a class="el" href="rnad_8py_source.html#l00788">rnad.RNaDSolver.loss()</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1311,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00758">758</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00999">rnad.RNaDSolver._network_jit_apply_and_post_process()</a>, <a class="el" href="rnad_8py_source.html#l01005">rnad.RNaDSolver.actor_step()</a>, and <a class="el" href="rnad_8py_source.html#l00788">rnad.RNaDSolver.loss()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l01006">rnad.RNaDSolver._network_jit_apply_and_post_process()</a>, <a class="el" href="rnad_8py_source.html#l01012">rnad.RNaDSolver.actor_step()</a>, and <a class="el" href="rnad_8py_source.html#l00788">rnad.RNaDSolver.loss()</a>.</p>
 
 </div>
 </div>
@@ -1362,7 +1365,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00769">769</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l01005">rnad.RNaDSolver.actor_step()</a>, and <a class="el" href="rnad_8py_source.html#l00926">rnad.RNaDSolver.step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l01012">rnad.RNaDSolver.actor_step()</a>, and <a class="el" href="rnad_8py_source.html#l00926">rnad.RNaDSolver.step()</a>.</p>
 
 </div>
 </div>
@@ -1416,7 +1419,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="rnad_8py_source.html#l00770">770</a> of file <a class="el" href="rnad_8py_source.html">rnad.py</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l00985">rnad.RNaDSolver.action_probabilities()</a>, and <a class="el" href="rnad_8py_source.html#l00926">rnad.RNaDSolver.step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00878">rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="rnad_8py_source.html#l00902">rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="rnad_8py_source.html#l00992">rnad.RNaDSolver.action_probabilities()</a>, and <a class="el" href="rnad_8py_source.html#l00926">rnad.RNaDSolver.step()</a>.</p>
 
 </div>
 </div>
