@@ -261,8 +261,8 @@ def _legal_policy(logits: chex.Array, legal_actions: chex.Array) -> chex.Array:
   """A soft-max policy that respects legal_actions."""
   chex.assert_equal_shape((logits, legal_actions))
   # Fiddle a bit to make sure we don't generate NaNs or Inf in the middle.
-  l_min = logits.min(axis=-1, keepdims=True)
-  logits = jnp.where(legal_actions, logits, l_min)
+  l_min = logits.min(axis=-1, keepdims=True)           # 1. logits 중 가장 작은 것 찾는다.
+  logits = jnp.where(legal_actions, logits, l_min)     # 2. 유효액션위치만 logits 을 남기고 나머지는 min 으로 설정
   logits -= logits.max(axis=-1, keepdims=True)
   logits *= legal_actions
   exp_logits = jnp.where(legal_actions, jnp.exp(logits),
@@ -740,17 +740,27 @@ class RNaDSolver(policy_lib.Policy):
     def network(
         env_step: EnvStep
     ) -> Tuple[chex.Array, chex.Array, chex.Array, chex.Array]:
+
+      # 1. 본체 몸통 망을 만들고
       mlp_torso = hk.nets.MLP(
           self.config.policy_network_layers, activate_final=True
       )
+      # 2. 현재 obs 를 본체 몸통 망에 통과시키고
       torso = mlp_torso(env_step.obs)
 
+      # 3. 액션 선택 정책 헤드를 만들고
       mlp_policy_head = hk.nets.MLP([self._game.num_distinct_actions()])
+      
+      # 4. 본체망 통과된 결과물을 헤드에 통과 시키고
       logit = mlp_policy_head(torso)
 
+      # 5. 가치 정책 망 만들고
       mlp_policy_value = hk.nets.MLP([1])
+      
+      # 6. 본체망 통과된 결과물을 가치망에 통과시키고
       v = mlp_policy_value(torso)
 
+      
       pi = _legal_policy(logit, env_step.legal)
       log_pi = legal_log_policy(logit, env_step.legal)
       return pi, v, log_pi, logit
