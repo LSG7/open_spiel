@@ -771,6 +771,8 @@ class RNaDSolver(policy_lib.Policy):
     self._entropy_schedule = EntropySchedule(
         sizes=self.config.entropy_schedule_size,
         repeats=self.config.entropy_schedule_repeats)
+
+    # def loss 함수를 미분하고 값 구하는 함수 만든다.
     self._loss_and_grad = jax.value_and_grad(self.loss, has_aux=False)
 
     # Create initial parameters.
@@ -785,17 +787,19 @@ class RNaDSolver(policy_lib.Policy):
     self.optimizer = optax_optimizer(
         self.params,
         optax.chain(
-            optax.scale_by_adam(
-                eps_root=0.0,
-                **self.config.adam,
-            ), optax.scale(-self.config.learning_rate),
-            optax.clip(self.config.clip_gradient)))
+            optax.scale_by_adam(eps_root=0.0, **self.config.adam,), 
+            optax.scale(-self.config.learning_rate),
+            optax.clip(self.config.clip_gradient)
+        )
+    )
     self.optimizer_target = optax_optimizer(
         self.params_target, optax.sgd(self.config.target_network_avg))
 
   def loss(self, params: Params, params_target: Params, params_prev: Params,
            params_prev_: Params, ts: TimeStep, alpha: float,
            learner_steps: int) -> float:
+
+    #self.network = transformed
     rollout = jax.vmap(self.network.apply, (None, 0), 0)
     pi, v, log_pi, logit = rollout(params, ts.env)
 
@@ -967,6 +971,7 @@ class RNaDSolver(policy_lib.Policy):
     self._rngkey, subkey = jax.random.split(self._rngkey)
     return subkey
 
+  # 
   def _state_as_env_step(self, state: pyspiel.State) -> EnvStep:
     # A terminal state must be communicated to players, however since
     # it's a terminal state things like the state_representation or
