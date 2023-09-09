@@ -1,5 +1,5 @@
-##ifndef OPEN_SPIEL_GAMES_KI_BO_GUNG
-#define OPEN_SPIEL_GAMES_KI_BO_GUNG
+#ifndef OPEN_SPIEL_GAMES_KI_BO_GUNG_H_
+#define OPEN_SPIEL_GAMES_KI_BO_GUNG_H_
 
 /**
 * @file ki_bo_gung.h
@@ -44,8 +44,80 @@ inline constexpr int kNumCols = 10;
 
 inline constexpr int kFieldType = 3;  // 노멀, 숲, 장애물 
 inline constexpr int kPieceType = 3;  // 기병, 보병, 궁수
-inline constexpr int kNumCelss = kNumRows * kNumCols;
+inline constexpr int kNumCells = kNumRows * kNumCols;
+inline constexpr int kCellStates = 1 + kNumPlayers;  // TODO 정해야함
 
+
+// State of a cell.
+enum class CellState {
+  kEmpty,
+  kNought,  // O
+  kCross,   // X
+};
+
+class kbgState : public State {
+ public:
+  kbgState(std::shared_ptr<const Game> game);
+
+  kbgState(const kbgState&) = default;
+  kbgState& operator=(const kbgState&) = default;
+
+  Player CurrentPlayer() const override {
+    return IsTerminal() ? kTerminalPlayerId : current_player_;
+  }
+  std::string ActionToString(Player player, Action action_id) const override;
+  std::string ToString() const override;
+  bool IsTerminal() const override;
+  std::vector<double> Returns() const override;
+  std::string InformationStateString(Player player) const override;
+  std::string ObservationString(Player player) const override;
+  void ObservationTensor(Player player,
+                         absl::Span<float> values) const override;
+  std::unique_ptr<State> Clone() const override;
+  void UndoAction(Player player, Action move) override;
+  std::vector<Action> LegalActions() const override;
+  CellState BoardAt(int cell) const { return board_[cell]; }
+  CellState BoardAt(int row, int column) const {
+    return board_[row * kNumCols + column];
+  }
+  Player outcome() const { return outcome_; }
+
+  // Only used by Ultimate Tic-Tac-Toe.
+  void SetCurrentPlayer(Player player) { current_player_ = player; }
+
+ protected:
+  std::array<CellState, kNumCells> board_;
+  void DoApplyAction(Action move) override;
+
+ private:
+  bool HasLine(Player player) const;  // Does this player have a line?
+  bool IsFull() const;                // Is the board full?
+  Player current_player_ = 0;         // Player zero goes first
+  Player outcome_ = kInvalidPlayer;
+  int num_moves_ = 0;
+};
+
+
+class kbgGame : public Game {
+ public:
+  explicit kbgGame(const GameParameters& params);
+  int NumDistinctActions() const override { return kNumCells; }
+  std::unique_ptr<State> NewInitialState() const override {
+    return std::unique_ptr<State>(new kbgState(shared_from_this()));
+  }
+  int NumPlayers() const override { return kNumPlayers; }
+  double MinUtility() const override { return -1; }
+  absl::optional<double> UtilitySum() const override { return 0; }
+  double MaxUtility() const override { return 1; }
+  std::vector<int> ObservationTensorShape() const override {
+    return {kCellStates, kNumRows, kNumCols};
+  }
+  int MaxGameLength() const override { return kNumCells; }
+  std::string ActionToString(Player player, Action action_id) const override;
+
+};
 
 } // kbg
 } // open_spiel
+
+#endif // OPEN_SPIEL_GAMES_KI_BO_GUNG_H_
