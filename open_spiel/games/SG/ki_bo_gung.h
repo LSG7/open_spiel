@@ -40,8 +40,12 @@ inline constexpr int kNumPlayers = 2;
 inline constexpr int kNumRows = 10;
 inline constexpr int kNumCols = 10;
 
-inline constexpr int kCellStates = TODO
+//inline constexpr int kCellStates = TODO
 
 inline constexpr int kFieldType = 3;  // 노멀, 숲, 장애물 
 inline constexpr int kPieceType = 3;  // 기병, 보병, 궁수
 inline constexpr int kNumCelss = kNumRows * kNumCols;
+
+
+} // kbg
+} // open_spiel

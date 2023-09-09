@@ -181,6 +181,8 @@ set(GAME_SOURCES
   ultimate_tic_tac_toe/ultimate_tic_tac_toe.cc
   y/y.cc
   y/y.h
+  SG/ki_bo_gung.h
+  SG/ki_bo_gung.cc
 )
 
 if (${OPEN_SPIEL_BUILD_WITH_HANABI})
