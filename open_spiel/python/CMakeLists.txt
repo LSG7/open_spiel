@@ -25,7 +25,6 @@ if(Python3_VERSION VERSION_LESS "3.6.0")
 endif()
 
 # Detect the Python ML frameworks.
-set(OPEN_SPIEL_ENABLE_JAX ON)
 if (OPEN_SPIEL_ENABLE_JAX STREQUAL AUTO)
   message(NOTICE "OPEN_SPIEL_ENABLE_JAX set to AUTO. Detecting Jax...")
   execute_process(COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/../scripts/find_jax.sh ${Python3_EXECUTABLE}

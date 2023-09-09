@@ -110,7 +110,7 @@ export OPEN_SPIEL_BUILD_WITH_ORTOOLS_DOWNLOAD_URL="${OPEN_SPIEL_BUILD_WITH_ORTOO
 # Used to determine whether to include the Python ML frameworks in the tests.
 # A value of AUTO runs the appropriate find_X script in open_spiel/scripts to check what is installed.
 # To override automatic detection, set to either ON or OFF.
-export OPEN_SPIEL_ENABLE_JAX=${OPEN_SPIEL_ENABLE_JAX:-"AUTO"}
+export OPEN_SPIEL_ENABLE_JAX=${OPEN_SPIEL_ENABLE_JAX:-"ON"}
 export OPEN_SPIEL_ENABLE_PYTORCH=${OPEN_SPIEL_ENABLE_PYTORCH:-"AUTO"}
 export OPEN_SPIEL_ENABLE_TENSORFLOW=${OPEN_SPIEL_ENABLE_TENSORFLOW:-"AUTO"}
 export OPEN_SPIEL_ENABLE_PYTHON_MISC=${OPEN_SPIEL_ENABLE_PYTHON_MISC:-"OFF"}
