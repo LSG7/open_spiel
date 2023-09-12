@@ -115,6 +115,8 @@ class kbgGame : public Game {
   int MaxGameLength() const override { return kNumCells; }
   std::string ActionToString(Player player, Action action_id) const override;
 
+  battlefield_width = 10;
+  battlefield_heigt = 10;
 };
 
 } // kbg
