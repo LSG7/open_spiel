@@ -39,38 +39,88 @@ kbgGame::kbgGame(const GameParameters& params)
       // 배틀쉽에 따르면 여기서 게임에 필요한 것들 설정한다.
 }
 
-std::string BattleshipGame::ActionToString(Player player,
-                                           Action action_id) const {
-  SPIEL_DCHECK_TRUE(player == Player{0} || player == Player{1});
-
-  const absl::variant<CellAndDirection, Shot> action =
-      DeserializeAction(action_id);
-
-  if (absl::holds_alternative<Shot>(action)) {
-    const Shot& shot = absl::get<Shot>(action);
-    return absl::StrCat("Pl", player, ": shoot at (", shot.row, ", ", shot.col,
-                        ")");
-  } else {
-    SPIEL_DCHECK_TRUE(absl::holds_alternative<CellAndDirection>(action));
-    const CellAndDirection& cell_and_dir = absl::get<CellAndDirection>(action);
-    absl::string_view direction_str;
-    if (cell_and_dir.direction == CellAndDirection::Direction::Horizontal) {
-      direction_str = "horizontally";
-    } else {
-      SPIEL_DCHECK_EQ(cell_and_dir.direction,
-                      CellAndDirection::Direction::Vertical);
-      direction_str = "vertically";
-    }
-
-    return absl::StrCat("Pl", player, ": place ship ", direction_str,
-                        " with top-left corner in (",
-                        cell_and_dir.TopLeftCorner().row, ", ",
-                        cell_and_dir.TopLeftCorner().col, ")");
-  }
+std::string kbgGame::ActionToString(Player player,
+                                           Action action_id) const
+{
+  //TODO
+  return std::string("temp");
 }
 
+std::vector<int> kbgGame::InformationStateTensorShape() const
+{
+  //TODO
+  return {0};
+}
 
-} // namespace
+int kbgGame::MaxChanceOutcomes() const
+{
+  //TODO
+  return 0;
+}
+
+int kbgGame::MaxGameLength() const
+{
+  //TODO
+  return 0;
+}
+
+double kbgGame::MaxUtility() const
+{
+  //TODO
+  return 0.0
+}
+
+double kbgGame::MinUtility() const
+{
+  //TODO
+  return 0.0
+}
+
+std::unique_ptr<State> kbgGame::NewInitialState() const
+{
+  //TODO
+   return std::unique_ptr<State>(new kbgState(shared_from_this()));
+}
+
+int kbgGame::NumDistinctActions() const
+{
+  //TODO
+  return 0;
+}
+
+std::vector<int> kbgGame::ObservationTensorShape() const
+{
+  //TODO
+  return {0};
+}
+
+ int kbgGame::NumPlayers() const
+ {
+  //TODO
+  return 2;
+ }
+
+ absl::optional<double> UtilitySum() const
+ {
+  //TODO
+  return 0.0;
+
+ }
+
+/* GAME END */
+
+/* STATE START */
+
+void kbgGameState::DoApplyAction(Action action_id)
+{
+  //TODO
+}
+
+Player kbgGameState::CurrentPlayer() const
+{
+  //TODO
+  return Player{0};
+}
 
 
 

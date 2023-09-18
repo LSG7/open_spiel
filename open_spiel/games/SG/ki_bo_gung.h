@@ -101,22 +101,20 @@ class kbgState : public State {
 class kbgGame : public Game {
  public:
   explicit kbgGame(const GameParameters& params);
-  int NumDistinctActions() const override { return kNumCells; }
-  std::unique_ptr<State> NewInitialState() const override {
-    return std::unique_ptr<State>(new kbgState(shared_from_this()));
-  }
-  int NumPlayers() const override { return kNumPlayers; }
-  double MinUtility() const override { return -1; }
-  absl::optional<double> UtilitySum() const override { return 0; }
-  double MaxUtility() const override { return 1; }
-  std::vector<int> ObservationTensorShape() const override {
-    return {kCellStates, kNumRows, kNumCols};
-  }
-  int MaxGameLength() const override { return kNumCells; }
   std::string ActionToString(Player player, Action action_id) const override;
+  std::vector<int> kbgGame::InformationStateTensorShape() const override;
+  int MaxChanceOutcomes() const override;
+  int MaxGameLength() const override;
+  double MaxUtility() const override;
+  double MinUtility() const override;
+  std::unique_ptr<State> NewInitialState() const override;
+  int NumDistinctActions() const override;
+  std::vector<int> ObservationTensorShape() const override;
+  int NumPlayers() const override;
+  absl::optional<double> UtilitySum() const override;
 
-  battlefield_width = 10;
-  battlefield_heigt = 10;
+  int battlefield_width = 10;
+  int battlefield_heigt = 10;
 };
 
 } // kbg
