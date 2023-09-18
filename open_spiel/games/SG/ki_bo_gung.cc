@@ -1,8 +1,8 @@
 #include "open_spiel/games/SG/ki_bo_gung.h"
-
+#include "open_spiel/spiel_utils.h"
 
 namespace open_spiel {
-namespace  kbg {
+namespace kbg {
 namespace {
 
 // Facts about the game.
@@ -31,6 +31,8 @@ std::shared_ptr<const Game> Factory(const GameParameters& params) {
 REGISTER_SPIEL_GAME(kGameType, Factory);
 
 RegisterSingleTensorObserver single_tensor(kGameType.short_name);
+
+} //namespace
 
 // GAME !!!!!!!!!!!
 kbgGame::kbgGame(const GameParameters& params)
@@ -67,13 +69,13 @@ int kbgGame::MaxGameLength() const
 double kbgGame::MaxUtility() const
 {
   //TODO
-  return 0.0
+  return 0.0;
 }
 
 double kbgGame::MinUtility() const
 {
   //TODO
-  return 0.0
+  return 0.0;
 }
 
 std::unique_ptr<State> kbgGame::NewInitialState() const
@@ -111,12 +113,12 @@ std::vector<int> kbgGame::ObservationTensorShape() const
 
 /* STATE START */
 
-void kbgGameState::DoApplyAction(Action action_id)
+void kbgState::DoApplyAction(Action action_id)
 {
   //TODO
 }
 
-Player kbgGameState::CurrentPlayer() const
+Player kbgState::CurrentPlayer() const
 {
   //TODO
   return Player{0};

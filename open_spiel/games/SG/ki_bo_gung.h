@@ -102,7 +102,7 @@ class kbgGame : public Game {
  public:
   explicit kbgGame(const GameParameters& params);
   std::string ActionToString(Player player, Action action_id) const override;
-  std::vector<int> kbgGame::InformationStateTensorShape() const override;
+  std::vector<int> InformationStateTensorShape() const override;
   int MaxChanceOutcomes() const override;
   int MaxGameLength() const override;
   double MaxUtility() const override;
