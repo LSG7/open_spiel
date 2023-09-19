@@ -36,72 +36,31 @@
 namespace open_spiel {
 namespace kbg {
 
-inline constexpr int kNumPlayers = 2;
-inline constexpr int kNumRows = 10;
-inline constexpr int kNumCols = 10;
-
-//inline constexpr int kCellStates = TODO
-
-inline constexpr int kFieldType = 3;  // 노멀, 숲, 장애물 
-inline constexpr int kPieceType = 3;  // 기병, 보병, 궁수
-inline constexpr int kNumCells = kNumRows * kNumCols;
-inline constexpr int kCellStates = 1 + kNumPlayers;  // TODO 정해야함
-
-
-// State of a cell.
-enum class CellState {
-  kEmpty,
-  kNought,  // O
-  kCross,   // X
-};
-
 class kbgState : public State {
  public:
   kbgState(std::shared_ptr<const Game> game);
-
   kbgState(const kbgState&) = default;
   kbgState& operator=(const kbgState&) = default;
-
-  Player CurrentPlayer() const override {
-    return IsTerminal() ? kTerminalPlayerId : current_player_;
-  }
   std::string ActionToString(Player player, Action action_id) const override;
-  std::string ToString() const override;
+  Player CurrentPlayer() const override;
   bool IsTerminal() const override;
-  std::vector<double> Returns() const override;
-  std::string InformationStateString(Player player) const override;
-  std::string ObservationString(Player player) const override;
-  void ObservationTensor(Player player,
-                         absl::Span<float> values) const override;
-  std::unique_ptr<State> Clone() const override;
-  void UndoAction(Player player, Action move) override;
   std::vector<Action> LegalActions() const override;
-  CellState BoardAt(int cell) const { return board_[cell]; }
-  CellState BoardAt(int row, int column) const {
-    return board_[row * kNumCols + column];
-  }
-  Player outcome() const { return outcome_; }
+  std::vector<double> Returns() const;
 
-  // Only used by Ultimate Tic-Tac-Toe.
-  void SetCurrentPlayer(Player player) { current_player_ = player; }
+  std::string ToString() const override;
+  std::unique_ptr<State> Clone() const override;
 
  protected:
-  std::array<CellState, kNumCells> board_;
   void DoApplyAction(Action move) override;
 
  private:
-  bool HasLine(Player player) const;  // Does this player have a line?
-  bool IsFull() const;                // Is the board full?
-  Player current_player_ = 0;         // Player zero goes first
-  Player outcome_ = kInvalidPlayer;
-  int num_moves_ = 0;
+
 };
 
 
 class kbgGame : public Game {
  public:
   explicit kbgGame(const GameParameters& params);
-  std::string ActionToString(Player player, Action action_id) const override;
   std::vector<int> InformationStateTensorShape() const override;
   int MaxChanceOutcomes() const override;
   int MaxGameLength() const override;
@@ -112,9 +71,6 @@ class kbgGame : public Game {
   std::vector<int> ObservationTensorShape() const override;
   int NumPlayers() const override;
   absl::optional<double> UtilitySum() const override;
-
-  int battlefield_width = 10;
-  int battlefield_heigt = 10;
 };
 
 } // kbg

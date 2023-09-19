@@ -41,13 +41,6 @@ kbgGame::kbgGame(const GameParameters& params)
       // 배틀쉽에 따르면 여기서 게임에 필요한 것들 설정한다.
 }
 
-std::string kbgGame::ActionToString(Player player,
-                                           Action action_id) const
-{
-  //TODO
-  return std::string("temp");
-}
-
 std::vector<int> kbgGame::InformationStateTensorShape() const
 {
   //TODO
@@ -113,9 +106,9 @@ std::vector<int> kbgGame::ObservationTensorShape() const
 
 /* STATE START */
 
-void kbgState::DoApplyAction(Action action_id)
+std::string kbgState::ActionToString(Player player, Action action_id) const
 {
-  //TODO
+  return std::string("temp");
 }
 
 Player kbgState::CurrentPlayer() const
@@ -124,9 +117,40 @@ Player kbgState::CurrentPlayer() const
   return Player{0};
 }
 
+bool kbgState::IsTerminal() const
+{
+  //TODO
+  return 0;
+}
 
+std::vector<Action> kbgState::LegalActions() const
+{
+  //TODO
+  return {0};
+}
 
+std::vector<double> kbgState::Returns() const
+{
+  //TODO
+  return {0.0};
+}
 
+std::string kbgState::ToString() const
+{
+  //TODO
+  return std::string("temp");
+}
+
+std::unique_ptr<State> Clone() const
+{
+  //TODO
+  return std::nullptr;
+}
+
+void kbgState::DoApplyAction(Action action_id)
+{
+  //TODO
+}
 
 
 } // kbg
