@@ -106,9 +106,9 @@ std::vector<int> kbgGame::ObservationTensorShape() const
 
 /* STATE START */
 
-kbgState(std::shared_ptr<const Game> game) : State(game)
+kbgState::kbgState(std::shared_ptr<const Game> game) : State(game)
 {
-  
+
 }
 
 std::string kbgState::ActionToString(Player player, Action action_id) const
