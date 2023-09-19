@@ -183,6 +183,8 @@ set(GAME_SOURCES
   y/y.h
   SG/ki_bo_gung.h
   SG/ki_bo_gung.cc
+  SG/baseT.h
+  SG/baseT.cc
 )
 
 if (${OPEN_SPIEL_BUILD_WITH_HANABI})
