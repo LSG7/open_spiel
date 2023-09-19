@@ -95,7 +95,7 @@ std::vector<int> kbgGame::ObservationTensorShape() const
   return 2;
  }
 
- absl::optional<double> UtilitySum() const
+ absl::optional<double> kbgGame::UtilitySum() const
  {
   //TODO
   return 0.0;
@@ -105,6 +105,11 @@ std::vector<int> kbgGame::ObservationTensorShape() const
 /* GAME END */
 
 /* STATE START */
+
+kbgState(std::shared_ptr<const Game> game) : State(game)
+{
+  
+}
 
 std::string kbgState::ActionToString(Player player, Action action_id) const
 {
@@ -141,10 +146,10 @@ std::string kbgState::ToString() const
   return std::string("temp");
 }
 
-std::unique_ptr<State> Clone() const
+std::unique_ptr<State> kbgState::Clone() const
 {
   //TODO
-  return std::nullptr;
+  return nullptr;
 }
 
 void kbgState::DoApplyAction(Action action_id)
