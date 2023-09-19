@@ -1,5 +1,5 @@
-#ifndef OPEN_SPIEL_GAMES_KI_BO_GUNG_H_
-#define OPEN_SPIEL_GAMES_KI_BO_GUNG_H_
+#ifndef OPEN_SPIEL_GAMES_SG_BASET_H_
+#define OPEN_SPIEL_GAMES_SG_BASET_H_
 
 /**
 * @file baseT.h
@@ -14,6 +14,7 @@
 
 // internal headers
 #include "open_spiel/spiel.h"
+#include "baseType.h"
 
 namespace open_spiel {
 namespace baseT {
@@ -34,6 +35,8 @@ class baseTGame : public Game {
 };
 
 class baseTState : public State {
+
+  /*****  모든 게임 공용 *****/
  public:
   baseTState(std::shared_ptr<const Game> game);
   baseTState(const baseTState&) = default;
@@ -50,11 +53,15 @@ class baseTState : public State {
  protected:
   void DoApplyAction(Action move) override;
 
+  std::vector<cell> field;
+
  private:
+
+ /********** 각 게임 별 전용 ***********/
 
 };
 
 } // baseT
 } // open_spiel
 
-#endif // OPEN_SPIEL_GAMES_KI_BO_GUNG_H_
+#endif // OPEN_SPIEL_GAMES_SG_BASET_H_
