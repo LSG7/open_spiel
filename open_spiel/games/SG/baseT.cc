@@ -1,15 +1,15 @@
-#include "open_spiel/games/SG/default.h"
+#include "open_spiel/games/SG/baseT.h"
 #include "open_spiel/spiel_utils.h"
 
 namespace open_spiel {
-namespace default {
+namespace baseT {
 namespace {
 
 // Facts about the game.
 // spiel.h 참고
 const GameType kGameType{
-    /*short_name=*/"default",
-    /*long_name=*/"default",
+    /*short_name=*/"baseT",
+    /*long_name=*/"baseT",
     GameType::Dynamics::kSequential,
     GameType::ChanceMode::kDeterministic,
     GameType::Information::kImperfectInformation,
@@ -25,7 +25,7 @@ const GameType kGameType{
 };
 
 std::shared_ptr<const Game> Factory(const GameParameters& params) {
-  return std::shared_ptr<const Game>(new defaultGame(params));
+  return std::shared_ptr<const Game>(new baseTGame(params));
 }
 
 REGISTER_SPIEL_GAME(kGameType, Factory);
@@ -35,67 +35,67 @@ RegisterSingleTensorObserver single_tensor(kGameType.short_name);
 } //namespace
 
 // GAME !!!!!!!!!!!
-defaultGame::defaultGame(const GameParameters& params)
+baseTGame::baseTGame(const GameParameters& params)
     : Game(kGameType, params) {
 
       // 배틀쉽에 따르면 여기서 게임에 필요한 것들 설정한다.
 }
 
-std::vector<int> defaultGame::InformationStateTensorShape() const
+std::vector<int> baseTGame::InformationStateTensorShape() const
 {
   //TODO
   return {0};
 }
 
-int defaultGame::MaxChanceOutcomes() const
+int baseTGame::MaxChanceOutcomes() const
 {
   //TODO
   return 0;
 }
 
-int defaultGame::MaxGameLength() const
+int baseTGame::MaxGameLength() const
 {
   //TODO
   return 0;
 }
 
-double defaultGame::MaxUtility() const
+double baseTGame::MaxUtility() const
 {
   //TODO
   return 0.0;
 }
 
-double defaultGame::MinUtility() const
+double baseTGame::MinUtility() const
 {
   //TODO
   return 0.0;
 }
 
-std::unique_ptr<State> defaultGame::NewInitialState() const
+std::unique_ptr<State> baseTGame::NewInitialState() const
 {
   //TODO
-   return std::unique_ptr<State>(new defaultState(shared_from_this()));
+   return std::unique_ptr<State>(new baseTState(shared_from_this()));
 }
 
-int defaultGame::NumDistinctActions() const
+int baseTGame::NumDistinctActions() const
 {
   //TODO
   return 0;
 }
 
-std::vector<int> defaultGame::ObservationTensorShape() const
+std::vector<int> baseTGame::ObservationTensorShape() const
 {
   //TODO
   return {0};
 }
 
- int defaultGame::NumPlayers() const
+ int baseTGame::NumPlayers() const
  {
   //TODO
   return 2;
  }
 
- absl::optional<double> defaultGame::UtilitySum() const
+ absl::optional<double> baseTGame::UtilitySum() const
  {
   //TODO
   return 0.0;
@@ -106,57 +106,57 @@ std::vector<int> defaultGame::ObservationTensorShape() const
 
 /* STATE START */
 
-defaultState::defaultState(std::shared_ptr<const Game> game) : State(game)
+baseTState::baseTState(std::shared_ptr<const Game> game) : State(game)
 {
 
 }
 
-std::string defaultState::ActionToString(Player player, Action action_id) const
+std::string baseTState::ActionToString(Player player, Action action_id) const
 {
   return std::string("temp");
 }
 
-Player defaultState::CurrentPlayer() const
+Player baseTState::CurrentPlayer() const
 {
   //TODO
   return Player{0};
 }
 
-bool defaultState::IsTerminal() const
+bool baseTState::IsTerminal() const
 {
   //TODO
   return 0;
 }
 
-std::vector<Action> defaultState::LegalActions() const
+std::vector<Action> baseTState::LegalActions() const
 {
   //TODO
   return {0};
 }
 
-std::vector<double> defaultState::Returns() const
+std::vector<double> baseTState::Returns() const
 {
   //TODO
   return {0.0};
 }
 
-std::string defaultState::ToString() const
+std::string baseTState::ToString() const
 {
   //TODO
   return std::string("temp");
 }
 
-std::unique_ptr<State> defaultState::Clone() const
+std::unique_ptr<State> baseTState::Clone() const
 {
   //TODO
   return nullptr;
 }
 
-void defaultState::DoApplyAction(Action action_id)
+void baseTState::DoApplyAction(Action action_id)
 {
   //TODO
 }
 
 
-} // default
+} // baseT
 } // open_spiel
