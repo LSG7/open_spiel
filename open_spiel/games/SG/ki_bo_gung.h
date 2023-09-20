@@ -37,7 +37,7 @@
 namespace open_spiel {
 namespace kbg {
 
-class kbgGame : public baseTGame {
+class kbgGame : public baseT::baseTGame {
  public:
   explicit kbgGame(const GameParameters& params);
 
@@ -47,7 +47,7 @@ class kbgGame : public baseTGame {
 
 };
 
-class kbgState : public baseTState {
+class kbgState : public baseT::baseTState {
  public:
   kbgState(std::shared_ptr<const Game> game);
   kbgState(const kbgState&) = default;
