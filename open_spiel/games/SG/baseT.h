@@ -53,11 +53,15 @@ class baseTState : public State {
  protected:
   void DoApplyAction(Action move) override;
 
-  std::vector<cell> field;
-
+  void init_field();
+  Field_size field_size;
+  Field_state field_state_now; 
+  std::vector<Field_state> Field_history;
+  
  private:
 
  /********** 각 게임 별 전용 ***********/
+  
 
 };
 
