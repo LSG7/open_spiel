@@ -157,6 +157,12 @@ void baseTState::DoApplyAction(Action action_id)
   //TODO
 }
 
+void baseTState::init_field()
+{
+  //TODO
+}
+
+
 
 } // baseT
 } // open_spiel
