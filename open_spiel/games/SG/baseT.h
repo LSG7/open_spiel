@@ -22,6 +22,7 @@ namespace baseT {
 class baseTGame : public Game {
  public:
   explicit baseTGame(const GameParameters& params);
+  explicit baseTGame(const GameType& game_type, const GameParameters& game_parameters);
   std::vector<int> InformationStateTensorShape() const override;
   int MaxChanceOutcomes() const override;
   int MaxGameLength() const override;

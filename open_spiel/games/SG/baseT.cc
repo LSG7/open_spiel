@@ -41,6 +41,12 @@ baseTGame::baseTGame(const GameParameters& params)
       // 배틀쉽에 따르면 여기서 게임에 필요한 것들 설정한다.
 }
 
+baseTGame::baseTGame(const GameType& game_type, const GameParameters& game_parameters)
+: Game(game_type, game_parameters)
+{
+
+}
+
 std::vector<int> baseTGame::InformationStateTensorShape() const
 {
   //TODO

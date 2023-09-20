@@ -36,19 +36,19 @@ RegisterSingleTensorObserver single_tensor(kGameType.short_name);
 
 // GAME !!!!!!!!!!!
 kbgGame::kbgGame(const GameParameters& params)
-    : Game(kGameType, params) {
+    : baseTGame(kGameType, params) {
 
       // 배틀쉽에 따르면 여기서 게임에 필요한 것들 설정한다.
 }
 
-kbgState::kbgState(std::shared_ptr<const Game> game) : State(game)
+kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
 {
 
 }
 
-kbgState::init_field()
+void kbgState::init_field()
 {
-  
+
 }
 
 } // kbg
