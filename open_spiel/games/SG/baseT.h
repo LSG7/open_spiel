@@ -53,7 +53,7 @@ class baseTState : public State {
  protected:
   void DoApplyAction(Action move) override;
 
-  void init_field();
+  virtual void init_field();
   Field_size field_size;
   Field_state field_state_now; 
   std::vector<Field_state> Field_history;

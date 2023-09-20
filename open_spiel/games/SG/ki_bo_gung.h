@@ -32,45 +32,33 @@
 
 // internal headers
 #include "open_spiel/spiel.h"
+#include "baseT.h"
 
 namespace open_spiel {
 namespace kbg {
 
-class kbgState : public State {
+class kbgGame : public baseTGame {
  public:
-  kbgState(std::shared_ptr<const Game> game);
-  kbgState(const kbgState&) = default;
-  kbgState& operator=(const kbgState&) = default;
-  std::string ActionToString(Player player, Action action_id) const override;
-  Player CurrentPlayer() const override;
-  bool IsTerminal() const override;
-  std::vector<Action> LegalActions() const override;
-  std::vector<double> Returns() const;
-
-  std::string ToString() const override;
-  std::unique_ptr<State> Clone() const override;
+  explicit kbgGame(const GameParameters& params);
 
  protected:
-  void DoApplyAction(Action move) override;
 
  private:
 
 };
 
-
-class kbgGame : public Game {
+class kbgState : public baseTState {
  public:
-  explicit kbgGame(const GameParameters& params);
-  std::vector<int> InformationStateTensorShape() const override;
-  int MaxChanceOutcomes() const override;
-  int MaxGameLength() const override;
-  double MaxUtility() const override;
-  double MinUtility() const override;
-  std::unique_ptr<State> NewInitialState() const override;
-  int NumDistinctActions() const override;
-  std::vector<int> ObservationTensorShape() const override;
-  int NumPlayers() const override;
-  absl::optional<double> UtilitySum() const override;
+  kbgState(std::shared_ptr<const Game> game);
+  kbgState(const kbgState&) = default;
+  kbgState& operator=(const kbgState&) = default;
+
+  void init_field() override;
+
+ protected:
+
+ private:
+
 };
 
 } // kbg

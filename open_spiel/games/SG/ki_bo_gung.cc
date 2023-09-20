@@ -41,122 +41,15 @@ kbgGame::kbgGame(const GameParameters& params)
       // 배틀쉽에 따르면 여기서 게임에 필요한 것들 설정한다.
 }
 
-std::vector<int> kbgGame::InformationStateTensorShape() const
-{
-  //TODO
-  return {0};
-}
-
-int kbgGame::MaxChanceOutcomes() const
-{
-  //TODO
-  return 0;
-}
-
-int kbgGame::MaxGameLength() const
-{
-  //TODO
-  return 0;
-}
-
-double kbgGame::MaxUtility() const
-{
-  //TODO
-  return 0.0;
-}
-
-double kbgGame::MinUtility() const
-{
-  //TODO
-  return 0.0;
-}
-
-std::unique_ptr<State> kbgGame::NewInitialState() const
-{
-  //TODO
-   return std::unique_ptr<State>(new kbgState(shared_from_this()));
-}
-
-int kbgGame::NumDistinctActions() const
-{
-  //TODO
-  return 0;
-}
-
-std::vector<int> kbgGame::ObservationTensorShape() const
-{
-  //TODO
-  return {0};
-}
-
- int kbgGame::NumPlayers() const
- {
-  //TODO
-  return 2;
- }
-
- absl::optional<double> kbgGame::UtilitySum() const
- {
-  //TODO
-  return 0.0;
-
- }
-
-/* GAME END */
-
-/* STATE START */
-
 kbgState::kbgState(std::shared_ptr<const Game> game) : State(game)
 {
 
 }
 
-std::string kbgState::ActionToString(Player player, Action action_id) const
+kbgState::init_field()
 {
-  return std::string("temp");
+  
 }
-
-Player kbgState::CurrentPlayer() const
-{
-  //TODO
-  return Player{0};
-}
-
-bool kbgState::IsTerminal() const
-{
-  //TODO
-  return 0;
-}
-
-std::vector<Action> kbgState::LegalActions() const
-{
-  //TODO
-  return {0};
-}
-
-std::vector<double> kbgState::Returns() const
-{
-  //TODO
-  return {0.0};
-}
-
-std::string kbgState::ToString() const
-{
-  //TODO
-  return std::string("temp");
-}
-
-std::unique_ptr<State> kbgState::Clone() const
-{
-  //TODO
-  return nullptr;
-}
-
-void kbgState::DoApplyAction(Action action_id)
-{
-  //TODO
-}
-
 
 } // kbg
 } // open_spiel
