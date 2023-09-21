@@ -35,20 +35,39 @@ RegisterSingleTensorObserver single_tensor(kGameType.short_name);
 } //namespace
 
 // GAME !!!!!!!!!!!
-kbgGame::kbgGame(const GameParameters& params)
-    : baseTGame(kGameType, params) {
+kbgGame::kbgGame(const GameParameters& params) : baseTGame(kGameType, params) 
+{
 
       // 배틀쉽에 따르면 여기서 게임에 필요한 것들 설정한다.
 }
 
 kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
 {
-
+  init_map();
 }
 
-void kbgState::init_field()
+void kbgState::init_map()
 {
+  /* 10X10 맵에서 가운데에 1X4 호수가 있다.  */
 
+  // 1. 맵 사이즈 결정 
+  map_size.x = 10;
+  map_size.y = 10;
+  map_size.z = 1;
+
+  // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
+  // [z][row][col]
+  Cell normal_ground = {0, false, 0};
+  std::vector<Cell> col_1d(map_size.x, normal_ground);
+  std::vector<std::vector<Cell>> row_col_2d(map_size.y, col_1d);
+  std::vector<std::vector<std::vector<Cell>>> z_row_col_3d(map_size.z, row_col_2d);
+  
+  // 호수 만들기 
+  Cell water_ground = {1, false, 0};
+  map_state_now.map_cells_v[0][4][3] = water_ground;
+  map_state_now.map_cells_v[0][4][4] = water_ground;
+  map_state_now.map_cells_v[0][4][5] = water_ground;
+  map_state_now.map_cells_v[0][4][6] = water_ground;
 }
 
 } // kbg
