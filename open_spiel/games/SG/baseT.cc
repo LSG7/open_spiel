@@ -163,7 +163,7 @@ void baseTState::DoApplyAction(Action action_id)
   //TODO
 }
 
-void baseTState::init_field()
+void baseTState::init_map()
 {
   //TODO
 }

@@ -53,7 +53,7 @@ class kbgState : public baseT::baseTState {
   kbgState(const kbgState&) = default;
   kbgState& operator=(const kbgState&) = default;
 
-  void init_field() override;
+  void init_map() override;
 
  protected:
 
