@@ -55,6 +55,8 @@ class baseTState : public State {
   void DoApplyAction(Action move) override;
 
   virtual void init_map();
+  virtual void init_piece();
+  
   Map_size map_size;
   Map_state map_state_now; 
   std::vector<Map_state> Map_history;

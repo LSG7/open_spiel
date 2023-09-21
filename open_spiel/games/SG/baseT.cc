@@ -168,6 +168,10 @@ void baseTState::init_map()
   //TODO
 }
 
+void baseTState::init_piece()
+{
+  //TODO
+}
 
 
 } // baseT
