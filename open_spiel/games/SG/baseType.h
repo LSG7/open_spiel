@@ -31,7 +31,7 @@ struct Map_pieces {
 
 struct Map_state {
     Map_pieces map_pieces;
-    std::vector<Cell> map_cells_v;
+    std::vector<std::vector<std::vector<Cell>>> map_cells_v;
 };
 
 } // baseT
