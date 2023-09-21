@@ -15,7 +15,8 @@ struct Cell {
     GroundType ground_type;
     bool is_occupied;
     int occupying_unit_id;
-    Map_coord coord;
+    Map_coord coord_player0;
+    Map_coord coord_player1;
 };
 
 struct Unit {
@@ -26,13 +27,14 @@ struct Unit {
     int atk_range;
     float hp;
     float power;
-    Map_coord coord;
+    Map_coord coord;        // 현재 위치한 셀 
+    Map_coord direction;    // coord 주위 4방향 셀  가르킨다.
     std::string name;
 };
 
 struct Map_units {
-    std::vector<Unit> allies_units_v;
-    std::vector<Unit> enemy_units_v;
+    std::vector<Unit> player0_units_v;
+    std::vector<Unit> player1_units_v;
 };
 
 struct Map_state {

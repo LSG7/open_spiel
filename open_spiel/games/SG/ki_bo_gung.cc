@@ -86,36 +86,37 @@ void kbgState::init_unit()
   // kind ki:0 bo:1 gung:2
   int unit_id = 0;
   Map_coord unit_coord = {0,0,0};
+  Map_coord unit_drction = {0,0,0};
 
   // 기병. 기종 0, 이거 2, 공거 2, 체 1, 공 1
-  Unit ki(true, -1, 0, 2, 2, 1, 1, unit_coord, "ki");
+  Unit ki(true, -1, 0, 2, 2, 1, 1, unit_coord, unit_drction, "ki");
   // 보병. 기종 1, 이거 1, 공거 1, 체 2, 공 1
-  Unit bo(true, -1, 1, 1, 1, 2, 1, unit_coord, "bo");
+  Unit bo(true, -1, 1, 1, 1, 2, 1, unit_coord, unit_drction, "bo");
   // 궁병. 기종 2, 이거 1, 공거 2, 체 1, 공 1 
-  Unit gung(true, -1, 2, 1, 2, 1, 1, unit_coord, "gung");
+  Unit gung(true, -1, 2, 1, 2, 1, 1, unit_coord, unit_drction, "gung");
 
-  ki.coord.x = 
-  map_units.allies_units_v.push_back(ki);
-  map_units.allies_units_v.push_back(bo);
-  map_units.allies_units_v.push_back(bo);
-  map_units.allies_units_v.push_back(gung);
+   
+  map_units.player0_units_v.push_back(ki);
+  map_units.player0_units_v.push_back(bo);
+  map_units.player0_units_v.push_back(bo);
+  map_units.player0_units_v.push_back(gung);
 
-  map_units.enemy_units_v.push_back(ki);
-  map_units.enemy_units_v.push_back(bo);
-  map_units.enemy_units_v.push_back(bo);
-  map_units.enemy_units_v.push_back(gung);
+  map_units.player1_units_v.push_back(ki);
+  map_units.player1_units_v.push_back(bo);
+  map_units.player1_units_v.push_back(bo);
+  map_units.player1_units_v.push_back(gung);
 
   // unique id set
-  for (int i = 0; i < map_units.allies_units_v.size(); i++) {
-    map_units.allies_units_v[i].unit_id = unit_id;
+  for (int i = 0; i < map_units.player0_units_v.size(); i++) {
+    map_units.player0_units_v[i].unit_id = unit_id;
     unit_id++;
   }
 
   // 아군과 적 유닛 아이디 구부
   unit_id += 1000;
 
-  for (int i = 0; i < map_units.enemy_units_v.size(); i++) {
-    map_units.enemy_units_v[i].unit_id = unit_id;
+  for (int i = 0; i < map_units.player1_units_v.size(); i++) {
+    map_units.player1_units_v[i].unit_id = unit_id;
     unit_id++;
   }
 
