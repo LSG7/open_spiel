@@ -33,13 +33,13 @@ struct Unit {
 };
 
 struct Map_units {
-    std::vector<Unit> player0_units_v;
-    std::vector<Unit> player1_units_v;
+    std::vector<Unit> p0_units_v;
+    std::vector<Unit> p1_units_v;
 };
 
 struct Map_state {
-    Map_units map_units;
-    std::vector<std::vector<std::vector<Cell>>> map_cells_v;
+    Map_units units;
+    std::vector<std::vector<std::vector<Cell>>> cells_v;
 };
 
 } // baseT

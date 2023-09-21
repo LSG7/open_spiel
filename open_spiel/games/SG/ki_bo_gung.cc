@@ -16,8 +16,8 @@ const GameType kGameType{
     GameType::Information::kImperfectInformation,
     GameType::Utility::kZeroSum,
     /* 종료시 보상 반환 */ GameType::RewardModel::kTerminal, 
-    /*max_num_players=*/2,
-    /*min_num_players=*/2,
+    /*max_num_ps=*/2,
+    /*min_num_ps=*/2,
     /*provides_information_state_string=*/true,
     /*provides_information_state_tensor=*/true,
     /*provides_observation_string=*/true,
@@ -68,14 +68,14 @@ void kbgState::init_map()
   std::vector<Cell> col_1d(map_size.x, normal_ground);
   std::vector<std::vector<Cell>> row_col_2d(map_size.y, col_1d);
   std::vector<std::vector<std::vector<Cell>>> z_row_col_3d(map_size.z, row_col_2d);
-  Map_state.map_cells_v = z_row_col_3d;
+  map_state_now.cells_v = z_row_col_3d;
 
   // 호수 만들기 
   Cell water_ground = {GT_CannotEnter, false, 0};
-  map_state_now.map_cells_v[0][4][3] = water_ground;
-  map_state_now.map_cells_v[0][4][4] = water_ground;
-  map_state_now.map_cells_v[0][4][5] = water_ground;
-  map_state_now.map_cells_v[0][4][6] = water_ground;
+  map_state_now.cells_v[0][4][3] = water_ground;
+  map_state_now.cells_v[0][4][4] = water_ground;
+  map_state_now.cells_v[0][4][5] = water_ground;
+  map_state_now.cells_v[0][4][6] = water_ground;
 }
 
 /**
@@ -89,34 +89,34 @@ void kbgState::init_unit()
   Map_coord unit_drction = {0,0,0};
 
   // 기병. 기종 0, 이거 2, 공거 2, 체 1, 공 1
-  Unit ki(true, -1, 0, 2, 2, 1, 1, unit_coord, unit_drction, "ki");
+  struct Unit ki = {true, -1, 0, 2, 2, 1, 1, unit_coord, unit_drction, "ki"};
   // 보병. 기종 1, 이거 1, 공거 1, 체 2, 공 1
-  Unit bo(true, -1, 1, 1, 1, 2, 1, unit_coord, unit_drction, "bo");
+  struct Unit bo = {true, -1, 1, 1, 1, 2, 1, unit_coord, unit_drction, "bo"};
   // 궁병. 기종 2, 이거 1, 공거 2, 체 1, 공 1 
-  Unit gung(true, -1, 2, 1, 2, 1, 1, unit_coord, unit_drction, "gung");
+  struct Unit gung = {true, -1, 2, 1, 2, 1, 1, unit_coord, unit_drction, "gung"};
 
-   
-  map_units.player0_units_v.push_back(ki);
-  map_units.player0_units_v.push_back(bo);
-  map_units.player0_units_v.push_back(bo);
-  map_units.player0_units_v.push_back(gung);
+  
+  map_state_now.units.p0_units_v.push_back(ki);
+  map_state_now.units.p0_units_v.push_back(bo);
+  map_state_now.units.p0_units_v.push_back(bo);
+  map_state_now.units.p0_units_v.push_back(gung);
 
-  map_units.player1_units_v.push_back(ki);
-  map_units.player1_units_v.push_back(bo);
-  map_units.player1_units_v.push_back(bo);
-  map_units.player1_units_v.push_back(gung);
+  map_state_now.units.p1_units_v.push_back(ki);
+  map_state_now.units.p1_units_v.push_back(bo);
+  map_state_now.units.p1_units_v.push_back(bo);
+  map_state_now.units.p1_units_v.push_back(gung);
 
   // unique id set
-  for (int i = 0; i < map_units.player0_units_v.size(); i++) {
-    map_units.player0_units_v[i].unit_id = unit_id;
+  for (int i = 0; i < map_state_now.units.p0_units_v.size(); i++) {
+    map_state_now.units.p0_units_v[i].unit_id = unit_id;
     unit_id++;
   }
 
   // 아군과 적 유닛 아이디 구부
   unit_id += 1000;
 
-  for (int i = 0; i < map_units.player1_units_v.size(); i++) {
-    map_units.player1_units_v[i].unit_id = unit_id;
+  for (int i = 0; i < map_state_now.units.p1_units_v.size(); i++) {
+    map_state_now.units.p1_units_v[i].unit_id = unit_id;
     unit_id++;
   }
 
