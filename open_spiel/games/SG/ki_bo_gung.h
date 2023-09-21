@@ -54,6 +54,7 @@ class kbgState : public baseT::baseTState {
   kbgState& operator=(const kbgState&) = default;
 
   void init_map() override;
+  void init_unit() override;
 
  protected:
 

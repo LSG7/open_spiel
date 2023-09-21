@@ -8,3 +8,7 @@
 # 일기
 23.8.30 
 게임 생성 시작
+
+셀은 vector [][], map_coord 로 접근
+유닛은 vector [], unique unit_id 로 접근
+적 유닛 아이디는 1000 이 더해져 있음. 

@@ -168,7 +168,7 @@ void baseTState::init_map()
   //TODO
 }
 
-void baseTState::init_piece()
+void baseTState::init_unit()
 {
   //TODO
 }
