@@ -1,10 +1,11 @@
 #include "open_spiel/games/SG/ki_bo_gung.h"
 #include "open_spiel/spiel_utils.h"
 
+
 namespace open_spiel {
 namespace kbg {
 namespace {
-
+using namespace baseT;
 // Facts about the game.
 // spiel.h 참고
 const GameType kGameType{
@@ -57,13 +58,13 @@ void kbgState::init_map()
 
   // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
   // [z][row][col]
-  Cell normal_ground = {0, false, 0};
+  Cell normal_ground = {GT_Normal, false, 0};
   std::vector<Cell> col_1d(map_size.x, normal_ground);
   std::vector<std::vector<Cell>> row_col_2d(map_size.y, col_1d);
   std::vector<std::vector<std::vector<Cell>>> z_row_col_3d(map_size.z, row_col_2d);
   
   // 호수 만들기 
-  Cell water_ground = {1, false, 0};
+  Cell water_ground = {GT_CannotEnter, false, 0};
   map_state_now.map_cells_v[0][4][3] = water_ground;
   map_state_now.map_cells_v[0][4][4] = water_ground;
   map_state_now.map_cells_v[0][4][5] = water_ground;

@@ -6,7 +6,7 @@
 namespace open_spiel {
 namespace baseT {
 
-enum GroundType {Normal = 0, CannotEnter = 1, };
+enum GroundType {GT_Normal = 0, GT_CannotEnter = 1, };
 
 struct Map_size {
     int x; int y; int z;
