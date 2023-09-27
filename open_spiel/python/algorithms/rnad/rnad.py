@@ -772,7 +772,7 @@ class RNaDSolver(policy_lib.Policy):
         sizes=self.config.entropy_schedule_size,
         repeats=self.config.entropy_schedule_repeats)
 
-    # def loss 함수를 미분하고 값 구하는 함수 만든다.
+    # def loss 함수 '값, 미분' 하는 함수 만든다.
     self._loss_and_grad = jax.value_and_grad(self.loss, has_aux=False)
 
     # Create initial parameters.
@@ -865,6 +865,8 @@ class RNaDSolver(policy_lib.Policy):
       alpha: float,
       learner_steps: int,
       update_target_net: bool):
+
+      # 손실함수 값, 미분값 구하기 
     """A jitted pure-functional part of the `step`."""
     loss_val, grad = self._loss_and_grad(params, params_target, params_prev,
                                          params_prev_, timestep, alpha,
@@ -940,10 +942,11 @@ class RNaDSolver(policy_lib.Policy):
   def step(self):
     """One step of the algorithm, that plays the game and improves params."""
     
-    # 1
+    # 1 States 생성, 최대게임기일이만큼 루프돌며 액션적용 상태전환, 
+    # 기록을 만든 것.
     timestep = self.collect_batch_trajectory()
 
-    # 2
+    # 2 네트워크 언제 업데이트 해야 할지. 학습 중 네트워크를 목표 네트워크로 옮기는 것. 
     alpha, update_target_net = self._entropy_schedule(self.learner_steps)
 
     # 3
@@ -1041,19 +1044,23 @@ class RNaDSolver(policy_lib.Policy):
     return action, actor_step
 
   def collect_batch_trajectory(self) -> TimeStep:
+    # 1. 초기화하고 챈스상태 넘긴 상태를 배치사이즈 만큼 리스트로 만든다.
     states = [
         self._play_chance(self._game.new_initial_state())
         for _ in range(self.config.batch_size)
     ]
-    timesteps = []
+    timesteps = [] # 환경요소, 액터 선택,결과 담긴 timestep 준비 
 
+    # states 를 하나의 EnvStep(EnvStep 으로 이루어진 리스트) 으로 만든다.
+    # EnvStep 의 리스트라고 해도 EnvStep 형으로 받아들이나 보다. 
     env_step = self._batch_of_states_as_env_step(states)
+    
     for _ in range(self.config.trajectory_max):
       prev_env_step = env_step
-      a, actor_step = self.actor_step(env_step)
+      a, actor_step = self.actor_step(env_step) # 현 상태에 맞는 액션 연산 
 
-      states = self._batch_of_states_apply_action(states, a)
-      env_step = self._batch_of_states_as_env_step(states)
+      states = self._batch_of_states_apply_action(states, a) # 액션을 상태에 적용. 상태 전환.  
+      env_step = self._batch_of_states_as_env_step(states) # 결과 state 를 다시 envstep 으로 만듬 
       timesteps.append(
           TimeStep(
               env=prev_env_step,
@@ -1061,7 +1068,7 @@ class RNaDSolver(policy_lib.Policy):
                   action_oh=actor_step.action_oh,
                   policy=actor_step.policy,
                   rewards=env_step.rewards),
-          ))
+          )) # 결과물들 저장 
     # Concatenate all the timesteps together to form a single rollout [T, B, ..]
     return jax.tree_util.tree_map(lambda *xs: np.stack(xs, axis=0), *timesteps)
 
@@ -1070,8 +1077,11 @@ class RNaDSolver(policy_lib.Policy):
   def _batch_of_states_as_env_step(self,
                                    states: Sequence[pyspiel.State]) -> EnvStep:
     envs = [self._state_as_env_step(state) for state in states]
+    #[1,2,3] [4,5,6] 을 [[1,2,3,],[4,5,6]] 으로 쌓아 올린다.
+    #여기서는 EnvStep 을 쌓아 올린거 
     return jax.tree_util.tree_map(lambda *e: np.stack(e, axis=0), *envs)
 
+  # States 에 actions 적용하고 결과 states 를 반환 
   def _batch_of_states_apply_action(
       self, states: Sequence[pyspiel.State],
       actions: chex.Array) -> Sequence[pyspiel.State]:
