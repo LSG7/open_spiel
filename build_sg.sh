@@ -1,0 +1,1 @@
+./open_spiel/scripts/build_and_run_tests.sh --build_only=true --num_threads=4
