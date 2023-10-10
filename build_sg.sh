@@ -1,1 +1,1 @@
-./open_spiel/scripts/build_and_run_tests.sh --build_only=true --num_threads=4
+./open_spiel/scripts/build_and_run_tests.sh --build_only=true --num_threads=6 --build_dir=build_sg
