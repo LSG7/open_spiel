@@ -5,24 +5,22 @@
   * 관련 앱과 데이터 호환 용이
   * 학습에 사용하기 용이
 
-# 일기
-23.8.30 
-게임 생성 시작
-
-셀은 vector [][], map_coord 로 접근
-유닛은 vector [], unique unit_id 로 접근
- 
- # TODO
+# TODO
  1. 하나의 게임에서 self-play 로 trajectory 를 2개 만들어야 한다.
  어차피 상대방 역할 해주는 봇도 있어야 하는데 
  그 봇도 똑똑해야 하고
- 하는김에 궤적 하나 더 만드는게 효율성 좋으니
+ 하는김에 궤적 하나 더 만드는게 효율성 좋으니  
 
- player0 = 기준
- player1 = 상대방 
 
  2. joint action 으로 만들어야 한다.
  한번은 이동하고 한번은 행동하고
  deepnash 는 선택,행동 이었다면 나는 이동,행동 이다.
 
- 
+ # 일기
+23.8.30 
+게임 생성 시작  
+
+* 셀은 vector [z][y][x], map_coord 로 접근  
+* 유닛은 vector [id], unique unit_id 로 접근  
+0 번 player 는 1번부터 시작. 접근할 때 (p0_id) 으로 접근  
+1 번 player 는 1001번부터 시작. 접근할 때 (p1_id - 1000) 으로 접근  
