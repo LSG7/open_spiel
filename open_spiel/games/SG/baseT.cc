@@ -173,6 +173,82 @@ void baseTState::init_unit()
   //TODO
 }
 
+static std::string get_unit_id_string(int int_unit_id, int max_us)
+{
+  std::string string_id;
+  int string_id_length = 0;
+
+  if (max_us < 10) {
+    string_id_length = 2;
+  } else if (max_us < 100) {
+    string_id_length = 3;
+  }
+
+  if (int_unit_id >= 1000) {
+    string_id += "1"; // player number
+  }
+  else {
+    string_id += "0"; // player number
+  }
+
+  string_id += std::string(int_unit_id % 1000);
+
+  // 자리수 마추기 
+  int diff_len = string_id_length - strind_id.length();
+  if (diff_len == 0) {
+  } else if (diff_len == 1) {
+    string_id += " ";
+  } else if (diff_len == 2) {
+    string_id += "  ";
+  }
+
+  return string_id;
+}
+
+static std::string get_ground_string(GroundType gt, int max_us)
+{
+  std::string g_string = "";
+
+  switch (gt) {
+    case GT_Normal:
+      g_string += "_";
+      break;
+    case GT_CannotEnter:
+      g_string += "X";
+      break;
+    default:
+      g_string += "E";
+  }
+
+  if (max_us < 10) {
+    g_string += " ";  // one space
+  } else if (max_us < 100) {
+    g_string += "  "; // two space
+  }
+
+  return g_string;
+}
+
+std::string baseTState::ObservationString(Player player) const
+{
+  std::string board_string = "";
+
+  // 1. print ground if not occupied
+  // 2. print unit if occupied
+  for (int z = 0; z < map_size.z; z++) {
+    for (int y = 0; y < map_size.y; y++) {
+      for (int x = 0; x < map_size.x; x++) {
+        if (map_state_now.cells_v[z][y][x].is_occupied) {
+          // player0,1 구분해서 그린다.
+          board_string += get_unit_id_string(map_state_now.cells_v[z][y][x].occupying_unit_id, max_units);
+        } else {
+          // 그라운드 종류에 따라 그린다. 
+          board_string += get_ground_string(map_state_now.cells_v[z][y][x].ground_type, max_units);
+        }
+      }//x
+    }//y
+  }//z
+}
 
 } // baseT
 } // open_spiel

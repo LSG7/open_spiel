@@ -4,7 +4,6 @@
 /**
 * @file baseT.h
 * @brief 아무것도 구현 안되어있는 템플릿 용 
-
 *
 * @author SG Lee
 * @date 8/30/2023
@@ -50,6 +49,7 @@ class baseTState : public State {
 
   std::string ToString() const override;
   std::unique_ptr<State> Clone() const override;
+  std::string ObservationString(Player player) const override;
 
  protected:
   void DoApplyAction(Action move) override;
@@ -60,6 +60,7 @@ class baseTState : public State {
   Map_coord map_size;
   Map_state map_state_now; 
   std::vector<Map_state> Map_history;
+  int max_units; // max number of one player
   
  private:
 

@@ -50,6 +50,7 @@ kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
   init_unit();
 }
 
+// 1번 구현 함수 
 /**
  * @brief 맵을 생성한다. 타일을 깔아야 한다.
 */
@@ -78,11 +79,13 @@ void kbgState::init_map()
   map_state_now.cells_v[0][4][6] = water_ground;
 }
 
+// 2번 구현 함수  
 /**
 * @brief 말을 생성하고 배치한다.
 */
 void kbgState::init_unit()
 {
+  max_units = 4;
   // kind ki:0 bo:1 gung:2
   int unit_id = 0;
   Map_coord unit_coord = {0,0,0};
@@ -112,7 +115,8 @@ void kbgState::init_unit()
     unit_id++;
   }
 
-  // 아군과 적 유닛 아이디 구부
+  // 아군과 적 유닛 아이디 구분
+  unit_id = 0;
   unit_id += 1000;
 
   for (int i = 0; i < map_state_now.units.p1_units_v.size(); i++) {

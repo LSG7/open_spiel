@@ -9,7 +9,8 @@ namespace baseT {
 enum GroundType {GT_Normal = 0, GT_CannotEnter = 1, };
 
 struct Map_coord {
-    int x; int y; int z;
+    //z:floor y:row x:col
+    int z; int y; int x;
 };
 struct Cell {
     GroundType ground_type;
