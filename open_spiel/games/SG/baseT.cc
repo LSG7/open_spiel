@@ -191,10 +191,10 @@ static std::string get_unit_id_string(int int_unit_id, int max_us)
     string_id += "0"; // player number
   }
 
-  string_id += std::string(int_unit_id % 1000);
+  string_id += std::to_string(int_unit_id % 1000);
 
   // 자리수 마추기 
-  int diff_len = string_id_length - strind_id.length();
+  int diff_len = string_id_length - string_id.length();
   if (diff_len == 0) {
   } else if (diff_len == 1) {
     string_id += " ";
