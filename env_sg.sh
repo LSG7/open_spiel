@@ -1,1 +1,2 @@
 export OPEN_SPIEL_HOME=${PWD}
+export LD_LIBRARY_PATH=${OPEN_SPIEL_HOME}/build_sg
