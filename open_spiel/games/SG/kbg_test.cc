@@ -2,8 +2,9 @@
 
 #include "open_spiel/spiel.h"
 #include "open_spiel/spiel_utils.h"
+#include "open_spiel/tests/basic_tests.h"
 
-int main()
+int main(int argc, char** argv)
 {
   std::cerr << "Loading game..\n" << std::endl;
   std::shared_ptr<const open_spiel::Game> game = open_spiel::LoadGame("kbg");

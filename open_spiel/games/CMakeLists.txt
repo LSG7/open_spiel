@@ -185,6 +185,7 @@ set(GAME_SOURCES
   SG/ki_bo_gung.cc
   SG/baseT.h
   SG/baseT.cc
+  SG/baseType.h
 )
 
 if (${OPEN_SPIEL_BUILD_WITH_HANABI})
@@ -622,3 +623,6 @@ endif()
 add_executable(y_test y/y_test.cc ${OPEN_SPIEL_OBJECTS}
                $<TARGET_OBJECTS:tests>)
 add_test(y_test y_test)
+
+add_executable(kbg_test SG/kbg_test.cc ${OPEN_SPIEL_OBJECTS}
+               $<TARGET_OBJECTS:tests>)
