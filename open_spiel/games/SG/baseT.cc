@@ -47,6 +47,11 @@ baseTGame::baseTGame(const GameType& game_type, const GameParameters& game_param
 
 }
 
+baseTGame::~baseTGame()
+{
+
+}
+
 std::vector<int> baseTGame::InformationStateTensorShape() const
 {
   //TODO
@@ -115,6 +120,11 @@ std::vector<int> baseTGame::ObservationTensorShape() const
 baseTState::baseTState(std::shared_ptr<const Game> game) : State(game)
 {
 
+}
+
+baseTState::~baseTState()
+{
+  
 }
 
 std::string baseTState::ActionToString(Player player, Action action_id) const
@@ -231,7 +241,8 @@ static std::string get_ground_string(GroundType gt, int max_us)
 
 std::string baseTState::ObservationString(Player player) const
 {
-  std::string board_string = "";
+  std::cout << "ObservationString()" << std::endl;
+  std::string board_string = "BoardString\n";
 
   // 1. print ground if not occupied
   // 2. print unit if occupied

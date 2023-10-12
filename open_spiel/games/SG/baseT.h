@@ -22,16 +22,17 @@ class baseTGame : public Game {
  public:
   explicit baseTGame(const GameParameters& params);
   explicit baseTGame(const GameType& game_type, const GameParameters& game_parameters);
-  std::vector<int> InformationStateTensorShape() const override;
-  int MaxChanceOutcomes() const override;
-  int MaxGameLength() const override;
-  double MaxUtility() const override;
-  double MinUtility() const override;
-  std::unique_ptr<State> NewInitialState() const override;
-  int NumDistinctActions() const override;
-  std::vector<int> ObservationTensorShape() const override;
-  int NumPlayers() const override;
-  absl::optional<double> UtilitySum() const override;
+  virtual ~baseTGame();
+  virtual std::vector<int> InformationStateTensorShape() const override;
+  virtual int MaxChanceOutcomes() const override;
+  virtual int MaxGameLength() const override;
+  virtual double MaxUtility() const override;
+  virtual double MinUtility() const override;
+  virtual std::unique_ptr<State> NewInitialState() const override;
+  virtual int NumDistinctActions() const override;
+  virtual std::vector<int> ObservationTensorShape() const override;
+  virtual int NumPlayers() const override;
+  virtual absl::optional<double> UtilitySum() const override;
 };
 
 class baseTState : public State {
@@ -40,19 +41,19 @@ class baseTState : public State {
  public:
   baseTState(std::shared_ptr<const Game> game);
   baseTState(const baseTState&) = default;
-  baseTState& operator=(const baseTState&) = default;
-  std::string ActionToString(Player player, Action action_id) const override;
-  Player CurrentPlayer() const override;
-  bool IsTerminal() const override;
-  std::vector<Action> LegalActions() const override;
-  std::vector<double> Returns() const;
-
-  std::string ToString() const override;
-  std::unique_ptr<State> Clone() const override;
-  std::string ObservationString(Player player) const override;
+  virtual ~baseTState();
+  virtual baseTState& operator=(const baseTState&) = default;
+  virtual std::string ActionToString(Player player, Action action_id) const override;
+  virtual Player CurrentPlayer() const override;
+  virtual bool IsTerminal() const override;
+  virtual std::vector<Action> LegalActions() const override;
+  virtual std::vector<double> Returns() const;
+  virtual std::string ToString() const override;
+  virtual std::unique_ptr<State> Clone() const override;
+  virtual std::string ObservationString(Player player) const override;
 
  protected:
-  void DoApplyAction(Action move) override;
+  virtual void DoApplyAction(Action move) override;
 
   virtual void init_map();
   virtual void init_unit();
