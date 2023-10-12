@@ -42,6 +42,11 @@ kbgGame::kbgGame(const GameParameters& params) : baseTGame(kGameType, params)
       // 배틀쉽에 따르면 여기서 게임에 필요한 것들 설정한다.
 }
 
+kbgGame::~kbgGame()
+{
+
+}
+
 kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
 {
   // 맵을 생성하고
@@ -49,6 +54,17 @@ kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
   // 말을 생성하고 배치하고 
   init_unit();
 }
+
+kbgState::~kbgState()
+{
+
+}
+
+std::unique_ptr<State> kbgGame::NewInitialState() const
+{
+  return std::unique_ptr<State>(new kbgState(shared_from_this()));
+}
+
 
 // 1번 구현 함수 
 /**

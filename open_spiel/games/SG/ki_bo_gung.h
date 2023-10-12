@@ -40,6 +40,8 @@ namespace kbg {
 class kbgGame : public baseT::baseTGame {
  public:
   explicit kbgGame(const GameParameters& params);
+  virtual ~kbgGame();
+  std::unique_ptr<State> NewInitialState() const override;
 
  protected:
 
@@ -51,6 +53,7 @@ class kbgState : public baseT::baseTState {
  public:
   kbgState(std::shared_ptr<const Game> game);
   kbgState(const kbgState&) = default;
+  virtual ~kbgState();
   kbgState& operator=(const kbgState&) = default;
 
   void init_map() override;
