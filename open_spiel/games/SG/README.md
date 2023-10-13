@@ -38,3 +38,5 @@
 https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-encoding-f180eb831cf1  
 
 * 유닛 위치의 Z축 = 채널 에 병종을 one-hot, 체력, 공격력, 방어력 표현   
+* Mac 에는 gdb 가 없다. lldb 써야 한다.  
+* Mac 에서 vs code 에다가 codeLLDB 깔면 연결된다. F5 로 디버깅 실행
