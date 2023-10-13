@@ -24,3 +24,17 @@
 * 유닛은 vector [id], unique unit_id 로 접근  
 0 번 player 는 1번부터 시작. 접근할 때 (p0_id) 으로 접근  
 1 번 player 는 1001번부터 시작. 접근할 때 (p1_id - 1000) 으로 접근  
+
+23.10.10
+보드 표현 규정
+* [빈땅은 '_ '] 스페이스는 유닛 개수에 따라 변동적  
+* [유닛은 'player_id + unit_id] ex=[01]  
+
+23.10.12
+* 수동빌드 할 때 BUILD_TYPE=Debug 해줘야 -g 옵션 들어감
+* games/ 아래에서 CMakeLists.txt 에서 빌드해줘야 실행 파일에 디버그 들어가서 같이 빌드됨
+
+* Interger Encoding vs One-hot Encoding
+https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-encoding-f180eb831cf1  
+
+* 유닛 위치의 Z축 = 채널 에 병종을 one-hot, 체력, 공격력, 방어력 표현   
