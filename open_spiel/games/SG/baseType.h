@@ -6,10 +6,10 @@
 namespace open_spiel {
 namespace baseT {
 
-enum GroundType {GT_Normal = 0, GT_CannotEnter = 1, };
-enum UnitDirection {North = 0, West = 1, South = 2, East = 3,};
-enum PlayerN {P0 = 0, P1 = 1, P2 = 2,};
-enum UnitClass {C0 = 9, C1,C2,C3,C4,C5,C6,C7,C8,C9};
+enum GroundType {GT_Normal = 0, GT_CannotEnter = 1, GT_None = -1, };
+enum UnitDirection {D_North = 0, D_West = 1, D_South = 2, D_East = 3, D_None = -1,};
+enum PlayerN {P0 = 0, P1 = 1, P2 = 2, PNone = -1,};
+enum UnitClass {C0 = 9, C1,C2,C3,C4,C5,C6,C7,C8,C9, CNone = -1,};
 
 struct MapCoord {
     //z:floor y:row x:col
@@ -18,13 +18,13 @@ struct MapCoord {
 struct Cell {
     GroundType ground_type;
     bool is_occupied;
+    PlayerN occupying_player;
     int occupying_unit_id;
 };
 
 struct Unit {
     bool is_alive;
     int unit_id;
-    int unit_kind;
     int shift_distance;
     int atk_range;
     float hp;
