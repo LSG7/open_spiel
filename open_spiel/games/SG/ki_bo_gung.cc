@@ -49,6 +49,11 @@ kbgGame::~kbgGame()
 
 kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
 {
+  player_num = 2;
+  
+  //무조건 맨 처음에 불러줘야 함
+  init_first(player_num);
+
   // 맵을 생성하고
   init_map();
   // 말을 생성하고 배치하고 
@@ -103,43 +108,28 @@ void kbgState::init_unit()
 {
   max_units = 4;
   // kind ki:0 bo:1 gung:2
-  int unit_id = 0;
+
   Map_coord unit_coord = {0,0,0};
-  Map_coord unit_drction = {0,0,0};
 
-  // 기병. 기종 0, 이거 2, 공거 2, 체 1, 공 1
-  struct Unit ki = {true, -1, 0, 2, 2, 1, 1, unit_coord, unit_drction, "ki"};
-  // 보병. 기종 1, 이거 1, 공거 1, 체 2, 공 1
-  struct Unit bo = {true, -1, 1, 1, 1, 2, 1, unit_coord, unit_drction, "bo"};
-  // 궁병. 기종 2, 이거 1, 공거 2, 체 1, 공 1 
-  struct Unit gung = {true, -1, 2, 1, 2, 1, 1, unit_coord, unit_drction, "gung"};
+  // live. id, 이거 2, 공거 2, 체 1, 공 1, class 0, p 0, crd , drc, name
+  struct Unit ki = {true, -1, 2, 2, 1, 1, CNone, PNone, {0,0,0}, D_None, "ki"};
+  // live. id, 이거 1, 공거 1, 체 2, 공 1
+  struct Unit bo = {true, -1, 1, 1, 2, 1, CNone, PNone, {0,0,0}, D_None, "bo"};
+  // live. id, 이거 1, 공거 2, 체 1, 공 1 
+  struct Unit gung = {true, -1, 1, 2, 1, 1, CNone, PNone, {0,0,0}, D_None, "gung"};
 
+  //P0 units
+  set_unit(P0, C0, ki, {0,1,5},D_South);
+  set_unit(P0, C1, bo, {0,1,4},D_South);
+  set_unit(P0, C1, bo, {0,1,3},D_South);
+  set_unit(P0, C2, gung, {0,0,4},D_South);
   
-  map_state_now.units.p0_units_v.push_back(ki);
-  map_state_now.units.p0_units_v.push_back(bo);
-  map_state_now.units.p0_units_v.push_back(bo);
-  map_state_now.units.p0_units_v.push_back(gung);
-
-  map_state_now.units.p1_units_v.push_back(ki);
-  map_state_now.units.p1_units_v.push_back(bo);
-  map_state_now.units.p1_units_v.push_back(bo);
-  map_state_now.units.p1_units_v.push_back(gung);
-
-  // unique id set
-  for (int i = 0; i < map_state_now.units.p0_units_v.size(); i++) {
-    map_state_now.units.p0_units_v[i].unit_id = unit_id;
-    unit_id++;
-  }
-
-  // 아군과 적 유닛 아이디 구분
-  unit_id = 0;
-  unit_id += 1000;
-
-  for (int i = 0; i < map_state_now.units.p1_units_v.size(); i++) {
-    map_state_now.units.p1_units_v[i].unit_id = unit_id;
-    unit_id++;
-  }
-
+  //P1 units
+  set_unit(P1, C0, ki, {0,8,5},D_North);
+  set_unit(P1, C1, bo, {0,8,4},D_North);
+  set_unit(P1, C1, bo, {0,8,3},D_North);
+  set_unit(P1, C2, gung, {0,9,4},D_North);
+  
 }
 
 } // kbg

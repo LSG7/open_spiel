@@ -36,13 +36,8 @@ struct Unit {
     std::string name;
 };
 
-struct Map_units {
-    std::vector<Unit> p0_units_v;
-    std::vector<Unit> p1_units_v;
-};
-
 struct Map_state {
-    Map_units units;
+    std::vector<std::vector<Unit>> units_v; // P0:units_v[0]
     std::vector<std::vector<std::vector<Cell>>> cells_v;
 };
 

@@ -54,14 +54,19 @@ class baseTState : public State {
 
  protected:
   virtual void DoApplyAction(Action move) override;
+  virtual void set_unit(PlayerN pn, UnitClass cs, Unit base_unit, MapCoord crd, UnitDirection drc);
 
+  virtual void init_first(int p_num);
   virtual void init_map();
   virtual void init_unit();
   
-  Map_coord map_size;
+  MapCoord map_size;
   Map_state map_state_now; 
   std::vector<Map_state> Map_history;
   int max_units; // max number of one player
+  int player_num = 0;
+  std::vector<int> unit_id_count;
+  
   
  private:
 

@@ -183,6 +183,16 @@ void baseTState::init_unit()
   //TODO
 }
 
+void baseTState::init_first(int p_num)
+{
+  // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
+  unit_id_count.assign(0,p_num);
+
+  // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
+  std::vector<Unit> empty_units_v;
+  map_state_now.units_v.assign(empty_units_v,p_num);
+}
+
 static std::string get_unit_id_string(int int_unit_id, int max_us)
 {
   std::string string_id;
@@ -257,8 +267,28 @@ std::string baseTState::ObservationString(Player player) const
           board_string += get_ground_string(map_state_now.cells_v[z][y][x].ground_type, max_units);
         }
       }//x
+      board_string += "\n";
     }//y
+    board_string += "\n";
   }//z
+
+  return board_string;
+}
+
+void baseTState::set_unit(PlayerN pn, UnitClass cs, Unit base_unit, MapCoord crd, UnitDirection drc)
+{
+  base_unit.unit_class = cs;
+  base_unit.player = pn;
+  base_unit.coord = crd;
+  base_unit.direction = drc;
+
+  base_unit.unit_id = unit_id_count[pn]++;
+  map_state_now.units_v[pn].push_back(base_unit);
+  
+  map_state_now.cells_v[crd.z][crd.y][crd.x].is_occupied = true;
+  map_state_now.cells_v[crd.z][crd.y][crd.x].occupying_player = pn;
+  map_state_now.cells_v[crd.z][crd.y][crd.x].occupying_unit_id = base_unit.unit_id;
+
 }
 
 } // baseT
