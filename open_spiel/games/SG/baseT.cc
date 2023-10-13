@@ -193,7 +193,7 @@ void baseTState::init_first(int p_num)
   map_state_now.units_v.assign(p_num, empty_units_v);
 }
 
-static std::string get_unit_id_string(int int_unit_id, int max_us)
+static std::string get_unit_id_string(PlayerN p, int int_unit_id, int max_us)
 {
   std::string string_id;
   int string_id_length = 0;
@@ -204,14 +204,9 @@ static std::string get_unit_id_string(int int_unit_id, int max_us)
     string_id_length = 3;
   }
 
-  if (int_unit_id >= 1000) {
-    string_id += "1"; // player number
-  }
-  else {
-    string_id += "0"; // player number
-  }
+  string_id += std::to_string(p);
 
-  string_id += std::to_string(int_unit_id % 1000);
+  string_id += std::to_string(int_unit_id);
 
   // 자리수 마추기 
   int diff_len = string_id_length - string_id.length();
@@ -261,7 +256,8 @@ std::string baseTState::ObservationString(Player player) const
       for (int x = 0; x < map_size.x; x++) {
         if (map_state_now.cells_v[z][y][x].is_occupied) {
           // player0,1 구분해서 그린다.
-          board_string += get_unit_id_string(map_state_now.cells_v[z][y][x].occupying_unit_id, max_units);
+          board_string += get_unit_id_string(map_state_now.cells_v[z][y][x].occupying_player,
+          map_state_now.cells_v[z][y][x].occupying_unit_id, max_units);
         } else {
           // 그라운드 종류에 따라 그린다. 
           board_string += get_ground_string(map_state_now.cells_v[z][y][x].ground_type, max_units);
