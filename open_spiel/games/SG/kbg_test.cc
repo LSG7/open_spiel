@@ -20,5 +20,7 @@ int main(int argc, char** argv)
   std::cerr << "Printing observation p0..." << std::endl;
   std::string p0_observation = state->ObservationString(0);
 
+  std::cout << p0_observation ;
+
   return 0;
 }
