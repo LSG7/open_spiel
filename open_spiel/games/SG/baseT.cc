@@ -186,11 +186,11 @@ void baseTState::init_unit()
 void baseTState::init_first(int p_num)
 {
   // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
-  unit_id_count.assign(0,p_num);
+  unit_id_count.assign(p_num, 0);
 
   // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
   std::vector<Unit> empty_units_v;
-  map_state_now.units_v.assign(empty_units_v,p_num);
+  map_state_now.units_v.assign(p_num, empty_units_v);
 }
 
 static std::string get_unit_id_string(int int_unit_id, int max_us)
