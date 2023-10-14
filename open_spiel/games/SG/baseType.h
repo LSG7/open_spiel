@@ -31,6 +31,7 @@ struct Unit {
     float power;
     UnitClass unit_class;
     PlayerN player;
+    bool is_public;
     MapCoord coord;        // 현재 위치한 셀 
     UnitDirection direction;    // coord 주위 4방향 셀  가르킨다.
     std::string name;

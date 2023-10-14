@@ -109,12 +109,12 @@ void kbgState::init_unit()
   max_units = 4;
   // kind ki:0 bo:1 gung:2s
 
-  // live. id, 이거 2, 공거 2, 체 1, 공 1, class 0, p 0, crd , drc, name
-  struct Unit ki = {true, -1, 2, 2, 1, 1, CNone, PNone, {0,0,0}, D_None, "ki"};
+  // live. id, 이거 2, 공거 2, 체 1, 공 1, class 0, p 0, pb f, crd , drc, name
+  struct Unit ki = {true, -1, 2, 2, 1, 1, CNone, PNone, false, {0,0,0}, D_None, "ki"};
   // live. id, 이거 1, 공거 1, 체 2, 공 1
-  struct Unit bo = {true, -1, 1, 1, 2, 1, CNone, PNone, {0,0,0}, D_None, "bo"};
+  struct Unit bo = {true, -1, 1, 1, 2, 1, CNone, PNone, false, {0,0,0}, D_None, "bo"};
   // live. id, 이거 1, 공거 2, 체 1, 공 1 
-  struct Unit gung = {true, -1, 1, 2, 1, 1, CNone, PNone, {0,0,0}, D_None, "gung"};
+  struct Unit gung = {true, -1, 1, 2, 1, 1, CNone, PNone, false, {0,0,0}, D_None, "gung"};
 
   //P0 units
   set_unit(P0, C0, ki, {0,1,5},D_South);
