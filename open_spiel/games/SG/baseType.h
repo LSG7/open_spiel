@@ -17,9 +17,9 @@ struct MapCoord {
 };
 struct Cell {
     GroundType ground_type;
-    bool is_occupied;
     PlayerN occupying_player;
     int occupying_unit_id;
+    std::vector<bool> being_observed_by;
 };
 
 struct Unit {
@@ -31,13 +31,13 @@ struct Unit {
     float power;
     UnitClass unit_class;
     PlayerN player;
-    bool is_public;
+    bool being_observed;
     MapCoord coord;        // 현재 위치한 셀 
     UnitDirection direction;    // coord 주위 4방향 셀  가르킨다.
     std::string name;
 };
 
-struct Map_state {
+struct MapState {
     std::vector<std::vector<Unit>> units_v; // P0:units_v[0]
     std::vector<std::vector<std::vector<Cell>>> cells_v;
 };

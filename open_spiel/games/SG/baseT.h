@@ -59,10 +59,11 @@ class baseTState : public State {
   virtual void init_first(int p_num);
   virtual void init_map();
   virtual void init_unit();
+  virtual std::string get_cell_observation_string(MapState state, MapCoord crd, PlayerN p);
   
   MapCoord map_size;
-  Map_state map_state_now; 
-  std::vector<Map_state> Map_history;
+  MapState map_state_now; 
+  std::vector<MapState> Map_history;
   int max_units; // max number of one player
   int player_num = 0;
   std::vector<int> unit_id_count;
