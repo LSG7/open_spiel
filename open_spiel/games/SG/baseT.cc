@@ -261,9 +261,32 @@ namespace open_spiel
       return board_string;
     }
 
-    int baseTState::mv_or_attk(PlayerN pn, int unit_id, MapCoord tg_crd, UnitDirection tg_drc)
+    int baseTState::action_mv(PlayerN pn, int unit_id, MapCoord tg_crd, UnitDirection tg_drc)
     {
-      //1. 이동 시키고
+      if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == PNone) {//비어있음
+        //이동시킨다.
+      } else {// 누군가 차지 중 
+        if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == pn) {// 자신이 차지 중 
+          // 자신이 차지 중 임을 경고로 알린다.
+        } else {  // 적이 차지 중 
+          if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].being_observed_by[pn]) {// 내가 관찰 중인 곳
+            PlayerN p_enemy = map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player;
+            int uid_enemy = map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id;
+            if (map_state_now.units_v[p_enemy][uid_enemy].being_observed) { // 맵&적이 보이는 중  
+              // 적이 있으니 이동 못 한다고 알려야 함.
+              return -1;
+            } else {  // 적이 안보이는 중. 스텔스 기능 가진 유닛. 나중에 구현  
+              // TODO. 나중에 언젠가 구현. 이동하다가 바로 앞에서 적을 발견하는 기능 구현 해야 한다. 
+            }
+
+          } else {// 내가 관찰 아닌 곳. 적이 있는데 맵이 안보이고 적도 안보이는 상황.
+            // 맵에 안보이는 곳. 이동 명령 내리면 이동하다가 바로 앞에서 적을 발견하는 기능 구현 해야 한다.
+          }
+        }
+      }
+
+
+
       //2. 맵 관찰지역을 수정한다.
       //   2-1. pn 의 관찰 중 지역만 다 지우고 
       //   2-2. pn 유닛들 돌면서 새롭게 관찰지역 만든다.

@@ -121,15 +121,23 @@ void kbgState::init_unit()
 
   //P0 units
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 2, 2, 1, 1, C0, P0, false, {0,8,5}, D_North, "ki"});
+  action_mv(P0, unit_id_count-1, {0,8,5}, D_North);
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C1, P0, false, {0,8,4}, D_North, "bo"});
+  action_mv(P0, unit_id_count-1, {0,8,4}, D_North);
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C1, P0, false, {0,8,3}, D_North, "bo"});
+  action_mv(P0, unit_id_count-1, {0,8,3}, D_North);
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C2, P0, false, {0,9,4}, D_North, "gu"});
+  action_mv(P0, unit_id_count-1, {0,9,4}, D_North);
 
   //P1 units
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 2, 2, 1, 1, C0, P1, false, {0,1,5}, D_South, "ki"});
+  action_mv(P1, unit_id_count-1, {0,1,5}, D_South);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C1, P1, false, {0,1,4}, D_South, "bo"});
+  action_mv(P1, unit_id_count-1, {0,1,4}, D_South);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C1, P1, false, {0,1,3}, D_South, "bo"});
+  action_mv(P1, unit_id_count-1, {0,1,3}, D_South);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C2, P1, false, {0,0,4}, D_South, "gu"});
+  action_mv(P1, unit_id_count-1, {0,0,4}, D_South);
 
 
 }
