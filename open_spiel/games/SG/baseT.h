@@ -54,7 +54,8 @@ class baseTState : public State {
 
  protected:
   virtual void DoApplyAction(Action move) override;
-  virtual void set_unit(PlayerN pn, UnitClass cs, Unit base_unit, MapCoord crd, UnitDirection drc);
+
+  virtual int mv_or_attk(PlayerN pn, int unit_id, MapCoord tg_crd, UnitDirection tg_drc);
 
   virtual void init_first(int p_num);
   virtual void init_map();
