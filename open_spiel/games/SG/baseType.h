@@ -32,8 +32,9 @@ struct Cell {
 struct Unit {
     bool is_alive;
     int unit_id;
-    int shift_distance;
-    int atk_range;
+    int shift_dstc;
+    int atk_dstc;
+    int vw_dstc;
     float hp;
     float power;
     UnitClass unit_class;

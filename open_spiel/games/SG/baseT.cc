@@ -237,7 +237,6 @@ namespace open_spiel
         cell_observed.insert(cell_observed.cend(), (4 - cell_observed.length()), ' ');
       }
 
-
       return cell_observed;
     }
 
@@ -274,7 +273,7 @@ namespace open_spiel
           // 1. 현재 유닛이 위치한 셀 정보 수정 
           map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
           map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = -1;
-          need_recalc_v[pn].push_back({pn, mine.crd});
+
 
         } else {  // 이동 불가능한 지형. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
           get_set_error("GroundType is CannotEnter", true);
@@ -321,6 +320,11 @@ namespace open_spiel
       } else {
         return last_log;
       }
+    }
+
+    std::string scout(PlayerN pn, int unit_id)
+    {
+      
     }
 
   } // baseT
