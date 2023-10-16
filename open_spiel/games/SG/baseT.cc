@@ -261,7 +261,7 @@ namespace open_spiel
       return board_string;
     }
 
-    void baseTState::mv_or_attk(PlayerN pn, int unit_id, MapCoord tg_crd, UnitDirection tg_drc)
+    int baseTState::mv_or_attk(PlayerN pn, int unit_id, MapCoord tg_crd, UnitDirection tg_drc)
     {
       //1. 이동 시키고
       //2. 맵 관찰지역을 수정한다.
