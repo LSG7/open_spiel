@@ -191,6 +191,10 @@ namespace open_spiel
       // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
       std::vector<Unit> empty_units_v;
       map_state_now.units_v.assign(p_num, empty_units_v);
+
+      // 재계산 해야 하는 셀 초기화
+      std::vector<P_Cell> empty_pcell_v;
+      need_recalc_v.assign(p_num, empty_pcell_v);
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
@@ -263,17 +267,31 @@ namespace open_spiel
 
     int baseTState::action_mv(PlayerN pn, int unit_id, MapCoord tg_crd, UnitDirection tg_drc)
     {
+      Unit& mine = map_state_now.units_v[pn][unit_id];
       if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == PNone) {//비어있음
-        //이동시킨다.
+        if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].ground_type != GT_CannotEnter) { // 이동가능한 곳 
+          //이동시킨다.
+          // 1. 현재 유닛이 위치한 셀 정보 수정 
+          map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
+          map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = -1;
+          need_recalc_v[pn].push_back({pn, mine.crd});
+
+        } else {  // 이동 불가능한 지형. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
+          get_set_error("GroundType is CannotEnter", true);
+          return -1;
+        }
       } else {// 누군가 차지 중 
         if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == pn) {// 자신이 차지 중 
-          // 자신이 차지 중 임을 경고로 알린다.
+          // 자신이 차지 중 임을 경고로 알린다. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
+          get_set_error("There is already an unit. Cannot move", true);
+          return -1;
         } else {  // 적이 차지 중 
           if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].being_observed_by[pn]) {// 내가 관찰 중인 곳
             PlayerN p_enemy = map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player;
             int uid_enemy = map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id;
             if (map_state_now.units_v[p_enemy][uid_enemy].being_observed) { // 맵&적이 보이는 중  
-              // 적이 있으니 이동 못 한다고 알려야 함.
+              // 적이 있으니 이동 못 한다고 알려야 함. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
+              get_set_error("There is already an enemy. Cannot move", true);
               return -1;
             } else {  // 적이 안보이는 중. 스텔스 기능 가진 유닛. 나중에 구현  
               // TODO. 나중에 언젠가 구현. 이동하다가 바로 앞에서 적을 발견하는 기능 구현 해야 한다. 
@@ -281,6 +299,7 @@ namespace open_spiel
 
           } else {// 내가 관찰 아닌 곳. 적이 있는데 맵이 안보이고 적도 안보이는 상황.
             // 맵에 안보이는 곳. 이동 명령 내리면 이동하다가 바로 앞에서 적을 발견하는 기능 구현 해야 한다.
+            // TODO
           }
         }
       }

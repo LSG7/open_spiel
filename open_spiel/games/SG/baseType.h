@@ -16,10 +16,16 @@ struct MapCoord {
     //z:floor y:row x:col
     int z; int y; int x;
 };
+
+struct P_Cell {
+    PlayerN pn;
+    MapCoord crd;
+};
+
 struct Cell {
     GroundType ground_type;
     PlayerN occupying_player;
-    int occupying_unit_id;
+    int occupying_unit_id; 
     std::vector<bool> being_observed_by;
 };
 
@@ -33,7 +39,7 @@ struct Unit {
     UnitClass unit_class;
     PlayerN player;
     bool being_observed;
-    MapCoord coord;        // 현재 위치한 셀 
+    MapCoord crd;        // 현재 위치한 셀 
     UnitDirection direction;    // coord 주위 4방향 셀  가르킨다.
     std::string name;
 };
