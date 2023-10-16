@@ -261,18 +261,12 @@ namespace open_spiel
       return board_string;
     }
 
-    void baseTState::set_unit(PlayerN pn, UnitClass cs, Unit base_unit, MapCoord crd, UnitDirection drc)
+    void baseTState::mv_or_attk(PlayerN pn, int unit_id, MapCoord tg_crd, UnitDirection tg_drc)
     {
-      base_unit.unit_class = cs;
-      base_unit.player = pn;
-      base_unit.coord = crd;
-      base_unit.direction = drc;
-
-      base_unit.unit_id = unit_id_count[pn]++;
-      map_state_now.units_v[pn].push_back(base_unit);
-
-      map_state_now.cells_v[crd.z][crd.y][crd.x].occupying_player = pn;
-      map_state_now.cells_v[crd.z][crd.y][crd.x].occupying_unit_id = base_unit.unit_id;
+      //1. 이동 시키고
+      //2. 맵 관찰지역을 수정한다.
+      //   2-1. pn 의 관찰 중 지역만 다 지우고 
+      //   2-2. pn 유닛들 돌면서 새롭게 관찰지역 만든다.
     }
 
   } // baseT

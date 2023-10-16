@@ -120,17 +120,18 @@ void kbgState::init_unit()
   struct Unit gung = {true, -1, 1, 2, 1, 1, CNone, PNone, false, {0,0,0}, D_None, "gung"};
 
   //P0 units
-  set_unit(P0, C0, ki, {0,1,5},D_South);
-  set_unit(P0, C1, bo, {0,1,4},D_South);
-  set_unit(P0, C1, bo, {0,1,3},D_South);
-  set_unit(P0, C2, gung, {0,0,4},D_South);
-  
+  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 2, 2, 1, 1, C0, P0, false, {0,8,5}, D_North, "ki"});
+  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C1, P0, false, {0,8,4}, D_North, "bo"});
+  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C1, P0, false, {0,8,3}, D_North, "bo"});
+  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C2, P0, false, {0,9,4}, D_North, "gu"});
+
   //P1 units
-  set_unit(P1, C0, ki, {0,8,5},D_North);
-  set_unit(P1, C1, bo, {0,8,4},D_North);
-  set_unit(P1, C1, bo, {0,8,3},D_North);
-  set_unit(P1, C2, gung, {0,9,4},D_North);
-  
+  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 2, 2, 1, 1, C0, P1, false, {0,1,5}, D_South, "ki"});
+  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C1, P1, false, {0,1,4}, D_South, "bo"});
+  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C1, P1, false, {0,1,3}, D_South, "bo"});
+  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C2, P1, false, {0,0,4}, D_South, "gu"});
+
+
 }
 
 } // kbg
