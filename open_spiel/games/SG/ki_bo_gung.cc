@@ -85,7 +85,7 @@ void kbgState::init_map()
   map_size.z = 1;
 
   // 비어있는 관찰자 벡터
-  std::vector<bool> obp(false, player_num);
+  std::vector<bool> obp(player_num, false);
 
   // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
   // [z][row][col]

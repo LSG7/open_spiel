@@ -194,7 +194,7 @@ namespace open_spiel
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
-    std::string baseTState::get_cell_observation_string(MapState s, MapCoord crd, PlayerN p)
+    std::string baseTState::get_cell_observation_string(MapState s, MapCoord crd, PlayerN p) const
     {
       std::string cell_observed = "";
 
@@ -267,6 +267,8 @@ namespace open_spiel
       //2. 맵 관찰지역을 수정한다.
       //   2-1. pn 의 관찰 중 지역만 다 지우고 
       //   2-2. pn 유닛들 돌면서 새롭게 관찰지역 만든다.
+
+      return 0;
     }
 
   } // baseT
