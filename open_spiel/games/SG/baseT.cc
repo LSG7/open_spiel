@@ -294,5 +294,15 @@ namespace open_spiel
       return 0;
     }
 
+    std::string get_set_error(std::string log, bool is_save)
+    {
+      static std::string last_log;
+      if (is_save) {
+        last_log = log;
+      } else {
+        return last_log;
+      }
+    }
+
   } // baseT
 } // open_spiel
