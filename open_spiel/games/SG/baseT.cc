@@ -243,7 +243,7 @@ namespace open_spiel
 
     std::string baseTState::ObservationString(Player player) const
     {
-      std::string board_string = "BoardString P" + std::to_str(player) + "\n";
+      std::string board_string = "BoardString P" + std::to_string(player) + "\n";
 
       // 1. print ground if not occupied
       // 2. print unit if occupied
