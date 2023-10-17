@@ -110,14 +110,15 @@ void kbgState::init_map()
 void kbgState::init_unit()
 {
   max_units = 4;
+  std::vector<bool> empty_v(player_num, false);
   // kind ki:0 bo:1 gung:2s
 
-  // live. id -1, 이거 2, 공거 1, 시야 4, 체 1, 공 1, class 0, p 0, pb f, crd , drc, name
-  struct Unit ki = {true, -1, 2, 1, 4, 1, 1, CNone, PNone, false, {0,0,0}, D_None, "ki"};
+  // live. id -1, 이거 2, 공거 1, 시야 4, 체 1, 공 1, class 0, p 0, crd , drc, pb, name
+  struct Unit ki = {true, -1, 2, 1, 4, 1, 1, CNone, PNone, {0,0,0}, D_None, empty_v, "ki"};
   // live. id -1, 이거 1, 공거 1, 시야 4, 체 2, 공 1
-  struct Unit bo = {true, -1, 1, 1, 4, 2, 1, CNone, PNone, false, {0,0,0}, D_None, "bo"};
+  struct Unit bo = {true, -1, 1, 1, 4, 2, 1, CNone, PNone, {0,0,0}, D_None, empty_v,"bo"};
   // live. id -1, 이거 1, 공거 2, 시야 4, 체 1, 공 1 
-  struct Unit gung = {true, -1, 1, 2, 4, 1, 1, CNone, PNone, false, {0,0,0}, D_None, "gung"};
+  struct Unit gung = {true, -1, 1, 2, 4, 1, 1, CNone, PNone, {0,0,0}, D_None, empty_v,"gung"};
 
   //P0 units
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 2, 2, 1, 1, C0, P0, false, {0,8,5}, D_North, "ki"});

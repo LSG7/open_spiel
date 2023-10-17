@@ -1,3 +1,4 @@
+#include <cmath>
 #include "open_spiel/games/SG/baseT.h"
 #include "open_spiel/spiel_utils.h"
 
@@ -322,8 +323,46 @@ namespace open_spiel
       }
     }
 
+
     std::string scout(PlayerN pn, int unit_id)
     {
+      //1. 주변 셀 observed marking
+      //2. 내가 위치한 장소가 적이 보이는 곳이면 나를 observed marking. 아니라면 마킹 지운다
+      Unit& u = map_state_now.units_v[pn][unit_id];
+
+      // 1. pn 주변 vw_dstc 만큼 셀들을 관찰한다.
+      // 타겟 셀 z,y 좌표와 unit의 z,y 좌표의 차이만큼 x 를 덜 간다.
+      // 대각선 하면 안된다. 거리차이 많이 난다.
+      // z + y + x = u.vw_dstc
+      for (int z = -u.vw_dstc; z <= u.vw_dstc; z++)
+      {
+        for (int y = -(u.vw_dstc - std::abs(z)); y <= (u.vw_dstc - std::abs(z)); y++)
+        {
+          for (int x = -(u.vw_dstc - std::abs(z) - std::abs(y)); x <= (u.vw_dstc - std::abs(z) - std::abs(y)); x++)
+          {
+            //
+            int tg_z = u.crd.z + z;
+            int tg_y = u.crd.y + y;
+            int tg_x = u.crd.x + x;
+
+            //범위 검사
+            if (tg_z >= 0 && tg_z < map_size.z && tg_y >= 0 && tg_y < map_size.y && tg_x >= 0 && tg_x < map_size.x)
+            {
+              // 해당 셀이 보이고 있음을 마킹
+              map_state_now.cells_v[tg_z][tg_y][tg_x].being_observed_by[pn] = true;
+
+              // 그 셀에 적의 유닛이 존재한다면 적 유닛이 보임을 마킹 
+              if (map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_player != pn &&
+                  map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_player != PNone)
+              {
+                map_state_now.units_v[map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_player][map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_unit_id].being_observed_by[pn] = true;
+              }
+            }
+          }
+        }
+      } // 1. 주변셀 마킹 끝.
+
+    //2. 내가 위치한 장소가 적이 보이는 곳이면 나를 observed marking. 아니라면 마킹 지운다
       
     }
 
