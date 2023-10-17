@@ -218,7 +218,7 @@ namespace open_spiel
 
       if (s.cells_v[crd.z][crd.y][crd.x].being_observed_by[p])  // p 에 의해 관찰되는 중
       {
-        if (s.cells_v[crd.z][crd.y][crd.x].occupying_player != -1) // 차지된 셀이면
+        if (s.cells_v[crd.z][crd.y][crd.x].occupying_player != PNone) // 차지된 셀이면
         {
           cell_observed += std::to_string(s.cells_v[crd.z][crd.y][crd.x].occupying_player);
           cell_observed += std::to_string(s.cells_v[crd.z][crd.y][crd.x].occupying_unit_id);
@@ -240,7 +240,6 @@ namespace open_spiel
 
       return cell_observed;
     }
-
 
     std::string baseTState::ObservationString(Player player) const
     {
@@ -265,23 +264,32 @@ namespace open_spiel
       return board_string;
     }
 
-    int baseTState::action_mv(PlayerN pn, int unit_id, MapCoord tg_crd, UnitDirection tg_drc)
+    int baseTState::action_mv(PlayerN pn, int unit_id, MapCoord tg_crd)
     {
       Unit& mine = map_state_now.units_v[pn][unit_id];
       if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == PNone) {//비어있음
         if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].ground_type != GT_CannotEnter) { // 이동가능한 곳 
-          //이동시킨다.
           // 1. 현재 유닛이 위치한 셀 정보 수정 
           map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
           map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = -1;
-
+          // 2. 현재 유닛이 위치한 셀 기준 주위 셀 obs ref_count 수정 
+          scout(pn, unit_id, ObsRefDown);
+          // 3. 유닛을 타겟 지점으로 이동시킨다.
+          mine.crd = tg_crd;
+          // 4. 이동한지점에서 주위 맵 관찰한다. 
+          scout(pn, unit_id, ObsRefUp);
+          // 5. 유닛 obs 를 현재 위치 셀과 같게 한다. TODO : 스텔스 가진 유닛이면 다르게 구현해야 한다.
+          mine.being_observed_by = map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].being_observed_by;
 
         } else {  // 이동 불가능한 지형. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
           get_set_error("GroundType is CannotEnter", true);
           return -1;
         }
       } else {// 누군가 차지 중 
-        if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == pn) {// 자신이 차지 중 
+        if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == pn) {// 자신이 차지 중
+          if (mine.crd == tg_crd) { // 현재 유닛이 있는 곳. 그 자리 유지하는 경우 
+            return 0;
+          }
           // 자신이 차지 중 임을 경고로 알린다. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
           get_set_error("There is already an unit. Cannot move", true);
           return -1;
@@ -323,11 +331,10 @@ namespace open_spiel
       }
     }
 
-
-    std::string scout(PlayerN pn, int unit_id)
+    // cell obs check function
+    std::string scout(PlayerN pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
     {
       //1. 주변 셀 observed marking
-      //2. 내가 위치한 장소가 적이 보이는 곳이면 나를 observed marking. 아니라면 마킹 지운다
       Unit& u = map_state_now.units_v[pn][unit_id];
 
       // 1. pn 주변 vw_dstc 만큼 셀들을 관찰한다.
@@ -348,21 +355,24 @@ namespace open_spiel
             //범위 검사
             if (tg_z >= 0 && tg_z < map_size.z && tg_y >= 0 && tg_y < map_size.y && tg_x >= 0 && tg_x < map_size.x)
             {
-              // 해당 셀이 보이고 있음을 마킹
-              map_state_now.cells_v[tg_z][tg_y][tg_x].being_observed_by[pn] = true;
+              // 해당 셀 Obs Ref count 수정 
+              map_state_now.cells_v[tg_z][tg_y][tg_x].being_observed_by[pn] += o_r_c;
 
-              // 그 셀에 적의 유닛이 존재한다면 적 유닛이 보임을 마킹 
-              if (map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_player != pn &&
-                  map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_player != PNone)
+              // 그 셀에 유닛이 존재한다면 셀과 같은 obs 값 대입
+              if (map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_player != PNone)
               {
-                map_state_now.units_v[map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_player][map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_unit_id].being_observed_by[pn] = true;
+                map_state_now.units_v[map_state_now.cells_v[tg_z][tg_y][tg_x].
+                occupying_player][map_state_now.cells_v[tg_z][tg_y][tg_x].
+                occupying_unit_id].being_observed_by = map_state_now.cells_v[tg_z][tg_y][tg_x].being_observed_by;
+              }
+                
               }
             }
           }
         }
       } // 1. 주변셀 마킹 끝.
 
-    //2. 내가 위치한 장소가 적이 보이는 곳이면 나를 observed marking. 아니라면 마킹 지운다
+      //2. 내가 위치한 장소가 적이 보이는 곳이면 나를 observed marking. 아니라면 마킹 지운다.
       
     }
 
