@@ -85,7 +85,7 @@ void kbgState::init_map()
   map_size.z = 1;
 
   // 비어있는 관찰자 벡터
-  std::vector<bool> obp(player_num, false);
+  std::vector<int> obp(player_num, false);
 
   // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
   // [z][row][col]
@@ -110,35 +110,33 @@ void kbgState::init_map()
 void kbgState::init_unit()
 {
   max_units = 4;
-  std::vector<bool> empty_v(player_num, false);
+  std::vector<int> empty_v(player_num, false);
   // kind ki:0 bo:1 gung:2s
 
   // live. id -1, 이거 2, 공거 1, 시야 4, 체 1, 공 1, class 0, p 0, crd , drc, pb, name
-  struct Unit ki = {true, -1, 2, 1, 4, 1, 1, CNone, PNone, {0,0,0}, D_None, empty_v, "ki"};
   // live. id -1, 이거 1, 공거 1, 시야 4, 체 2, 공 1
-  struct Unit bo = {true, -1, 1, 1, 4, 2, 1, CNone, PNone, {0,0,0}, D_None, empty_v,"bo"};
   // live. id -1, 이거 1, 공거 2, 시야 4, 체 1, 공 1 
-  struct Unit gung = {true, -1, 1, 2, 4, 1, 1, CNone, PNone, {0,0,0}, D_None, empty_v,"gung"};
+
 
   //P0 units
-  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 2, 2, 1, 1, C0, P0, false, {0,8,5}, D_North, "ki"});
-  action_mv(P0, unit_id_count-1, {0,8,5}, D_North);
-  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C1, P0, false, {0,8,4}, D_North, "bo"});
-  action_mv(P0, unit_id_count-1, {0,8,4}, D_North);
-  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C1, P0, false, {0,8,3}, D_North, "bo"});
-  action_mv(P0, unit_id_count-1, {0,8,3}, D_North);
-  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 2, 1, C2, P0, false, {0,9,4}, D_North, "gu"});
-  action_mv(P0, unit_id_count-1, {0,9,4}, D_North);
+  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 2, 1, 4, 1, 1, C0, P0, {0,8,5}, D_North, empty_v, "ki"});
+  action_mv(P0, unit_id_count[P0]-1, {0,8,5});
+  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 4, 2, 1, C1, P0, {0,8,4}, D_North, empty_v, "bo"});
+  action_mv(P0, unit_id_count[P0]-1, {0,8,4});
+  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 4, 2, 1, C1, P0, {0,8,3}, D_North, empty_v, "bo"});
+  action_mv(P0, unit_id_count[P0]-1, {0,8,3});
+  map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 2, 4, 1, 1, C2, P0, {0,9,4}, D_North, empty_v, "gu"});
+  action_mv(P0, unit_id_count[P0]-1, {0,9,4});
 
   //P1 units
-  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 2, 2, 1, 1, C0, P1, false, {0,1,5}, D_South, "ki"});
-  action_mv(P1, unit_id_count-1, {0,1,5}, D_South);
-  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C1, P1, false, {0,1,4}, D_South, "bo"});
-  action_mv(P1, unit_id_count-1, {0,1,4}, D_South);
-  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C1, P1, false, {0,1,3}, D_South, "bo"});
-  action_mv(P1, unit_id_count-1, {0,1,3}, D_South);
-  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 2, 1, C2, P1, false, {0,0,4}, D_South, "gu"});
-  action_mv(P1, unit_id_count-1, {0,0,4}, D_South);
+  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 2, 1, 4, 1, 1, C0, P1, {0,1,5}, D_South, empty_v, "ki"});
+  action_mv(P1, unit_id_count[P0]-1, {0,1,5});
+  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 4, 2, 1, C1, P1, {0,1,4}, D_South, empty_v, "bo"});
+  action_mv(P1, unit_id_count[P0]-1, {0,1,4});
+  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 4, 2, 1, C1, P1, {0,1,3}, D_South, empty_v, "bo"});
+  action_mv(P1, unit_id_count[P0]-1, {0,1,3});
+  map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 2, 4, 1, 1, C2, P1, {0,0,4}, D_South, empty_v, "gu"});
+  action_mv(P1, unit_id_count[P0]-1, {0,0,4});
 
 
 }
