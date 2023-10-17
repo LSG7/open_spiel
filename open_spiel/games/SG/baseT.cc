@@ -264,16 +264,27 @@ namespace open_spiel
       return board_string;
     }
 
-    int baseTState::action_mv(PlayerN pn, int unit_id, MapCoord tg_crd)
+    int baseTState::action_mv(PlayerN pn, int unit_id, MapCoord tg_crd, bool is_init)
     {
+      if (tg_crd.z < 0 || tg_crd.y < 0 || rg_crd.x < 0 ||
+          tg_crd.z >= map_size.z || tg_crd.y >= map_size.y || tg_crd.x >= map_size.x)
+      {
+        get_set_error("tg_crd is out of boundary.", true);
+        return -1;
+      }
       Unit& mine = map_state_now.units_v[pn][unit_id];
       if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == PNone) {//비어있음
         if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].ground_type != GT_CannotEnter) { // 이동가능한 곳 
-          // 1. 현재 유닛이 위치한 셀 정보 수정 
-          map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
-          map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = -1;
-          // 2. 현재 유닛이 위치한 셀 기준 주위 셀 obs ref_count 수정 
-          scout(pn, unit_id, ObsRefDown);
+          
+          if (!is_init)
+          {
+            // 1. 현재 유닛이 위치한 셀 정보 수정 
+            map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
+            map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = -1;
+            // 2. 현재 유닛이 위치한 셀 기준 주위 셀 obs ref_count 수정 
+            scout(pn, unit_id, ObsRefDown);
+          }
+
           // 3. 유닛을 타겟 지점으로 이동시킨다.
           mine.crd = tg_crd;
           // 4. 이동한지점에서 주위 맵 관찰한다. 
@@ -364,7 +375,6 @@ namespace open_spiel
                 occupying_player][map_state_now.cells_v[tg_z][tg_y][tg_x].
                 occupying_unit_id].being_observed_by = map_state_now.cells_v[tg_z][tg_y][tg_x].being_observed_by;
               }
-                
             }
           }
         }

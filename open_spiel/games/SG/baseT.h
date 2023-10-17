@@ -55,7 +55,7 @@ class baseTState : public State {
  protected:
   virtual void DoApplyAction(Action move) override;
 
-  virtual int action_mv(PlayerN pn, int unit_id, MapCoord tg_crd);
+  virtual int action_mv(PlayerN pn, int unit_id, MapCoord tg_crd, bool is_init);
   virtual void scout(PlayerN pn, int unit_id, ObsRefCount o_r_c);  // unit 주변 셀들을 관찰한다.
 
 
