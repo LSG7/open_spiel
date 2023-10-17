@@ -70,6 +70,7 @@ class baseTState : public State {
   std::vector<MapState> Map_history;
   int max_units; // max number of one player
   int player_num = 0;
+  int current_player = 0;
   std::vector<int> unit_id_count;
   std::vector<std::vector<P_Cell>> need_recalc_v; // P0: need_recalc_v[0]
   

@@ -136,7 +136,7 @@ namespace open_spiel
     Player baseTState::CurrentPlayer() const
     {
       // TODO
-      return Player{0};
+      return current_player;
     }
 
     bool baseTState::IsTerminal() const
