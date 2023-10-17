@@ -331,7 +331,7 @@ namespace open_spiel
     }
 
     // cell obs check function
-    std::string baseTState::scout(PlayerN pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
+    void baseTState::scout(PlayerN pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
     {
       //1. 주변 셀 observed marking
       Unit& u = map_state_now.units_v[pn][unit_id];
@@ -365,15 +365,10 @@ namespace open_spiel
                 occupying_unit_id].being_observed_by = map_state_now.cells_v[tg_z][tg_y][tg_x].being_observed_by;
               }
                 
-              }
             }
           }
         }
-      } // 1. 주변셀 마킹 끝.
-
-      //2. 내가 위치한 장소가 적이 보이는 곳이면 나를 observed marking. 아니라면 마킹 지운다.
-      
-    }
-
+      }
+    }    
   } // baseT
 } // open_spiel
