@@ -199,7 +199,7 @@ namespace open_spiel
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
-    std::string baseTState::get_cell_observation_string(MapState s, MapCoord crd, PlayerN p) const
+    std::string baseTState::get_cell_observation_string(MapState s, MapCoord crd, int p) const
     {
       std::string cell_observed = "";
 
@@ -243,8 +243,7 @@ namespace open_spiel
 
     std::string baseTState::ObservationString(Player player) const
     {
-      std::cout << "ObservationString() P:" << player << std::endl;
-      std::string board_string = "BoardString\n";
+      std::string board_string = "BoardString P" + std::to_str(player) + "\n";
 
       // 1. print ground if not occupied
       // 2. print unit if occupied
@@ -254,7 +253,7 @@ namespace open_spiel
         {
           for (int x = 0; x < map_size.x; x++)
           {
-            board_string += get_cell_observation_string(map_state_now, {z,y,x}, P0);
+            board_string += get_cell_observation_string(map_state_now, {z,y,x}, player);
           } // x
           board_string += "\n";
         } // y
@@ -266,7 +265,7 @@ namespace open_spiel
 
     int baseTState::action_mv(PlayerN pn, int unit_id, MapCoord tg_crd, bool is_init)
     {
-      if (tg_crd.z < 0 || tg_crd.y < 0 || rg_crd.x < 0 ||
+      if (tg_crd.z < 0 || tg_crd.y < 0 || tg_crd.x < 0 ||
           tg_crd.z >= map_size.z || tg_crd.y >= map_size.y || tg_crd.x >= map_size.x)
       {
         get_set_error("tg_crd is out of boundary.", true);
@@ -287,6 +286,8 @@ namespace open_spiel
 
           // 3. 유닛을 타겟 지점으로 이동시킨다.
           mine.crd = tg_crd;
+          map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = mine.player;
+          map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = mine.unit_id;
           // 4. 이동한지점에서 주위 맵 관찰한다. 
           scout(pn, unit_id, ObsRefUp);
           // 5. 유닛 obs 를 현재 위치 셀과 같게 한다. TODO : 스텔스 가진 유닛이면 다르게 구현해야 한다.

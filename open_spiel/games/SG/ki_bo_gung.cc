@@ -100,7 +100,10 @@ void kbgState::init_map()
   map_state_now.cells_v[0][4][3] = water_ground;
   map_state_now.cells_v[0][4][4] = water_ground;
   map_state_now.cells_v[0][4][5] = water_ground;
-  map_state_now.cells_v[0][4][6] = water_ground;
+  map_state_now.cells_v[0][5][3] = water_ground;
+  map_state_now.cells_v[0][5][4] = water_ground;
+  map_state_now.cells_v[0][5][5] = water_ground;
+
 }
 
 // 2번 구현 함수  
@@ -130,13 +133,13 @@ void kbgState::init_unit()
 
   //P1 units
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 2, 1, 4, 1, 1, C0, P1, {0,1,5}, D_South, empty_v, "ki"});
-  action_mv(P1, unit_id_count[P0]-1, {0,1,5}, true);
+  action_mv(P1, unit_id_count[P1]-1, {0,1,5}, true);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 4, 2, 1, C1, P1, {0,1,4}, D_South, empty_v, "bo"});
-  action_mv(P1, unit_id_count[P0]-1, {0,1,4}, true);
+  action_mv(P1, unit_id_count[P1]-1, {0,1,4}, true);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 4, 2, 1, C1, P1, {0,1,3}, D_South, empty_v, "bo"});
-  action_mv(P1, unit_id_count[P0]-1, {0,1,3}, true);
+  action_mv(P1, unit_id_count[P1]-1, {0,1,3}, true);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 2, 4, 1, 1, C2, P1, {0,0,4}, D_South, empty_v, "gu"});
-  action_mv(P1, unit_id_count[P0]-1, {0,0,4}, true);
+  action_mv(P1, unit_id_count[P1]-1, {0,0,4}, true);
 
 
 }

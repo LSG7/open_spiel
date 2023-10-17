@@ -62,7 +62,7 @@ class baseTState : public State {
   virtual void init_first(int p_num);
   virtual void init_map();
   virtual void init_unit();
-  virtual std::string get_cell_observation_string(MapState state, MapCoord crd, PlayerN p) const;
+  virtual std::string get_cell_observation_string(MapState state, MapCoord crd, int p) const;
   virtual std::string get_set_error(std::string log, bool is_save);
   
   MapCoord map_size;
