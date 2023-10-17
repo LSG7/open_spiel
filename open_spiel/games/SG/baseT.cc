@@ -287,17 +287,18 @@ namespace open_spiel
         }
       } else {// 누군가 차지 중 
         if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == pn) {// 자신이 차지 중
-          if (mine.crd == tg_crd) { // 현재 유닛이 있는 곳. 그 자리 유지하는 경우 
+          if (mine.unit_id == map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id) { // 현재 유닛이 있는 곳. 그 자리 유지하는 경우 
             return 0;
+          } else {
+            // 자신이 차지 중 임을 경고로 알린다. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
+            get_set_error("There is already an unit. Cannot move", true);
+            return -1;
           }
-          // 자신이 차지 중 임을 경고로 알린다. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
-          get_set_error("There is already an unit. Cannot move", true);
-          return -1;
         } else {  // 적이 차지 중 
           if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].being_observed_by[pn]) {// 내가 관찰 중인 곳
             PlayerN p_enemy = map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player;
             int uid_enemy = map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id;
-            if (map_state_now.units_v[p_enemy][uid_enemy].being_observed) { // 맵&적이 보이는 중  
+            if (map_state_now.units_v[p_enemy][uid_enemy].being_observed_by[pn]) { // 맵&적이 보이는 중  
               // 적이 있으니 이동 못 한다고 알려야 함. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
               get_set_error("There is already an enemy. Cannot move", true);
               return -1;
@@ -312,8 +313,6 @@ namespace open_spiel
         }
       }
 
-
-
       //2. 맵 관찰지역을 수정한다.
       //   2-1. pn 의 관찰 중 지역만 다 지우고 
       //   2-2. pn 유닛들 돌면서 새롭게 관찰지역 만든다.
@@ -321,7 +320,7 @@ namespace open_spiel
       return 0;
     }
 
-    std::string get_set_error(std::string log, bool is_save)
+    std::string baseTState::get_set_error(std::string log, bool is_save)
     {
       static std::string last_log;
       if (is_save) {
@@ -332,7 +331,7 @@ namespace open_spiel
     }
 
     // cell obs check function
-    std::string scout(PlayerN pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
+    std::string baseTState::scout(PlayerN pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
     {
       //1. 주변 셀 observed marking
       Unit& u = map_state_now.units_v[pn][unit_id];
