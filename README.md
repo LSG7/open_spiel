@@ -1,22 +1,4 @@
 
-# OpenSpiel: A Framework for Reinforcement Learning in Games
-
-[![Documentation Status](https://readthedocs.org/projects/openspiel/badge/?version=latest)](https://openspiel.readthedocs.io/en/latest/?badge=latest)
-![build_and_test](https://github.com/deepmind/open_spiel/workflows/build_and_test/badge.svg)
-
-OpenSpiel is a collection of environments and algorithms for research in general
-reinforcement learning and search/planning in games. OpenSpiel supports n-player
-(single- and multi- agent) zero-sum, cooperative and general-sum, one-shot and
-sequential, strictly turn-taking and simultaneous-move, perfect and imperfect
-information games, as well as traditional multiagent environments such as
-(partially- and fully- observable) grid worlds and social dilemmas. OpenSpiel
-also includes tools to analyze learning dynamics and other common evaluation
-metrics. Games are represented as procedural extensive-form games, with some
-natural extensions. The core API and games are implemented in C++ and exposed to
-Python. Algorithms and tools are written both in C++ and Python.
-
-To try OpenSpiel in Google Colaboratory, please refer to `open_spiel/colabs` subdirectory or start [here](https://colab.research.google.com/github/deepmind/open_spiel/blob/master/open_spiel/colabs/install_open_spiel.ipynb).
-
 <p align="center">
   <img width="390" alt="Pasted Graphic" src="https://github.com/LSG7/open_spiel/assets/145422695/c48f7132-0888-4530-bf7d-388a34ea5091">
 </p>
