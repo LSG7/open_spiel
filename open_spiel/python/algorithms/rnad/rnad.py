@@ -693,7 +693,7 @@ def optax_optimizer(
     params: chex.ArrayTree,
     init_and_update: optax.GradientTransformation) -> Optimizer:
   """Creates a parameterized function that represents an optimizer."""
-  init_fn, update_fn = init_and_update
+  init_fn, update_fn = init_and_update # optax.GradientTransformation 얘가 그냥 변수 두개 들어있는 클래스
 
   @chex.dataclass
   class OptaxOptimizer:
@@ -706,7 +706,7 @@ def optax_optimizer(
 
   return OptaxOptimizer(state=init_fn(params))
 
-
+            
 class RNaDSolver(policy_lib.Policy):
   """Implements a solver for the R-NaD Algorithm.
 
@@ -733,6 +733,7 @@ class RNaDSolver(policy_lib.Policy):
     # TODO(author16): serialize both above to get the fully deterministic behaviour.
 
     # Create a game and an example of a state.
+    # 0. 게임 생성 
     self._game = pyspiel.load_game(self.config.game_name)
     self._ex_state = self._play_chance(self._game.new_initial_state())
 
@@ -765,6 +766,7 @@ class RNaDSolver(policy_lib.Policy):
       log_pi = legal_log_policy(logit, env_step.legal)
       return pi, v, log_pi, logit
 
+    # 네트워크 생성 
     self.network = hk.without_apply_rng(hk.transform(network))
 
     # The machinery related to updating parameters/learner.
@@ -773,17 +775,20 @@ class RNaDSolver(policy_lib.Policy):
         repeats=self.config.entropy_schedule_repeats)
 
     # def loss 함수 '값, 미분' 하는 함수 만든다.
+    # 7. 손실 함수 생성 
     self._loss_and_grad = jax.value_and_grad(self.loss, has_aux=False)
 
     # Create initial parameters.
     env_step = self._state_as_env_step(self._ex_state)
     key = self._next_rng_key()  # Make sure to use the same key for all.
+    # 8. 하이쿠 순수 함수 초기화 
     self.params = self.network.init(key, env_step)
     self.params_target = self.network.init(key, env_step)
     self.params_prev = self.network.init(key, env_step)
     self.params_prev_ = self.network.init(key, env_step)
 
     # Parameter optimizers.
+    # 9. optimzer 생성 
     self.optimizer = optax_optimizer(
         self.params,
         optax.chain(
@@ -942,7 +947,7 @@ class RNaDSolver(policy_lib.Policy):
   def step(self):
     """One step of the algorithm, that plays the game and improves params."""
     
-    # 1 States 생성, 최대게임기일이만큼 루프돌며 액션적용 상태전환, 
+    # 11. States 생성, 최대 게임기일이 만큼 루프돌며 액션적용 상태전환, 
     # 기록을 만든 것.
     timestep = self.collect_batch_trajectory()
 
@@ -1044,7 +1049,7 @@ class RNaDSolver(policy_lib.Policy):
     return action, actor_step
 
   def collect_batch_trajectory(self) -> TimeStep:
-    # 1. 초기화하고 챈스상태 넘긴 상태를 배치사이즈 만큼 리스트로 만든다.
+    # 초기화하고 챈스상태 넘긴 상태를 배치사이즈 만큼 리스트로 만든다.
     states = [
         self._play_chance(self._game.new_initial_state())
         for _ in range(self.config.batch_size)
