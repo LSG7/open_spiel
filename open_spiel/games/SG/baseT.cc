@@ -169,9 +169,31 @@ namespace open_spiel
       return nullptr;
     }
 
+    MapCoord baseTState::id_to_crd(Action a)
+    {
+      MapCoord r;
+      int xy = (map_size.x * map_size.y);
+      r.z = a / xy;
+      r.y = (a % xy) / map_size.x;
+      r.x =  (a % xy) % map_size.x;
+
+      return r;
+    }
+
+    Action baseTState::crd_to_id(MapCoord crd)
+    {
+      int a = 0;
+      a += crd.z * (map_size.x * map_size.y);
+      a += crd.y * map_size.x;
+      a += crd.x;
+
+      return a;
+    }
+
     void baseTState::DoApplyAction(Action action_id)
     {
-      // TODO
+      // apply_action call this
+      
     }
 
     void baseTState::init_map()

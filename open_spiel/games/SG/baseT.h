@@ -64,6 +64,8 @@ class baseTState : public State {
   virtual void init_unit();
   virtual std::string get_cell_observation_string(MapState state, MapCoord crd, int p) const;
   virtual std::string get_set_error(std::string log, bool is_save);
+  virtual MapCoord id_to_crd(Action a);
+  virtual Action crd_to_id(MapCoord crd);
   
   MapCoord map_size;
   MapState map_state_now; 
