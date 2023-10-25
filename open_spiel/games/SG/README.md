@@ -1,3 +1,8 @@
+# Env
+* source env_sg.sh source venv/bin/acti
+* cd build_m ./set_cmake_manual.sh build_sg.sh
+
+
 # Ground Rule  
   * 정형화 시켜서 재사용 원활히
   * 순차적 주석으로 로직 심플&이해쉽게
