@@ -27,8 +27,8 @@ struct P_Cell {
 struct Cell {
     GroundType ground_type;
     PlayerN occupying_player;
-    int occupying_unit_id; 
-    std::vector<int> being_observed_by; // 이 셀을 관찰 중인 플레이어별 ref_count P0 : being_observed_by[0] 
+    uint8_t occupying_unit_id; 
+    std::vector<uint8_t> being_observed_by; // 이 셀을 관찰 중인 플레이어별 ref_count P0 : being_observed_by[0] 
 };
 
 class Unit {
@@ -72,6 +72,9 @@ class Unit {
 struct MapState {
     std::vector<std::vector<Unit>> units_v; // P0:units_v[0]
     std::vector<std::vector<std::vector<Cell>>> cells_v;
+
+    PlayerN current_player;
+    UnitActionState uas;
 };
 
 } // baseT

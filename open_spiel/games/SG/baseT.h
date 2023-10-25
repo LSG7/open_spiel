@@ -59,22 +59,21 @@ class baseTState : public State {
   virtual void scout(PlayerN pn, int unit_id, ObsRefCount o_r_c);  // unit 주변 셀들을 관찰한다.
 
 
-  virtual void init_first(int p_num);
+  virtual void init_first(int p_num, int m_u);
   virtual void init_map();
   virtual void init_unit();
   virtual std::string get_cell_observation_string(MapState state, MapCoord crd, int p) const;
   virtual std::string get_set_error(std::string log, bool is_save);
   virtual MapCoord id_to_crd(Action a);
   virtual Action crd_to_id(MapCoord crd);
+
   
   MapCoord map_size;
-  MapState map_state_now; 
+  MapState map_state_now;
   std::vector<MapState> Map_history;
   int max_units; // max number of one player
   int player_num = 0;
-  int current_player = 0;
   std::vector<int> unit_id_count;
-  std::vector<std::vector<P_Cell>> need_recalc_v; // P0: need_recalc_v[0]
   
   
  private:

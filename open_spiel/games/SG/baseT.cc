@@ -2,6 +2,8 @@
 #include "open_spiel/games/SG/baseT.h"
 #include "open_spiel/spiel_utils.h"
 
+using msn = map_state_now;
+
 namespace open_spiel
 {
   namespace baseT
@@ -136,7 +138,7 @@ namespace open_spiel
     Player baseTState::CurrentPlayer() const
     {
       // TODO
-      return current_player;
+      return msn.current_player;
     }
 
     bool baseTState::IsTerminal() const
@@ -206,18 +208,21 @@ namespace open_spiel
       // TODO
     }
 
-    void baseTState::init_first(int p_num)
+    void baseTState::init_first(int p_num, int m_u)
     {
+      player_num = p_num;
+      max_units = m_u;
+
       // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
       unit_id_count.assign(p_num, 0);
 
       // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
       std::vector<Unit> empty_units_v;
-      map_state_now.units_v.assign(p_num, empty_units_v);
+      msn.units_v.assign(p_num, empty_units_v);
 
-      // 재계산 해야 하는 셀 초기화
-      std::vector<P_Cell> empty_pcell_v;
-      need_recalc_v.assign(p_num, empty_pcell_v);
+      // P0 부터 시작
+      msn.current_player = P0;
+      msn.uas = UA_Move;
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
@@ -275,7 +280,7 @@ namespace open_spiel
         {
           for (int x = 0; x < map_size.x; x++)
           {
-            board_string += get_cell_observation_string(map_state_now, {z,y,x}, player);
+            board_string += get_cell_observation_string(msn, {z,y,x}, player);
           } // x
           board_string += "\n";
         } // y
@@ -293,35 +298,35 @@ namespace open_spiel
         get_set_error("tg_crd is out of boundary.", true);
         return -1;
       }
-      Unit& mine = map_state_now.units_v[pn][unit_id];
-      if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == PNone) {//비어있음
-        if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].ground_type != GT_CannotEnter) { // 이동가능한 곳 
+      Unit& mine = msn.units_v[pn][unit_id];
+      if (msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == PNone) {//비어있음
+        if (msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].ground_type != GT_CannotEnter) { // 이동가능한 곳 
           
           if (!is_init)
           {
             // 1. 현재 유닛이 위치한 셀 정보 수정 
-            map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
-            map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = -1;
+            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
+            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = 0;
             // 2. 현재 유닛이 위치한 셀 기준 주위 셀 obs ref_count 수정 
             scout(pn, unit_id, ObsRefDown);
           }
 
           // 3. 유닛을 타겟 지점으로 이동시킨다.
           mine.crd = tg_crd;
-          map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = mine.player;
-          map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = mine.unit_id;
+          msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = mine.player;
+          msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = mine.unit_id;
           // 4. 이동한지점에서 주위 맵 관찰한다. 
           scout(pn, unit_id, ObsRefUp);
           // 5. 유닛 obs 를 현재 위치 셀과 같게 한다. TODO : 스텔스 가진 유닛이면 다르게 구현해야 한다.
-          mine.being_observed_by = map_state_now.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].being_observed_by;
+          mine.being_observed_by = msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].being_observed_by;
 
         } else {  // 이동 불가능한 지형. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
           get_set_error("GroundType is CannotEnter", true);
           return -1;
         }
       } else {// 누군가 차지 중 
-        if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == pn) {// 자신이 차지 중
-          if (mine.unit_id == map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id) { // 현재 유닛이 있는 곳. 그 자리 유지하는 경우 
+        if (msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == pn) {// 자신이 차지 중
+          if (mine.unit_id == msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id) { // 현재 유닛이 있는 곳. 그 자리 유지하는 경우 
             return 0;
           } else {
             // 자신이 차지 중 임을 경고로 알린다. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
@@ -329,10 +334,10 @@ namespace open_spiel
             return -1;
           }
         } else {  // 적이 차지 중 
-          if (map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].being_observed_by[pn]) {// 내가 관찰 중인 곳
-            PlayerN p_enemy = map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player;
-            int uid_enemy = map_state_now.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id;
-            if (map_state_now.units_v[p_enemy][uid_enemy].being_observed_by[pn]) { // 맵&적이 보이는 중  
+          if (msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].being_observed_by[pn]) {// 내가 관찰 중인 곳
+            PlayerN p_enemy = msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player;
+            int uid_enemy = msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id;
+            if (msn.units_v[p_enemy][uid_enemy].being_observed_by[pn]) { // 맵&적이 보이는 중  
               // 적이 있으니 이동 못 한다고 알려야 함. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
               get_set_error("There is already an enemy. Cannot move", true);
               return -1;
@@ -368,7 +373,7 @@ namespace open_spiel
     void baseTState::scout(PlayerN pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
     {
       //1. 주변 셀 observed marking
-      Unit& u = map_state_now.units_v[pn][unit_id];
+      Unit& u = msn.units_v[pn][unit_id];
 
       // 1. pn 주변 vw_dstc 만큼 셀들을 관찰한다.
       // 타겟 셀 z,y 좌표와 unit의 z,y 좌표의 차이만큼 x 를 덜 간다.
@@ -389,14 +394,14 @@ namespace open_spiel
             if (tg_z >= 0 && tg_z < map_size.z && tg_y >= 0 && tg_y < map_size.y && tg_x >= 0 && tg_x < map_size.x)
             {
               // 해당 셀 Obs Ref count 수정 
-              map_state_now.cells_v[tg_z][tg_y][tg_x].being_observed_by[pn] += o_r_c;
+              msn.cells_v[tg_z][tg_y][tg_x].being_observed_by[pn] += o_r_c;
 
               // 그 셀에 유닛이 존재한다면 셀과 같은 obs 값 대입
-              if (map_state_now.cells_v[tg_z][tg_y][tg_x].occupying_player != PNone)
+              if (msn.cells_v[tg_z][tg_y][tg_x].occupying_player != PNone)
               {
-                map_state_now.units_v[map_state_now.cells_v[tg_z][tg_y][tg_x].
-                occupying_player][map_state_now.cells_v[tg_z][tg_y][tg_x].
-                occupying_unit_id].being_observed_by = map_state_now.cells_v[tg_z][tg_y][tg_x].being_observed_by;
+                msn.units_v[msn.cells_v[tg_z][tg_y][tg_x].
+                occupying_player][msn.cells_v[tg_z][tg_y][tg_x].
+                occupying_unit_id].being_observed_by = msn.cells_v[tg_z][tg_y][tg_x].being_observed_by;
               }
             }
           }

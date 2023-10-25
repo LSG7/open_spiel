@@ -1,6 +1,7 @@
 #include "open_spiel/games/SG/ki_bo_gung.h"
 #include "open_spiel/spiel_utils.h"
 
+using msn = map_state_now;
 
 namespace open_spiel {
 namespace kbg {
@@ -49,10 +50,8 @@ kbgGame::~kbgGame()
 
 kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
 {
-  player_num = 2;
-  
   //무조건 맨 처음에 불러줘야 함
-  init_first(player_num);
+  init_first(2, 4);
 
   // 맵을 생성하고
   init_map();
@@ -89,14 +88,14 @@ void kbgState::init_map()
 
   // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
   // [z][row][col]
-  Cell normal_ground = {GT_Normal, PNone, -1, obp};
+  Cell normal_ground = {GT_Normal, PNone, 0, obp};
   std::vector<Cell> col_1d(map_size.x, normal_ground);
   std::vector<std::vector<Cell>> row_col_2d(map_size.y, col_1d);
   std::vector<std::vector<std::vector<Cell>>> z_row_col_3d(map_size.z, row_col_2d);
   map_state_now.cells_v = z_row_col_3d;
 
   // 호수 만들기 
-  Cell water_ground = {GT_CannotEnter, PNone, -1, obp};
+  Cell water_ground = {GT_CannotEnter, PNone, 0, obp};
   map_state_now.cells_v[0][4][3] = water_ground;
   map_state_now.cells_v[0][4][4] = water_ground;
   map_state_now.cells_v[0][4][5] = water_ground;
@@ -112,34 +111,33 @@ void kbgState::init_map()
 */
 void kbgState::init_unit()
 {
-  max_units = 4;
   std::vector<int> empty_v(player_num, false);
   // kind ki:0 bo:1 gung:2s
 
-  // live. id -1, 이거 2, 공거 1, 시야 4, 체 1, 공 1, class 0, p 0, crd , drc, pb, name
-  // live. id -1, 이거 1, 공거 1, 시야 4, 체 2, 공 1
-  // live. id -1, 이거 1, 공거 2, 시야 4, 체 1, 공 1 
+  // live. id 0, 이거 2, 공거 1, 시야 4, 체 1, 공 1, class 0, p 0, crd , drc, pb, name
+  // live. id 0, 이거 1, 공거 1, 시야 4, 체 2, 공 1
+  // live. id 0, 이거 1, 공거 2, 시야 4, 체 1, 공 1 
 
 
   //P0 units
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 2, 1, 4, 1, 1, C0, P0, {0,8,5}, D_North, empty_v, "ki"});
-  action_mv(P0, unit_id_count[P0]-1, {0,8,5}, true);
+  action_mv(P0, unit_id_count[P0], {0,8,5}, true);
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 4, 2, 1, C1, P0, {0,8,4}, D_North, empty_v, "bo"});
-  action_mv(P0, unit_id_count[P0]-1, {0,8,4}, true);
+  action_mv(P0, unit_id_count[P0], {0,8,4}, true);
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 1, 4, 2, 1, C1, P0, {0,8,3}, D_North, empty_v, "bo"});
-  action_mv(P0, unit_id_count[P0]-1, {0,8,3}, true);
+  action_mv(P0, unit_id_count[P0], {0,8,3}, true);
   map_state_now.units_v[P0].push_back({true, unit_id_count[P0]++, 1, 2, 4, 1, 1, C2, P0, {0,9,4}, D_North, empty_v, "gu"});
-  action_mv(P0, unit_id_count[P0]-1, {0,9,4}, true);
+  action_mv(P0, unit_id_count[P0], {0,9,4}, true);
 
   //P1 units
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 2, 1, 4, 1, 1, C0, P1, {0,1,5}, D_South, empty_v, "ki"});
-  action_mv(P1, unit_id_count[P1]-1, {0,1,5}, true);
+  action_mv(P1, unit_id_count[P1], {0,1,5}, true);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 4, 2, 1, C1, P1, {0,1,4}, D_South, empty_v, "bo"});
-  action_mv(P1, unit_id_count[P1]-1, {0,1,4}, true);
+  action_mv(P1, unit_id_count[P1], {0,1,4}, true);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 1, 4, 2, 1, C1, P1, {0,1,3}, D_South, empty_v, "bo"});
-  action_mv(P1, unit_id_count[P1]-1, {0,1,3}, true);
+  action_mv(P1, unit_id_count[P1], {0,1,3}, true);
   map_state_now.units_v[P1].push_back({true, unit_id_count[P1]++, 1, 2, 4, 1, 1, C2, P1, {0,0,4}, D_South, empty_v, "gu"});
-  action_mv(P1, unit_id_count[P1]-1, {0,0,4}, true);
+  action_mv(P1, unit_id_count[P1], {0,0,4}, true);
 
 
 }
