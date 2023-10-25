@@ -1,8 +1,6 @@
 #include "open_spiel/games/SG/ki_bo_gung.h"
 #include "open_spiel/spiel_utils.h"
 
-using msn = map_state_now;
-
 namespace open_spiel {
 namespace kbg {
 namespace {
@@ -84,7 +82,7 @@ void kbgState::init_map()
   map_size.z = 1;
 
   // 비어있는 관찰자 벡터
-  std::vector<int> obp(player_num, false);
+  std::vector<uint8_t> obp(player_num, false);
 
   // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
   // [z][row][col]
@@ -111,7 +109,7 @@ void kbgState::init_map()
 */
 void kbgState::init_unit()
 {
-  std::vector<int> empty_v(player_num, false);
+  std::vector<uint8_t> empty_v(player_num, false);
   // kind ki:0 bo:1 gung:2s
 
   // live. id 0, 이거 2, 공거 1, 시야 4, 체 1, 공 1, class 0, p 0, crd , drc, pb, name

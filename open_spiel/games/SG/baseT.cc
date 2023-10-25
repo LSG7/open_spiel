@@ -2,8 +2,6 @@
 #include "open_spiel/games/SG/baseT.h"
 #include "open_spiel/spiel_utils.h"
 
-using msn = map_state_now;
-
 namespace open_spiel
 {
   namespace baseT

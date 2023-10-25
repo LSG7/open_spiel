@@ -69,11 +69,11 @@ class baseTState : public State {
 
   
   MapCoord map_size;
-  MapState map_state_now;
+  MapState msn; //map state now
   std::vector<MapState> Map_history;
   int max_units; // max number of one player
   int player_num = 0;
-  std::vector<int> unit_id_count;
+  std::vector<uint8_t> unit_id_count;
   
   
  private:

@@ -32,6 +32,7 @@ struct Cell {
 };
 
 class Unit {
+public:
     bool is_alive;
     int unit_id;
     int shift_dstc;
@@ -43,13 +44,13 @@ class Unit {
     PlayerN player;
     MapCoord crd;        // 현재 위치한 셀 
     UnitDirection direction;    // coord 주위 4방향 셀  가르킨다.
-    std::vector<int> being_observed_by;
+    std::vector<uint8_t> being_observed_by;
     std::string name;
 
     Unit(bool is_alive,int unit_id,int shift_dstc,int atk_dstc,
     int vw_dstc,float hp,float power,UnitClass unit_class,
     PlayerN player,MapCoord crd,UnitDirection direction,
-    std::vector<int> being_observed_by, std::string name)
+    std::vector<uint8_t> being_observed_by, std::string name)
     {
         this->is_alive = is_alive;
         this->unit_id = unit_id;
