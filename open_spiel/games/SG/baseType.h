@@ -30,7 +30,7 @@ struct Cell {
     std::vector<int> being_observed_by; // 이 셀을 관찰 중인 플레이어별 ref_count P0 : being_observed_by[0] 
 };
 
-struct Unit {
+class Unit {
     bool is_alive;
     int unit_id;
     int shift_dstc;
@@ -44,6 +44,28 @@ struct Unit {
     UnitDirection direction;    // coord 주위 4방향 셀  가르킨다.
     std::vector<int> being_observed_by;
     std::string name;
+
+    Unit(bool is_alive,int unit_id,int shift_dstc,int atk_dstc,
+    int vw_dstc,float hp,float power,UnitClass unit_class,
+    PlayerN player,MapCoord crd,UnitDirection direction,
+    std::vector<int> being_observed_by, std::string name)
+    {
+        this->is_alive = is_alive;
+        this->unit_id = unit_id;
+        this->shift_dstc = shift_dstc;
+        this->atk_dstc = atk_dstc;
+        this->vw_dstc = vw_dstc;
+        this->hp = hp;
+        this->power = power;
+        this->unit_class = unit_class;
+        this->player = player;
+        this->crd = crd;        // 현재 위치한 셀 
+        this->direction = direction;    // coord 주위 4방향 셀  가르킨다.
+        this->being_observed_by = being_observed_by;
+        this->name = name;
+    };
+
+    virtual ~Unit(){};
 };
 
 struct MapState {
