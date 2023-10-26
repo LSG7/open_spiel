@@ -182,10 +182,10 @@ namespace open_spiel
       static std::mt19937 gen(rd());
 
       if (turn_unit_v[p].size() == 0) {
-        std::uniform_int_distribution<int8_t> dis(1, max_units);
         for (int i = 0; i < max_units; i++) {
-          turn_unit_v[p].push_back(dis(gen));
+          turn_unit_v[p].push_back(i);
         }
+        turn_unit_v.shuffle(turn_unit_v.begin(), turn_unit_v.end(), gen);
       }
       int8_t ret = turn_unit_v[p].back();
       turn_unit_v[p].pop_back();
