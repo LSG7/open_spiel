@@ -184,7 +184,7 @@ namespace open_spiel
       if (turn_unit_v[p].size() == 0) {
         for (int i = 0; i < max_units; i++) {
           turn_unit_v[p].push_back(i);
-        }s
+        }
         std::shuffle(turn_unit_v[p].begin(), turn_unit_v[p].end(), gen);
       }
       int8_t ret = turn_unit_v[p].back();
