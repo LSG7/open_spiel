@@ -27,16 +27,6 @@ namespace open_spiel
           /*provides_observation_tensor=*/true,
           /*parameter_specification=*/{} // no parameters 비어있는 파람
       };
-
-      std::shared_ptr<const Game> Factory(const GameParameters &params)
-      {
-        return std::shared_ptr<const Game>(new baseTGame(params));
-      }
-
-      REGISTER_SPIEL_GAME(kGameType, Factory);
-
-      RegisterSingleTensorObserver single_tensor(kGameType.short_name);
-
     } // namespace
 
     // GAME !!!!!!!!!!!
@@ -186,9 +176,9 @@ namespace open_spiel
       return a;
     }
 
-    uint8_t baseTState::get_next_unit_to_action(PlayerN)
+    uint8_t baseTState::get_next_unit_to_action_rand(int p)
     {
-      
+      return 0;
     }
 
     void baseTState::DoApplyAction(Action action_id)
@@ -289,7 +279,7 @@ namespace open_spiel
       return board_string;
     }
 
-    int baseTState::action_mv(PlayerN pn, int unit_id, MapCoord tg_crd, bool is_init)
+    int baseTState::action_mv(int pn, int unit_id, MapCoord tg_crd, bool is_init)
     {
       if (tg_crd.z < 0 || tg_crd.y < 0 || tg_crd.x < 0 ||
           tg_crd.z >= map_size.z || tg_crd.y >= map_size.y || tg_crd.x >= map_size.x)
@@ -334,7 +324,7 @@ namespace open_spiel
           }
         } else {  // 적이 차지 중 
           if (msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].being_observed_by[pn]) {// 내가 관찰 중인 곳
-            PlayerN p_enemy = msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player;
+            int p_enemy = msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player;
             int uid_enemy = msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id;
             if (msn.units_v[p_enemy][uid_enemy].being_observed_by[pn]) { // 맵&적이 보이는 중  
               // 적이 있으니 이동 못 한다고 알려야 함. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨. 
@@ -369,7 +359,7 @@ namespace open_spiel
     }
 
     // cell obs check function
-    void baseTState::scout(PlayerN pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
+    void baseTState::scout(int pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
     {
       //1. 주변 셀 observed marking
       Unit& u = msn.units_v[pn][unit_id];
