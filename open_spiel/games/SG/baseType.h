@@ -13,7 +13,7 @@ enum ActionType {AMove = 0, AAttk, ANone = -1,};
 enum ObsRefCount {ObsRefUp = 1, ObsRefDown = -1,};
 enum UnitActionState {UA_Move = 0, UA_Drc=1, UA_attk=2, UA_None = -1,};
 enum PlayerN {PNone = -1,};
-enum UnitN {UNone = -1,}
+enum UnitN {UNone = -1,};
 
 struct MapCoord {
     //z:floor y:row x:col

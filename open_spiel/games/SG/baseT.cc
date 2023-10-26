@@ -314,7 +314,7 @@ namespace open_spiel
             msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
             msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = UNone;
             // 2. 현재 유닛이 위치한 셀 기준 주위 셀 obs ref_count 수정 
-            scout(pn, unit_id, ObsRefDown)로
+            scout(pn, unit_id, ObsRefDown);
           }
 
           // 3. 유닛을 타겟 지점으로 이동시킨다.
