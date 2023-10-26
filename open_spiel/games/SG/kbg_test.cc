@@ -3,6 +3,7 @@
 #include "open_spiel/spiel.h"
 #include "open_spiel/spiel_utils.h"
 #include "open_spiel/tests/basic_tests.h"
+#include "open_spiel/games/SG/ki_bo_gung.h"
 
 int main(int argc, char** argv)
 {
@@ -25,7 +26,8 @@ int main(int argc, char** argv)
   std::string p1_observation = state->ObservationString(1);
   std::cout << p1_observation ;
 
-  int next_unit = state->get_next_unit_to_action_rand(0);
+  open_spiel::kbg::kbgState* p = (open_spiel::kbg::kbgState*) state.release();
+  int next_unit = p->get_next_unit_to_action_rand(0);
 
   return 0;
 }
