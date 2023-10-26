@@ -50,14 +50,13 @@ class baseTState : public State {
   virtual std::string ToString() const override;
   virtual std::unique_ptr<State> Clone() const override;
   virtual std::string ObservationString(Player player) const override;
+  virtual uint8_t get_next_unit_to_action_rand(int p);
 
  protected:
   virtual void DoApplyAction(Action move) override;
 
   virtual int action_mv(int pn, int unit_id, MapCoord tg_crd, bool is_init);
   virtual void scout(int pn, int unit_id, ObsRefCount o_r_c);  // unit 주변 셀들을 관찰한다.
-
-
   virtual void init_first(int m_u);
   virtual void init_map();
   virtual void init_unit();
@@ -65,7 +64,7 @@ class baseTState : public State {
   virtual std::string get_set_error(std::string log, bool is_save);
   virtual MapCoord id_to_crd(Action a);
   virtual Action crd_to_id(MapCoord crd);
-  virtual uint8_t get_next_unit_to_action_rand(int p);
+  
 
   
   MapCoord map_size;
