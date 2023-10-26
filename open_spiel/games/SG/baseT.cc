@@ -178,14 +178,25 @@ namespace open_spiel
 
     uint8_t baseTState::get_next_unit_to_action_rand(int p)
     {
-      
-      return 0;
+      static std::random_device rd;
+      static std::mt19937 gen(rd());
+
+      if (turn_unit_v[p].size() == 0) {
+        std::uniform_int_distribution<uint8_t> dis(1, max_units);
+        for (int i = 0; i < max_units; i++) {
+          turn_unit_v[p].push_back(dis(gen));
+        }
+      }
+
+      return turn_unit_v[p].pop_back();
     }
 
     void baseTState::DoApplyAction(Action action_id)
     {
       // apply_action call this
       
+      //STATE CHANGE WORK
+
     }
 
     void baseTState::init_map()
@@ -203,14 +214,19 @@ namespace open_spiel
       max_units = m_u;
 
       // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
-      unit_id_count.assign(p_num, 0);
+      unit_id_count.assign(num_players_, 0);
 
       // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
       std::vector<Unit> empty_units_v;
-      msn.units_v.assign(p_num, empty_units_v);
+      msn.units_v.assign(num_players_, empty_units_v);
+
+      // 플레이어 수 만큼 턴 남은 유닛 셋 채운다.
+      std::set<unit8_t> empty_set;
+      turn_unit_set.assign(num_players_, empty_set);
 
       // P0 부터 시작
-      msn.current_player = P0;
+      msn.current_player = 0;
+      msn.current_unit_id = get_next_unit_to_action_rand(msn.current_player);
       msn.uas = UA_Move;
     }
 

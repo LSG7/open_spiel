@@ -74,7 +74,7 @@ class baseTState : public State {
   int max_units; // max number of one player
   int player_num = 0;
   std::vector<uint8_t> unit_id_count;
-  std::vector<std::set<uint8_t>> alive_unit_set;
+  std::vector<std::vector<uint8_t>> turn_unit_v;
   
   
  private:
