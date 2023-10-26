@@ -215,7 +215,7 @@ namespace open_spiel
       max_units = m_u;
 
       // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
-      unit_id_count.assign(num_players_, 0);
+      unit_id_count.assign(num_players_, UNone);
 
       // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
       std::vector<Unit> empty_units_v;
