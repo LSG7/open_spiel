@@ -58,7 +58,7 @@ class baseTState : public State {
   virtual void scout(int pn, int unit_id, ObsRefCount o_r_c);  // unit 주변 셀들을 관찰한다.
 
 
-  virtual void init_first(int p_num, int m_u);
+  virtual void init_first(int m_u);
   virtual void init_map();
   virtual void init_unit();
   virtual std::string get_cell_observation_string(MapState state, MapCoord crd, int p) const;

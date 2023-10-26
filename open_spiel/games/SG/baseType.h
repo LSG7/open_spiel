@@ -74,6 +74,7 @@ struct MapState {
     std::vector<std::vector<std::vector<Cell>>> cells_v;
 
     int current_player;
+    int current_unit_id;
     UnitActionState uas;
 };
 
