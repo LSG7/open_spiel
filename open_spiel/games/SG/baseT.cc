@@ -176,18 +176,18 @@ namespace open_spiel
       return a;
     }
 
-    uint8_t baseTState::get_next_unit_to_action_rand(int p)
+    int8_t baseTState::get_next_unit_to_action_rand(int p)
     {
       static std::random_device rd;
       static std::mt19937 gen(rd());
 
       if (turn_unit_v[p].size() == 0) {
-        std::uniform_int_distribution<uint8_t> dis(1, max_units);
+        std::uniform_int_distribution<int8_t> dis(1, max_units);
         for (int i = 0; i < max_units; i++) {
           turn_unit_v[p].push_back(dis(gen));
         }
       }
-      uint8_t ret = turn_unit_v[p].back();
+      int8_t ret = turn_unit_v[p].back();
       turn_unit_v[p].pop_back();
       return ret;
     }
@@ -222,7 +222,7 @@ namespace open_spiel
       msn.units_v.assign(num_players_, empty_units_v);
 
       // 플레이어 수 만큼 턴 남은 유닛 셋 채운다.
-      std::vector<uint8_t> empty_id_v;
+      std::vector<int8_t> empty_id_v;
       turn_unit_v.assign(num_players_, empty_id_v);
 
       // P0 부터 시작
@@ -251,7 +251,7 @@ namespace open_spiel
 
       if (s.cells_v[crd.z][crd.y][crd.x].being_observed_by[p])  // p 에 의해 관찰되는 중
       {
-        if (s.cells_v[crd.z][crd.y][crd.x].occupying_player != -1) // 차지된 셀이면
+        if (s.cells_v[crd.z][crd.y][crd.x].occupying_player != PNone) // 차지된 셀이면
         {
           cell_observed += std::to_string(s.cells_v[crd.z][crd.y][crd.x].occupying_player);
           cell_observed += std::to_string(s.cells_v[crd.z][crd.y][crd.x].occupying_unit_id);
@@ -305,16 +305,16 @@ namespace open_spiel
         return -1;
       }
       Unit& mine = msn.units_v[pn][unit_id];
-      if (msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == -1) {//비어있음
+      if (msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player == PNone) {//비어있음
         if (msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].ground_type != GT_CannotEnter) { // 이동가능한 곳 
           
           if (!is_init)
           {
-            // 1. 현재 유닛이 위치한 셀 정보 수정 
-            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = -1;
-            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = 0;
+            // 1. 현재 유닛이 떠난다. 위치한 셀 정보 수정. 차지한 플레이어 유닛 없음으로
+            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
+            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = UNone;
             // 2. 현재 유닛이 위치한 셀 기준 주위 셀 obs ref_count 수정 
-            scout(pn, unit_id, ObsRefDown);
+            scout(pn, unit_id, ObsRefDown)로
           }
 
           // 3. 유닛을 타겟 지점으로 이동시킨다.
@@ -403,7 +403,7 @@ namespace open_spiel
               msn.cells_v[tg_z][tg_y][tg_x].being_observed_by[pn] += o_r_c;
 
               // 그 셀에 유닛이 존재한다면 셀과 같은 obs 값 대입
-              if (msn.cells_v[tg_z][tg_y][tg_x].occupying_player != -1)
+              if (msn.cells_v[tg_z][tg_y][tg_x].occupying_player != PNone)
               {
                 msn.units_v[msn.cells_v[tg_z][tg_y][tg_x].
                 occupying_player][msn.cells_v[tg_z][tg_y][tg_x].

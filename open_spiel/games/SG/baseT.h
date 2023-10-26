@@ -50,7 +50,7 @@ class baseTState : public State {
   virtual std::string ToString() const override;
   virtual std::unique_ptr<State> Clone() const override;
   virtual std::string ObservationString(Player player) const override;
-  virtual uint8_t get_next_unit_to_action_rand(int p);
+  virtual int8_t get_next_unit_to_action_rand(int p);
 
  protected:
   virtual void DoApplyAction(Action move) override;
@@ -71,9 +71,8 @@ class baseTState : public State {
   MapState msn; //map state now
   std::vector<MapState> Map_history;
   int max_units; // max number of one player
-  int player_num = 0;
-  std::vector<uint8_t> unit_id_count;
-  std::vector<std::vector<uint8_t>> turn_unit_v;
+  std::vector<int8_t> unit_id_count;
+  std::vector<std::vector<int8_t>> turn_unit_v;
   
   
  private:

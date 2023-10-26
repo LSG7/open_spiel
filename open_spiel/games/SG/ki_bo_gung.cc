@@ -88,18 +88,18 @@ void kbgState::init_map()
   map_size.z = 1;
 
   // 비어있는 관찰자 벡터
-  std::vector<uint8_t> obp(player_num, 0);
+  std::vector<int8_t> obp(num_players_, 0);
 
   // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
   // [z][row][col]
-  Cell normal_ground = {GT_Normal, -1, 0, obp};
+  Cell normal_ground = {GT_Normal, PNone, UNone, obp};
   std::vector<Cell> col_1d(map_size.x, normal_ground);
   std::vector<std::vector<Cell>> row_col_2d(map_size.y, col_1d);
   std::vector<std::vector<std::vector<Cell>>> z_row_col_3d(map_size.z, row_col_2d);
   msn.cells_v = z_row_col_3d;
 
   // 호수 만들기 
-  Cell water_ground = {GT_CannotEnter, -1, 0, obp};
+  Cell water_ground = {GT_CannotEnter, PNone, UNone, obp};
   msn.cells_v[0][4][3] = water_ground;
   msn.cells_v[0][4][4] = water_ground;
   msn.cells_v[0][4][5] = water_ground;
@@ -115,7 +115,7 @@ void kbgState::init_map()
 */
 void kbgState::init_unit()
 {
-  std::vector<uint8_t> empty_v(player_num, false);
+  std::vector<int8_t> empty_v(num_players_, 0);
   // kind ki:0 bo:1 gung:2s
 
   // live. id 0, 이거 2, 공거 1, 시야 4, 체 1, 공 1, class 0, p 0, crd , drc, pb, name
