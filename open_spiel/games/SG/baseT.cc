@@ -187,8 +187,9 @@ namespace open_spiel
           turn_unit_v[p].push_back(dis(gen));
         }
       }
-
-      return turn_unit_v[p].pop_back();
+      uint8_t ret = turn_unit_v[p].back();
+      turn_unit_v[p].pop_back();
+      return ret;
     }
 
     void baseTState::DoApplyAction(Action action_id)
@@ -221,8 +222,8 @@ namespace open_spiel
       msn.units_v.assign(num_players_, empty_units_v);
 
       // 플레이어 수 만큼 턴 남은 유닛 셋 채운다.
-      std::set<unit8_t> empty_set;
-      turn_unit_set.assign(num_players_, empty_set);
+      std::vector<unit8_t> emtpy_id_v;
+      turn_unit_v.assign(num_players_, empty_id_v);
 
       // P0 부터 시작
       msn.current_player = 0;

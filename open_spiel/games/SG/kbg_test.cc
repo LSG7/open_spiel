@@ -25,5 +25,7 @@ int main(int argc, char** argv)
   std::string p1_observation = state->ObservationString(1);
   std::cout << p1_observation ;
 
+  int next_unit = get_next_unit_to_action_rand(0);
+
   return 0;
 }
