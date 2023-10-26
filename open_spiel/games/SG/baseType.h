@@ -44,7 +44,7 @@ public:
     PlayerN player;
     MapCoord crd;        // 현재 위치한 셀 
     UnitDirection direction;    // coord 주위 4방향 셀  가르킨다.
-    std::vector<uint8_t> being_observed_by;
+    std::vector<uint8_t> being_observed_by; // Cell 의 being_observed_by 와 같다. 스텔스 기능 추가 전까지는 같아야 한다.
     std::string name;
 
     Unit(bool is_alive,int unit_id,int shift_dstc,int atk_dstc,

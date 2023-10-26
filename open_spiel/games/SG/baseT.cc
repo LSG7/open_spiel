@@ -104,11 +104,7 @@ namespace open_spiel
       return {0};
     }
 
-    int baseTGame::NumPlayers() const
-    {
-      // TODO
-      return 2;
-    }
+
 
     absl::optional<double> baseTGame::UtilitySum() const
     {
@@ -188,6 +184,11 @@ namespace open_spiel
       a += crd.x;
 
       return a;
+    }
+
+    uint8_t baseTState::get_next_unit_to_action(PlayerN)
+    {
+      
     }
 
     void baseTState::DoApplyAction(Action action_id)

@@ -46,6 +46,12 @@ kbgGame::~kbgGame()
 
 }
 
+int kbgGame::NumPlayers() const
+{
+  // TODO
+  return 2;
+}
+
 kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
 {
   //무조건 맨 처음에 불러줘야 함

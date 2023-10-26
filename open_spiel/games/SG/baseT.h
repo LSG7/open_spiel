@@ -31,7 +31,6 @@ class baseTGame : public Game {
   virtual std::unique_ptr<State> NewInitialState() const override;
   virtual int NumDistinctActions() const override;
   virtual std::vector<int> ObservationTensorShape() const override;
-  virtual int NumPlayers() const override;
   virtual absl::optional<double> UtilitySum() const override;
 };
 
@@ -66,6 +65,7 @@ class baseTState : public State {
   virtual std::string get_set_error(std::string log, bool is_save);
   virtual MapCoord id_to_crd(Action a);
   virtual Action crd_to_id(MapCoord crd);
+  virtual uint8_t get_next_unit_to_action_rand();
 
   
   MapCoord map_size;
@@ -74,6 +74,7 @@ class baseTState : public State {
   int max_units; // max number of one player
   int player_num = 0;
   std::vector<uint8_t> unit_id_count;
+  std::vector<std::set<uint8_t>> alive_unit_set;
   
   
  private:

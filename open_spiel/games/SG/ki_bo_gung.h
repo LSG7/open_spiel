@@ -39,9 +39,10 @@ namespace kbg {
 
 class kbgGame : public baseT::baseTGame {
  public:
-  explicit kbgGame(const GameParameters& params);
-  virtual ~kbgGame();
-  std::unique_ptr<State> NewInitialState() const override;
+    explicit kbgGame(const GameParameters& params);
+    virtual ~kbgGame();
+    std::unique_ptr<State> NewInitialState() const override;
+    virtual int NumPlayers() const override;
 
  protected:
 
