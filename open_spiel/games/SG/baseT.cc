@@ -233,7 +233,7 @@ namespace open_spiel
       // P0 부터 시작
       msn.current_player = 0;
       msn.current_unit_id = get_next_unit_to_action_rand(msn.current_player);
-      msn.uas = UA_Move;
+      msn.current_uas = UA_Move;
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
