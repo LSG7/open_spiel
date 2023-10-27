@@ -125,6 +125,11 @@ namespace open_spiel
       return msn.current_player;
     }
 
+    UnitActionState baseTState::CurrentUAS() const
+    {
+      return msn.current_uas;
+    }
+
     bool baseTState::IsTerminal() const
     {
       // TODO

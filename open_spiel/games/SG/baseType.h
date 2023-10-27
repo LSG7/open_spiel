@@ -77,7 +77,7 @@ struct MapState {
 
     int current_player;
     int current_unit_id;
-    UnitActionState uas;
+    UnitActionState current_uas;
 };
 
 } // baseT
