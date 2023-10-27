@@ -52,6 +52,7 @@ class baseTState : public State {
   virtual std::string ObservationString(Player player) const override;
   virtual int8_t get_next_unit_to_action_rand(int p);
   UnitActionState CurrentUAS() const;
+  PlayerActionState CurrentPAS() const;
 
  protected:
   virtual void DoApplyAction(Action move) override;
@@ -74,6 +75,7 @@ class baseTState : public State {
   int max_units; // max number of one player
   std::vector<int8_t> unit_id_count;
   std::vector<std::vector<int8_t>> turn_unit_v;
+  PlayerActionState current_pas;
   
   
  private:

@@ -11,6 +11,7 @@ enum UnitDirection {D_North = 0, D_West = 1, D_South = 2, D_East = 3, D_None = -
 enum UnitClass {C0 = 0, C1,C2,C3,C4,C5,C6,C7,C8,C9, CNone = -1,};
 enum ActionType {AMove = 0, AAttk, ANone = -1,};
 enum ObsRefCount {ObsRefUp = 1, ObsRefDown = -1,};
+enum PlayerActionState {PA_Obs = 0, PA_Think, PA_Action,};
 enum UnitActionState {UA_Move = 0, UA_Drc=1, UA_attk=2, UA_None = -1,};
 enum PlayerN {PNone = -1,};
 enum UnitN {UNone = -1,};

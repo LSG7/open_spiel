@@ -130,6 +130,11 @@ namespace open_spiel
       return msn.current_uas;
     }
 
+    UnitActionState baseTState::CurrentPAS() const
+    {
+      return current_pas;
+    }
+
     bool baseTState::IsTerminal() const
     {
       // TODO
@@ -234,6 +239,8 @@ namespace open_spiel
       msn.current_player = 0;
       msn.current_unit_id = get_next_unit_to_action_rand(msn.current_player);
       msn.current_uas = UA_Move;
+
+      current_pas = PA_Obs;
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
