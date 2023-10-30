@@ -201,7 +201,7 @@ namespace open_spiel
 
       if (erase)
         turn_unit_v[p].pop_back();
-      
+
       return ret;
     }
 
@@ -240,7 +240,7 @@ namespace open_spiel
 
       // P0 부터 시작
       msn.current_player = 0;
-      msn.current_unit_id = get_next_unit_to_action_rand(msn.current_player);
+      msn.current_unit_id = get_next_unit_to_action_rand(msn.current_player, false);
       msn.current_uas = UA_Move;
 
       current_pas = PA_Obs;
