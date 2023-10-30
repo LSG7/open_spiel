@@ -342,10 +342,10 @@ namespace open_spiel
         {
           for (int x = 0; x < map_size.x; x++)
           {
-            cell_string += get_cell_observation_string(msn, {z,y,x}, player);
+            cell_string = get_cell_observation_string(msn, {z,y,x}, player);
             if (msn.cells_v[z][y][x].occupying_player == msn.current_player &&
                 msn.cells_v[z][y][x].occupying_unit_id == msn.current_unit_id) {
-                  board_string += "\033[31m" + cell_string + "\033[0m"
+                  board_string += "\033[31m" + cell_string + "\033[0m";
                 } else {
                   board_string += cell_string;
                 }
