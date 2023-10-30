@@ -67,8 +67,6 @@ class baseTState : public State {
   virtual MapCoord id_to_crd(Action a);
   virtual Action crd_to_id(MapCoord crd);
   
-
-  
   MapCoord map_size;
   MapState msn; //map state now
   std::vector<MapState> Map_history;
@@ -76,7 +74,6 @@ class baseTState : public State {
   std::vector<int8_t> unit_id_count;
   std::vector<std::vector<int8_t>> turn_unit_v;
   PlayerActionState current_pas;
-  
   
  private:
 

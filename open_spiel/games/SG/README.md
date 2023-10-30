@@ -49,3 +49,5 @@ https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-enco
 * 채널에 셀의 정보를 나열하고 Unet 으로 셀의 정보를 분석해야 한다.
 * 셀이 z 축으로 쌓여도 되나? 
 * action id 를 셀 번호로 해야 한다. 근데 셀이 존나 많다.
+
+* 관찰, 생각, 행동

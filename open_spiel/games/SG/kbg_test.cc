@@ -18,6 +18,34 @@ int main(int argc, char** argv)
   std::cerr << "Starting new state..." << std::endl;
   std::unique_ptr<open_spiel::State> state = game->NewInitialState();
 
+  open_spiel::kbg::kbgState* s = (open_spiel::kbg::kbgState*) state.release();
+  int next_unit = s->get_next_unit_to_action_rand();
+
+  // obs - think - actino loop
+  while (1) {
+    int player = s->CurrentPlayer();
+    int action_state = s->CurrentUAS();
+    int player_state = s->CurrentPAS();
+    std::cout << "Player:" << std::to_string(player);
+    std::cout << " PAState:" << std::to_string(player_state);
+    std::cout << " UAState:" << std::to_string(action_state) << std::endl;
+
+    std::string input;
+    std::cin >> input;
+
+    switch (player_state) {
+      case PA_Obs :
+
+        break;
+      case PA_Think :
+
+        break;
+      case PA_Action :
+
+        break;
+    }
+  }
+
   std::cerr << "Printing observation p0..." << std::endl;
   std::string p0_observation = state->ObservationString(0);
   std::cout << p0_observation ;
@@ -26,8 +54,7 @@ int main(int argc, char** argv)
   std::string p1_observation = state->ObservationString(1);
   std::cout << p1_observation ;
 
-  open_spiel::kbg::kbgState* p = (open_spiel::kbg::kbgState*) state.release();
-  int next_unit = p->get_next_unit_to_action_rand(0);
+
 
   return 0;
 }
