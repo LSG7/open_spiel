@@ -130,7 +130,7 @@ namespace open_spiel
       return msn.current_uas;
     }
 
-    UnitActionState baseTState::CurrentPAS() const
+    PlayerActionState baseTState::CurrentPAS() const
     {
       return current_pas;
     }
