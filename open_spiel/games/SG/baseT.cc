@@ -137,17 +137,35 @@ namespace open_spiel
 
     void baseTState::SetNextUAS()
     {
-      msn.current_uas++;
-
-      if (msn.current_uas == 3)
-        msn.current_uas = 0;
+      switch (msn.current_uas) {
+        case UA_Move : 
+          msn.current_uas = UA_Drc;
+          break;
+        case UA_Drc :
+          msn.current_uas = UA_attk;
+          break;
+        case UA_attk :
+          msn.current_uas = UA_Move;
+          break;
+        case UA_None :
+          break;
+      }
     }
     void baseTState::SetNextPAS()
     {
-      current_pas++;
-
-      if (current_pas == 3)
-        current_pas = 0;
+      switch (current_pas) {
+        case PA_Obs :
+          current_pas = PA_Think;
+          break;
+        case PA_Think :
+          current_pas = PA_Action;
+          break;
+        case PA_Action :
+          current_pas = PA_Pbs;
+          break;
+        case PA_None :
+          break;
+      }
     }
     void baseTState::SetNextPlayer()
     {
