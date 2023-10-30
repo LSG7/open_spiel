@@ -5,6 +5,8 @@
 #include "open_spiel/tests/basic_tests.h"
 #include "open_spiel/games/SG/ki_bo_gung.h"
 
+using namespace open_spiel::baseT;
+
 int main(int argc, char** argv)
 {
   std::cerr << "Loading game..\n" << std::endl;
@@ -38,9 +40,10 @@ int main(int argc, char** argv)
     std::string input;
     std::cin >> input;
 
+    std::string p_observation;
     switch (player_state) {
       case PA_Obs :
-        std::string p_observation = state->ObservationString(player);
+        p_observation = s->ObservationString(player);
         std::cout << p_observation ;
         // TODO : make obtensor
 
