@@ -161,7 +161,7 @@ namespace open_spiel
           current_pas = PA_Action;
           break;
         case PA_Action :
-          current_pas = PA_Pbs;
+          current_pas = PA_Obs;
           break;
         case PA_None :
           break;
