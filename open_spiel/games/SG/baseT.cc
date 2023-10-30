@@ -137,10 +137,10 @@ namespace open_spiel
 
     void baseTState::SetNextUAS()
     {
-      current_uas++;
+      msn.current_uas++;
 
-      if (current_uas == 3)
-        current_uas = 0;
+      if (msn.current_uas == 3)
+        msn.current_uas = 0;
     }
     void baseTState::SetNextPAS()
     {
