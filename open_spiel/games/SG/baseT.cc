@@ -139,12 +139,12 @@ namespace open_spiel
     {
       switch (msn.current_uas) {
         case UA_Move : 
-          msn.current_uas = UA_Drc;
-          break;
-        case UA_Drc :
           msn.current_uas = UA_attk;
           break;
         case UA_attk :
+          msn.current_uas = UA_Drc;
+          break;
+        case UA_Drc :
           msn.current_uas = UA_Move;
           break;
         case UA_None :

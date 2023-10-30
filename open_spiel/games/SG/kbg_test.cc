@@ -26,7 +26,7 @@ int main(int argc, char** argv)
   // obs - think - actino loop
   while (1) {
     int player = s->CurrentPlayer();
-    int action_state = s->CurrentUAS();
+    int unit_state = s->CurrentUAS();
     int player_state = s->CurrentPAS();
     int next_unit = 0;
 
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
     std::cout << "Player:" << std::to_string(player);
     std::cout << " Unit:" << std::to_string(next_unit);
     std::cout << " PAState:" << std::to_string(player_state);
-    std::cout << " UAState:" << std::to_string(action_state) << std::endl;
+    std::cout << " UAState:" << std::to_string(unit_state) << std::endl;
 
     std::string input;
     std::cin >> input;
