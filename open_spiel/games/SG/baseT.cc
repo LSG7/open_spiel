@@ -186,7 +186,7 @@ namespace open_spiel
       return a;
     }
 
-    int8_t baseTState::get_next_unit_to_action_rand(int p)
+    int8_t baseTState::get_next_unit_to_action_rand(int p, bool erase)
     {
       static std::random_device rd;
       static std::mt19937 gen(rd());
@@ -198,7 +198,10 @@ namespace open_spiel
         std::shuffle(turn_unit_v[p].begin(), turn_unit_v[p].end(), gen);
       }
       int8_t ret = turn_unit_v[p].back();
-      turn_unit_v[p].pop_back();
+
+      if (erase)
+        turn_unit_v[p].pop_back();
+      
       return ret;
     }
 

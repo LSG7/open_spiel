@@ -50,7 +50,7 @@ class baseTState : public State {
   virtual std::string ToString() const override;
   virtual std::unique_ptr<State> Clone() const override;
   virtual std::string ObservationString(Player player) const override;
-  virtual int8_t get_next_unit_to_action_rand(int p);
+  virtual int8_t get_next_unit_to_action_rand(int p, bool erase);
   UnitActionState CurrentUAS() const;
   PlayerActionState CurrentPAS() const;
 
