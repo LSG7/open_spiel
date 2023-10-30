@@ -41,6 +41,7 @@ int main(int argc, char** argv)
     std::cin >> input;
 
     // PA_Obs
+    std::cout << "Player observing" << std::endl;
     std::string p_observation = s->ObservationString(player);
     std::cout << p_observation;
     // TODO : make obtensor
@@ -60,6 +61,7 @@ int main(int argc, char** argv)
     if (s->CurrentUAS() == UA_Move) { // 플레이어 차례 끝남 
       s->get_next_unit_to_action_rand(player, true); // 플레이어 유닛 빼낸다.
       s->SetNextPlayer();
+      std::cout << "Player changed" << std::endl;
     } 
   }
 
