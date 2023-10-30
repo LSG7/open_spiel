@@ -40,32 +40,27 @@ int main(int argc, char** argv)
     std::string input;
     std::cin >> input;
 
-    std::string p_observation;
-    switch (player_state) {
-      case PA_Obs :
-        p_observation = s->ObservationString(player);
-        std::cout << p_observation;
-        // TODO : make obtensor
+    // PA_Obs
+    std::string p_observation = s->ObservationString(player);
+    std::cout << p_observation;
+    // TODO : make obtensor
+    s->SetNextPAS();
 
-        s->SetNextPAS();
-        break;
-      case PA_Think :
+    // PA_Think
+    std::cout << "Player thinking" << std::endl;
+    // TODO : inference network
+    s->SetNextPAS();
 
-        s->SetNextPAS();
-        break;
-      case PA_Action :
+    // PA_Action
+    std::cout << "Player acting" << std::endl;
+    // TODO : action_apply(p,a);
+    s->SetNextPAS();
 
-        s->SetNextPAS();
-        s->SetNextUAS();
-        if (s->CurrentUAS() == UA_Move) {
-          next_unit = s->get_next_unit_to_action_rand(player, true); // 현 플레이어 유닛 빼낸다.
-          s->SetNextPlayer();
-        } // 이전 플레이어 차례 끝남 
-          
-        break;
-    }
-
-
+    s->SetNextUAS();
+    if (s->CurrentUAS() == UA_Move) { // 플레이어 차례 끝남 
+      s->get_next_unit_to_action_rand(player, true); // 플레이어 유닛 빼낸다.
+      s->SetNextPlayer();
+    } 
   }
 
   return 0;
