@@ -61,7 +61,7 @@ int main(int argc, char** argv)
     }
 
     if (s->CurrentUAS() == UA_Move) // 이전 플레이어 차례 끝남 
-      SetNextPlayer();
+      s->SetNextPlayer();
   }
 
   return 0;
