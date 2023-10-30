@@ -44,17 +44,24 @@ int main(int argc, char** argv)
     switch (player_state) {
       case PA_Obs :
         p_observation = s->ObservationString(player);
-        std::cout << p_observation ;
+        std::cout << p_observation;
         // TODO : make obtensor
 
+        s->SetNextPAS();
         break;
       case PA_Think :
 
+        s->SetNextPAS();
         break;
       case PA_Action :
 
+        s->SetNextPAS();
+        s->SetNextUAS();
         break;
     }
+
+    if (s->CurrentUAS == UA_Move) // 이전 플레이어 차례 끝남 
+      SetNextPlayer();
   }
 
   return 0;

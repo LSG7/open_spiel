@@ -135,6 +135,28 @@ namespace open_spiel
       return current_pas;
     }
 
+    void baseTState::SetNextUAS()
+    {
+      current_uas++;
+
+      if (current_uas == 3)
+        current_uas = 0;
+    }
+    void baseTState::SetNextPAS()
+    {
+      current_pas++;
+
+      if (current_pas == 3)
+        current_pas = 0;
+    }
+    void baseTState::SetNextPlayer()
+    {
+      msn.current_player++;
+
+      if (msn.current_player == num_players_)
+        msn.current_player = 0;
+    }
+
     bool baseTState::IsTerminal() const
     {
       // TODO

@@ -53,6 +53,9 @@ class baseTState : public State {
   virtual int8_t get_next_unit_to_action_rand(int p, bool erase);
   UnitActionState CurrentUAS() const;
   PlayerActionState CurrentPAS() const;
+  void SetNextUAS();
+  void SetNextPAS();
+  void SetNextPlayer();
 
  protected:
   virtual void DoApplyAction(Action move) override;
