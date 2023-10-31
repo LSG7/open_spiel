@@ -51,3 +51,6 @@ https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-enco
 * action id 를 셀 번호로 해야 한다. 근데 셀이 존나 많다.
 
 * 관찰, 생각, 행동
+
+23.10.31
+* 혼합 정밀도를 사용해야 한다. 인풋은 float, 연산은 bf16, 아웃은 ?
