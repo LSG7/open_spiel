@@ -47,7 +47,7 @@ if(${BUILD_TYPE} STREQUAL "Debug")
     # macOS-specific code
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
   else()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++2b")
   endif()
 
 endif()
