@@ -284,6 +284,9 @@ namespace open_spiel
       msn.current_uas = UA_Move;
 
       current_pas = PA_Obs;
+
+      obs_channel_len = ?;
+      obs_v.assign(map_size.x * map_size.y * (obs_channel_len * map_size.z), 0);
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
@@ -475,6 +478,12 @@ namespace open_spiel
           }
         }
       }
+    }
+
+    // Spiel 에 구현되있는 ObservationTensor 함수들이 비효율적이다. 매번 vector 생성하는것.
+    void baseTState::ObservationTensorBaseT(Player player)
+    {
+
     }    
   } // baseT
 } // open_spiel

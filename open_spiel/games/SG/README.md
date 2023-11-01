@@ -54,3 +54,4 @@ https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-enco
 
 23.10.31
 * 혼합 정밀도를 사용해야 한다. 인풋은 float, 연산은 bf16, 아웃은 ?
+* obs 를 1D vector 로 만든다. pythoh 에서 이것을 asarray() 하고 reshape() 한다. 

@@ -56,6 +56,7 @@ class baseTState : public State {
   void SetNextUAS();
   void SetNextPAS();
   void SetNextPlayer();
+  void ObservationTensorBaseT(Player player, absl::Span<float> values);
 
  protected:
   virtual void DoApplyAction(Action move) override;
@@ -77,6 +78,8 @@ class baseTState : public State {
   std::vector<int8_t> unit_id_count;
   std::vector<std::vector<int8_t>> turn_unit_v;
   PlayerActionState current_pas;
+  std::vector<float> obs_v;
+  int obs_channel_len;
   
  private:
 
