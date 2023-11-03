@@ -264,7 +264,7 @@ namespace open_spiel
     }
 
     void baseTState::init_first
-    (int m_u, int piece_tn, int last_mn)
+    (int m_u, int piece_tn, int last_mn, int supply_n)
     {
       max_units = m_u;
       piece_type_n = piece_tn;
@@ -293,8 +293,7 @@ namespace open_spiel
       obs_v.assign(map_size.x * map_size.y * (obs_channel_len * map_size.z), 0);
 
       // 보금품 남은 수 
-      std::vector<float> emtpy_f;
-      supply_v.assign(num_players_, emtpy_f);
+      supply_v.assign(num_players_, supply_n);
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
