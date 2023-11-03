@@ -268,16 +268,18 @@ namespace open_spiel
     {
       max_units = m_u;
       piece_type_n = piece_tn;
-      last_move_number = last_mn;
+      last_move_len = last_mn;
 
       // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
       unit_id_count.assign(num_players_, UNone);
 
       // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
-      msn.units_v.assign(num_players_, std::vector<Unit> empty_units_v);
+      std::vector<Unit> empty_units_v;
+      msn.units_v.assign(num_players_, empty_units_v);
 
       // 플레이어 수 만큼 턴 남은 유닛 셋 채운다.
-      turn_unit_v.assign(num_players_, std::vector<int8_t> empty_id_v);
+      std::vector<int8_t> empty_id_v;
+      turn_unit_v.assign(num_players_, empty_id_v);
 
       // P0 부터 시작
       msn.current_player = 0;
@@ -286,10 +288,13 @@ namespace open_spiel
 
       current_pas = PA_Obs;
 
-      obs_channel_len = ?;
+      // obs 채널 깊이. network_input.md
+      obs_channel_len = 3 + (piece_type_n * 3) + last_move_len + num_players_ ;
       obs_v.assign(map_size.x * map_size.y * (obs_channel_len * map_size.z), 0);
 
-      supply_v.assign(num_players_, std::vector<float> emtpy_f);
+      // 보금품 남은 수 
+      std::vector<float> emtpy_f;
+      supply_v.assign(num_players_, emtpy_f);
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
