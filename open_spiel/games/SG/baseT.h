@@ -63,7 +63,7 @@ class baseTState : public State {
 
   virtual int action_mv(int pn, int unit_id, MapCoord tg_crd, bool is_init);
   virtual void scout(int pn, int unit_id, ObsRefCount o_r_c);  // unit 주변 셀들을 관찰한다.
-  virtual void init_first(int m_u, int piece_tn);
+  virtual void init_first(int m_u, int piece_tn, int last_mn);
   virtual void init_map();
   virtual void init_unit();
   virtual std::string get_cell_observation_string(MapState state, MapCoord crd, int p) const;
@@ -81,6 +81,9 @@ class baseTState : public State {
   PlayerActionState current_pas;
   std::vector<float> obs_v;
   int obs_channel_len;
+  int last_move_len;
+  std::vector<float> supply_v;
+
   
  private:
 
