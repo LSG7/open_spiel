@@ -490,6 +490,7 @@ namespace open_spiel
     // Spiel 에 구현되있는 ObservationTensor 함수들이 비효율적이다. 매번 vector 생성하는것.
     void baseTState::ObservationTensorBaseT(Player player)
     {
+      std::fill(obs_v.begin(), obs_v.end(), 0);
 
     }    
   } // baseT

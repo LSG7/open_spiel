@@ -56,7 +56,7 @@ class baseTState : public State {
   void SetNextUAS();
   void SetNextPAS();
   void SetNextPlayer();
-  void ObservationTensorBaseT(Player player, absl::Span<float> values);
+  void ObservationTensorBaseT(Player player);
 
  protected:
   virtual void DoApplyAction(Action move) override;
