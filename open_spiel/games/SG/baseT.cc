@@ -263,9 +263,10 @@ namespace open_spiel
       // TODO
     }
 
-    void baseTState::init_first(int m_u)
+    void baseTState::init_first(int m_u, int piece_tn)
     {
       max_units = m_u;
+      piece_type_n = piece_tn;
 
       // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
       unit_id_count.assign(num_players_, UNone);
