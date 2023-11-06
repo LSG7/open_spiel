@@ -60,3 +60,5 @@ https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-enco
 * apple M3 에서는 bf16 지원한다고 하나 apple coreML 문서에는 float16 지원하는 것만 설명되어 있다.
 그러니 지금은 일단 float16 으로 만든다.
 * C++23 부터 float16_t bfloat16_t 존재. c++23 으로 빌드.
+* gcc g++13 깔아야함. developernote.com/2023/08/installing-gcc13-on-ubuntu-22-04
+* clang++17 깔아야함.

@@ -17,6 +17,7 @@
 
 #include <string>
 #include <memory>
+#include <cstdint>
 
 #include "open_spiel/abseil-cpp/absl/strings/string_view.h"
 

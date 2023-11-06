@@ -26,7 +26,7 @@ if(NOT WIN32)
   set(BoldWhite   "${Esc}[1;37m")
 endif()
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CUDA_STANDARD 14)
 set(CMAKE_CUDA_STANDARD_REQUIRED TRUE)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
@@ -40,6 +40,8 @@ if(NOT BUILD_TYPE)
 endif()
 message("${BoldYellow}Current build type is: ${BUILD_TYPE}${ColourReset}")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++23")
+
 if(${BUILD_TYPE} STREQUAL "Debug")
   # Basic build for debugging (default).
   # -Og enables optimizations that do not interfere with debugging.
@@ -47,7 +49,7 @@ if(${BUILD_TYPE} STREQUAL "Debug")
     # macOS-specific code
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
   else()
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -std=c++2b")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
   endif()
 
 endif()

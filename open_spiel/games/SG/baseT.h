@@ -12,6 +12,7 @@
 // STD headers
 
 // internal headers
+#include <stdfloat> //c++23 clang++-17
 #include "open_spiel/spiel.h"
 #include "baseType.h"
 
