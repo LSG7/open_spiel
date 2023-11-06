@@ -55,3 +55,7 @@ https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-enco
 23.10.31
 * 혼합 정밀도를 사용해야 한다. 인풋은 float, 연산은 bf16, 아웃은 ?
 * obs 를 1D vector 로 만든다. pythoh 에서 이것을 asarray() 하고 reshape() 한다. 
+
+23.11.6
+* apple M3 에서는 bf16 지원한다고 하나 apple coreML 문서에는 float16 지원하는 것만 설명되어 있다.
+그러니 지금은 일단 float16 으로 만든다.
