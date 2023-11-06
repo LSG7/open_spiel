@@ -71,6 +71,7 @@ class baseTState : public State {
   virtual std::string get_set_error(std::string log, bool is_save);
   virtual MapCoord id_to_crd(Action a);
   virtual Action crd_to_id(MapCoord crd);
+  void ObservationTensorBaseT_Land(Player player, int vector_index);
   
   MapCoord map_size;
   MapState msn; //map state now
@@ -83,10 +84,10 @@ class baseTState : public State {
   // Observation info
   int land_info_channel_depth;
   int piece_type_n;
-  std::vector<float> obs_v;
+  std::vector<std::float16_t> obs_v;
   int obs_total_channel_depth;
   int last_move_len;
-  std::vector<float> supply_v;
+  std::vector<std::float16_t> supply_v;
 
   
  private:

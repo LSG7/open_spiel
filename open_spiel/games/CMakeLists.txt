@@ -186,6 +186,7 @@ set(GAME_SOURCES
   SG/baseT.h
   SG/baseT.cc
   SG/baseType.h
+  SG/baseT_utils.cc
 )
 
 if (${OPEN_SPIEL_BUILD_WITH_HANABI})
