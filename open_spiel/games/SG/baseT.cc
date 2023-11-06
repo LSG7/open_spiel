@@ -264,9 +264,11 @@ namespace open_spiel
     }
 
     void baseTState::init_first
-    (int m_u, int piece_tn, int last_mn, int supply_n)
+    (int max_u, int piece_tn, int last_mn, int supply_n,
+     int land_channel_d)
     {
-      max_units = m_u;
+      land_info_channel_depth = land_channel_d;
+      max_units = max_u;
       piece_type_n = piece_tn;
       last_move_len = last_mn;
 
@@ -289,8 +291,8 @@ namespace open_spiel
       current_pas = PA_Obs;
 
       // obs 채널 깊이. network_input.md
-      obs_channel_len = 3 + (piece_type_n * 3) + last_move_len + num_players_ ;
-      obs_v.assign(map_size.x * map_size.y * (obs_channel_len * map_size.z), 0);
+      obs_total_channel_depth = 3 + (piece_type_n * 3) + last_move_len + num_players_ ;
+      obs_v.assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
 
       // 보금품 남은 수 
       supply_v.assign(num_players_, supply_n);
@@ -491,7 +493,6 @@ namespace open_spiel
     void baseTState::ObservationTensorBaseT(Player player)
     {
       std::fill(obs_v.begin(), obs_v.end(), 0);
-
     }    
   } // baseT
 } // open_spiel

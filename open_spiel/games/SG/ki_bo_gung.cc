@@ -55,7 +55,8 @@ int kbgGame::NumPlayers() const
 kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
 {
   //무조건 맨 처음에 불러줘야 함
-  init_first(4, 3, 5, 20); // max_unit=4, piece_type_n=3, last_m=5, supply=20
+  // max_unit=4, piece_type_n=3, last_m=5, supply=20, land_c=3
+  init_first(4, 3, 5, 20, 3); 
 
   // 맵을 생성하고
   init_map();
