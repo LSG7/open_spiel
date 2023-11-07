@@ -61,4 +61,5 @@ https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-enco
 그러니 지금은 일단 float16 으로 만든다.
 * C++23 부터 float16_t bfloat16_t 존재. c++23 으로 빌드.
 * gcc g++13 깔아야함. developernote.com/2023/08/installing-gcc13-on-ubuntu-22-04
-* clang++17 깔아야함.
+* clang++17 깔아야함. clang 은 STDCPP_FLOAT16_T 지원안해서 못씀. c++23 정식지원까지 사용중지.
+* Mac 에서도 gcc 써야함.
