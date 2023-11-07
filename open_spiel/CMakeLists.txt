@@ -2,7 +2,8 @@
 # https://cmake.org/cmake/help/v3.12/release/3.12.html
 # Version >= 3.17 required for CMAKE_CUDA_STANDARD
 # https://gitlab.kitware.com/cmake/cmake/-/issues/19123
-cmake_minimum_required (VERSION 3.17)
+# CMAKE >= 3.23 required for C++23
+cmake_minimum_required (VERSION 3.23)
 project (open_spiel)
 
 # Define some nice terminal colors.

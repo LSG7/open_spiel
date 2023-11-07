@@ -1,1 +1,2 @@
-BUILD_SHARED_LIB=ON CC=clang-17 CXX=clang++-17 cmake -DPython3_EXECUTABLE=$(which python3) -DCMAKE_CXX_COMPILER=${CXX} -DCMAKE_C_COMPILER=${CC} -D__STDCPP_FLOAT16_T__=1 -DBUILD_TYPE=Debug ../open_spiel
+#BUILD_SHARED_LIB=ON CC=clang-17 CXX=clang++-17 cmake -DPython3_EXECUTABLE=$(which python3) -DCMAKE_CXX_COMPILER=${CXX} -DCMAKE_C_COMPILER=${CC} -DBUILD_TYPE=Debug ../open_spiel
+BUILD_SHARED_LIB=ON CC=gcc-13 CXX=g++-13 cmake -DPython3_EXECUTABLE=$(which python3) -DCMAKE_CXX_COMPILER=${CXX} -DCMAKE_C_COMPILER=${CC} -DBUILD_TYPE=Debug ../open_spiel
