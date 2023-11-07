@@ -43,7 +43,7 @@ message("${BoldYellow}Current build type is: ${BUILD_TYPE}${ColourReset}")
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++23")
 if (APPLE)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -lc++fs")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ ")
 endif()
 
 message(STATUS "__STDCPP_FLOAT16_T__ = ${__STDCPP_FLOAT16_T__}")

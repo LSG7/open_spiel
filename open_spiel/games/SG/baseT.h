@@ -12,7 +12,13 @@
 // STD headers
 
 // internal headers
-#include <stdfloat> //c++23 clang++-17
+#ifdef __clang__ // MAC clang++-17
+  #include <arm_fp16.h>
+  #define FP16 __fp16
+#else // gcc
+  #include <stdfloat> // UBUNTU gcc-13. 우분투에서 사용 
+  #define FP16 std::float16_t
+#endif
 #include "open_spiel/spiel.h"
 #include "baseType.h"
 
@@ -85,10 +91,10 @@ class baseTState : public State {
   // Observation info
   int land_info_channel_depth;
   int piece_type_n;
-  std::vector<std::float16_t> obs_v;
+  std::vector<FP16> obs_v;
   int obs_total_channel_depth;
   int last_move_len;
-  std::vector<std::float16_t> supply_v;
+  std::vector<FP16> supply_v;
 
   
  private:
