@@ -41,6 +41,9 @@ endif()
 message("${BoldYellow}Current build type is: ${BUILD_TYPE}${ColourReset}")
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++23")
+if (APPLE)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -lc++fs")
+endif()
 
 if(${BUILD_TYPE} STREQUAL "Debug")
   # Basic build for debugging (default).
