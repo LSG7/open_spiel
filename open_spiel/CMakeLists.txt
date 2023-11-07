@@ -46,6 +46,8 @@ if (APPLE)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -lc++fs")
 endif()
 
+message(STATUS "__STDCPP_FLOAT16_T__ = ${__STDCPP_FLOAT16_T__}")
+
 if(${BUILD_TYPE} STREQUAL "Debug")
   # Basic build for debugging (default).
   # -Og enables optimizations that do not interfere with debugging.
