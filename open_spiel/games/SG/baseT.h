@@ -87,7 +87,7 @@ class baseTState : public State {
   virtual std::string get_set_error(std::string log, bool is_save);
   virtual MapCoord id_to_crd(Action a);
   virtual Action crd_to_id(MapCoord crd);
-  void ObservationTensorBaseT_Land(Player player, int vector_index);
+  int ObservationTensorBaseT_Land(Player player, int last_index);
   
   MapCoord map_size;
   MapState msn; //map state now
