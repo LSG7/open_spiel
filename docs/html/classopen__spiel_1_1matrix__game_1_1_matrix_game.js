@@ -1,0 +1,26 @@
+var classopen__spiel_1_1matrix__game_1_1_matrix_game =
+[
+    [ "MatrixGame", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#ad97a646279f0dd8348e80dd08c2f4e68", null ],
+    [ "MatrixGame", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a34c15ba8cf812093b72ad5eec97d81a1", null ],
+    [ "ActionToString", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a42356a06a9bc76e7c88767bdae84afdd", null ],
+    [ "ApproxEqual", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a82911b10d26c92f982fb61f22aeb6db2", null ],
+    [ "ColActionName", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#ac82faacb298ca3b308333c169c66f9cc", null ],
+    [ "ColUtilities", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a1fd3a9aa8cfcb0f191f7232bd7b36e5b", null ],
+    [ "ColUtility", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#aee28d3a9f554a4997ea9bf212a189de9", null ],
+    [ "GetUtilities", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a2ff9ba1f565a4172ae0695cccb5f103d", null ],
+    [ "GetUtility", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a088f57627ab2ef1cc5f1ccdcebf49947", null ],
+    [ "MaxUtility", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a6da3de0d6b22ddd3a81d4e616c9d1997", null ],
+    [ "MinUtility", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a7245fbe7efa3a6fa10aeefbeea3cfe25", null ],
+    [ "NewInitialState", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a797de24e8a087cb7192da8008f769fac", null ],
+    [ "NumCols", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a4359060cedf4f847098ae3713486082d", null ],
+    [ "NumDistinctActions", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a5245fe0eba2197fd42f1202f1ff6b846", null ],
+    [ "NumPlayers", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#af3118dae2700f2bdaf437d5b9999ed88", null ],
+    [ "NumRows", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#aa82e7aca0d95655bfefb51762b222389", null ],
+    [ "operator==", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a1e7d72bf6f1a12f87ea448e6f83a82e4", null ],
+    [ "PlayerUtilities", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#ab378664b7bbb09d2d62c282c2763fb75", null ],
+    [ "PlayerUtility", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a35723b6742e79d6728a2ebb614aa15f6", null ],
+    [ "RowActionName", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a3e6fd5a70a6ec6305a0bea90f75ccb5a", null ],
+    [ "RowUtilities", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a48c4a4f0e2c7cff9c612bb11ff71a0b5", null ],
+    [ "RowUtility", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a34096a7e7b15983b1b7964413e7dbc25", null ],
+    [ "UtilitySum", "classopen__spiel_1_1matrix__game_1_1_matrix_game.html#a1e971623256866471a99758a25bf9729", null ]
+];

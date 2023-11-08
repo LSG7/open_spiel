@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1fictitious__play__test =
+[
+    [ "FictitiousPlayTest", "classopen__spiel_1_1python_1_1algorithms_1_1fictitious__play__test_1_1_fictitious_play_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1fictitious__play__test_1_1_fictitious_play_test" ]
+];

@@ -1,0 +1,10 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small =
+[
+    [ "MatrixGame", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_matrix_game.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_matrix_game" ],
+    [ "BiasedGame", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_biased_game.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_biased_game" ],
+    [ "PrisonersDilemma", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_prisoners_dilemma.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_prisoners_dilemma" ],
+    [ "RockPaperScissors", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_rock_paper_scissors.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_rock_paper_scissors" ],
+    [ "SpiralGame", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_spiral_game.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_spiral_game" ],
+    [ "MatchingPennies", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_matching_pennies.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_matching_pennies" ],
+    [ "Shapleys", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_shapleys.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_shapleys" ]
+];

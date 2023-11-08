@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1gamut =
+[
+    [ "GAMUT", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1gamut_1_1_g_a_m_u_t.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1gamut_1_1_g_a_m_u_t" ]
+];

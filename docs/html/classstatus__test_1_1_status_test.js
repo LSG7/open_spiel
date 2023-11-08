@@ -1,0 +1,25 @@
+var classstatus__test_1_1_status_test =
+[
+    [ "test_build_status_not_ok_enum", "classstatus__test_1_1_status_test.html#ac35baab94c0cdd73ca6b608201615bb2", null ],
+    [ "test_build_status_not_ok_int", "classstatus__test_1_1_status_test.html#ab166da64d9e2f1850ae25d64ef4b1cd3", null ],
+    [ "test_canonical_error", "classstatus__test_1_1_status_test.html#a0717dd4de4a8a2b40faf138b78d4cc6b", null ],
+    [ "test_canonical_error_to_string", "classstatus__test_1_1_status_test.html#ab0361b316e2e128c663c6667e303da69", null ],
+    [ "test_create_ok_status", "classstatus__test_1_1_status_test.html#afaa6f73dbf8bdc767b924f6383a48c76", null ],
+    [ "test_is_ok", "classstatus__test_1_1_status_test.html#a270e64d297ab0c8d0776595c4e17f64c", null ],
+    [ "test_make_not_ok", "classstatus__test_1_1_status_test.html#a54a0c683827f2f37b1f1c224de8812a5", null ],
+    [ "test_make_not_ok_manual_cast", "classstatus__test_1_1_status_test.html#a0f180059c0b4e6b4b2f75559d0d44b01", null ],
+    [ "test_make_ok", "classstatus__test_1_1_status_test.html#a9646678bab6bb995a309ad5263386399", null ],
+    [ "test_make_status_ptr", "classstatus__test_1_1_status_test.html#ad9fb3c9d7bcd0f8c6dc90b5f0af6a8bc", null ],
+    [ "test_make_status_ref", "classstatus__test_1_1_status_test.html#abe73fb80b1c2f2240f1e5fa8f24e8b57", null ],
+    [ "test_make_status_return_type_from_doc", "classstatus__test_1_1_status_test.html#abd1d9aef5d756c721a828501232cd970", null ],
+    [ "test_member_method", "classstatus__test_1_1_status_test.html#ad4eb54ab4d45874a4f42c6a0f597c19b", null ],
+    [ "test_ok_to_string", "classstatus__test_1_1_status_test.html#ab6d53fe83374e3b6e443faed6df55962", null ],
+    [ "test_pass_status", "classstatus__test_1_1_status_test.html#ab111a223ffe0a01c61ea1de0feb1eab1", null ],
+    [ "test_raw_code_ne_code", "classstatus__test_1_1_status_test.html#a3d7237cd77e4151c1cb6d5e56497213c", null ],
+    [ "test_return_not_ok", "classstatus__test_1_1_status_test.html#a27f65ebfef0a51b093e94164791800e9", null ],
+    [ "test_return_not_ok_catch_as_generic_exception", "classstatus__test_1_1_status_test.html#a27535fe975ed30bd4bac82f7d737c058", null ],
+    [ "test_return_not_ok_catch_with_alias", "classstatus__test_1_1_status_test.html#aa9bc6f9d03f61dbcc8deaed08e7e1e5f", null ],
+    [ "test_return_not_ok_twice", "classstatus__test_1_1_status_test.html#a4cc46c092cab29f50714de433854e52b", null ],
+    [ "test_return_ok", "classstatus__test_1_1_status_test.html#afd5f2fe0ec8fa668da0b724673ac0270", null ],
+    [ "test_return_status_return_type_from_doc", "classstatus__test_1_1_status_test.html#a0606c276be34505fd5fcb365f4a3a506", null ]
+];

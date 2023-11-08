@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__test =
+[
+    [ "BluechipBridgeWrapperTest", "classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__test_1_1_bluechip_bridge_wrapper_test.html", "classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__test_1_1_bluechip_bridge_wrapper_test" ]
+];

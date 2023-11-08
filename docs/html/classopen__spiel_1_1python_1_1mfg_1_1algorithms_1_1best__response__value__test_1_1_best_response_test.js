@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1best__response__value__test_1_1_best_response_test =
+[
+    [ "test_best_response", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1best__response__value__test_1_1_best_response_test.html#a9238bdf3a9c30617004502dea3f420fb", null ]
+];

@@ -1,0 +1,25 @@
+var classopen__spiel_1_1tarok_1_1_tarok_state =
+[
+    [ "TarokState", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a89e059d8b216302a1f0902f853a8a9b4", null ],
+    [ "ActionToString", "classopen__spiel_1_1tarok_1_1_tarok_state.html#ae0f061f0396085442db2e1c34627f3e2", null ],
+    [ "CapturedMondPenalties", "classopen__spiel_1_1tarok_1_1_tarok_state.html#aaa2ee56bd8fd0957ae48253590f89002", null ],
+    [ "CardActionToString", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a0abb1de2207585d1db644b6fc7a1b453", null ],
+    [ "ChanceOutcomes", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a5bee28ac57933779c798c1f402796934", null ],
+    [ "Clone", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a33dc8adc350cd5ad7898bdd4f13b23ab", null ],
+    [ "CurrentGamePhase", "classopen__spiel_1_1tarok_1_1_tarok_state.html#aacd3e299d36e9449e23068744d35c252", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a70f6e2fbe566d75ffaace74790a16208", null ],
+    [ "DoApplyAction", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a6e6589685f9b4eef9462200f218030d0", null ],
+    [ "InformationStateString", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a0f4dea0211f7ba6f9afd656993da27c4", null ],
+    [ "IsTerminal", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a828eed4286f07e7ce919f3e1437842cc", null ],
+    [ "LegalActions", "classopen__spiel_1_1tarok_1_1_tarok_state.html#aae8dda84af54152a6418c57949fc01cd", null ],
+    [ "PlayerCards", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a34e112d9c2102ef638d6af67271be185", null ],
+    [ "Returns", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a4a9265a3d2431de95828267d360d2c1f", null ],
+    [ "ScoresWithoutCapturedMondPenalties", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a2f0bd44a9bc971d5235109817be07b04", null ],
+    [ "SelectedContractName", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a1fedd90f3b31110c6adad979d37a90f2", null ],
+    [ "Serialize", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a7cd4f49c86764c9768c306ae747699fb", null ],
+    [ "Talon", "classopen__spiel_1_1tarok_1_1_tarok_state.html#ac5002de54942f463849445e9fe2a5afd", null ],
+    [ "TalonSets", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a375bc0172973c5431ff7b1c715701da2", null ],
+    [ "ToString", "classopen__spiel_1_1tarok_1_1_tarok_state.html#abadff65b65a7e2b2b13b2e074859a9ec", null ],
+    [ "TrickCards", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a5146f79aa4c26f478ca1ee44b991e7f0", null ],
+    [ "TarokGame", "classopen__spiel_1_1tarok_1_1_tarok_state.html#a485894d27a6b64a7bbd711597aab5edf", null ]
+];

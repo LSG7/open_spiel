@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1policy__gradient__test =
+[
+    [ "PolicyGradientTest", "classopen__spiel_1_1python_1_1algorithms_1_1policy__gradient__test_1_1_policy_gradient_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1policy__gradient__test_1_1_policy_gradient_test" ]
+];

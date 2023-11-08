@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1boltzmann__policy__iteration =
+[
+    [ "BoltzmannPolicyIteration", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1boltzmann__policy__iteration_1_1_boltzmann_policy_iteration.html", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1boltzmann__policy__iteration_1_1_boltzmann_policy_iteration" ]
+];

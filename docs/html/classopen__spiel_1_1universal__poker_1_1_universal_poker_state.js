@@ -1,0 +1,26 @@
+var classopen__spiel_1_1universal__poker_1_1_universal_poker_state =
+[
+    [ "UniversalPokerState", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a3d2681240257364b3b61a39d16b96b6a", null ],
+    [ "acpc_state", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a08ae5133a92db4521df85a1f7911816c", null ],
+    [ "ActionsConsistentWithInformationFrom", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a1bc6e151ca40d1866f61ffb9d33cdadf", null ],
+    [ "ActionToString", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a3a79613cfa1c079e50b0222438f570a8", null ],
+    [ "AllInSize", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a66fd61c6d45f31fb1200ea4e3fd49bb4", null ],
+    [ "ApplyChoiceAction", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a8bee0819b325c907a7184ec870496cdb", null ],
+    [ "betting", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a7f4c8cf25d2cb56e2073e47f06a265fa", null ],
+    [ "ChanceOutcomes", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a6b2b253a2a4f6ab5a4d0d3de1f3e758e", null ],
+    [ "Clone", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a36cecb3c22d56d97b0fd32c3fc1cab9b", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a010eadf871d9fa6af438f415089ddd65", null ],
+    [ "DoApplyAction", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#ae6224565fd8751e0e41f6c5db9cf4bbe", null ],
+    [ "GetHistoriesConsistentWithInfostate", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#ad735c9f9e03faaa3b540c2ecd0d817d2", null ],
+    [ "InformationStateString", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a39fd5e5f3b1a149e0eef939acb50ae71", null ],
+    [ "InformationStateTensor", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a3613b0a91f52c4c69a37c7952556f295", null ],
+    [ "IsChanceNode", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#ab49fdc0c145e510d58728eb1c38ea560", null ],
+    [ "IsTerminal", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a01914c2a91d6f8f2a1c8b1b23225c404", null ],
+    [ "LegalActions", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a1b8cc30da9923af6f5e5da984a7e59fe", null ],
+    [ "ObservationString", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a67038af5eca66750972f96eb75c5fd1b", null ],
+    [ "ObservationTensor", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a36ba09bd2ab570d28828fd0351d3b442", null ],
+    [ "PotSize", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#ac7a3ad33ad1ba0a1274702ed069689f3", null ],
+    [ "ResampleFromInfostate", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a151301e6eee385d8e1b406c1a57b10fb", null ],
+    [ "Returns", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#aff96b5af756f8a6f0c47ae0947d697e8", null ],
+    [ "ToString", "classopen__spiel_1_1universal__poker_1_1_universal_poker_state.html#a79c686d9526a4c11d2d109e1f18ad627", null ]
+];

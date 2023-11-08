@@ -1,0 +1,5 @@
+var classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__mirror__descent_1_1_munchausen_mirror_descent =
+[
+    [ "eval_state", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__mirror__descent_1_1_munchausen_mirror_descent.html#a9105eea3eaab7469d417d414f87358ca", null ],
+    [ "get_projected_policy", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__mirror__descent_1_1_munchausen_mirror_descent.html#acb126c2f22b1e7b68ccc4076fb040b1e", null ]
+];

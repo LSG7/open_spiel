@@ -1,0 +1,25 @@
+var classopen__spiel_1_1_restricted_nash_response_state =
+[
+    [ "RestrictedNashResponseState", "classopen__spiel_1_1_restricted_nash_response_state.html#a7fda73e9316a98e585b4ae8a19d0ed96", null ],
+    [ "RestrictedNashResponseState", "classopen__spiel_1_1_restricted_nash_response_state.html#aa7988bddb616972d88aafc95b9908efe", null ],
+    [ "ActionToString", "classopen__spiel_1_1_restricted_nash_response_state.html#a4045044301fe34838b2c855d7d717fa1", null ],
+    [ "ChanceOutcomes", "classopen__spiel_1_1_restricted_nash_response_state.html#aeb2b84bff9202601515bcfdc4a9bcc36", null ],
+    [ "Clone", "classopen__spiel_1_1_restricted_nash_response_state.html#a7f742fc2aaf1e98835d20f3e916e6725", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1_restricted_nash_response_state.html#a3749e58986b0076b6309663f3d4e49d0", null ],
+    [ "DoApplyAction", "classopen__spiel_1_1_restricted_nash_response_state.html#adb9d8f526fae649d6b04d1c6690578b0", null ],
+    [ "DoApplyActions", "classopen__spiel_1_1_restricted_nash_response_state.html#abf94670be6f5e073230162b3fa67c114", null ],
+    [ "GetOriginalGame", "classopen__spiel_1_1_restricted_nash_response_state.html#aea328d4f5ed16ae69ffe7a59528363ef", null ],
+    [ "GetOriginalState", "classopen__spiel_1_1_restricted_nash_response_state.html#aca5f485baed968de595d259326b90138", null ],
+    [ "InformationStateString", "classopen__spiel_1_1_restricted_nash_response_state.html#a03a3180f7691cd315ce4764e9f17f2cf", null ],
+    [ "InformationStateTensor", "classopen__spiel_1_1_restricted_nash_response_state.html#a22c5afa647a8064e7e7d1bce0270db2c", null ],
+    [ "IsPlayerFixed", "classopen__spiel_1_1_restricted_nash_response_state.html#a78adaacfac1e496ac75ac60ac00a1b74", null ],
+    [ "IsRestrictedNashResponseInitialState", "classopen__spiel_1_1_restricted_nash_response_state.html#a77506c79f89c7e5504f53d269e1b7c12", null ],
+    [ "IsStateFixed", "classopen__spiel_1_1_restricted_nash_response_state.html#aec6af7928f3a576f06c52bfad75cbe5a", null ],
+    [ "IsTerminal", "classopen__spiel_1_1_restricted_nash_response_state.html#a67c059b1fab951e0a87d5789ec106f54", null ],
+    [ "LegalActions", "classopen__spiel_1_1_restricted_nash_response_state.html#aaf407451045fd43ac195e02abbe2420d", null ],
+    [ "LegalActions", "classopen__spiel_1_1_restricted_nash_response_state.html#a020550be42976725bb6400ece9eb4cd2", null ],
+    [ "ObservationString", "classopen__spiel_1_1_restricted_nash_response_state.html#a46c6b815c2fd424c1e27006f4e437cc7", null ],
+    [ "ObservationTensor", "classopen__spiel_1_1_restricted_nash_response_state.html#a9287f6377cb75b1d43434d04d500fc49", null ],
+    [ "Returns", "classopen__spiel_1_1_restricted_nash_response_state.html#a25eeceb6749e521832b08e04c9ccadfe", null ],
+    [ "ToString", "classopen__spiel_1_1_restricted_nash_response_state.html#ad8d18f81d793977660b5a4773ca9d43b", null ]
+];

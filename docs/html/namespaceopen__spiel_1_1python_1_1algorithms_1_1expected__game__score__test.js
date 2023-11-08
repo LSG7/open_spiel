@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1expected__game__score__test =
+[
+    [ "PolicyValueTest", "classopen__spiel_1_1python_1_1algorithms_1_1expected__game__score__test_1_1_policy_value_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1expected__game__score__test_1_1_policy_value_test" ]
+];

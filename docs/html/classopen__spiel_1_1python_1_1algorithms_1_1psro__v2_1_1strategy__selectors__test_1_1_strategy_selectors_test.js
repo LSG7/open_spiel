@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1strategy__selectors__test_1_1_strategy_selectors_test =
+[
+    [ "test_vital", "classopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1strategy__selectors__test_1_1_strategy_selectors_test.html#a95c6f772588807b9058958707b8130cf", null ]
+];

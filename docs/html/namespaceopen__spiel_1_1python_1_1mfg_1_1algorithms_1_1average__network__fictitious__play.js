@@ -1,0 +1,6 @@
+var namespaceopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play =
+[
+    [ "Transition", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play_1_1_transition.html", null ],
+    [ "AveragePolicy", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play_1_1_average_policy.html", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play_1_1_average_policy" ],
+    [ "AverageNetworkFictitiousPlay", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play_1_1_average_network_fictitious_play.html", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play_1_1_average_network_fictitious_play" ]
+];

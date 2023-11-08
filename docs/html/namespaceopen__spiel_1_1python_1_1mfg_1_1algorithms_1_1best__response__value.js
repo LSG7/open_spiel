@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1best__response__value =
+[
+    [ "BestResponse", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1best__response__value_1_1_best_response.html", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1best__response__value_1_1_best_response" ]
+];

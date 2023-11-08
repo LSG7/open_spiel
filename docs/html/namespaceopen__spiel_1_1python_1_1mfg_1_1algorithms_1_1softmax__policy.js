@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1softmax__policy =
+[
+    [ "SoftmaxPolicy", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1softmax__policy_1_1_softmax_policy.html", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1softmax__policy_1_1_softmax_policy" ]
+];

@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1greedy__policy__test_1_1_greedy_policy_test =
+[
+    [ "test_greedy", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1greedy__policy__test_1_1_greedy_policy_test.html#a7ae0baa4d6c8bed4dc5e8f0fd09eb314", null ]
+];

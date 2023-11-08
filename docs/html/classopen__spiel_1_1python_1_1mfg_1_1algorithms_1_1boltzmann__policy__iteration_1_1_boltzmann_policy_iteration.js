@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1boltzmann__policy__iteration_1_1_boltzmann_policy_iteration =
+[
+    [ "get_projected_policy", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1boltzmann__policy__iteration_1_1_boltzmann_policy_iteration.html#a100c8c5e4143a87dd6570a23068acdbe", null ]
+];

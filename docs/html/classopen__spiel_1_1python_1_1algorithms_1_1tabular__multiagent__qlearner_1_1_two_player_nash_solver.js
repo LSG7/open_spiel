@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1tabular__multiagent__qlearner_1_1_two_player_nash_solver =
+[
+    [ "__call__", "classopen__spiel_1_1python_1_1algorithms_1_1tabular__multiagent__qlearner_1_1_two_player_nash_solver.html#abe1d02939b81e808c692f7249bff4c7d", null ]
+];

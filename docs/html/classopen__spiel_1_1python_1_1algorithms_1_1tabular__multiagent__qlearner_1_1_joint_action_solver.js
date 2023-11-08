@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1tabular__multiagent__qlearner_1_1_joint_action_solver =
+[
+    [ "__call__", "classopen__spiel_1_1python_1_1algorithms_1_1tabular__multiagent__qlearner_1_1_joint_action_solver.html#a06829825750f5aad96bb2e466bafb9b9", null ]
+];

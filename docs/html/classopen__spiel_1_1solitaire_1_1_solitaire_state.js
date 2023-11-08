@@ -1,0 +1,25 @@
+var classopen__spiel_1_1solitaire_1_1_solitaire_state =
+[
+    [ "SolitaireState", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a508ff57fbd353e7196b4ddb929d39b11", null ],
+    [ "ActionToString", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a17fdb227cc51b8616b09be0520ae4a4b", null ],
+    [ "CandidateMoves", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#ab8653ec6e72f7656566d2c1921a1bc85", null ],
+    [ "ChanceOutcomes", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a1aea34838dca498ddb40a599e7f5ab75", null ],
+    [ "Clone", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#af956d4dd4a4bb692d3a700fab2b1dd17", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#aa65d3c3e13b720dc4b7b86c69c0db481", null ],
+    [ "DoApplyAction", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a5f55e5ef385368486f6664f9a634543f", null ],
+    [ "GetPile", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#abc8904fca21664a5b8ec41a6748ed554", null ],
+    [ "GetPile", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a219a6bc4936aa79e1c87077877bc8307", null ],
+    [ "InformationStateString", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a5ff827bb4f8830804c3bc6e5fe4d0b26", null ],
+    [ "IsChanceNode", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#abf9af9b26d82f3e2356fe35612e11096", null ],
+    [ "IsReversible", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#acc9e6999103265b587f30a8373b512d4", null ],
+    [ "IsTerminal", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a97420449b2d36d69face3a4fc10eb50e", null ],
+    [ "LegalActions", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#ad1862adca300afb726d42cacea8953b0", null ],
+    [ "MoveCards", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a85e0028bc118601413f663ac86380141", null ],
+    [ "ObservationString", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a3c12f40a351c0d7420888783dc3a4f3d", null ],
+    [ "ObservationTensor", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#acffb23a500dc24b6969bcc811478bce3", null ],
+    [ "Returns", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#ac2b415fe090a493ec243755e8e53d21d", null ],
+    [ "Rewards", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#aa3c561c6709e893637be1f4c970e6556", null ],
+    [ "Sources", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a02967ec7ec87c2cfed3998ab44f39a50", null ],
+    [ "Targets", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a7a0d2308c2d095ce159a246053740af5", null ],
+    [ "ToString", "classopen__spiel_1_1solitaire_1_1_solitaire_state.html#a2519d5fe92cd75872f3202ecfe6f71b4", null ]
+];

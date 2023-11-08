@@ -1,0 +1,25 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver =
+[
+    [ "__init__", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a8858c70c4a2f51d26530d201a78bb16b", null ],
+    [ "compute_gradients", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#ad261a7c7b1ba3a734679ad07869a9157", null ],
+    [ "euc_descent_step", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a816764f70041d44b4bf6f618177ccb72", null ],
+    [ "exploitability", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a3e7c4f2e195d8d3d5faf0ea4381ddbd8", null ],
+    [ "gradients", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a9eb367dc4cf415102eb934be6b5022a0", null ],
+    [ "init_polymatrix", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#aacf63e42ff8573d7389324734bbe73b5", null ],
+    [ "init_vars", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a1aa6b19f41cb7ec0a138dc439a43720c", null ],
+    [ "mirror_descent_step", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#add42d7708a297bedd74c4666f9b86e3d", null ],
+    [ "record_aux_errors", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a754a5fdb1b66a6e0ec5ecca61d40f6b9", null ],
+    [ "aux_errors", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a9a753f2720b192fd1c940feb9a57ef21", null ],
+    [ "cheap", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#ae4481e576765aad24968feb1b3bbf09b", null ],
+    [ "euclidean", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#afbc9c9885ec3abc5c2dd3285647cf18c", null ],
+    [ "has_aux", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#abda501d809138f8b65538a11381dac06", null ],
+    [ "lrs", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#aec187f26c81d801de709ecb15cafc492", null ],
+    [ "num_players", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a9431fe63ee0a71c094028727d37ec6d8", null ],
+    [ "num_strats", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a014dd267de8f66d77173cdf32cc12bd8", null ],
+    [ "p", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a31dc70ceb9cbfcde46b9af011d909227", null ],
+    [ "proj_grad", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a439e53b152d4b1a17ae46195dae17660", null ],
+    [ "random", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a25eac81aea4aa2a74cbd06329fc65135", null ],
+    [ "rnd_init", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#ac1c82ef5364a1e3782cc4e9548cca8aa", null ],
+    [ "seed", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#a19085c26f05e69f8d47ba93a1f9bda61", null ],
+    [ "update", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#abd27fb2dfe2d5918f063b7e191f8ea82", null ]
+];

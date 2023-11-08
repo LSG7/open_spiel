@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1best__response__oracle =
+[
+    [ "BestResponseOracle", "classopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1best__response__oracle_1_1_best_response_oracle.html", "classopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1best__response__oracle_1_1_best_response_oracle" ]
+];

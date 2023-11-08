@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1solvers__te3771e8ffb8e13b8e4eb106888fe486bc =
+[
+    [ "test_exploitability_gradient_on_symmetric_two_player_matrix_games", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1solvers__te3771e8ffb8e13b8e4eb106888fe486bc.html#a0fd33e28632e48fe6832d9e2e3f35199", null ]
+];

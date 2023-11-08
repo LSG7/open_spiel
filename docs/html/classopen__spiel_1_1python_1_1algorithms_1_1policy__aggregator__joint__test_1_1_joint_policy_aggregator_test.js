@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1policy__aggregator__joint__test_1_1_joint_policy_aggregator_test =
+[
+    [ "test_policy_aggregation_random", "classopen__spiel_1_1python_1_1algorithms_1_1policy__aggregator__joint__test_1_1_joint_policy_aggregator_test.html#a576d8382c20aaa9726386c1ef3c558ad", null ]
+];

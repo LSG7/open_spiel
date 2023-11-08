@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1evaluator =
+[
+    [ "AlphaZeroEvaluator", "classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1evaluator_1_1_alpha_zero_evaluator.html", "classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1evaluator_1_1_alpha_zero_evaluator" ]
+];

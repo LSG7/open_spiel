@@ -1,0 +1,27 @@
+var namespaceopen__spiel_1_1maedn =
+[
+    [ "Coords", "structopen__spiel_1_1maedn_1_1_coords.html", "structopen__spiel_1_1maedn_1_1_coords" ],
+    [ "TurnHistoryInfo", "structopen__spiel_1_1maedn_1_1_turn_history_info.html", "structopen__spiel_1_1maedn_1_1_turn_history_info" ],
+    [ "MaednState", "classopen__spiel_1_1maedn_1_1_maedn_state.html", "classopen__spiel_1_1maedn_1_1_maedn_state" ],
+    [ "MaednGame", "classopen__spiel_1_1maedn_1_1_maedn_game.html", "classopen__spiel_1_1maedn_1_1_maedn_game" ],
+    [ "CurPlayerToString", "namespaceopen__spiel_1_1maedn.html#afd8c794681ec62a49ebb65ed91e7b46c", null ],
+    [ "kBluePlayerId", "namespaceopen__spiel_1_1maedn.html#a82b0ed846d55a07045e2030f0874c0c2", null ],
+    [ "kBoardEncodingSize", "namespaceopen__spiel_1_1maedn.html#acc5f5daf32ee7f635ca17df7e6f8da45", null ],
+    [ "kBringInAction", "namespaceopen__spiel_1_1maedn.html#af4eee570b97977518c7c6a161b557454", null ],
+    [ "kFieldActionsOffset", "namespaceopen__spiel_1_1maedn.html#a2857bfe22cd4a0c029823a1f9dcc41cb", null ],
+    [ "kFieldToBoardString", "namespaceopen__spiel_1_1maedn.html#a7bbc6665d3f4d373558446b5e61be10b", null ],
+    [ "kGreenPlayerId", "namespaceopen__spiel_1_1maedn.html#a75b2150ea66acaaa6d1da3509c79a303", null ],
+    [ "kMaxNumPlayers", "namespaceopen__spiel_1_1maedn.html#ab9a0407848af11ae70c06f146b2f8570", null ],
+    [ "kNumChanceOutcomes", "namespaceopen__spiel_1_1maedn.html#a63517eae1d0b031c3a72a1cde89e0c2a", null ],
+    [ "kNumCommonFields", "namespaceopen__spiel_1_1maedn.html#a458a861883cc62de768377c0076cc4d1", null ],
+    [ "kNumDistinctActions", "namespaceopen__spiel_1_1maedn.html#a4dc8310abb3a61c60aa27a5c1344a17e", null ],
+    [ "kNumFields", "namespaceopen__spiel_1_1maedn.html#a88d18ec9dd7dcf11025293bbcd851017", null ],
+    [ "kNumGoalFields", "namespaceopen__spiel_1_1maedn.html#a3bf79713566b64443b1e11f6cfcd5837", null ],
+    [ "kNumGoalFieldsPerPlayer", "namespaceopen__spiel_1_1maedn.html#a8718bdef6826b76b57285f7964f69bff", null ],
+    [ "kNumPiecesPerPlayer", "namespaceopen__spiel_1_1maedn.html#aa04acd5181ffcb6b67c12cc65756682a", null ],
+    [ "kOutPos", "namespaceopen__spiel_1_1maedn.html#ac74f8650efe30323ebb911f9bf767820", null ],
+    [ "kPassAction", "namespaceopen__spiel_1_1maedn.html#a895dc17ddfd360c0ebd3d4a015f574cd", null ],
+    [ "kRedPlayerId", "namespaceopen__spiel_1_1maedn.html#ad85a8ba820a6ed87b37a6274ffcbbd82", null ],
+    [ "kStateEncodingSize", "namespaceopen__spiel_1_1maedn.html#a7807108c5c9e9a4c2611ff459415320e", null ],
+    [ "kYellowPlayerId", "namespaceopen__spiel_1_1maedn.html#a690c6b0bab7eacaaadeb967f15b52dbd", null ]
+];

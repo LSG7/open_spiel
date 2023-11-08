@@ -1,0 +1,27 @@
+var classopen__spiel_1_1checkers_1_1_checkers_state =
+[
+    [ "CheckersState", "classopen__spiel_1_1checkers_1_1_checkers_state.html#adc77d374538e023567c66f61929c8b1f", null ],
+    [ "ActionToString", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a7a3ffccc902c47ffe3fd30bea5e51f4b", null ],
+    [ "BoardAt", "classopen__spiel_1_1checkers_1_1_checkers_state.html#aa7b2a9e08f4ae5c00dac0887e6d24f1b", null ],
+    [ "CheckersActionToSpielAction", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a13db7c1a907a9e20bc421b86f7aca4df", null ],
+    [ "Clone", "classopen__spiel_1_1checkers_1_1_checkers_state.html#ae10ec14d0eb01edea422fc44ee37edbe", null ],
+    [ "CrownStateIfLastRowReached", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a00d3282f98627658415363125c7fe52f", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a9b48ba99e3af8a386508ccb42b543d01", null ],
+    [ "DoApplyAction", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a6bcdb8c69bbb6ade834b2feecb3c8c6f", null ],
+    [ "GetCellState", "classopen__spiel_1_1checkers_1_1_checkers_state.html#aefb5d2a5bc895fdc7d0e8d6441854517", null ],
+    [ "GetCollumn", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a81d8bab1ede59deb637282863084e228", null ],
+    [ "GetRow", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a731dda72c69ae5c725a5fd96609a2259", null ],
+    [ "InBounds", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a7ae2ced8b46bbeed5490647cc9a21c11", null ],
+    [ "InformationStateString", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a10b3aacaff1462cb8dc1e0e7d82c4e63", null ],
+    [ "IsTerminal", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a049d77bff409f4e5a8e203d1c7684727", null ],
+    [ "LegalActions", "classopen__spiel_1_1checkers_1_1_checkers_state.html#aa02bf25a698ca6ba10908c27a30d3a89", null ],
+    [ "ObservationPlane", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a0c0111149aad49cd5817964b8e95ac00", null ],
+    [ "ObservationString", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a3c81e00a072627929e86f025a19666ee", null ],
+    [ "ObservationTensor", "classopen__spiel_1_1checkers_1_1_checkers_state.html#acaec81dd3119cae15feef1f897a0a234", null ],
+    [ "Returns", "classopen__spiel_1_1checkers_1_1_checkers_state.html#aae14919706d2c36fedef2b2af571956b", null ],
+    [ "SetBoard", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a86cb9848369b3964c39dfb6c2a1b71dc", null ],
+    [ "SetCustomBoard", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a466c043fb00309cb3fe8134ee565a09d", null ],
+    [ "SpielActionToCheckersAction", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a025da7091b1cb59081c7afc7f37db1dc", null ],
+    [ "ToString", "classopen__spiel_1_1checkers_1_1_checkers_state.html#ad81f4ad96501d92f78b06b2943eea650", null ],
+    [ "UndoAction", "classopen__spiel_1_1checkers_1_1_checkers_state.html#a11b090abeec65f50fa556f5607cfe0c3", null ]
+];

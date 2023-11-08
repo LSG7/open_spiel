@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1policy__aggregator__joint__test =
+[
+    [ "JointPolicyAggregatorTest", "classopen__spiel_1_1python_1_1algorithms_1_1policy__aggregator__joint__test_1_1_joint_policy_aggregator_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1policy__aggregator__joint__test_1_1_joint_policy_aggregator_test" ]
+];

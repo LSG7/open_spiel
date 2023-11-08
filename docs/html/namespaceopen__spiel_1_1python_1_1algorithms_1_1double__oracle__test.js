@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1double__oracle__test =
+[
+    [ "DoubleOracleTest", "classopen__spiel_1_1python_1_1algorithms_1_1double__oracle__test_1_1_double_oracle_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1double__oracle__test_1_1_double_oracle_test" ]
+];

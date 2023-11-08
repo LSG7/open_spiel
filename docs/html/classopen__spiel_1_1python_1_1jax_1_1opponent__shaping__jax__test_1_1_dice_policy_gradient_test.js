@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1jax_1_1opponent__shaping__jax__test_1_1_dice_policy_gradient_test =
+[
+    [ "test_run_game", "classopen__spiel_1_1python_1_1jax_1_1opponent__shaping__jax__test_1_1_dice_policy_gradient_test.html#a0a5c932e9b7b55fe73e61439316cd0d4", null ]
+];

@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly =
+[
+    [ "Solver", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver" ]
+];

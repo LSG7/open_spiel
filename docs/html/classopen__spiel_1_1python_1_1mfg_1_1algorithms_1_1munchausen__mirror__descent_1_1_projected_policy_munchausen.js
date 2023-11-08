@@ -1,0 +1,5 @@
+var classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__mirror__descent_1_1_projected_policy_munchausen =
+[
+    [ "__init__", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__mirror__descent_1_1_projected_policy_munchausen.html#a4e25c62eeec0775c2f90b9653e364137", null ],
+    [ "action_probabilities", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__mirror__descent_1_1_projected_policy_munchausen.html#a9e9cf82c45bda3f80adefceb8ff6c3a3", null ]
+];

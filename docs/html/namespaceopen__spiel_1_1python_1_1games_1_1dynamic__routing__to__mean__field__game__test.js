@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1games_1_1dynamic__routing__to__mean__field__game__test =
+[
+    [ "DerivedNPlayerPolicyFromMeanFieldPolicyTest", "classopen__spiel_1_1python_1_1games_1_1dynamic__routing__to__mean__field__game__test_1_1_derived4ee179a5dbf54fcb3ffbf9f1ef2b69aa.html", "classopen__spiel_1_1python_1_1games_1_1dynamic__routing__to__mean__field__game__test_1_1_derived4ee179a5dbf54fcb3ffbf9f1ef2b69aa" ]
+];

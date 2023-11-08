@@ -1,0 +1,26 @@
+var classopen__spiel_1_1negotiation_1_1_negotiation_game =
+[
+    [ "NegotiationGame", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a82bd53038e9c1e20bbaaa872ce38fc37", null ],
+    [ "NegotiationGame", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#aa4fd65d27769b5c1358aa0dc6b474367", null ],
+    [ "DeserializeState", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#ade46e01760cecca13ac4f233dd9ec698", null ],
+    [ "EnableProposals", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#af0fa083d5ac6320a68c67559c0a573aa", null ],
+    [ "EnableUtterances", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a61af96b86d8ddd6394c5875a2b7d4dbf", null ],
+    [ "GetRNGState", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a46a3c153b9f78785bd0c61ebb287a6de", null ],
+    [ "LegalUtterances", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a8ce0e8f6b95e7511efc59c39b7132d83", null ],
+    [ "MaxChanceNodesInHistory", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a221f76958847fdbb1d41f223e939c348", null ],
+    [ "MaxChanceOutcomes", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a18874b5d88ee4234a3093e524f20f540", null ],
+    [ "MaxGameLength", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#ac96d6ead3fa4969bf34ea57c6735623f", null ],
+    [ "MaxUtility", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a5b8fd2ce3237b7a1520902aa8f608d36", null ],
+    [ "MinUtility", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a8604f6b6f0502cfe8865e8333952877c", null ],
+    [ "NewInitialState", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a828bf8053c5bbbb7cce8eef12bce22eb", null ],
+    [ "NumDistinctActions", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a687c23273918f9c30b9bc250771e8c59", null ],
+    [ "NumDistinctProposals", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a669891999c5447c63903dbc702e0412f", null ],
+    [ "NumDistinctUtterances", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#acb9b41d64f6ad4505404fc6242870cac", null ],
+    [ "NumItems", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#af73ad73f6d72374f7c3ff6cc91d5b7ac", null ],
+    [ "NumPlayers", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a71e2d0b25fc3709d3be632501c4b46de", null ],
+    [ "NumSymbols", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#ad7ab33fa940a08b108f3996814549790", null ],
+    [ "ObservationTensorShape", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#afdf4a3fc7233ef76dc48ce69f9ee7406", null ],
+    [ "RNG", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#aff627a6d0b8b6ac76cd8660f868fb4b3", null ],
+    [ "SetRNGState", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#a4c4126277bc1ebab44576f43e8fb3ea3", null ],
+    [ "UtteranceDim", "classopen__spiel_1_1negotiation_1_1_negotiation_game.html#af381869d738293a016270c4e948d1369", null ]
+];

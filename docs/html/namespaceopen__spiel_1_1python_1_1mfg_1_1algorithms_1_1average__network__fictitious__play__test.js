@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play__test =
+[
+    [ "AverageNetworkFictitiousPlayTest", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play__test_1_1_918816eadd535b5f15e8edeb0d2d4292.html", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1average__network__fictitious__play__test_1_1_918816eadd535b5f15e8edeb0d2d4292" ]
+];

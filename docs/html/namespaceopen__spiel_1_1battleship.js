@@ -1,0 +1,25 @@
+var namespaceopen__spiel_1_1battleship =
+[
+    [ "BattleshipGame", "classopen__spiel_1_1battleship_1_1_battleship_game.html", "classopen__spiel_1_1battleship_1_1_battleship_game" ],
+    [ "BattleshipState", "classopen__spiel_1_1battleship_1_1_battleship_state.html", "classopen__spiel_1_1battleship_1_1_battleship_state" ],
+    [ "Cell", "structopen__spiel_1_1battleship_1_1_cell.html", "structopen__spiel_1_1battleship_1_1_cell" ],
+    [ "Ship", "structopen__spiel_1_1battleship_1_1_ship.html", "structopen__spiel_1_1battleship_1_1_ship" ],
+    [ "CellAndDirection", "classopen__spiel_1_1battleship_1_1_cell_and_direction.html", "classopen__spiel_1_1battleship_1_1_cell_and_direction" ],
+    [ "ShipPlacement", "classopen__spiel_1_1battleship_1_1_ship_placement.html", "classopen__spiel_1_1battleship_1_1_ship_placement" ],
+    [ "GameMove", "structopen__spiel_1_1battleship_1_1_game_move.html", "structopen__spiel_1_1battleship_1_1_game_move" ],
+    [ "BattleshipConfiguration", "structopen__spiel_1_1battleship_1_1_battleship_configuration.html", "structopen__spiel_1_1battleship_1_1_battleship_configuration" ],
+    [ "Shot", "namespaceopen__spiel_1_1battleship.html#a003be9e8ef257f05b90968b77ba3bf52", null ],
+    [ "ExistsFeasiblePlacement", "namespaceopen__spiel_1_1battleship.html#ab7ef4dc264a14475cf62e6247606248e", null ],
+    [ "Factory", "namespaceopen__spiel_1_1battleship.html#aacdf2b6fee1c34ed5fb0f79dfd6e8475", null ],
+    [ "REGISTER_SPIEL_GAME", "namespaceopen__spiel_1_1battleship.html#adcc5ae031c64cce9e370216d20283617", null ],
+    [ "single_tensor", "namespaceopen__spiel_1_1battleship.html#ad6f12178fcf962e202050c43053a9af2", null ],
+    [ "kDefaultAllowRepeatedShots", "namespaceopen__spiel_1_1battleship.html#ad4414eaebc727ef7e769a15b4402b9d4", null ],
+    [ "kDefaultBoardHeight", "namespaceopen__spiel_1_1battleship.html#ad49a54e994276fc7ec959d26b84479b6", null ],
+    [ "kDefaultBoardWidth", "namespaceopen__spiel_1_1battleship.html#a372db6ff4a5deeb73f960e3f6d2233fd", null ],
+    [ "kDefaultLossMultiplier", "namespaceopen__spiel_1_1battleship.html#a6e8b8890c5d235c8607a481dbcb1134f", null ],
+    [ "kDefaultNumShots", "namespaceopen__spiel_1_1battleship.html#ad6f391a9ae6ef9e1a2312e8e1d4873c1", null ],
+    [ "kDefaultShipSizes", "namespaceopen__spiel_1_1battleship.html#a24e579cfc81662272c73867e061fea63", null ],
+    [ "kDefaultShipValues", "namespaceopen__spiel_1_1battleship.html#ab225934591322c3f067ec1d896137917", null ],
+    [ "kGameType", "namespaceopen__spiel_1_1battleship.html#a325cba0369db050e193c4be6971f1e4a", null ],
+    [ "kMaxDimension", "namespaceopen__spiel_1_1battleship.html#ab884f7269620c7ce49ec008472f87c24", null ]
+];

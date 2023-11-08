@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1tests_1_1sampled__stochastic__games__test_1_1_sampled_stochastic_games_test =
+[
+    [ "test_stateful_game_serialization", "classopen__spiel_1_1python_1_1tests_1_1sampled__stochastic__games__test_1_1_sampled_stochastic_games_test.html#a80f7ff690b3125887c937fd646d82b60", null ]
+];

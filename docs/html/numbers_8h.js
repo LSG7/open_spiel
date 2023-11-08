@@ -1,0 +1,28 @@
+var numbers_8h =
+[
+    [ "FastHexToBufferZeroPad16", "numbers_8h.html#a028f8c65dc4c3cf14b3dfadc8fffb26d", null ],
+    [ "FastIntToBuffer", "numbers_8h.html#ab8aa258d1c8f1aef0157a7a04a59c966", null ],
+    [ "FastIntToBuffer", "numbers_8h.html#ae01fc01617354f07fb1db5304b97dd87", null ],
+    [ "FastIntToBuffer", "numbers_8h.html#a456583a14ca3797afc908c868ae4c1b7", null ],
+    [ "FastIntToBuffer", "numbers_8h.html#a15ff1210dd24197f55537d6401303886", null ],
+    [ "FastIntToBuffer", "numbers_8h.html#ae40863543b28581d86a178bf5b4c1738", null ],
+    [ "PutTwoDigits", "numbers_8h.html#a756c626812ba43b75710dbc033ef0e7c", null ],
+    [ "safe_strto128_base", "numbers_8h.html#a4a367ebd60095e86143605d52a373a77", null ],
+    [ "safe_strto32_base", "numbers_8h.html#ade4e90790d5f36e4ef5ebfdd40a98d26", null ],
+    [ "safe_strto64_base", "numbers_8h.html#a1a0a6b8b87d6c1f82f03330e180db92a", null ],
+    [ "safe_strtoi_base", "numbers_8h.html#a12a67bd5b68ad2574beef2703cbe8ac4", null ],
+    [ "safe_strtou128_base", "numbers_8h.html#ae1013a0da0d4f5a3c982f6ad3ba16cb6", null ],
+    [ "safe_strtou32_base", "numbers_8h.html#a33b6ddc56b8ba7fea0fb5acb01b58d15", null ],
+    [ "safe_strtou64_base", "numbers_8h.html#a31a778205a01a1c2b852519808ab79c2", null ],
+    [ "SimpleAtob", "numbers_8h.html#a57bd121e1f8b0cd2e570b028b07fc959", null ],
+    [ "SimpleAtod", "numbers_8h.html#a8e2c90bcf49ad46755d4a2afb18d5a44", null ],
+    [ "SimpleAtof", "numbers_8h.html#aa5152be96a860931088a816847dc748a", null ],
+    [ "SimpleAtoi", "numbers_8h.html#a90ccfda5c5e860ed2d88f1ea1dc82a57", null ],
+    [ "SimpleAtoi", "numbers_8h.html#a8f5bcbc8513a3a74fc5c063a9cc68285", null ],
+    [ "SimpleAtoi", "numbers_8h.html#aabfa1594cd03093e375d3a425be0dc03", null ],
+    [ "SimpleAtoi", "numbers_8h.html#ab1cbc8f20322e767176dcfa7b5825aac", null ],
+    [ "SimpleHexAtoi", "numbers_8h.html#a151f3b89dba66dd4c9cd62b1a76d984b", null ],
+    [ "SimpleHexAtoi", "numbers_8h.html#a8cd80d6412bf41ed1173b1e1adfbfc7c", null ],
+    [ "SimpleHexAtoi", "numbers_8h.html#a55a2e6d8f9239d8ce678b21889ae79cc", null ],
+    [ "SixDigitsToBuffer", "numbers_8h.html#ac369fe15fac351ed7c42556c166432fd", null ]
+];

@@ -1,0 +1,26 @@
+var class_trans_table_l =
+[
+    [ "TransTableL", "class_trans_table_l.html#a1b4a6024db13ce8584c05bc682ae1c74", null ],
+    [ "~TransTableL", "class_trans_table_l.html#ad720c11c13011a63ede2a180506cb899", null ],
+    [ "Add", "class_trans_table_l.html#af9a1633fe2a7d4bdc05b29e8ef2a5a71", null ],
+    [ "Init", "class_trans_table_l.html#a3f42c2cb4d5c2e67b05ea1526ecc1b4a", null ],
+    [ "Lookup", "class_trans_table_l.html#ac6cae2f899eac041c385fb9f924d44ae", null ],
+    [ "MakeTT", "class_trans_table_l.html#a75ad4cbce2fc5481274430bbb846e699", null ],
+    [ "MemoryInUse", "class_trans_table_l.html#a889e37140d3b543473cd32589e92922e", null ],
+    [ "PrintAllEntries", "class_trans_table_l.html#a4e78047d405785e1caa9e5bab6278436", null ],
+    [ "PrintAllEntryStats", "class_trans_table_l.html#ad81bbd88d10673c1f7cb91724e6ac497", null ],
+    [ "PrintAllSuits", "class_trans_table_l.html#aaf8631c3bb08339a696b2b0029580da6", null ],
+    [ "PrintAllSuitStats", "class_trans_table_l.html#a287a1aeae7479dc9e7cf96409677e2be", null ],
+    [ "PrintEntries", "class_trans_table_l.html#a78a77f05e9b2a9e7364c3b53f89b4415", null ],
+    [ "PrintEntriesDist", "class_trans_table_l.html#ae3b83a6edcc04e3ce39043bc9cc587f0", null ],
+    [ "PrintEntriesDistAndCards", "class_trans_table_l.html#a21218bbfc666d733bc89cd8a5ae784f1", null ],
+    [ "PrintEntryStats", "class_trans_table_l.html#a0fb31510b45c5f7637c38c102507e980", null ],
+    [ "PrintSuits", "class_trans_table_l.html#a1ebc8edffee6407769cc5859962fae38", null ],
+    [ "PrintSuitStats", "class_trans_table_l.html#a6c092ae153dfe5e4acde85c58975a003", null ],
+    [ "PrintSummaryEntryStats", "class_trans_table_l.html#ab2ebe6bdc1f5a59cb92bbaabd37d90bf", null ],
+    [ "PrintSummarySuitStats", "class_trans_table_l.html#aaeec5631f4f02812432a45bd0ca34fd2", null ],
+    [ "ResetMemory", "class_trans_table_l.html#ac06f124bb47c70f339a84c16f792cf50", null ],
+    [ "ReturnAllMemory", "class_trans_table_l.html#a40ca32e26355f8a9b13efbc81511be77", null ],
+    [ "SetMemoryDefault", "class_trans_table_l.html#a5ce78182ef25b58266f23b8d17df59c0", null ],
+    [ "SetMemoryMaximum", "class_trans_table_l.html#ae8522c30df08fd74c88423b1a22cfe3d", null ]
+];

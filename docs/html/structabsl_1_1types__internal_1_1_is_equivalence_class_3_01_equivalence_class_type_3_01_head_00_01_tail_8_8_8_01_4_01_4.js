@@ -1,0 +1,6 @@
+var structabsl_1_1types__internal_1_1_is_equivalence_class_3_01_equivalence_class_type_3_01_head_00_01_tail_8_8_8_01_4_01_4 =
+[
+    [ "for_type", "structabsl_1_1types__internal_1_1_is_equivalence_class_3_01_equivalence_class_type_3_01_head_00_01_tail_8_8_8_01_4_01_4.html#ab6082f62b46b2be34d234ce052b0e2cf", null ],
+    [ "result_type", "structabsl_1_1types__internal_1_1_is_equivalence_class_3_01_equivalence_class_type_3_01_head_00_01_tail_8_8_8_01_4_01_4.html#a96abb6d4e93c881e843ec7517f4dba3f", null ],
+    [ "self", "structabsl_1_1types__internal_1_1_is_equivalence_class_3_01_equivalence_class_type_3_01_head_00_01_tail_8_8_8_01_4_01_4.html#a983ca78061d649058e5f36285156bb86", null ]
+];

@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test =
+[
+    [ "IteratedPrisonersDilemmaTest", "classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test.html", "classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test" ]
+];

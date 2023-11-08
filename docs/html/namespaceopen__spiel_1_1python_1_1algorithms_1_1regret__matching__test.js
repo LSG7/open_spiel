@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1regret__matching__test =
+[
+    [ "RegretMatchingTest", "classopen__spiel_1_1python_1_1algorithms_1_1regret__matching__test_1_1_regret_matching_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1regret__matching__test_1_1_regret_matching_test" ]
+];

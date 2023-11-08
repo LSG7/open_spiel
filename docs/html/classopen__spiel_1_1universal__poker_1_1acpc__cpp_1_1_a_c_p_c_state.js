@@ -1,0 +1,35 @@
+var classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state =
+[
+    [ "ACPCActionType", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ae7c885b3812e33e6bdb15ab4aa4915e0", [
+      [ "ACPC_FOLD", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ae7c885b3812e33e6bdb15ab4aa4915e0afefb9e8182737133de11025c69b11f16", null ],
+      [ "ACPC_CALL", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ae7c885b3812e33e6bdb15ab4aa4915e0a860a21baa4c034a4a2ef2786662686ea", null ],
+      [ "ACPC_RAISE", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ae7c885b3812e33e6bdb15ab4aa4915e0acb366b4e22bf0da404052120ddfa0bc8", null ],
+      [ "ACPC_INVALID", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ae7c885b3812e33e6bdb15ab4aa4915e0a7baba0d1c848416d0befae3f57a25bb9", null ]
+    ] ],
+    [ "ACPCState", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a0768e8caade950ea2b7e0f0d3763b500", null ],
+    [ "ACPCState", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#abd3e74f2c51ddd6fccbdc467dfec85d2", null ],
+    [ "AddBoardCard", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a5a7438b7b7f2da723498756c789d2490", null ],
+    [ "AddHoleCard", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ab87dc837a09bbcb8dc720afbd46877d4", null ],
+    [ "Ante", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a501d0d81c5609fdf9ac992507bed20cc", null ],
+    [ "BettingSequence", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a3a352ccdc4aec641176f8fa64a355b59", null ],
+    [ "board_cards", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ac411333e7fba00f8976fa434e1a95c8a", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a6dd1b5596e5e22e79041317d648b14fd", null ],
+    [ "CurrentSpent", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ad01c2e544c1259dee0f44f0da0c81ef2", null ],
+    [ "DoAction", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ad5fc4cb390534e8170a8df2700cff3e4", null ],
+    [ "game", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#afb777534f80077c6afd4d9dc49606217", null ],
+    [ "GetRound", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a3e50a1eb9e8aa59ffd2365df55a3bbb7", null ],
+    [ "hole_cards", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ace0865caf396588a22d36fad4e3617ea", null ],
+    [ "IsFinished", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#acf0a471bfa57d079df3e06325c2abe7b", null ],
+    [ "IsValidAction", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a32ff610ba621ced3df42d16175855c69", null ],
+    [ "MaxSpend", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#ab2b6a41bb0ca3c3719b7400e0a025f02", null ],
+    [ "Money", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a79b500982114f0bc6ffb0ea23ce79edb", null ],
+    [ "mutable_state", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a6520e4e22461a3ffd599e1890c9ac6f8", null ],
+    [ "NumFolded", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#adffb8c3ed0c907e1c78e41f599c01014", null ],
+    [ "RaiseIsValid", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a4186260729064203c2ca6362bfb71c38", null ],
+    [ "raw_state", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a9416419861868f2a9f708cb82c27009a", null ],
+    [ "SetHoleAndBoardCards", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#abd03c1418d3db6007a254acc06207796", null ],
+    [ "SetPotSize", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#aaac9477d719825049d2164bf9d7df884", null ],
+    [ "ToString", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#aa23b7fab194c782da0bcb7e5f9fe5052", null ],
+    [ "TotalSpent", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#afeda3de0df2f1ce18b1734c3bcbf34d3", null ],
+    [ "ValueOfState", "classopen__spiel_1_1universal__poker_1_1acpc__cpp_1_1_a_c_p_c_state.html#a562301c02356da6756826b954123b817", null ]
+];

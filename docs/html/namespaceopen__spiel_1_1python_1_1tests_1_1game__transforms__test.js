@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1tests_1_1game__transforms__test =
+[
+    [ "RepeatedGameTest", "classopen__spiel_1_1python_1_1tests_1_1game__transforms__test_1_1_repeated_game_test.html", "classopen__spiel_1_1python_1_1tests_1_1game__transforms__test_1_1_repeated_game_test" ]
+];

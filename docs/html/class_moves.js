@@ -1,0 +1,25 @@
+var class_moves =
+[
+    [ "Moves", "class_moves.html#af32063bde74bf56efbf27e1acb7ff61d", null ],
+    [ "~Moves", "class_moves.html#a9f1784b9a4170b6a4ff3b91345331297", null ],
+    [ "GetLength", "class_moves.html#aa8f09a380c667c24d42e0d423fc5bc15", null ],
+    [ "GetTrickData", "class_moves.html#a24054118fe2f7b9c87d84fc3134f9365", null ],
+    [ "Init", "class_moves.html#adb70be2875fda1a2149c32c8f91b5205", null ],
+    [ "MakeNext", "class_moves.html#a4f2a4f104658b405d00de43236c32c05", null ],
+    [ "MakeNextSimple", "class_moves.html#a5473a9b7f3105d846b4ce9010740eb43", null ],
+    [ "MakeSpecific", "class_moves.html#ae227cc819aba3d399fdb57d0dad77cfa", null ],
+    [ "MoveGen0", "class_moves.html#abd3cedd13f3b9c3f790002fa40e2473b", null ],
+    [ "MoveGen123", "class_moves.html#a1ca8d539a16e82ec1f749e8a4d3fe218", null ],
+    [ "PrintFunctionStats", "class_moves.html#a336a96b1904ce07ce105d5441d9ce901", null ],
+    [ "PrintMoves", "class_moves.html#ad37161d941428b22a1f62fde0d271016", null ],
+    [ "PrintTrickDetails", "class_moves.html#a8331b7e76971841b37dd0a1678634cb2", null ],
+    [ "PrintTrickStats", "class_moves.html#a8fe4dc881347144c73c77216735fc11e", null ],
+    [ "Purge", "class_moves.html#acc9a1c4504db4507242c3bc38923a46b", null ],
+    [ "RegisterHit", "class_moves.html#ac3b3486afdc17415dfd630be9fb02fd2", null ],
+    [ "Reinit", "class_moves.html#a15b51e2ae359c8e0fa13bbc22e99e589", null ],
+    [ "Reward", "class_moves.html#a6cc3a2d05abf35f9976a0d4b5bdea475", null ],
+    [ "Rewind", "class_moves.html#a7b2f884149849e37c0440ebb83dc53b7", null ],
+    [ "Sort", "class_moves.html#a039639729eb03191204560469ba258ec", null ],
+    [ "Step", "class_moves.html#adb943111a7bdf7055f5b5dcefb817820", null ],
+    [ "TrickToText", "class_moves.html#ac67d388d80adcc2137b30f4d3d5bec0e", null ]
+];

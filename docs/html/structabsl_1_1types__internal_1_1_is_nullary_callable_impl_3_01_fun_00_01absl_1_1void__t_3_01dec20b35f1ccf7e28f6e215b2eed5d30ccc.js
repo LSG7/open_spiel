@@ -1,0 +1,6 @@
+var structabsl_1_1types__internal_1_1_is_nullary_callable_impl_3_01_fun_00_01absl_1_1void__t_3_01dec20b35f1ccf7e28f6e215b2eed5d30ccc =
+[
+    [ "for_type", "structabsl_1_1types__internal_1_1_is_nullary_callable_impl_3_01_fun_00_01absl_1_1void__t_3_01dec20b35f1ccf7e28f6e215b2eed5d30ccc.html#a351d23f94787706a1ae9e66aaf7c1b6c", null ],
+    [ "result_type", "structabsl_1_1types__internal_1_1_is_nullary_callable_impl_3_01_fun_00_01absl_1_1void__t_3_01dec20b35f1ccf7e28f6e215b2eed5d30ccc.html#a512b095132f7e17c5db56755b3911154", null ],
+    [ "void_if_true", "structabsl_1_1types__internal_1_1_is_nullary_callable_impl_3_01_fun_00_01absl_1_1void__t_3_01dec20b35f1ccf7e28f6e215b2eed5d30ccc.html#a921833e592e0f48e643c2da26ae4a105", null ]
+];

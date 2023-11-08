@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1mfg_1_1games_1_1crowd__avoidance__test =
+[
+    [ "MFGCrowdAvoidanceGameTest", "classopen__spiel_1_1python_1_1mfg_1_1games_1_1crowd__avoidance__test_1_1_m_f_g_crowd_avoidance_game_test.html", "classopen__spiel_1_1python_1_1mfg_1_1games_1_1crowd__avoidance__test_1_1_m_f_g_crowd_avoidance_game_test" ]
+];

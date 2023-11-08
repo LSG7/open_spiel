@@ -1,0 +1,5 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics__test_1_1_projected_replicator_dynamics_test =
+[
+    [ "test_three_players", "classopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics__test_1_1_projected_replicator_dynamics_test.html#a5011523f086e7cb1f57808245b8c2cc4", null ],
+    [ "test_two_players", "classopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics__test_1_1_projected_replicator_dynamics_test.html#a6c4329402e7239eb2890c07b28074dc7", null ]
+];

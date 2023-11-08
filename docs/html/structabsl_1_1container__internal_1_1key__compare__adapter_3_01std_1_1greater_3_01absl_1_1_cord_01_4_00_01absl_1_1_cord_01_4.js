@@ -1,0 +1,4 @@
+var structabsl_1_1container__internal_1_1key__compare__adapter_3_01std_1_1greater_3_01absl_1_1_cord_01_4_00_01absl_1_1_cord_01_4 =
+[
+    [ "type", "structabsl_1_1container__internal_1_1key__compare__adapter_3_01std_1_1greater_3_01absl_1_1_cord_01_4_00_01absl_1_1_cord_01_4.html#ad0ee1502cfad024a78a6205eeb9e6c66", null ]
+];

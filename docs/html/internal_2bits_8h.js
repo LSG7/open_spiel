@@ -1,0 +1,26 @@
+var internal_2bits_8h =
+[
+    [ "ABSL_INTERNAL_CONSTEXPR_CLZ", "internal_2bits_8h.html#aab8beeebb52da85af085aa41351a6a5b", null ],
+    [ "ABSL_INTERNAL_CONSTEXPR_CTZ", "internal_2bits_8h.html#aafed825df558c0967abf82d2cb765c2c", null ],
+    [ "ABSL_INTERNAL_CONSTEXPR_POPCOUNT", "internal_2bits_8h.html#a132929c0188d3c24c7ebb69b7542566e", null ],
+    [ "ABSL_INTERNAL_HAS_CONSTEXPR_CLZ", "internal_2bits_8h.html#aed40625ba0fee74db8c9d98da03eead6", null ],
+    [ "ABSL_INTERNAL_HAS_CONSTEXPR_CTZ", "internal_2bits_8h.html#ab31dd84c7d2f3e8e455f8d9126d9fb04", null ],
+    [ "ABSL_INTERNAL_HAS_CONSTEXPR_POPCOUNT", "internal_2bits_8h.html#a4fb4fdc1d1ba6773407c410b88000e74", null ],
+    [ "ABSL_NUMERIC_INTERNAL_HAVE_BUILTIN_OR_GCC", "internal_2bits_8h.html#a7e1d5fcf4b5b53170c7800f5d0cb2710", null ],
+    [ "BitCeilNonPowerOf2", "internal_2bits_8h.html#a1223008c5084d358a6a92fa0d5fd75a6", null ],
+    [ "BitCeilPromotionHelper", "internal_2bits_8h.html#a2cf4c2419a892c0e8b851b92ead4d30b", null ],
+    [ "CountLeadingZeroes", "internal_2bits_8h.html#a285c7660e39a0aa8d28ca8c55fd92bd8", null ],
+    [ "CountLeadingZeroes16", "internal_2bits_8h.html#a29751c62ca9f31b52fa5da6f8fd3baf6", null ],
+    [ "CountLeadingZeroes32", "internal_2bits_8h.html#ae835c88b0a242dbc867c7b32fa5ae36a", null ],
+    [ "CountLeadingZeroes64", "internal_2bits_8h.html#a714212f0ffa4d1816b7fd87e7021ee89", null ],
+    [ "CountTrailingZeroes", "internal_2bits_8h.html#a8957e1bd4a4be85ed105b2e5f80c4c86", null ],
+    [ "CountTrailingZeroesNonzero16", "internal_2bits_8h.html#a9a0e74a1be9c0969b503ae3d7d199449", null ],
+    [ "CountTrailingZeroesNonzero32", "internal_2bits_8h.html#adaa8ac0eec51f5ff3b15038f840906cc", null ],
+    [ "CountTrailingZeroesNonzero64", "internal_2bits_8h.html#af94d9fd9f77e71c580ef33d51a1702ae", null ],
+    [ "IsPowerOf2", "internal_2bits_8h.html#a0d7f255ef7b187e1c36d049d7b5d3fb4", null ],
+    [ "Popcount", "internal_2bits_8h.html#a2175d33adf3695b93162db4c178c651f", null ],
+    [ "Popcount32", "internal_2bits_8h.html#ad77dd90c861d4c59962e3a7387312987", null ],
+    [ "Popcount64", "internal_2bits_8h.html#aecd4569abd0b4e2d5bfb6865adaf397a", null ],
+    [ "RotateLeft", "internal_2bits_8h.html#ac01031434a0d8396cde32e7797e2e33b", null ],
+    [ "RotateRight", "internal_2bits_8h.html#aa134ebad84cb30971938c04e5fee8a56", null ]
+];

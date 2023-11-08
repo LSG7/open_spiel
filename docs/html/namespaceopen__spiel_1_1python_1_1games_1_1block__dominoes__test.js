@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1games_1_1block__dominoes__test =
+[
+    [ "DominoesBlockTest", "classopen__spiel_1_1python_1_1games_1_1block__dominoes__test_1_1_dominoes_block_test.html", "classopen__spiel_1_1python_1_1games_1_1block__dominoes__test_1_1_dominoes_block_test" ]
+];

@@ -1,0 +1,25 @@
+var classopen__spiel_1_1dark__chess_1_1_dark_chess_state =
+[
+    [ "DarkChessState", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a959dccfc58ce9a15b2de18a64f4aedfe", null ],
+    [ "DarkChessState", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a49ddc99049b2d60a30da6ca3b0928641", null ],
+    [ "ActionToString", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a12a5e28253d2ffabb66725c5e914ce9f", null ],
+    [ "Board", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a6a48dd0456c18f2575320ae51734990e", null ],
+    [ "Board", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#aae4bc9380a646a74ebebba3140348d95", null ],
+    [ "BoardSize", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a50cf373719d23b355093c0d3048b7739", null ],
+    [ "Clone", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#add1e1bc7287fe2fc4e8d55a218b760bb", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#ab0d491317a8873b800be341d86bcae17", null ],
+    [ "DoApplyAction", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a8ed0350e2fdfb0d05b9d82cb894a60eb", null ],
+    [ "IsTerminal", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#aefa84c79d358adb448d13b987027f395", null ],
+    [ "LegalActions", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#aecd5c1cc31377dbda319aba0b7c05336", null ],
+    [ "MovesHistory", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#aeba5e056b4367232531120d40a8da8ab", null ],
+    [ "MovesHistory", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#aba1827a64596e03edddd4a5a541cd5af", null ],
+    [ "ObservationString", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a263363b4341894e8ff7748af5ef159a7", null ],
+    [ "ObservationTensor", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a986f90f7ca74f33910a4648b8ec421d8", null ],
+    [ "operator=", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a03bad5df73a1eab92c9cc8d87de102ac", null ],
+    [ "Returns", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a3a42e8c13777a080493c6650b8cb22cc", null ],
+    [ "StartBoard", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a57b468060af992e1a3a66c9ef03c4b73", null ],
+    [ "StartBoard", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#ac184719db4e012c1659f9ffd9106ffe2", null ],
+    [ "ToString", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a3de97c6956bb94080a3bb147c814d0af", null ],
+    [ "UndoAction", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#ac24bbdfbefa29ba220f9911f3a0a2b02", null ],
+    [ "DarkChessObserver", "classopen__spiel_1_1dark__chess_1_1_dark_chess_state.html#a363e1df93096efbe705332b944004503", null ]
+];

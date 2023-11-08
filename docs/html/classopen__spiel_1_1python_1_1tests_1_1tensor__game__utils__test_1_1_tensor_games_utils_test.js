@@ -1,0 +1,5 @@
+var classopen__spiel_1_1python_1_1tests_1_1tensor__game__utils__test_1_1_tensor_games_utils_test =
+[
+    [ "test_extensive_to_tensor_game_payoff_tensor", "classopen__spiel_1_1python_1_1tests_1_1tensor__game__utils__test_1_1_tensor_games_utils_test.html#a5eb0a1d911b9259a0737ce796f876425", null ],
+    [ "test_extensive_to_tensor_game_type", "classopen__spiel_1_1python_1_1tests_1_1tensor__game__utils__test_1_1_tensor_games_utils_test.html#a31a612b30b33bb2fbedd196fd5e89c8c", null ]
+];

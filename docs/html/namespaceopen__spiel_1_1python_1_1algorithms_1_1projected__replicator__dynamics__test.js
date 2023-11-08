@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics__test =
+[
+    [ "ProjectedReplicatorDynamicsTest", "classopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics__test_1_1_projected_replicator_dynamics_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics__test_1_1_projected_replicator_dynamics_test" ]
+];

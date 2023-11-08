@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_rock_paper_scissors =
+[
+    [ "__init__", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_rock_paper_scissors.html#afbf1096a153c43ff9fb2ece4e3237bd7", null ]
+];

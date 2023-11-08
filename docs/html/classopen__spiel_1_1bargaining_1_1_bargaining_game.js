@@ -1,0 +1,25 @@
+var classopen__spiel_1_1bargaining_1_1_bargaining_game =
+[
+    [ "BargainingGame", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a0b77d79c864740d133d963c3ce258c22", null ],
+    [ "ActionToString", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#af0599f707db07c92f2fe789317889d99", null ],
+    [ "AllInstances", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#afc22f0aa6355196bcd57b27b67a40018", null ],
+    [ "AllOffers", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a10b32d37c1f1d428cf109f4cdb717c3c", null ],
+    [ "ContinueOutcome", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a7fb18d23f49232df09ab11cc5f7a159c", null ],
+    [ "discount", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#abc25ba887c1166b5918a7af34c9f0307", null ],
+    [ "EndOutcome", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a9bd1c0e67b6146efb664b4c967386f5b", null ],
+    [ "GetInstance", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#ad6be89ebd208cf49eaa4f5fd550d042e", null ],
+    [ "GetOffer", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a10f891ce3230713ec238111e43e5b4ff", null ],
+    [ "GetOfferByQuantities", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a2de274e002b0454668ac0cf0bab586af", null ],
+    [ "InformationStateTensorShape", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#addc19904fde820b8871c90e9839ee54a", null ],
+    [ "max_turns", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a2fbd3194f413d7fffd6c2aad82e442ce", null ],
+    [ "MaxChanceNodesInHistory", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a3ff6075e98d9db7fde5faef110edafc9", null ],
+    [ "MaxChanceOutcomes", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a007e7a4cf088f33717fd9471782d253c", null ],
+    [ "MaxGameLength", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a6d4150a64227a03739c141f82c85c206", null ],
+    [ "MaxUtility", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a5eccb5bf5d8de4201fa59df1a180f77d", null ],
+    [ "MinUtility", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#aade3c8c0d3062b971b6af9c1154d7213", null ],
+    [ "NewInitialState", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a8e1c704596ab328f2c214be53b8183f4", null ],
+    [ "NumDistinctActions", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a69ff2e70eb8b9292cd14e47a9d951c0e", null ],
+    [ "NumPlayers", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#a9f41ffdf4819315bf64cdc489d68c778", null ],
+    [ "ObservationTensorShape", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#ac6ba94967960a8dd5d5651cae787d807", null ],
+    [ "prob_end", "classopen__spiel_1_1bargaining_1_1_bargaining_game.html#abd2ab3588873e6c9528caa23a79a311b", null ]
+];

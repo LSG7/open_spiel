@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1boltzmann__tabular__qlearner__test_1_1_boltzmann_qlearner_test =
+[
+    [ "test_simple_game", "classopen__spiel_1_1python_1_1algorithms_1_1boltzmann__tabular__qlearner__test_1_1_boltzmann_qlearner_test.html#a9e36fdfb6b643f64e2f0ad4412b50c30", null ]
+];

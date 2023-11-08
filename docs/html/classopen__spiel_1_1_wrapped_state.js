@@ -1,0 +1,26 @@
+var classopen__spiel_1_1_wrapped_state =
+[
+    [ "WrappedState", "classopen__spiel_1_1_wrapped_state.html#a0749b5e0241deeaf4ad9fcb6dcf99429", null ],
+    [ "WrappedState", "classopen__spiel_1_1_wrapped_state.html#a3b02a15c48879ce8c0e1fe03f7743d1a", null ],
+    [ "ActionsConsistentWithInformationFrom", "classopen__spiel_1_1_wrapped_state.html#aad380f774f74cf15e1fa62e33a8e186a", null ],
+    [ "ActionToString", "classopen__spiel_1_1_wrapped_state.html#a7d43669a6ee4918cb7bbfcbfc7bd521f", null ],
+    [ "ChanceOutcomes", "classopen__spiel_1_1_wrapped_state.html#a429a1be1de882c08faf7617d096cf347", null ],
+    [ "Clone", "classopen__spiel_1_1_wrapped_state.html#a05f421c7dbd0f815a5f2ea021ffe7f21", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1_wrapped_state.html#a9279e409c9084127bdfc296bf3d73cc1", null ],
+    [ "DoApplyAction", "classopen__spiel_1_1_wrapped_state.html#aa6687ac51f6ed5b8a25071f93e5eef3f", null ],
+    [ "DoApplyActions", "classopen__spiel_1_1_wrapped_state.html#a89ba84f0acf357be63a4dc3e796dff32", null ],
+    [ "GetWrappedState", "classopen__spiel_1_1_wrapped_state.html#af28a26587a8a1a47c7f44e5db6feb53e", null ],
+    [ "InformationStateString", "classopen__spiel_1_1_wrapped_state.html#ac29e0ac44799429bba438360d3cf21ef", null ],
+    [ "InformationStateTensor", "classopen__spiel_1_1_wrapped_state.html#a87d51dba80a4495f7d72b8ca68fcd63c", null ],
+    [ "IsTerminal", "classopen__spiel_1_1_wrapped_state.html#ab7a2bea1f09fc44ba01481350bed3916", null ],
+    [ "LegalActions", "classopen__spiel_1_1_wrapped_state.html#a16d46cb1dcdb116bc24442ca772563e8", null ],
+    [ "LegalActions", "classopen__spiel_1_1_wrapped_state.html#a05352396981b89da5406ef6475d3150e", null ],
+    [ "LegalChanceOutcomes", "classopen__spiel_1_1_wrapped_state.html#a61781446f3d302112f4ba8601296087c", null ],
+    [ "ObservationString", "classopen__spiel_1_1_wrapped_state.html#a9fae074d99cbd50f6f4f4de3008d5fe2", null ],
+    [ "ObservationTensor", "classopen__spiel_1_1_wrapped_state.html#a6ccf7c54564e106b1705ab9b232ae9fe", null ],
+    [ "Returns", "classopen__spiel_1_1_wrapped_state.html#a153b407fbf0c4a8e630b47c63da48781", null ],
+    [ "Rewards", "classopen__spiel_1_1_wrapped_state.html#ac228e25e9ddb37a0f50b7b84802e8929", null ],
+    [ "ToString", "classopen__spiel_1_1_wrapped_state.html#a626c347d139c9c507b0d6eabb055b588", null ],
+    [ "UndoAction", "classopen__spiel_1_1_wrapped_state.html#a2a210d748a69f31762f963263919b495", null ],
+    [ "state_", "classopen__spiel_1_1_wrapped_state.html#aae4c86130fa884a33c4c01992ebb2ccb", null ]
+];

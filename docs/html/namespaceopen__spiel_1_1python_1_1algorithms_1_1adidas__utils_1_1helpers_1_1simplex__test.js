@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1helpers_1_1simplex__test =
+[
+    [ "SimplexTest", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1helpers_1_1simplex__test_1_1_simplex_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1helpers_1_1simplex__test_1_1_simplex_test" ]
+];

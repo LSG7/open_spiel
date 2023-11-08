@@ -1,0 +1,37 @@
+var classabsl_1_1cord__internal_1_1_cordz_update_tracker =
+[
+    [ "MethodIdentifier", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1", [
+      [ "kUnknown", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1ae2e26c53694cdef7af38895766a54fad", null ],
+      [ "kAppendCord", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1abede2b07630ae263316170b90524510d", null ],
+      [ "kAppendCordBuffer", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a35d5310196dd5dbdb7e432f0a1f2eec1", null ],
+      [ "kAppendExternalMemory", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a2dcc468c2953cce1c751d8a7aad604ce", null ],
+      [ "kAppendString", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a3407c3e37e51a95077707bafe2138e1a", null ],
+      [ "kAssignCord", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1afe4adb5678bc6f39a4a4ddcfec5eb17f", null ],
+      [ "kAssignString", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a94d6ece35b42003f8cf3c7f0219a6002", null ],
+      [ "kClear", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1acd5b6d8047fdee73bf67354d0919ddbf", null ],
+      [ "kConstructorCord", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1af4294185c8dff126f8227c34a00e1ecc", null ],
+      [ "kConstructorString", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a9d0252873fe4951f06f0146908b12585", null ],
+      [ "kCordReader", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1adf5d1109d22a62c872d169dabde9642f", null ],
+      [ "kFlatten", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a3dcb0036eb3276359ea7e9abc8b44194", null ],
+      [ "kGetAppendBuffer", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1ad4782d9c98bcf3cea342b4206830d2a8", null ],
+      [ "kGetAppendRegion", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a9b7c5094724ea7e0d2e379c39b8fd30c", null ],
+      [ "kMakeCordFromExternal", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1aea8902cfe1f2bb019320a03ba0890c97", null ],
+      [ "kMoveAppendCord", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a88173262af9d6d8ecc87d8882871de4c", null ],
+      [ "kMoveAssignCord", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a36b8681b9a8282a3e3e9dbf0a98ed56a", null ],
+      [ "kMovePrependCord", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a45ed7e3f19af527391e47a4eba6bd4a3", null ],
+      [ "kPrependCord", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1ae22e89769490869a4626fabed3e3ff5f", null ],
+      [ "kPrependCordBuffer", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1ad8a4a5e320e6fd7b47f072582a4dd6b3", null ],
+      [ "kPrependString", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1ad54bfff9beb8a27b79031d41c0806245", null ],
+      [ "kRemovePrefix", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a145002f600fe35f1266e768fb207290e", null ],
+      [ "kRemoveSuffix", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a34b469b80122e127b15cce6bf8bff121", null ],
+      [ "kSetExpectedChecksum", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a11ef2b2c05f37edfe81e91cb1c957d91", null ],
+      [ "kSubCord", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a2fb2d5c2421c26629555effb6023c683", null ],
+      [ "kNumMethods", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ae9e3e3b5044c4da09e8c82b3265ab5e1a20b5b9621677a8c8d6665b5b13481894", null ]
+    ] ],
+    [ "CordzUpdateTracker", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#abf3dd54e94194fdf9101246d539845ce", null ],
+    [ "CordzUpdateTracker", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#a3440512f7c83da6bc70a671a54bc6bc7", null ],
+    [ "LossyAdd", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#a11108ee83a706e8982543b7ab85a7ea7", null ],
+    [ "LossyAdd", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#a6ba41aafe0b92f126991550a0d84f9a0", null ],
+    [ "operator=", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#ad98d9dd9294b9e47d13575445585f600", null ],
+    [ "Value", "classabsl_1_1cord__internal_1_1_cordz_update_tracker.html#a997529810e7d81952a394200e85eaecf", null ]
+];

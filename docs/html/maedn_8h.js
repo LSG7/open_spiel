@@ -1,0 +1,26 @@
+var maedn_8h =
+[
+    [ "Coords", "structopen__spiel_1_1maedn_1_1_coords.html", "structopen__spiel_1_1maedn_1_1_coords" ],
+    [ "TurnHistoryInfo", "structopen__spiel_1_1maedn_1_1_turn_history_info.html", "structopen__spiel_1_1maedn_1_1_turn_history_info" ],
+    [ "MaednState", "classopen__spiel_1_1maedn_1_1_maedn_state.html", "classopen__spiel_1_1maedn_1_1_maedn_state" ],
+    [ "MaednGame", "classopen__spiel_1_1maedn_1_1_maedn_game.html", "classopen__spiel_1_1maedn_1_1_maedn_game" ],
+    [ "kBluePlayerId", "maedn_8h.html#a82b0ed846d55a07045e2030f0874c0c2", null ],
+    [ "kBoardEncodingSize", "maedn_8h.html#acc5f5daf32ee7f635ca17df7e6f8da45", null ],
+    [ "kBringInAction", "maedn_8h.html#af4eee570b97977518c7c6a161b557454", null ],
+    [ "kFieldActionsOffset", "maedn_8h.html#a2857bfe22cd4a0c029823a1f9dcc41cb", null ],
+    [ "kFieldToBoardString", "maedn_8h.html#a7bbc6665d3f4d373558446b5e61be10b", null ],
+    [ "kGreenPlayerId", "maedn_8h.html#a75b2150ea66acaaa6d1da3509c79a303", null ],
+    [ "kMaxNumPlayers", "maedn_8h.html#ab9a0407848af11ae70c06f146b2f8570", null ],
+    [ "kNumChanceOutcomes", "maedn_8h.html#a63517eae1d0b031c3a72a1cde89e0c2a", null ],
+    [ "kNumCommonFields", "maedn_8h.html#a458a861883cc62de768377c0076cc4d1", null ],
+    [ "kNumDistinctActions", "maedn_8h.html#a4dc8310abb3a61c60aa27a5c1344a17e", null ],
+    [ "kNumFields", "maedn_8h.html#a88d18ec9dd7dcf11025293bbcd851017", null ],
+    [ "kNumGoalFields", "maedn_8h.html#a3bf79713566b64443b1e11f6cfcd5837", null ],
+    [ "kNumGoalFieldsPerPlayer", "maedn_8h.html#a8718bdef6826b76b57285f7964f69bff", null ],
+    [ "kNumPiecesPerPlayer", "maedn_8h.html#aa04acd5181ffcb6b67c12cc65756682a", null ],
+    [ "kOutPos", "maedn_8h.html#ac74f8650efe30323ebb911f9bf767820", null ],
+    [ "kPassAction", "maedn_8h.html#a895dc17ddfd360c0ebd3d4a015f574cd", null ],
+    [ "kRedPlayerId", "maedn_8h.html#ad85a8ba820a6ed87b37a6274ffcbbd82", null ],
+    [ "kStateEncodingSize", "maedn_8h.html#a7807108c5c9e9a4c2611ff459415320e", null ],
+    [ "kYellowPlayerId", "maedn_8h.html#a690c6b0bab7eacaaadeb967f15b52dbd", null ]
+];

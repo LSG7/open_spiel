@@ -1,0 +1,4 @@
+var structpybind11_1_1detail_1_1_no_throw_status_type_3_01absl_1_1_status_or_3_01_payload_type_01_4_01_4 =
+[
+    [ "NoThrowAbslStatus", "structpybind11_1_1detail_1_1_no_throw_status_type_3_01absl_1_1_status_or_3_01_payload_type_01_4_01_4.html#a8edb85d7b4781b9e1da02cc04713bd2c", null ]
+];

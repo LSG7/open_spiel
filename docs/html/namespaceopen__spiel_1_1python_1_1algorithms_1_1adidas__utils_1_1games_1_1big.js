@@ -1,0 +1,5 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1big =
+[
+    [ "TensorGame", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1big_1_1_tensor_game.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1big_1_1_tensor_game" ],
+    [ "ElFarol", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1big_1_1_el_farol.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1big_1_1_el_farol" ]
+];

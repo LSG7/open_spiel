@@ -1,0 +1,5 @@
+var classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__deep__mirror__descent_1_1_soft_max_munchausen_d_q_n =
+[
+    [ "__init__", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__deep__mirror__descent_1_1_soft_max_munchausen_d_q_n.html#abf02ce9199be582bb3b633d7440fa209", null ],
+    [ "step", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__deep__mirror__descent_1_1_soft_max_munchausen_d_q_n.html#a83b0647cdefd2ac2e5ac7b257d6cf9dd", null ]
+];

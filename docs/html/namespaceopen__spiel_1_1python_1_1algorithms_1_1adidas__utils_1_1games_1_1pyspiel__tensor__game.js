@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1pyspiel__tensor__game =
+[
+    [ "PyspielTensorGame", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1pyspiel__tensor__game_1_1_pyspiel_tensor_game.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1pyspiel__tensor__game_1_1_pyspiel_tensor_game" ]
+];

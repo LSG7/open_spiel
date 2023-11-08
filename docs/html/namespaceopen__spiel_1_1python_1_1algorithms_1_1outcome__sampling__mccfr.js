@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1outcome__sampling__mccfr =
+[
+    [ "OutcomeSamplingSolver", "classopen__spiel_1_1python_1_1algorithms_1_1outcome__sampling__mccfr_1_1_outcome_sampling_solver.html", "classopen__spiel_1_1python_1_1algorithms_1_1outcome__sampling__mccfr_1_1_outcome_sampling_solver" ]
+];

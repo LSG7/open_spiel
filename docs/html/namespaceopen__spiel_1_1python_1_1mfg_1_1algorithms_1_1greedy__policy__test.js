@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1greedy__policy__test =
+[
+    [ "GreedyPolicyTest", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1greedy__policy__test_1_1_greedy_policy_test.html", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1greedy__policy__test_1_1_greedy_policy_test" ]
+];

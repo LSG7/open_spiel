@@ -1,0 +1,5 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers =
+[
+    [ "nonsymmetric", "namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric.html", "namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric" ],
+    [ "symmetric", "namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric.html", "namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric" ]
+];

@@ -1,0 +1,225 @@
+var namespaces_dup =
+[
+    [ "Implementation Notes", "md_open_spiel_python_games__r_e_a_d_m_e.html#autotoc_md110", null ],
+    [ "abseil", "namespaceabseil.html", [
+      [ "build_rule_directory", "namespaceabseil.html#aeb717237643549810857d8caa2a6bb2d", null ],
+      [ "collect_rules", "namespaceabseil.html#a52020c08701e1e90332a98d5e699d849", null ],
+      [ "generate", "namespaceabseil.html#a98e3486dffbe7ba605d4c2bba4afd056", null ],
+      [ "get_elem_value", "namespaceabseil.html#a36e13d8bcb01c8ffbf7ba76ac4b69b53", null ],
+      [ "get_spec_name", "namespaceabseil.html#ab814edeacd9f1fbc116a02435d3bbc49", null ],
+      [ "get_spec_var", "namespaceabseil.html#a9890dc18666eb9835bdc9e1007b3ca0c", null ],
+      [ "main", "namespaceabseil.html#a9b4f3076d398afa9ff449e86d999f28a", null ],
+      [ "normalize_paths", "namespaceabseil.html#a7b5e2a0cf8a527e7c71405f6a8c1d751", null ],
+      [ "parse_rule", "namespaceabseil.html#a54d2d39eab2c190e09cd17efd8133f96", null ],
+      [ "read_build", "namespaceabseil.html#a3a81892f16f22e9076fad6c88486dff6", null ],
+      [ "relevant_rule", "namespaceabseil.html#a3efc07d8a7aa843acd27d012fb1dcfd0", null ],
+      [ "write_indented_list", "namespaceabseil.html#af8ac58ed6a1e0435a5f1f3efd43eb3a3", null ],
+      [ "write_podspec", "namespaceabseil.html#a4b453bb75d85649a56f5065a5d798dbe", null ],
+      [ "write_podspec_map", "namespaceabseil.html#aec7b872d07649d85e416a459beee4d67", null ],
+      [ "write_podspec_rule", "namespaceabseil.html#ad88899c676ba182d85a17726a959a6f4", null ],
+      [ "Rule", "namespaceabseil.html#aba14a6ea5f71e4351b1afac0e10aba61", null ],
+      [ "SPEC_TEMPLATE", "namespaceabseil.html#a5a99d47382e9d219ffca80cb322323ae", null ]
+    ] ],
+    [ "absl", "namespaceabsl.html", "namespaceabsl" ],
+    [ "absl_log_internal", "namespaceabsl__log__internal.html", "namespaceabsl__log__internal" ],
+    [ "absl_test", "namespaceabsl__test.html", "namespaceabsl__test" ],
+    [ "adl_namespace", "namespaceadl__namespace.html", null ],
+    [ "cfr", "namespacecfr.html", "namespacecfr" ],
+    [ "cfr_test", "namespacecfr__test.html", "namespacecfr__test" ],
+    [ "conanfile", "namespaceconanfile.html", "namespaceconanfile" ],
+    [ "copts", "namespacecopts.html", [
+      [ "ABSL_GCC_FLAGS", "namespacecopts.html#a705726881e3e27058324245c358e5c2c", null ],
+      [ "ABSL_LLVM_TEST_ADDITIONAL_FLAGS", "namespacecopts.html#aabbc8f6b4d9733551b0bdedadfb7dbcb", null ],
+      [ "MSVC_BIG_WARNING_FLAGS", "namespacecopts.html#ad239f4fa07b2868135cb0859bf491702", null ],
+      [ "MSVC_DEFINES", "namespacecopts.html#ae9d2da395722034aba558d7f33ddb982", null ],
+      [ "MSVC_WARNING_FLAGS", "namespacecopts.html#aaf31e31196ab946f629a97577dc74f22", null ]
+    ] ],
+    [ "create_lts", "namespacecreate__lts.html", [
+      [ "main", "namespacecreate__lts.html#a3a6d53b9068880153309ac0f1b1096e4", null ],
+      [ "ReplaceStringsInFile", "namespacecreate__lts.html#a53e90cd28119d096708d8e56224e1f0f", null ],
+      [ "StripContentBetweenTags", "namespacecreate__lts.html#abd550aa04396d76413fa696d15fc717b", null ]
+    ] ],
+    [ "dataset_generator", "namespacedataset__generator.html", "namespacedataset__generator" ],
+    [ "dds", "namespacedds.html", "namespacedds" ],
+    [ "eigen_binding_test", "namespaceeigen__binding__test.html", "namespaceeigen__binding__test" ],
+    [ "evaluation", "namespaceevaluation.html", [
+      [ "CFRBREvaluation", "namespaceevaluation.html#aa99f3e7e20b95ea7e24670fc3062c0d1", null ],
+      [ "compute_best_response_strategy", "namespaceevaluation.html#a2104228f8a00cf94c527747df15a7f09", null ],
+      [ "compute_regrets", "namespaceevaluation.html#a6b541697a2b3c141713932a9ee6e6d5d", null ],
+      [ "compute_values_against_best_response", "namespaceevaluation.html#a8f43bc7db904d26236d12809f499e07e", null ],
+      [ "evaluate_against_best_response", "namespaceevaluation.html#a3e13758abf690276c7dbddcbad8729af", null ],
+      [ "evaluate_in_selfplay", "namespaceevaluation.html#af60718798f89acd89ab880e2b4105881", null ],
+      [ "FLAGS", "namespaceevaluation.html#a01b8a02a50877d84a10216a8b1c464ae", null ]
+    ] ],
+    [ "export_graph", "namespaceexport__graph.html", [
+      [ "main", "namespaceexport__graph.html#a336cd6387b4958cbe29f2369e5710ba6", null ],
+      [ "FLAGS", "namespaceexport__graph.html#a771dbe09a711d9fafced6a1ab1a2a52a", null ]
+    ] ],
+    [ "game_tree_utils", "namespacegame__tree__utils.html", "namespacegame__tree__utils" ],
+    [ "gamut_test", "namespacegamut__test.html", "namespacegamut__test" ],
+    [ "generate_copts", "namespacegenerate__copts.html", "namespacegenerate__copts" ],
+    [ "jlcxx", "namespacejlcxx.html", "namespacejlcxx" ],
+    [ "lola_iterated_matrix_games_jax", "namespacelola__iterated__matrix__games__jax.html", [
+      [ "collect_batch", "namespacelola__iterated__matrix__games__jax.html#ad6962b51ff7349eb4826b3f570a5c004", null ],
+      [ "get_action_probs", "namespacelola__iterated__matrix__games__jax.html#ab0e2944d3ae245f096ee639424b033be", null ],
+      [ "log_epoch_data", "namespacelola__iterated__matrix__games__jax.html#a7180f7b1ac2a879e1f7ffbfc014a6d92", null ],
+      [ "main", "namespacelola__iterated__matrix__games__jax.html#a87c7e99846aa5f5de3ed43241f97067b", null ],
+      [ "make_agent", "namespacelola__iterated__matrix__games__jax.html#af9dcebcbd83edb5f8398c82cff8ac4da", null ],
+      [ "make_agent_networks", "namespacelola__iterated__matrix__games__jax.html#ac67d964b6c574dc3e7bd8c230d415311", null ],
+      [ "make_env", "namespacelola__iterated__matrix__games__jax.html#a409f6d2327bd621107207d3ffdcd16d9", null ],
+      [ "setup_agents", "namespacelola__iterated__matrix__games__jax.html#ac193860c1724dd854ce0c8770db6a055", null ],
+      [ "update_weights", "namespacelola__iterated__matrix__games__jax.html#ae6efb58abaaa521ff85714103f834655", null ],
+      [ "FLAGS", "namespacelola__iterated__matrix__games__jax.html#a2292a9ea3ae464dc2e12417455d62799", null ]
+    ] ],
+    [ "main", "namespacemain.html", [
+      [ "main", "namespacemain.html#a7e198e0b0d73fab385519e5c0851d9d9", null ],
+      [ "selfplay_main", "namespacemain.html#afeefe84dd33bf1a196db68bddf1d2183", null ],
+      [ "FLAGS", "namespacemain.html#a9e54bf13f9d353cfeb8aa9a5623dcf87", null ]
+    ] ],
+    [ "matrix_dataset", "namespacematrix__dataset.html", "namespacematrix__dataset" ],
+    [ "meta_learning", "namespacemeta__learning.html", "namespacemeta__learning" ],
+    [ "meta_learning_test", "namespacemeta__learning__test.html", "namespacemeta__learning__test" ],
+    [ "meta_selfplay_agent", "namespacemeta__selfplay__agent.html", "namespacemeta__selfplay__agent" ],
+    [ "mfg_average_network_fp_jax", "namespacemfg__average__network__fp__jax.html", [
+      [ "main", "namespacemfg__average__network__fp__jax.html#abfd9760a2f34b3fbfa0474940f3279c6", null ],
+      [ "_AVG_GRADIENT_CLIPPING", "namespacemfg__average__network__fp__jax.html#ab066633052d32280a5c9308d2d9dbef9", null ],
+      [ "_AVG_POL_BATCH_SIZE", "namespacemfg__average__network__fp__jax.html#a880b24bc4d396c806d131f122146d5b1", null ],
+      [ "_AVG_POL_HIDDEN_LAYERS_SIZES", "namespacemfg__average__network__fp__jax.html#aa50ba5eb5c809f6d5ea770f5a66dfdc5", null ],
+      [ "_AVG_POL_LEARNING_RATE", "namespacemfg__average__network__fp__jax.html#a7449f868f5f360847c27aa161a9b08b6", null ],
+      [ "_AVG_POL_MIN_BUFFER_SIZE_TO_LEARN", "namespacemfg__average__network__fp__jax.html#a276c19a4848dc25a234c9e9b6ec8c889", null ],
+      [ "_AVG_POL_NUM_EPISODES_PER_ITERATION", "namespacemfg__average__network__fp__jax.html#a9ff1b87f84681fd448978ecae6033f26", null ],
+      [ "_AVG_POL_NUM_TRAINING_STEPS_PER_ITERATION", "namespacemfg__average__network__fp__jax.html#a6546bf7de1ea489089ef70749885fe23", null ],
+      [ "_AVG_POL_OPTIMIZER", "namespacemfg__average__network__fp__jax.html#aebeeab37f2dd9ad1bfdaa34554ba17ad", null ],
+      [ "_AVG_POL_RESERVOIR_BUFFER_CAPACITY", "namespacemfg__average__network__fp__jax.html#a1c9be2fa41db2514e284709788e67a9d", null ],
+      [ "_AVG_POL_TAU", "namespacemfg__average__network__fp__jax.html#a2cc787fbd2096ce3d54dcc9113ada80d", null ],
+      [ "_BATCH_SIZE", "namespacemfg__average__network__fp__jax.html#acfad7b49f1dcacf826120e2f197503ad", null ],
+      [ "_DISCOUNT_FACTOR", "namespacemfg__average__network__fp__jax.html#a15e7d7aafaf005ab0da915980e247708", null ],
+      [ "_ENV_SETTING", "namespacemfg__average__network__fp__jax.html#a6fe78284bf0e08b0cde3c645ff27bec9", null ],
+      [ "_EPSILON_DECAY_DURATION", "namespacemfg__average__network__fp__jax.html#aa7fefa65d74f2d931fcd52666506b823", null ],
+      [ "_EPSILON_END", "namespacemfg__average__network__fp__jax.html#a304bf3065aa6b80bed68d589f98431c3", null ],
+      [ "_EPSILON_START", "namespacemfg__average__network__fp__jax.html#ad218dde31ce77a2b7d3d1efeae94335a", null ],
+      [ "_EVAL_EVERY", "namespacemfg__average__network__fp__jax.html#af2b334fa5cb9bac55ba4907d08664c88", null ],
+      [ "_GAME_NAME", "namespacemfg__average__network__fp__jax.html#a7b81b93b2986066828594d1456c0da91", null ],
+      [ "_GRADIENT_CLIPPING", "namespacemfg__average__network__fp__jax.html#a7183599b80fe201fdcac9d4ff30c859e", null ],
+      [ "_HIDDEN_LAYERS_SIZES", "namespacemfg__average__network__fp__jax.html#af30d01a7c9898bea727be61d639e57f4", null ],
+      [ "_HUBER_LOSS_PARAMETER", "namespacemfg__average__network__fp__jax.html#abe33877ecb687282586d6e30f1758b18", null ],
+      [ "_LEARN_EVERY", "namespacemfg__average__network__fp__jax.html#ab8497440e62f39d763865dc5fe0c5c94", null ],
+      [ "_LEARNING_RATE", "namespacemfg__average__network__fp__jax.html#a5345d66a42a0c5fa7b94c74d408799c1", null ],
+      [ "_LOG_DISTRIBUTION", "namespacemfg__average__network__fp__jax.html#a19143aba491987c0bca91e3edd2f8652", null ],
+      [ "_LOGDIR", "namespacemfg__average__network__fp__jax.html#a17291f7de47d4d4eb92be832870b1cfa", null ],
+      [ "_LOSS", "namespacemfg__average__network__fp__jax.html#a92fe727ba70083913a09d15d20e84ba9", null ],
+      [ "_MIN_BUFFER_SIZE_TO_LEARN", "namespacemfg__average__network__fp__jax.html#a2f882d7049624281f15ca1f8150a513e", null ],
+      [ "_NUM_DQN_EPISODES_PER_ITERATION", "namespacemfg__average__network__fp__jax.html#ac02ac3ebabc60a1c62c66526baa99de9", null ],
+      [ "_NUM_ITERATIONS", "namespacemfg__average__network__fp__jax.html#ad329306dd4e1719064e2efe06230fe32", null ],
+      [ "_OPTIMIZER", "namespacemfg__average__network__fp__jax.html#a70c4ea3d9660755ad306e4bbcfda15a4", null ],
+      [ "_REPLAY_BUFFER_CAPACITY", "namespacemfg__average__network__fp__jax.html#aae9448562b110cf7029ab07b90648ebb", null ],
+      [ "_SEED", "namespacemfg__average__network__fp__jax.html#ad141f02baba6a62e30bed1cebcb7f735", null ],
+      [ "_UPDATE_TARGET_NETWORK_EVERY", "namespacemfg__average__network__fp__jax.html#a1867afc940a51cf2c63c65c57281efe8", null ]
+    ] ],
+    [ "mfg_dqn_fp_jax", "namespacemfg__dqn__fp__jax.html", [
+      [ "main", "namespacemfg__dqn__fp__jax.html#a0d548b5c4ceeb21574c582a0a9c38b59", null ],
+      [ "FLAGS", "namespacemfg__dqn__fp__jax.html#a5abad9757615f86c5fd04749d7443d02", null ]
+    ] ],
+    [ "mfg_dqn_jax", "namespacemfg__dqn__jax.html", [
+      [ "main", "namespacemfg__dqn__jax.html#a4e0adba8a3e195d5d3077f00ec5c1dff", null ],
+      [ "FLAGS", "namespacemfg__dqn__jax.html#a8582320cb0c72d68a58206755f6cb6de", null ]
+    ] ],
+    [ "mfg_fictitious_play", "namespacemfg__fictitious__play.html", [
+      [ "main", "namespacemfg__fictitious__play.html#a244f717e2a1a02f39a3278277c3ee358", null ],
+      [ "_LOG_DISTRIBUTION", "namespacemfg__fictitious__play.html#a3262823e30ef16b2fdbab8413285a844", null ],
+      [ "_LOGDIR", "namespacemfg__fictitious__play.html#a8d97cb6bb6fbc475879b91da5421209a", null ],
+      [ "FLAGS", "namespacemfg__fictitious__play.html#a5646fb551f012562bcf9f9d56f3292e8", null ]
+    ] ],
+    [ "mfg_mirror_descent", "namespacemfg__mirror__descent.html", [
+      [ "main", "namespacemfg__mirror__descent.html#aa868eacacb8a68f6ed3087c619747d9c", null ],
+      [ "_GAME_NAME", "namespacemfg__mirror__descent.html#a55dc13cf584d340653b5bfb2bd761ae7", null ],
+      [ "_LEARNING_RATE", "namespacemfg__mirror__descent.html#a2ef6f1ec73e67379d143b4c0e6d5766c", null ],
+      [ "_LOG_DISTRIBUTION", "namespacemfg__mirror__descent.html#a1c01e593dd26766df75c065e70fb6d27", null ],
+      [ "_LOGDIR", "namespacemfg__mirror__descent.html#a1354d0350329429fc1fd888212758350", null ],
+      [ "_NUM_ITERATIONS", "namespacemfg__mirror__descent.html#a86fd98ccf1f758feecdebb24f411ef66", null ],
+      [ "_SETTING", "namespacemfg__mirror__descent.html#a45bb562f7b4407399cb8708dc83a903f", null ],
+      [ "FLAGS", "namespacemfg__mirror__descent.html#a40db162606d557d8776cebbaad5960c1", null ]
+    ] ],
+    [ "mfg_munchausen_domd_jax", "namespacemfg__munchausen__domd__jax.html", [
+      [ "main", "namespacemfg__munchausen__domd__jax.html#af97d27b80d8e9fa66941814afcd2952b", null ],
+      [ "_BATCH_SIZE", "namespacemfg__munchausen__domd__jax.html#aed4524db446f1f98222ac076efc63f37", null ],
+      [ "_CHECKPOINT_DIR", "namespacemfg__munchausen__domd__jax.html#ab4a5e7f65de04387dd4261fcb2744e2e", null ],
+      [ "_DISCOUNT_FACTOR", "namespacemfg__munchausen__domd__jax.html#ab48eb43b9cb10cb2297f61a2420e0dc2", null ],
+      [ "_ENV_SETTING", "namespacemfg__munchausen__domd__jax.html#aad84ba00d9676204ec866e25ab997dda", null ],
+      [ "_EPSILON_DECAY_DURATION", "namespacemfg__munchausen__domd__jax.html#ab681a13cecd6744e020318e1ed18b146", null ],
+      [ "_EVAL_EVERY", "namespacemfg__munchausen__domd__jax.html#a019b34f28343ed00d558adfbd3de242a", null ],
+      [ "_HIDDEN_LAYERS_SIZES", "namespacemfg__munchausen__domd__jax.html#af79f6074e85fcc8ca3bfae9a76dac607", null ],
+      [ "_LEARN_EVERY", "namespacemfg__munchausen__domd__jax.html#aa86841f52b87b7fde9b0292801fe2d22", null ],
+      [ "_LOG_DISTRIBUTION", "namespacemfg__munchausen__domd__jax.html#a944cbc782d199109987c9fec2dc52e32", null ],
+      [ "_LOGDIR", "namespacemfg__munchausen__domd__jax.html#ad64d3e8f257928028f48f696e677e24b", null ],
+      [ "_MIN_BUFFER_SIZE_TO_LEARN", "namespacemfg__munchausen__domd__jax.html#acf5d3af19b3d35b4e6fddfb8b4b7489b", null ],
+      [ "_NUM_EPISODES_PER_ITERATION", "namespacemfg__munchausen__domd__jax.html#a99fcb8a276332f9b544ab03084f8546e", null ],
+      [ "_REPLAY_BUFFER_CAPACITY", "namespacemfg__munchausen__domd__jax.html#a4a64cb9c86c7995033c5c7134bd59894", null ],
+      [ "_RESET_REPLAY_BUFFER_ON_UPDATE", "namespacemfg__munchausen__domd__jax.html#a3cd1691e784143487a670ad658cc0c6f", null ],
+      [ "_UPDATE_TARGET_NETWORK_EVERY", "namespacemfg__munchausen__domd__jax.html#a2b88b559890be0adf51a73344a0260e1", null ],
+      [ "_WITH_MUNCHAUSEN", "namespacemfg__munchausen__domd__jax.html#a1391c2d4b260bfc4df61e1484b8f09c2", null ],
+      [ "FLAGS", "namespacemfg__munchausen__domd__jax.html#aee6d85a675d12d0e44324b1da201b3ed", null ]
+    ] ],
+    [ "missing_import_test", "namespacemissing__import__test.html", "namespacemissing__import__test" ],
+    [ "models", "namespacemodels.html", "namespacemodels" ],
+    [ "my_namespace", "namespacemy__namespace.html", "namespacemy__namespace" ],
+    [ "not_absl", "namespacenot__absl.html", null ],
+    [ "open_spiel", "namespaceopen__spiel.html", "namespaceopen__spiel" ],
+    [ "openspiel_api", "namespaceopenspiel__api.html", "namespaceopenspiel__api" ],
+    [ "pybind11", "namespacepybind11.html", "namespacepybind11" ],
+    [ "random_bot", "namespacerandom__bot.html", [
+      [ "file", "namespacerandom__bot.html#ac71c62829087a615c356adc7615ec17a", null ],
+      [ "game", "namespacerandom__bot.html#a914579528ef4f15b3c14198200f8b872", null ],
+      [ "game_name", "namespacerandom__bot.html#aed365e29c7b09141e4f6033b0d179e80", null ],
+      [ "legal_actions", "namespacerandom__bot.html#abbdd3dbca3b08c9d602b4392cf0bd689", null ],
+      [ "message", "namespacerandom__bot.html#aaf7990669ea5da89cb449870620fd13b", null ],
+      [ "play_as", "namespacerandom__bot.html#aab236fe35c000be5303c5f0c52ea0e23", null ],
+      [ "private_observation", "namespacerandom__bot.html#a3ab09a7e2748f0e55814c21aba2046d2", null ],
+      [ "public_observation", "namespacerandom__bot.html#a90ec2b8f044301fc5243bc3761d2816c", null ],
+      [ "score", "namespacerandom__bot.html#a0efdb54ba1356b3132a0951d77c70f22", null ],
+      [ "state", "namespacerandom__bot.html#a015e34159a12c44032ffe947d08e4a26", null ]
+    ] ],
+    [ "regret_matching_agent", "namespaceregret__matching__agent.html", "namespaceregret__matching__agent" ],
+    [ "rnn_meta_selfplay_agent", "namespacernn__meta__selfplay__agent.html", "namespacernn__meta__selfplay__agent" ],
+    [ "rnn_model", "namespacernn__model.html", "namespacernn__model" ],
+    [ "run_python_test_file", "namespacerun__python__test__file.html", [
+      [ "main", "namespacerun__python__test__file.html#a2fbf7368b739f4976551781244566ec4", null ],
+      [ "FLAGS", "namespacerun__python__test__file.html#a1f654d0066f3b6f2c2f981067f39a7be", null ]
+    ] ],
+    [ "status_test", "namespacestatus__test.html", "namespacestatus__test" ],
+    [ "std", "namespacestd.html", "namespacestd" ],
+    [ "str_format_internal", null, [
+      [ "ParsedFormatBase", null, [
+        [ "ParsedFormatConsumer", "structabsl_1_1str__format__internal_1_1_parsed_format_base_1_1_parsed_format_consumer.html", "structabsl_1_1str__format__internal_1_1_parsed_format_base_1_1_parsed_format_consumer" ]
+      ] ]
+    ] ],
+    [ "test_bot_fail_after_few_actions", "namespacetest__bot__fail__after__few__actions.html", [
+      [ "game_name", "namespacetest__bot__fail__after__few__actions.html#a6c4f9c5bcb99fe6ba082502bed61dbc7", null ],
+      [ "legal_actions", "namespacetest__bot__fail__after__few__actions.html#a2953e8f5dcf1dba68463a6ed81769290", null ],
+      [ "message", "namespacetest__bot__fail__after__few__actions.html#a9c5acd17b9ae792feeae5d74838a6354", null ],
+      [ "num_actions", "namespacetest__bot__fail__after__few__actions.html#a48fd29e3be39bcd2254cb80863f55845", null ],
+      [ "play_as", "namespacetest__bot__fail__after__few__actions.html#a749b83acd850368bb0d11e3e6224e56b", null ]
+    ] ],
+    [ "test_bot_first_action", "namespacetest__bot__first__action.html", [
+      [ "game", "namespacetest__bot__first__action.html#a3b5a4a786111f749cf1ac8c11056c09a", null ],
+      [ "game_name", "namespacetest__bot__first__action.html#a37a7603a6441e21dd077177a310c2e66", null ],
+      [ "legal_actions", "namespacetest__bot__first__action.html#aa830f1de95c407aa088c788e9714fc02", null ],
+      [ "message", "namespacetest__bot__first__action.html#ae49aa879e93f443ae09a76ce69144b93", null ],
+      [ "play_as", "namespacetest__bot__first__action.html#a0c668c073c4831b406119fde44eae62a", null ],
+      [ "private_observation", "namespacetest__bot__first__action.html#a5f97c55d720fbc319f0f17a9569c9237", null ],
+      [ "public_observation", "namespacetest__bot__first__action.html#ae10d551aa78e4bd5f76a9985b26c1637", null ]
+    ] ],
+    [ "typing", "namespacetyping.html", [
+      [ "ApplyFn", "namespacetyping.html#a2a73a5fd8c96f2803cc1db3d3695f587", null ],
+      [ "GameTree", "namespacetyping.html#ad4770f00c6ca5d1dd6eb2e8c7dc5c27e", null ],
+      [ "HistoryNode", "namespacetyping.html#a87aa39e9153a0b02fccd75566b58577e", null ],
+      [ "InfostateMapping", "namespacetyping.html#aa1fa7fc8f371e2af782708ced97379ad", null ],
+      [ "InfostateNode", "namespacetyping.html#a534a2b3bdd98f432fcf75aa75fae77c9", null ],
+      [ "OptState", "namespacetyping.html#a4750341940a976eda5751214f2f3f38f", null ],
+      [ "Params", "namespacetyping.html#a0d2bf9b9953e074a20c9391840cf2c36", null ],
+      [ "PyTree", "namespacetyping.html#a790ae51dc909c2a93a5c8f9102ecb492", null ]
+    ] ],
+    [ "utils", "namespaceutils.html", "namespaceutils" ],
+    [ "world_representation", "namespaceworld__representation.html", "namespaceworld__representation" ],
+    [ "xinxin_bot_test", "namespacexinxin__bot__test.html", "namespacexinxin__bot__test" ]
+];

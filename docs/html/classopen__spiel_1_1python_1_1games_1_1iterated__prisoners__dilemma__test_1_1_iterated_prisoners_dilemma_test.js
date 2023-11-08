@@ -1,0 +1,9 @@
+var classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test =
+[
+    [ "test_default_param", "classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test.html#a5eaa002eb996f939afa4b3b8e37d03e1", null ],
+    [ "test_game_as_turn_based", "classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test.html#a83e5647ba638c76e7a37a515b22422f3", null ],
+    [ "test_game_as_turn_based_via_string", "classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test.html#aa2c816a3c0fdcc2141ed2425aa1451db", null ],
+    [ "test_game_from_cc", "classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test.html#adebc292ecbd0748051f322bec013093e", null ],
+    [ "test_non_default_param_from_dict", "classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test.html#a4cd1984f9b9a1c1f0f8ba05da586d941", null ],
+    [ "test_non_default_param_from_string", "classopen__spiel_1_1python_1_1games_1_1iterated__prisoners__dilemma__test_1_1_iterated_prisoners_dilemma_test.html#afd2045cd0a20fed7a480af7c6a927494", null ]
+];

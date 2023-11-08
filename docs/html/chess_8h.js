@@ -1,0 +1,28 @@
+var chess_8h =
+[
+    [ "ChessState", "classopen__spiel_1_1chess_1_1_chess_state.html", "classopen__spiel_1_1chess_1_1_chess_state" ],
+    [ "ChessGame", "classopen__spiel_1_1chess_1_1_chess_game.html", "classopen__spiel_1_1chess_1_1_chess_game" ],
+    [ "ActionToDestination", "chess_8h.html#a3a80a86552e55c01aeba579c0876acf3", null ],
+    [ "ActionToMove", "chess_8h.html#a6eb9713599a3fda7ea21d973d2e5678c", null ],
+    [ "ColorToPlayer", "chess_8h.html#a70078562afb3fc5ff19438739235dc08", null ],
+    [ "DrawUtility", "chess_8h.html#a767bc78b3d10a63563965ecc309feacc", null ],
+    [ "EncodeMove", "chess_8h.html#ac069167eefaddda7c8d94df9c98284e4", null ],
+    [ "GetField", "chess_8h.html#af750267a2761efef318f60f90be2ae6d", null ],
+    [ "IndexToSquare", "chess_8h.html#a8ad6992840ef16e2c1050f8912d3f6a3", null ],
+    [ "LossUtility", "chess_8h.html#ae7a8499b06fce01263edf9fb710fd226", null ],
+    [ "MaxGameLength", "chess_8h.html#a3ea079689288e3cd763f306216a0e0fc", null ],
+    [ "MoveToAction", "chess_8h.html#abde3d1f4175036e548f5e800514b8e7a", null ],
+    [ "NumDistinctActions", "chess_8h.html#ab255601636df35ef8069de44b8d41f74", null ],
+    [ "NumPlayers", "chess_8h.html#ac14e8078e051f696bdd2900297fb37de", null ],
+    [ "ObservationTensorShape", "chess_8h.html#a5f93cd603ae853501e536949d61180c9", null ],
+    [ "OtherPlayer", "chess_8h.html#a30e837c2530a2fb2a4b4b5be06f69434", null ],
+    [ "PlayerToColor", "chess_8h.html#a95a13b081ef84adcf109e4b181a16487", null ],
+    [ "ReflectRank", "chess_8h.html#a310929cbac51a2c8de64774824d9bae5", null ],
+    [ "SetField", "chess_8h.html#aed9a94fcbb17663da53e74c114a4980c", null ],
+    [ "SquareToIndex", "chess_8h.html#a9a80bad76f53a7afc07348440aba5a9a", null ],
+    [ "WinUtility", "chess_8h.html#a0494145d21c2e49e9501e05eb9512a81", null ],
+    [ "kNumActionDestinations", "chess_8h.html#ae1611cb731500543072bd807db2a4e13", null ],
+    [ "kNumUnderPromotions", "chess_8h.html#ab4188e12e4a0f40e532a8fb74831d3ae", null ],
+    [ "kUnderPromotionDirectionToOffset", "chess_8h.html#a906c931c485256caab76ce113acadd21", null ],
+    [ "kUnderPromotionIndexToType", "chess_8h.html#adc0843bb48189f82c40072d11aeabcf5", null ]
+];

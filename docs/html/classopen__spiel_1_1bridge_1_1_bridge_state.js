@@ -1,0 +1,25 @@
+var classopen__spiel_1_1bridge_1_1_bridge_state =
+[
+    [ "BridgeState", "classopen__spiel_1_1bridge_1_1_bridge_state.html#ad2c0cbae7209879e71cd3e3dc5d3b817", null ],
+    [ "ActionToString", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a632c6961b3b38a4c40514fb620676aaa", null ],
+    [ "ChanceOutcomes", "classopen__spiel_1_1bridge_1_1_bridge_state.html#ac5d743112cd42c7928e688e9dc6ff491", null ],
+    [ "Clone", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a4e8189c1563c9e6cb48b0d6d63a8a4ce", null ],
+    [ "ContractIndex", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a2afe13aec07db6bf490ccac7ce90d993", null ],
+    [ "CurrentPhase", "classopen__spiel_1_1bridge_1_1_bridge_state.html#ab7678eb6ea0d13aec786ab2738e517b8", null ],
+    [ "CurrentPlayer", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a78f79fd30cba356384bcf3d3e6e6d96e", null ],
+    [ "DoApplyAction", "classopen__spiel_1_1bridge_1_1_bridge_state.html#af675db5ecaf4e066a0dd5daf876a6966", null ],
+    [ "IsTerminal", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a341d1a7b9ae83918bf5b96029301687d", null ],
+    [ "LegalActions", "classopen__spiel_1_1bridge_1_1_bridge_state.html#ad946b362a83c96cc47fe1edb45cb685c", null ],
+    [ "ObservationString", "classopen__spiel_1_1bridge_1_1_bridge_state.html#ab14b775505ce46534d67b51a7e1500b3", null ],
+    [ "ObservationTensor", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a75789988ce391615062a67517c61b33a", null ],
+    [ "PossibleContracts", "classopen__spiel_1_1bridge_1_1_bridge_state.html#af2f7878cae6fe104a94957610986226d", null ],
+    [ "PrivateObservationTensor", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a91e602c27de71f6c09cfe00ab13c0b6b", null ],
+    [ "PublicObservationTensor", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a31be057a20240a5b6cc4ceb1209883d1", null ],
+    [ "Returns", "classopen__spiel_1_1bridge_1_1_bridge_state.html#ad3d47650defd01d59574aab683e26e0f", null ],
+    [ "ScoreByContract", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a88cf75851acb53da970a6b6317f02ae9", null ],
+    [ "ScoreForContracts", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a1aa555cc55e0dca43f5f3356d03e71d3", null ],
+    [ "Serialize", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a3b413c5a1cb485e141a8b34d0cac4f5d", null ],
+    [ "SetDoubleDummyResults", "classopen__spiel_1_1bridge_1_1_bridge_state.html#ab2dbd196213d7c994d3059df30c9681f", null ],
+    [ "ToString", "classopen__spiel_1_1bridge_1_1_bridge_state.html#a8d09f5be3735ecbbf9d749f3c7b2e1ab", null ],
+    [ "WriteObservationTensor", "classopen__spiel_1_1bridge_1_1_bridge_state.html#aead43c0244f8a843c2bc04a1a4dc3c80", null ]
+];

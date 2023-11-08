@@ -1,0 +1,28 @@
+var classabsl_1_1internal__statusor_1_1_status_or_data =
+[
+    [ "Dummy", "structabsl_1_1internal__statusor_1_1_status_or_data_1_1_dummy.html", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#ac84d6cb36177499fd51e52e6642dda70", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a085beb394ddff95c3a7177d4bbe15113", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#acc5e6314de1e7e1f484cb28a3e73c72e", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#af3c3884fd14c78aed9a87c9b06a56e46", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#afa5c902ec22628eeced9796b3cb76b94", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a83485bff7a30c7cd6eeda082104a90bc", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a828a3756a1ba329b2091ced568f0d5ee", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a05c39ada4794e9bc59895d4710793125", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#aa9037df2237ea10dba7c6205bdb6b8b1", null ],
+    [ "~StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a4536aac61c04b4d795f824496da7b23c", null ],
+    [ "Assign", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a516c7a8db1bb097805d4ca55c3f275c5", null ],
+    [ "AssignStatus", "classabsl_1_1internal__statusor_1_1_status_or_data.html#afe228df329ae76876db8ef903546a062", null ],
+    [ "Clear", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a3f729457e31cddc9b659dbb9d3da583f", null ],
+    [ "EnsureNotOk", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a3bbecfadf01f9aba465bffa09fbc05e4", null ],
+    [ "EnsureOk", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a2b8a0c42e1527ddf33822280e6583cae", null ],
+    [ "MakeStatus", "classabsl_1_1internal__statusor_1_1_status_or_data.html#ac512416fe94ce298b902e57a56e2c980", null ],
+    [ "MakeValue", "classabsl_1_1internal__statusor_1_1_status_or_data.html#af304de64c459c0b928a5dfca005c71a3", null ],
+    [ "ok", "classabsl_1_1internal__statusor_1_1_status_or_data.html#af92a8b0173dffb862c72e9f61be16169", null ],
+    [ "operator=", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a6b04801067f1e9f69df85099647853ea", null ],
+    [ "operator=", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a42a93902095ed18dfbfd1e711602e020", null ],
+    [ "StatusOrData", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a5ddc89551065eb8d35cf6fb5464685d4", null ],
+    [ "data_", "classabsl_1_1internal__statusor_1_1_status_or_data.html#aa93d06195a788638966ff3d693a3fc9e", null ],
+    [ "dummy_", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a84aa6ec0974f4e4f4fa8366fc62caa36", null ],
+    [ "status_", "classabsl_1_1internal__statusor_1_1_status_or_data.html#a464dff0c2695ffb0b0a5e8ba200cece1", null ]
+];

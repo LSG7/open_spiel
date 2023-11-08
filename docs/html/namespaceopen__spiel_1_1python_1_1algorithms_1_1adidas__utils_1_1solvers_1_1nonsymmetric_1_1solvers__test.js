@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1solvers__test =
+[
+    [ "ExploitabilityDescentTest", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1solvers_2b2e4416bd7089f0baed202c50dd48ab.html", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1solvers_2b2e4416bd7089f0baed202c50dd48ab" ]
+];

@@ -1,0 +1,9 @@
+var classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__uncontested__bidding__test_1_1_bluechip_bridge_wrapper_test =
+[
+    [ "test_action_to_string_to_action_roundtrip", "classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__uncontested__bidding__test_1_1_bluechip_bridge_wrapper_test.html#a231653a8998fb5a861c6fa432c4baf48", null ],
+    [ "test_complete_session_east", "classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__uncontested__bidding__test_1_1_bluechip_bridge_wrapper_test.html#a06e52e3c31b369dbcbbfe1041cffcd1f", null ],
+    [ "test_complete_session_west", "classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__uncontested__bidding__test_1_1_bluechip_bridge_wrapper_test.html#a7147116fbc1e89c1e3eb25beaa7b110e", null ],
+    [ "test_invalid_fixed_message", "classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__uncontested__bidding__test_1_1_bluechip_bridge_wrapper_test.html#a13d364611239441d7d9e788027bf1384", null ],
+    [ "test_invalid_variable_message", "classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__uncontested__bidding__test_1_1_bluechip_bridge_wrapper_test.html#a9f4fa8fa4efedb6957b74702c1652747", null ],
+    [ "test_string_to_action_to_string_roundtrip", "classopen__spiel_1_1python_1_1bots_1_1bluechip__bridge__uncontested__bidding__test_1_1_bluechip_bridge_wrapper_test.html#a0acc94962c93270b3fa744934e29be69", null ]
+];

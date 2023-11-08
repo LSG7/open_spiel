@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_matching_pennies =
+[
+    [ "__init__", "classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_matching_pennies.html#a82b08e58bdd2131eff8b452075ba28b5", null ]
+];

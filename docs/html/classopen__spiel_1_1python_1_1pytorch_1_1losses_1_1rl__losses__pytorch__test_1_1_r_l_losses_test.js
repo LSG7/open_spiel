@@ -1,0 +1,7 @@
+var classopen__spiel_1_1python_1_1pytorch_1_1losses_1_1rl__losses__pytorch__test_1_1_r_l_losses_test =
+[
+    [ "test_batch_a2c_loss_with_entropy_cost", "classopen__spiel_1_1python_1_1pytorch_1_1losses_1_1rl__losses__pytorch__test_1_1_r_l_losses_test.html#aa34f6ff7a36e7a869fb2581aee6cbf42", null ],
+    [ "test_batch_qpg_loss_with_entropy_cost", "classopen__spiel_1_1python_1_1pytorch_1_1losses_1_1rl__losses__pytorch__test_1_1_r_l_losses_test.html#a6d1f146453254d91bdb259f5a80431e7", null ],
+    [ "test_batch_rm_loss_with_entropy_cost", "classopen__spiel_1_1python_1_1pytorch_1_1losses_1_1rl__losses__pytorch__test_1_1_r_l_losses_test.html#a8b6d09fb01a99f9a1f2eeb4804e0b586", null ],
+    [ "test_batch_rpg_loss_with_entropy_cost", "classopen__spiel_1_1python_1_1pytorch_1_1losses_1_1rl__losses__pytorch__test_1_1_r_l_losses_test.html#a973c6c3b65e59b5b7d7dc4ae7b5eaf4c", null ]
+];

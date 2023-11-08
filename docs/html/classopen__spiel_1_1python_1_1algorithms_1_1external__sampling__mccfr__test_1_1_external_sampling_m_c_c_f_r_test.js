@@ -1,0 +1,10 @@
+var classopen__spiel_1_1python_1_1algorithms_1_1external__sampling__mccfr__test_1_1_external_sampling_m_c_c_f_r_test =
+[
+    [ "disabled_test_external_sampling_liars_dice_2p_simple", "classopen__spiel_1_1python_1_1algorithms_1_1external__sampling__mccfr__test_1_1_external_sampling_m_c_c_f_r_test.html#a28d5bb2a4c62e37af4f3bee485abc7b8", null ],
+    [ "test_external_sampling_kuhn_2p_full", "classopen__spiel_1_1python_1_1algorithms_1_1external__sampling__mccfr__test_1_1_external_sampling_m_c_c_f_r_test.html#af239991dd5b74d47fd560f778d51b4f3", null ],
+    [ "test_external_sampling_kuhn_2p_simple", "classopen__spiel_1_1python_1_1algorithms_1_1external__sampling__mccfr__test_1_1_external_sampling_m_c_c_f_r_test.html#aafd5cbba2e190b32d06553c252672671", null ],
+    [ "test_external_sampling_kuhn_3p_full", "classopen__spiel_1_1python_1_1algorithms_1_1external__sampling__mccfr__test_1_1_external_sampling_m_c_c_f_r_test.html#ab4d733b77707f15887e2d571b5e3e1df", null ],
+    [ "test_external_sampling_kuhn_3p_simple", "classopen__spiel_1_1python_1_1algorithms_1_1external__sampling__mccfr__test_1_1_external_sampling_m_c_c_f_r_test.html#a55a21ffed851e159e66470f3ff407e93", null ],
+    [ "test_external_sampling_leduc_2p_full", "classopen__spiel_1_1python_1_1algorithms_1_1external__sampling__mccfr__test_1_1_external_sampling_m_c_c_f_r_test.html#a426c39216b1fd462a66314a92ee74f02", null ],
+    [ "test_external_sampling_leduc_2p_simple", "classopen__spiel_1_1python_1_1algorithms_1_1external__sampling__mccfr__test_1_1_external_sampling_m_c_c_f_r_test.html#ae2af461e18383a69ddab7a512b78df6f", null ]
+];

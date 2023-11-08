@@ -1,0 +1,4 @@
+var classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__deep__mirror__descent__test_1_1_deep_online_mirror_descent_test =
+[
+    [ "test_train", "classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__deep__mirror__descent__test_1_1_deep_online_mirror_descent_test.html#a6df1e3d3543fc24b1ae75208a2a109fb", null ]
+];

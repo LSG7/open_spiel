@@ -1,0 +1,4 @@
+var namespaceopen__spiel_1_1python_1_1algorithms_1_1discounted__cfr__test =
+[
+    [ "DiscountedCfrTest", "classopen__spiel_1_1python_1_1algorithms_1_1discounted__cfr__test_1_1_discounted_cfr_test.html", "classopen__spiel_1_1python_1_1algorithms_1_1discounted__cfr__test_1_1_discounted_cfr_test" ]
+];
