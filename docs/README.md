@@ -3,7 +3,7 @@
 될 수 있는 가능성이 보인다
 
 
-## [web](https://sanggunlee.github.io/open_spiel/)
+## [web](https://LSG7.github.io/open_spiel/)
 
 ## [Doxy](html/index.html)
 
