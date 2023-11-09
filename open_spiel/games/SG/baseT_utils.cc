@@ -6,12 +6,12 @@ namespace open_spiel
   namespace baseT
   {
 
-    void ObservationTensorBaseT_Land(Player player, int vector_index)
+    int baseTState::ObservationTensorBaseT_Land(Player player, int vector_index)
     {
 
 
 
-
+      return 0;
     }
   }
 }
