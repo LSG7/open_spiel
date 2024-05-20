@@ -7,7 +7,7 @@
   ./build_sg.sh
 2. 내가 만든 방법. gcc clang 중에 골라 쓴다. gcc,clang 선택은 env_sg.sh 에서.  
   cd build_sg 
-  ./set_cmake_manual.sh
+  bash ../set_cmake_manual.sh (처음 한번만. cmake 설정용)  
   make -j8 kbg_test
 
 * bfloat16 변수가 컴파일러마다 다르다.
