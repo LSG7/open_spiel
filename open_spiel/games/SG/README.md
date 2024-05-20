@@ -1,6 +1,15 @@
 # Env
-* source env_sg.sh source venv/bin/acti
-* cd build_m ./set_cmake_manual.sh build_sg.sh
+* source env_sg.sh (환경변수)  
+* source venv/bin/activate  
+
+빌드 방법 두가지.
+1. open spiel 에서 제공하는 방법. clang 을 쓴다.  
+  ./build_sg.sh
+2. 내가 만든 방법. gcc clang 중에 골라 쓴다.
+  cd build_sg 
+  ./set_cmake_manual.sh
+  make -j8 kbg_test
+
 
 
 # Ground Rule  
