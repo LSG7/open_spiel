@@ -11,18 +11,23 @@
 
 // STD headers
 
+// IMPORTANT !!!!!!!!!!!!!!!!!!!!
+// bfloat_16 will be supported from c++23. Use GCC(>=13).
+// GCC13 is still in test branch on May 2024.
 // FP16 Macro
 #ifdef __linux__
-  #ifdef __clang__ // Ubuntu clang++-17
-    #define FP16 _Float16
-  #elif __GNUC__ // Ubuntu gcc-13
-    #include <stdfloat> // UBUNTU gcc-13. 우분투에서 사용 
-    #define FP16 std::bfloat16_t
+  #ifdef __clang__ // Ubuntu clang
+    #define FP16 _Float16 // clang not support bfloat16 yet
+  #elif __GNUC__ // Ubuntu gcc
+    #if (__GNUC__ > 13) || (__GNUC__ == 13)
+      #include <stdfloat> // UBUNTU gcc-13.
+      #define FP16 std::bfloat16_t
+    #endif
   #endif
 #elif __APPLE__
-  #ifdef __clang__ // Mac clang++-17
+  #ifdef __clang__ // Mac clang
     #define FP16 _Float16
-  #elif __GNUC__ // Mac gcc-13
+  #elif __GNUC__ // Mac gcc
     #define FP16 _Float16
   #endif
 #endif
