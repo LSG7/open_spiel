@@ -5,7 +5,7 @@
 빌드 방법 두가지.
 1. open spiel 에서 제공하는 방법. clang 을 쓴다.  
   ./build_sg.sh
-2. 내가 만든 방법. gcc clang 중에 골라 쓴다.
+2. 내가 만든 방법. gcc clang 중에 골라 쓴다. gcc,clang 선택은 env_sg.sh 에서.  
   cd build_sg 
   ./set_cmake_manual.sh
   make -j8 kbg_test
