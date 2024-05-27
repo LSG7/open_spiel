@@ -37,6 +37,7 @@ int main(int argc, char** argv)
     std::cout << " PAState:" << std::to_string(player_state);
     std::cout << " UAState:" << std::to_string(unit_state) << std::endl;
 
+    std::cout << "input any char to next : ";
     std::string input;
     std::cin >> input;
 
