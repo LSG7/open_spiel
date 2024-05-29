@@ -142,9 +142,6 @@ namespace open_spiel
           msn.current_uas = UA_attk;
           break;
         case UA_attk :
-          msn.current_uas = UA_Drc;
-          break;
-        case UA_Drc :
           msn.current_uas = UA_Move;
           break;
         case UA_None :
@@ -343,7 +340,7 @@ namespace open_spiel
 
     std::string baseTState::ObservationString(Player player) const
     {
-      std::string board_string = "BoardString of P" + std::to_string(player) + "\n";
+      std::string board_string = "BoardString ofP" + std::to_string(player) + "\n";
       std::string cell_string = "";
 
       // 1. print ground if not occupied
