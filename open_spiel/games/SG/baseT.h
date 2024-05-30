@@ -96,6 +96,7 @@ class baseTState : public State {
   int ObservationTensorBaseT_Land(Player player, int last_index);
   virtual int8_t get_next_unit_to_action_rand_all_p(); // 모든 플레이어의 유닛에서 다음행동 유닛 뽑기
   virtual int8_t get_next_unit_to_action_rand_per_p(int p, bool erase); // 특정 플레이어에게서 다음행동 유닛 랜덤뽑기
+  Unit& get_unit_by_uniqueId(int unique_id);
   
   MapCoord map_size;
   MapState msn; //map state now
@@ -115,7 +116,7 @@ class baseTState : public State {
   int obs_total_channel_depth;
   int last_move_len;
   std::vector<FP16> supply_v;
-
+  std::vector<P_UnitId> unique_id_to_player_id_v;
   
  private:
 

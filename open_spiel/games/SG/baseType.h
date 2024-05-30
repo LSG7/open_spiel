@@ -22,6 +22,12 @@ struct MapCoord {
     int z; int y; int x;
 };
 
+struct P_UnitId {
+    int unique_id;
+    int player_number;
+    int player_unit_id;
+};
+
 struct P_Cell {
     int pn;
     MapCoord crd;

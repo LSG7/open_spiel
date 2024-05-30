@@ -243,7 +243,7 @@ namespace open_spiel
       if (turn_unit_all_p_v.size() == 0) {
 
           for (int i = 0; i < unique_unit_id_count+1; i++) {
-            if () { // unique_unit_id 에서 unit 객체에 접근할 방법 만들어야함
+            if (get_unit_by_uniqueId(i).is_alive) { // unique_unit_id 에서 unit 객체에 접근할 방법 만들어야함
               turn_unit_all_p_v.push_back(i);
             }
           }
@@ -275,6 +275,14 @@ namespace open_spiel
         turn_unit_per_p_v[p].pop_back();
 
       return ret;
+    }
+
+    Unit& baseTState::get_unit_by_uniqueId(int unique_id)
+    {
+      int player_id = unique_id_to_player_id_v[unique_id].player_number;
+      int unit_id = unique_id_to_player_id_v[unique_id].unique_id;
+
+      return msn.units_v[player_id][unit_id];
     }
 
     void baseTState::DoApplyAction(Action action_id)
@@ -346,6 +354,9 @@ namespace open_spiel
 
       // 보금품 남은 수 
       supply_v.assign(num_players_, supply_n);
+
+      P_UnitId empty_id = {-1,-1,-1};
+      unique_id_to_player_id_v.assign(max_units*num_players_, empty_id);
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
