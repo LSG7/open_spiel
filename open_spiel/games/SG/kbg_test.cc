@@ -22,22 +22,18 @@ int main(int argc, char** argv)
 
   open_spiel::kbg::kbgState* s = (open_spiel::kbg::kbgState*) state.release();
   
+  s->set_next_unit_to_action();
 
   // obs - think - actino loop
   while (1) {
-    int player = s->CurrentPlayer();
-    int unit_state = s->CurrentUAS();
-    int next_unit = 0;
 
-    next_unit = s->get_next_unit_to_action(player, false);
-
-    std::cout << "\nPlayer:" << std::to_string(player);
-    std::cout << " Unit:" << std::to_string(next_unit);
-    std::cout << " UAState:" << std::to_string(unit_state) << std::endl;
+    std::cout << "\nPlayer:" << std::to_string(s->CurrentPlayer());
+    std::cout << " UniqueUnitId:" << std::to_string(s->CurrentUniqueUnitId());
+    std::cout << " UAState:" << std::to_string(s->CurrentUAS()) << std::endl;
 
     // PA_Obs
     std::cout << "Player observing" << std::endl;
-    std::string p_observation = s->ObservationString(player);
+    std::string p_observation = s->ObservationString(s->CurrentPlayer());
     std::cout << p_observation;
     // TODO : make obtensor
     s->SetNextPAS();
@@ -54,8 +50,7 @@ int main(int argc, char** argv)
 
     s->SetNextUAS();
     if (s->CurrentUAS() == UA_Act_0) { // 플레이어 차례 끝남 
-      s->get_next_unit_to_action(player, true); // 현재 플레이어 유닛 빼낸다.
-      //s->SetNextPlayer();
+      s->set_next_unit_to_action(); // 플레이한 다음 유닛 뽑아냄
       std::cout << "Unit changed" << std::endl;
     }
 

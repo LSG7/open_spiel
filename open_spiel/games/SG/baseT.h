@@ -71,13 +71,14 @@ class baseTState : public State {
   virtual std::string ToString() const override;
   virtual std::unique_ptr<State> Clone() const override;
   virtual std::string ObservationString(Player player) const override;
-  virtual int8_t get_next_unit_to_action(int player, bool erase);
+  virtual void set_next_unit_to_action();
   void deploy_unit(int player_id,bool is_alive,int shift_dstc,int atk_dstc,
     int vw_dstc,float hp,float power,UnitClass unit_class,
     MapCoord crd, std::string name);
   
   UnitActionState CurrentUAS() const;
   PlayerActionState CurrentPAS() const;
+  int CurrentUniqueUnitId() const;
   void SetNextUAS();
   void SetNextPAS();
   void SetNextPlayer();
@@ -97,8 +98,8 @@ class baseTState : public State {
   virtual MapCoord id_to_crd(Action a);
   virtual Action crd_to_id(MapCoord crd);
   int ObservationTensorBaseT_Land(Player player, int last_index);
-  virtual int8_t get_next_unit_to_action_rand_all_p(); // 모든 플레이어의 유닛에서 다음행동 유닛 뽑기
-  virtual int8_t get_next_unit_to_action_rand_per_p(int p, bool erase); // 특정 플레이어에게서 다음행동 유닛 랜덤뽑기
+  virtual void set_next_unit_to_action_rand_all_p(); // 모든 플레이어의 유닛에서 다음행동 유닛 뽑기
+  virtual void set_next_unit_to_action_rand_per_p(); // 특정 플레이어에게서 다음행동 유닛 랜덤뽑기
   Unit& get_unit_by_uniqueId(int unique_id);
   
   MapCoord map_size;

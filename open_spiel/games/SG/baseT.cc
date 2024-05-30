@@ -130,6 +130,10 @@ namespace open_spiel
       return msn.current_uas;
     }
 
+    int baseTState::CurrentUniqueUnitId() const{
+      return msn.current_unique_unit_id;
+    }
+
     PlayerActionState baseTState::CurrentPAS() const
     {
       return current_pas;
@@ -139,9 +143,9 @@ namespace open_spiel
     {
       switch (msn.current_uas) {
         case UA_Act_0 : 
-          msn.current_uas = UA_Act_1;
+          msn.current_uas = UA_attk;
           break;
-        case UA_Act_1 :
+        case UA_attk :
           msn.current_uas = UA_Act_0;
           break;
         case UA_None :
@@ -223,14 +227,16 @@ namespace open_spiel
       return a;
     }
 
-    int8_t baseTState::get_next_unit_to_action(int p, bool erase)
+    void baseTState::set_next_unit_to_action()
     {
       switch (unit_selection_order)
       {
         case USO_ALL_P_RAND:
-          return get_next_unit_to_action_rand_all_p();
+          set_next_unit_to_action_rand_all_p();
+          break;
         case USO_PER_P_RAND:
-          return get_next_unit_to_action_rand_per_p(p,erase);
+          set_next_unit_to_action_rand_per_p();
+          break;
         default:
           return -1;
       }
@@ -238,10 +244,9 @@ namespace open_spiel
       return -1;
     }
 
-    int8_t baseTState::get_next_unit_to_action_rand_all_p()
+    void baseTState::set_next_unit_to_action_rand_all_p()
     {
       if (turn_unit_all_p_v.size() == 0) {
-
           for (int i = 0; i < unique_unit_id_count+1; i++) {
             if (get_unit_by_uniqueId(i).is_alive) { // unique_unit_id 에서 unit 객체에 접근할 방법 만들어야함
               turn_unit_all_p_v.push_back(i);
@@ -253,28 +258,32 @@ namespace open_spiel
         std::shuffle(turn_unit_all_p_v.begin(), turn_unit_all_p_v.end(), gen);
       }
 
-      return 0;
+      msn.current_unique_unit_id = turn_unit_all_p_v.back();
+      turn_unit_all_p_v.pop_back();
+      msn.current_player = get_unit_by_uniqueId(msn.current_unique_unit_id).player;
+      
+      return;
     }
 
-    int8_t baseTState::get_next_unit_to_action_rand_per_p(int p, bool erase)
+    void baseTState::set_next_unit_to_action_rand_per_p()
     {
-      std::random_device rd;
-      std::mt19937 gen(rd());
-
+      int p = CurrentPlayer();
       if (turn_unit_per_p_v[p].size() == 0) {
         for (int i = 0; i < max_units; i++) {
           if (msn.units_v[p][i].is_alive) {
-            turn_unit_per_p_v[p].push_back(i);
+            turn_unit_per_p_v[p].push_back(msn.units_v[p][i].unique_unit_id);
           }
         }
+
+        std::random_device rd;
+        std::mt19937 gen(rd());
         std::shuffle(turn_unit_per_p_v[p].begin(), turn_unit_per_p_v[p].end(), gen);
       }
-      int8_t ret = turn_unit_per_p_v[p].back();
+      msn.current_unique_unit_id = turn_unit_per_p_v[p].back();
+      turn_unit_per_p_v[p].pop_back();
+      msn.current_player = get_unit_by_uniqueId(msn.current_unique_unit_id).player;
 
-      if (erase)
-        turn_unit_per_p_v[p].pop_back();
-
-      return ret;
+      return;
     }
 
     Unit& baseTState::get_unit_by_uniqueId(int unique_id)
@@ -322,32 +331,26 @@ namespace open_spiel
       // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
       std::vector<Unit> empty_units_v;
       msn.units_v.assign(num_players_, empty_units_v);
-
-      
                 
       // 플레이어 수 만큼 턴 남은 유닛 셋 채운다.
       switch (unit_selection_order) {
         case USO_ALL_P_RAND :
         {
-          //int empty = 0;
-          //turn_unit_all_p_v.assign(num_players_, empty);
-          msn.current_unit_id = get_next_unit_to_action_rand_all_p();
+
         }
         break;
         case USO_PER_P_RAND :
         {
           std::vector<int8_t> empty_id_v;
           turn_unit_per_p_v.assign(num_players_, empty_id_v);
-          msn.current_unit_id = get_next_unit_to_action_rand_per_p(msn.current_player, false);
+          msn.current_player = 0;
         }
         break;
       }
       
       // P0 부터 시작
-      msn.current_player = 0;
       
       msn.current_uas = UA_Act_0;
-
       current_pas = PA_Obs;
 
       // obs 채널 깊이. network_input.md
@@ -419,7 +422,7 @@ namespace open_spiel
           {
             cell_string = get_cell_observation_string(msn, {z,y,x}, player);
             if (msn.cells_v[z][y][x].occupying_player == msn.current_player &&
-                msn.cells_v[z][y][x].occupying_unit_id == msn.current_unit_id) {
+                msn.cells_v[z][y][x].occupying_unit_id == msn.current_unique_unit_id) {
                   board_string += "\033[31m" + cell_string + "\033[0m";
                 } else {
                   board_string += cell_string;
