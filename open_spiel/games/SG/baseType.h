@@ -37,6 +37,7 @@ struct Cell {
     GroundType ground_type;
     int occupying_player;
     int8_t occupying_unit_id; 
+    int8_t occupying_unique_unit_id; 
     std::vector<int8_t> being_observed_by; // 이 셀을 관찰 중인 플레이어별 ref_count P0 : being_observed_by[0] 
 };
 

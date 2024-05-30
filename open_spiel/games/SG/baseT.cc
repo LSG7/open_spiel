@@ -421,8 +421,7 @@ namespace open_spiel
           for (int x = 0; x < map_size.x; x++)
           {
             cell_string = get_cell_observation_string(msn, {z,y,x}, player);
-            if (msn.cells_v[z][y][x].occupying_player == msn.current_player &&
-                msn.cells_v[z][y][x].occupying_unit_id == msn.current_unique_unit_id) {
+            if (msn.cells_v[z][y][x].occupying_unique_unit_id == msn.current_unique_unit_id) {
                   board_string += "\033[31m" + cell_string + "\033[0m";
                 } else {
                   board_string += cell_string;
@@ -453,6 +452,7 @@ namespace open_spiel
             // 1. 현재 유닛이 떠난다. 위치한 셀 정보 수정. 차지한 플레이어 유닛 없음으로
             msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
             msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = UNone;
+            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unique_unit_id = UNone;
             // 2. 현재 유닛이 위치한 셀 기준 주위 셀 obs ref_count 수정 
             scout(pn, unit_id, ObsRefDown);
           }
@@ -461,6 +461,7 @@ namespace open_spiel
           mine.crd = tg_crd;
           msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = mine.player;
           msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = mine.unit_id;
+          msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unique_unit_id = mine.unique_unit_id;
           // 4. 이동한지점에서 주위 맵 관찰한다. 
           scout(pn, unit_id, ObsRefUp);
           // 5. 유닛 obs 를 현재 위치 셀과 같게 한다. TODO : 스텔스 가진 유닛이면 다르게 구현해야 한다.
