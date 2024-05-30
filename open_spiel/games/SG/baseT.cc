@@ -279,7 +279,7 @@ namespace open_spiel
 
     Unit& baseTState::get_unit_by_uniqueId(int unique_id)
     {
-      int player_id = unique_id_to_player_id_v[unique_id].player_number;
+      int player_id = unique_id_to_player_id_v[unique_id].player_id;
       int unit_id = unique_id_to_player_id_v[unique_id].unique_id;
 
       return msn.units_v[player_id][unit_id];
@@ -331,19 +331,21 @@ namespace open_spiel
         {
           //int empty = 0;
           //turn_unit_all_p_v.assign(num_players_, empty);
+          msn.current_unit_id = get_next_unit_to_action_rand_all_p();
         }
         break;
         case USO_PER_P_RAND :
         {
           std::vector<int8_t> empty_id_v;
           turn_unit_per_p_v.assign(num_players_, empty_id_v);
+          msn.current_unit_id = get_next_unit_to_action_rand_per_p(msn.current_player, false);
         }
         break;
       }
       
       // P0 부터 시작
       msn.current_player = 0;
-      msn.current_unit_id = get_next_unit_to_action_rand_per_p(msn.current_player, false);
+      
       msn.current_uas = UA_Move;
 
       current_pas = PA_Obs;
@@ -355,8 +357,8 @@ namespace open_spiel
       // 보금품 남은 수 
       supply_v.assign(num_players_, supply_n);
 
-      P_UnitId empty_id = {-1,-1,-1};
-      unique_id_to_player_id_v.assign(max_units*num_players_, empty_id);
+      //P_UnitId empty_id = {-1,-1,-1};
+      //unique_id_to_player_id_v.assign(max_units*num_players_, empty_id);
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
@@ -567,7 +569,7 @@ namespace open_spiel
       std::vector<int8_t> empty_v(num_players_, 0);
       msn.units_v[player_id].push_back({player_id,is_alive,++unit_id_count[player_id], ++unique_unit_id_count,
       shift_dstc,atk_dstc,vw_dstc,hp,power,unit_class,crd,empty_v,name});
-      unique_id_to_player_id_v.push_back({player_id,unit_id_count[player_id],unique_unit_id_count});
+      unique_id_to_player_id_v.push_back({unique_unit_id_count,player_id,unit_id_count[player_id]});
       action_mv(player_id, unit_id_count[player_id], crd, true); 
     }
   } // baseT

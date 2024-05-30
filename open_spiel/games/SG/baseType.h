@@ -24,7 +24,7 @@ struct MapCoord {
 
 struct P_UnitId {
     int unique_id;
-    int player_number;
+    int player_id;
     int player_unit_id;
 };
 
