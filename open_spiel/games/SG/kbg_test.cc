@@ -27,19 +27,13 @@ int main(int argc, char** argv)
   while (1) {
     int player = s->CurrentPlayer();
     int unit_state = s->CurrentUAS();
-    int player_state = s->CurrentPAS();
     int next_unit = 0;
 
     next_unit = s->get_next_unit_to_action(player, false);
 
     std::cout << "Player:" << std::to_string(player);
     std::cout << " Unit:" << std::to_string(next_unit);
-    std::cout << " PAState:" << std::to_string(player_state);
     std::cout << " UAState:" << std::to_string(unit_state) << std::endl;
-
-    std::cout << "input any char to next : ";
-    std::string input;
-    std::cin >> input;
 
     // PA_Obs
     std::cout << "Player observing" << std::endl;
@@ -63,7 +57,11 @@ int main(int argc, char** argv)
       s->get_next_unit_to_action(player, true); // 현재 플레이어 유닛 빼낸다.
       //s->SetNextPlayer();
       std::cout << "Unit changed" << std::endl;
-    } 
+    }
+
+    std::cout << "move to Next State. input any char to next : ";
+    std::string input;
+    std::cin >> input;
   }
 
   return 0;
