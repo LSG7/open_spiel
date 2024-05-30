@@ -138,11 +138,11 @@ namespace open_spiel
     void baseTState::SetNextUAS()
     {
       switch (msn.current_uas) {
-        case UA_Move : 
-          msn.current_uas = UA_attk;
+        case UA_Act_0 : 
+          msn.current_uas = UA_Act_1;
           break;
-        case UA_attk :
-          msn.current_uas = UA_Move;
+        case UA_Act_1 :
+          msn.current_uas = UA_Act_0;
           break;
         case UA_None :
           break;
@@ -346,7 +346,7 @@ namespace open_spiel
       // P0 부터 시작
       msn.current_player = 0;
       
-      msn.current_uas = UA_Move;
+      msn.current_uas = UA_Act_0;
 
       current_pas = PA_Obs;
 

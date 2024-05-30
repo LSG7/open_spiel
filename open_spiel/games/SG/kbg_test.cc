@@ -31,7 +31,7 @@ int main(int argc, char** argv)
 
     next_unit = s->get_next_unit_to_action(player, false);
 
-    std::cout << "Player:" << std::to_string(player);
+    std::cout << "\nPlayer:" << std::to_string(player);
     std::cout << " Unit:" << std::to_string(next_unit);
     std::cout << " UAState:" << std::to_string(unit_state) << std::endl;
 
@@ -53,7 +53,7 @@ int main(int argc, char** argv)
     s->SetNextPAS();
 
     s->SetNextUAS();
-    if (s->CurrentUAS() == UA_Move) { // 플레이어 차례 끝남 
+    if (s->CurrentUAS() == UA_Act_0) { // 플레이어 차례 끝남 
       s->get_next_unit_to_action(player, true); // 현재 플레이어 유닛 빼낸다.
       //s->SetNextPlayer();
       std::cout << "Unit changed" << std::endl;
