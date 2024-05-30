@@ -558,6 +558,17 @@ namespace open_spiel
       
       // 지형정보
       
-    }    
+    }
+
+    void baseTState::deploy_unit(int player_id,bool is_alive,int shift_dstc,int atk_dstc,
+    int vw_dstc,float hp,float power,UnitClass unit_class,
+    MapCoord crd, std::string name)
+    {
+      std::vector<int8_t> empty_v(num_players_, 0);
+      msn.units_v[player_id].push_back({player_id,is_alive,++unit_id_count[player_id], ++unique_unit_id_count,
+      shift_dstc,atk_dstc,vw_dstc,hp,power,unit_class,crd,empty_v,name});
+      unique_id_to_player_id_v.push_back({player_id,unit_id_count[player_id],unique_unit_id_count});
+      action_mv(player_id, unit_id_count[player_id], crd, true); 
+    }
   } // baseT
 } // open_spiel

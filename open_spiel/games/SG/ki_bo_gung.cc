@@ -124,25 +124,18 @@ void kbgState::init_unit()
   // live. id 0, 이거 1, 공거 2, 시야 4, 체 1, 공 1 
 
 
-  //0 units
-  msn.units_v[0].push_back({true, ++unit_id_count[0], ++unique_unit_id_count, 2, 1, 4, 1, 1, C0, 0, {0,8,5}, D_North, empty_v, "ki"});
-  action_mv(0, unit_id_count[0], {0,8,5}, true); 
-  msn.units_v[0].push_back({true, ++unit_id_count[0], ++unique_unit_id_count, 1, 1, 4, 2, 1, C1, 0, {0,8,4}, D_North, empty_v, "bo"});
-  action_mv(0, unit_id_count[0], {0,8,4}, true);
-  msn.units_v[0].push_back({true, ++unit_id_count[0], ++unique_unit_id_count, 1, 1, 4, 2, 1, C1, 0, {0,8,3}, D_North, empty_v, "bo"});
-  action_mv(0, unit_id_count[0], {0,8,3}, true);
-  msn.units_v[0].push_back({true, ++unit_id_count[0], ++unique_unit_id_count, 1, 2, 4, 1, 1, C2, 0, {0,9,4}, D_North, empty_v, "gu"});
-  action_mv(0, unit_id_count[0], {0,9,4}, true);
+  //P0 units
+  deploy_unit(0,true, 2, 1, 4, 1, 1, C0, {0,8,5}, "ki");
+  deploy_unit(0,true, 1, 1, 4, 2, 1, C1, {0,8,4}, "bo");
+  deploy_unit(0,true, 1, 1, 4, 2, 1, C1, {0,8,3}, "bo");
+  deploy_unit(0,true, 1, 2, 4, 1, 1, C2, {0,9,4}, "gu");
 
-  //1 units
-  msn.units_v[1].push_back({true, ++unit_id_count[1], ++unique_unit_id_count, 2, 1, 4, 1, 1, C0, 1, {0,1,5}, D_South, empty_v, "ki"});
-  action_mv(1, unit_id_count[1], {0,1,5}, true);
-  msn.units_v[1].push_back({true, ++unit_id_count[1], ++unique_unit_id_count, 1, 1, 4, 2, 1, C1, 1, {0,1,4}, D_South, empty_v, "bo"});
-  action_mv(1, unit_id_count[1], {0,1,4}, true);
-  msn.units_v[1].push_back({true, ++unit_id_count[1], ++unique_unit_id_count, 1, 1, 4, 2, 1, C1, 1, {0,1,3}, D_South, empty_v, "bo"});
-  action_mv(1, unit_id_count[1], {0,1,3}, true);
-  msn.units_v[1].push_back({true, ++unit_id_count[1], ++unique_unit_id_count, 1, 2, 4, 1, 1, C2, 1, {0,0,4}, D_South, empty_v, "gu"});
-  action_mv(1, unit_id_count[1], {0,0,4}, true);
+  //P1 units
+  deploy_unit(1, true, 2, 1, 4, 1, 1, C0, {0,1,5}, "ki");
+  deploy_unit(1, true, 1, 1, 4, 2, 1, C1, {0,1,4}, "bo");
+  deploy_unit(1, true, 1, 1, 4, 2, 1, C1, {0,1,3}, "bo");
+  deploy_unit(1, true, 1, 2, 4, 1, 1, C2, {0,0,4}, "gu");
+  
 
 
 }

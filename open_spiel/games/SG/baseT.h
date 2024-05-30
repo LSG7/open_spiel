@@ -72,6 +72,9 @@ class baseTState : public State {
   virtual std::unique_ptr<State> Clone() const override;
   virtual std::string ObservationString(Player player) const override;
   virtual int8_t get_next_unit_to_action(int player, bool erase);
+  void deploy_unit(int player_id,bool is_alive,int shift_dstc,int atk_dstc,
+    int vw_dstc,float hp,float power,UnitClass unit_class,
+    MapCoord crd, std::string name);
   
   UnitActionState CurrentUAS() const;
   PlayerActionState CurrentPAS() const;
