@@ -71,7 +71,8 @@ class baseTState : public State {
   virtual std::string ToString() const override;
   virtual std::unique_ptr<State> Clone() const override;
   virtual std::string ObservationString(Player player) const override;
-  virtual int8_t get_next_unit_to_action_rand(int p, bool erase);
+  virtual int8_t get_next_unit_to_action(int player, bool erase);
+  
   UnitActionState CurrentUAS() const;
   PlayerActionState CurrentPAS() const;
   void SetNextUAS();
@@ -85,7 +86,7 @@ class baseTState : public State {
   virtual int action_mv(int pn, int unit_id, MapCoord tg_crd, bool is_init);
   virtual void scout(int pn, int unit_id, ObsRefCount o_r_c);  // unit 주변 셀들을 관찰한다.
   virtual void init_first
-  (int max_u, int piece_tn, int last_mn, int supply_n, int land_channel_d);
+  (int max_u, int piece_tn, int last_mn, int supply_n, int land_channel_d, UnitSelectionOrder uso);
   virtual void init_map();
   virtual void init_unit();
   virtual std::string get_cell_observation_string(MapState state, MapCoord crd, int p) const;
@@ -93,14 +94,19 @@ class baseTState : public State {
   virtual MapCoord id_to_crd(Action a);
   virtual Action crd_to_id(MapCoord crd);
   int ObservationTensorBaseT_Land(Player player, int last_index);
+  virtual int8_t get_next_unit_to_action_rand_all_p(); // 모든 플레이어의 유닛에서 다음행동 유닛 뽑기
+  virtual int8_t get_next_unit_to_action_rand_per_p(int p, bool erase); // 특정 플레이어에게서 다음행동 유닛 랜덤뽑기
   
   MapCoord map_size;
   MapState msn; //map state now
   std::vector<MapState> Map_history;
   int max_units; // max number of one player
-  std::vector<int8_t> unit_id_count;
-  std::vector<std::vector<int8_t>> turn_unit_v;
+  std::vector<int8_t> unit_id_count;  // per player count
+  int unique_unit_id_count;
+  std::vector<std::vector<int8_t>> turn_unit_per_p_v; // 플레이어 별 유닛 순서
+  std::vector<int8_t> turn_unit_all_p_v; // 모든 플레이어의 유닛 순서
   PlayerActionState current_pas;
+  UnitSelectionOrder unit_selection_order;
 
   // Observation info
   int land_info_channel_depth;

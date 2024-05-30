@@ -12,9 +12,10 @@ enum UnitClass {C0 = 0, C1,C2,C3,C4,C5,C6,C7,C8,C9, CNone = -1,};
 enum ActionType {AMove = 0, AAttk, ANone = -1,};
 enum ObsRefCount {ObsRefUp = 1, ObsRefDown = -1,};
 enum PlayerActionState {PA_Obs = 0, PA_Think, PA_Action, PA_None = -1,};
-enum UnitActionState {UA_Move = 0, UA_attk=1, UA_Drc=2, UA_None = -1,};
+enum UnitActionState {UA_Move = 0, UA_attk=1, UA_None = -1,};
 enum PlayerN {PNone = -1,};
 enum UnitN {UNone = -1,};
+enum UnitSelectionOrder {USO_ALL_P_RAND=0,USO_PER_P_RAND=1,USO_None=-1,};
 
 struct MapCoord {
     //z:floor y:row x:col
@@ -36,7 +37,8 @@ struct Cell {
 class Unit {
 public:
     bool is_alive;
-    int unit_id;
+    int unit_id;    // per player
+    int unique_unit_id; // unique in game
     int shift_dstc;
     int atk_dstc;
     int vw_dstc;
@@ -49,13 +51,14 @@ public:
     std::vector<int8_t> being_observed_by; // Cell 의 being_observed_by 와 같다. 스텔스 기능 추가 전까지는 같아야 한다.
     std::string name;
 
-    Unit(bool is_alive,int unit_id,int shift_dstc,int atk_dstc,
+    Unit(bool is_alive,int unit_id,int unique_unit_id,int shift_dstc,int atk_dstc,
     int vw_dstc,float hp,float power,UnitClass unit_class,
     int player,MapCoord crd,UnitDirection direction,
     std::vector<int8_t> being_observed_by, std::string name)
     {
         this->is_alive = is_alive;
         this->unit_id = unit_id;
+        this->unique_unit_id = unique_unit_id;
         this->shift_dstc = shift_dstc;
         this->atk_dstc = atk_dstc;
         this->vw_dstc = vw_dstc;

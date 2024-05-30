@@ -30,7 +30,7 @@ int main(int argc, char** argv)
     int player_state = s->CurrentPAS();
     int next_unit = 0;
 
-    next_unit = s->get_next_unit_to_action_rand(player, false);
+    next_unit = s->get_next_unit_to_action(player, false);
 
     std::cout << "Player:" << std::to_string(player);
     std::cout << " Unit:" << std::to_string(next_unit);
@@ -60,9 +60,9 @@ int main(int argc, char** argv)
 
     s->SetNextUAS();
     if (s->CurrentUAS() == UA_Move) { // 플레이어 차례 끝남 
-      s->get_next_unit_to_action_rand(player, true); // 플레이어 유닛 빼낸다.
-      s->SetNextPlayer();
-      std::cout << "Player changed" << std::endl;
+      s->get_next_unit_to_action(player, true); // 현재 플레이어 유닛 빼낸다.
+      //s->SetNextPlayer();
+      std::cout << "Unit changed" << std::endl;
     } 
   }
 

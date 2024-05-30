@@ -223,21 +223,56 @@ namespace open_spiel
       return a;
     }
 
-    int8_t baseTState::get_next_unit_to_action_rand(int p, bool erase)
+    int8_t baseTState::get_next_unit_to_action(int p, bool erase)
     {
-      static std::random_device rd;
-      static std::mt19937 gen(rd());
-
-      if (turn_unit_v[p].size() == 0) {
-        for (int i = 0; i < max_units; i++) {
-          turn_unit_v[p].push_back(i);
-        }
-        std::shuffle(turn_unit_v[p].begin(), turn_unit_v[p].end(), gen);
+      switch (unit_selection_order)
+      {
+        case USO_ALL_P_RAND:
+          return get_next_unit_to_action_rand_all_p();
+        case USO_PER_P_RAND:
+          return get_next_unit_to_action_rand_per_p(p,erase);
+        default:
+          return -1;
       }
-      int8_t ret = turn_unit_v[p].back();
+
+      return -1;
+    }
+
+    int8_t baseTState::get_next_unit_to_action_rand_all_p()
+    {
+      if (turn_unit_all_p_v.size() == 0) {
+
+          for (int i = 0; i < unique_unit_id_count+1; i++) {
+            if () { // unique_unit_id 에서 unit 객체에 접근할 방법 만들어야함
+              turn_unit_all_p_v.push_back(i);
+            }
+          }
+
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::shuffle(turn_unit_all_p_v.begin(), turn_unit_all_p_v.end(), gen);
+      }
+
+      return 0;
+    }
+
+    int8_t baseTState::get_next_unit_to_action_rand_per_p(int p, bool erase)
+    {
+      std::random_device rd;
+      std::mt19937 gen(rd());
+
+      if (turn_unit_per_p_v[p].size() == 0) {
+        for (int i = 0; i < max_units; i++) {
+          if (msn.units_v[p][i].is_alive) {
+            turn_unit_per_p_v[p].push_back(i);
+          }
+        }
+        std::shuffle(turn_unit_per_p_v[p].begin(), turn_unit_per_p_v[p].end(), gen);
+      }
+      int8_t ret = turn_unit_per_p_v[p].back();
 
       if (erase)
-        turn_unit_v[p].pop_back();
+        turn_unit_per_p_v[p].pop_back();
 
       return ret;
     }
@@ -262,27 +297,45 @@ namespace open_spiel
 
     void baseTState::init_first
     (int max_u, int piece_tn, int last_mn, int supply_n,
-     int land_channel_d)
+     int land_channel_d, UnitSelectionOrder uso)
     {
       land_info_channel_depth = land_channel_d;
       max_units = max_u;
       piece_type_n = piece_tn;
       last_move_len = last_mn;
+      unit_selection_order = uso;
 
       // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
       unit_id_count.assign(num_players_, UNone);
+      // 게임에서 유일한 아이디를 유닛에 배정
+      unique_unit_id_count = -1;
+
 
       // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
       std::vector<Unit> empty_units_v;
       msn.units_v.assign(num_players_, empty_units_v);
 
+      
+                
       // 플레이어 수 만큼 턴 남은 유닛 셋 채운다.
-      std::vector<int8_t> empty_id_v;
-      turn_unit_v.assign(num_players_, empty_id_v);
-
+      switch (unit_selection_order) {
+        case USO_ALL_P_RAND :
+        {
+          //int empty = 0;
+          //turn_unit_all_p_v.assign(num_players_, empty);
+        }
+        break;
+        case USO_PER_P_RAND :
+        {
+          std::vector<int8_t> empty_id_v;
+          turn_unit_per_p_v.assign(num_players_, empty_id_v);
+        }
+        break;
+      }
+      
       // P0 부터 시작
       msn.current_player = 0;
-      msn.current_unit_id = get_next_unit_to_action_rand(msn.current_player, false);
+      msn.current_unit_id = get_next_unit_to_action_rand_per_p(msn.current_player, false);
       msn.current_uas = UA_Move;
 
       current_pas = PA_Obs;
