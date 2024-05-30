@@ -238,10 +238,10 @@ namespace open_spiel
           set_next_unit_to_action_rand_per_p();
           break;
         default:
-          return -1;
+          return;
       }
 
-      return -1;
+      return;
     }
 
     void baseTState::set_next_unit_to_action_rand_all_p()
@@ -289,7 +289,7 @@ namespace open_spiel
     Unit& baseTState::get_unit_by_uniqueId(int unique_id)
     {
       int player_id = unique_id_to_player_id_v[unique_id].player_id;
-      int unit_id = unique_id_to_player_id_v[unique_id].unique_id;
+      int unit_id = unique_id_to_player_id_v[unique_id].player_unit_id;
 
       return msn.units_v[player_id][unit_id];
     }
