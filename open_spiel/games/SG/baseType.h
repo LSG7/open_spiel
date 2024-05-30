@@ -84,6 +84,7 @@ struct MapState {
 
     int current_player;
     int current_unique_unit_id;
+    int current_player_unit_id;
     UnitActionState current_uas;
 };
 

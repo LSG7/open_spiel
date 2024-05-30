@@ -28,6 +28,7 @@ int main(int argc, char** argv)
   while (1) {
 
     std::cout << "\nPlayer:" << std::to_string(s->CurrentPlayer());
+    std::cout << " UnitId:" << std::to_string(s->CurrentUnitId());
     std::cout << " UniqueUnitId:" << std::to_string(s->CurrentUniqueUnitId());
     std::cout << " UAState:" << std::to_string(s->CurrentUAS()) << std::endl;
 

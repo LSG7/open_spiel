@@ -79,6 +79,7 @@ class baseTState : public State {
   UnitActionState CurrentUAS() const;
   PlayerActionState CurrentPAS() const;
   int CurrentUniqueUnitId() const;
+  int CurrentUnitId() const;
   void SetNextUAS();
   void SetNextPAS();
   void SetNextPlayer();

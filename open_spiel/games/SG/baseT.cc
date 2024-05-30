@@ -134,6 +134,9 @@ namespace open_spiel
       return msn.current_unique_unit_id;
     }
 
+    int baseTState::CurrentUnitId() const{
+      return msn.current_player_unit_id;
+    }
     PlayerActionState baseTState::CurrentPAS() const
     {
       return current_pas;
@@ -261,6 +264,7 @@ namespace open_spiel
       msn.current_unique_unit_id = turn_unit_all_p_v.back();
       turn_unit_all_p_v.pop_back();
       msn.current_player = get_unit_by_uniqueId(msn.current_unique_unit_id).player;
+      msn.current_player_unit_id = get_unit_by_uniqueId(msn.current_unique_unit_id).unit_id;
       
       return;
     }
@@ -282,6 +286,7 @@ namespace open_spiel
       msn.current_unique_unit_id = turn_unit_per_p_v[p].back();
       turn_unit_per_p_v[p].pop_back();
       msn.current_player = get_unit_by_uniqueId(msn.current_unique_unit_id).player;
+      msn.current_player_unit_id = get_unit_by_uniqueId(msn.current_unique_unit_id).unit_id;
 
       return;
     }
