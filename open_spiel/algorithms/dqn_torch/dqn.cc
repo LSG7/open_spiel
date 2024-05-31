@@ -37,7 +37,7 @@ constexpr const float kIllegalActionLogitsPenalty =
 
 Action RandomAgent::Step(const State& state, bool is_evaluation) {
   if (state.IsTerminal()) {
-    return;
+    return kInvalidAction;
   }
   std::vector<Action> legal_actions = state.LegalActions(player_);
   int aidx = absl::Uniform<int>(rng_, 0, legal_actions.size());
@@ -216,7 +216,7 @@ void DQN::Learn() {
     legal_actions_mask.push_back(
         torch::from_blob(t.legal_actions_mask.data(),
                          {1, t.legal_actions_mask.size()},
-                         torch::TensorOptions().dtype(torch::kInt32))
+                         torch::TensorOptions().dtype(torch::kBool))
             .clone());
     actions.push_back(t.action);
     rewards.push_back(t.reward);
@@ -231,7 +231,7 @@ void DQN::Learn() {
       next_info_states_tensor).detach();
 
   torch::Tensor illegal_action_masks_tensor =
-      1.0 - torch::stack(legal_actions_mask, 0);
+      torch::stack(legal_actions_mask, 0).bitwise_not();
   torch::Tensor legal_q_values =
       torch::masked_fill(target_q_values, illegal_action_masks_tensor,
                          kIllegalActionLogitsPenalty);

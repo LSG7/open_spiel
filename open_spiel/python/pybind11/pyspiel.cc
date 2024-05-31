@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include <memory>
-#include <unordered_map>
+#include <string>
 
 #include "open_spiel/abseil-cpp/absl/flags/flag.h"
 #include "open_spiel/algorithms/matrix_game_utils.h"
@@ -36,6 +36,7 @@
 #include "open_spiel/python/pybind11/games_bridge.h"
 #include "open_spiel/python/pybind11/games_chess.h"
 #include "open_spiel/python/pybind11/games_colored_trails.h"
+#include "open_spiel/python/pybind11/games_dots_and_boxes.h"
 #include "open_spiel/python/pybind11/games_euchre.h"
 #include "open_spiel/python/pybind11/games_gin_rummy.h"
 #include "open_spiel/python/pybind11/games_kuhn_poker.h"
@@ -48,7 +49,6 @@
 #include "open_spiel/python/pybind11/policy.h"
 #include "open_spiel/python/pybind11/pybind11.h"
 #include "open_spiel/python/pybind11/python_games.h"
-#include "open_spiel/python/pybind11/referee.h"
 #include "open_spiel/python/pybind11/utils.h"
 #include "open_spiel/spiel.h"
 #include "open_spiel/spiel_globals.h"
@@ -65,6 +65,9 @@
 #endif
 #if OPEN_SPIEL_BUILD_WITH_XINXIN
 #include "open_spiel/bots/xinxin/xinxin_pybind11.h"
+#endif
+#if OPEN_SPIEL_BUILD_WITH_ACPC
+#include "open_spiel/python/pybind11/games_universal_poker.h"
 #endif
 
 // Flags governing Open Spiel behaviour
@@ -351,11 +354,12 @@ PYBIND11_MODULE(pyspiel, m) {
       .def("num_distinct_actions", &Game::NumDistinctActions)
       .def("new_initial_states", &Game::NewInitialStates)
       .def("new_initial_state",
-           [](const Game* self) { return self->NewInitialState(); })
+           (std::unique_ptr<State>(open_spiel::Game::*)() const)
+           &Game::NewInitialState)
       .def("new_initial_state",
-           [](const Game* self, const std::string& s) {
-             return self->NewInitialState(s);
-           })
+           (std::unique_ptr<State>(open_spiel::Game::*)(
+                                   const std::string&) const)
+           &Game::NewInitialState)
       .def("new_initial_state_for_population",
            &Game::NewInitialStateForPopulation)
       .def("max_chance_outcomes", &Game::MaxChanceOutcomes)
@@ -643,6 +647,7 @@ PYBIND11_MODULE(pyspiel, m) {
   init_pyspiel_games_bridge(m);  // Game-specific functions for bridge.
   init_pyspiel_games_chess(m);   // Chess game.
   init_pyspiel_games_colored_trails(m);   // Colored Trails game.
+  init_pyspiel_games_dots_and_boxes(m);   // Dots-and-Boxes game.
   init_pyspiel_games_euchre(m);  // Game-specific functions for euchre.
   init_pyspiel_games_gin_rummy(m);  // Game-specific functions for gin_rummy.
   init_pyspiel_games_kuhn_poker(m);   // Kuhn Poker game.
@@ -662,8 +667,8 @@ PYBIND11_MODULE(pyspiel, m) {
 #if OPEN_SPIEL_BUILD_WITH_XINXIN
   init_pyspiel_xinxin(m);
 #endif
-#if OPEN_SPIEL_BUILD_WITH_HIGC
-  init_pyspiel_referee(m);
+#if OPEN_SPIEL_BUILD_WITH_ACPC
+  init_pyspiel_games_universal_poker(m);  // Universal poker game.
 #endif
 }  // NOLINT
 

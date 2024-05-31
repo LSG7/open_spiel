@@ -42,7 +42,7 @@ class EntropySchedule:
 
   Example
     EntropySchedule([3, 5, 10], [2, 4, 1])
-    =>   [0, 3, 6, 11, 16, 21, 26, 10]
+    =>   [0, 3, 6, 11, 16, 21, 26, 36]
           | 3 x2 |      5 x4     | 10 x1
   """
 
@@ -124,7 +124,9 @@ class EntropySchedule:
     iteration_size = (last_size * beyond + size * (1 - beyond))
 
     update_target_net = jnp.logical_and(
-        learner_step > 0, jnp.sum(learner_step == iteration_start))
+        learner_step > 0,
+        jnp.sum(learner_step == iteration_start + iteration_size - 1),
+    )
     alpha = jnp.minimum(
         (2.0 * (learner_step - iteration_start)) / iteration_size, 1.0)
 
@@ -560,6 +562,7 @@ def get_loss_nerd(logit_list: Sequence[chex.Array],
   """Define the nerd loss."""
   assert isinstance(importance_sampling_correction, list)
   loss_pi_list = []
+  num_valid_actions = jnp.sum(legal_actions, axis=-1, keepdims=True)
   for k, (logit_pi, pi, q_vr, is_c) in enumerate(
       zip(logit_list, policy_list, q_vr_list, importance_sampling_correction)):
     assert logit_pi.shape[0] == q_vr.shape[0]
@@ -569,8 +572,11 @@ def get_loss_nerd(logit_list: Sequence[chex.Array],
     adv_pi = jnp.clip(adv_pi, a_min=-clip, a_max=clip)
     adv_pi = lax.stop_gradient(adv_pi)
 
-    logits = logit_pi - jnp.mean(
-        logit_pi * legal_actions, axis=-1, keepdims=True)
+    valid_logit_sum = jnp.sum(logit_pi * legal_actions, axis=-1, keepdims=True)
+    mean_logit = valid_logit_sum / num_valid_actions
+
+    # Subtract only the mean of the valid logits
+    logits = logit_pi - mean_logit
 
     threshold_center = jnp.zeros_like(logits)
 
@@ -1031,9 +1037,13 @@ class RNaDSolver(policy_lib.Policy):
     pi = self.config.finetune.post_process_policy(pi, env_step.legal)
     return pi
 
-  # TODO(author16): jit actor_step.
+  @functools.partial(jax.jit, static_argnums=(0,))
+  def _network_jit_apply(self, params: Params, env_step: EnvStep) -> chex.Array:
+    pi, _, _, _ = self.network.apply(params, env_step)
+    return pi
+
   def actor_step(self, env_step: EnvStep):
-    pi, _, _, _ = self.network.apply(self.params, env_step)
+    pi = self._network_jit_apply(self.params, env_step)
     pi = np.asarray(pi).astype("float64")
     # TODO(author18): is this policy normalization really needed?
     pi = pi / np.sum(pi, axis=-1, keepdims=True)

@@ -35,6 +35,7 @@ EXPECTED_GAMES = frozenset([
     "bridge",
     "bridge_uncontested_bidding",
     "catch",
+    "chat_game",  # python game locating in python/games/chat_games/
     "checkers",
     "chess",
     "cliff_walking",
@@ -51,6 +52,7 @@ EXPECTED_GAMES = frozenset([
     "dark_hex",
     "dark_hex_ir",
     "deep_sea",
+    "dots_and_boxes",
     "dou_dizhu",
     "efg_game",
     "euchre",
@@ -131,6 +133,7 @@ EXPECTED_GAMES = frozenset([
     "tiny_hanabi",
     "trade_comm",
     "turn_based_simultaneous_game",
+    "twixt",
     "ultimate_tic_tac_toe",
     "y",
     "zerosum",

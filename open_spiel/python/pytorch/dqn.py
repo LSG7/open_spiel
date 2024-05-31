@@ -326,7 +326,8 @@ class DQN(rl_agent.AbstractAgent):
 
     illegal_actions_mask = 1 - legal_actions_mask
     legal_target_q_values = self._target_q_values.masked_fill(
-        illegal_actions_mask, ILLEGAL_ACTION_LOGITS_PENALTY)
+        illegal_actions_mask.bool(), ILLEGAL_ACTION_LOGITS_PENALTY
+    )
     max_next_q = torch.max(legal_target_q_values, dim=1)[0]
 
     target = (
@@ -427,7 +428,7 @@ class DQN(rl_agent.AbstractAgent):
         relative or absolute but the filename should be included. For example:
         optimizer.pt or /path/to/optimizer.pt
     """
-    torch.load(self._q_network, data_path)
-    torch.load(self._target_q_network, data_path)
+    self._q_network = torch.load(data_path)
+    self._target_q_network = torch.load(data_path)
     if optimizer_data_path is not None:
-      torch.load(self._optimizer, optimizer_data_path)
+      self._optimizer = torch.load(optimizer_data_path)
