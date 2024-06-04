@@ -7,3 +7,7 @@
 1. Reward trasformation (보상값을 강화)
 2. dynamic step (한 지점으로 수렴화)
 3. 정책값 업데이트
+
+* Observation
+  1. 유닛 마다 2 Action
+  2. 
