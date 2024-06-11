@@ -102,6 +102,7 @@ class baseTState : public State {
   virtual void set_next_unit_to_action_rand_all_p(); // 모든 플레이어의 유닛에서 다음행동 유닛 뽑기
   virtual void set_next_unit_to_action_rand_per_p(); // 특정 플레이어에게서 다음행동 유닛 랜덤뽑기
   Unit& get_unit_by_uniqueId(int unique_id);
+  virtual void ObservationTensor(Player player, absl::Span<float> values) const;
   
   MapCoord map_size;
   MapState msn; //map state now
