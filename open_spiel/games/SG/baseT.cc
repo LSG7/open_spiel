@@ -359,7 +359,8 @@ namespace open_spiel
       current_pas = PA_Obs;
 
       // obs 채널 깊이. network_input.md
-      obs_total_channel_depth = 3 + (piece_type_n * 3) + last_move_len + num_players_ ;
+      // 지형 + (병종수 * 3(OP public,P private, P public)) + move +  무승부까지남은수 + 나에게보이는유닛들남은체력
+      obs_total_channel_depth = 3 + (piece_type_n * 3) + last_move_len + 1 + 1 ;
       obs_v.assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
 
       // 보금품 남은 수 
