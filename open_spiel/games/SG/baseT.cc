@@ -361,7 +361,12 @@ namespace open_spiel
       // obs 채널 깊이. network_input.md
       // 지형 + (병종수 * 3(OP public,P private, P public)) + move +  무승부까지남은수 + 나에게보이는유닛들남은체력
       obs_total_channel_depth = 3 + (piece_type_n * 3) + last_move_len + 1 + 1 ;
-      obs_v.assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
+      std::vector<FP16> empty_obs_v;
+      obs_per_p_v.assign(num_players_, empty_obs_v);
+      for (int n=0; n<num_players_; n++) {
+        obs_per_p_v[n].assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
+      }
+      
 
       // 보금품 남은 수 
       supply_v.assign(num_players_, supply_n);
@@ -565,7 +570,7 @@ namespace open_spiel
     // Spiel 에 구현되있는 ObservationTensor 함수들이 비효율적이다. 매번 vector 생성하는것.
     void baseTState::ObservationTensorBaseT(Player player)
     {
-      std::fill(obs_v.begin(), obs_v.end(), 0);
+      //std::fill(obs_v.begin(), obs_v.end(), 0);
       int index = 0;
       
       // 지형정보
