@@ -360,7 +360,7 @@ namespace open_spiel
 
       // obs 채널 깊이. network_input.md
       // 지형 + (병종수 * 3(OP public,P private, P public)) + move +  무승부까지남은수 + 나에게보이는유닛들남은체력
-      obs_total_channel_depth = 3 + (piece_type_n * 3) + last_move_len + 1 + 1 ;
+      obs_total_channel_depth = land_info_channel_depth + (piece_type_n * 3) + last_move_len + 1 + 1 ;
       std::vector<FP16> empty_obs_v;
       obs_per_p_v.assign(num_players_, empty_obs_v);
       for (int n=0; n<num_players_; n++) {
@@ -590,7 +590,18 @@ namespace open_spiel
 
     void baseTState::ObservationTensor(Player player,
                                  absl::Span<float> values) const {
-      // TODO 여기다가 구현
+      // DeepNash.md
+      // 0. 지리정보 채우기. channel = land_info_channel_depth
+
+      // 1. Private Info. c = piece_type_n
+
+      // 2. Op Public Info. c = piece_type_n
+
+      // 3. My Public Info. c = piece_type_n
+
+      // 4. last move. c = last_move_len
+
+      // 5. draw ratio
     }
   } // baseT
 } // open_spiel
