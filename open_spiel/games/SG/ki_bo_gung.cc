@@ -93,13 +93,10 @@ void kbgState::init_map()
 
   // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
   // [z][row][col]
-  Cell normal_ground = {GT_Normal, PNone, UNone, UNone, obp};
-  std::vector<Cell> col_1d(map_size.x, normal_ground);
-  std::vector<std::vector<Cell>> row_col_2d(map_size.y, col_1d);
-  std::vector<std::vector<std::vector<Cell>>> z_row_col_3d(map_size.z, row_col_2d);
-  msn.cells_v = z_row_col_3d;
+  init_cells();
 
   // TODO : obs 초기화
+  init_obs();
 
   // 호수 만들기 
   Cell water_ground = {GT_CannotEnter, PNone, UNone, UNone, obp};

@@ -105,6 +105,10 @@ class baseTState : public State {
   virtual void ObservationTensor(Player player, absl::Span<float> values) const;
   void set_cells_and_obs(struct Cell_set_flags flags, struct Cell cell, struct MapCoord crd,
                         int player_n, int8_t ref_c);
+  void init_obs();
+  void cells_to_obs();
+
+  void init_cells();
   
   MapCoord map_size;
   MapState msn; //map state now
@@ -120,7 +124,7 @@ class baseTState : public State {
   // Observation info
   int land_info_channel_depth;
   int piece_type_n;
-  std::vector<std::vector<FP16>> obs_per_p_v;
+  std::vector<std::vector<std::vector<std::vector<int8_t>>>> obs_per_p_v;
   int obs_total_channel_depth;
   int last_move_len;
   std::vector<FP16> supply_v;

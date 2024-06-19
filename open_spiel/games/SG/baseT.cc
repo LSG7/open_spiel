@@ -361,10 +361,11 @@ namespace open_spiel
       // obs 채널 깊이. network_input.md
       // 지형 + (병종수 * 3(OP public,P private, P public)) + move +  무승부까지남은수 + 나에게보이는유닛들남은체력
       obs_total_channel_depth = land_info_channel_depth + (piece_type_n * 3) + last_move_len + 1 + 1 ;
-      std::vector<FP16> empty_obs_v;
+      std::vector<std::vector<std::vector<int8_t>>> empty_obs_v;
       obs_per_p_v.assign(num_players_, empty_obs_v);
       for (int n=0; n<num_players_; n++) {
-        obs_per_p_v[n].assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
+        //obs_per_p_v[n]
+        //obs_per_p_v[n].assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
       }
       
 
@@ -632,6 +633,35 @@ namespace open_spiel
           msn.cells_v[crd.z][crd.y][crd.x].being_observed_by = cell.being_observed_by;
         }
       }
+    }
+
+    void baseTState::init_obs()
+    {
+      cells_to_obs();
+    }
+    void baseTState::cells_to_obs()
+    {
+      // 
+      for (int z = 0; z < map_size.z; z++) {
+        for (int y = 0; y < map_size.y; y++) {
+          for (int x = 0; x < map_size.x; x++) {
+            for (int p = 0; p < num_players_; p++) {
+              //  지형정보 3 채널
+              //obs_per_p_v[p]
+            }
+          }
+        }
+      }
+    }
+
+    void baseTState::init_cells()
+    {
+      std::vector<int8_t> obp(num_players_, 0);
+      Cell normal_ground = {GT_Normal, PNone, UNone, UNone, obp};
+      std::vector<Cell> col_1d(map_size.x, normal_ground);
+      std::vector<std::vector<Cell>> row_col_2d(map_size.y, col_1d);
+      std::vector<std::vector<std::vector<Cell>>> z_row_col_3d(map_size.z, row_col_2d);
+      msn.cells_v = z_row_col_3d;
     }
   } // baseT
 } // open_spiel
