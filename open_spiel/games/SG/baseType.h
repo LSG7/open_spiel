@@ -41,6 +41,14 @@ struct Cell {
     std::vector<int8_t> being_observed_by; // 이 셀을 관찰 중인 플레이어별 ref_count P0 : being_observed_by[0] 
 };
 
+struct Cell_set_flags {
+    bool is_gtype = false;  //groud_type
+    bool is_op = false;     //occupying_player
+    bool is_oui = false;    //occupying_unit_id
+    bool is_ouui = false;   //occupying_unique_unit_id
+    bool is_bob = false;    //being_observed_by
+};
+
 class Unit {
 public:
     bool is_alive;

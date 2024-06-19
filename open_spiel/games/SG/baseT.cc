@@ -588,10 +588,12 @@ namespace open_spiel
       action_mv(player_id, unit_id_count[player_id], crd, true);
     }
 
+    // msn.cell_v 의 정보를 obs_per_p_v 로 옮겨야함
     void baseTState::ObservationTensor(Player player,
                                  absl::Span<float> values) const {
       // DeepNash.md
       // 0. 지리정보 채우기. channel = land_info_channel_depth
+
 
       // 1. Private Info. c = piece_type_n
 
@@ -602,6 +604,25 @@ namespace open_spiel
       // 4. last move. c = last_move_len
 
       // 5. draw ratio
+    }
+
+    void baseTState::set_cells_and_obs(struct Cell_set_flags flags, struct Cell cell, struct MapCoord crd)
+    {
+      if (flags.is_gtype) {
+        msn.cells_v[crd.z][crd.y][crd.x].ground_type = cell.ground_type;
+      }
+      if (flags.is_op) {
+        msn.cells_v[crd.z][crd.y][crd.x].occupying_player = cell.occupying_player;
+      }
+      if (flags.is_oui) {
+          msn.cells_v[crd.z][crd.y][crd.x].occupying_unit_id = cell.occupying_unit_id;
+      }
+      if (flags.is_ouui) {
+        msn.cells_v[crd.z][crd.y][crd.x].occupying_unique_unit_id = cell.occupying_unique_unit_id;
+      }
+      if (flags.is_bob) {
+        msn.cells_v[crd.z][crd.y][crd.x].being_observed_by = cell.being_observed_by;
+      }
     }
   } // baseT
 } // open_spiel
