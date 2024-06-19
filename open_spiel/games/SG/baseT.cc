@@ -461,18 +461,21 @@ namespace open_spiel
           if (!is_init)
           {
             // 1. 현재 유닛이 떠난다. 위치한 셀 정보 수정. 차지한 플레이어 유닛 없음으로
-            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
-            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = UNone;
-            msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unique_unit_id = UNone;
+            //msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = PNone;
+            //msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = UNone;
+            ///msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unique_unit_id = UNone;
+            set_cells_and_obs({0,1,1,1,0},{GT_None,PNone,UNone,UNone,{}},{mine.crd.z,mine.crd.y,mine.crd.x},-1,-1);
             // 2. 현재 유닛이 위치한 셀 기준 주위 셀 obs ref_count 수정 
             scout(pn, unit_id, ObsRefDown);
           }
 
           // 3. 유닛을 타겟 지점으로 이동시킨다.
           mine.crd = tg_crd;
-          msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = mine.player;
-          msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = mine.unit_id;
-          msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unique_unit_id = mine.unique_unit_id;
+          //msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_player = mine.player;
+          ///msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = mine.unit_id;
+          //msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unique_unit_id = mine.unique_unit_id;
+          set_cells_and_obs({0,1,1,1,0},{GT_None,mine.player,mine.unit_id,mine.unique_unit_id,{}},
+          {mine.crd.z,mine.crd.y,mine.crd.x},-1,-1);
           // 4. 이동한지점에서 주위 맵 관찰한다. 
           scout(pn, unit_id, ObsRefUp);
           // 5. 유닛 obs 를 현재 위치 셀과 같게 한다. TODO : 스텔스 가진 유닛이면 다르게 구현해야 한다.
@@ -552,7 +555,8 @@ namespace open_spiel
             if (tg_z >= 0 && tg_z < map_size.z && tg_y >= 0 && tg_y < map_size.y && tg_x >= 0 && tg_x < map_size.x)
             {
               // 해당 셀 Obs Ref count 수정 
-              msn.cells_v[tg_z][tg_y][tg_x].being_observed_by[pn] += o_r_c;
+              //msn.cells_v[tg_z][tg_y][tg_x].being_observed_by[pn] += o_r_c;
+              set_cells_and_obs({0,0,0,0,1},{GT_None,0,0,0,{}},{tg_z,tg_y,tg_x},pn,o_r_c);
 
               // 그 셀에 유닛이 존재한다면 셀과 같은 obs 값 대입
               if (msn.cells_v[tg_z][tg_y][tg_x].occupying_player != PNone)
@@ -624,6 +628,8 @@ namespace open_spiel
       if (flags.is_bob) {
         if (player_n != -1) {
           msn.cells_v[crd.z][crd.y][crd.x].being_observed_by[player_n] = ref_c;
+        } else {
+          msn.cells_v[crd.z][crd.y][crd.x].being_observed_by = cell.being_observed_by;
         }
       }
     }

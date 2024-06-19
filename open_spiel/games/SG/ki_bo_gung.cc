@@ -99,15 +99,22 @@ void kbgState::init_map()
   std::vector<std::vector<std::vector<Cell>>> z_row_col_3d(map_size.z, row_col_2d);
   msn.cells_v = z_row_col_3d;
 
+  // TODO : obs 초기화
+
   // 호수 만들기 
   Cell water_ground = {GT_CannotEnter, PNone, UNone, UNone, obp};
-  msn.cells_v[0][4][3] = water_ground;
-  msn.cells_v[0][4][4] = water_ground;
-  msn.cells_v[0][4][5] = water_ground;
-  msn.cells_v[0][5][3] = water_ground;
-  msn.cells_v[0][5][4] = water_ground;
-  msn.cells_v[0][5][5] = water_ground;
-
+  //msn.cells_v[0][4][3] = water_ground;
+  //msn.cells_v[0][4][4] = water_ground;
+  //msn.cells_v[0][4][5] = water_ground;
+  //msn.cells_v[0][5][3] = water_ground;
+  //msn.cells_v[0][5][4] = water_ground;
+  //msn.cells_v[0][5][5] = water_ground;
+  set_cells_and_obs({1,1,1,1,1},water_ground,{0,4,3},-1,-1);
+  set_cells_and_obs({1,1,1,1,1},water_ground,{0,4,4},-1,-1);
+  set_cells_and_obs({1,1,1,1,1},water_ground,{0,4,5},-1,-1);
+  set_cells_and_obs({1,1,1,1,1},water_ground,{0,5,3},-1,-1);
+  set_cells_and_obs({1,1,1,1,1},water_ground,{0,5,4},-1,-1);
+  set_cells_and_obs({1,1,1,1,1},water_ground,{0,5,5},-1,-1);
 }
 
 // 2번 구현 함수  
