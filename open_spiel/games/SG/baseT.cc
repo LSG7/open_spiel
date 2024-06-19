@@ -606,7 +606,8 @@ namespace open_spiel
       // 5. draw ratio
     }
 
-    void baseTState::set_cells_and_obs(struct Cell_set_flags flags, struct Cell cell, struct MapCoord crd)
+    void baseTState::set_cells_and_obs
+    (struct Cell_set_flags flags, struct Cell cell, struct MapCoord crd, int player_n, int8_t ref_c)
     {
       if (flags.is_gtype) {
         msn.cells_v[crd.z][crd.y][crd.x].ground_type = cell.ground_type;
@@ -621,7 +622,9 @@ namespace open_spiel
         msn.cells_v[crd.z][crd.y][crd.x].occupying_unique_unit_id = cell.occupying_unique_unit_id;
       }
       if (flags.is_bob) {
-        msn.cells_v[crd.z][crd.y][crd.x].being_observed_by = cell.being_observed_by;
+        if (player_n != -1) {
+          msn.cells_v[crd.z][crd.y][crd.x].being_observed_by[player_n] = ref_c;
+        }
       }
     }
   } // baseT
