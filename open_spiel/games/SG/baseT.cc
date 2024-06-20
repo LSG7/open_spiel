@@ -641,12 +641,13 @@ namespace open_spiel
             // obs 채널 깊이. network_input.md
       // 지형 + (병종수 * 3(OP public,P private, P public)) + move +  무승부까지남은수 + 나에게보이는유닛들남은체력
       obs_total_channel_depth = land_info_channel_depth + (piece_type_n * 3) + last_move_len + 1 + 1 ;
-      std::vector<std::vector<std::vector<int8_t>>> empty_obs_v;
-      obs_per_p_v.assign(num_players_, empty_obs_v);
-      for (int n=0; n<num_players_; n++) {
-        //obs_per_p_v[n]
-        //obs_per_p_v[n].assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
-      }
+      
+      std::vector<int8_t> channel_vector(obs_total_channel_depth, 0); //(c,1,1) vector 
+      std::vector<std::vector<int8_t>> x_vector(map_size.x, channel_vector);
+      std::vector<std::vector<std::vector<int8_t>>> yx_vector(map_size.y, x_vector);
+      std::vector<std::vector<std::vector<std::vector<int8_t>>>> zyx_vector(map_size.z, yx_vector);
+
+      obs_per_p_v.assign(num_players_, zyx_vector);
 
       cells_to_obs();
     }

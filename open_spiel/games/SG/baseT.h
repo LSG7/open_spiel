@@ -121,7 +121,7 @@ class baseTState : public State {
   // Observation info
   int land_info_channel_depth;
   int piece_type_n;
-  std::vector<std::vector<std::vector<std::vector<int8_t>>>> obs_per_p_v;
+  std::vector<std::vector<std::vector<std::vector<std::vector<int8_t>>>>> obs_per_p_v; //z,y,x,c
   int obs_total_channel_depth;
   int last_move_len;
   std::vector<FP16> supply_v;
