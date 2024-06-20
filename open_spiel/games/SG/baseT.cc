@@ -319,13 +319,18 @@ namespace open_spiel
 
     void baseTState::init_first
     (int max_u, int piece_tn, int last_mn, int supply_n,
-     int land_channel_d, UnitSelectionOrder uso)
+     int land_channel_d, UnitSelectionOrder uso, MapCoord ms)
     {
       land_info_channel_depth = land_channel_d;
       max_units = max_u;
       piece_type_n = piece_tn;
       last_move_len = last_mn;
       unit_selection_order = uso;
+
+      // 1. 맵 사이즈 결정 
+      map_size.x = ms.x;
+      map_size.y = ms.y;
+      map_size.z = ms.z;
 
       // 플레이어 수 만큼 아이디 카운트용 벡터에 0으로 채운다.
       unit_id_count.assign(num_players_, UNone);
@@ -336,7 +341,7 @@ namespace open_spiel
       // 플레이서 수 만큼 현상태의 유닛 벡터에 빈 유닛벡터 채운다.
       std::vector<Unit> empty_units_v;
       msn.units_v.assign(num_players_, empty_units_v);
-                
+      
       // 플레이어 수 만큼 턴 남은 유닛 셋 채운다.
       switch (unit_selection_order) {
         case USO_ALL_P_RAND :

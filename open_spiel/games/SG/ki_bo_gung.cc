@@ -56,7 +56,7 @@ kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
 {
   //무조건 맨 처음에 불러줘야 함
   // max_unit=4, piece_type_n=3, last_m=5, supply=20, land_c=3
-  init_first(4, 3, 5, 20, 3, USO_ALL_P_RAND); 
+  init_first(4, 3, 5, 20, 3, USO_ALL_P_RAND,{1,10,10}); 
 }
 
 kbgState::~kbgState()
@@ -78,10 +78,7 @@ void kbgState::init_map()
 {
   /* 10X10 맵에서 가운데에 1X4 호수가 있다.  */
 
-  // 1. 맵 사이즈 결정 
-  map_size.x = 10;
-  map_size.y = 10;
-  map_size.z = 1;
+
 
   // 비어있는 관찰자 벡터
   std::vector<int8_t> obp(num_players_, 0);
