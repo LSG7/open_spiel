@@ -92,8 +92,7 @@ class baseTState : public State {
   virtual void scout(int pn, int unit_id, ObsRefCount o_r_c);  // unit 주변 셀들을 관찰한다.
   virtual void init_first
   (int max_u, int piece_tn, int last_mn, int supply_n, int land_channel_d, UnitSelectionOrder uso);
-  virtual void init_map();
-  virtual void init_unit();
+
   virtual std::string get_cell_observation_string(MapState state, MapCoord crd, int p) const;
   virtual std::string get_set_error(std::string log, bool is_save);
   virtual MapCoord id_to_crd(Action a);
@@ -105,11 +104,9 @@ class baseTState : public State {
   virtual void ObservationTensor(Player player, absl::Span<float> values) const;
   void set_cells_and_obs(struct Cell_set_flags flags, struct Cell cell, struct MapCoord crd,
                         int player_n, int8_t ref_c);
-  void init_obs();
+  
   void cells_to_obs();
 
-  void init_cells();
-  
   MapCoord map_size;
   MapState msn; //map state now
   std::vector<MapState> Map_history;
@@ -131,7 +128,10 @@ class baseTState : public State {
   std::vector<P_UnitId> unique_id_to_player_id_v;
   
  private:
-
+  void init_cells();
+  void init_obs();
+  virtual void init_map();
+  virtual void init_unit();
  /********** 각 게임 별 전용 ***********/
   
 

@@ -358,15 +358,8 @@ namespace open_spiel
       msn.current_uas = UA_Act_0;
       current_pas = PA_Obs;
 
-      // obs 채널 깊이. network_input.md
-      // 지형 + (병종수 * 3(OP public,P private, P public)) + move +  무승부까지남은수 + 나에게보이는유닛들남은체력
-      obs_total_channel_depth = land_info_channel_depth + (piece_type_n * 3) + last_move_len + 1 + 1 ;
-      std::vector<std::vector<std::vector<int8_t>>> empty_obs_v;
-      obs_per_p_v.assign(num_players_, empty_obs_v);
-      for (int n=0; n<num_players_; n++) {
-        //obs_per_p_v[n]
-        //obs_per_p_v[n].assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
-      }
+      init_cells();
+      init_obs();
       
 
       // 보금품 남은 수 
@@ -374,6 +367,9 @@ namespace open_spiel
 
       //P_UnitId empty_id = {-1,-1,-1};
       //unique_id_to_player_id_v.assign(max_units*num_players_, empty_id);
+
+      init_map();
+      init_unit();
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링
@@ -637,6 +633,16 @@ namespace open_spiel
 
     void baseTState::init_obs()
     {
+            // obs 채널 깊이. network_input.md
+      // 지형 + (병종수 * 3(OP public,P private, P public)) + move +  무승부까지남은수 + 나에게보이는유닛들남은체력
+      obs_total_channel_depth = land_info_channel_depth + (piece_type_n * 3) + last_move_len + 1 + 1 ;
+      std::vector<std::vector<std::vector<int8_t>>> empty_obs_v;
+      obs_per_p_v.assign(num_players_, empty_obs_v);
+      for (int n=0; n<num_players_; n++) {
+        //obs_per_p_v[n]
+        //obs_per_p_v[n].assign(map_size.x * map_size.y * (obs_total_channel_depth * map_size.z), 0);
+      }
+
       cells_to_obs();
     }
     void baseTState::cells_to_obs()
@@ -647,7 +653,7 @@ namespace open_spiel
           for (int x = 0; x < map_size.x; x++) {
             for (int p = 0; p < num_players_; p++) {
               //  지형정보 3 채널
-              //obs_per_p_v[p]
+              
             }
           }
         }

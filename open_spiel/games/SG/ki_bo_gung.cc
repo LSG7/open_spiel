@@ -57,11 +57,6 @@ kbgState::kbgState(std::shared_ptr<const Game> game) : baseTState(game)
   //무조건 맨 처음에 불러줘야 함
   // max_unit=4, piece_type_n=3, last_m=5, supply=20, land_c=3
   init_first(4, 3, 5, 20, 3, USO_ALL_P_RAND); 
-
-  // 맵을 생성하고
-  init_map();
-  // 말을 생성하고 배치하고 
-  init_unit();
 }
 
 kbgState::~kbgState()
@@ -93,10 +88,7 @@ void kbgState::init_map()
 
   // 2. 맵 만들기. 3차원 이므로 1차원부터 만들어서 삽입해야 한다. 
   // [z][row][col]
-  init_cells();
-
-  // TODO : obs 초기화
-  init_obs();
+  //init_cells_and_obs();
 
   // 호수 만들기 
   Cell water_ground = {GT_CannotEnter, PNone, UNone, UNone, obp};
