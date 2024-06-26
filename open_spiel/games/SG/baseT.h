@@ -35,6 +35,7 @@
 
 #include "open_spiel/spiel.h"
 #include "baseType.h"
+#include "user_specified_type.h"
 
 namespace open_spiel {
 namespace baseT {
@@ -106,6 +107,7 @@ class baseTState : public State {
                         int player_n, int8_t ref_c);
   
   void cells_to_obs();
+  int is_watched_by_others(Player player, std::vector<int8_t>& being_observed_by);
 
   MapCoord map_size;
   MapState msn; //map state now
@@ -117,6 +119,7 @@ class baseTState : public State {
   std::vector<int8_t> turn_unit_all_p_v; // 모든 플레이어의 유닛 순서
   PlayerActionState current_pas;
   UnitSelectionOrder unit_selection_order;
+  int ground_type_num;
 
   // Observation info
   int land_info_channel_depth;

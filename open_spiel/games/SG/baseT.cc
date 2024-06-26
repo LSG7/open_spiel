@@ -326,6 +326,7 @@ namespace open_spiel
       piece_type_n = piece_tn;
       last_move_len = last_mn;
       unit_selection_order = uso;
+      ground_type_num = sizeof(GroundType) - 1;
 
       // 1. 맵 사이즈 결정 
       map_size.x = ms.x;
@@ -365,6 +366,7 @@ namespace open_spiel
 
       init_cells();
       init_obs();
+      cells_to_obs();
       
 
       // 보금품 남은 수 
@@ -532,6 +534,21 @@ namespace open_spiel
       }
     }
 
+    int baseTState::is_watched_by_others(Player player, std::vector<int8_t>& being_observed_by)
+    {
+      int count = 0;
+
+      for (int i = 0; i < being_observed_by.size(); i++) {
+        if (i == player) {
+          continue;
+        }
+
+        if (being_observed_by[i] > 0) {
+          count++;
+        }
+      }
+    }
+
     // cell obs check function
     void baseTState::scout(int pn, int unit_id, ObsRefCount o_r_c) // ref_ count should be -1 or 1
     {
@@ -647,19 +664,54 @@ namespace open_spiel
       std::vector<std::vector<std::vector<int8_t>>> yx_vector(map_size.y, x_vector);
       std::vector<std::vector<std::vector<std::vector<int8_t>>>> zyx_vector(map_size.z, yx_vector);
 
-      obs_per_p_v.assign(num_players_, zyx_vector);
-
-      cells_to_obs();
+    obs_per_p_v.assign(num_players_, zyx_vector);
     }
+
+    // 이거 존나 복잡하다.
     void baseTState::cells_to_obs()
     {
-      // 
+      // map cell 을 순회하며 obs 에 데이터 넣는다.
+      // cell(1x1) 하나가 obs(1xc) 벡터 하나로 바뀐다.
+      // cells_v[z][y][x] -> obs_per_p_v[p][z][y][x] = vector<int8>
       for (int z = 0; z < map_size.z; z++) {
         for (int y = 0; y < map_size.y; y++) {
           for (int x = 0; x < map_size.x; x++) {
             for (int p = 0; p < num_players_; p++) {
-              //  지형정보 3 채널
+              // 플레이어별로 vector<int8_t> 벡터 하나 만들어야 한다.
+              // 지형정보
+              // player's own unit info
+              // 
+              std::vector<int8_t>& nowv = obs_per_p_v[p][z][y][x];
+              nowv.assign(nowv.size(), 0);  // 초기화
+              int last_index = 0;
+
+              // 지형정보 3 채널
+              nowv[msn.cells_v[z][y][x].ground_type] = 1; // one-hot encoding
+              last_index += ground_type_num;
+
+              // player's own unit info
+              if ( msn.cells_v[z][y][x].occupying_player == p &&
+              is_watched_by_others(p, msn.cells_v[z][y][x].being_observed_by) == 0 )
+              {
+                nowv[last_index + msn.units_v[p][msn.cells_v[z][y][x].occupying_unit_id].unit_class] = 1;
+              }
+              last_index += sizeof(UnitClass) - 1;
               
+              // Op player's public info
+              if ( msn.cells_v[z][y][x].occupying_player != p && 
+                msn.cells_v[z][y][x].occupying_player != PNone &&
+                msn.cells_v[z][y][x].being_observed_by[p] > 0) {
+                nowv[last_index + msn.units_v[p][msn.cells_v[z][y][x].occupying_unit_id].unit_class] = 1;
+              }
+              last_index += sizeof(UnitClass) - 1;
+
+              // player's public info
+              if ( msn.cells_v[z][y][x].occupying_player == p &&
+                is_watched_by_others(p, msn.cells_v[z][y][x].being_observed_by) != 0 )
+              {
+                nowv[last_index + msn.units_v[p][msn.cells_v[z][y][x].occupying_unit_id].unit_class] = 1;
+              }
+              last_index += sizeof(UnitClass) - 1;
             }
           }
         }
