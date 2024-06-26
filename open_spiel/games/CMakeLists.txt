@@ -194,6 +194,7 @@ set(GAME_SOURCES
   SG/baseT.cc
   SG/baseType.h
   SG/baseT_utils.cc
+  SG/socket_server.cc
 )
 
 if (${OPEN_SPIEL_BUILD_WITH_HANABI})

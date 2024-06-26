@@ -317,6 +317,12 @@ namespace open_spiel
       // TODO
     }
 
+    void baseTState::init_server()
+    {
+      ipc_server = std::make_unique<SocketServer>(7777);
+      ipc_server->start();
+    }
+
     void baseTState::init_first
     (int max_u, int piece_tn, int last_mn, int supply_n,
      int land_channel_d, UnitSelectionOrder uso, MapCoord ms)
@@ -377,6 +383,8 @@ namespace open_spiel
 
       init_map();
       init_unit();
+      init_server();
+
     }
 
     // player p 가 바라보는 셀의 정보에 따른 스트링

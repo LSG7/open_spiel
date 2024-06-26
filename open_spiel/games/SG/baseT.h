@@ -36,6 +36,7 @@
 #include "open_spiel/spiel.h"
 #include "baseType.h"
 #include "user_specified_type.h"
+#include "socket_server.h"
 
 namespace open_spiel {
 namespace baseT {
@@ -129,12 +130,16 @@ class baseTState : public State {
   int last_move_len;
   std::vector<FP16> supply_v;
   std::vector<P_UnitId> unique_id_to_player_id_v;
+
+  // ipc
+   std::unique_ptr<SocketServer> ipc_server;
   
  private:
   void init_cells();
   void init_obs();
   virtual void init_map();
   virtual void init_unit();
+  virtual void init_server();
  /********** 각 게임 별 전용 ***********/
   
 
