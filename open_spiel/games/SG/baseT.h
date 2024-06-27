@@ -140,6 +140,7 @@ class baseTState : public State {
   virtual void init_map();
   virtual void init_unit();
   virtual void init_server();
+  void set_obs_onehot_vector(std::vector<int8_t>& now_obs_v, Cell& now_cell, int p);
  /********** 각 게임 별 전용 ***********/
   
 
