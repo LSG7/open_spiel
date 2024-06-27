@@ -327,6 +327,8 @@ namespace open_spiel
     (int max_u, int piece_tn, int last_mn, int supply_n,
      int land_channel_d, UnitSelectionOrder uso, MapCoord ms)
     {
+      init_server();
+
       land_info_channel_depth = land_channel_d;
       max_units = max_u;
       piece_type_n = piece_tn;
@@ -383,7 +385,7 @@ namespace open_spiel
 
       init_map();
       init_unit();
-      init_server();
+ 
 
     }
 

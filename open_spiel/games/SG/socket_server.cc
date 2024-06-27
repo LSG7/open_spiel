@@ -44,7 +44,11 @@ void SocketServer::start() {
 
     running = true;
     accept_thread = std::thread(&SocketServer::accept_connections, this);
-    std::cout << "Server is running and accepting connections on port " << port << "...\n";
+    std::cout << "Server is running and waitring for client connections on port " << port << " \n";
+    std::cout << "When a client connects, the log will appear here.\n";
+    std::cout << "Main thread is blocked here. If you want to continue, input any\n";
+    std::string input;
+    std::cin >> input;
 }
 
 void SocketServer::stop() {
@@ -85,6 +89,10 @@ void SocketServer::handle_client(int client_socket)
             // 데이터가 수신된 경우
             // buffer에 있는 데이터를 처리하거나 필요에 따라 다른 동작을 수행
             std::cout << "Server recieved data\n";
+            
+            if (strcmp(buffer,"get_obs") == 0) {
+
+            }
         } else if (bytes_received == 0) {
             // 클라이언트가 연결을 종료한 경우
             // 적절한 처리를 수행

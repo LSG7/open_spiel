@@ -12,6 +12,11 @@
 
 * bfloat16 변수가 컴파일러마다 다르다.
 
+# Program flow
+1. User 가 만든 게임(BaseT 를 상속한) 의 State 객체가 생성될 때 init_first() 를 호출한다.(반드시)
+2. init_first() 에서 가장 먼저 init_server() 를 호출하고 파이선 클라이언트가 달라붙기를 기다린다.
+기다리지 않고 진행해도 됨.
+
 # Ground Rule  
   * 정형화 시켜서 재사용 원활히
   * 순차적 주석으로 로직 심플&이해쉽게
