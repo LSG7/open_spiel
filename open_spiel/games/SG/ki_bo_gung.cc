@@ -95,12 +95,12 @@ void kbgState::init_map()
   //msn.cells_v[0][5][3] = water_ground;
   //msn.cells_v[0][5][4] = water_ground;
   //msn.cells_v[0][5][5] = water_ground;
-  set_cells_and_obs({1,1,1,1,1},water_ground,{0,4,3},-1,-1);
-  set_cells_and_obs({1,1,1,1,1},water_ground,{0,4,4},-1,-1);
-  set_cells_and_obs({1,1,1,1,1},water_ground,{0,4,5},-1,-1);
-  set_cells_and_obs({1,1,1,1,1},water_ground,{0,5,3},-1,-1);
-  set_cells_and_obs({1,1,1,1,1},water_ground,{0,5,4},-1,-1);
-  set_cells_and_obs({1,1,1,1,1},water_ground,{0,5,5},-1,-1);
+  set_cell_and_obs({1,1,1,1,1},water_ground,{0,4,3},-1,-1,{false,-1,-1,ObsRefNone});
+  set_cell_and_obs({1,1,1,1,1},water_ground,{0,4,4},-1,-1,{false,-1,-1,ObsRefNone});
+  set_cell_and_obs({1,1,1,1,1},water_ground,{0,4,5},-1,-1,{false,-1,-1,ObsRefNone});
+  set_cell_and_obs({1,1,1,1,1},water_ground,{0,5,3},-1,-1,{false,-1,-1,ObsRefNone});
+  set_cell_and_obs({1,1,1,1,1},water_ground,{0,5,4},-1,-1,{false,-1,-1,ObsRefNone});
+  set_cell_and_obs({1,1,1,1,1},water_ground,{0,5,5},-1,-1,{false,-1,-1,ObsRefNone});
 }
 
 // 2번 구현 함수  

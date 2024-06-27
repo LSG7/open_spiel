@@ -104,8 +104,8 @@ class baseTState : public State {
   virtual void set_next_unit_to_action_rand_per_p(); // 특정 플레이어에게서 다음행동 유닛 랜덤뽑기
   Unit& get_unit_by_uniqueId(int unique_id);
   virtual void ObservationTensor(Player player, absl::Span<float> values) const;
-  void set_cells_and_obs(struct Cell_set_flags flags, struct Cell cell, struct MapCoord crd,
-                        int player_n, int8_t ref_c);
+  void set_cell_and_obs(struct Cell_set_flags flags, struct Cell cell, struct MapCoord crd,
+                        int player_n, int8_t ref_c, struct scout_info sc_info);
   
   void cells_to_obs();
   int is_watched_by_others(Player player, std::vector<int8_t>& being_observed_by);
