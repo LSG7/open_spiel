@@ -4,6 +4,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
+#include <string.h>
 
 #include "socket_server.h"
 
@@ -68,6 +69,7 @@ void SocketServer::accept_connections() {
             }
             continue;
         }
+        std::cout << "Client connected\n";
         std::thread(&SocketServer::handle_client, this, new_socket).detach();
     }
 }
@@ -82,11 +84,11 @@ void SocketServer::handle_client(int client_socket)
         if (bytes_received > 0) {
             // 데이터가 수신된 경우
             // buffer에 있는 데이터를 처리하거나 필요에 따라 다른 동작을 수행
-            std::cout << "Server recieved data";
+            std::cout << "Server recieved data\n";
         } else if (bytes_received == 0) {
             // 클라이언트가 연결을 종료한 경우
             // 적절한 처리를 수행
-            std::cout << "Client disconnected";
+            std::cout << "Client disconnected\n";
             break;
         } else {
             // 오류 발생
