@@ -1,1 +1,1 @@
-cmake -DPython3_EXECUTABLE=$(which python3) -DCMAKE_CXX_COMPILER=${CXX} -DCMAKE_C_COMPILER=${CC} -DBUILD_TYPE=Debug ../open_spiel
+cmake -DPython3_EXECUTABLE=$(which python3) -DCMAKE_CXX_COMPILER=${CXX} -DCMAKE_C_COMPILER=${CC} -DBUILD_TYPE=Debug -DUSE_OpenMP=ON ../open_spiel

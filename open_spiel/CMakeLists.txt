@@ -283,6 +283,20 @@ if (OPEN_SPIEL_BUILD_WITH_ORTOOLS)
   # target_link_libraries(your_target_executable ${ORTOOLS_LIBS})
 endif()
 
+IF(USE_OpenMP)
+  FIND_PACKAGE(OpenMP)
+  IF(OPENMP_FOUND)
+    SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    SET(CMAKE_CXX_FLAGS " ${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+  ENDIF()
+  if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+    include_directories("/opt/homebrew/opt/libomp/include")
+    link_directories("/opt/homebrew/opt/libomp/lib")
+  endif()
+ENDIF()
+
+
+
 # We have the parent of this directory in the include path, so that we can
 # include for example "open_spiel/spiel.h" (assuming this directory is named
 # open_spiel).
