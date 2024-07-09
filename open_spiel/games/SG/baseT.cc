@@ -1,4 +1,5 @@
 #include <cmath>
+#include <omp.h>
 #include "open_spiel/games/SG/baseT.h"
 #include "open_spiel/spiel_utils.h"
 
@@ -279,6 +280,8 @@ namespace open_spiel
       int p = CurrentPlayer();
       if (turn_unit_per_p_v[p].size() == 0)
       {
+        #pragma omp parallel
+        #pragma omp for
         for (int i = 0; i < max_units; i++)
         {
           if (msn.units_v[p][i].is_alive)
@@ -586,6 +589,7 @@ namespace open_spiel
           count++;
         }
       }
+      return count;
     }
 
     // cell obs check function
@@ -598,13 +602,15 @@ namespace open_spiel
       // 타겟 셀 z,y 좌표와 unit의 z,y 좌표의 차이만큼 x 를 덜 간다.
       // 대각선 하면 안된다. 거리차이 많이 난다.
       // z + y + x = u.vw_dstc
+      #pragma omp parallel
+      #pragma omp for
       for (int z = -u.vw_dstc; z <= u.vw_dstc; z++)
       {
         for (int y = -(u.vw_dstc - std::abs(z)); y <= (u.vw_dstc - std::abs(z)); y++)
         {
           for (int x = -(u.vw_dstc - std::abs(z) - std::abs(y)); x <= (u.vw_dstc - std::abs(z) - std::abs(y)); x++)
           {
-            //
+            //printf("thread num %d \n", omp_get_thread_num());
             int tg_z = u.crd.z + z;
             int tg_y = u.crd.y + y;
             int tg_x = u.crd.x + x;
@@ -698,6 +704,8 @@ namespace open_spiel
       if (sc_info.do_scout)
         scout(sc_info.p, sc_info.unit_id, sc_info.o_r_c);
 
+      #pragma omp parallel
+      #pragma omp for
       for (int p = 0; p < num_players_; p++) {
         set_obs_onehot_vector(obs_per_p_v[p][crd.z][crd.y][crd.x], msn.cells_v[crd.z][crd.y][crd.x], p);
       }

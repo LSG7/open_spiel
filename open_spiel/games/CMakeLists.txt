@@ -645,5 +645,24 @@ add_executable(y_test y/y_test.cc ${OPEN_SPIEL_OBJECTS}
                $<TARGET_OBJECTS:tests>)
 add_test(y_test y_test)
 
+set(CC gcc-14)
+set(CXX g++-14)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fopenmp")
+
+OPTION (USE_OpenMP "USE OpenMP" ON)
+IF(USE_OpenMP)
+  FIND_PACKAGE(OpenMP)
+  IF(OPENMP_FOUND)
+    SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    SET(CMAKE_CXX_FLAGS " ${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+  ENDIF()
+ENDIF()
+
+if(CMAKE_SYSTEM_NAME MATCHES "Darwin")
+  include_directories("/opt/homebrew/opt/libomp/include")
+  link_directories("/opt/homebrew/opt/libomp/lib")
+endif()
+
 add_executable(kbg_test SG/kbg_test.cc ${OPEN_SPIEL_OBJECTS}
                $<TARGET_OBJECTS:tests>)
+target_link_libraries(kbg_test PUBLIC omp)
