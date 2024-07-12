@@ -79,3 +79,8 @@ https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-enco
 * gcc g++13 깔아야함. developernote.com/2023/08/installing-gcc13-on-ubuntu-22-04
 * clang++17 깔아야함. clang 은 STDCPP_FLOAT16_T 지원안해서 못씀. c++23 정식지원까지 사용중지.
 * Mac 에서도 gcc 써야함.
+
+24.7.12
+* 한턴에 몇번 행동 할 것인가, 어떤 행동을 할 것인가 
+* 당장은 한턴에 한번만 행동하는 것으로 만들고 실험해봄
+* 발더스3 같은 경우 순서 상관없이 액션1 이동1 이 가능해야 한다.
