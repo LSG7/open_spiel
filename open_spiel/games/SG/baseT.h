@@ -141,6 +141,8 @@ class baseTState : public State {
   virtual void init_unit();
   virtual void init_server();
   void set_obs_onehot_vector(std::vector<int8_t>& now_obs_v, Cell& now_cell, int p);
+  int distance_between(MapCoord crd_0, MapCoord crd_1);
+  int attack(Unit& target_unit, Unit& src_unit);
  /********** 각 게임 별 전용 ***********/
   
 

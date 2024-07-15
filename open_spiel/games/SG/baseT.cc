@@ -469,6 +469,31 @@ namespace open_spiel
       return board_string;
     }
 
+    int baseTState::distance_between(MapCoord crd_0, MapCoord crd_1)
+    {
+      int x = crd_0.x - crd_1.x;
+      if (x < 0)
+        x = x * -1;
+
+      int y = crd_0.y - crd_1.y;
+      if (y < 0)
+        y = y * -1;
+
+      int z = crd_0.z - crd_1.z;
+      if (z < 0)
+        z = z * -1;
+
+      return x+y+z;
+    }
+
+    // 데미지 계산 및 적용 
+    int baseTState::attack(Unit& target_unit, Unit& src_unit)
+    {
+      target_unit.hp -= target_unit.hp - src_unit.power;
+
+      return 0;
+    }
+
     int baseTState::action_mv(int pn, int unit_id, MapCoord tg_crd, bool is_init)
     {
       if (tg_crd.z < 0 || tg_crd.y < 0 || tg_crd.x < 0 ||
@@ -534,21 +559,30 @@ namespace open_spiel
           { // 내가 관찰 중인 곳
             int p_enemy = msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_player;
             int uid_enemy = msn.cells_v[tg_crd.z][tg_crd.y][tg_crd.x].occupying_unit_id;
+
             if (msn.units_v[p_enemy][uid_enemy].being_observed_by[pn])
             { // 맵&적이 보이는 중
-              // 적이 있으니 이동 못 한다고 알려야 함. Model 이 이것을 선택하는 것을 마스크 했어야 했다. 이것이 불리면 안됨.
-              get_set_error("There is already an enemy. Cannot move", true);
-              return -1;
+              // 공격한다.
+              if (distance_between(tg_crd, mine.crd) > mine.atk_dstc) {
+                // 공격거리 불가. 애초에 이 지점을 선택하는 상황이 있으면 안된다. 선택가능한 행동에서 제외되었어야 한다.
+                get_set_error("This Action should not been selected", true);
+                return -1;
+              } else {
+                int attck_ret = attack(msn.units_v[p_enemy][uid_enemy], msn.units_v[pn][unit_id]);
+              }
             }
             else
-            { // 적이 안보이는 중. 스텔스 기능 가진 유닛. 나중에 구현
+           {  // 맵은 보이고 적은 안보이는 중. 스텔스 기능 가진 유닛. 나중에 구현
               // TODO. 나중에 언젠가 구현. 이동하다가 바로 앞에서 적을 발견하는 기능 구현 해야 한다.
+              // 지금은 이곳에 들어오는 경우가 존재하면 안된다. 
+              get_set_error("This log should not have been visible.", true);
             }
           }
           else
           { // 내가 관찰 아닌 곳. 적이 있는데 맵이 안보이고 적도 안보이는 상황.
             // 맵에 안보이는 곳. 이동 명령 내리면 이동하다가 바로 앞에서 적을 발견하는 기능 구현 해야 한다.
-            // TODO
+            // 시야보다 이동거리가 더 긴 경우에 이곳에서 실행되게 된다. 지금은 그런 유닛이 없다.
+            get_set_error("This log should not have been visible.", true);
           }
         }
       }
