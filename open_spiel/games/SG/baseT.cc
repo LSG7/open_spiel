@@ -494,7 +494,7 @@ namespace open_spiel
       return 0;
     }
 
-    int baseTState::action_mv(int pn, int unit_id, MapCoord tg_crd, bool is_init)
+    int baseTState::action_select_tile(int pn, int unit_id, MapCoord tg_crd, bool is_init)
     {
       if (tg_crd.z < 0 || tg_crd.y < 0 || tg_crd.x < 0 ||
           tg_crd.z >= map_size.z || tg_crd.y >= map_size.y || tg_crd.x >= map_size.x)
@@ -576,6 +576,7 @@ namespace open_spiel
               // TODO. 나중에 언젠가 구현. 이동하다가 바로 앞에서 적을 발견하는 기능 구현 해야 한다.
               // 지금은 이곳에 들어오는 경우가 존재하면 안된다. 
               get_set_error("This log should not have been visible.", true);
+              return -1;
             }
           }
           else
@@ -583,6 +584,7 @@ namespace open_spiel
             // 맵에 안보이는 곳. 이동 명령 내리면 이동하다가 바로 앞에서 적을 발견하는 기능 구현 해야 한다.
             // 시야보다 이동거리가 더 긴 경우에 이곳에서 실행되게 된다. 지금은 그런 유닛이 없다.
             get_set_error("This log should not have been visible.", true);
+            return -1;
           }
         }
       }
@@ -684,7 +686,7 @@ namespace open_spiel
       msn.units_v[player_id].push_back({player_id, is_alive, ++unit_id_count[player_id], ++unique_unit_id_count,
                                         shift_dstc, atk_dstc, vw_dstc, hp, power, unit_class, crd, empty_v, name});
       unique_id_to_player_id_v.push_back({unique_unit_id_count, player_id, unit_id_count[player_id]});
-      action_mv(player_id, unit_id_count[player_id], crd, true);
+      action_select_tile(player_id, unit_id_count[player_id], crd, true);
     }
 
     // msn.cell_v 의 정보를 obs_per_p_v 로 옮겨야함
