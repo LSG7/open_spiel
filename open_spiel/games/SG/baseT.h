@@ -93,7 +93,7 @@ class baseTState : public State {
   virtual int action_select_tile(int pn, int unit_id, MapCoord tg_crd, bool is_init);
   virtual void scout(int pn, int unit_id, ObsRefCount o_r_c);  // unit 주변 셀들을 관찰한다.
   virtual void init_first
-  (int max_u, int piece_tn, int last_mn, int supply_n, int land_channel_d, UnitSelectionOrder uso, MapCoord ms);
+  (int max_u, int piece_tn, int last_mn, int supply_n, int land_channel_d, UnitSelectionOrder uso, MapCoord ms, UnitActionKind game_uak);
 
   virtual std::string get_cell_observation_string(MapState state, MapCoord crd, int p) const;
   virtual std::string get_set_error(std::string log, bool is_save);
@@ -130,6 +130,7 @@ class baseTState : public State {
   int last_move_len;
   std::vector<FP16> supply_v;
   std::vector<P_UnitId> unique_id_to_player_id_v;
+  enum UnitActionKind game_uak;
 
   // ipc
    std::unique_ptr<SocketServer> ipc_server;
@@ -143,6 +144,8 @@ class baseTState : public State {
   void set_obs_onehot_vector(std::vector<int8_t>& now_obs_v, Cell& now_cell, int p);
   int distance_between(MapCoord crd_0, MapCoord crd_1);
   int attack(Unit& target_unit, Unit& src_unit);
+  void SetNextUAS_1step();
+  void SetNextUAS_2step();
  /********** 각 게임 별 전용 ***********/
   
 

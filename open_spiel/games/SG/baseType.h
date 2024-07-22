@@ -13,6 +13,7 @@ enum ActionType {AMove = 0, AAttk, ANone = -1,};
 enum ObsRefCount {ObsRefUp = 1, ObsRefDown = -1, ObsRefNone = 0};
 enum PlayerActionState {PA_Obs = 0, PA_Think, PA_Action, PA_None = -1,};
 enum UnitActionState {UA_Act_0 = 0, UA_attk=1, UA_None = -1,};
+enum UnitActionKind {UA_Kind_1step=0, UA_Kind_2step=1,};
 enum PlayerN {PNone = -1,};
 enum UnitN {UNone = -1,};
 enum UnitSelectionOrder {USO_ALL_P_RAND=0,USO_PER_P_RAND=1,USO_None=-1,};

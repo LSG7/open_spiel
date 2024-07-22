@@ -145,6 +145,34 @@ namespace open_spiel
 
     void baseTState::SetNextUAS()
     {
+      switch (game_uak)
+      {
+      case UA_Kind_1step:
+        SetNextUAS_1step();
+        break;
+      case UA_Kind_2step:
+        SetNextUAS_2step();
+        break;
+      }
+    }
+
+    void baseTState::SetNextUAS_1step()
+    {
+      switch (msn.current_uas)
+      {
+      case UA_Act_0:
+        msn.current_uas = UA_attk;
+        break;
+      case UA_attk:
+        msn.current_uas = UA_Act_0;
+        break;
+      case UA_None:
+        break;
+      }
+    }
+
+    void baseTState::SetNextUAS_2step()
+    {
       switch (msn.current_uas)
       {
       case UA_Act_0:
@@ -334,7 +362,7 @@ namespace open_spiel
     }
 
     void baseTState::init_first(int max_u, int piece_tn, int last_mn, int supply_n,
-                                int land_channel_d, UnitSelectionOrder uso, MapCoord ms)
+                                int land_channel_d, UnitSelectionOrder uso, MapCoord ms, UnitActionKind uak)
     {
       init_server();
 
@@ -344,6 +372,7 @@ namespace open_spiel
       last_move_len = last_mn;
       unit_selection_order = uso;
       ground_type_num = sizeof(GroundType) - 1;
+      game_uak = uak;
 
       // 1. 맵 사이즈 결정
       map_size.x = ms.x;
