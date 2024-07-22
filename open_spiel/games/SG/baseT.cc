@@ -158,17 +158,7 @@ namespace open_spiel
 
     void baseTState::SetNextUAS_1step()
     {
-      switch (msn.current_uas)
-      {
-      case UA_Act_0:
-        msn.current_uas = UA_attk;
-        break;
-      case UA_attk:
-        msn.current_uas = UA_Act_0;
-        break;
-      case UA_None:
-        break;
-      }
+      return;
     }
 
     void baseTState::SetNextUAS_2step()
