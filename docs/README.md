@@ -5,7 +5,7 @@
 
 ## [web](https://LSG7.github.io/open_spiel/)
 
-## [Doxy](html/index.html)
+## [Doxy](doxy/html/index.html)
 
 ## [Links](links.md)
 
