@@ -106,48 +106,384 @@ Collaboration diagram for absl::strings_internal::Splitter&lt; Delimiter, Predic
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0f9305d1ac3c82e678346eeb89b484ae" id="r_a0f9305d1ac3c82e678346eeb89b484ae"><td class="memItemLeft" align="right" valign="top"><a id="a0f9305d1ac3c82e678346eeb89b484ae" name="a0f9305d1ac3c82e678346eeb89b484ae"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>DelimiterType</b> = Delimiter</td></tr>
+<tr class="memitem:a0f9305d1ac3c82e678346eeb89b484ae" id="r_a0f9305d1ac3c82e678346eeb89b484ae"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f9305d1ac3c82e678346eeb89b484ae">DelimiterType</a> = Delimiter</td></tr>
 <tr class="separator:a0f9305d1ac3c82e678346eeb89b484ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae93bc663bae675a9c5c306948a6792f0" id="r_ae93bc663bae675a9c5c306948a6792f0"><td class="memItemLeft" align="right" valign="top"><a id="ae93bc663bae675a9c5c306948a6792f0" name="ae93bc663bae675a9c5c306948a6792f0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>PredicateType</b> = Predicate</td></tr>
+<tr class="memitem:ae93bc663bae675a9c5c306948a6792f0" id="r_ae93bc663bae675a9c5c306948a6792f0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae93bc663bae675a9c5c306948a6792f0">PredicateType</a> = Predicate</td></tr>
 <tr class="separator:ae93bc663bae675a9c5c306948a6792f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af479868860a0ed17ceda2ca5d471791a" id="r_af479868860a0ed17ceda2ca5d471791a"><td class="memItemLeft" align="right" valign="top"><a id="af479868860a0ed17ceda2ca5d471791a" name="af479868860a0ed17ceda2ca5d471791a"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> = <a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">strings_internal::SplitIterator</a>&lt;<a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">Splitter</a>&gt;</td></tr>
+<tr class="memitem:af479868860a0ed17ceda2ca5d471791a" id="r_af479868860a0ed17ceda2ca5d471791a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af479868860a0ed17ceda2ca5d471791a">const_iterator</a> = <a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">strings_internal::SplitIterator</a>&lt;<a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">Splitter</a>&gt;</td></tr>
 <tr class="separator:af479868860a0ed17ceda2ca5d471791a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83ea8ad431d2e758d82462bf03311fb7" id="r_a83ea8ad431d2e758d82462bf03311fb7"><td class="memItemLeft" align="right" valign="top"><a id="a83ea8ad431d2e758d82462bf03311fb7" name="a83ea8ad431d2e758d82462bf03311fb7"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = typename std::iterator_traits&lt;<a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a>&gt;::value_type</td></tr>
+<tr class="memitem:a83ea8ad431d2e758d82462bf03311fb7" id="r_a83ea8ad431d2e758d82462bf03311fb7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83ea8ad431d2e758d82462bf03311fb7">value_type</a> = typename std::iterator_traits&lt;<a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a>&gt;::value_type</td></tr>
 <tr class="separator:a83ea8ad431d2e758d82462bf03311fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a364f45fff62a1343e3f2afa7409ed9c1" id="r_a364f45fff62a1343e3f2afa7409ed9c1"><td class="memItemLeft" align="right" valign="top"><a id="a364f45fff62a1343e3f2afa7409ed9c1" name="a364f45fff62a1343e3f2afa7409ed9c1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Splitter</b> (StringType input_text, Delimiter d, Predicate p)</td></tr>
+<tr class="memitem:a364f45fff62a1343e3f2afa7409ed9c1" id="r_a364f45fff62a1343e3f2afa7409ed9c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a364f45fff62a1343e3f2afa7409ed9c1">Splitter</a> (StringType input_text, Delimiter d, Predicate p)</td></tr>
 <tr class="separator:a364f45fff62a1343e3f2afa7409ed9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b4bdbc3276c67b5aa5ac32e76307df2" id="r_a7b4bdbc3276c67b5aa5ac32e76307df2"><td class="memItemLeft" align="right" valign="top"><a id="a7b4bdbc3276c67b5aa5ac32e76307df2" name="a7b4bdbc3276c67b5aa5ac32e76307df2"></a>
-<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>&#160;</td><td class="memItemRight" valign="bottom"><b>text</b> () const</td></tr>
+<tr class="memitem:a7b4bdbc3276c67b5aa5ac32e76307df2" id="r_a7b4bdbc3276c67b5aa5ac32e76307df2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b4bdbc3276c67b5aa5ac32e76307df2">text</a> () const</td></tr>
 <tr class="separator:a7b4bdbc3276c67b5aa5ac32e76307df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaffa8f784d3f5529cb964aca22aff69c" id="r_aaffa8f784d3f5529cb964aca22aff69c"><td class="memItemLeft" align="right" valign="top"><a id="aaffa8f784d3f5529cb964aca22aff69c" name="aaffa8f784d3f5529cb964aca22aff69c"></a>
-const Delimiter &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>delimiter</b> () const</td></tr>
+<tr class="memitem:aaffa8f784d3f5529cb964aca22aff69c" id="r_aaffa8f784d3f5529cb964aca22aff69c"><td class="memItemLeft" align="right" valign="top">const Delimiter &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaffa8f784d3f5529cb964aca22aff69c">delimiter</a> () const</td></tr>
 <tr class="separator:aaffa8f784d3f5529cb964aca22aff69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3613d95095af3d0afae4d5eec92bfefb" id="r_a3613d95095af3d0afae4d5eec92bfefb"><td class="memItemLeft" align="right" valign="top"><a id="a3613d95095af3d0afae4d5eec92bfefb" name="a3613d95095af3d0afae4d5eec92bfefb"></a>
-const Predicate &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>predicate</b> () const</td></tr>
+<tr class="memitem:a3613d95095af3d0afae4d5eec92bfefb" id="r_a3613d95095af3d0afae4d5eec92bfefb"><td class="memItemLeft" align="right" valign="top">const Predicate &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3613d95095af3d0afae4d5eec92bfefb">predicate</a> () const</td></tr>
 <tr class="separator:a3613d95095af3d0afae4d5eec92bfefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dedd4a82cbc9c740f7ab9a00e86c77e" id="r_a4dedd4a82cbc9c740f7ab9a00e86c77e"><td class="memItemLeft" align="right" valign="top"><a id="a4dedd4a82cbc9c740f7ab9a00e86c77e" name="a4dedd4a82cbc9c740f7ab9a00e86c77e"></a>
-<a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const</td></tr>
+<tr class="memitem:a4dedd4a82cbc9c740f7ab9a00e86c77e" id="r_a4dedd4a82cbc9c740f7ab9a00e86c77e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dedd4a82cbc9c740f7ab9a00e86c77e">begin</a> () const</td></tr>
 <tr class="separator:a4dedd4a82cbc9c740f7ab9a00e86c77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcbbe80c2a7a44005de60de623c77ece" id="r_abcbbe80c2a7a44005de60de623c77ece"><td class="memItemLeft" align="right" valign="top"><a id="abcbbe80c2a7a44005de60de623c77ece" name="abcbbe80c2a7a44005de60de623c77ece"></a>
-<a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
+<tr class="memitem:abcbbe80c2a7a44005de60de623c77ece" id="r_abcbbe80c2a7a44005de60de623c77ece"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcbbe80c2a7a44005de60de623c77ece">end</a> () const</td></tr>
 <tr class="separator:abcbbe80c2a7a44005de60de623c77ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2925d57e15de9c1f961948edc3525595" id="r_a2925d57e15de9c1f961948edc3525595"><td class="memTemplParams" colspan="2"><a id="a2925d57e15de9c1f961948edc3525595" name="a2925d57e15de9c1f961948edc3525595"></a>
-template&lt;typename Container , typename  = typename std::enable_if&lt;                SplitterIsConvertibleTo&lt;Container&gt;::value&gt;::type&gt; </td></tr>
-<tr class="memitem:a2925d57e15de9c1f961948edc3525595"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator Container</b> () const</td></tr>
+<tr class="memitem:a2925d57e15de9c1f961948edc3525595" id="r_a2925d57e15de9c1f961948edc3525595"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename  = typename std::enable_if&lt;                SplitterIsConvertibleTo&lt;Container&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:a2925d57e15de9c1f961948edc3525595"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2925d57e15de9c1f961948edc3525595">operator Container</a> () const</td></tr>
 <tr class="separator:a2925d57e15de9c1f961948edc3525595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9bf40910c021645f3db53cd41b6aded" id="r_ad9bf40910c021645f3db53cd41b6aded"><td class="memTemplParams" colspan="2"><a id="ad9bf40910c021645f3db53cd41b6aded" name="ad9bf40910c021645f3db53cd41b6aded"></a>
-template&lt;typename First , typename Second &gt; </td></tr>
-<tr class="memitem:ad9bf40910c021645f3db53cd41b6aded"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator std::pair&lt; First, Second &gt;</b> () const</td></tr>
+<tr class="memitem:ad9bf40910c021645f3db53cd41b6aded" id="r_ad9bf40910c021645f3db53cd41b6aded"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second &gt; </td></tr>
+<tr class="memitem:ad9bf40910c021645f3db53cd41b6aded"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad9bf40910c021645f3db53cd41b6aded">operator std::pair&lt; First, Second &gt;</a> () const</td></tr>
 <tr class="separator:ad9bf40910c021645f3db53cd41b6aded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Delimiter, typename Predicate, typename StringType&gt;<br />
+class absl::strings_internal::Splitter&lt; Delimiter, Predicate, StringType &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00260">260</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af479868860a0ed17ceda2ca5d471791a" name="af479868860a0ed17ceda2ca5d471791a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af479868860a0ed17ceda2ca5d471791a">&#9670;&#160;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::const_iterator = <a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">strings_internal::SplitIterator</a>&lt;<a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">Splitter</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00264">264</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+
+</div>
+</div>
+<a id="a0f9305d1ac3c82e678346eeb89b484ae" name="a0f9305d1ac3c82e678346eeb89b484ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9305d1ac3c82e678346eeb89b484ae">&#9670;&#160;</a></span>DelimiterType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::DelimiterType = Delimiter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00262">262</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+
+</div>
+</div>
+<a id="ae93bc663bae675a9c5c306948a6792f0" name="ae93bc663bae675a9c5c306948a6792f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae93bc663bae675a9c5c306948a6792f0">&#9670;&#160;</a></span>PredicateType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::PredicateType = Predicate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00263">263</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+
+</div>
+</div>
+<a id="a83ea8ad431d2e758d82462bf03311fb7" name="a83ea8ad431d2e758d82462bf03311fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ea8ad431d2e758d82462bf03311fb7">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::value_type = typename std::iterator_traits&lt;<a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a>&gt;::value_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00265">265</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a364f45fff62a1343e3f2afa7409ed9c1" name="a364f45fff62a1343e3f2afa7409ed9c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364f45fff62a1343e3f2afa7409ed9c1">&#9670;&#160;</a></span>Splitter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::Splitter </td>
+          <td>(</td>
+          <td class="paramtype">StringType</td>          <td class="paramname"><span class="paramname"><em>input_text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Delimiter</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Predicate</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00267">267</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  268</span>      : text_(std::move(input_text)),</div>
+<div class="line"><span class="lineno">  269</span>        delimiter_(std::move(d)),</div>
+<div class="line"><span class="lineno">  270</span>        predicate_(std::move(p)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4dedd4a82cbc9c740f7ab9a00e86c77e" name="a4dedd4a82cbc9c740f7ab9a00e86c77e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dedd4a82cbc9c740f7ab9a00e86c77e">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a> <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00279">279</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  279</span>{ <span class="keywordflow">return</span> {const_iterator::kInitState, <span class="keyword">this</span>}; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaffa8f784d3f5529cb964aca22aff69c" name="aaffa8f784d3f5529cb964aca22aff69c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffa8f784d3f5529cb964aca22aff69c">&#9670;&#160;</a></span>delimiter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Delimiter &amp; <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::delimiter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00273">273</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  273</span>{ <span class="keywordflow">return</span> delimiter_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abcbbe80c2a7a44005de60de623c77ece" name="abcbbe80c2a7a44005de60de623c77ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcbbe80c2a7a44005de60de623c77ece">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d4b/classabsl_1_1strings__internal_1_1_split_iterator.html">const_iterator</a> <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00280">280</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  280</span>{ <span class="keywordflow">return</span> {const_iterator::kEndState, <span class="keyword">this</span>}; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2925d57e15de9c1f961948edc3525595" name="a2925d57e15de9c1f961948edc3525595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2925d57e15de9c1f961948edc3525595">&#9670;&#160;</a></span>operator Container()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+<div class="memtemplate">
+template&lt;typename Container , typename  = typename std::enable_if&lt;                SplitterIsConvertibleTo&lt;Container&gt;::value&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::operator Container </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00287">287</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  287</span>                             {  <span class="comment">// NOLINT(runtime/explicit)</span></div>
+<div class="line"><span class="lineno">  288</span>    <span class="keywordflow">return</span> ConvertToContainer&lt;Container, <span class="keyword">typename</span> Container::value_type,</div>
+<div class="line"><span class="lineno">  289</span>                              HasMappedType&lt;Container&gt;::value&gt;()(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  290</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad9bf40910c021645f3db53cd41b6aded" name="ad9bf40910c021645f3db53cd41b6aded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9bf40910c021645f3db53cd41b6aded">&#9670;&#160;</a></span>operator std::pair&lt; First, Second &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+<div class="memtemplate">
+template&lt;typename First , typename Second &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::operator std::pair&lt; First, Second &gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00297">297</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  297</span>                                          {  <span class="comment">// NOLINT(runtime/explicit)</span></div>
+<div class="line"><span class="lineno">  298</span>    <a class="code hl_class" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> first, second;</div>
+<div class="line"><span class="lineno">  299</span>    <span class="keyword">auto</span> it = begin();</div>
+<div class="line"><span class="lineno">  300</span>    <span class="keywordflow">if</span> (it != end()) {</div>
+<div class="line"><span class="lineno">  301</span>      first = *it;</div>
+<div class="line"><span class="lineno">  302</span>      <span class="keywordflow">if</span> (++it != end()) {</div>
+<div class="line"><span class="lineno">  303</span>        second = *it;</div>
+<div class="line"><span class="lineno">  304</span>      }</div>
+<div class="line"><span class="lineno">  305</span>    }</div>
+<div class="line"><span class="lineno">  306</span>    <span class="keywordflow">return</span> {First(first), Second(second)};</div>
+<div class="line"><span class="lineno">  307</span>  }</div>
+<div class="ttc" id="aclassabsl_1_1string__view_html"><div class="ttname"><a href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1d/string__view_8h_source.html#l00161">string_view.h:161</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3613d95095af3d0afae4d5eec92bfefb" name="a3613d95095af3d0afae4d5eec92bfefb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3613d95095af3d0afae4d5eec92bfefb">&#9670;&#160;</a></span>predicate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Predicate &amp; <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::predicate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00274">274</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  274</span>{ <span class="keywordflow">return</span> predicate_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7b4bdbc3276c67b5aa5ac32e76307df2" name="a7b4bdbc3276c67b5aa5ac32e76307df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4bdbc3276c67b5aa5ac32e76307df2">&#9670;&#160;</a></span>text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Delimiter , typename Predicate , typename StringType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> <a class="el" href="../../d2/d32/classabsl_1_1strings__internal_1_1_splitter.html">absl::strings_internal::Splitter</a>&lt; Delimiter, Predicate, StringType &gt;::text </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html#l00272">272</a> of file <a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>{ <span class="keywordflow">return</span> text_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/internal/<a class="el" href="../../d9/d9d/str__split__internal_8h_source.html">str_split_internal.h</a></li>
 </ul>

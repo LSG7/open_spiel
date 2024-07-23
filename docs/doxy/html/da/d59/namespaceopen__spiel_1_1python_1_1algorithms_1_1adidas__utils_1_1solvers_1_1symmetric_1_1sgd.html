@@ -154,7 +154,62 @@ Returns:
   gradient of exploitability w.r.t. (dist) as tuple
   unregularized exploitability (stochastic estimate)
   shannon regularized exploitability (stochastic estimate)
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d20/symmetric_2sgd_8py_source.html#l00087">87</a> of file <a class="el" href="../../d7/d20/symmetric_2sgd_8py_source.html">sgd.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>              proj_grad=<span class="keyword">True</span>):</div>
+<div class="line"><span class="lineno">   89</span>  <span class="stringliteral">&quot;&quot;&quot;Computes exploitablity gradient.</span></div>
+<div class="line"><span class="lineno">   90</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   91</span><span class="stringliteral">  Assumption: eta_k = 1 for all k</span></div>
+<div class="line"><span class="lineno">   92</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   93</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   94</span><span class="stringliteral">    dist: 1-d np.array, current estimate of nash distribution</span></div>
+<div class="line"><span class="lineno">   95</span><span class="stringliteral">    payoff_matrices: 2 (&gt;=2 x A x A) np.arrays, payoffs for each joint action</span></div>
+<div class="line"><span class="lineno">   96</span><span class="stringliteral">    num_players: int, number of players, in case payoff_matrices is abbreviated</span></div>
+<div class="line"><span class="lineno">   97</span><span class="stringliteral">    temperature: non-negative float, default 0.</span></div>
+<div class="line"><span class="lineno">   98</span><span class="stringliteral">    proj_grad: bool, if True, projects dist gradient onto simplex</span></div>
+<div class="line"><span class="lineno">   99</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  100</span><span class="stringliteral">    gradient of exploitability w.r.t. (dist) as tuple</span></div>
+<div class="line"><span class="lineno">  101</span><span class="stringliteral">    unregularized exploitability (stochastic estimate)</span></div>
+<div class="line"><span class="lineno">  102</span><span class="stringliteral">    shannon regularized exploitability (stochastic estimate)</span></div>
+<div class="line"><span class="lineno">  103</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  104</span>  del num_players</div>
+<div class="line"><span class="lineno">  105</span>  tau = temperature</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>  a, b = 0, 1  <span class="comment"># 2 samples needed for unbiased estimation</span></div>
+<div class="line"><span class="lineno">  108</span>  p_0, p_1 = 0, 1  <span class="comment"># player 0 index, player 1 index</span></div>
+<div class="line"><span class="lineno">  109</span>  hess_0_01_a = payoff_matrices[a][p_0]</div>
+<div class="line"><span class="lineno">  110</span>  hess_1_01_a = payoff_matrices[a][p_1]</div>
+<div class="line"><span class="lineno">  111</span>  hess_0_01_b = payoff_matrices[b][p_0]</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>  pg_0_a = simplex.project_grad(hess_0_01_a.dot(dist))</div>
+<div class="line"><span class="lineno">  114</span>  pg_0_b = simplex.project_grad(hess_0_01_b.dot(dist))</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>  unreg_exp = np.dot(pg_0_a, pg_0_b)</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>  <span class="keywordflow">if</span> tau &gt; 0.:</div>
+<div class="line"><span class="lineno">  119</span>    log_dist_safe = np.clip(np.log(dist), -40, 0)</div>
+<div class="line"><span class="lineno">  120</span>    entr_grad_proj = simplex.project_grad(-tau * (log_dist_safe + 1))</div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  122</span>    entr_grad_proj = 0.</div>
+<div class="line"><span class="lineno">  123</span>  pg_0_a_entr = pg_0_a + entr_grad_proj</div>
+<div class="line"><span class="lineno">  124</span>  pg_0_b_entr = pg_0_b + entr_grad_proj</div>
+<div class="line"><span class="lineno">  125</span>  pg_0_entr = 0.5 * (pg_0_a_entr + pg_0_b_entr)</div>
+<div class="line"><span class="lineno">  126</span>  pg_1_b_entr = pg_0_b_entr</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  reg_exp = np.dot(pg_0_a_entr, pg_0_b_entr)</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>  <span class="comment"># then construct unbiased stochastic gradient</span></div>
+<div class="line"><span class="lineno">  131</span>  grad_dist = 2. * hess_1_01_a.dot(pg_1_b_entr)</div>
+<div class="line"><span class="lineno">  132</span>  <span class="keywordflow">if</span> tau &gt; 0.:</div>
+<div class="line"><span class="lineno">  133</span>    grad_dist += 2. * -tau * pg_0_entr / dist</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">if</span> proj_grad:</div>
+<div class="line"><span class="lineno">  136</span>    grad_dist = simplex.project_grad(grad_dist)</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>  <span class="keywordflow">return</span> (grad_dist,), unreg_exp, reg_exp</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/d20/symmetric_2sgd_8py_source.html#l00060">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.sgd.Solver.compute_gradients()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d59/namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1sgd_a8d3dc7130ab14a42cd1c795e5fa6f355_icgraph.png" border="0" usemap="#ada/d59/namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1sgd_a8d3dc7130ab14a42cd1c795e5fa6f355_icgraph" alt=""/></div>

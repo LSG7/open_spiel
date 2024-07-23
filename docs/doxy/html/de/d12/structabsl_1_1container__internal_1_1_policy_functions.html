@@ -105,19 +105,83 @@ Collaboration diagram for absl::container_internal::PolicyFunctions:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac1c71d660fbaa122e3ab6743f741dec3" id="r_ac1c71d660fbaa122e3ab6743f741dec3"><td class="memItemLeft" align="right" valign="top"><a id="ac1c71d660fbaa122e3ab6743f741dec3" name="ac1c71d660fbaa122e3ab6743f741dec3"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>slot_size</b></td></tr>
+<tr class="memitem:ac1c71d660fbaa122e3ab6743f741dec3" id="r_ac1c71d660fbaa122e3ab6743f741dec3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1c71d660fbaa122e3ab6743f741dec3">slot_size</a></td></tr>
 <tr class="separator:ac1c71d660fbaa122e3ab6743f741dec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acac73024b37dd0f0400a85f2683cfd5f" id="r_acac73024b37dd0f0400a85f2683cfd5f"><td class="memItemLeft" align="right" valign="top"><a id="acac73024b37dd0f0400a85f2683cfd5f" name="acac73024b37dd0f0400a85f2683cfd5f"></a>
-size_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>hash_slot</b> )(void *set, void *slot)</td></tr>
+<tr class="memitem:acac73024b37dd0f0400a85f2683cfd5f" id="r_acac73024b37dd0f0400a85f2683cfd5f"><td class="memItemLeft" align="right" valign="top">size_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acac73024b37dd0f0400a85f2683cfd5f">hash_slot</a> )(void *set, void *slot)</td></tr>
 <tr class="separator:acac73024b37dd0f0400a85f2683cfd5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ce77f9bfa79b47891a5cfc4124fa566" id="r_a0ce77f9bfa79b47891a5cfc4124fa566"><td class="memItemLeft" align="right" valign="top"><a id="a0ce77f9bfa79b47891a5cfc4124fa566" name="a0ce77f9bfa79b47891a5cfc4124fa566"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>transfer</b> )(void *set, void *dst_slot, void *src_slot)</td></tr>
+<tr class="memitem:a0ce77f9bfa79b47891a5cfc4124fa566" id="r_a0ce77f9bfa79b47891a5cfc4124fa566"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ce77f9bfa79b47891a5cfc4124fa566">transfer</a> )(void *set, void *dst_slot, void *src_slot)</td></tr>
 <tr class="separator:a0ce77f9bfa79b47891a5cfc4124fa566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7fd31e335a0e57027ebc30341fd8742" id="r_af7fd31e335a0e57027ebc30341fd8742"><td class="memItemLeft" align="right" valign="top"><a id="af7fd31e335a0e57027ebc30341fd8742" name="af7fd31e335a0e57027ebc30341fd8742"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>dealloc</b> )(void *set, const <a class="el" href="../../de/d12/structabsl_1_1container__internal_1_1_policy_functions.html">PolicyFunctions</a> &amp;policy, ctrl_t *ctrl, void *slot_array, size_t n)</td></tr>
+<tr class="memitem:af7fd31e335a0e57027ebc30341fd8742" id="r_af7fd31e335a0e57027ebc30341fd8742"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7fd31e335a0e57027ebc30341fd8742">dealloc</a> )(void *set, const <a class="el" href="../../de/d12/structabsl_1_1container__internal_1_1_policy_functions.html">PolicyFunctions</a> &amp;policy, ctrl_t *ctrl, void *slot_array, size_t n)</td></tr>
 <tr class="separator:af7fd31e335a0e57027ebc30341fd8742"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01254">1254</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="af7fd31e335a0e57027ebc30341fd8742" name="af7fd31e335a0e57027ebc30341fd8742"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7fd31e335a0e57027ebc30341fd8742">&#9670;&#160;</a></span>dealloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* absl::container_internal::PolicyFunctions::dealloc) (void *set, const <a class="el" href="../../de/d12/structabsl_1_1container__internal_1_1_policy_functions.html">PolicyFunctions</a> &amp;policy, ctrl_t *ctrl, void *slot_array, size_t n)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01264">1264</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="acac73024b37dd0f0400a85f2683cfd5f" name="acac73024b37dd0f0400a85f2683cfd5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac73024b37dd0f0400a85f2683cfd5f">&#9670;&#160;</a></span>hash_slot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t(* absl::container_internal::PolicyFunctions::hash_slot) (void *set, void *slot)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01258">1258</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="ac1c71d660fbaa122e3ab6743f741dec3" name="ac1c71d660fbaa122e3ab6743f741dec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c71d660fbaa122e3ab6743f741dec3">&#9670;&#160;</a></span>slot_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t absl::container_internal::PolicyFunctions::slot_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01255">1255</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="a0ce77f9bfa79b47891a5cfc4124fa566" name="a0ce77f9bfa79b47891a5cfc4124fa566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ce77f9bfa79b47891a5cfc4124fa566">&#9670;&#160;</a></span>transfer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* absl::container_internal::PolicyFunctions::transfer) (void *set, void *dst_slot, void *src_slot)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01261">1261</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a></li>
 </ul>

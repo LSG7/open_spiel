@@ -118,19 +118,132 @@ Collaboration diagram for absl::flags_internal::FlagState:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a44a95d00135bddab39848bb66f60e03a" id="r_a44a95d00135bddab39848bb66f60e03a"><td class="memTemplParams" colspan="2"><a id="a44a95d00135bddab39848bb66f60e03a" name="a44a95d00135bddab39848bb66f60e03a"></a>
-template&lt;typename V &gt; </td></tr>
-<tr class="memitem:a44a95d00135bddab39848bb66f60e03a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>FlagState</b> (<a class="el" href="../../dc/da6/classabsl_1_1flags__internal_1_1_flag_impl.html">FlagImpl</a> &amp;flag_impl, const V &amp;v, bool modified, bool on_command_line, int64_t counter)</td></tr>
+<tr class="memitem:a44a95d00135bddab39848bb66f60e03a" id="r_a44a95d00135bddab39848bb66f60e03a"><td class="memTemplParams" colspan="2">template&lt;typename V &gt; </td></tr>
+<tr class="memitem:a44a95d00135bddab39848bb66f60e03a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a44a95d00135bddab39848bb66f60e03a">FlagState</a> (<a class="el" href="../../dc/da6/classabsl_1_1flags__internal_1_1_flag_impl.html">FlagImpl</a> &amp;flag_impl, const V &amp;v, bool modified, bool on_command_line, int64_t counter)</td></tr>
 <tr class="separator:a44a95d00135bddab39848bb66f60e03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a6280cde2032ee3ac88a2e707e24e452a" id="r_a6280cde2032ee3ac88a2e707e24e452a"><td class="memItemLeft" align="right" valign="top"><a id="a6280cde2032ee3ac88a2e707e24e452a" name="a6280cde2032ee3ac88a2e707e24e452a"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>FlagImpl</b></td></tr>
+<tr class="memitem:a6280cde2032ee3ac88a2e707e24e452a" id="r_a6280cde2032ee3ac88a2e707e24e452a"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6280cde2032ee3ac88a2e707e24e452a">FlagImpl</a></td></tr>
 <tr class="separator:a6280cde2032ee3ac88a2e707e24e452a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/de5/internal_2flag_8cc_source.html#l00088">88</a> of file <a class="el" href="../../d0/de5/internal_2flag_8cc_source.html">flag.cc</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a44a95d00135bddab39848bb66f60e03a" name="a44a95d00135bddab39848bb66f60e03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a95d00135bddab39848bb66f60e03a">&#9670;&#160;</a></span>FlagState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename V &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::flags_internal::FlagState::FlagState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/da6/classabsl_1_1flags__internal_1_1_flag_impl.html">FlagImpl</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>flag_impl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const V &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>modified</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>on_command_line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>counter</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de5/internal_2flag_8cc_source.html#l00091">91</a> of file <a class="el" href="../../d0/de5/internal_2flag_8cc_source.html">flag.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>      : flag_impl_(flag_impl),</div>
+<div class="line"><span class="lineno">   94</span>        value_(v),</div>
+<div class="line"><span class="lineno">   95</span>        modified_(modified),</div>
+<div class="line"><span class="lineno">   96</span>        on_command_line_(on_command_line),</div>
+<div class="line"><span class="lineno">   97</span>        counter_(counter) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="addcad0ca26627cd777ffe0f604a43cf4" name="addcad0ca26627cd777ffe0f604a43cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addcad0ca26627cd777ffe0f604a43cf4">&#9670;&#160;</a></span>~FlagState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::flags_internal::FlagState::~FlagState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de5/internal_2flag_8cc_source.html#l00099">99</a> of file <a class="el" href="../../d0/de5/internal_2flag_8cc_source.html">flag.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                        {</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">if</span> (flag_impl_.ValueStorageKind() != FlagValueStorageKind::kAlignedBuffer &amp;&amp;</div>
+<div class="line"><span class="lineno">  101</span>        flag_impl_.ValueStorageKind() != FlagValueStorageKind::kSequenceLocked)</div>
+<div class="line"><span class="lineno">  102</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  103</span>    flags_internal::Delete(flag_impl_.op_, value_.heap_allocated);</div>
+<div class="line"><span class="lineno">  104</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a6280cde2032ee3ac88a2e707e24e452a" name="a6280cde2032ee3ac88a2e707e24e452a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6280cde2032ee3ac88a2e707e24e452a">&#9670;&#160;</a></span>FlagImpl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../dc/da6/classabsl_1_1flags__internal_1_1_flag_impl.html">FlagImpl</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de5/internal_2flag_8cc_source.html#l00107">107</a> of file <a class="el" href="../../d0/de5/internal_2flag_8cc_source.html">flag.cc</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/flags/internal/<b>flag.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/flags/internal/<a class="el" href="../../d0/de5/internal_2flag_8cc_source.html">flag.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

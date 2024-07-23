@@ -120,7 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba811467e0ded50f30b253c075b29972" id="r_aba811467e0ded50f30b253c075b29972"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba811467e0ded50f30b253c075b29972">test_run</a> (self, name)</td></tr>
 <tr class="separator:aba811467e0ded50f30b253c075b29972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/d72/boltzmann__policy__iteration__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../de/d72/boltzmann__policy__iteration__test_8py_source.html">boltzmann_policy_iteration_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aba811467e0ded50f30b253c075b29972" name="aba811467e0ded50f30b253c075b29972"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba811467e0ded50f30b253c075b29972">&#9670;&#160;</a></span>test_run()</h2>
 
@@ -140,10 +143,27 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks if the algorithm works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d72/boltzmann__policy__iteration__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../de/d72/boltzmann__policy__iteration__test_8py_source.html">boltzmann_policy_iteration_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  <span class="keyword">def </span>test_run(self, name):</div>
+<div class="line"><span class="lineno">   31</span>    <span class="stringliteral">&quot;&quot;&quot;Checks if the algorithm works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   32</span>    game = pyspiel.load_game(name)</div>
+<div class="line"><span class="lineno">   33</span>    bpi = boltzmann_policy_iteration.BoltzmannPolicyIteration(</div>
+<div class="line"><span class="lineno">   34</span>        game, value.TabularValueFunction(game))</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">   37</span>      bpi.iteration()</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    bpi_policy = bpi.get_policy()</div>
+<div class="line"><span class="lineno">   40</span>    nash_conv_bpi = nash_conv.NashConv(game, bpi_policy)</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    self.assertAlmostEqual(nash_conv_bpi.nash_conv(), 2.75428, places=5)</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/<b>boltzmann_policy_iteration_test.py</b></li>
+<li>open_spiel/python/mfg/algorithms/<a class="el" href="../../de/d72/boltzmann__policy__iteration__test_8py_source.html">boltzmann_policy_iteration_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

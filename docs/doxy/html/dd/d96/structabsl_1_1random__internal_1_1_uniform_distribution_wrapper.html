@@ -117,14 +117,127 @@ Collaboration diagram for absl::random_internal::UniformDistributionWrapper&lt; 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aae2729b6fa4d48712c2a5f425528b7dc" id="r_aae2729b6fa4d48712c2a5f425528b7dc"><td class="memTemplParams" colspan="2"><a id="aae2729b6fa4d48712c2a5f425528b7dc" name="aae2729b6fa4d48712c2a5f425528b7dc"></a>
-template&lt;typename TagType &gt; </td></tr>
-<tr class="memitem:aae2729b6fa4d48712c2a5f425528b7dc"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>UniformDistributionWrapper</b> (TagType, NumType lo, NumType hi)</td></tr>
+<tr class="memitem:aae2729b6fa4d48712c2a5f425528b7dc" id="r_aae2729b6fa4d48712c2a5f425528b7dc"><td class="memTemplParams" colspan="2">template&lt;typename TagType &gt; </td></tr>
+<tr class="memitem:aae2729b6fa4d48712c2a5f425528b7dc"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aae2729b6fa4d48712c2a5f425528b7dc">UniformDistributionWrapper</a> (TagType, NumType lo, NumType hi)</td></tr>
 <tr class="separator:aae2729b6fa4d48712c2a5f425528b7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93aae2c744362d7d4abeed69a665d967" id="r_a93aae2c744362d7d4abeed69a665d967"><td class="memItemLeft" align="right" valign="top"><a id="a93aae2c744362d7d4abeed69a665d967" name="a93aae2c744362d7d4abeed69a665d967"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UniformDistributionWrapper</b> (NumType lo, NumType hi)</td></tr>
+<tr class="memitem:a93aae2c744362d7d4abeed69a665d967" id="r_a93aae2c744362d7d4abeed69a665d967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93aae2c744362d7d4abeed69a665d967">UniformDistributionWrapper</a> (NumType lo, NumType hi)</td></tr>
 <tr class="separator:a93aae2c744362d7d4abeed69a665d967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename NumType&gt;<br />
+struct absl::random_internal::UniformDistributionWrapper&lt; NumType &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/d9d/uniform__helper_8h_source.html#l00223">223</a> of file <a class="el" href="../../d7/d9d/uniform__helper_8h_source.html">uniform_helper.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aae2729b6fa4d48712c2a5f425528b7dc" name="aae2729b6fa4d48712c2a5f425528b7dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae2729b6fa4d48712c2a5f425528b7dc">&#9670;&#160;</a></span>UniformDistributionWrapper() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumType &gt; </div>
+<div class="memtemplate">
+template&lt;typename TagType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d96/structabsl_1_1random__internal_1_1_uniform_distribution_wrapper.html">absl::random_internal::UniformDistributionWrapper</a>&lt; NumType &gt;::UniformDistributionWrapper </td>
+          <td>(</td>
+          <td class="paramtype">TagType</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NumType</td>          <td class="paramname"><span class="paramname"><em>lo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NumType</td>          <td class="paramname"><span class="paramname"><em>hi</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d9d/uniform__helper_8h_source.html#l00225">225</a> of file <a class="el" href="../../d7/d9d/uniform__helper_8h_source.html">uniform_helper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>      : UniformDistribution&lt;NumType&gt;(</div>
+<div class="line"><span class="lineno">  227</span>            uniform_lower_bound&lt;NumType&gt;(TagType{}, lo, hi),</div>
+<div class="line"><span class="lineno">  228</span>            uniform_upper_bound&lt;NumType&gt;(TagType{}, lo, hi)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a93aae2c744362d7d4abeed69a665d967" name="a93aae2c744362d7d4abeed69a665d967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93aae2c744362d7d4abeed69a665d967">&#9670;&#160;</a></span>UniformDistributionWrapper() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d96/structabsl_1_1random__internal_1_1_uniform_distribution_wrapper.html">absl::random_internal::UniformDistributionWrapper</a>&lt; NumType &gt;::UniformDistributionWrapper </td>
+          <td>(</td>
+          <td class="paramtype">NumType</td>          <td class="paramname"><span class="paramname"><em>lo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NumType</td>          <td class="paramname"><span class="paramname"><em>hi</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d9d/uniform__helper_8h_source.html#l00230">230</a> of file <a class="el" href="../../d7/d9d/uniform__helper_8h_source.html">uniform_helper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  231</span>      : UniformDistribution&lt;NumType&gt;(</div>
+<div class="line"><span class="lineno">  232</span>            uniform_lower_bound&lt;NumType&gt;(IntervalClosedOpenTag(), lo, hi),</div>
+<div class="line"><span class="lineno">  233</span>            uniform_upper_bound&lt;NumType&gt;(IntervalClosedOpenTag(), lo, hi)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af504769d71ce4ab4b3970450ef9f6122" name="af504769d71ce4ab4b3970450ef9f6122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af504769d71ce4ab4b3970450ef9f6122">&#9670;&#160;</a></span>UniformDistributionWrapper() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NumType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d96/structabsl_1_1random__internal_1_1_uniform_distribution_wrapper.html">absl::random_internal::UniformDistributionWrapper</a>&lt; NumType &gt;::UniformDistributionWrapper </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d9d/uniform__helper_8h_source.html#l00235">235</a> of file <a class="el" href="../../d7/d9d/uniform__helper_8h_source.html">uniform_helper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>      : UniformDistribution&lt;NumType&gt;(std::numeric_limits&lt;NumType&gt;::lowest(),</div>
+<div class="line"><span class="lineno">  237</span>                                     (std::numeric_limits&lt;NumType&gt;::max)()) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/random/internal/<a class="el" href="../../d7/d9d/uniform__helper_8h_source.html">uniform_helper.h</a></li>
 </ul>

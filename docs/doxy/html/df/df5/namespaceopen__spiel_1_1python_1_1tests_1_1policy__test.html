@@ -124,13 +124,11 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a350ecc119aef83f9bb30cf873dd93540" id="r_a350ecc119aef83f9bb30cf873dd93540"><td class="memItemLeft" align="right" valign="top"><a id="a350ecc119aef83f9bb30cf873dd93540" name="a350ecc119aef83f9bb30cf873dd93540"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>SEED</b> = 187461917</td></tr>
+<tr class="memitem:a350ecc119aef83f9bb30cf873dd93540" id="r_a350ecc119aef83f9bb30cf873dd93540"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a350ecc119aef83f9bb30cf873dd93540">SEED</a> = 187461917</td></tr>
 <tr class="separator:a350ecc119aef83f9bb30cf873dd93540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae797982cd20f79b7a9c425a7b56b8a88" id="r_ae797982cd20f79b7a9c425a7b56b8a88"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae797982cd20f79b7a9c425a7b56b8a88">_TIC_TAC_TOE_STATES</a></td></tr>
 <tr class="separator:ae797982cd20f79b7a9c425a7b56b8a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67ca4e723849272baef961154016f62b" id="r_a67ca4e723849272baef961154016f62b"><td class="memItemLeft" align="right" valign="top"><a id="a67ca4e723849272baef961154016f62b" name="a67ca4e723849272baef961154016f62b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_LEDUC_POKER</b> = pyspiel.load_game(&quot;leduc_poker&quot;)</td></tr>
+<tr class="memitem:a67ca4e723849272baef961154016f62b" id="r_a67ca4e723849272baef961154016f62b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67ca4e723849272baef961154016f62b">_LEDUC_POKER</a> = pyspiel.load_game(&quot;leduc_poker&quot;)</td></tr>
 <tr class="separator:a67ca4e723849272baef961154016f62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -176,9 +174,84 @@ Args:
   policy_object: A `policy.Policy` object on `game`. to test.
   player: Restrict testing policy to a player.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00141">141</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span><span class="keyword">def </span>test_policy_on_game(self, game, policy_object, player=-1):</div>
+<div class="line"><span class="lineno">  142</span>  <span class="stringliteral">&quot;&quot;&quot;Checks the policy conforms to the conventions.</span></div>
+<div class="line"><span class="lineno">  143</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  144</span><span class="stringliteral">  Checks the Policy.action_probabilities contains only legal actions (but not</span></div>
+<div class="line"><span class="lineno">  145</span><span class="stringliteral">  necessarily all).</span></div>
+<div class="line"><span class="lineno">  146</span><span class="stringliteral">  Checks that the probabilities are positive and sum to 1.</span></div>
+<div class="line"><span class="lineno">  147</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  148</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  149</span><span class="stringliteral">    self: The Test class. This methid targets as being used as a utility</span></div>
+<div class="line"><span class="lineno">  150</span><span class="stringliteral">      function to test policies.</span></div>
+<div class="line"><span class="lineno">  151</span><span class="stringliteral">    game: A `pyspiel.Game`, same as the one used in the policy.</span></div>
+<div class="line"><span class="lineno">  152</span><span class="stringliteral">    policy_object: A `policy.Policy` object on `game`. to test.</span></div>
+<div class="line"><span class="lineno">  153</span><span class="stringliteral">    player: Restrict testing policy to a player.</span></div>
+<div class="line"><span class="lineno">  154</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>  all_states = get_all_states.get_all_states(</div>
+<div class="line"><span class="lineno">  157</span>      game,</div>
+<div class="line"><span class="lineno">  158</span>      depth_limit=-1,</div>
+<div class="line"><span class="lineno">  159</span>      include_terminals=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  160</span>      include_chance_states=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  161</span>      to_string=<span class="keyword">lambda</span> s: s.information_state_string())</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>  <span class="keywordflow">for</span> state <span class="keywordflow">in</span> all_states.values():</div>
+<div class="line"><span class="lineno">  164</span>    legal_actions = set(state.legal_actions())</div>
+<div class="line"><span class="lineno">  165</span>    action_probabilities = policy_object.action_probabilities(state)</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> action_probabilities.keys():</div>
+<div class="line"><span class="lineno">  168</span>      <span class="comment"># We want a clearer error message to be able to debug.</span></div>
+<div class="line"><span class="lineno">  169</span>      actions_missing = set(legal_actions) - set(action_probabilities.keys())</div>
+<div class="line"><span class="lineno">  170</span>      illegal_actions = set(action_probabilities.keys()) - set(legal_actions)</div>
+<div class="line"><span class="lineno">  171</span>      self.assertIn(</div>
+<div class="line"><span class="lineno">  172</span>          action,</div>
+<div class="line"><span class="lineno">  173</span>          legal_actions,</div>
+<div class="line"><span class="lineno">  174</span>          msg=<span class="stringliteral">&quot;The action {} is present in the policy but is not a legal &quot;</span></div>
+<div class="line"><span class="lineno">  175</span>          <span class="stringliteral">&quot;actions (these are {})\n&quot;</span></div>
+<div class="line"><span class="lineno">  176</span>          <span class="stringliteral">&quot;Legal actions missing from policy: {}\n&quot;</span></div>
+<div class="line"><span class="lineno">  177</span>          <span class="stringliteral">&quot;Illegal actions present in policy: {}&quot;</span>.format(</div>
+<div class="line"><span class="lineno">  178</span>              action, legal_actions, actions_missing, illegal_actions))</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>    sum_ = 0</div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordflow">for</span> prob <span class="keywordflow">in</span> action_probabilities.values():</div>
+<div class="line"><span class="lineno">  182</span>      sum_ += prob</div>
+<div class="line"><span class="lineno">  183</span>      self.assertGreaterEqual(prob, 0)</div>
+<div class="line"><span class="lineno">  184</span>    <span class="keywordflow">if</span> player &lt; 0 <span class="keywordflow">or</span> state.current_player() == player:</div>
+<div class="line"><span class="lineno">  185</span>      self.assertAlmostEqual(1, sum_)</div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  187</span>      self.assertAlmostEqual(0, sum_)</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a67ca4e723849272baef961154016f62b" name="a67ca4e723849272baef961154016f62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ca4e723849272baef961154016f62b">&#9670;&#160;</a></span>_LEDUC_POKER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.policy_test._LEDUC_POKER = pyspiel.load_game(&quot;leduc_poker&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00190">190</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+
+</div>
+</div>
 <a id="ae797982cd20f79b7a9c425a7b56b8a88" name="ae797982cd20f79b7a9c425a7b56b8a88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae797982cd20f79b7a9c425a7b56b8a88">&#9670;&#160;</a></span>_TIC_TAC_TOE_STATES</h2>
 
@@ -222,6 +295,24 @@ Args:
 <div class="line"><span class="lineno">   22</span>    }</div>
 <div class="line"><span class="lineno">   23</span>]</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00029">29</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+
+</div>
+</div>
+<a id="a350ecc119aef83f9bb30cf873dd93540" name="a350ecc119aef83f9bb30cf873dd93540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350ecc119aef83f9bb30cf873dd93540">&#9670;&#160;</a></span>SEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.tests.policy_test.SEED = 187461917</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00027">27</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

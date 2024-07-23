@@ -117,13 +117,48 @@ Collaboration diagram for absl::log_internal::LogTestEnvironment:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5e3468f80203903633bf5503263874f6" id="r_a5e3468f80203903633bf5503263874f6"><td class="memItemLeft" align="right" valign="top"><a id="a5e3468f80203903633bf5503263874f6" name="a5e3468f80203903633bf5503263874f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetUp</b> () override</td></tr>
+<tr class="memitem:a5e3468f80203903633bf5503263874f6" id="r_a5e3468f80203903633bf5503263874f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e3468f80203903633bf5503263874f6">SetUp</a> () override</td></tr>
 <tr class="separator:a5e3468f80203903633bf5503263874f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/d7e/test__helpers_8h_source.html#l00060">60</a> of file <a class="el" href="../../d5/d7e/test__helpers_8h_source.html">test_helpers.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5e3468f80203903633bf5503263874f6" name="a5e3468f80203903633bf5503263874f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e3468f80203903633bf5503263874f6">&#9670;&#160;</a></span>SetUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::log_internal::LogTestEnvironment::SetUp </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d3a/test__helpers_8cc_source.html#l00074">74</a> of file <a class="el" href="../../d2/d3a/test__helpers_8cc_source.html">test_helpers.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                               {</div>
+<div class="line"><span class="lineno">   75</span>  <span class="keywordflow">if</span> (!absl::log_internal::IsInitialized()) {</div>
+<div class="line"><span class="lineno">   76</span>    absl::InitializeLog();</div>
+<div class="line"><span class="lineno">   77</span>  }</div>
+<div class="line"><span class="lineno">   78</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/log/internal/<a class="el" href="../../d5/d7e/test__helpers_8h_source.html">test_helpers.h</a></li>
-<li>open_spiel/abseil-cpp/absl/log/internal/<b>test_helpers.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/log/internal/<a class="el" href="../../d2/d3a/test__helpers_8cc_source.html">test_helpers.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

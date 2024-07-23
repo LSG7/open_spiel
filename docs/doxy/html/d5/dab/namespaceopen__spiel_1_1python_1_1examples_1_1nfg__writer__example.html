@@ -97,18 +97,67 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a40fe7a9fcab98c3909a1214d6d94fca1" id="r_a40fe7a9fcab98c3909a1214d6d94fca1"><td class="memItemLeft" align="right" valign="top"><a id="a40fe7a9fcab98c3909a1214d6d94fca1" name="a40fe7a9fcab98c3909a1214d6d94fca1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (_)</td></tr>
+<tr class="memitem:a40fe7a9fcab98c3909a1214d6d94fca1" id="r_a40fe7a9fcab98c3909a1214d6d94fca1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40fe7a9fcab98c3909a1214d6d94fca1">main</a> (_)</td></tr>
 <tr class="separator:a40fe7a9fcab98c3909a1214d6d94fca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:acf79e52212acf5246889298a20f5183b" id="r_acf79e52212acf5246889298a20f5183b"><td class="memItemLeft" align="right" valign="top"><a id="acf79e52212acf5246889298a20f5183b" name="acf79e52212acf5246889298a20f5183b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:acf79e52212acf5246889298a20f5183b" id="r_acf79e52212acf5246889298a20f5183b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf79e52212acf5246889298a20f5183b">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:acf79e52212acf5246889298a20f5183b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Python nfg_writer example.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">Python nfg_writer example.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a40fe7a9fcab98c3909a1214d6d94fca1" name="a40fe7a9fcab98c3909a1214d6d94fca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40fe7a9fcab98c3909a1214d6d94fca1">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.nfg_writer_example.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/dc6/nfg__writer__example_8py_source.html#l00028">28</a> of file <a class="el" href="../../d8/dc6/nfg__writer__example_8py_source.html">nfg_writer_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(_):</div>
+<div class="line"><span class="lineno">   29</span>  game = pyspiel.load_game(FLAGS.game)</div>
+<div class="line"><span class="lineno">   30</span>  nfg_text = pyspiel.game_to_nfg_string(game)</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>  <span class="keywordflow">if</span> FLAGS.outfile <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">   33</span>    print(nfg_text)</div>
+<div class="line"><span class="lineno">   34</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   35</span>    print(<span class="stringliteral">&quot;Exporting to {}&quot;</span>.format(FLAGS.outfile))</div>
+<div class="line"><span class="lineno">   36</span>    outfile = open(FLAGS.outfile, <span class="stringliteral">&quot;w&quot;</span>)</div>
+<div class="line"><span class="lineno">   37</span>    outfile.write(nfg_text)</div>
+<div class="line"><span class="lineno">   38</span>    outfile.close()</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="acf79e52212acf5246889298a20f5183b" name="acf79e52212acf5246889298a20f5183b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf79e52212acf5246889298a20f5183b">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.nfg_writer_example.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/dc6/nfg__writer__example_8py_source.html#l00022">22</a> of file <a class="el" href="../../d8/dc6/nfg__writer__example_8py_source.html">nfg_writer_example.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

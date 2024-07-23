@@ -126,7 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aafd922c68791d1fb4c35bbbf260013ac" id="r_aafd922c68791d1fb4c35bbbf260013ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafd922c68791d1fb4c35bbbf260013ac">test_learning_and_applying_mfg_policy_in_n_player_game</a> (self)</td></tr>
 <tr class="separator:aafd922c68791d1fb4c35bbbf260013ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html#l00027">27</a> of file <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html">dynamic_routing_to_mean_field_game_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aafd922c68791d1fb4c35bbbf260013ac" name="aafd922c68791d1fb4c35bbbf260013ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aafd922c68791d1fb4c35bbbf260013ac">&#9670;&#160;</a></span>test_learning_and_applying_mfg_policy_in_n_player_game()</h2>
 
@@ -142,6 +145,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test converting learnt MFG policy default game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html#l00059">59</a> of file <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html">dynamic_routing_to_mean_field_game_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>  <span class="keyword">def </span>test_learning_and_applying_mfg_policy_in_n_player_game(self):</div>
+<div class="line"><span class="lineno">   60</span>    <span class="stringliteral">&quot;&quot;&quot;Test converting learnt MFG policy default game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   61</span>    <span class="comment"># learning the Braess MFG Nash equilibrium</span></div>
+<div class="line"><span class="lineno">   62</span>    mfg_game = pyspiel.load_game(<span class="stringliteral">&quot;python_mfg_dynamic_routing&quot;</span>)</div>
+<div class="line"><span class="lineno">   63</span>    omd = mirror_descent.MirrorDescent(mfg_game, lr=1)</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">   65</span>      omd.iteration()</div>
+<div class="line"><span class="lineno">   66</span>    mfg_policy = omd.get_policy()</div>
+<div class="line"><span class="lineno">   67</span>    n_player_game = pyspiel.load_game(<span class="stringliteral">&quot;python_dynamic_routing&quot;</span>)</div>
+<div class="line"><span class="lineno">   68</span>    mfg_derived_policy = (</div>
+<div class="line"><span class="lineno">   69</span>        dynamic_routing_to_mean_field_game</div>
+<div class="line"><span class="lineno">   70</span>        .DerivedNPlayerPolicyFromMeanFieldPolicy(n_player_game, mfg_policy))</div>
+<div class="line"><span class="lineno">   71</span>    expected_game_score.policy_value(n_player_game.new_initial_state(),</div>
+<div class="line"><span class="lineno">   72</span>                                     mfg_derived_policy)</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a480bae1b14b2b9a1f24d0ecc9bdfdc05" name="a480bae1b14b2b9a1f24d0ecc9bdfdc05"></a>
@@ -159,6 +180,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test MFG Nash equilibrium policy for the Pigou network.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html#l00054">54</a> of file <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html">dynamic_routing_to_mean_field_game_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>  <span class="keyword">def </span>test_pigou_network_game_outcome_optimal_mfg_policy_in_n_player_game(self):</div>
+<div class="line"><span class="lineno">   55</span>    <span class="stringliteral">&quot;&quot;&quot;Test MFG Nash equilibrium policy for the Pigou network.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   56</span>    <span class="comment"># Test policy.</span></div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment"># Test game outcome.</span></div>
+<div class="line"><span class="lineno">   58</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a985c26975a10e0e72dc0bbcc9d513a5e" name="a985c26975a10e0e72dc0bbcc9d513a5e"></a>
@@ -176,6 +204,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test N player game state to mean field game state conversion.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html#l00029">29</a> of file <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html">dynamic_routing_to_mean_field_game_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>  <span class="keyword">def </span>test_state_conversion_method(self):</div>
+<div class="line"><span class="lineno">   30</span>    <span class="stringliteral">&quot;&quot;&quot;Test N player game state to mean field game state conversion.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   31</span>    <span class="comment"># Test state conversion.</span></div>
+<div class="line"><span class="lineno">   32</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5b568d8107ad7c5abf1d7714818ae8c5" name="a5b568d8107ad7c5abf1d7714818ae8c5"></a>
@@ -193,10 +227,33 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test conversion of uniform to uniform policy.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html#l00033">33</a> of file <a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html">dynamic_routing_to_mean_field_game_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>  <span class="keyword">def </span>test_uniform_mfg_policy_conversion_to_n_player_uniform_policy(self):</div>
+<div class="line"><span class="lineno">   34</span>    <span class="stringliteral">&quot;&quot;&quot;Test conversion of uniform to uniform policy.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   35</span>    mfg_game = pyspiel.load_game(<span class="stringliteral">&quot;python_mfg_dynamic_routing&quot;</span>, {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="stringliteral">&quot;time_step_length&quot;</span>: 0.05,</div>
+<div class="line"><span class="lineno">   37</span>        <span class="stringliteral">&quot;max_num_time_step&quot;</span>: 100</div>
+<div class="line"><span class="lineno">   38</span>    })</div>
+<div class="line"><span class="lineno">   39</span>    n_player_game = pyspiel.load_game(<span class="stringliteral">&quot;python_dynamic_routing&quot;</span>, {</div>
+<div class="line"><span class="lineno">   40</span>        <span class="stringliteral">&quot;time_step_length&quot;</span>: 0.05,</div>
+<div class="line"><span class="lineno">   41</span>        <span class="stringliteral">&quot;max_num_time_step&quot;</span>: 100</div>
+<div class="line"><span class="lineno">   42</span>    })</div>
+<div class="line"><span class="lineno">   43</span>    mfg_derived_policy = (</div>
+<div class="line"><span class="lineno">   44</span>        dynamic_routing_to_mean_field_game</div>
+<div class="line"><span class="lineno">   45</span>        .DerivedNPlayerPolicyFromMeanFieldPolicy(</div>
+<div class="line"><span class="lineno">   46</span>            n_player_game, policy.UniformRandomPolicy(mfg_game)))</div>
+<div class="line"><span class="lineno">   47</span>    derived_policy_value = expected_game_score.policy_value(</div>
+<div class="line"><span class="lineno">   48</span>        n_player_game.new_initial_state(), mfg_derived_policy)</div>
+<div class="line"><span class="lineno">   49</span>    uniform_policy_value = expected_game_score.policy_value(</div>
+<div class="line"><span class="lineno">   50</span>        n_player_game.new_initial_state(),</div>
+<div class="line"><span class="lineno">   51</span>        policy.UniformRandomPolicy(n_player_game))</div>
+<div class="line"><span class="lineno">   52</span>    self.assertSequenceAlmostEqual(derived_policy_value, uniform_policy_value)</div>
+<div class="line"><span class="lineno">   53</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>dynamic_routing_to_mean_field_game_test.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../da/d75/dynamic__routing__to__mean__field__game__test_8py_source.html">dynamic_routing_to_mean_field_game_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

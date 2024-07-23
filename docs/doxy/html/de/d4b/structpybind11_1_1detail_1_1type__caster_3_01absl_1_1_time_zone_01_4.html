@@ -109,16 +109,100 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c7d003ef23bbc37e814c92f60b6815f" id="r_a7c7d003ef23bbc37e814c92f60b6815f"><td class="memItemLeft" align="right" valign="top"><a id="a7c7d003ef23bbc37e814c92f60b6815f" name="a7c7d003ef23bbc37e814c92f60b6815f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PYBIND11_TYPE_CASTER</b> (<a class="el" href="../../d4/d64/classabsl_1_1_time_zone.html">absl::TimeZone</a>, const_name(&quot;absl::TimeZone&quot;))</td></tr>
 <tr class="separator:a7c7d003ef23bbc37e814c92f60b6815f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad936bf95ec7888221fb97da25a2c71ea" id="r_ad936bf95ec7888221fb97da25a2c71ea"><td class="memItemLeft" align="right" valign="top"><a id="ad936bf95ec7888221fb97da25a2c71ea" name="ad936bf95ec7888221fb97da25a2c71ea"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (handle src, bool convert)</td></tr>
+<tr class="memitem:ad936bf95ec7888221fb97da25a2c71ea" id="r_ad936bf95ec7888221fb97da25a2c71ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad936bf95ec7888221fb97da25a2c71ea">load</a> (handle src, bool convert)</td></tr>
 <tr class="separator:ad936bf95ec7888221fb97da25a2c71ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a213e52e3a44480392a01ffff6314b5c5" id="r_a213e52e3a44480392a01ffff6314b5c5"><td class="memItemLeft" align="right" valign="top"><a id="a213e52e3a44480392a01ffff6314b5c5" name="a213e52e3a44480392a01ffff6314b5c5"></a>
-static handle&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (const <a class="el" href="../../d4/d64/classabsl_1_1_time_zone.html">absl::TimeZone</a> &amp;src, return_value_policy, handle)</td></tr>
+<tr class="memitem:a213e52e3a44480392a01ffff6314b5c5" id="r_a213e52e3a44480392a01ffff6314b5c5"><td class="memItemLeft" align="right" valign="top">static handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a213e52e3a44480392a01ffff6314b5c5">cast</a> (const <a class="el" href="../../d4/d64/classabsl_1_1_time_zone.html">absl::TimeZone</a> &amp;src, return_value_policy, handle)</td></tr>
 <tr class="separator:a213e52e3a44480392a01ffff6314b5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/d04/absl__casters_8h_source.html#l00084">84</a> of file <a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a213e52e3a44480392a01ffff6314b5c5" name="a213e52e3a44480392a01ffff6314b5c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213e52e3a44480392a01ffff6314b5c5">&#9670;&#160;</a></span>cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static handle pybind11::detail::type_caster&lt; <a class="el" href="../../d4/d64/classabsl_1_1_time_zone.html">absl::TimeZone</a> &gt;::cast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d64/classabsl_1_1_time_zone.html">absl::TimeZone</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">return_value_policy</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">handle</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d04/absl__casters_8h_source.html#l00102">102</a> of file <a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>                                                                           {</div>
+<div class="line"><span class="lineno">  103</span>    <span class="comment">// Converts to Python str</span></div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> PyUnicode_FromStringAndSize(src.name().data(), src.name().size());</div>
+<div class="line"><span class="lineno">  105</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad936bf95ec7888221fb97da25a2c71ea" name="ad936bf95ec7888221fb97da25a2c71ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad936bf95ec7888221fb97da25a2c71ea">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pybind11::detail::type_caster&lt; <a class="el" href="../../d4/d64/classabsl_1_1_time_zone.html">absl::TimeZone</a> &gt;::load </td>
+          <td>(</td>
+          <td class="paramtype">handle</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>convert</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d04/absl__casters_8h_source.html#l00089">89</a> of file <a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                                      {</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">if</span> (PyUnicode_Check(src.ptr())) {</div>
+<div class="line"><span class="lineno">   91</span>      <span class="keywordflow">if</span> (LoadTimeZone(PyUnicode_AsUTF8(src.ptr()), &amp;value)) {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   93</span>      }</div>
+<div class="line"><span class="lineno">   94</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PyLong_Check(src.ptr())) {</div>
+<div class="line"><span class="lineno">   95</span>      value = absl::FixedTimeZone(PyLong_AsLong(src.ptr()));</div>
+<div class="line"><span class="lineno">   96</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   99</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/pybind11_abseil/pybind11_abseil/<a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a></li>
 </ul>

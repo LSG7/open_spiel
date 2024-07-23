@@ -117,16 +117,86 @@ Collaboration diagram for open_spiel::algorithms::torch_az::ResInputBlockImpl:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a298a24a995316c633d53df5b7aebfaaa" id="r_a298a24a995316c633d53df5b7aebfaaa"><td class="memItemLeft" align="right" valign="top"><a id="a298a24a995316c633d53df5b7aebfaaa" name="a298a24a995316c633d53df5b7aebfaaa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ResInputBlockImpl</b> (const <a class="el" href="../../d9/dfe/structopen__spiel_1_1algorithms_1_1torch__az_1_1_res_input_block_config.html">ResInputBlockConfig</a> &amp;config)</td></tr>
+<tr class="memitem:a298a24a995316c633d53df5b7aebfaaa" id="r_a298a24a995316c633d53df5b7aebfaaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a298a24a995316c633d53df5b7aebfaaa">ResInputBlockImpl</a> (const <a class="el" href="../../d9/dfe/structopen__spiel_1_1algorithms_1_1torch__az_1_1_res_input_block_config.html">ResInputBlockConfig</a> &amp;config)</td></tr>
 <tr class="separator:a298a24a995316c633d53df5b7aebfaaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12d996c4b95bb17f6ea322e7d8d59d70" id="r_a12d996c4b95bb17f6ea322e7d8d59d70"><td class="memItemLeft" align="right" valign="top"><a id="a12d996c4b95bb17f6ea322e7d8d59d70" name="a12d996c4b95bb17f6ea322e7d8d59d70"></a>
-torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (torch::Tensor x)</td></tr>
+<tr class="memitem:a12d996c4b95bb17f6ea322e7d8d59d70" id="r_a12d996c4b95bb17f6ea322e7d8d59d70"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12d996c4b95bb17f6ea322e7d8d59d70">forward</a> (torch::Tensor x)</td></tr>
 <tr class="separator:a12d996c4b95bb17f6ea322e7d8d59d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/d51/model_8h_source.html#l00082">82</a> of file <a class="el" href="../../dc/d51/model_8h_source.html">model.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a298a24a995316c633d53df5b7aebfaaa" name="a298a24a995316c633d53df5b7aebfaaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298a24a995316c633d53df5b7aebfaaa">&#9670;&#160;</a></span>ResInputBlockImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::torch_az::ResInputBlockImpl::ResInputBlockImpl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/dfe/structopen__spiel_1_1algorithms_1_1torch__az_1_1_res_input_block_config.html">ResInputBlockConfig</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>config</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d3b/model_8cc_source.html#l00051">51</a> of file <a class="el" href="../../d5/d3b/model_8cc_source.html">model.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>    : conv_(torch::nn::Conv2dOptions(</div>
+<div class="line"><span class="lineno">   53</span>                <span class="comment">/*input_channels=*/</span>config.input_channels,</div>
+<div class="line"><span class="lineno">   54</span>                <span class="comment">/*output_channels=*/</span>config.filters,</div>
+<div class="line"><span class="lineno">   55</span>                <span class="comment">/*kernel_size=*/</span>config.kernel_size)</div>
+<div class="line"><span class="lineno">   56</span>                .stride(1)</div>
+<div class="line"><span class="lineno">   57</span>                .padding(config.padding)</div>
+<div class="line"><span class="lineno">   58</span>                .dilation(1)</div>
+<div class="line"><span class="lineno">   59</span>                .groups(1)</div>
+<div class="line"><span class="lineno">   60</span>                .bias(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   61</span>                .padding_mode(torch::kZeros)),</div>
+<div class="line"><span class="lineno">   62</span>      batch_norm_(torch::nn::BatchNorm2dOptions(</div>
+<div class="line"><span class="lineno">   63</span>                      <span class="comment">/*num_features=*/</span>config.filters)</div>
+<div class="line"><span class="lineno">   64</span>                      .eps(0.001)      <span class="comment">// Make it the same as TF.</span></div>
+<div class="line"><span class="lineno">   65</span>                      .momentum(0.01)  <span class="comment">// Torch momentum = 1 - TF momentum.</span></div>
+<div class="line"><span class="lineno">   66</span>                      .affine(<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">   67</span>                      .track_running_stats(<span class="keyword">true</span>)) {</div>
+<div class="line"><span class="lineno">   68</span>  channels_ = config.input_channels;</div>
+<div class="line"><span class="lineno">   69</span>  height_ = config.input_height;</div>
+<div class="line"><span class="lineno">   70</span>  width_ = config.input_width;</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>  register_module(<span class="stringliteral">&quot;input_conv&quot;</span>, conv_);</div>
+<div class="line"><span class="lineno">   73</span>  register_module(<span class="stringliteral">&quot;input_batch_norm&quot;</span>, batch_norm_);</div>
+<div class="line"><span class="lineno">   74</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a12d996c4b95bb17f6ea322e7d8d59d70" name="a12d996c4b95bb17f6ea322e7d8d59d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d996c4b95bb17f6ea322e7d8d59d70">&#9670;&#160;</a></span>forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">torch::Tensor open_spiel::algorithms::torch_az::ResInputBlockImpl::forward </td>
+          <td>(</td>
+          <td class="paramtype">torch::Tensor</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d3b/model_8cc_source.html#l00076">76</a> of file <a class="el" href="../../d5/d3b/model_8cc_source.html">model.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>                                                    {</div>
+<div class="line"><span class="lineno">   77</span>  torch::Tensor output = x.view({-1, channels_, height_, width_});</div>
+<div class="line"><span class="lineno">   78</span>  output = torch::relu(batch_norm_(conv_(output)));</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">return</span> output;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/alpha_zero_torch/<a class="el" href="../../dc/d51/model_8h_source.html">model.h</a></li>
-<li>open_spiel/algorithms/alpha_zero_torch/<b>model.cc</b></li>
+<li>open_spiel/algorithms/alpha_zero_torch/<a class="el" href="../../d5/d3b/model_8cc_source.html">model.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

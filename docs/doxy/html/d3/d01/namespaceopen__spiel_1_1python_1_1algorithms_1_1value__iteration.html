@@ -138,7 +138,32 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Adds action transitions from given state.</pre> <div class="dynheader">
+<pre class="fragment">Adds action transitions from given state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00044">44</a> of file <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html">value_iteration.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span><span class="keyword">def </span>_add_transition(transitions, key, state):</div>
+<div class="line"><span class="lineno">   45</span>  <span class="stringliteral">&quot;&quot;&quot;Adds action transitions from given state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  <span class="keywordflow">if</span> state.is_simultaneous_node():</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">for</span> p0action <span class="keywordflow">in</span> state.legal_actions(0):</div>
+<div class="line"><span class="lineno">   49</span>      <span class="keywordflow">for</span> p1action <span class="keywordflow">in</span> state.legal_actions(1):</div>
+<div class="line"><span class="lineno">   50</span>        next_state = state.clone()</div>
+<div class="line"><span class="lineno">   51</span>        next_state.apply_actions([p0action, p1action])</div>
+<div class="line"><span class="lineno">   52</span>        possibilities = []</div>
+<div class="line"><span class="lineno">   53</span>        _get_future_states(possibilities, next_state)</div>
+<div class="line"><span class="lineno">   54</span>        transitions[(key, p0action, p1action)] = possibilities</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> state.legal_actions():</div>
+<div class="line"><span class="lineno">   57</span>      next_state = state.child(action)</div>
+<div class="line"><span class="lineno">   58</span>      possibilities = []</div>
+<div class="line"><span class="lineno">   59</span>      _get_future_states(possibilities, next_state)</div>
+<div class="line"><span class="lineno">   60</span>      transitions[(key, action)] = possibilities</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00022">open_spiel.python.algorithms.value_iteration._get_future_states()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00063">open_spiel.python.algorithms.value_iteration._initialize_maps()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d01/namespaceopen__spiel_1_1python_1_1algorithms_1_1value__iteration_a7e98936f59b67ecfcef3e3d5a652a281_cgraph.png" border="0" usemap="#ad3/d01/namespaceopen__spiel_1_1python_1_1algorithms_1_1value__iteration_a7e98936f59b67ecfcef3e3d5a652a281_cgraph" alt=""/></div>
@@ -205,7 +230,35 @@ Arguments:
   state: the state following some s.apply_action(a), can be a chance node
   reach: chance reach probability of getting to this point from (s,a)
 Returns: nothing.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00022">22</a> of file <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html">value_iteration.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span><span class="keyword">def </span>_get_future_states(possibilities, state, reach=1.0):</div>
+<div class="line"><span class="lineno">   23</span>  <span class="stringliteral">&quot;&quot;&quot;Does a lookahead over chance nodes to all next states after (s,a).</span></div>
+<div class="line"><span class="lineno">   24</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   25</span><span class="stringliteral">  Also works if there are no chance nodes (i.e. base case).</span></div>
+<div class="line"><span class="lineno">   26</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   27</span><span class="stringliteral">  Arguments:</span></div>
+<div class="line"><span class="lineno">   28</span><span class="stringliteral">    possibilities:  an empty list, that will be filled with (str(next_state),</span></div>
+<div class="line"><span class="lineno">   29</span><span class="stringliteral">      transition probability) pairs for all possible next states</span></div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral">    state: the state following some s.apply_action(a), can be a chance node</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">    reach: chance reach probability of getting to this point from (s,a)</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">  Returns: nothing.</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   34</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> state.is_chance_node() <span class="keywordflow">or</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   35</span>    <span class="comment"># Base case</span></div>
+<div class="line"><span class="lineno">   36</span>    possibilities.append((str(state), reach))</div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keyword">assert</span> state.is_chance_node()</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">for</span> outcome, prob <span class="keywordflow">in</span> state.chance_outcomes():</div>
+<div class="line"><span class="lineno">   40</span>      next_state = state.child(outcome)</div>
+<div class="line"><span class="lineno">   41</span>      _get_future_states(possibilities, next_state, reach * prob)</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00022">open_spiel.python.algorithms.value_iteration._get_future_states()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00044">open_spiel.python.algorithms.value_iteration._add_transition()</a>, and <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00022">open_spiel.python.algorithms.value_iteration._get_future_states()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d01/namespaceopen__spiel_1_1python_1_1algorithms_1_1value__iteration_ac1b8cacbac7d548213d69105c9fc4867_cgraph.png" border="0" usemap="#ad3/d01/namespaceopen__spiel_1_1python_1_1algorithms_1_1value__iteration_ac1b8cacbac7d548213d69105c9fc4867_cgraph" alt=""/></div>
@@ -263,7 +316,23 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Initialize the value and transition maps.</pre> <div class="dynheader">
+<pre class="fragment">Initialize the value and transition maps.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00063">63</a> of file <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html">value_iteration.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span><span class="keyword">def </span>_initialize_maps(states, values, transitions):</div>
+<div class="line"><span class="lineno">   64</span>  <span class="stringliteral">&quot;&quot;&quot;Initialize the value and transition maps.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">for</span> key, state <span class="keywordflow">in</span> states.items():</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   67</span>      values[key] = state.player_return(0)</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   69</span>      values[key] = 0</div>
+<div class="line"><span class="lineno">   70</span>      _add_transition(transitions, key, state)</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00044">open_spiel.python.algorithms.value_iteration._add_transition()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00073">open_spiel.python.algorithms.value_iteration.value_iteration()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d01/namespaceopen__spiel_1_1python_1_1algorithms_1_1value__iteration_aa529f98f932c948e9ba9562a7b864ba0_cgraph.png" border="0" usemap="#ad3/d01/namespaceopen__spiel_1_1python_1_1algorithms_1_1value__iteration_aa529f98f932c948e9ba9562a7b864ba0_cgraph" alt=""/></div>
@@ -335,7 +404,98 @@ Arguments:
 Returns:
   A `dict` with string keys and float values, mapping string encoding of
   states to the values of those states.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00073">73</a> of file <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html">value_iteration.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span><span class="keyword">def </span>value_iteration(game, depth_limit, threshold, cyclic_game=False):</div>
+<div class="line"><span class="lineno">   74</span>  <span class="stringliteral">&quot;&quot;&quot;Solves for the optimal value function of a game.</span></div>
+<div class="line"><span class="lineno">   75</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   76</span><span class="stringliteral">  For small games only! Solves the game using value iteration,</span></div>
+<div class="line"><span class="lineno">   77</span><span class="stringliteral">  with the maximum error for the value function less than threshold.</span></div>
+<div class="line"><span class="lineno">   78</span><span class="stringliteral">  This algorithm works for sequential 1-player games or 2-player zero-sum</span></div>
+<div class="line"><span class="lineno">   79</span><span class="stringliteral">  games, with or without chance nodes.</span></div>
+<div class="line"><span class="lineno">   80</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   81</span><span class="stringliteral">  Arguments:</span></div>
+<div class="line"><span class="lineno">   82</span><span class="stringliteral">    game: The game to analyze, as returned by `load_game`.</span></div>
+<div class="line"><span class="lineno">   83</span><span class="stringliteral">    depth_limit: How deeply to analyze the game tree. Negative means no limit, 0</span></div>
+<div class="line"><span class="lineno">   84</span><span class="stringliteral">      means root-only, etc.</span></div>
+<div class="line"><span class="lineno">   85</span><span class="stringliteral">    threshold: Maximum error for state values..</span></div>
+<div class="line"><span class="lineno">   86</span><span class="stringliteral">    cyclic_game: set to True if the game has cycles (from state A we can get to</span></div>
+<div class="line"><span class="lineno">   87</span><span class="stringliteral">      state B, and from state B we can get back to state A).</span></div>
+<div class="line"><span class="lineno">   88</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   89</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   90</span><span class="stringliteral">    A `dict` with string keys and float values, mapping string encoding of</span></div>
+<div class="line"><span class="lineno">   91</span><span class="stringliteral">    states to the values of those states.</span></div>
+<div class="line"><span class="lineno">   92</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   93</span>  <span class="keyword">assert</span> game.num_players() <span class="keywordflow">in</span> (1,</div>
+<div class="line"><span class="lineno">   94</span>                                2), (<span class="stringliteral">&quot;Game must be a 1-player or 2-player game&quot;</span>)</div>
+<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">if</span> game.num_players() == 2:</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keyword">assert</span> game.get_type().utility == pyspiel.GameType.Utility.ZERO_SUM, (</div>
+<div class="line"><span class="lineno">   97</span>        <span class="stringliteral">&quot;2-player games must be zero sum games&quot;</span>)</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>  <span class="comment"># Must be perfect information or one-shot (not imperfect information).</span></div>
+<div class="line"><span class="lineno">  100</span>  <span class="keyword">assert</span> (game.get_type().information == pyspiel.GameType.Information.ONE_SHOT</div>
+<div class="line"><span class="lineno">  101</span>          <span class="keywordflow">or</span> game.get_type().information ==</div>
+<div class="line"><span class="lineno">  102</span>          pyspiel.GameType.Information.PERFECT_INFORMATION)</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>  <span class="comment"># We expect Value Iteration to be used with perfect information games, in</span></div>
+<div class="line"><span class="lineno">  105</span>  <span class="comment"># which `str` is assumed to display the state of the game.</span></div>
+<div class="line"><span class="lineno">  106</span>  states = get_all_states.get_all_states(</div>
+<div class="line"><span class="lineno">  107</span>      game,</div>
+<div class="line"><span class="lineno">  108</span>      depth_limit,</div>
+<div class="line"><span class="lineno">  109</span>      <span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">  110</span>      <span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  111</span>      to_string=str,</div>
+<div class="line"><span class="lineno">  112</span>      stop_if_encountered=cyclic_game)</div>
+<div class="line"><span class="lineno">  113</span>  values = {}</div>
+<div class="line"><span class="lineno">  114</span>  transitions = {}</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>  _initialize_maps(states, values, transitions)</div>
+<div class="line"><span class="lineno">  117</span>  error = threshold + 1  <span class="comment"># A value larger than threshold</span></div>
+<div class="line"><span class="lineno">  118</span>  min_utility = game.min_utility()</div>
+<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">while</span> error &gt; threshold:</div>
+<div class="line"><span class="lineno">  120</span>    error = 0</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">for</span> key, state <span class="keywordflow">in</span> states.items():</div>
+<div class="line"><span class="lineno">  122</span>      <span class="keywordflow">if</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">continue</span></div>
+<div class="line"><span class="lineno">  124</span>      <span class="keywordflow">elif</span> state.is_simultaneous_node():</div>
+<div class="line"><span class="lineno">  125</span>        <span class="comment"># Simultaneous node. Assemble a matrix game from the child utilities.</span></div>
+<div class="line"><span class="lineno">  126</span>        <span class="comment"># and solve it using a matrix game solver.</span></div>
+<div class="line"><span class="lineno">  127</span>        p0_utils = []  <span class="comment"># row player</span></div>
+<div class="line"><span class="lineno">  128</span>        p1_utils = []  <span class="comment"># col player</span></div>
+<div class="line"><span class="lineno">  129</span>        row = 0</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">for</span> p0action <span class="keywordflow">in</span> state.legal_actions(0):</div>
+<div class="line"><span class="lineno">  131</span>          <span class="comment"># new row</span></div>
+<div class="line"><span class="lineno">  132</span>          p0_utils.append([])</div>
+<div class="line"><span class="lineno">  133</span>          p1_utils.append([])</div>
+<div class="line"><span class="lineno">  134</span>          <span class="keywordflow">for</span> p1action <span class="keywordflow">in</span> state.legal_actions(1):</div>
+<div class="line"><span class="lineno">  135</span>            <span class="comment"># loop from left-to-right of columns</span></div>
+<div class="line"><span class="lineno">  136</span>            next_states = transitions[(key, p0action, p1action)]</div>
+<div class="line"><span class="lineno">  137</span>            joint_q_value = sum(</div>
+<div class="line"><span class="lineno">  138</span>                p * values[next_state] <span class="keywordflow">for</span> next_state, p <span class="keywordflow">in</span> next_states)</div>
+<div class="line"><span class="lineno">  139</span>            p0_utils[row].append(joint_q_value)</div>
+<div class="line"><span class="lineno">  140</span>            p1_utils[row].append(-joint_q_value)</div>
+<div class="line"><span class="lineno">  141</span>          row += 1</div>
+<div class="line"><span class="lineno">  142</span>        stage_game = pyspiel.create_matrix_game(p0_utils, p1_utils)</div>
+<div class="line"><span class="lineno">  143</span>        solution = lp_solver.solve_zero_sum_matrix_game(stage_game)</div>
+<div class="line"><span class="lineno">  144</span>        value = solution[2]</div>
+<div class="line"><span class="lineno">  145</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  146</span>        <span class="comment"># Regular decision node</span></div>
+<div class="line"><span class="lineno">  147</span>        player = state.current_player()</div>
+<div class="line"><span class="lineno">  148</span>        value = min_utility <span class="keywordflow">if</span> player == 0 <span class="keywordflow">else</span> -min_utility</div>
+<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">for</span> action <span class="keywordflow">in</span> state.legal_actions():</div>
+<div class="line"><span class="lineno">  150</span>          next_states = transitions[(key, action)]</div>
+<div class="line"><span class="lineno">  151</span>          q_value = sum(p * values[next_state] <span class="keywordflow">for</span> next_state, p <span class="keywordflow">in</span> next_states)</div>
+<div class="line"><span class="lineno">  152</span>          <span class="keywordflow">if</span> player == 0:</div>
+<div class="line"><span class="lineno">  153</span>            value = max(value, q_value)</div>
+<div class="line"><span class="lineno">  154</span>          <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  155</span>            value = min(value, q_value)</div>
+<div class="line"><span class="lineno">  156</span>      error = max(abs(values[key] - value), error)</div>
+<div class="line"><span class="lineno">  157</span>      values[key] = value</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>  <span class="keywordflow">return</span> values</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/da1/algorithms_2value__iteration_8py_source.html#l00063">open_spiel.python.algorithms.value_iteration._initialize_maps()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d01/namespaceopen__spiel_1_1python_1_1algorithms_1_1value__iteration_aed6b937afd42016a5bb92548ed10cc40_cgraph.png" border="0" usemap="#ad3/d01/namespaceopen__spiel_1_1python_1_1algorithms_1_1value__iteration_aed6b937afd42016a5bb92548ed10cc40_cgraph" alt=""/></div>

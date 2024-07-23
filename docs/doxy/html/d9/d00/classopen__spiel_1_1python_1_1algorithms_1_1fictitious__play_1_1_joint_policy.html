@@ -130,19 +130,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aab93fc2fc8434b80c250abad1036ece9" id="r_aab93fc2fc8434b80c250abad1036ece9"><td class="memItemLeft" align="right" valign="top"><a id="aab93fc2fc8434b80c250abad1036ece9" name="aab93fc2fc8434b80c250abad1036ece9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>policies</b></td></tr>
+<tr class="memitem:aab93fc2fc8434b80c250abad1036ece9" id="r_aab93fc2fc8434b80c250abad1036ece9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab93fc2fc8434b80c250abad1036ece9">policies</a></td></tr>
 <tr class="separator:aab93fc2fc8434b80c250abad1036ece9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy')"><img src="../../closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html">open_spiel.python.policy.Policy</a></td></tr>
-<tr class="memitem:ae972849a1b0e68c8201c45dd6d27f1bd inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy" id="r_ae972849a1b0e68c8201c45dd6d27f1bd"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>game</b></td></tr>
+<tr class="memitem:ae972849a1b0e68c8201c45dd6d27f1bd inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy" id="r_ae972849a1b0e68c8201c45dd6d27f1bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html#ae972849a1b0e68c8201c45dd6d27f1bd">game</a></td></tr>
 <tr class="separator:ae972849a1b0e68c8201c45dd6d27f1bd inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a5df64ce79c1957078539d1ae40a44 inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy" id="r_ab8a5df64ce79c1957078539d1ae40a44"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>player_ids</b></td></tr>
+<tr class="memitem:ab8a5df64ce79c1957078539d1ae40a44 inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy" id="r_ab8a5df64ce79c1957078539d1ae40a44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html#ab8a5df64ce79c1957078539d1ae40a44">player_ids</a></td></tr>
 <tr class="separator:ab8a5df64ce79c1957078539d1ae40a44 inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A policy for all players in the game.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">A policy for all players in the game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00057">57</a> of file <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0efb3ca6d888baec724e1f06b4cd954a" name="a0efb3ca6d888baec724e1f06b4cd954a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0efb3ca6d888baec724e1f06b4cd954a">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -174,6 +173,23 @@ Args:
      list of (action, prob).
 </pre> 
 <p>Reimplemented from <a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html#a9bb16da41a11941090e72d076d48964d">open_spiel.python.policy.Policy</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00060">60</a> of file <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>  <span class="keyword">def </span>__init__(self, game, policies):</div>
+<div class="line"><span class="lineno">   61</span>    <span class="stringliteral">&quot;&quot;&quot;Initializes a joint policy from a table of callables.</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">       game: The game being played.</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">       policies: A dictionary mapping player number to a function `state` -&gt;</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">         list of (action, prob).</span></div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   68</span>    super().__init__(game, list(range(game.num_players())))</div>
+<div class="line"><span class="lineno">   69</span>    self.policies = policies</div>
+<div class="line"><span class="lineno">   70</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00060">open_spiel.python.algorithms.fictitious_play.JointPolicy.__init__()</a>, <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00069">open_spiel.python.algorithms.fictitious_play.JointPolicy.policies</a>, <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00074">open_spiel.python.algorithms.policy_aggregator_joint._DictPolicy.policies()</a>, and <a class="el" href="../../df/d3d/strategy__selectors__test_8py_source.html#l00026">open_spiel.python.algorithms.psro_v2.strategy_selectors_test.FakeSolver.policies</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00060">open_spiel.python.algorithms.fictitious_play.JointPolicy.__init__()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -244,6 +260,16 @@ Returns:
   supplied state.
 </pre> 
 <p>Reimplemented from <a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html#a061fd4bbafb4f18987d93bdbc6a0889b">open_spiel.python.policy.Policy</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00071">71</a> of file <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>  <span class="keyword">def </span>action_probabilities(self, state, player_id=None):</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> dict(self.policies[player_id <span class="keywordflow">or</span> state.current_player()](state))</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00069">open_spiel.python.algorithms.fictitious_play.JointPolicy.policies</a>, <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00074">open_spiel.python.algorithms.policy_aggregator_joint._DictPolicy.policies()</a>, and <a class="el" href="../../df/d3d/strategy__selectors__test_8py_source.html#l00026">open_spiel.python.algorithms.psro_v2.strategy_selectors_test.FakeSolver.policies</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d64/policy_8py_source.html#l00145">open_spiel.python.policy.Policy.__call__()</a>, and <a class="el" href="../../d5/d64/policy_8py_source.html#l00158">open_spiel.python.policy.Policy.to_tabular()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -269,8 +295,27 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aab93fc2fc8434b80c250abad1036ece9" name="aab93fc2fc8434b80c250abad1036ece9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab93fc2fc8434b80c250abad1036ece9">&#9670;&#160;</a></span>policies</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.fictitious_play.JointPolicy.policies</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00069">69</a> of file <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00060">open_spiel.python.algorithms.fictitious_play.JointPolicy.__init__()</a>, and <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00071">open_spiel.python.algorithms.fictitious_play.JointPolicy.action_probabilities()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>fictitious_play.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

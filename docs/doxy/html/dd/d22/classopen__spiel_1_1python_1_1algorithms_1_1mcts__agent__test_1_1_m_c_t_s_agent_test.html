@@ -117,12 +117,59 @@ Collaboration diagram for open_spiel.python.algorithms.mcts_agent_test.MCTSAgent
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8322fe4fbb09f363522d3d7ee73ee453" id="r_a8322fe4fbb09f363522d3d7ee73ee453"><td class="memItemLeft" align="right" valign="top"><a id="a8322fe4fbb09f363522d3d7ee73ee453" name="a8322fe4fbb09f363522d3d7ee73ee453"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_tic_tac_toe_episode</b> (self)</td></tr>
+<tr class="memitem:a8322fe4fbb09f363522d3d7ee73ee453" id="r_a8322fe4fbb09f363522d3d7ee73ee453"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8322fe4fbb09f363522d3d7ee73ee453">test_tic_tac_toe_episode</a> (self)</td></tr>
 <tr class="separator:a8322fe4fbb09f363522d3d7ee73ee453"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/dc1/mcts__agent__test_8py_source.html#l00022">22</a> of file <a class="el" href="../../d5/dc1/mcts__agent__test_8py_source.html">mcts_agent_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8322fe4fbb09f363522d3d7ee73ee453" name="a8322fe4fbb09f363522d3d7ee73ee453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8322fe4fbb09f363522d3d7ee73ee453">&#9670;&#160;</a></span>test_tic_tac_toe_episode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.mcts_agent_test.MCTSAgentTest.test_tic_tac_toe_episode </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dc1/mcts__agent__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../d5/dc1/mcts__agent__test_8py_source.html">mcts_agent_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>  <span class="keyword">def </span>test_tic_tac_toe_episode(self):</div>
+<div class="line"><span class="lineno">   25</span>    env = rl_environment.Environment(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>, include_full_state=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   26</span>    num_players = env.num_players</div>
+<div class="line"><span class="lineno">   27</span>    num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>    <span class="comment"># Create the MCTS bot. Both agents can share the same bot in this case since</span></div>
+<div class="line"><span class="lineno">   30</span>    <span class="comment"># there is no state kept between searches. See mcts.py for more info about</span></div>
+<div class="line"><span class="lineno">   31</span>    <span class="comment"># the arguments.</span></div>
+<div class="line"><span class="lineno">   32</span>    mcts_bot = mcts.MCTSBot(env.game, 1.5, 100, mcts.RandomRolloutEvaluator())</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    agents = [</div>
+<div class="line"><span class="lineno">   35</span>        mcts_agent.MCTSAgent(player_id=idx, num_actions=num_actions,</div>
+<div class="line"><span class="lineno">   36</span>                             mcts_bot=mcts_bot)</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">for</span> idx <span class="keywordflow">in</span> range(num_players)</div>
+<div class="line"><span class="lineno">   38</span>    ]</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    time_step = env.reset()</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   42</span>      player_id = time_step.observations[<span class="stringliteral">&quot;current_player&quot;</span>]</div>
+<div class="line"><span class="lineno">   43</span>      agent_output = agents[player_id].step(time_step)</div>
+<div class="line"><span class="lineno">   44</span>      time_step = env.step([agent_output.action])</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents:</div>
+<div class="line"><span class="lineno">   46</span>      agent.step(time_step)</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>mcts_agent_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d5/dc1/mcts__agent__test_8py_source.html">mcts_agent_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

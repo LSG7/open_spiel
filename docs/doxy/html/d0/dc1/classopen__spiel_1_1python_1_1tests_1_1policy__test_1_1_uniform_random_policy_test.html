@@ -117,18 +117,119 @@ Collaboration diagram for open_spiel.python.tests.policy_test.UniformRandomPolic
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab5c21ead62dd03dea6e1758f98ad62b1" id="r_ab5c21ead62dd03dea6e1758f98ad62b1"><td class="memItemLeft" align="right" valign="top"><a id="ab5c21ead62dd03dea6e1758f98ad62b1" name="ab5c21ead62dd03dea6e1758f98ad62b1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_policy_attributes</b> (self)</td></tr>
+<tr class="memitem:ab5c21ead62dd03dea6e1758f98ad62b1" id="r_ab5c21ead62dd03dea6e1758f98ad62b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5c21ead62dd03dea6e1758f98ad62b1">test_policy_attributes</a> (self)</td></tr>
 <tr class="separator:ab5c21ead62dd03dea6e1758f98ad62b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a871156996a9784f6597f83e5c1442398" id="r_a871156996a9784f6597f83e5c1442398"><td class="memItemLeft" align="right" valign="top"><a id="a871156996a9784f6597f83e5c1442398" name="a871156996a9784f6597f83e5c1442398"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_policy_at_state</b> (self)</td></tr>
+<tr class="memitem:a871156996a9784f6597f83e5c1442398" id="r_a871156996a9784f6597f83e5c1442398"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a871156996a9784f6597f83e5c1442398">test_policy_at_state</a> (self)</td></tr>
 <tr class="separator:a871156996a9784f6597f83e5c1442398"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42ea01dd22f552ef3831a055d0d99296" id="r_a42ea01dd22f552ef3831a055d0d99296"><td class="memItemLeft" align="right" valign="top"><a id="a42ea01dd22f552ef3831a055d0d99296" name="a42ea01dd22f552ef3831a055d0d99296"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_players_have_different_legal_actions</b> (self)</td></tr>
+<tr class="memitem:a42ea01dd22f552ef3831a055d0d99296" id="r_a42ea01dd22f552ef3831a055d0d99296"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42ea01dd22f552ef3831a055d0d99296">test_players_have_different_legal_actions</a> (self)</td></tr>
 <tr class="separator:a42ea01dd22f552ef3831a055d0d99296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00487">487</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a42ea01dd22f552ef3831a055d0d99296" name="a42ea01dd22f552ef3831a055d0d99296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ea01dd22f552ef3831a055d0d99296">&#9670;&#160;</a></span>test_players_have_different_legal_actions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.policy_test.UniformRandomPolicyTest.test_players_have_different_legal_actions </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00511">511</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  511</span>  <span class="keyword">def </span>test_players_have_different_legal_actions(self):</div>
+<div class="line"><span class="lineno">  512</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;oshi_zumo&quot;</span>)</div>
+<div class="line"><span class="lineno">  513</span>    uniform_random_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">  514</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">  515</span>    state.apply_actions([46, 49])</div>
+<div class="line"><span class="lineno">  516</span>    <span class="comment"># Started with 50 coins each, now have 4 and 1 respectively</span></div>
+<div class="line"><span class="lineno">  517</span>    self.assertEqual(</div>
+<div class="line"><span class="lineno">  518</span>        uniform_random_policy.action_probabilities(state, player_id=0), {</div>
+<div class="line"><span class="lineno">  519</span>            0: 0.2,</div>
+<div class="line"><span class="lineno">  520</span>            1: 0.2,</div>
+<div class="line"><span class="lineno">  521</span>            2: 0.2,</div>
+<div class="line"><span class="lineno">  522</span>            3: 0.2,</div>
+<div class="line"><span class="lineno">  523</span>            4: 0.2</div>
+<div class="line"><span class="lineno">  524</span>        })</div>
+<div class="line"><span class="lineno">  525</span>    self.assertEqual(</div>
+<div class="line"><span class="lineno">  526</span>        uniform_random_policy.action_probabilities(state, player_id=1), {</div>
+<div class="line"><span class="lineno">  527</span>            0: 0.5,</div>
+<div class="line"><span class="lineno">  528</span>            1: 0.5</div>
+<div class="line"><span class="lineno">  529</span>        })</div>
+<div class="line"><span class="lineno">  530</span> </div>
+<div class="line"><span class="lineno">  531</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a871156996a9784f6597f83e5c1442398" name="a871156996a9784f6597f83e5c1442398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871156996a9784f6597f83e5c1442398">&#9670;&#160;</a></span>test_policy_at_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.policy_test.UniformRandomPolicyTest.test_policy_at_state </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00494">494</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  494</span>  <span class="keyword">def </span>test_policy_at_state(self):</div>
+<div class="line"><span class="lineno">  495</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">  496</span>    uniform_random_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">  497</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">  498</span>    state.apply_action(2)</div>
+<div class="line"><span class="lineno">  499</span>    state.apply_action(4)</div>
+<div class="line"><span class="lineno">  500</span>    state.apply_action(6)</div>
+<div class="line"><span class="lineno">  501</span>    state.apply_action(8)</div>
+<div class="line"><span class="lineno">  502</span>    self.assertEqual(</div>
+<div class="line"><span class="lineno">  503</span>        uniform_random_policy.action_probabilities(state), {</div>
+<div class="line"><span class="lineno">  504</span>            0: 0.2,</div>
+<div class="line"><span class="lineno">  505</span>            1: 0.2,</div>
+<div class="line"><span class="lineno">  506</span>            3: 0.2,</div>
+<div class="line"><span class="lineno">  507</span>            5: 0.2,</div>
+<div class="line"><span class="lineno">  508</span>            7: 0.2</div>
+<div class="line"><span class="lineno">  509</span>        })</div>
+<div class="line"><span class="lineno">  510</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab5c21ead62dd03dea6e1758f98ad62b1" name="ab5c21ead62dd03dea6e1758f98ad62b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c21ead62dd03dea6e1758f98ad62b1">&#9670;&#160;</a></span>test_policy_attributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.policy_test.UniformRandomPolicyTest.test_policy_attributes </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00489">489</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  489</span>  <span class="keyword">def </span>test_policy_attributes(self):</div>
+<div class="line"><span class="lineno">  490</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;tiny_bridge_4p&quot;</span>)</div>
+<div class="line"><span class="lineno">  491</span>    uniform_random_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">  492</span>    self.assertEqual(uniform_random_policy.player_ids, [0, 1, 2, 3])</div>
+<div class="line"><span class="lineno">  493</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/tests/<b>policy_test.py</b></li>
+<li>open_spiel/python/tests/<a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

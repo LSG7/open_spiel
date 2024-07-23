@@ -108,16 +108,76 @@ Collaboration diagram for absl::types_internal::ExpectDefaultConstructWithDestru
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a363bb5a794430e21bb194a5817681eb0" id="r_a363bb5a794430e21bb194a5817681eb0"><td class="memItemLeft" align="right" valign="top"><a id="a363bb5a794430e21bb194a5817681eb0" name="a363bb5a794430e21bb194a5817681eb0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> () const</td></tr>
+<tr class="memitem:a363bb5a794430e21bb194a5817681eb0" id="r_a363bb5a794430e21bb194a5817681eb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a363bb5a794430e21bb194a5817681eb0">operator()</a> () const</td></tr>
 <tr class="separator:a363bb5a794430e21bb194a5817681eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a226158ff023a07e05d984afe95dcb193" id="r_a226158ff023a07e05d984afe95dcb193"><td class="memItemLeft" align="right" valign="top"><a id="a226158ff023a07e05d984afe95dcb193" name="a226158ff023a07e05d984afe95dcb193"></a>
-<a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>errors</b></td></tr>
+<tr class="memitem:a226158ff023a07e05d984afe95dcb193" id="r_a226158ff023a07e05d984afe95dcb193"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a226158ff023a07e05d984afe95dcb193">errors</a></td></tr>
 <tr class="separator:a226158ff023a07e05d984afe95dcb193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+struct absl::types_internal::ExpectDefaultConstructWithDestruct&lt; T &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00348">348</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a363bb5a794430e21bb194a5817681eb0" name="a363bb5a794430e21bb194a5817681eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a363bb5a794430e21bb194a5817681eb0">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/d2a/structabsl_1_1types__internal_1_1_expect_default_construct_with_destruct.html">absl::types_internal::ExpectDefaultConstructWithDestruct</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00349">349</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  349</span>                          {</div>
+<div class="line"><span class="lineno">  350</span>    <span class="comment">// Scoped so that destructor gets called before reporting success.</span></div>
+<div class="line"><span class="lineno">  351</span>    {</div>
+<div class="line"><span class="lineno">  352</span>      T object;</div>
+<div class="line"><span class="lineno">  353</span>      <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(object);</div>
+<div class="line"><span class="lineno">  354</span>    }</div>
+<div class="line"><span class="lineno">  355</span> </div>
+<div class="line"><span class="lineno">  356</span>    errors-&gt;addTestSuccess(<span class="stringliteral">&quot;Default construction&quot;</span>);</div>
+<div class="line"><span class="lineno">  357</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a226158ff023a07e05d984afe95dcb193" name="a226158ff023a07e05d984afe95dcb193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226158ff023a07e05d984afe95dcb193">&#9670;&#160;</a></span>errors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a>* <a class="el" href="../../d4/d2a/structabsl_1_1types__internal_1_1_expect_default_construct_with_destruct.html">absl::types_internal::ExpectDefaultConstructWithDestruct</a>&lt; T &gt;::errors</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00359">359</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a></li>
 </ul>

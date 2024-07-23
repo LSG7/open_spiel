@@ -117,12 +117,117 @@ Collaboration diagram for open_spiel.python.tests.games_gin_rummy_test.GamesGinR
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae137e3d447eae57ca71e90c5479a3b4f" id="r_ae137e3d447eae57ca71e90c5479a3b4f"><td class="memItemLeft" align="right" valign="top"><a id="ae137e3d447eae57ca71e90c5479a3b4f" name="ae137e3d447eae57ca71e90c5479a3b4f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_bindings</b> (self)</td></tr>
+<tr class="memitem:ae137e3d447eae57ca71e90c5479a3b4f" id="r_ae137e3d447eae57ca71e90c5479a3b4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae137e3d447eae57ca71e90c5479a3b4f">test_bindings</a> (self)</td></tr>
 <tr class="separator:ae137e3d447eae57ca71e90c5479a3b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/d61/games__gin__rummy__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../d5/d61/games__gin__rummy__test_8py_source.html">games_gin_rummy_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae137e3d447eae57ca71e90c5479a3b4f" name="ae137e3d447eae57ca71e90c5479a3b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae137e3d447eae57ca71e90c5479a3b4f">&#9670;&#160;</a></span>test_bindings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.games_gin_rummy_test.GamesGinRummyTest.test_bindings </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d61/games__gin__rummy__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../d5/d61/games__gin__rummy__test_8py_source.html">games_gin_rummy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>  <span class="keyword">def </span>test_bindings(self):</div>
+<div class="line"><span class="lineno">   27</span>    <span class="comment"># gin_rummy submodule attributes</span></div>
+<div class="line"><span class="lineno">   28</span>    self.assertEqual(gin_rummy.DEFAULT_NUM_RANKS, 13)</div>
+<div class="line"><span class="lineno">   29</span>    self.assertEqual(gin_rummy.DEFAULT_NUM_SUITS, 4)</div>
+<div class="line"><span class="lineno">   30</span>    self.assertEqual(gin_rummy.DEFAULT_NUM_CARDS, 52)</div>
+<div class="line"><span class="lineno">   31</span>    self.assertEqual(gin_rummy.NUM_PLAYERS, 2)</div>
+<div class="line"><span class="lineno">   32</span>    self.assertEqual(gin_rummy.MAX_POSSIBLE_DEADWOOD, 98)</div>
+<div class="line"><span class="lineno">   33</span>    self.assertEqual(gin_rummy.MAX_NUM_DRAW_UPCARD_ACTIONS, 50)</div>
+<div class="line"><span class="lineno">   34</span>    self.assertEqual(gin_rummy.DEFAULT_HAND_SIZE, 10)</div>
+<div class="line"><span class="lineno">   35</span>    self.assertEqual(gin_rummy.WALL_STOCK_SIZE, 2)</div>
+<div class="line"><span class="lineno">   36</span>    self.assertEqual(gin_rummy.DEFAULT_KNOCK_CARD, 10)</div>
+<div class="line"><span class="lineno">   37</span>    self.assertEqual(gin_rummy.DEFAULT_GIN_BONUS, 25)</div>
+<div class="line"><span class="lineno">   38</span>    self.assertEqual(gin_rummy.DEFAULT_UNDERCUT_BONUS, 25)</div>
+<div class="line"><span class="lineno">   39</span>    self.assertEqual(gin_rummy.DRAW_UPCARD_ACTION, 52)</div>
+<div class="line"><span class="lineno">   40</span>    self.assertEqual(gin_rummy.DRAW_STOCK_ACTION, 53)</div>
+<div class="line"><span class="lineno">   41</span>    self.assertEqual(gin_rummy.PASS_ACTION, 54)</div>
+<div class="line"><span class="lineno">   42</span>    self.assertEqual(gin_rummy.KNOCK_ACTION, 55)</div>
+<div class="line"><span class="lineno">   43</span>    self.assertEqual(gin_rummy.MELD_ACTION_BASE, 56)</div>
+<div class="line"><span class="lineno">   44</span>    self.assertEqual(gin_rummy.NUM_MELD_ACTIONS, 185)</div>
+<div class="line"><span class="lineno">   45</span>    self.assertEqual(gin_rummy.NUM_DISTINCT_ACTIONS, 241)</div>
+<div class="line"><span class="lineno">   46</span>    self.assertEqual(gin_rummy.OBSERVATION_TENSOR_SIZE, 644)</div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment"># Game bindings</span></div>
+<div class="line"><span class="lineno">   48</span>    game = pyspiel.load_game(<span class="stringliteral">&#39;gin_rummy&#39;</span>)</div>
+<div class="line"><span class="lineno">   49</span>    self.assertFalse(game.oklahoma())</div>
+<div class="line"><span class="lineno">   50</span>    self.assertEqual(game.knock_card(), 10)</div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment"># State bindings</span></div>
+<div class="line"><span class="lineno">   52</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   53</span>    self.assertEqual(state.current_phase(), gin_rummy.Phase.DEAL)</div>
+<div class="line"><span class="lineno">   54</span>    self.assertEqual(state.current_player(), pyspiel.PlayerId.CHANCE)</div>
+<div class="line"><span class="lineno">   55</span>    self.assertIsNone(state.upcard())</div>
+<div class="line"><span class="lineno">   56</span>    self.assertEqual(state.stock_size(), 52)</div>
+<div class="line"><span class="lineno">   57</span>    self.assertEqual(state.hands(), [[], []])</div>
+<div class="line"><span class="lineno">   58</span>    self.assertEqual(state.discard_pile(), [])</div>
+<div class="line"><span class="lineno">   59</span>    self.assertEqual(state.deadwood(), [0, 0])</div>
+<div class="line"><span class="lineno">   60</span>    self.assertEqual(state.knocked(), [<span class="keyword">False</span>, <span class="keyword">False</span>])</div>
+<div class="line"><span class="lineno">   61</span>    self.assertEqual(state.pass_on_first_upcard(), [<span class="keyword">False</span>, <span class="keyword">False</span>])</div>
+<div class="line"><span class="lineno">   62</span>    self.assertEqual(state.layed_melds(), [[], []])</div>
+<div class="line"><span class="lineno">   63</span>    self.assertEqual(state.layoffs(), [])</div>
+<div class="line"><span class="lineno">   64</span>    self.assertFalse(state.finished_layoffs())</div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment"># Utils</span></div>
+<div class="line"><span class="lineno">   66</span>    utils = gin_rummy.GinRummyUtils(gin_rummy.DEFAULT_NUM_RANKS,</div>
+<div class="line"><span class="lineno">   67</span>                                    gin_rummy.DEFAULT_NUM_SUITS,</div>
+<div class="line"><span class="lineno">   68</span>                                    gin_rummy.DEFAULT_HAND_SIZE)</div>
+<div class="line"><span class="lineno">   69</span>    self.assertEqual(utils.card_string(0), <span class="stringliteral">&#39;As&#39;</span>)</div>
+<div class="line"><span class="lineno">   70</span>    self.assertEqual(utils.hand_to_string([0, 1, 2]),</div>
+<div class="line"><span class="lineno">   71</span>                     <span class="stringliteral">&#39;+--------------------------+\n&#39;</span></div>
+<div class="line"><span class="lineno">   72</span>                     <span class="stringliteral">&#39;|As2s3s                    |\n&#39;</span></div>
+<div class="line"><span class="lineno">   73</span>                     <span class="stringliteral">&#39;|                          |\n&#39;</span></div>
+<div class="line"><span class="lineno">   74</span>                     <span class="stringliteral">&#39;|                          |\n&#39;</span></div>
+<div class="line"><span class="lineno">   75</span>                     <span class="stringliteral">&#39;|                          |\n&#39;</span></div>
+<div class="line"><span class="lineno">   76</span>                     <span class="stringliteral">&#39;+--------------------------+\n&#39;</span>)</div>
+<div class="line"><span class="lineno">   77</span>    self.assertEqual(utils.card_int(<span class="stringliteral">&#39;As&#39;</span>), 0)</div>
+<div class="line"><span class="lineno">   78</span>    self.assertEqual(utils.card_ints_to_card_strings([0, 1, 2]),</div>
+<div class="line"><span class="lineno">   79</span>                     [<span class="stringliteral">&#39;As&#39;</span>, <span class="stringliteral">&#39;2s&#39;</span>, <span class="stringliteral">&#39;3s&#39;</span>])</div>
+<div class="line"><span class="lineno">   80</span>    self.assertEqual(utils.card_strings_to_card_ints([<span class="stringliteral">&#39;As&#39;</span>, <span class="stringliteral">&#39;2s&#39;</span>, <span class="stringliteral">&#39;3s&#39;</span>]),</div>
+<div class="line"><span class="lineno">   81</span>                     [0, 1, 2])</div>
+<div class="line"><span class="lineno">   82</span>    self.assertEqual(utils.card_value(0), 1)</div>
+<div class="line"><span class="lineno">   83</span>    self.assertEqual(utils.total_card_value([50, 51]), 20)</div>
+<div class="line"><span class="lineno">   84</span>    self.assertEqual(utils.total_card_value([[0, 1], [50, 51]]), 23)</div>
+<div class="line"><span class="lineno">   85</span>    self.assertEqual(utils.card_rank(51), 12)</div>
+<div class="line"><span class="lineno">   86</span>    self.assertEqual(utils.card_suit(51), 3)</div>
+<div class="line"><span class="lineno">   87</span>    self.assertTrue(utils.is_consecutive([0, 1, 2]))</div>
+<div class="line"><span class="lineno">   88</span>    self.assertTrue(utils.is_rank_meld([0, 13, 26]))</div>
+<div class="line"><span class="lineno">   89</span>    self.assertTrue(utils.is_suit_meld([0, 1, 2]))</div>
+<div class="line"><span class="lineno">   90</span>    self.assertEqual(utils.rank_melds([0, 1, 13, 26]), [[0, 13, 26]])</div>
+<div class="line"><span class="lineno">   91</span>    self.assertEqual(utils.suit_melds([0, 5, 6, 7]), [[5, 6, 7]])</div>
+<div class="line"><span class="lineno">   92</span>    self.assertEqual(utils.all_melds([0, 5, 6, 7, 13, 26]),</div>
+<div class="line"><span class="lineno">   93</span>                     [[0, 13, 26], [5, 6, 7]])</div>
+<div class="line"><span class="lineno">   94</span>    self.assertEqual(utils.all_meld_groups([0, 5, 6, 7, 13, 26]),</div>
+<div class="line"><span class="lineno">   95</span>                     [[[0, 13, 26], [5, 6, 7]], [[5, 6, 7], [0, 13, 26]]])</div>
+<div class="line"><span class="lineno">   96</span>    self.assertEqual(utils.best_meld_group([0, 5, 6, 7, 13, 26]),</div>
+<div class="line"><span class="lineno">   97</span>                     [[0, 13, 26], [5, 6, 7]])</div>
+<div class="line"><span class="lineno">   98</span>    self.assertEqual(utils.min_deadwood([0, 1, 2], 3), 0)</div>
+<div class="line"><span class="lineno">   99</span>    self.assertEqual(utils.min_deadwood([0, 1, 2]), 0)</div>
+<div class="line"><span class="lineno">  100</span>    self.assertEqual(utils.rank_meld_layoff([0, 13, 26]), 39)</div>
+<div class="line"><span class="lineno">  101</span>    self.assertEqual(utils.suit_meld_layoffs([0, 1, 2]), [3])</div>
+<div class="line"><span class="lineno">  102</span>    self.assertEqual(utils.legal_melds([0, 1, 2, 3], 10), [65, 66, 109])</div>
+<div class="line"><span class="lineno">  103</span>    self.assertEqual(utils.legal_discards([0, 1, 2], 10), [0, 1, 2])</div>
+<div class="line"><span class="lineno">  104</span>    self.assertEqual(utils.all_layoffs([65], [3]), [4])</div>
+<div class="line"><span class="lineno">  105</span>    self.assertEqual(utils.meld_to_int([0, 1, 2]), 65)</div>
+<div class="line"><span class="lineno">  106</span>    self.assertEqual(utils.int_to_meld[65], [0, 1, 2])</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/tests/<b>games_gin_rummy_test.py</b></li>
+<li>open_spiel/python/tests/<a class="el" href="../../d5/d61/games__gin__rummy__test_8py_source.html">games_gin_rummy_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

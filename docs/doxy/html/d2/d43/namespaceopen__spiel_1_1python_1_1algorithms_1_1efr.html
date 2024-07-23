@@ -118,8 +118,7 @@ Functions</h2></td></tr>
 <tr class="separator:a5085f2ff7e7df07f3234f2104cadadb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa621d2766c123aeede5a29f78078eaff" id="r_aa621d2766c123aeede5a29f78078eaff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa621d2766c123aeede5a29f78078eaff">array_to_strat_dict</a> (strategy_array, legal_actions)</td></tr>
 <tr class="separator:aa621d2766c123aeede5a29f78078eaff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44c7eb5181083a457bc6a1caec750bea" id="r_a44c7eb5181083a457bc6a1caec750bea"><td class="memItemLeft" align="right" valign="top"><a id="a44c7eb5181083a457bc6a1caec750bea" name="a44c7eb5181083a457bc6a1caec750bea"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>create_probs_from_index</b> (indices, current_policy)</td></tr>
+<tr class="memitem:a44c7eb5181083a457bc6a1caec750bea" id="r_a44c7eb5181083a457bc6a1caec750bea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44c7eb5181083a457bc6a1caec750bea">create_probs_from_index</a> (indices, current_policy)</td></tr>
 <tr class="separator:a44c7eb5181083a457bc6a1caec750bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fe7ed7d3fb990dbf260b4fa31624a06" id="r_a5fe7ed7d3fb990dbf260b4fa31624a06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fe7ed7d3fb990dbf260b4fa31624a06">return_blind_action</a> (num_actions, history, _)</td></tr>
 <tr class="separator:a5fe7ed7d3fb990dbf260b4fa31624a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,8 +150,7 @@ Functions</h2></td></tr>
 <tr class="separator:a0250a87ee95c38e9ec7e8fcb1f044f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac61ed405eaf272be18fb56385f890abf" id="r_ac61ed405eaf272be18fb56385f890abf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac61ed405eaf272be18fb56385f890abf">return_all_external_modified_deviations</a> (num_actions, possible_prior_weights, possible_prior_memory_actions, prior_memory_actions)</td></tr>
 <tr class="separator:ac61ed405eaf272be18fb56385f890abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae139ac6f8f43bf74ee8bed7be4a36026" id="r_ae139ac6f8f43bf74ee8bed7be4a36026"><td class="memItemLeft" align="right" valign="top"><a id="ae139ac6f8f43bf74ee8bed7be4a36026" name="ae139ac6f8f43bf74ee8bed7be4a36026"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>return_identity_deviation</b> (num_actions, possible_prior_weights, prior_memory_actions)</td></tr>
+<tr class="memitem:ae139ac6f8f43bf74ee8bed7be4a36026" id="r_ae139ac6f8f43bf74ee8bed7be4a36026"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae139ac6f8f43bf74ee8bed7be4a36026">return_identity_deviation</a> (num_actions, possible_prior_weights, prior_memory_actions)</td></tr>
 <tr class="separator:ae139ac6f8f43bf74ee8bed7be4a36026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -205,7 +203,34 @@ CFRBRSolver.
 Args:
   average_policy: A `policy.TabularPolicy` to be updated in-place.
   info_state_nodes: A dictionary {`info_state_str` -&gt; `_InfoStateNode`}.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00567">567</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  567</span><span class="keyword">def </span>_update_average_policy(average_policy, info_state_nodes):</div>
+<div class="line"><span class="lineno">  568</span>  <span class="stringliteral">&quot;&quot;&quot;Updates in place `average_policy` to the average of all policies iterated.</span></div>
+<div class="line"><span class="lineno">  569</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  570</span><span class="stringliteral">  This function is a module level function to be reused by both CFRSolver and</span></div>
+<div class="line"><span class="lineno">  571</span><span class="stringliteral">  CFRBRSolver.</span></div>
+<div class="line"><span class="lineno">  572</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  573</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  574</span><span class="stringliteral">    average_policy: A `policy.TabularPolicy` to be updated in-place.</span></div>
+<div class="line"><span class="lineno">  575</span><span class="stringliteral">    info_state_nodes: A dictionary {`info_state_str` -&gt; `_InfoStateNode`}.</span></div>
+<div class="line"><span class="lineno">  576</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  577</span>  <span class="keywordflow">for</span> info_state, info_state_node <span class="keywordflow">in</span> info_state_nodes.items():</div>
+<div class="line"><span class="lineno">  578</span>    info_state_policies_sum = info_state_node.cumulative_policy</div>
+<div class="line"><span class="lineno">  579</span>    state_policy = average_policy.policy_for_key(info_state)</div>
+<div class="line"><span class="lineno">  580</span>    probabilities_sum = sum(info_state_policies_sum.values())</div>
+<div class="line"><span class="lineno">  581</span>    <span class="keywordflow">if</span> probabilities_sum == 0:</div>
+<div class="line"><span class="lineno">  582</span>      num_actions = len(info_state_node.legal_actions)</div>
+<div class="line"><span class="lineno">  583</span>      <span class="keywordflow">for</span> action <span class="keywordflow">in</span> info_state_node.legal_actions:</div>
+<div class="line"><span class="lineno">  584</span>        state_policy[action] = 1 / num_actions</div>
+<div class="line"><span class="lineno">  585</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  586</span>      <span class="keywordflow">for</span> action, action_prob_sum <span class="keywordflow">in</span> info_state_policies_sum.items():</div>
+<div class="line"><span class="lineno">  587</span>        state_policy[action] = action_prob_sum / probabilities_sum</div>
+<div class="line"><span class="lineno">  588</span> </div>
+<div class="line"><span class="lineno">  589</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00144">open_spiel.python.algorithms.efr._EFRSolverBase.average_policy()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_af27506c7a15157a5741ef3fc6a7ba73e_icgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_af27506c7a15157a5741ef3fc6a7ba73e_icgraph" alt=""/></div>
@@ -251,7 +276,31 @@ Args:
 
 Returns:
   strategy_dictionary: a dictionary action -&gt; prob value.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00608">608</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  608</span><span class="keyword">def </span>array_to_strat_dict(strategy_array, legal_actions):</div>
+<div class="line"><span class="lineno">  609</span>  <span class="stringliteral">&quot;&quot;&quot;A helper function to convert a strategy.</span></div>
+<div class="line"><span class="lineno">  610</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  611</span><span class="stringliteral">  Converts a strategy array to an action -&gt; prob value dictionary.</span></div>
+<div class="line"><span class="lineno">  612</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  613</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  614</span><span class="stringliteral">    strategy_array: an array with the ith action&#39;s value at the i-1th index.</span></div>
+<div class="line"><span class="lineno">  615</span><span class="stringliteral">    legal_actions: the list of all legal actions at the current state.</span></div>
+<div class="line"><span class="lineno">  616</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  617</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  618</span><span class="stringliteral">    strategy_dictionary: a dictionary action -&gt; prob value.</span></div>
+<div class="line"><span class="lineno">  619</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  620</span>  strategy_dictionary = {}</div>
+<div class="line"><span class="lineno">  621</span>  <span class="keywordflow">for</span> action <span class="keywordflow">in</span> legal_actions:</div>
+<div class="line"><span class="lineno">  622</span>    strategy_dictionary[action] = strategy_array[action]</div>
+<div class="line"><span class="lineno">  623</span>  <span class="keywordflow">return</span> strategy_dictionary</div>
+<div class="line"><span class="lineno">  624</span> </div>
+<div class="line"><span class="lineno">  625</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l00608">open_spiel.python.algorithms.efr.array_to_strat_dict()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00608">open_spiel.python.algorithms.efr.array_to_strat_dict()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_aa621d2766c123aeede5a29f78078eaff_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_aa621d2766c123aeede5a29f78078eaff_cgraph" alt=""/></div>
@@ -270,6 +319,42 @@ Here is the caller graph for this function:</div>
 </map>
 </div>
 
+</div>
+</div>
+<a id="a44c7eb5181083a457bc6a1caec750bea" name="a44c7eb5181083a457bc6a1caec750bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44c7eb5181083a457bc6a1caec750bea">&#9670;&#160;</a></span>create_probs_from_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.efr.create_probs_from_index </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>indices</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>current_policy</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00626">626</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  626</span><span class="keyword">def </span>create_probs_from_index(indices, current_policy):</div>
+<div class="line"><span class="lineno">  627</span>  path_to_state = []</div>
+<div class="line"><span class="lineno">  628</span>  <span class="keywordflow">if</span> indices <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">or</span> <span class="keywordflow">not</span> indices:</div>
+<div class="line"><span class="lineno">  629</span>    <span class="keywordflow">return</span> []</div>
+<div class="line"><span class="lineno">  630</span>  <span class="keywordflow">for</span> index <span class="keywordflow">in</span> indices:</div>
+<div class="line"><span class="lineno">  631</span>    strat_dict = array_to_strat_dict(</div>
+<div class="line"><span class="lineno">  632</span>        current_policy.action_probability_array[index[1]], index[0]</div>
+<div class="line"><span class="lineno">  633</span>    )</div>
+<div class="line"><span class="lineno">  634</span>    path_to_state.append(strat_dict)</div>
+<div class="line"><span class="lineno">  635</span>  <span class="keywordflow">return</span> path_to_state</div>
+<div class="line"><span class="lineno">  636</span> </div>
+<div class="line"><span class="lineno">  637</span> </div>
+<div class="line"><span class="lineno">  638</span><span class="comment"># Deviation set definitions</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af7b21e09737edf488e647bb66ffe19b4" name="af7b21e09737edf488e647bb66ffe19b4"></a>
@@ -305,7 +390,47 @@ Args:
 Returns:
    An array with each element being the current stem joined with a possible
    permuation of remaining actions
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00909">909</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  909</span><span class="keyword">def </span>generate_all_action_permutations(current_stem, remaining_actions):</div>
+<div class="line"><span class="lineno">  910</span>  <span class="stringliteral">&quot;&quot;&quot;Return a List of all possible game continuations.</span></div>
+<div class="line"><span class="lineno">  911</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  912</span><span class="stringliteral">  Return a List of all possible game continuations playing on from the</span></div>
+<div class="line"><span class="lineno">  913</span><span class="stringliteral">  current stem and with playing from the set of remaining actions.</span></div>
+<div class="line"><span class="lineno">  914</span><span class="stringliteral">  `current_stem` = &quot;&quot; generates all possible playthroughs from the current</span></div>
+<div class="line"><span class="lineno">  915</span><span class="stringliteral">  information state.</span></div>
+<div class="line"><span class="lineno">  916</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  917</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  918</span><span class="stringliteral">     current_stem: the prior sequence of actions to be completed by the</span></div>
+<div class="line"><span class="lineno">  919</span><span class="stringliteral">       remaining actions</span></div>
+<div class="line"><span class="lineno">  920</span><span class="stringliteral">     remaining_actions: a 2d array of [subsequent states]x[possible actions]</span></div>
+<div class="line"><span class="lineno">  921</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  922</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  923</span><span class="stringliteral">     An array with each element being the current stem joined with a possible</span></div>
+<div class="line"><span class="lineno">  924</span><span class="stringliteral">     permuation of remaining actions</span></div>
+<div class="line"><span class="lineno">  925</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  926</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> remaining_actions:</div>
+<div class="line"><span class="lineno">  927</span>    <span class="keywordflow">return</span> [np.array(current_stem)]</div>
+<div class="line"><span class="lineno">  928</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  929</span>    next_actions = remaining_actions[0]</div>
+<div class="line"><span class="lineno">  930</span>    permutations = []</div>
+<div class="line"><span class="lineno">  931</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> next_actions:</div>
+<div class="line"><span class="lineno">  932</span>      next_stem = current_stem.copy()</div>
+<div class="line"><span class="lineno">  933</span>      next_stem.append(action)</div>
+<div class="line"><span class="lineno">  934</span>      next_remaining_actions = remaining_actions[1:]</div>
+<div class="line"><span class="lineno">  935</span>      prev_permutations = generate_all_action_permutations(</div>
+<div class="line"><span class="lineno">  936</span>          next_stem, next_remaining_actions</div>
+<div class="line"><span class="lineno">  937</span>      )</div>
+<div class="line"><span class="lineno">  938</span>      <span class="keywordflow">for</span> i <span class="keywordflow">in</span> prev_permutations:</div>
+<div class="line"><span class="lineno">  939</span>        permutations.append(i)</div>
+<div class="line"><span class="lineno">  940</span>    <span class="keywordflow">return</span> permutations</div>
+<div class="line"><span class="lineno">  941</span> </div>
+<div class="line"><span class="lineno">  942</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l00909">open_spiel.python.algorithms.efr.generate_all_action_permutations()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00909">open_spiel.python.algorithms.efr.generate_all_action_permutations()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l00943">open_spiel.python.algorithms.efr.return_behavourial()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_af7b21e09737edf488e647bb66ffe19b4_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_af7b21e09737edf488e647bb66ffe19b4_cgraph" alt=""/></div>
@@ -351,7 +476,30 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns all external deviations.</pre> <div class="dynheader">
+<pre class="fragment">Returns all external deviations.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l01205">1205</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1207</span>):</div>
+<div class="line"><span class="lineno"> 1208</span>  <span class="stringliteral">&quot;&quot;&quot;Returns all external deviations.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno"> 1209</span>  deviations = []</div>
+<div class="line"><span class="lineno"> 1210</span>  <span class="keywordflow">for</span> prior_actions_weight <span class="keywordflow">in</span> possible_prior_weights:</div>
+<div class="line"><span class="lineno"> 1211</span>    <span class="keywordflow">for</span> target <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1212</span>      deviations.append(</div>
+<div class="line"><span class="lineno"> 1213</span>          LocalDeviationWithTimeSelection(</div>
+<div class="line"><span class="lineno"> 1214</span>              target,</div>
+<div class="line"><span class="lineno"> 1215</span>              target,</div>
+<div class="line"><span class="lineno"> 1216</span>              num_actions,</div>
+<div class="line"><span class="lineno"> 1217</span>              prior_actions_weight,</div>
+<div class="line"><span class="lineno"> 1218</span>              prior_memory_actions,</div>
+<div class="line"><span class="lineno"> 1219</span>              <span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno"> 1220</span>          )</div>
+<div class="line"><span class="lineno"> 1221</span>      )</div>
+<div class="line"><span class="lineno"> 1222</span>  <span class="keywordflow">return</span> deviations</div>
+<div class="line"><span class="lineno"> 1223</span> </div>
+<div class="line"><span class="lineno"> 1224</span> </div>
+<div class="line"><span class="lineno"> 1225</span><span class="comment"># Modify last action as required</span></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00639">open_spiel.python.algorithms.efr.return_blind_action()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00685">open_spiel.python.algorithms.efr.return_blind_cf()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l00733">open_spiel.python.algorithms.efr.return_blind_partial_sequence()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a0250a87ee95c38e9ec7e8fcb1f044f91_icgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a0250a87ee95c38e9ec7e8fcb1f044f91_icgraph" alt=""/></div>
@@ -399,7 +547,50 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns all external deviations with modified memory actions.</pre> <div class="dynheader">
+<pre class="fragment">Returns all external deviations with modified memory actions.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l01226">1226</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1231</span>):</div>
+<div class="line"><span class="lineno"> 1232</span>  <span class="stringliteral">&quot;&quot;&quot;Returns all external deviations with modified memory actions.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno"> 1233</span>  deviations = []</div>
+<div class="line"><span class="lineno"> 1234</span>  <span class="keywordflow">for</span> prior_actions_weight <span class="keywordflow">in</span> possible_prior_weights:</div>
+<div class="line"><span class="lineno"> 1235</span>    <span class="keywordflow">try</span>:</div>
+<div class="line"><span class="lineno"> 1236</span>      modification_index = np.where(prior_actions_weight == 0)[0][0]</div>
+<div class="line"><span class="lineno"> 1237</span>    <span class="keywordflow">except</span> IndexError:</div>
+<div class="line"><span class="lineno"> 1238</span>      modification_index = 0</div>
+<div class="line"><span class="lineno"> 1239</span>    <span class="keywordflow">if</span> modification_index == len(prior_memory_actions):</div>
+<div class="line"><span class="lineno"> 1240</span>      <span class="keywordflow">for</span> target <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1241</span>        deviations.append(</div>
+<div class="line"><span class="lineno"> 1242</span>            LocalDeviationWithTimeSelection(</div>
+<div class="line"><span class="lineno"> 1243</span>                target,</div>
+<div class="line"><span class="lineno"> 1244</span>                target,</div>
+<div class="line"><span class="lineno"> 1245</span>                num_actions,</div>
+<div class="line"><span class="lineno"> 1246</span>                prior_actions_weight,</div>
+<div class="line"><span class="lineno"> 1247</span>                prior_memory_actions,</div>
+<div class="line"><span class="lineno"> 1248</span>                <span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno"> 1249</span>            )</div>
+<div class="line"><span class="lineno"> 1250</span>        )</div>
+<div class="line"><span class="lineno"> 1251</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno"> 1252</span>      previous_action = prior_memory_actions[modification_index]</div>
+<div class="line"><span class="lineno"> 1253</span>      <span class="keywordflow">for</span> alt_action <span class="keywordflow">in</span> possible_prior_memory_actions[modification_index]:</div>
+<div class="line"><span class="lineno"> 1254</span>        prior_memory_actions[modification_index] = alt_action</div>
+<div class="line"><span class="lineno"> 1255</span>        <span class="keywordflow">for</span> target <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1256</span>          deviations.append(</div>
+<div class="line"><span class="lineno"> 1257</span>              LocalDeviationWithTimeSelection(</div>
+<div class="line"><span class="lineno"> 1258</span>                  target,</div>
+<div class="line"><span class="lineno"> 1259</span>                  target,</div>
+<div class="line"><span class="lineno"> 1260</span>                  num_actions,</div>
+<div class="line"><span class="lineno"> 1261</span>                  prior_actions_weight,</div>
+<div class="line"><span class="lineno"> 1262</span>                  prior_memory_actions.copy(),</div>
+<div class="line"><span class="lineno"> 1263</span>                  <span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno"> 1264</span>              )</div>
+<div class="line"><span class="lineno"> 1265</span>          )</div>
+<div class="line"><span class="lineno"> 1266</span>        prior_memory_actions[modification_index] = previous_action</div>
+<div class="line"><span class="lineno"> 1267</span>  <span class="keywordflow">return</span> deviations</div>
+<div class="line"><span class="lineno"> 1268</span> </div>
+<div class="line"><span class="lineno"> 1269</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00791">open_spiel.python.algorithms.efr.return_cs_partial_sequence()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l00834">open_spiel.python.algorithms.efr.return_cs_partial_sequence_orginal()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_ac61ed405eaf272be18fb56385f890abf_icgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_ac61ed405eaf272be18fb56385f890abf_icgraph" alt=""/></div>
@@ -442,7 +633,54 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns all internal deviations with modified memory actions.</pre> <div class="dynheader">
+<pre class="fragment">Returns all internal deviations with modified memory actions.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l01157">1157</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1162</span>):</div>
+<div class="line"><span class="lineno"> 1163</span>  <span class="stringliteral">&quot;&quot;&quot;Returns all internal deviations with modified memory actions.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno"> 1164</span>  deviations = []</div>
+<div class="line"><span class="lineno"> 1165</span>  <span class="keywordflow">for</span> prior_actions_weight <span class="keywordflow">in</span> possible_prior_weights:</div>
+<div class="line"><span class="lineno"> 1166</span>    <span class="keywordflow">try</span>:</div>
+<div class="line"><span class="lineno"> 1167</span>      modification_index = np.where(prior_actions_weight == 0)[0][0]</div>
+<div class="line"><span class="lineno"> 1168</span>    <span class="keywordflow">except</span> IndexError:</div>
+<div class="line"><span class="lineno"> 1169</span>      modification_index = 0</div>
+<div class="line"><span class="lineno"> 1170</span>    <span class="keywordflow">if</span> modification_index == len(prior_memory_actions):</div>
+<div class="line"><span class="lineno"> 1171</span>      <span class="keywordflow">for</span> target <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1172</span>        <span class="keywordflow">for</span> source <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1173</span>          <span class="keywordflow">if</span> source != target:</div>
+<div class="line"><span class="lineno"> 1174</span>            deviations.append(</div>
+<div class="line"><span class="lineno"> 1175</span>                LocalDeviationWithTimeSelection(</div>
+<div class="line"><span class="lineno"> 1176</span>                    target,</div>
+<div class="line"><span class="lineno"> 1177</span>                    source,</div>
+<div class="line"><span class="lineno"> 1178</span>                    num_actions,</div>
+<div class="line"><span class="lineno"> 1179</span>                    prior_actions_weight,</div>
+<div class="line"><span class="lineno"> 1180</span>                    prior_memory_actions,</div>
+<div class="line"><span class="lineno"> 1181</span>                    <span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno"> 1182</span>                )</div>
+<div class="line"><span class="lineno"> 1183</span>            )</div>
+<div class="line"><span class="lineno"> 1184</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno"> 1185</span>      previous_action = prior_memory_actions[modification_index]</div>
+<div class="line"><span class="lineno"> 1186</span>      <span class="keywordflow">for</span> alt_action <span class="keywordflow">in</span> possible_prior_memory_actions[modification_index]:</div>
+<div class="line"><span class="lineno"> 1187</span>        prior_memory_actions[modification_index] = alt_action</div>
+<div class="line"><span class="lineno"> 1188</span>        <span class="keywordflow">for</span> target <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1189</span>          <span class="keywordflow">for</span> source <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1190</span>            <span class="keywordflow">if</span> source != target:</div>
+<div class="line"><span class="lineno"> 1191</span>              deviations.append(</div>
+<div class="line"><span class="lineno"> 1192</span>                  LocalDeviationWithTimeSelection(</div>
+<div class="line"><span class="lineno"> 1193</span>                      target,</div>
+<div class="line"><span class="lineno"> 1194</span>                      source,</div>
+<div class="line"><span class="lineno"> 1195</span>                      num_actions,</div>
+<div class="line"><span class="lineno"> 1196</span>                      prior_actions_weight,</div>
+<div class="line"><span class="lineno"> 1197</span>                      prior_memory_actions.copy(),</div>
+<div class="line"><span class="lineno"> 1198</span>                      <span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno"> 1199</span>                  )</div>
+<div class="line"><span class="lineno"> 1200</span>              )</div>
+<div class="line"><span class="lineno"> 1201</span>        prior_memory_actions[modification_index] = previous_action</div>
+<div class="line"><span class="lineno"> 1202</span>  <span class="keywordflow">return</span> deviations</div>
+<div class="line"><span class="lineno"> 1203</span> </div>
+<div class="line"><span class="lineno"> 1204</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00875">open_spiel.python.algorithms.efr.return_twice_informed_partial_sequence()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a1dbf1289c405821d7af2ef342a78cc4a_icgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a1dbf1289c405821d7af2ef342a78cc4a_icgraph" alt=""/></div>
@@ -478,7 +716,31 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns all non-identity internal deviations.</pre> <div class="dynheader">
+<pre class="fragment">Returns all non-identity internal deviations.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l01135">1135</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1137</span>):</div>
+<div class="line"><span class="lineno"> 1138</span>  <span class="stringliteral">&quot;&quot;&quot;Returns all non-identity internal deviations.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno"> 1139</span>  deviations = []</div>
+<div class="line"><span class="lineno"> 1140</span>  <span class="keywordflow">for</span> prior_actions_weight <span class="keywordflow">in</span> possible_prior_weights:</div>
+<div class="line"><span class="lineno"> 1141</span>    <span class="keywordflow">for</span> target <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1142</span>      <span class="keywordflow">for</span> source <span class="keywordflow">in</span> range(num_actions):</div>
+<div class="line"><span class="lineno"> 1143</span>        <span class="keywordflow">if</span> source != target:</div>
+<div class="line"><span class="lineno"> 1144</span>          deviations.append(</div>
+<div class="line"><span class="lineno"> 1145</span>              LocalDeviationWithTimeSelection(</div>
+<div class="line"><span class="lineno"> 1146</span>                  target,</div>
+<div class="line"><span class="lineno"> 1147</span>                  source,</div>
+<div class="line"><span class="lineno"> 1148</span>                  num_actions,</div>
+<div class="line"><span class="lineno"> 1149</span>                  prior_actions_weight,</div>
+<div class="line"><span class="lineno"> 1150</span>                  prior_memory_actions,</div>
+<div class="line"><span class="lineno"> 1151</span>                  <span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno"> 1152</span>              )</div>
+<div class="line"><span class="lineno"> 1153</span>          )</div>
+<div class="line"><span class="lineno"> 1154</span>  <span class="keywordflow">return</span> deviations</div>
+<div class="line"><span class="lineno"> 1155</span> </div>
+<div class="line"><span class="lineno"> 1156</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00943">open_spiel.python.algorithms.efr.return_behavourial()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00762">open_spiel.python.algorithms.efr.return_cf_partial_sequence()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00662">open_spiel.python.algorithms.efr.return_informed_action()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l00710">open_spiel.python.algorithms.efr.return_informed_cf()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_ae1035fe5f8f1b5f8d02b2e4a9d90dfa0_icgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_ae1035fe5f8f1b5f8d02b2e4a9d90dfa0_icgraph" alt=""/></div>
@@ -543,7 +805,61 @@ Returns:
   an array of LocalDeviationWithTimeSelection objects that represent
   all (single target) behaviourial deviations that are realizable at the
   information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00943">943</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  943</span><span class="keyword">def </span>return_behavourial(num_actions, history, prior_legal_actions):</div>
+<div class="line"><span class="lineno">  944</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all single target behavioural deviations.</span></div>
+<div class="line"><span class="lineno">  945</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  946</span><span class="stringliteral">  The target behavioural deviations are with respect to an information set.</span></div>
+<div class="line"><span class="lineno">  947</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  948</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  949</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  950</span><span class="stringliteral">      information set</span></div>
+<div class="line"><span class="lineno">  951</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  952</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  953</span><span class="stringliteral">    prior_legal_actions: a 2d array containing the legal actions for each</span></div>
+<div class="line"><span class="lineno">  954</span><span class="stringliteral">      preceeding state.</span></div>
+<div class="line"><span class="lineno">  955</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  956</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  957</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent</span></div>
+<div class="line"><span class="lineno">  958</span><span class="stringliteral">    all (single target) behaviourial deviations that are realizable at the</span></div>
+<div class="line"><span class="lineno">  959</span><span class="stringliteral">    information set.</span></div>
+<div class="line"><span class="lineno">  960</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  961</span>  deviations = []</div>
+<div class="line"><span class="lineno">  962</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> history:</div>
+<div class="line"><span class="lineno">  963</span>    internal = return_all_non_identity_internal_deviations(</div>
+<div class="line"><span class="lineno">  964</span>        num_actions, [<span class="keywordtype">None</span>], history</div>
+<div class="line"><span class="lineno">  965</span>    )</div>
+<div class="line"><span class="lineno">  966</span>    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> internal:</div>
+<div class="line"><span class="lineno">  967</span>      deviations.append(i)</div>
+<div class="line"><span class="lineno">  968</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  969</span>    <span class="keywordflow">for</span> deviation_info <span class="keywordflow">in</span> range(len(history)):</div>
+<div class="line"><span class="lineno">  970</span>      prior_possible_memory_actions = generate_all_action_permutations(</div>
+<div class="line"><span class="lineno">  971</span>          [], prior_legal_actions[: deviation_info + 1]</div>
+<div class="line"><span class="lineno">  972</span>      )</div>
+<div class="line"><span class="lineno">  973</span>      memory_weights = np.concatenate(</div>
+<div class="line"><span class="lineno">  974</span>          (np.ones(deviation_info), np.zeros(len(history) - deviation_info))</div>
+<div class="line"><span class="lineno">  975</span>      )</div>
+<div class="line"><span class="lineno">  976</span>      <span class="keywordflow">for</span> prior_memory_actions <span class="keywordflow">in</span> prior_possible_memory_actions:</div>
+<div class="line"><span class="lineno">  977</span>        prior_memory_actions = np.concatenate((</div>
+<div class="line"><span class="lineno">  978</span>            prior_memory_actions,</div>
+<div class="line"><span class="lineno">  979</span>            np.zeros(len(history) - len(prior_memory_actions)),</div>
+<div class="line"><span class="lineno">  980</span>        ))</div>
+<div class="line"><span class="lineno">  981</span>        <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(len(history) - len(prior_memory_actions)):</div>
+<div class="line"><span class="lineno">  982</span>          prior_memory_actions.append(0)</div>
+<div class="line"><span class="lineno">  983</span>        prior_memory_actions_cp = prior_memory_actions.copy()</div>
+<div class="line"><span class="lineno">  984</span>        internal = return_all_non_identity_internal_deviations(</div>
+<div class="line"><span class="lineno">  985</span>            num_actions, [memory_weights], prior_memory_actions_cp</div>
+<div class="line"><span class="lineno">  986</span>        )</div>
+<div class="line"><span class="lineno">  987</span>        <span class="keywordflow">for</span> i <span class="keywordflow">in</span> internal:</div>
+<div class="line"><span class="lineno">  988</span>          deviations.append(i)</div>
+<div class="line"><span class="lineno">  989</span> </div>
+<div class="line"><span class="lineno">  990</span>  <span class="keywordflow">return</span> deviations</div>
+<div class="line"><span class="lineno">  991</span> </div>
+<div class="line"><span class="lineno">  992</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l00909">open_spiel.python.algorithms.efr.generate_all_action_permutations()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l01137">open_spiel.python.algorithms.efr.return_all_non_identity_internal_deviations()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a27955578ed5cfb4b3f454a006387ef01_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a27955578ed5cfb4b3f454a006387ef01_cgraph" alt=""/></div>
@@ -596,7 +912,36 @@ Args:
 Returns:
   an array of LocalDeviationWithTimeSelection objects that represent all
   Blind Action deviations that are realizable at the information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00639">639</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  639</span><span class="keyword">def </span>return_blind_action(num_actions, history, _):</div>
+<div class="line"><span class="lineno">  640</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Blind Action deviations.</span></div>
+<div class="line"><span class="lineno">  641</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  642</span><span class="stringliteral">  Returns an array of all Blind Action deviations. with respect to an with</span></div>
+<div class="line"><span class="lineno">  643</span><span class="stringliteral">  respect to an information set.</span></div>
+<div class="line"><span class="lineno">  644</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  645</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  646</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  647</span><span class="stringliteral">      information set.</span></div>
+<div class="line"><span class="lineno">  648</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  649</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  650</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  651</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  652</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent all</span></div>
+<div class="line"><span class="lineno">  653</span><span class="stringliteral">    Blind Action deviations that are realizable at the information set.</span></div>
+<div class="line"><span class="lineno">  654</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  655</span>  memory_weights = [np.full(len(history), 1)]</div>
+<div class="line"><span class="lineno">  656</span>  prior_actions_in_memory = history</div>
+<div class="line"><span class="lineno">  657</span>  <span class="keywordflow">return</span> return_all_external_deviations(</div>
+<div class="line"><span class="lineno">  658</span>      num_actions, memory_weights, prior_actions_in_memory</div>
+<div class="line"><span class="lineno">  659</span>  )</div>
+<div class="line"><span class="lineno">  660</span> </div>
+<div class="line"><span class="lineno">  661</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01207">open_spiel.python.algorithms.efr.return_all_external_deviations()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00791">open_spiel.python.algorithms.efr.return_cs_partial_sequence()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a5fe7ed7d3fb990dbf260b4fa31624a06_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a5fe7ed7d3fb990dbf260b4fa31624a06_cgraph" alt=""/></div>
@@ -658,7 +1003,38 @@ Args:
 Returns:
   an array of LocalDeviationWithTimeSelection objects that represent all
   Blind CF deviations that are realizable at the information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00685">685</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  685</span><span class="keyword">def </span>return_blind_cf(num_actions, history, _):</div>
+<div class="line"><span class="lineno">  686</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Blind Counterfactual deviations.</span></div>
+<div class="line"><span class="lineno">  687</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  688</span><span class="stringliteral">  Returns an array of all Blind Counterfactual deviations with respect to an</span></div>
+<div class="line"><span class="lineno">  689</span><span class="stringliteral">  information set.</span></div>
+<div class="line"><span class="lineno">  690</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  691</span><span class="stringliteral">  Note: EFR using only Blind Counterfactual deviations is equivalent</span></div>
+<div class="line"><span class="lineno">  692</span><span class="stringliteral">  to vanilla Counterfactual Regret Minimisation (CFR).</span></div>
+<div class="line"><span class="lineno">  693</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  694</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  695</span><span class="stringliteral">      information set.</span></div>
+<div class="line"><span class="lineno">  696</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  697</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  698</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  699</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  700</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent all</span></div>
+<div class="line"><span class="lineno">  701</span><span class="stringliteral">    Blind CF deviations that are realizable at the information set.</span></div>
+<div class="line"><span class="lineno">  702</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  703</span>  memory_weights = [<span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">  704</span>  prior_actions_in_memory = np.zeros(len(history))</div>
+<div class="line"><span class="lineno">  705</span>  <span class="keywordflow">return</span> return_all_external_deviations(</div>
+<div class="line"><span class="lineno">  706</span>      num_actions, memory_weights, prior_actions_in_memory</div>
+<div class="line"><span class="lineno">  707</span>  )</div>
+<div class="line"><span class="lineno">  708</span> </div>
+<div class="line"><span class="lineno">  709</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01207">open_spiel.python.algorithms.efr.return_all_external_deviations()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00791">open_spiel.python.algorithms.efr.return_cs_partial_sequence()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_aebd5fe75c332f8838d0898fd071023ce_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_aebd5fe75c332f8838d0898fd071023ce_cgraph" alt=""/></div>
@@ -718,7 +1094,40 @@ Args:
 Returns:
   an array of LocalDeviationWithTimeSelection objects that represent all
   BPS deviations that are realizable at the information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00733">733</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  733</span><span class="keyword">def </span>return_blind_partial_sequence(num_actions, history, _):</div>
+<div class="line"><span class="lineno">  734</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Blind Partial Sequence deviations (BPS).</span></div>
+<div class="line"><span class="lineno">  735</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  736</span><span class="stringliteral">  Returns an array of all Blind Partial Sequence deviations (BPS) with respect</span></div>
+<div class="line"><span class="lineno">  737</span><span class="stringliteral">  to an information set.</span></div>
+<div class="line"><span class="lineno">  738</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  739</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  740</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  741</span><span class="stringliteral">      information set.</span></div>
+<div class="line"><span class="lineno">  742</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  743</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  744</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  745</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  746</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent all</span></div>
+<div class="line"><span class="lineno">  747</span><span class="stringliteral">    BPS deviations that are realizable at the information set.</span></div>
+<div class="line"><span class="lineno">  748</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  749</span>  prior_actions_in_memory = history</div>
+<div class="line"><span class="lineno">  750</span>  memory_weights = [<span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">  751</span>  <span class="keywordflow">if</span> history:</div>
+<div class="line"><span class="lineno">  752</span>    memory_weights.append(np.ones(len(history)))</div>
+<div class="line"><span class="lineno">  753</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(history)):</div>
+<div class="line"><span class="lineno">  754</span>    possible_memory_weight = np.zeros(len(history))</div>
+<div class="line"><span class="lineno">  755</span>    possible_memory_weight[0:i] = np.full(i, 1.0)</div>
+<div class="line"><span class="lineno">  756</span>    memory_weights.append(possible_memory_weight)</div>
+<div class="line"><span class="lineno">  757</span>  <span class="keywordflow">return</span> return_all_external_deviations(</div>
+<div class="line"><span class="lineno">  758</span>      num_actions, memory_weights, prior_actions_in_memory</div>
+<div class="line"><span class="lineno">  759</span>  )</div>
+<div class="line"><span class="lineno">  760</span> </div>
+<div class="line"><span class="lineno">  761</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01207">open_spiel.python.algorithms.efr.return_all_external_deviations()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a6d1af8cd78eff3069768bae3fd75a392_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a6d1af8cd78eff3069768bae3fd75a392_cgraph" alt=""/></div>
@@ -768,7 +1177,40 @@ Args:
 Returns:
   an array of LocalDeviationWithTimeSelection objects that represent
   all CFPS deviations that are realizable at the information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00762">762</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  762</span><span class="keyword">def </span>return_cf_partial_sequence(num_actions, history, _):</div>
+<div class="line"><span class="lineno">  763</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Counterfactual Partial Sequence deviations (CFPS).</span></div>
+<div class="line"><span class="lineno">  764</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  765</span><span class="stringliteral">  Returns an array of all Counterfactual Partial Sequence deviations (CFPS)</span></div>
+<div class="line"><span class="lineno">  766</span><span class="stringliteral">  with respect to an information set.</span></div>
+<div class="line"><span class="lineno">  767</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  768</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  769</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  770</span><span class="stringliteral">      information set.</span></div>
+<div class="line"><span class="lineno">  771</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  772</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  773</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  774</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  775</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent</span></div>
+<div class="line"><span class="lineno">  776</span><span class="stringliteral">    all CFPS deviations that are realizable at the information set.</span></div>
+<div class="line"><span class="lineno">  777</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  778</span>  prior_actions_in_memory = history</div>
+<div class="line"><span class="lineno">  779</span>  memory_weights = [<span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">  780</span>  <span class="keywordflow">if</span> history:</div>
+<div class="line"><span class="lineno">  781</span>    memory_weights.append(np.ones(len(history)))</div>
+<div class="line"><span class="lineno">  782</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(history)):</div>
+<div class="line"><span class="lineno">  783</span>    possible_memory_weight = np.zeros(len(history))</div>
+<div class="line"><span class="lineno">  784</span>    possible_memory_weight[0:i] = np.full(i, 1.0)</div>
+<div class="line"><span class="lineno">  785</span>    memory_weights.append(possible_memory_weight)</div>
+<div class="line"><span class="lineno">  786</span>  <span class="keywordflow">return</span> return_all_non_identity_internal_deviations(</div>
+<div class="line"><span class="lineno">  787</span>      num_actions, memory_weights, prior_actions_in_memory</div>
+<div class="line"><span class="lineno">  788</span>  )</div>
+<div class="line"><span class="lineno">  789</span> </div>
+<div class="line"><span class="lineno">  790</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01137">open_spiel.python.algorithms.efr.return_all_non_identity_internal_deviations()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a049ca15593e2ecc774feee7173c8e481_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a049ca15593e2ecc774feee7173c8e481_cgraph" alt=""/></div>
@@ -821,7 +1263,52 @@ Returns:
   an array of LocalDeviationWithTimeSelection objects that represent all
   Casual Partial Sequence deviations that are realizable at the
   information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00791">791</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  791</span><span class="keyword">def </span>return_cs_partial_sequence(num_actions, history, prior_legal_actions):</div>
+<div class="line"><span class="lineno">  792</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Casual Partial Sequence deviations.</span></div>
+<div class="line"><span class="lineno">  793</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  794</span><span class="stringliteral">  Returns an array of all Casual Partial Sequence deviations with respect to</span></div>
+<div class="line"><span class="lineno">  795</span><span class="stringliteral">  an information set.</span></div>
+<div class="line"><span class="lineno">  796</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  797</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  798</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  799</span><span class="stringliteral">      information set</span></div>
+<div class="line"><span class="lineno">  800</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  801</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  802</span><span class="stringliteral">    prior_legal_actions: a 2d array containing the legal actions for each</span></div>
+<div class="line"><span class="lineno">  803</span><span class="stringliteral">      preceeding state.</span></div>
+<div class="line"><span class="lineno">  804</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  805</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  806</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent all</span></div>
+<div class="line"><span class="lineno">  807</span><span class="stringliteral">    Casual Partial Sequence deviations that are realizable at the</span></div>
+<div class="line"><span class="lineno">  808</span><span class="stringliteral">    information set.</span></div>
+<div class="line"><span class="lineno">  809</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  810</span>  prior_actions_in_memory = history</div>
+<div class="line"><span class="lineno">  811</span>  external_memory_weights = [<span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">  812</span> </div>
+<div class="line"><span class="lineno">  813</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(history)):</div>
+<div class="line"><span class="lineno">  814</span>    possible_memory_weight = np.zeros(len(history))</div>
+<div class="line"><span class="lineno">  815</span>    possible_memory_weight[0:i] = np.full(i, 1.0)</div>
+<div class="line"><span class="lineno">  816</span>    external_memory_weights.append(possible_memory_weight)</div>
+<div class="line"><span class="lineno">  817</span> </div>
+<div class="line"><span class="lineno">  818</span>  external = return_all_external_modified_deviations(</div>
+<div class="line"><span class="lineno">  819</span>      num_actions,</div>
+<div class="line"><span class="lineno">  820</span>      external_memory_weights,</div>
+<div class="line"><span class="lineno">  821</span>      prior_legal_actions,</div>
+<div class="line"><span class="lineno">  822</span>      prior_actions_in_memory,</div>
+<div class="line"><span class="lineno">  823</span>  )</div>
+<div class="line"><span class="lineno">  824</span>  internal = return_blind_action(num_actions, history, <span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">  825</span> </div>
+<div class="line"><span class="lineno">  826</span>  cf_ext = return_informed_cf(num_actions, history, <span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">  827</span>  cf_int = return_blind_cf(num_actions, history, <span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">  828</span> </div>
+<div class="line"><span class="lineno">  829</span>  <span class="keywordflow">return</span> np.concatenate((external, internal, cf_ext, cf_int))</div>
+<div class="line"><span class="lineno">  830</span> </div>
+<div class="line"><span class="lineno">  831</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01231">open_spiel.python.algorithms.efr.return_all_external_modified_deviations()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00639">open_spiel.python.algorithms.efr.return_blind_action()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00685">open_spiel.python.algorithms.efr.return_blind_cf()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l00710">open_spiel.python.algorithms.efr.return_informed_cf()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a3ebcd5eb385023555444ccc5a366c565_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a3ebcd5eb385023555444ccc5a366c565_cgraph" alt=""/></div>
@@ -885,7 +1372,50 @@ Returns:
   an array of LocalDeviationWithTimeSelection objects that represent all
   Casual Partial Sequence deviations that are realizable at the
   information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00832">832</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  834</span>):</div>
+<div class="line"><span class="lineno">  835</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Casual Partial Sequence deviations.</span></div>
+<div class="line"><span class="lineno">  836</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  837</span><span class="stringliteral">  Returns an array of all Casual Partial Sequence deviations with respect to</span></div>
+<div class="line"><span class="lineno">  838</span><span class="stringliteral">  an information set.</span></div>
+<div class="line"><span class="lineno">  839</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  840</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  841</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  842</span><span class="stringliteral">      information set</span></div>
+<div class="line"><span class="lineno">  843</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  844</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  845</span><span class="stringliteral">    prior_legal_actions: a 2d array containing the legal actions for each</span></div>
+<div class="line"><span class="lineno">  846</span><span class="stringliteral">      preceeding state.</span></div>
+<div class="line"><span class="lineno">  847</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  848</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  849</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent all</span></div>
+<div class="line"><span class="lineno">  850</span><span class="stringliteral">    Casual Partial Sequence deviations that are realizable at the</span></div>
+<div class="line"><span class="lineno">  851</span><span class="stringliteral">    information set.</span></div>
+<div class="line"><span class="lineno">  852</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  853</span>  prior_actions_in_memory = history</div>
+<div class="line"><span class="lineno">  854</span>  external_memory_weights = [<span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">  855</span> </div>
+<div class="line"><span class="lineno">  856</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(history)):</div>
+<div class="line"><span class="lineno">  857</span>    possible_memory_weight = np.zeros(len(history))</div>
+<div class="line"><span class="lineno">  858</span>    possible_memory_weight[0:i] = np.full(i, 1.0)</div>
+<div class="line"><span class="lineno">  859</span>    external_memory_weights.append(possible_memory_weight)</div>
+<div class="line"><span class="lineno">  860</span> </div>
+<div class="line"><span class="lineno">  861</span>  external = return_all_external_modified_deviations(</div>
+<div class="line"><span class="lineno">  862</span>      num_actions,</div>
+<div class="line"><span class="lineno">  863</span>      external_memory_weights,</div>
+<div class="line"><span class="lineno">  864</span>      prior_legal_actions,</div>
+<div class="line"><span class="lineno">  865</span>      prior_actions_in_memory,</div>
+<div class="line"><span class="lineno">  866</span>  )</div>
+<div class="line"><span class="lineno">  867</span>  internal = return_informed_action(num_actions, history, <span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">  868</span> </div>
+<div class="line"><span class="lineno">  869</span>  cf_ext = return_informed_cf(num_actions, history, <span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">  870</span>  <span class="keywordflow">return</span> np.concatenate((external, internal, cf_ext))</div>
+<div class="line"><span class="lineno">  871</span> </div>
+<div class="line"><span class="lineno">  872</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01231">open_spiel.python.algorithms.efr.return_all_external_modified_deviations()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00662">open_spiel.python.algorithms.efr.return_informed_action()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l00710">open_spiel.python.algorithms.efr.return_informed_cf()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a3c21bb7334179379a2ad0098b4474fe0_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a3c21bb7334179379a2ad0098b4474fe0_cgraph" alt=""/></div>
@@ -903,6 +1433,47 @@ Here is the call graph for this function:</div>
 </map>
 </div>
 
+</div>
+</div>
+<a id="ae139ac6f8f43bf74ee8bed7be4a36026" name="ae139ac6f8f43bf74ee8bed7be4a36026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae139ac6f8f43bf74ee8bed7be4a36026">&#9670;&#160;</a></span>return_identity_deviation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.efr.return_identity_deviation </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_actions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>possible_prior_weights</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>prior_memory_actions</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l01270">1270</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1272</span>):</div>
+<div class="line"><span class="lineno"> 1273</span>  deviations = []</div>
+<div class="line"><span class="lineno"> 1274</span>  <span class="keywordflow">for</span> prior_actions_weight <span class="keywordflow">in</span> possible_prior_weights:</div>
+<div class="line"><span class="lineno"> 1275</span>    deviations.append(</div>
+<div class="line"><span class="lineno"> 1276</span>        LocalDeviationWithTimeSelection(</div>
+<div class="line"><span class="lineno"> 1277</span>            0, 0, num_actions, prior_actions_weight, prior_memory_actions, <span class="keyword">False</span></div>
+<div class="line"><span class="lineno"> 1278</span>        )</div>
+<div class="line"><span class="lineno"> 1279</span>    )</div>
+<div class="line"><span class="lineno"> 1280</span>  <span class="keywordflow">return</span> deviations</div>
+<div class="line"><span class="lineno"> 1281</span> </div>
+<div class="line"><span class="lineno"> 1282</span> </div>
+<div class="line"><span class="lineno"> 1283</span><span class="comment"># A swap transformation given by the matrix_transform for an information state.</span></div>
+<div class="line"><span class="lineno"> 1284</span><span class="comment"># Of actions_num size.</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5973496b6805e687daa5aa9277199174" name="a5973496b6805e687daa5aa9277199174"></a>
@@ -942,7 +1513,36 @@ Args:
 Returns:
   an array of LocalDeviationWithTimeSelection objects that represent all
   Informed Action deviations that are realizable at the information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00662">662</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  662</span><span class="keyword">def </span>return_informed_action(num_actions, history, _):</div>
+<div class="line"><span class="lineno">  663</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Informed Action deviations.</span></div>
+<div class="line"><span class="lineno">  664</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  665</span><span class="stringliteral">  Returns an array of all Informed Action deviations with respect to an</span></div>
+<div class="line"><span class="lineno">  666</span><span class="stringliteral">  information set.</span></div>
+<div class="line"><span class="lineno">  667</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  668</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  669</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  670</span><span class="stringliteral">      information set.</span></div>
+<div class="line"><span class="lineno">  671</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  672</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  673</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  674</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  675</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent all</span></div>
+<div class="line"><span class="lineno">  676</span><span class="stringliteral">    Informed Action deviations that are realizable at the information set.</span></div>
+<div class="line"><span class="lineno">  677</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  678</span>  memory_weights = [np.full(len(history), 1)]</div>
+<div class="line"><span class="lineno">  679</span>  prior_actions_in_memory = history</div>
+<div class="line"><span class="lineno">  680</span>  <span class="keywordflow">return</span> return_all_non_identity_internal_deviations(</div>
+<div class="line"><span class="lineno">  681</span>      num_actions, memory_weights, prior_actions_in_memory</div>
+<div class="line"><span class="lineno">  682</span>  )</div>
+<div class="line"><span class="lineno">  683</span> </div>
+<div class="line"><span class="lineno">  684</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01137">open_spiel.python.algorithms.efr.return_all_non_identity_internal_deviations()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00834">open_spiel.python.algorithms.efr.return_cs_partial_sequence_orginal()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a5973496b6805e687daa5aa9277199174_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a5973496b6805e687daa5aa9277199174_cgraph" alt=""/></div>
@@ -1002,7 +1602,36 @@ Args:
 Returns:
   an array of LocalDeviationWithTimeSelection objects that represent all
   Informed CF deviations that are realizable at the information set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00710">710</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  710</span><span class="keyword">def </span>return_informed_cf(num_actions, history, _):</div>
+<div class="line"><span class="lineno">  711</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Informed Counterfactual deviations.</span></div>
+<div class="line"><span class="lineno">  712</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  713</span><span class="stringliteral">  Returns an array of all Informed Counterfactual deviations with respect with</span></div>
+<div class="line"><span class="lineno">  714</span><span class="stringliteral">  respect to an information set.</span></div>
+<div class="line"><span class="lineno">  715</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  716</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  717</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  718</span><span class="stringliteral">      information set.</span></div>
+<div class="line"><span class="lineno">  719</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  720</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  721</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  722</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  723</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent all</span></div>
+<div class="line"><span class="lineno">  724</span><span class="stringliteral">    Informed CF deviations that are realizable at the information set.</span></div>
+<div class="line"><span class="lineno">  725</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  726</span>  memory_weights = [<span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">  727</span>  prior_actions_in_memory = np.zeros(len(history))</div>
+<div class="line"><span class="lineno">  728</span>  <span class="keywordflow">return</span> return_all_non_identity_internal_deviations(</div>
+<div class="line"><span class="lineno">  729</span>      num_actions, memory_weights, prior_actions_in_memory</div>
+<div class="line"><span class="lineno">  730</span>  )</div>
+<div class="line"><span class="lineno">  731</span> </div>
+<div class="line"><span class="lineno">  732</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01137">open_spiel.python.algorithms.efr.return_all_non_identity_internal_deviations()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00791">open_spiel.python.algorithms.efr.return_cs_partial_sequence()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00834">open_spiel.python.algorithms.efr.return_cs_partial_sequence_orginal()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l00875">open_spiel.python.algorithms.efr.return_twice_informed_partial_sequence()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a687edca4f46e728fc20c334a8595ae7a_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a687edca4f46e728fc20c334a8595ae7a_cgraph" alt=""/></div>
@@ -1068,7 +1697,45 @@ Args:
 Returns:
   an array of LocalDeviationWithTimeSelection objects that represent
   all TIPS deviations that are realizable at theinformation set.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00873">873</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  875</span>):</div>
+<div class="line"><span class="lineno">  876</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an array of all Twice Informed Partial Sequence (TIPS) deviations.</span></div>
+<div class="line"><span class="lineno">  877</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  878</span><span class="stringliteral">  Returns an array of all Twice Informed Partial Sequence (TIPS) deviations</span></div>
+<div class="line"><span class="lineno">  879</span><span class="stringliteral">  with respect to an information set.</span></div>
+<div class="line"><span class="lineno">  880</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  881</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  882</span><span class="stringliteral">    num_actions: the integer of all actions that can be taken at that</span></div>
+<div class="line"><span class="lineno">  883</span><span class="stringliteral">      information set</span></div>
+<div class="line"><span class="lineno">  884</span><span class="stringliteral">    history: an array containing the prior actions played by the `player` to</span></div>
+<div class="line"><span class="lineno">  885</span><span class="stringliteral">      reach the information set.</span></div>
+<div class="line"><span class="lineno">  886</span><span class="stringliteral">    prior_legal_actions: a 2d array containing the legal actions for each</span></div>
+<div class="line"><span class="lineno">  887</span><span class="stringliteral">      preceeding state.</span></div>
+<div class="line"><span class="lineno">  888</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  889</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  890</span><span class="stringliteral">    an array of LocalDeviationWithTimeSelection objects that represent</span></div>
+<div class="line"><span class="lineno">  891</span><span class="stringliteral">    all TIPS deviations that are realizable at theinformation set.</span></div>
+<div class="line"><span class="lineno">  892</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  893</span>  prior_actions_in_memory = history</div>
+<div class="line"><span class="lineno">  894</span>  memory_weights = [<span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">  895</span> </div>
+<div class="line"><span class="lineno">  896</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(history)):</div>
+<div class="line"><span class="lineno">  897</span>    possible_memory_weight = np.zeros(len(history))</div>
+<div class="line"><span class="lineno">  898</span>    possible_memory_weight[0:i] = np.full(i, 1.0)</div>
+<div class="line"><span class="lineno">  899</span>    memory_weights.append(possible_memory_weight)</div>
+<div class="line"><span class="lineno">  900</span> </div>
+<div class="line"><span class="lineno">  901</span>  internal = return_all_internal_modified_deviations(</div>
+<div class="line"><span class="lineno">  902</span>      num_actions, memory_weights, prior_legal_actions, prior_actions_in_memory</div>
+<div class="line"><span class="lineno">  903</span>  )</div>
+<div class="line"><span class="lineno">  904</span> </div>
+<div class="line"><span class="lineno">  905</span>  cf_int = return_informed_cf(num_actions, history, <span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">  906</span>  <span class="keywordflow">return</span> np.concatenate((internal, cf_int))</div>
+<div class="line"><span class="lineno">  907</span> </div>
+<div class="line"><span class="lineno">  908</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dee/efr_8py_source.html#l01162">open_spiel.python.algorithms.efr.return_all_internal_modified_deviations()</a>, and <a class="el" href="../../d6/dee/efr_8py_source.html#l00710">open_spiel.python.algorithms.efr.return_informed_cf()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_ac474b98ddb731ddc5bd0690df157107c_cgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_ac474b98ddb731ddc5bd0690df157107c_cgraph" alt=""/></div>
@@ -1108,7 +1775,29 @@ Args:
 
 Returns:
   strategy_array: an array with the ith action's value at the i-1th index.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dee/efr_8py_source.html#l00590">590</a> of file <a class="el" href="../../d6/dee/efr_8py_source.html">efr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  590</span><span class="keyword">def </span>strat_dict_to_array(strategy_dictionary):</div>
+<div class="line"><span class="lineno">  591</span>  <span class="stringliteral">&quot;&quot;&quot;A helper function to convert the strategy dictionary mapping.</span></div>
+<div class="line"><span class="lineno">  592</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  593</span><span class="stringliteral">  Conversion applies action -&gt; prob value to an array.</span></div>
+<div class="line"><span class="lineno">  594</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  595</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  596</span><span class="stringliteral">    strategy_dictionary: a dictionary action -&gt; prob value.</span></div>
+<div class="line"><span class="lineno">  597</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  598</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  599</span><span class="stringliteral">    strategy_array: an array with the ith action&#39;s value at the i-1th index.</span></div>
+<div class="line"><span class="lineno">  600</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  601</span>  actions = list(strategy_dictionary.keys())</div>
+<div class="line"><span class="lineno">  602</span>  strategy_array = np.zeros((len(actions), 1))</div>
+<div class="line"><span class="lineno">  603</span>  <span class="keywordflow">for</span> action <span class="keywordflow">in</span> range(len(actions)):</div>
+<div class="line"><span class="lineno">  604</span>    strategy_array[action][0] = strategy_dictionary[actions[action]]</div>
+<div class="line"><span class="lineno">  605</span>  <span class="keywordflow">return</span> strategy_array</div>
+<div class="line"><span class="lineno">  606</span> </div>
+<div class="line"><span class="lineno">  607</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/dee/efr_8py_source.html#l00294">open_spiel.python.algorithms.efr._EFRSolverBase._compute_cumulative_immediate_regret_for_player()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a5085f2ff7e7df07f3234f2104cadadb8_icgraph.png" border="0" usemap="#ad2/d43/namespaceopen__spiel_1_1python_1_1algorithms_1_1efr_a5085f2ff7e7df07f3234f2104cadadb8_icgraph" alt=""/></div>

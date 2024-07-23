@@ -117,12 +117,75 @@ Collaboration diagram for open_spiel.python.algorithms.eva_test.EVATest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab481864f8baea83af89d7d049e577dc2" id="r_ab481864f8baea83af89d7d049e577dc2"><td class="memItemLeft" align="right" valign="top"><a id="ab481864f8baea83af89d7d049e577dc2" name="ab481864f8baea83af89d7d049e577dc2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_run_games</b> (self, game)</td></tr>
+<tr class="memitem:ab481864f8baea83af89d7d049e577dc2" id="r_ab481864f8baea83af89d7d049e577dc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab481864f8baea83af89d7d049e577dc2">test_run_games</a> (self, game)</td></tr>
 <tr class="separator:ab481864f8baea83af89d7d049e577dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__test_8py_source.html#l00027">27</a> of file <a class="el" href="../../dc/dd7/eva__test_8py_source.html">eva_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab481864f8baea83af89d7d049e577dc2" name="ab481864f8baea83af89d7d049e577dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab481864f8baea83af89d7d049e577dc2">&#9670;&#160;</a></span>test_run_games()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.eva_test.EVATest.test_run_games </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../dc/dd7/eva__test_8py_source.html">eva_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  <span class="keyword">def </span>test_run_games(self, game):</div>
+<div class="line"><span class="lineno">   31</span>    env = rl_environment.Environment(game)</div>
+<div class="line"><span class="lineno">   32</span>    num_players = env.num_players</div>
+<div class="line"><span class="lineno">   33</span>    eva_agents = []</div>
+<div class="line"><span class="lineno">   34</span>    num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">   35</span>    state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</div>
+<div class="line"><span class="lineno">   37</span>      <span class="keywordflow">for</span> player <span class="keywordflow">in</span> range(num_players):</div>
+<div class="line"><span class="lineno">   38</span>        eva_agents.append(</div>
+<div class="line"><span class="lineno">   39</span>            eva.EVAAgent(</div>
+<div class="line"><span class="lineno">   40</span>                sess,</div>
+<div class="line"><span class="lineno">   41</span>                env,</div>
+<div class="line"><span class="lineno">   42</span>                player,</div>
+<div class="line"><span class="lineno">   43</span>                state_size,</div>
+<div class="line"><span class="lineno">   44</span>                num_actions,</div>
+<div class="line"><span class="lineno">   45</span>                embedding_network_layers=(64, 32),</div>
+<div class="line"><span class="lineno">   46</span>                embedding_size=12,</div>
+<div class="line"><span class="lineno">   47</span>                learning_rate=1e-4,</div>
+<div class="line"><span class="lineno">   48</span>                mixing_parameter=0.5,</div>
+<div class="line"><span class="lineno">   49</span>                memory_capacity=int(1e6),</div>
+<div class="line"><span class="lineno">   50</span>                discount_factor=1.0,</div>
+<div class="line"><span class="lineno">   51</span>                epsilon_start=1.0,</div>
+<div class="line"><span class="lineno">   52</span>                epsilon_end=0.1,</div>
+<div class="line"><span class="lineno">   53</span>                epsilon_decay_duration=int(1e6)))</div>
+<div class="line"><span class="lineno">   54</span>      sess.run(tf.global_variables_initializer())</div>
+<div class="line"><span class="lineno">   55</span>      time_step = env.reset()</div>
+<div class="line"><span class="lineno">   56</span>      <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   57</span>        current_player = time_step.observations[<span class="stringliteral">&quot;current_player&quot;</span>]</div>
+<div class="line"><span class="lineno">   58</span>        current_agent = eva_agents[current_player]</div>
+<div class="line"><span class="lineno">   59</span>        <span class="comment"># 1.  Step the agent.</span></div>
+<div class="line"><span class="lineno">   60</span>        <span class="comment"># 2.  Step the Environment.</span></div>
+<div class="line"><span class="lineno">   61</span>        agent_output = current_agent.step(time_step)</div>
+<div class="line"><span class="lineno">   62</span>        time_step = env.step([agent_output.action])</div>
+<div class="line"><span class="lineno">   63</span>      <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> eva_agents:</div>
+<div class="line"><span class="lineno">   64</span>        agent.step(time_step)</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>eva_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../dc/dd7/eva__test_8py_source.html">eva_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

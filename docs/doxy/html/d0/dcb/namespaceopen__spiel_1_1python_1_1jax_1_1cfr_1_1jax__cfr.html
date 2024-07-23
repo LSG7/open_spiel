@@ -114,8 +114,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a70f7844403d0807c086ab183f2d77de8" id="r_a70f7844403d0807c086ab183f2d77de8"><td class="memItemLeft" align="right" valign="top"><a id="a70f7844403d0807c086ab183f2d77de8" name="a70f7844403d0807c086ab183f2d77de8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>JAX_CFR_SIMULTANEOUS_UPDATE</b> = -5</td></tr>
+<tr class="memitem:a70f7844403d0807c086ab183f2d77de8" id="r_a70f7844403d0807c086ab183f2d77de8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70f7844403d0807c086ab183f2d77de8">JAX_CFR_SIMULTANEOUS_UPDATE</a> = -5</td></tr>
 <tr class="separator:a70f7844403d0807c086ab183f2d77de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -158,6 +157,24 @@ Args:
 Returns:
   policy: the policy.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00044">44</a> of file <a class="el" href="../../da/d71/jax__cfr_8py_source.html">jax_cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span><span class="keyword">def </span>regret_matching(regret, mask):</div>
+<div class="line"><span class="lineno">   45</span>  <span class="stringliteral">&quot;&quot;&quot;Computes current policy based on current regrets.</span></div>
+<div class="line"><span class="lineno">   46</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   47</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   48</span><span class="stringliteral">    regret: Current regrets in array Fkiat[Isets, Actions]</span></div>
+<div class="line"><span class="lineno">   49</span><span class="stringliteral">    mask: Legal action mask Bool[Isets, Actions]</span></div>
+<div class="line"><span class="lineno">   50</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   51</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   52</span><span class="stringliteral">    policy: the policy.</span></div>
+<div class="line"><span class="lineno">   53</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   54</span>  regret = jnp.maximum(regret, 0) * mask</div>
+<div class="line"><span class="lineno">   55</span>  total = jnp.sum(regret, axis=-1, keepdims=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">return</span> jnp.where(total &gt; 0.0, regret / total, 1.0 / jnp.sum(mask)) * mask</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac5a0f37bfabfca8296b4522641a6325b" name="ac5a0f37bfabfca8296b4522641a6325b"></a>
@@ -175,6 +192,14 @@ Returns:
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Updates the regrets without CFRPlus.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00065">65</a> of file <a class="el" href="../../da/d71/jax__cfr_8py_source.html">jax_cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span><span class="keyword">def </span>update_regrets(regret):</div>
+<div class="line"><span class="lineno">   66</span>  <span class="stringliteral">&quot;&quot;&quot;Updates the regrets without CFRPlus.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   67</span>  <span class="keywordflow">return</span> regret</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span><span class="preprocessor">@chex.dataclass(frozen=True)</span></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aca49c9c7fef2bf4a9f63ab5f0655ee52" name="aca49c9c7fef2bf4a9f63ab5f0655ee52"></a>
@@ -192,6 +217,30 @@ Returns:
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Clamps the regrets to be non-negative.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00060">60</a> of file <a class="el" href="../../da/d71/jax__cfr_8py_source.html">jax_cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span><span class="keyword">def </span>update_regrets_plus(regret):</div>
+<div class="line"><span class="lineno">   61</span>  <span class="stringliteral">&quot;&quot;&quot;Clamps the regrets to be non-negative.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">return</span> regret * (regret &gt; 0)</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a70f7844403d0807c086ab183f2d77de8" name="a70f7844403d0807c086ab183f2d77de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f7844403d0807c086ab183f2d77de8">&#9670;&#160;</a></span>JAX_CFR_SIMULTANEOUS_UPDATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.jax.cfr.jax_cfr.JAX_CFR_SIMULTANEOUS_UPDATE = -5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00041">41</a> of file <a class="el" href="../../da/d71/jax__cfr_8py_source.html">jax_cfr.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

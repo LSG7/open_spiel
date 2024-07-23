@@ -110,11 +110,9 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac61bc6372d44d0412df90253b85b9641" id="r_ac61bc6372d44d0412df90253b85b9641"><td class="memItemLeft" align="right" valign="top"><a id="ac61bc6372d44d0412df90253b85b9641" name="ac61bc6372d44d0412df90253b85b9641"></a>
-str&#160;</td><td class="memItemRight" valign="bottom"><b>_DEFAULT_STRATEGY_SELECTION_METHOD</b> = &quot;probabilistic&quot;</td></tr>
+<tr class="memitem:ac61bc6372d44d0412df90253b85b9641" id="r_ac61bc6372d44d0412df90253b85b9641"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac61bc6372d44d0412df90253b85b9641">_DEFAULT_STRATEGY_SELECTION_METHOD</a> = &quot;probabilistic&quot;</td></tr>
 <tr class="separator:ac61bc6372d44d0412df90253b85b9641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6f5ebd36febf7865ab7e569dd6133bd" id="r_af6f5ebd36febf7865ab7e569dd6133bd"><td class="memItemLeft" align="right" valign="top"><a id="af6f5ebd36febf7865ab7e569dd6133bd" name="af6f5ebd36febf7865ab7e569dd6133bd"></a>
-str&#160;</td><td class="memItemRight" valign="bottom"><b>_DEFAULT_META_STRATEGY_METHOD</b> = &quot;prd&quot;</td></tr>
+<tr class="memitem:af6f5ebd36febf7865ab7e569dd6133bd" id="r_af6f5ebd36febf7865ab7e569dd6133bd"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6f5ebd36febf7865ab7e569dd6133bd">_DEFAULT_META_STRATEGY_METHOD</a> = &quot;prd&quot;</td></tr>
 <tr class="separator:af6f5ebd36febf7865ab7e569dd6133bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -162,7 +160,39 @@ Returns:
 Raises:
   NotImplementedError: If string_or_callable is of the wrong type, or has an
     unexpected value (Not present in dictionary).
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00030">30</a> of file <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html">abstract_meta_trainer.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span><span class="keyword">def </span>_process_string_or_callable(string_or_callable, dictionary):</div>
+<div class="line"><span class="lineno">   31</span>  <span class="stringliteral">&quot;&quot;&quot;Process a callable or a string representing a callable.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral">    string_or_callable: Either a string or a callable</span></div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">    dictionary: Dictionary of shape {string_reference: callable}</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   38</span><span class="stringliteral">    string_or_callable if string_or_callable is a callable ; otherwise,</span></div>
+<div class="line"><span class="lineno">   39</span><span class="stringliteral">    dictionary[string_or_callable]</span></div>
+<div class="line"><span class="lineno">   40</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   41</span><span class="stringliteral">  Raises:</span></div>
+<div class="line"><span class="lineno">   42</span><span class="stringliteral">    NotImplementedError: If string_or_callable is of the wrong type, or has an</span></div>
+<div class="line"><span class="lineno">   43</span><span class="stringliteral">      unexpected value (Not present in dictionary).</span></div>
+<div class="line"><span class="lineno">   44</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">if</span> callable(string_or_callable):</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">return</span> string_or_callable</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>  <span class="keywordflow">try</span>:</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> dictionary[string_or_callable]</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">except</span> KeyError <span class="keyword">as</span> e:</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">raise</span> NotImplementedError(<span class="stringliteral">&quot;Input type / value not supported. Accepted types&quot;</span></div>
+<div class="line"><span class="lineno">   52</span>                              <span class="stringliteral">&quot;: string, callable. Acceptable string values : &quot;</span></div>
+<div class="line"><span class="lineno">   53</span>                              <span class="stringliteral">&quot;{}. Input provided : {}&quot;</span>.format(</div>
+<div class="line"><span class="lineno">   54</span>                                  list(dictionary.keys()),</div>
+<div class="line"><span class="lineno">   55</span>                                  string_or_callable)) <span class="keyword">from</span> e</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00110">open_spiel.python.algorithms.psro_v2.abstract_meta_trainer.AbstractMetaTrainer.__init__()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d3d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1abstract__meta__trainer_ab9daf9bf952b26d0de28daa8af276df4_icgraph.png" border="0" usemap="#ad2/d3d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1abstract__meta__trainer_ab9daf9bf952b26d0de28daa8af276df4_icgraph" alt=""/></div>
@@ -202,7 +232,47 @@ Args:
 Returns:
   The result of the call to returns() of the final state in the episode.
       Meant to be a win/loss integer.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00058">58</a> of file <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html">abstract_meta_trainer.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span><span class="keyword">def </span>sample_episode(state, policies):</div>
+<div class="line"><span class="lineno">   59</span>  <span class="stringliteral">&quot;&quot;&quot;Samples an episode using policies, starting from state.</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">    state: Pyspiel state representing the current state.</span></div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">    policies: List of policy representing the policy executed by each player.</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">    The result of the call to returns() of the final state in the episode.</span></div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral">        Meant to be a win/loss integer.</span></div>
+<div class="line"><span class="lineno">   68</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   69</span>  <span class="keywordflow">if</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">return</span> np.array(state.returns(), dtype=np.float32)</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">if</span> state.is_simultaneous_node():</div>
+<div class="line"><span class="lineno">   73</span>    actions = [<span class="keywordtype">None</span>] * state.num_players()</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">for</span> player <span class="keywordflow">in</span> range(state.num_players()):</div>
+<div class="line"><span class="lineno">   75</span>      state_policy = policies[player](state, player)</div>
+<div class="line"><span class="lineno">   76</span>      outcomes, probs = zip(*state_policy.items())</div>
+<div class="line"><span class="lineno">   77</span>      actions[player] = utils.random_choice(outcomes, probs)</div>
+<div class="line"><span class="lineno">   78</span>    state.apply_actions(actions)</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">return</span> sample_episode(state, policies)</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">if</span> state.is_chance_node():</div>
+<div class="line"><span class="lineno">   82</span>    outcomes, probs = zip(*state.chance_outcomes())</div>
+<div class="line"><span class="lineno">   83</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   84</span>    player = state.current_player()</div>
+<div class="line"><span class="lineno">   85</span>    state_policy = policies[player](state)</div>
+<div class="line"><span class="lineno">   86</span>    outcomes, probs = zip(*state_policy.items())</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>  state.apply_action(utils.random_choice(outcomes, probs))</div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">return</span> sample_episode(state, policies)</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00058">open_spiel.python.algorithms.psro_v2.abstract_meta_trainer.sample_episode()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00058">open_spiel.python.algorithms.psro_v2.abstract_meta_trainer.sample_episode()</a>, and <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00208">open_spiel.python.algorithms.psro_v2.abstract_meta_trainer.AbstractMetaTrainer.sample_episodes()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d3d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1abstract__meta__trainer_ad1bec535d42f12686c0f5c9e92dcb08d_cgraph.png" border="0" usemap="#ad2/d3d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1abstract__meta__trainer_ad1bec535d42f12686c0f5c9e92dcb08d_cgraph" alt=""/></div>
@@ -231,6 +301,55 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="183,28,164,22,132,20,102,22,84,27,77,33,80,40,75,42,72,31,82,22,101,17,132,15,165,17,184,23"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="af6f5ebd36febf7865ab7e569dd6133bd" name="af6f5ebd36febf7865ab7e569dd6133bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6f5ebd36febf7865ab7e569dd6133bd">&#9670;&#160;</a></span>_DEFAULT_META_STRATEGY_METHOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">str open_spiel.python.algorithms.psro_v2.abstract_meta_trainer._DEFAULT_META_STRATEGY_METHOD = &quot;prd&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00027">27</a> of file <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html">abstract_meta_trainer.py</a>.</p>
+
+</div>
+</div>
+<a id="ac61bc6372d44d0412df90253b85b9641" name="ac61bc6372d44d0412df90253b85b9641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac61bc6372d44d0412df90253b85b9641">&#9670;&#160;</a></span>_DEFAULT_STRATEGY_SELECTION_METHOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">str open_spiel.python.algorithms.psro_v2.abstract_meta_trainer._DEFAULT_STRATEGY_SELECTION_METHOD = &quot;probabilistic&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00026">26</a> of file <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html">abstract_meta_trainer.py</a>.</p>
 
 </div>
 </div>

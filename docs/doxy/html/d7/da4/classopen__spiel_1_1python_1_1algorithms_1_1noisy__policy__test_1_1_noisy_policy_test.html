@@ -121,15 +121,119 @@ Collaboration diagram for open_spiel.python.algorithms.noisy_policy_test.NoisyPo
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a55b98e6df6847898c0694a29c135c9a3" id="r_a55b98e6df6847898c0694a29c135c9a3"><td class="memItemLeft" align="right" valign="top"><a id="a55b98e6df6847898c0694a29c135c9a3" name="a55b98e6df6847898c0694a29c135c9a3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_cpp_and_python_implementations_are_identical</b> (self, game_name)</td></tr>
+<tr class="memitem:a55b98e6df6847898c0694a29c135c9a3" id="r_a55b98e6df6847898c0694a29c135c9a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55b98e6df6847898c0694a29c135c9a3">test_cpp_and_python_implementations_are_identical</a> (self, game_name)</td></tr>
 <tr class="separator:a55b98e6df6847898c0694a29c135c9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8fb4969f1e42e1ddeed58c78da0512b" id="r_ad8fb4969f1e42e1ddeed58c78da0512b"><td class="memItemLeft" align="right" valign="top"><a id="ad8fb4969f1e42e1ddeed58c78da0512b" name="ad8fb4969f1e42e1ddeed58c78da0512b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_simultaneous_game_noisy_policy</b> (self, game_name)</td></tr>
+<tr class="memitem:ad8fb4969f1e42e1ddeed58c78da0512b" id="r_ad8fb4969f1e42e1ddeed58c78da0512b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8fb4969f1e42e1ddeed58c78da0512b">test_simultaneous_game_noisy_policy</a> (self, game_name)</td></tr>
 <tr class="separator:ad8fb4969f1e42e1ddeed58c78da0512b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/d63/noisy__policy__test_8py_source.html#l00027">27</a> of file <a class="el" href="../../d0/d63/noisy__policy__test_8py_source.html">noisy_policy_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a55b98e6df6847898c0694a29c135c9a3" name="a55b98e6df6847898c0694a29c135c9a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55b98e6df6847898c0694a29c135c9a3">&#9670;&#160;</a></span>test_cpp_and_python_implementations_are_identical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.noisy_policy_test.NoisyPolicyTest.test_cpp_and_python_implementations_are_identical </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d63/noisy__policy__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../d0/d63/noisy__policy__test_8py_source.html">noisy_policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  <span class="keyword">def </span>test_cpp_and_python_implementations_are_identical(self, game_name):</div>
+<div class="line"><span class="lineno">   31</span>    game = pyspiel.load_game(game_name)</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>    policy = openspiel_policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    all_states = get_all_states.get_all_states(</div>
+<div class="line"><span class="lineno">   36</span>        game,</div>
+<div class="line"><span class="lineno">   37</span>        depth_limit=-1,</div>
+<div class="line"><span class="lineno">   38</span>        include_terminals=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">   39</span>        include_chance_states=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">   40</span>        to_string=<span class="keyword">lambda</span> s: s.information_state_string())</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">for</span> current_player <span class="keywordflow">in</span> range(game.num_players()):</div>
+<div class="line"><span class="lineno">   43</span>      noise = noisy_policy.NoisyPolicy(</div>
+<div class="line"><span class="lineno">   44</span>          policy, player_id=current_player, alpha=0.5, beta=10.)</div>
+<div class="line"><span class="lineno">   45</span>      <span class="keywordflow">for</span> state <span class="keywordflow">in</span> all_states.values():</div>
+<div class="line"><span class="lineno">   46</span>        <span class="keywordflow">if</span> state.current_player() &lt; 0:</div>
+<div class="line"><span class="lineno">   47</span>          <span class="keywordflow">continue</span></div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> state.current_player() != current_player:</div>
+<div class="line"><span class="lineno">   50</span>          self.assertEqual(</div>
+<div class="line"><span class="lineno">   51</span>              policy.action_probabilities(state),</div>
+<div class="line"><span class="lineno">   52</span>              noise.action_probabilities(state))</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   54</span>          self.assertNotEqual(</div>
+<div class="line"><span class="lineno">   55</span>              policy.action_probabilities(state),</div>
+<div class="line"><span class="lineno">   56</span>              noise.action_probabilities(state))</div>
+<div class="line"><span class="lineno">   57</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad8fb4969f1e42e1ddeed58c78da0512b" name="ad8fb4969f1e42e1ddeed58c78da0512b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8fb4969f1e42e1ddeed58c78da0512b">&#9670;&#160;</a></span>test_simultaneous_game_noisy_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.noisy_policy_test.NoisyPolicyTest.test_simultaneous_game_noisy_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d63/noisy__policy__test_8py_source.html#l00059">59</a> of file <a class="el" href="../../d0/d63/noisy__policy__test_8py_source.html">noisy_policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>  <span class="keyword">def </span>test_simultaneous_game_noisy_policy(self, game_name):</div>
+<div class="line"><span class="lineno">   60</span>    game = pyspiel.load_game(game_name)</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    policy = openspiel_policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    all_states = get_all_states.get_all_states(</div>
+<div class="line"><span class="lineno">   65</span>        game,</div>
+<div class="line"><span class="lineno">   66</span>        depth_limit=10,</div>
+<div class="line"><span class="lineno">   67</span>        include_terminals=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">   68</span>        include_chance_states=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">   69</span>        to_string=<span class="keyword">lambda</span> s: s.history_str())</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">for</span> current_player <span class="keywordflow">in</span> range(game.num_players()):</div>
+<div class="line"><span class="lineno">   72</span>      noise = noisy_policy.NoisyPolicy(</div>
+<div class="line"><span class="lineno">   73</span>          policy, player_id=current_player, alpha=0.5, beta=10.)</div>
+<div class="line"><span class="lineno">   74</span>      <span class="keywordflow">for</span> state <span class="keywordflow">in</span> all_states.values():</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> state.current_player() == pyspiel.PlayerId.SIMULTANEOUS:</div>
+<div class="line"><span class="lineno">   76</span>          <span class="keywordflow">for</span> player_id <span class="keywordflow">in</span> range(game.num_players()):</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> player_id != current_player:</div>
+<div class="line"><span class="lineno">   78</span>              self.assertEqual(</div>
+<div class="line"><span class="lineno">   79</span>                  policy.action_probabilities(state, player_id),</div>
+<div class="line"><span class="lineno">   80</span>                  noise.action_probabilities(state, player_id))</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   82</span>              self.assertNotEqual(</div>
+<div class="line"><span class="lineno">   83</span>                  policy.action_probabilities(state, player_id),</div>
+<div class="line"><span class="lineno">   84</span>                  noise.action_probabilities(state, player_id))</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>noisy_policy_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d0/d63/noisy__policy__test_8py_source.html">noisy_policy_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -105,10 +105,56 @@ Collaboration diagram for absl::container_internal::hashtable_debug_internal::Ha
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a447e277822f938a5d82cfc20aaeaf6b4" id="r_a447e277822f938a5d82cfc20aaeaf6b4"><td class="memItemLeft" align="right" valign="top"><a id="a447e277822f938a5d82cfc20aaeaf6b4" name="a447e277822f938a5d82cfc20aaeaf6b4"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetNumProbes</b> (const Container &amp;c, const typename Container::key_type &amp;key)</td></tr>
+<tr class="memitem:a447e277822f938a5d82cfc20aaeaf6b4" id="r_a447e277822f938a5d82cfc20aaeaf6b4"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a447e277822f938a5d82cfc20aaeaf6b4">GetNumProbes</a> (const Container &amp;c, const typename Container::key_type &amp;key)</td></tr>
 <tr class="separator:a447e277822f938a5d82cfc20aaeaf6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class Container, typename Enabler = void&gt;<br />
+struct absl::container_internal::hashtable_debug_internal::HashtableDebugAccess&lt; Container, Enabler &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../df/dac/hashtable__debug__hooks_8h_source.html#l00049">49</a> of file <a class="el" href="../../df/dac/hashtable__debug__hooks_8h_source.html">hashtable_debug_hooks.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a447e277822f938a5d82cfc20aaeaf6b4" name="a447e277822f938a5d82cfc20aaeaf6b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447e277822f938a5d82cfc20aaeaf6b4">&#9670;&#160;</a></span>GetNumProbes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Container , typename Enabler  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static size_t <a class="el" href="../../d5/d33/structabsl_1_1container__internal_1_1hashtable__debug__internal_1_1_hashtable_debug_access.html">absl::container_internal::hashtable_debug_internal::HashtableDebugAccess</a>&lt; Container, Enabler &gt;::GetNumProbes </td>
+          <td>(</td>
+          <td class="paramtype">const Container &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename Container::key_type &amp;</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dac/hashtable__debug__hooks_8h_source.html#l00058">58</a> of file <a class="el" href="../../df/dac/hashtable__debug__hooks_8h_source.html">hashtable_debug_hooks.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                                    {</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">if</span> (!c.bucket_count()) <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordtype">size_t</span> num_probes = 0;</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordtype">size_t</span> bucket = c.bucket(key);</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = c.begin(bucket), e = c.end(bucket);; ++it, ++num_probes) {</div>
+<div class="line"><span class="lineno">   64</span>      <span class="keywordflow">if</span> (it == e) <span class="keywordflow">return</span> num_probes;</div>
+<div class="line"><span class="lineno">   65</span>      <span class="keywordflow">if</span> (c.key_eq()(key, GetKey&lt;Container&gt;(*it, 0))) <span class="keywordflow">return</span> num_probes;</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="line"><span class="lineno">   67</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../df/dac/hashtable__debug__hooks_8h_source.html">hashtable_debug_hooks.h</a></li>
 </ul>

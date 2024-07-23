@@ -123,7 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afe34a91ffa0d86260831a6d4d48a1cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Tests for Vehicle class.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">Tests for Vehicle class.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00119">119</a> of file <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html">dynamic_routing_utils_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a20fff14971c155187328ca0d877652f9" name="a20fff14971c155187328ca0d877652f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20fff14971c155187328ca0d877652f9">&#9670;&#160;</a></span>test_vehicle_1()</h2>
 
@@ -139,6 +141,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test instanciation of Vehicle.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00122">122</a> of file <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html">dynamic_routing_utils_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>  <span class="keyword">def </span>test_vehicle_1(self):</div>
+<div class="line"><span class="lineno">  123</span>    <span class="stringliteral">&quot;&quot;&quot;Test instanciation of Vehicle.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  124</span>    vehicle = utils.Vehicle(<span class="stringliteral">&quot;O-&gt;A&quot;</span>, <span class="stringliteral">&quot;B-&gt;D&quot;</span>)</div>
+<div class="line"><span class="lineno">  125</span>    self.assertEqual(vehicle.destination, <span class="stringliteral">&quot;B-&gt;D&quot;</span>)</div>
+<div class="line"><span class="lineno">  126</span>    self.assertEqual(vehicle.origin, <span class="stringliteral">&quot;O-&gt;A&quot;</span>)</div>
+<div class="line"><span class="lineno">  127</span>    self.assertEqual(vehicle.departure_time, 0)</div>
+<div class="line"><span class="lineno">  128</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="afe34a91ffa0d86260831a6d4d48a1cfa" name="afe34a91ffa0d86260831a6d4d48a1cfa"></a>
@@ -156,10 +167,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test instanciation of with departure time.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00129">129</a> of file <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html">dynamic_routing_utils_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>  <span class="keyword">def </span>test_vehicle_2(self):</div>
+<div class="line"><span class="lineno">  130</span>    <span class="stringliteral">&quot;&quot;&quot;Test instanciation of with departure time.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  131</span>    vehicle = utils.Vehicle(<span class="stringliteral">&quot;O-&gt;A&quot;</span>, <span class="stringliteral">&quot;B-&gt;D&quot;</span>, 10.5)</div>
+<div class="line"><span class="lineno">  132</span>    self.assertEqual(vehicle.origin, <span class="stringliteral">&quot;O-&gt;A&quot;</span>)</div>
+<div class="line"><span class="lineno">  133</span>    self.assertEqual(vehicle.destination, <span class="stringliteral">&quot;B-&gt;D&quot;</span>)</div>
+<div class="line"><span class="lineno">  134</span>    self.assertEqual(vehicle.departure_time, 10.5)</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>dynamic_routing_utils_test.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html">dynamic_routing_utils_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

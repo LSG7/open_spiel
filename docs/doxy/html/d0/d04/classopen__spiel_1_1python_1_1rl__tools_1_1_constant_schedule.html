@@ -135,12 +135,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a18bf4914e60c76b7e1aad7cf69a0f3d9" id="r_a18bf4914e60c76b7e1aad7cf69a0f3d9"><td class="memItemLeft" align="right" valign="top"><a id="a18bf4914e60c76b7e1aad7cf69a0f3d9" name="a18bf4914e60c76b7e1aad7cf69a0f3d9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_value</b></td></tr>
+<tr class="memitem:a18bf4914e60c76b7e1aad7cf69a0f3d9" id="r_a18bf4914e60c76b7e1aad7cf69a0f3d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18bf4914e60c76b7e1aad7cf69a0f3d9">_value</a></td></tr>
 <tr class="separator:a18bf4914e60c76b7e1aad7cf69a0f3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A schedule that keeps the value constant.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">A schedule that keeps the value constant.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00043">43</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acbd5550557738188892c84fd71cb18e1" name="acbd5550557738188892c84fd71cb18e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbd5550557738188892c84fd71cb18e1">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -161,6 +162,16 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <pre class="fragment">Initialize the value schedule.</pre> 
 <p>Reimplemented from <a class="el" href="../../d6/dde/classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule.html#a760b8b5407894d0eacb389a3c67e2047">open_spiel.python.rl_tools.ValueSchedule</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00046">46</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>  <span class="keyword">def </span>__init__(self, value):</div>
+<div class="line"><span class="lineno">   47</span>    super(ConstantSchedule, self).__init__()</div>
+<div class="line"><span class="lineno">   48</span>    self._value = value</div>
+<div class="line"><span class="lineno">   49</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00046">open_spiel.python.rl_tools.ConstantSchedule.__init__()</a>, <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00048">open_spiel.python.rl_tools.ConstantSchedule._value</a>, and <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00073">open_spiel.python.rl_tools.LinearSchedule._value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00046">open_spiel.python.rl_tools.ConstantSchedule.__init__()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -205,6 +216,15 @@ Returns:
   the value after the step.
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d6/dde/classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule.html#a22376b068811a1eac3504d1df0be4b87">open_spiel.python.rl_tools.ValueSchedule</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00050">50</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>  <span class="keyword">def </span>step(self):</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">return</span> self._value</div>
+<div class="line"><span class="lineno">   52</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00048">open_spiel.python.rl_tools.ConstantSchedule._value</a>, and <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00073">open_spiel.python.rl_tools.LinearSchedule._value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00359">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.evaluate_and_update_policy()</a>, <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00350">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.multiple_steps()</a>, <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00126">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.solve_yield()</a>, <a class="el" href="../../d4/d2e/nash__evolutionary__search_8py_source.html#l00094">nash_evolutionary_search.NashCMAES.step_for()</a>, <a class="el" href="../../df/dd1/nash__random__search_8py_source.html#l00100">nash_random_search.NashRandomSearch.step_for()</a>, <a class="el" href="../../d2/d0e/bandit__regret_8py_source.html#l00363">open_spiel.python.mfg.algorithms.bandit_regret.PolynomialWeightAlgorithm.step_for()</a>, and <a class="el" href="../../dd/ddd/regret__minimizer_8py_source.html#l00107">regret_minimizer.RegretMinimizer.step_for()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -252,6 +272,16 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <pre class="fragment">Return the current value.</pre> 
 <p>Reimplemented from <a class="el" href="../../d6/dde/classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule.html#adfe3d35afe741339ff6fc4b93daa8231">open_spiel.python.rl_tools.ValueSchedule</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00054">54</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>  <span class="keyword">def </span>value(self):</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">return</span> self._value</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00048">open_spiel.python.rl_tools.ConstantSchedule._value</a>, and <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00073">open_spiel.python.rl_tools.LinearSchedule._value</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00146">open_spiel.python.mfg.algorithms.utils.MixedDistribution.__call__()</a>, <a class="el" href="../../d0/d85/distribution_8py_source.html#l00075">open_spiel.python.mfg.distribution.Distribution.__call__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00069">open_spiel.python.mfg.value.ValueFunction.__call__()</a>, <a class="el" href="../../df/d3d/mirror__descent_8py_source.html#l00042">open_spiel.python.mfg.algorithms.mirror_descent.ProjectedPolicy.__init__()</a>, <a class="el" href="../../d1/d5d/munchausen__mirror__descent_8py_source.html#l00036">open_spiel.python.mfg.algorithms.munchausen_mirror_descent.ProjectedPolicyMunchausen.__init__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00103">open_spiel.python.mfg.value.ValueFunction.add_value()</a>, <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00185">open_spiel.python.algorithms.best_response.BestResponsePolicy.q_value()</a>, and <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00324">open_spiel.python.algorithms.best_response.CPPBestResponsePolicy.q_value()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -406,8 +436,35 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a18bf4914e60c76b7e1aad7cf69a0f3d9" name="a18bf4914e60c76b7e1aad7cf69a0f3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18bf4914e60c76b7e1aad7cf69a0f3d9">&#9670;&#160;</a></span>_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.rl_tools.ConstantSchedule._value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00048">48</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00046">open_spiel.python.rl_tools.ConstantSchedule.__init__()</a>, <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00061">open_spiel.python.rl_tools.LinearSchedule.__init__()</a>, <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00050">open_spiel.python.rl_tools.ConstantSchedule.step()</a>, <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00080">open_spiel.python.rl_tools.LinearSchedule.step()</a>, <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00054">open_spiel.python.rl_tools.ConstantSchedule.value()</a>, and <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00089">open_spiel.python.rl_tools.LinearSchedule.value()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/<b>rl_tools.py</b></li>
+<li>open_spiel/python/<a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

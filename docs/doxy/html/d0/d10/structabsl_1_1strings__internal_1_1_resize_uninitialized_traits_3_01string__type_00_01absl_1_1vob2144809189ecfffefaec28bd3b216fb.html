@@ -106,16 +106,74 @@ Collaboration diagram for absl::strings_internal::ResizeUninitializedTraits&lt; 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a3a61719e6a0aaf669f4a678e3a55c48f" id="r_a3a61719e6a0aaf669f4a678e3a55c48f"><td class="memItemLeft" align="right" valign="top"><a id="a3a61719e6a0aaf669f4a678e3a55c48f" name="a3a61719e6a0aaf669f4a678e3a55c48f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>HasMember</b> = std::true_type</td></tr>
+<tr class="memitem:a3a61719e6a0aaf669f4a678e3a55c48f" id="r_a3a61719e6a0aaf669f4a678e3a55c48f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a61719e6a0aaf669f4a678e3a55c48f">HasMember</a> = std::true_type</td></tr>
 <tr class="separator:a3a61719e6a0aaf669f4a678e3a55c48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a03b8237fc563105bd6a36181e8b2e368" id="r_a03b8237fc563105bd6a36181e8b2e368"><td class="memItemLeft" align="right" valign="top"><a id="a03b8237fc563105bd6a36181e8b2e368" name="a03b8237fc563105bd6a36181e8b2e368"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Resize</b> (string_type *s, size_t new_size)</td></tr>
+<tr class="memitem:a03b8237fc563105bd6a36181e8b2e368" id="r_a03b8237fc563105bd6a36181e8b2e368"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03b8237fc563105bd6a36181e8b2e368">Resize</a> (string_type *s, size_t new_size)</td></tr>
 <tr class="separator:a03b8237fc563105bd6a36181e8b2e368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename string_type&gt;<br />
+struct absl::strings_internal::ResizeUninitializedTraits&lt; string_type, absl::void_t&lt; decltype(std::declval&lt; string_type &amp; &gt;() .__resize_default_init(237))&gt; &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html#l00043">43</a> of file <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html">resize_uninitialized.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a3a61719e6a0aaf669f4a678e3a55c48f" name="a3a61719e6a0aaf669f4a678e3a55c48f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a61719e6a0aaf669f4a678e3a55c48f">&#9670;&#160;</a></span>HasMember</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename string_type &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../dd/db5/structabsl_1_1strings__internal_1_1_resize_uninitialized_traits.html">absl::strings_internal::ResizeUninitializedTraits</a>&lt; string_type, absl::void_t&lt; decltype(std::declval&lt; string_type &amp; &gt;() .__resize_default_init(237))&gt; &gt;::HasMember = std::true_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html#l00046">46</a> of file <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html">resize_uninitialized.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a03b8237fc563105bd6a36181e8b2e368" name="a03b8237fc563105bd6a36181e8b2e368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b8237fc563105bd6a36181e8b2e368">&#9670;&#160;</a></span>Resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename string_type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../dd/db5/structabsl_1_1strings__internal_1_1_resize_uninitialized_traits.html">absl::strings_internal::ResizeUninitializedTraits</a>&lt; string_type, absl::void_t&lt; decltype(std::declval&lt; string_type &amp; &gt;() .__resize_default_init(237))&gt; &gt;::Resize </td>
+          <td>(</td>
+          <td class="paramtype">string_type *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>new_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html#l00047">47</a> of file <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html">resize_uninitialized.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                      {</div>
+<div class="line"><span class="lineno">   48</span>    s-&gt;__resize_default_init(new_size);</div>
+<div class="line"><span class="lineno">   49</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/internal/<a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html">resize_uninitialized.h</a></li>
 </ul>

@@ -117,15 +117,128 @@ Collaboration diagram for open_spiel.python.algorithms.alpha_zero.model_test.Mod
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa6aa6c30b95710b47a4b495ab79b1d7d" id="r_aa6aa6c30b95710b47a4b495ab79b1d7d"><td class="memItemLeft" align="right" valign="top"><a id="aa6aa6c30b95710b47a4b495ab79b1d7d" name="aa6aa6c30b95710b47a4b495ab79b1d7d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_model_learns_simple</b> (self, model_type)</td></tr>
+<tr class="memitem:aa6aa6c30b95710b47a4b495ab79b1d7d" id="r_aa6aa6c30b95710b47a4b495ab79b1d7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6aa6c30b95710b47a4b495ab79b1d7d">test_model_learns_simple</a> (self, model_type)</td></tr>
 <tr class="separator:aa6aa6c30b95710b47a4b495ab79b1d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b6ff376b2186df99be176b77f0d8c5a" id="r_a8b6ff376b2186df99be176b77f0d8c5a"><td class="memItemLeft" align="right" valign="top"><a id="a8b6ff376b2186df99be176b77f0d8c5a" name="a8b6ff376b2186df99be176b77f0d8c5a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_model_learns_optimal</b> (self, model_type)</td></tr>
+<tr class="memitem:a8b6ff376b2186df99be176b77f0d8c5a" id="r_a8b6ff376b2186df99be176b77f0d8c5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b6ff376b2186df99be176b77f0d8c5a">test_model_learns_optimal</a> (self, model_type)</td></tr>
 <tr class="separator:a8b6ff376b2186df99be176b77f0d8c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/d64/model__test_8py_source.html#l00055">55</a> of file <a class="el" href="../../d0/d64/model__test_8py_source.html">model_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8b6ff376b2186df99be176b77f0d8c5a" name="a8b6ff376b2186df99be176b77f0d8c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b6ff376b2186df99be176b77f0d8c5a">&#9670;&#160;</a></span>test_model_learns_optimal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.model_test.ModelTest.test_model_learns_optimal </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>model_type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d64/model__test_8py_source.html#l00097">97</a> of file <a class="el" href="../../d0/d64/model__test_8py_source.html">model_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>  <span class="keyword">def </span>test_model_learns_optimal(self, model_type):</div>
+<div class="line"><span class="lineno">   98</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">   99</span>    solve_game(game.new_initial_state())</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    model = build_model(game, model_type)</div>
+<div class="line"><span class="lineno">  102</span>    print(<span class="stringliteral">&quot;Num variables:&quot;</span>, model.num_trainable_variables)</div>
+<div class="line"><span class="lineno">  103</span>    model.print_trainable_variables()</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    train_inputs = list(solved.values())</div>
+<div class="line"><span class="lineno">  106</span>    print(<span class="stringliteral">&quot;states:&quot;</span>, len(train_inputs))</div>
+<div class="line"><span class="lineno">  107</span>    losses = []</div>
+<div class="line"><span class="lineno">  108</span>    policy_loss_goal = 0.12</div>
+<div class="line"><span class="lineno">  109</span>    value_loss_goal = 0.12</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(500):</div>
+<div class="line"><span class="lineno">  111</span>      loss = model.update(train_inputs)</div>
+<div class="line"><span class="lineno">  112</span>      print(i, loss)</div>
+<div class="line"><span class="lineno">  113</span>      losses.append(loss)</div>
+<div class="line"><span class="lineno">  114</span>      <span class="keywordflow">if</span> loss.policy &lt; policy_loss_goal <span class="keywordflow">and</span> loss.value &lt; value_loss_goal:</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">break</span></div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>    self.assertGreater(losses[0].policy, losses[-1].policy)</div>
+<div class="line"><span class="lineno">  118</span>    self.assertGreater(losses[0].value, losses[-1].value)</div>
+<div class="line"><span class="lineno">  119</span>    self.assertGreater(losses[0].total, losses[-1].total)</div>
+<div class="line"><span class="lineno">  120</span>    self.assertLess(losses[-1].value, value_loss_goal)</div>
+<div class="line"><span class="lineno">  121</span>    self.assertLess(losses[-1].policy, policy_loss_goal)</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa6aa6c30b95710b47a4b495ab79b1d7d" name="aa6aa6c30b95710b47a4b495ab79b1d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6aa6c30b95710b47a4b495ab79b1d7d">&#9670;&#160;</a></span>test_model_learns_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.model_test.ModelTest.test_model_learns_simple </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>model_type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d64/model__test_8py_source.html#l00058">58</a> of file <a class="el" href="../../d0/d64/model__test_8py_source.html">model_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>  <span class="keyword">def </span>test_model_learns_simple(self, model_type):</div>
+<div class="line"><span class="lineno">   59</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">   60</span>    model = build_model(game, model_type)</div>
+<div class="line"><span class="lineno">   61</span>    print(<span class="stringliteral">&quot;Num variables:&quot;</span>, model.num_trainable_variables)</div>
+<div class="line"><span class="lineno">   62</span>    model.print_trainable_variables()</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    train_inputs = []</div>
+<div class="line"><span class="lineno">   65</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">while</span> <span class="keywordflow">not</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   67</span>      obs = state.observation_tensor()</div>
+<div class="line"><span class="lineno">   68</span>      act_mask = state.legal_actions_mask()</div>
+<div class="line"><span class="lineno">   69</span>      action = state.legal_actions()[0]</div>
+<div class="line"><span class="lineno">   70</span>      policy = np.zeros(len(act_mask), dtype=float)</div>
+<div class="line"><span class="lineno">   71</span>      policy[action] = 1</div>
+<div class="line"><span class="lineno">   72</span>      train_inputs.append(model_lib.TrainInput(obs, act_mask, policy, value=1))</div>
+<div class="line"><span class="lineno">   73</span>      state.apply_action(action)</div>
+<div class="line"><span class="lineno">   74</span>      value, policy = model.inference([obs], [act_mask])</div>
+<div class="line"><span class="lineno">   75</span>      self.assertLen(policy, 1)</div>
+<div class="line"><span class="lineno">   76</span>      self.assertLen(value, 1)</div>
+<div class="line"><span class="lineno">   77</span>      self.assertLen(policy[0], game.num_distinct_actions())</div>
+<div class="line"><span class="lineno">   78</span>      self.assertLen(value[0], 1)</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    losses = []</div>
+<div class="line"><span class="lineno">   81</span>    policy_loss_goal = 0.05</div>
+<div class="line"><span class="lineno">   82</span>    value_loss_goal = 0.05</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(200):</div>
+<div class="line"><span class="lineno">   84</span>      loss = model.update(train_inputs)</div>
+<div class="line"><span class="lineno">   85</span>      print(i, loss)</div>
+<div class="line"><span class="lineno">   86</span>      losses.append(loss)</div>
+<div class="line"><span class="lineno">   87</span>      <span class="keywordflow">if</span> loss.policy &lt; policy_loss_goal <span class="keywordflow">and</span> loss.value &lt; value_loss_goal:</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">break</span></div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>    self.assertGreater(losses[0].total, losses[-1].total)</div>
+<div class="line"><span class="lineno">   91</span>    self.assertGreater(losses[0].policy, losses[-1].policy)</div>
+<div class="line"><span class="lineno">   92</span>    self.assertGreater(losses[0].value, losses[-1].value)</div>
+<div class="line"><span class="lineno">   93</span>    self.assertLess(losses[-1].value, value_loss_goal)</div>
+<div class="line"><span class="lineno">   94</span>    self.assertLess(losses[-1].policy, policy_loss_goal)</div>
+<div class="line"><span class="lineno">   95</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/alpha_zero/<b>model_test.py</b></li>
+<li>open_spiel/python/algorithms/alpha_zero/<a class="el" href="../../d0/d64/model__test_8py_source.html">model_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

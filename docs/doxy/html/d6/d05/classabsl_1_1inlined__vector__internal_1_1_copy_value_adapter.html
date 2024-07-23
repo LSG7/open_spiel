@@ -105,16 +105,115 @@ Collaboration diagram for absl::inlined_vector_internal::CopyValueAdapter&lt; A 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a51f91d86239a931ae07a4f4910263d21" id="r_a51f91d86239a931ae07a4f4910263d21"><td class="memItemLeft" align="right" valign="top"><a id="a51f91d86239a931ae07a4f4910263d21" name="a51f91d86239a931ae07a4f4910263d21"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CopyValueAdapter</b> (ConstPointer&lt; A &gt; p)</td></tr>
+<tr class="memitem:a51f91d86239a931ae07a4f4910263d21" id="r_a51f91d86239a931ae07a4f4910263d21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51f91d86239a931ae07a4f4910263d21">CopyValueAdapter</a> (ConstPointer&lt; A &gt; p)</td></tr>
 <tr class="separator:a51f91d86239a931ae07a4f4910263d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a741591bc9c9bb987dde824b3217caa4d" id="r_a741591bc9c9bb987dde824b3217caa4d"><td class="memItemLeft" align="right" valign="top"><a id="a741591bc9c9bb987dde824b3217caa4d" name="a741591bc9c9bb987dde824b3217caa4d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ConstructNext</b> (A &amp;allocator, Pointer&lt; A &gt; construct_at)</td></tr>
+<tr class="memitem:a741591bc9c9bb987dde824b3217caa4d" id="r_a741591bc9c9bb987dde824b3217caa4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a741591bc9c9bb987dde824b3217caa4d">ConstructNext</a> (A &amp;allocator, Pointer&lt; A &gt; construct_at)</td></tr>
 <tr class="separator:a741591bc9c9bb987dde824b3217caa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea144c0257143d7d74e93d6f2abdb57" id="r_a0ea144c0257143d7d74e93d6f2abdb57"><td class="memItemLeft" align="right" valign="top"><a id="a0ea144c0257143d7d74e93d6f2abdb57" name="a0ea144c0257143d7d74e93d6f2abdb57"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AssignNext</b> (Pointer&lt; A &gt; assign_at)</td></tr>
+<tr class="memitem:a0ea144c0257143d7d74e93d6f2abdb57" id="r_a0ea144c0257143d7d74e93d6f2abdb57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ea144c0257143d7d74e93d6f2abdb57">AssignNext</a> (Pointer&lt; A &gt; assign_at)</td></tr>
 <tr class="separator:a0ea144c0257143d7d74e93d6f2abdb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename A&gt;<br />
+class absl::inlined_vector_internal::CopyValueAdapter&lt; A &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00195">195</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a51f91d86239a931ae07a4f4910263d21" name="a51f91d86239a931ae07a4f4910263d21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f91d86239a931ae07a4f4910263d21">&#9670;&#160;</a></span>CopyValueAdapter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d05/classabsl_1_1inlined__vector__internal_1_1_copy_value_adapter.html">absl::inlined_vector_internal::CopyValueAdapter</a>&lt; A &gt;::CopyValueAdapter </td>
+          <td>(</td>
+          <td class="paramtype">ConstPointer&lt; A &gt;</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00197">197</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>: ptr_(p) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0ea144c0257143d7d74e93d6f2abdb57" name="a0ea144c0257143d7d74e93d6f2abdb57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ea144c0257143d7d74e93d6f2abdb57">&#9670;&#160;</a></span>AssignNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d6/d05/classabsl_1_1inlined__vector__internal_1_1_copy_value_adapter.html">absl::inlined_vector_internal::CopyValueAdapter</a>&lt; A &gt;::AssignNext </td>
+          <td>(</td>
+          <td class="paramtype">Pointer&lt; A &gt;</td>          <td class="paramname"><span class="paramname"><em>assign_at</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00203">203</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  203</span>{ *assign_at = *ptr_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a741591bc9c9bb987dde824b3217caa4d" name="a741591bc9c9bb987dde824b3217caa4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741591bc9c9bb987dde824b3217caa4d">&#9670;&#160;</a></span>ConstructNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d6/d05/classabsl_1_1inlined__vector__internal_1_1_copy_value_adapter.html">absl::inlined_vector_internal::CopyValueAdapter</a>&lt; A &gt;::ConstructNext </td>
+          <td>(</td>
+          <td class="paramtype">A &amp;</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pointer&lt; A &gt;</td>          <td class="paramname"><span class="paramname"><em>construct_at</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00199">199</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  199</span>                                                            {</div>
+<div class="line"><span class="lineno">  200</span>    AllocatorTraits&lt;A&gt;::construct(allocator, construct_at, *ptr_);</div>
+<div class="line"><span class="lineno">  201</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a></li>
 </ul>

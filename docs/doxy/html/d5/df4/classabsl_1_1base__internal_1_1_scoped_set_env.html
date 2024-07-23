@@ -105,13 +105,85 @@ Collaboration diagram for absl::base_internal::ScopedSetEnv:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a326b9c21bea5b60276222dadce09e2d0" id="r_a326b9c21bea5b60276222dadce09e2d0"><td class="memItemLeft" align="right" valign="top"><a id="a326b9c21bea5b60276222dadce09e2d0" name="a326b9c21bea5b60276222dadce09e2d0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedSetEnv</b> (const char *var_name, const char *new_value)</td></tr>
+<tr class="memitem:a326b9c21bea5b60276222dadce09e2d0" id="r_a326b9c21bea5b60276222dadce09e2d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a326b9c21bea5b60276222dadce09e2d0">ScopedSetEnv</a> (const char *var_name, const char *new_value)</td></tr>
 <tr class="separator:a326b9c21bea5b60276222dadce09e2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/scoped__set__env_8h_source.html#l00028">28</a> of file <a class="el" href="../../dd/de9/scoped__set__env_8h_source.html">scoped_set_env.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a326b9c21bea5b60276222dadce09e2d0" name="a326b9c21bea5b60276222dadce09e2d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326b9c21bea5b60276222dadce09e2d0">&#9670;&#160;</a></span>ScopedSetEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::base_internal::ScopedSetEnv::ScopedSetEnv </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>var_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>new_value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d41/scoped__set__env_8cc_source.html#l00049">49</a> of file <a class="el" href="../../d7/d41/scoped__set__env_8cc_source.html">scoped_set_env.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>    : var_name_(var_name), was_unset_(<span class="keyword">false</span>) {</div>
+<div class="line"><span class="lineno">   51</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordtype">char</span> buf[kMaxEnvVarValueSize];</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keyword">auto</span> get_res = GetEnvironmentVariableA(var_name_.c_str(), buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">   54</span>  ABSL_INTERNAL_CHECK(get_res &lt; <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;value exceeds buffer size&quot;</span>);</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">if</span> (get_res == 0) {</div>
+<div class="line"><span class="lineno">   57</span>    was_unset_ = (GetLastError() == ERROR_ENVVAR_NOT_FOUND);</div>
+<div class="line"><span class="lineno">   58</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   59</span>    old_value_.assign(buf, get_res);</div>
+<div class="line"><span class="lineno">   60</span>  }</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  SetEnvironmentVariableA(var_name_.c_str(), new_value);</div>
+<div class="line"><span class="lineno">   63</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   64</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* val = ::getenv(var_name_.c_str());</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">if</span> (val == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   66</span>    was_unset_ = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   67</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   68</span>    old_value_ = val;</div>
+<div class="line"><span class="lineno">   69</span>  }</div>
+<div class="line"><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>  SetEnvVar(var_name_.c_str(), new_value);</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adbb55d6e9fad6e0f2b27bd96e38da3d4" name="adbb55d6e9fad6e0f2b27bd96e38da3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb55d6e9fad6e0f2b27bd96e38da3d4">&#9670;&#160;</a></span>~ScopedSetEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::base_internal::ScopedSetEnv::~ScopedSetEnv </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d41/scoped__set__env_8cc_source.html#l00075">75</a> of file <a class="el" href="../../d7/d41/scoped__set__env_8cc_source.html">scoped_set_env.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                            {</div>
+<div class="line"><span class="lineno">   76</span>  SetEnvVar(var_name_.c_str(), was_unset_ ? <span class="keyword">nullptr</span> : old_value_.c_str());</div>
+<div class="line"><span class="lineno">   77</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../dd/de9/scoped__set__env_8h_source.html">scoped_set_env.h</a></li>
-<li>open_spiel/abseil-cpp/absl/base/internal/<b>scoped_set_env.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../d7/d41/scoped__set__env_8cc_source.html">scoped_set_env.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

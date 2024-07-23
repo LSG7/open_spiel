@@ -117,6 +117,82 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Get configuration for chat game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d2/d95/config__schedule__meeting__w__tone_8py_source.html#l00030">30</a> of file <a class="el" href="../../d2/d95/config__schedule__meeting__w__tone_8py_source.html">config_schedule_meeting_w_tone.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span><span class="keyword">def </span>get_config():</div>
+<div class="line"><span class="lineno">   31</span>  <span class="stringliteral">&quot;&quot;&quot;Get configuration for chat game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   32</span>  config = config_dict.ConfigDict()</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>  num_players = 2</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>  observations = [</div>
+<div class="line"><span class="lineno">   37</span>      obs_utils.Observation(summary.PREFIX, summary.POSTFIX)</div>
+<div class="line"><span class="lineno">   38</span>      <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(num_players)</div>
+<div class="line"><span class="lineno">   39</span>  ]</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>  header = env_schedule_meeting_with_tone_info.HEADER</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>  payoffs = [payoffs_schedule_meeting.PAYOFF]</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>  examples_names = names_schedule_meeting.NAMES</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  given_prompt_actions = collections.OrderedDict()</div>
+<div class="line"><span class="lineno">   48</span>  tones = [<span class="stringliteral">&#39;calm&#39;</span>,</div>
+<div class="line"><span class="lineno">   49</span>           <span class="stringliteral">&#39;assertive&#39;</span>,</div>
+<div class="line"><span class="lineno">   50</span>           <span class="stringliteral">&#39;submissive&#39;</span>,</div>
+<div class="line"><span class="lineno">   51</span>           <span class="stringliteral">&#39;any&#39;</span>]</div>
+<div class="line"><span class="lineno">   52</span>  given_prompt_actions[header.action_keys[0]] = tones</div>
+<div class="line"><span class="lineno">   53</span>  num_tones = len(tones)</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>  examples_private_info = collections.OrderedDict()</div>
+<div class="line"><span class="lineno">   56</span>  examples_private_info[<span class="stringliteral">&#39;ooo_days&#39;</span>] = [scenario_schedule_meeting.OOO_A,</div>
+<div class="line"><span class="lineno">   57</span>                                       scenario_schedule_meeting.OOO_B]</div>
+<div class="line"><span class="lineno">   58</span>  examples_private_info[<span class="stringliteral">&#39;day_prefs&#39;</span>] = [scenario_schedule_meeting.DAY_PREFS_A,</div>
+<div class="line"><span class="lineno">   59</span>                                        scenario_schedule_meeting.DAY_PREFS_B]</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>  scenario_a = env_schedule_meeting_with_tone_info.Scenario(</div>
+<div class="line"><span class="lineno">   62</span>      scenario_schedule_meeting.SCENARIO_A,</div>
+<div class="line"><span class="lineno">   63</span>      <span class="stringliteral">&#39;Bob&#39;</span>,</div>
+<div class="line"><span class="lineno">   64</span>      <span class="stringliteral">&#39;Suzy&#39;</span>,</div>
+<div class="line"><span class="lineno">   65</span>      scenario_schedule_meeting.OOO_A,</div>
+<div class="line"><span class="lineno">   66</span>      scenario_schedule_meeting.DAY_PREFS_A,</div>
+<div class="line"><span class="lineno">   67</span>      <span class="stringliteral">&#39;calm&#39;</span>)</div>
+<div class="line"><span class="lineno">   68</span>  scenario_b = env_schedule_meeting_with_tone_info.Scenario(</div>
+<div class="line"><span class="lineno">   69</span>      scenario_schedule_meeting.SCENARIO_B,</div>
+<div class="line"><span class="lineno">   70</span>      <span class="stringliteral">&#39;Jill&#39;</span>,</div>
+<div class="line"><span class="lineno">   71</span>      <span class="stringliteral">&#39;George&#39;</span>,</div>
+<div class="line"><span class="lineno">   72</span>      scenario_schedule_meeting.OOO_B,</div>
+<div class="line"><span class="lineno">   73</span>      scenario_schedule_meeting.DAY_PREFS_B,</div>
+<div class="line"><span class="lineno">   74</span>      <span class="stringliteral">&#39;assertive&#39;</span>)</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>  examples_scenarios = [scenario_a, scenario_b]</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>  llm_termination_prompt = scenario_schedule_meeting.LLM_TERMINATION_PROMPT</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>  params = {<span class="stringliteral">&#39;num_distinct_actions&#39;</span>: num_players * num_tones,</div>
+<div class="line"><span class="lineno">   81</span>            <span class="stringliteral">&#39;num_llm_seeds&#39;</span>: 1,</div>
+<div class="line"><span class="lineno">   82</span>            <span class="stringliteral">&#39;num_players&#39;</span>: num_players,</div>
+<div class="line"><span class="lineno">   83</span>            <span class="stringliteral">&#39;min_utility&#39;</span>: min([float(p.min) <span class="keywordflow">for</span> p <span class="keywordflow">in</span> payoffs]),</div>
+<div class="line"><span class="lineno">   84</span>            <span class="stringliteral">&#39;max_utility&#39;</span>: max([float(p.max) <span class="keywordflow">for</span> p <span class="keywordflow">in</span> payoffs]),</div>
+<div class="line"><span class="lineno">   85</span>            <span class="stringliteral">&#39;num_max_replies&#39;</span>: 1}</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>  config.params = params</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  config.game = config_dict.ConfigDict()</div>
+<div class="line"><span class="lineno">   90</span>  config.game.observations = observations</div>
+<div class="line"><span class="lineno">   91</span>  config.game.header = header</div>
+<div class="line"><span class="lineno">   92</span>  config.game.payoffs = payoffs</div>
+<div class="line"><span class="lineno">   93</span>  config.game.given_prompt_actions = given_prompt_actions</div>
+<div class="line"><span class="lineno">   94</span>  config.game.num_names = 10</div>
+<div class="line"><span class="lineno">   95</span>  config.game.num_prompt_actions = (num_tones,)</div>
+<div class="line"><span class="lineno">   96</span>  config.game.num_private_info = (3, 3)</div>
+<div class="line"><span class="lineno">   97</span>  config.game.examples_names = examples_names</div>
+<div class="line"><span class="lineno">   98</span>  config.game.examples_private_info = examples_private_info</div>
+<div class="line"><span class="lineno">   99</span>  config.game.examples_scenarios = examples_scenarios</div>
+<div class="line"><span class="lineno">  100</span>  config.game.llm_list_suffix = <span class="stringliteral">&#39;Output: &#39;</span></div>
+<div class="line"><span class="lineno">  101</span>  config.game.llm_termination_prompt = llm_termination_prompt</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">return</span> config</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -95,18 +95,96 @@ $(function(){ initResizable(false); });
 Functions</h2></td></tr>
 <tr class="memitem:a76e89299620d4bb8ae820781faa45c31" id="r_a76e89299620d4bb8ae820781faa45c31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76e89299620d4bb8ae820781faa45c31">selfplay_main</a> (argv)</td></tr>
 <tr class="separator:a76e89299620d4bb8ae820781faa45c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e198e0b0d73fab385519e5c0851d9d9" id="r_a7e198e0b0d73fab385519e5c0851d9d9"><td class="memItemLeft" align="right" valign="top"><a id="a7e198e0b0d73fab385519e5c0851d9d9" name="a7e198e0b0d73fab385519e5c0851d9d9"></a>
-None&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (Sequence[str] argv)</td></tr>
+<tr class="memitem:a7e198e0b0d73fab385519e5c0851d9d9" id="r_a7e198e0b0d73fab385519e5c0851d9d9"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e198e0b0d73fab385519e5c0851d9d9">main</a> (Sequence[str] argv)</td></tr>
 <tr class="separator:a7e198e0b0d73fab385519e5c0851d9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9e54bf13f9d353cfeb8aa9a5623dcf87" id="r_a9e54bf13f9d353cfeb8aa9a5623dcf87"><td class="memItemLeft" align="right" valign="top"><a id="a9e54bf13f9d353cfeb8aa9a5623dcf87" name="a9e54bf13f9d353cfeb8aa9a5623dcf87"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:a9e54bf13f9d353cfeb8aa9a5623dcf87" id="r_a9e54bf13f9d353cfeb8aa9a5623dcf87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e54bf13f9d353cfeb8aa9a5623dcf87">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:a9e54bf13f9d353cfeb8aa9a5623dcf87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Main file to train and evaluate meta-regret and regret matching agents.</pre><pre class="fragment">Main file to train and evaluate meta-cfr agent, cfr and cfr-plus.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a7e198e0b0d73fab385519e5c0851d9d9" name="a7e198e0b0d73fab385519e5c0851d9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e198e0b0d73fab385519e5c0851d9d9">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> None main.main </td>
+          <td>(</td>
+          <td class="paramtype">Sequence[str]</td>          <td class="paramname"><span class="paramname"><em>argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/dbe/sequential__games_2main_8py_source.html#l00035">35</a> of file <a class="el" href="../../d4/dbe/sequential__games_2main_8py_source.html">main.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(argv: Sequence[str]) -&gt; <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">   36</span>  del argv</div>
+<div class="line"><span class="lineno">   37</span>  config = {<span class="stringliteral">&quot;players&quot;</span>: FLAGS.players}</div>
+<div class="line"><span class="lineno">   38</span>  random_seeds_eval = np.random.choice(</div>
+<div class="line"><span class="lineno">   39</span>      np.array(list(range(1000))), size=FLAGS.random_seed_size, replace=<span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>  <span class="comment"># Train a meta-cfr agent</span></div>
+<div class="line"><span class="lineno">   42</span>  meta_cfr_agent = <a class="code hl_class" href="../../d9/d3c/classmeta__learning_1_1_meta_c_f_r_regret_agent.html">meta_learning.MetaCFRRegretAgent</a>(</div>
+<div class="line"><span class="lineno">   43</span>      training_epochs=1,</div>
+<div class="line"><span class="lineno">   44</span>      meta_learner_training_epochs=FLAGS.meta_learner_training_epochs,</div>
+<div class="line"><span class="lineno">   45</span>      game_name=FLAGS.game,</div>
+<div class="line"><span class="lineno">   46</span>      game_config=config,</div>
+<div class="line"><span class="lineno">   47</span>      perturbation=FLAGS.perturbation,</div>
+<div class="line"><span class="lineno">   48</span>      seed=FLAGS.random_seed,</div>
+<div class="line"><span class="lineno">   49</span>      model_type=FLAGS.model_type,</div>
+<div class="line"><span class="lineno">   50</span>      best_response=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   51</span>  meta_cfr_agent.train()</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>  cfr_vals = np.zeros((FLAGS.meta_learner_training_epochs,))</div>
+<div class="line"><span class="lineno">   54</span>  cfr_plus_vals = np.zeros((FLAGS.meta_learner_training_epochs,))</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">for</span> seed <span class="keywordflow">in</span> list(random_seeds_eval):</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    <span class="comment"># Evaluate a meta-cfr agent</span></div>
+<div class="line"><span class="lineno">   59</span>    world_state = <a class="code hl_class" href="../../d2/de3/classopenspiel__api_1_1_world_state.html">openspiel_api.WorldState</a>(</div>
+<div class="line"><span class="lineno">   60</span>        FLAGS.game, config, perturbation=<span class="keyword">True</span>, random_seed=seed)</div>
+<div class="line"><span class="lineno">   61</span>    meta_cfr_vals = <a class="code hl_function" href="../../d0/d98/namespaceevaluation.html#a2abd891f0a7fb6462666f7548a2a2846">evaluation.CFRBREvaluation</a>(meta_cfr_agent, world_state)</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="comment"># Evaluate a cfr plus agent</span></div>
+<div class="line"><span class="lineno">   64</span>    game_tree = <a class="code hl_function" href="../../da/d3c/namespacegame__tree__utils.html#a9ba1470ca3dea20962ce2f700467b262">game_tree_utils.build_game_tree</a>(</div>
+<div class="line"><span class="lineno">   65</span>        <a class="code hl_class" href="../../d2/de3/classopenspiel__api_1_1_world_state.html">openspiel_api.WorldState</a>(</div>
+<div class="line"><span class="lineno">   66</span>            FLAGS.game,</div>
+<div class="line"><span class="lineno">   67</span>            config,</div>
+<div class="line"><span class="lineno">   68</span>            perturbation=FLAGS.perturbation,</div>
+<div class="line"><span class="lineno">   69</span>            random_seed=seed))</div>
+<div class="line"><span class="lineno">   70</span>    _, cfr_plus_vals = <a class="code hl_function" href="../../db/d29/namespacecfr.html#ae255061c0c44a2fb14a05d0073b9b742">cfr.compute_cfr_plus_values</a>(</div>
+<div class="line"><span class="lineno">   71</span>        game_tree, FLAGS.meta_learner_training_epochs)</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <span class="comment"># Evaluate a cfr agent</span></div>
+<div class="line"><span class="lineno">   74</span>    game_tree = <a class="code hl_function" href="../../da/d3c/namespacegame__tree__utils.html#a9ba1470ca3dea20962ce2f700467b262">game_tree_utils.build_game_tree</a>(</div>
+<div class="line"><span class="lineno">   75</span>        <a class="code hl_class" href="../../d2/de3/classopenspiel__api_1_1_world_state.html">openspiel_api.WorldState</a>(</div>
+<div class="line"><span class="lineno">   76</span>            FLAGS.game,</div>
+<div class="line"><span class="lineno">   77</span>            config,</div>
+<div class="line"><span class="lineno">   78</span>            perturbation=FLAGS.perturbation,</div>
+<div class="line"><span class="lineno">   79</span>            random_seed=seed))</div>
+<div class="line"><span class="lineno">   80</span>    _, cfr_vals = <a class="code hl_function" href="../../db/d29/namespacecfr.html#a12c5637b2be205f9cac71365300e4bba">cfr.compute_cfr_values</a>(</div>
+<div class="line"><span class="lineno">   81</span>        game_tree, FLAGS.meta_learner_training_epochs)</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>  print(<span class="stringliteral">&quot;Evaluation seed:&quot;</span>, random_seeds_eval)</div>
+<div class="line"><span class="lineno">   84</span>  print(<span class="stringliteral">&quot;Meta_cfr agent:&quot;</span>, meta_cfr_vals)</div>
+<div class="line"><span class="lineno">   85</span>  print(<span class="stringliteral">&quot;cfr_plus agent:&quot;</span>, cfr_plus_vals)</div>
+<div class="line"><span class="lineno">   86</span>  print(<span class="stringliteral">&quot;cfr agent:&quot;</span>, cfr_vals)</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="ttc" id="aclassmeta__learning_1_1_meta_c_f_r_regret_agent_html"><div class="ttname"><a href="../../d9/d3c/classmeta__learning_1_1_meta_c_f_r_regret_agent.html">meta_learning.MetaCFRRegretAgent</a></div><div class="ttdef"><b>Definition</b> <a href="../../d5/d26/meta__learning_8py_source.html#l00263">meta_learning.py:263</a></div></div>
+<div class="ttc" id="aclassopenspiel__api_1_1_world_state_html"><div class="ttname"><a href="../../d2/de3/classopenspiel__api_1_1_world_state.html">openspiel_api.WorldState</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dba/openspiel__api_8py_source.html#l00024">openspiel_api.py:24</a></div></div>
+<div class="ttc" id="anamespacecfr_html_a12c5637b2be205f9cac71365300e4bba"><div class="ttname"><a href="../../db/d29/namespacecfr.html#a12c5637b2be205f9cac71365300e4bba">cfr.compute_cfr_values</a></div><div class="ttdeci">Tuple[List[float], List[float]] compute_cfr_values(GameTree cfr_game_tree, int steps)</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d56/examples_2meta__cfr_2sequential__games_2cfr_8py_source.html#l00448">cfr.py:449</a></div></div>
+<div class="ttc" id="anamespacecfr_html_ae255061c0c44a2fb14a05d0073b9b742"><div class="ttname"><a href="../../db/d29/namespacecfr.html#ae255061c0c44a2fb14a05d0073b9b742">cfr.compute_cfr_plus_values</a></div><div class="ttdeci">Tuple[List[float], List[float]] compute_cfr_plus_values(GameTree cfr_game_tree, int steps)</div><div class="ttdef"><b>Definition</b> <a href="../../dd/d56/examples_2meta__cfr_2sequential__games_2cfr_8py_source.html#l00406">cfr.py:407</a></div></div>
+<div class="ttc" id="anamespaceevaluation_html_a2abd891f0a7fb6462666f7548a2a2846"><div class="ttname"><a href="../../d0/d98/namespaceevaluation.html#a2abd891f0a7fb6462666f7548a2a2846">evaluation.CFRBREvaluation</a></div><div class="ttdeci">CFRBREvaluation(agent, world_state)</div><div class="ttdef"><b>Definition</b> <a href="../../d2/dd0/sequential__games_2evaluation_8py_source.html#l00021">evaluation.py:21</a></div></div>
+<div class="ttc" id="anamespacegame__tree__utils_html_a9ba1470ca3dea20962ce2f700467b262"><div class="ttname"><a href="../../da/d3c/namespacegame__tree__utils.html#a9ba1470ca3dea20962ce2f700467b262">game_tree_utils.build_game_tree</a></div><div class="ttdeci">GameTree build_game_tree(openspiel_api.WorldState world_state)</div><div class="ttdef"><b>Definition</b> <a href="../../d9/de6/game__tree__utils_8py_source.html#l00200">game_tree_utils.py:200</a></div></div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a76e89299620d4bb8ae820781faa45c31" name="a76e89299620d4bb8ae820781faa45c31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76e89299620d4bb8ae820781faa45c31">&#9670;&#160;</a></span>selfplay_main()</h2>
 
@@ -121,7 +199,65 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Self play.</pre> <div class="dynheader">
+<pre class="fragment">Self play.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d4/d9e/matrix__games_2main_8py_source.html#l00044">44</a> of file <a class="el" href="../../d4/d9e/matrix__games_2main_8py_source.html">main.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span><span class="keyword">def </span>selfplay_main(argv):</div>
+<div class="line"><span class="lineno">   45</span>  <span class="stringliteral">&quot;&quot;&quot;Self play.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   46</span>  del argv</div>
+<div class="line"><span class="lineno">   47</span>  np.random.seed(FLAGS.seed)</div>
+<div class="line"><span class="lineno">   48</span>  <span class="comment"># rock-paper-scissor</span></div>
+<div class="line"><span class="lineno">   49</span>  base_matrix = np.array([[[0, -1, 1], [1, 0, -1], [-1, 1, 0]]] *</div>
+<div class="line"><span class="lineno">   50</span>                         FLAGS.batch_size)</div>
+<div class="line"><span class="lineno">   51</span>  dataset = <a class="code hl_class" href="../../d0/d3b/classmatrix__dataset_1_1_dataset.html">matrix_dataset.Dataset</a>(</div>
+<div class="line"><span class="lineno">   52</span>      base_matrix=base_matrix,</div>
+<div class="line"><span class="lineno">   53</span>      num_training_batches=FLAGS.num_batches,</div>
+<div class="line"><span class="lineno">   54</span>      minval=FLAGS.min_val,</div>
+<div class="line"><span class="lineno">   55</span>      maxval=FLAGS.max_val)</div>
+<div class="line"><span class="lineno">   56</span>  data_loader = dataset.get_training_batch()</div>
+<div class="line"><span class="lineno">   57</span>  eval_payoff_batch = dataset.get_eval_batch()</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  mr_agent = <a class="code hl_class" href="../../da/d2f/classmeta__selfplay__agent_1_1_meta_selfplay_agent.html">meta_selfplay_agent.MetaSelfplayAgent</a>(</div>
+<div class="line"><span class="lineno">   60</span>      repeats=FLAGS.repeats,</div>
+<div class="line"><span class="lineno">   61</span>      training_epochs=FLAGS.evaluation_steps,</div>
+<div class="line"><span class="lineno">   62</span>      data_loader=data_loader)</div>
+<div class="line"><span class="lineno">   63</span>  mr_agent.train()</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  mr_agent2 = <a class="code hl_class" href="../../da/d2f/classmeta__selfplay__agent_1_1_meta_selfplay_agent.html">meta_selfplay_agent.MetaSelfplayAgent</a>(</div>
+<div class="line"><span class="lineno">   66</span>      repeats=FLAGS.repeats,</div>
+<div class="line"><span class="lineno">   67</span>      training_epochs=FLAGS.evaluation_steps,</div>
+<div class="line"><span class="lineno">   68</span>      data_loader=data_loader)</div>
+<div class="line"><span class="lineno">   69</span>  mr_agent2.train()</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>  rm_agent = <a class="code hl_class" href="../../d1/d0f/classregret__matching__agent_1_1_regret_matching_agent.html">regret_matching_agent.RegretMatchingAgent</a>(</div>
+<div class="line"><span class="lineno">   72</span>      num_actions=FLAGS.num_actions, data_loader=data_loader)</div>
+<div class="line"><span class="lineno">   73</span>  rm_agent.train()</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>  rm_agent2 = <a class="code hl_class" href="../../d1/d0f/classregret__matching__agent_1_1_regret_matching_agent.html">regret_matching_agent.RegretMatchingAgent</a>(</div>
+<div class="line"><span class="lineno">   76</span>      num_actions=FLAGS.num_actions, data_loader=data_loader)</div>
+<div class="line"><span class="lineno">   77</span>  rm_agent2.train()</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>  print(<span class="stringliteral">&quot;Regret matching&quot;</span>)</div>
+<div class="line"><span class="lineno">   80</span>  <a class="code hl_function" href="../../d0/d98/namespaceevaluation.html#af078123ff765e14bb31f8a714974e22a">evaluation.evaluate_in_selfplay</a>(</div>
+<div class="line"><span class="lineno">   81</span>      agent_x=rm_agent,</div>
+<div class="line"><span class="lineno">   82</span>      agent_y=rm_agent2,</div>
+<div class="line"><span class="lineno">   83</span>      payoff_batch=eval_payoff_batch,</div>
+<div class="line"><span class="lineno">   84</span>      steps_count=FLAGS.evaluation_steps)</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>  print(<span class="stringliteral">&quot;Meta regret matching&quot;</span>)</div>
+<div class="line"><span class="lineno">   87</span>  <a class="code hl_function" href="../../d0/d98/namespaceevaluation.html#af078123ff765e14bb31f8a714974e22a">evaluation.evaluate_in_selfplay</a>(</div>
+<div class="line"><span class="lineno">   88</span>      agent_x=mr_agent,</div>
+<div class="line"><span class="lineno">   89</span>      agent_y=mr_agent2,</div>
+<div class="line"><span class="lineno">   90</span>      payoff_batch=eval_payoff_batch,</div>
+<div class="line"><span class="lineno">   91</span>      steps_count=FLAGS.evaluation_steps)</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="ttc" id="aclassmatrix__dataset_1_1_dataset_html"><div class="ttname"><a href="../../d0/d3b/classmatrix__dataset_1_1_dataset.html">matrix_dataset.Dataset</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/dda/matrix__dataset_8py_source.html#l00023">matrix_dataset.py:23</a></div></div>
+<div class="ttc" id="aclassmeta__selfplay__agent_1_1_meta_selfplay_agent_html"><div class="ttname"><a href="../../da/d2f/classmeta__selfplay__agent_1_1_meta_selfplay_agent.html">meta_selfplay_agent.MetaSelfplayAgent</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/d74/meta__selfplay__agent_8py_source.html#l00081">meta_selfplay_agent.py:81</a></div></div>
+<div class="ttc" id="aclassregret__matching__agent_1_1_regret_matching_agent_html"><div class="ttname"><a href="../../d1/d0f/classregret__matching__agent_1_1_regret_matching_agent.html">regret_matching_agent.RegretMatchingAgent</a></div><div class="ttdef"><b>Definition</b> <a href="../../d8/de8/regret__matching__agent_8py_source.html#l00024">regret_matching_agent.py:24</a></div></div>
+<div class="ttc" id="anamespaceevaluation_html_af078123ff765e14bb31f8a714974e22a"><div class="ttname"><a href="../../d0/d98/namespaceevaluation.html#af078123ff765e14bb31f8a714974e22a">evaluation.evaluate_in_selfplay</a></div><div class="ttdeci">evaluate_in_selfplay(agent_x, agent_y, payoff_batch, steps_count)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/da0/matrix__games_2evaluation_8py_source.html#l00075">evaluation.py:75</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/da0/matrix__games_2evaluation_8py_source.html#l00075">evaluation.evaluate_in_selfplay()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/dc1/namespacemain_a76e89299620d4bb8ae820781faa45c31_cgraph.png" border="0" usemap="#ad2/dc1/namespacemain_a76e89299620d4bb8ae820781faa45c31_cgraph" alt=""/></div>
@@ -131,6 +267,23 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="139,23,171,23,171,28,139,28"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a9e54bf13f9d353cfeb8aa9a5623dcf87" name="a9e54bf13f9d353cfeb8aa9a5623dcf87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e54bf13f9d353cfeb8aa9a5623dcf87">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">main.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d9e/matrix__games_2main_8py_source.html#l00027">27</a> of file <a class="el" href="../../d4/d9e/matrix__games_2main_8py_source.html">main.py</a>.</p>
 
 </div>
 </div>

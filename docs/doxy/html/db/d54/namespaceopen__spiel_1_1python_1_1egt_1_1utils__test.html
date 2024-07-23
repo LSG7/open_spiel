@@ -145,7 +145,47 @@ Args:
 
 Returns:
   A numpy array of shape [num_distributions, num_slots].
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d39/egt_2utils__test_8py_source.html#l00027">27</a> of file <a class="el" href="../../d9/d39/egt_2utils__test_8py_source.html">utils_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span><span class="keyword">def </span>_generate_prob_profiles(num_items, num_slots):</div>
+<div class="line"><span class="lineno">   28</span>  <span class="stringliteral">&quot;&quot;&quot;Another implementation of `distribution` for test purposes.</span></div>
+<div class="line"><span class="lineno">   29</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral">  This function is the original implementation from Karl. jblespiau@ find it</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">  useful to add it here as: 1) an additional test of our function 2) a check</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">  that the initial code is correct too.</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">    num_items: The number of items to distribute.</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral">    num_slots: The number of slots.</span></div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   38</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   39</span><span class="stringliteral">    A numpy array of shape [num_distributions, num_slots].</span></div>
+<div class="line"><span class="lineno">   40</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   41</span>  <span class="keywordflow">if</span> num_slots == 1:</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">return</span> np.array([num_items])</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>  num_rows = utils.n_choose_k(num_items + num_slots - 1, num_items)</div>
+<div class="line"><span class="lineno">   45</span>  distributions = np.empty([num_rows, num_slots])</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  ind = 0</div>
+<div class="line"><span class="lineno">   48</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(0, num_items + 1):</div>
+<div class="line"><span class="lineno">   49</span>    n_tmp = num_items - i</div>
+<div class="line"><span class="lineno">   50</span>    k_tmp = num_slots - 1</div>
+<div class="line"><span class="lineno">   51</span>    distributions_tmp = _generate_prob_profiles(n_tmp, k_tmp)</div>
+<div class="line"><span class="lineno">   52</span>    distributions[ind:ind +</div>
+<div class="line"><span class="lineno">   53</span>                  np.shape(distributions_tmp)[0], :] = np.column_stack(</div>
+<div class="line"><span class="lineno">   54</span>                      (np.array((np.ones(np.shape(distributions_tmp)[0]) * i)),</div>
+<div class="line"><span class="lineno">   55</span>                       distributions_tmp))</div>
+<div class="line"><span class="lineno">   56</span>    ind = ind + np.shape(distributions_tmp)[0]</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">return</span> distributions</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d39/egt_2utils__test_8py_source.html#l00027">open_spiel.python.egt.utils_test._generate_prob_profiles()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d39/egt_2utils__test_8py_source.html#l00027">open_spiel.python.egt.utils_test._generate_prob_profiles()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d54/namespaceopen__spiel_1_1python_1_1egt_1_1utils__test_a92e027208379e5a9ad256cb03c9d84eb_cgraph.png" border="0" usemap="#adb/d54/namespaceopen__spiel_1_1python_1_1egt_1_1utils__test_a92e027208379e5a9ad256cb03c9d84eb_cgraph" alt=""/></div>

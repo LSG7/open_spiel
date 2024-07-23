@@ -122,7 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16a51ac0183ab912a5120426f0a7b424" id="r_a16a51ac0183ab912a5120426f0a7b424"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16a51ac0183ab912a5120426f0a7b424">test_joint_action_probabilities_failure_on_seq_game</a> (self)</td></tr>
 <tr class="separator:a16a51ac0183ab912a5120426f0a7b424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00632">632</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9c474bef07b822deb6b9a555b28a0504" name="a9c474bef07b822deb6b9a555b28a0504"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c474bef07b822deb6b9a555b28a0504">&#9670;&#160;</a></span>test_joint_action_probabilities()</h2>
 
@@ -138,6 +141,22 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test expected behavior of joint_action_probabilities.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00634">634</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  634</span>  <span class="keyword">def </span>test_joint_action_probabilities(self):</div>
+<div class="line"><span class="lineno">  635</span>    <span class="stringliteral">&quot;&quot;&quot;Test expected behavior of joint_action_probabilities.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  636</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_iterated_prisoners_dilemma&quot;</span>)</div>
+<div class="line"><span class="lineno">  637</span>    uniform_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">  638</span>    joint_action_probs = policy.joint_action_probabilities(</div>
+<div class="line"><span class="lineno">  639</span>        game.new_initial_state(), uniform_policy)</div>
+<div class="line"><span class="lineno">  640</span>    self.assertCountEqual(</div>
+<div class="line"><span class="lineno">  641</span>        list(joint_action_probs), [</div>
+<div class="line"><span class="lineno">  642</span>            ((0, 0), 0.25),</div>
+<div class="line"><span class="lineno">  643</span>            ((1, 1), 0.25),</div>
+<div class="line"><span class="lineno">  644</span>            ((1, 0), 0.25),</div>
+<div class="line"><span class="lineno">  645</span>            ((0, 1), 0.25),</div>
+<div class="line"><span class="lineno">  646</span>        ])</div>
+<div class="line"><span class="lineno">  647</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a16a51ac0183ab912a5120426f0a7b424" name="a16a51ac0183ab912a5120426f0a7b424"></a>
@@ -155,10 +174,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test failure of child on sequential games.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00648">648</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  648</span>  <span class="keyword">def </span>test_joint_action_probabilities_failure_on_seq_game(self):</div>
+<div class="line"><span class="lineno">  649</span>    <span class="stringliteral">&quot;&quot;&quot;Test failure of child on sequential games.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  650</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">  651</span>    <span class="keyword">with</span> self.assertRaises(AssertionError):</div>
+<div class="line"><span class="lineno">  652</span>      list(policy.joint_action_probabilities(</div>
+<div class="line"><span class="lineno">  653</span>          game.new_initial_state(), policy.UniformRandomPolicy(game)))</div>
+<div class="line"><span class="lineno">  654</span> </div>
+<div class="line"><span class="lineno">  655</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/tests/<b>policy_test.py</b></li>
+<li>open_spiel/python/tests/<a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

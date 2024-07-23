@@ -117,17 +117,119 @@ Collaboration diagram for absl::ABSL_NAMESPACE_BEGIN::CordRingTest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a29c9deab70de9a0afae5800615b45f4c" id="r_a29c9deab70de9a0afae5800615b45f4c"><td class="memTemplParams" colspan="2"><a id="a29c9deab70de9a0afae5800615b45f4c" name="a29c9deab70de9a0afae5800615b45f4c"></a>
-template&lt;typename CordRepType &gt; </td></tr>
-<tr class="memitem:a29c9deab70de9a0afae5800615b45f4c"><td class="memTemplItemLeft" align="right" valign="top">CordRepType *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>NeedsUnref</b> (CordRepType *rep)</td></tr>
+<tr class="memitem:a29c9deab70de9a0afae5800615b45f4c" id="r_a29c9deab70de9a0afae5800615b45f4c"><td class="memTemplParams" colspan="2">template&lt;typename CordRepType &gt; </td></tr>
+<tr class="memitem:a29c9deab70de9a0afae5800615b45f4c"><td class="memTemplItemLeft" align="right" valign="top">CordRepType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a29c9deab70de9a0afae5800615b45f4c">NeedsUnref</a> (CordRepType *rep)</td></tr>
 <tr class="separator:a29c9deab70de9a0afae5800615b45f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82e061f072d6dc8dc333b76831c35d8f" id="r_a82e061f072d6dc8dc333b76831c35d8f"><td class="memTemplParams" colspan="2"><a id="a82e061f072d6dc8dc333b76831c35d8f" name="a82e061f072d6dc8dc333b76831c35d8f"></a>
-template&lt;typename CordRepType &gt; </td></tr>
-<tr class="memitem:a82e061f072d6dc8dc333b76831c35d8f"><td class="memTemplItemLeft" align="right" valign="top">CordRepType *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Ref</b> (CordRepType *rep)</td></tr>
+<tr class="memitem:a82e061f072d6dc8dc333b76831c35d8f" id="r_a82e061f072d6dc8dc333b76831c35d8f"><td class="memTemplParams" colspan="2">template&lt;typename CordRepType &gt; </td></tr>
+<tr class="memitem:a82e061f072d6dc8dc333b76831c35d8f"><td class="memTemplItemLeft" align="right" valign="top">CordRepType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a82e061f072d6dc8dc333b76831c35d8f">Ref</a> (CordRepType *rep)</td></tr>
 <tr class="separator:a82e061f072d6dc8dc333b76831c35d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html#l00332">332</a> of file <a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html">cord_ring_test.cc</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aac70e7a6bab484161d84f666a16d3acf" name="aac70e7a6bab484161d84f666a16d3acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac70e7a6bab484161d84f666a16d3acf">&#9670;&#160;</a></span>~CordRingTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::ABSL_NAMESPACE_BEGIN::CordRingTest::~CordRingTest </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html#l00334">334</a> of file <a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html">cord_ring_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  334</span>                           {</div>
+<div class="line"><span class="lineno">  335</span>    <span class="keywordflow">for</span> (CordRep* rep : unrefs_) {</div>
+<div class="line"><span class="lineno">  336</span>      CordRep::Unref(rep);</div>
+<div class="line"><span class="lineno">  337</span>    }</div>
+<div class="line"><span class="lineno">  338</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a29c9deab70de9a0afae5800615b45f4c" name="a29c9deab70de9a0afae5800615b45f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c9deab70de9a0afae5800615b45f4c">&#9670;&#160;</a></span>NeedsUnref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CordRepType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CordRepType * absl::ABSL_NAMESPACE_BEGIN::CordRingTest::NeedsUnref </td>
+          <td>(</td>
+          <td class="paramtype">CordRepType *</td>          <td class="paramname"><span class="paramname"><em>rep</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html#l00341">341</a> of file <a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html">cord_ring_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  341</span>                                            {</div>
+<div class="line"><span class="lineno">  342</span>    assert(rep);</div>
+<div class="line"><span class="lineno">  343</span>    unrefs_.push_back(rep);</div>
+<div class="line"><span class="lineno">  344</span>    <span class="keywordflow">return</span> rep;</div>
+<div class="line"><span class="lineno">  345</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a82e061f072d6dc8dc333b76831c35d8f" name="a82e061f072d6dc8dc333b76831c35d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e061f072d6dc8dc333b76831c35d8f">&#9670;&#160;</a></span>Ref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename CordRepType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CordRepType * absl::ABSL_NAMESPACE_BEGIN::CordRingTest::Ref </td>
+          <td>(</td>
+          <td class="paramtype">CordRepType *</td>          <td class="paramname"><span class="paramname"><em>rep</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html#l00348">348</a> of file <a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html">cord_ring_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  348</span>                                     {</div>
+<div class="line"><span class="lineno">  349</span>    CordRep::Ref(rep);</div>
+<div class="line"><span class="lineno">  350</span>    <span class="keywordflow">return</span> NeedsUnref(rep);</div>
+<div class="line"><span class="lineno">  351</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/strings/<b>cord_ring_test.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/strings/<a class="el" href="../../d6/df3/cord__ring__test_8cc_source.html">cord_ring_test.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

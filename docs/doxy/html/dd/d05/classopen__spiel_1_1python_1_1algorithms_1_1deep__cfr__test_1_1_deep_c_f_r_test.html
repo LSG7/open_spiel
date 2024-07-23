@@ -117,15 +117,101 @@ Collaboration diagram for open_spiel.python.algorithms.deep_cfr_test.DeepCFRTest
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4e848ac67664afde860b591cb3ca8c9a" id="r_a4e848ac67664afde860b591cb3ca8c9a"><td class="memItemLeft" align="right" valign="top"><a id="a4e848ac67664afde860b591cb3ca8c9a" name="a4e848ac67664afde860b591cb3ca8c9a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_deep_cfr_runs</b> (self, game_name)</td></tr>
+<tr class="memitem:a4e848ac67664afde860b591cb3ca8c9a" id="r_a4e848ac67664afde860b591cb3ca8c9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e848ac67664afde860b591cb3ca8c9a">test_deep_cfr_runs</a> (self, game_name)</td></tr>
 <tr class="separator:a4e848ac67664afde860b591cb3ca8c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5522eb2ebe7cd2ef312f1a85379fb804" id="r_a5522eb2ebe7cd2ef312f1a85379fb804"><td class="memItemLeft" align="right" valign="top"><a id="a5522eb2ebe7cd2ef312f1a85379fb804" name="a5522eb2ebe7cd2ef312f1a85379fb804"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_matching_pennies_3p</b> (self)</td></tr>
+<tr class="memitem:a5522eb2ebe7cd2ef312f1a85379fb804" id="r_a5522eb2ebe7cd2ef312f1a85379fb804"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5522eb2ebe7cd2ef312f1a85379fb804">test_matching_pennies_3p</a> (self)</td></tr>
 <tr class="separator:a5522eb2ebe7cd2ef312f1a85379fb804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/de4/deep__cfr__test_8py_source.html#l00029">29</a> of file <a class="el" href="../../d8/de4/deep__cfr__test_8py_source.html">deep_cfr_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4e848ac67664afde860b591cb3ca8c9a" name="a4e848ac67664afde860b591cb3ca8c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e848ac67664afde860b591cb3ca8c9a">&#9670;&#160;</a></span>test_deep_cfr_runs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.deep_cfr_test.DeepCFRTest.test_deep_cfr_runs </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/de4/deep__cfr__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../d8/de4/deep__cfr__test_8py_source.html">deep_cfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>  <span class="keyword">def </span>test_deep_cfr_runs(self, game_name):</div>
+<div class="line"><span class="lineno">   33</span>    game = pyspiel.load_game(game_name)</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</div>
+<div class="line"><span class="lineno">   35</span>      deep_cfr_solver = deep_cfr.DeepCFRSolver(</div>
+<div class="line"><span class="lineno">   36</span>          sess,</div>
+<div class="line"><span class="lineno">   37</span>          game,</div>
+<div class="line"><span class="lineno">   38</span>          policy_network_layers=(8, 4),</div>
+<div class="line"><span class="lineno">   39</span>          advantage_network_layers=(4, 2),</div>
+<div class="line"><span class="lineno">   40</span>          num_iterations=2,</div>
+<div class="line"><span class="lineno">   41</span>          num_traversals=2,</div>
+<div class="line"><span class="lineno">   42</span>          learning_rate=1e-3,</div>
+<div class="line"><span class="lineno">   43</span>          batch_size_advantage=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   44</span>          batch_size_strategy=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   45</span>          memory_capacity=1e7)</div>
+<div class="line"><span class="lineno">   46</span>      sess.run(tf.global_variables_initializer())</div>
+<div class="line"><span class="lineno">   47</span>      deep_cfr_solver.solve()</div>
+<div class="line"><span class="lineno">   48</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5522eb2ebe7cd2ef312f1a85379fb804" name="a5522eb2ebe7cd2ef312f1a85379fb804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5522eb2ebe7cd2ef312f1a85379fb804">&#9670;&#160;</a></span>test_matching_pennies_3p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.deep_cfr_test.DeepCFRTest.test_matching_pennies_3p </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/de4/deep__cfr__test_8py_source.html#l00049">49</a> of file <a class="el" href="../../d8/de4/deep__cfr__test_8py_source.html">deep_cfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>  <span class="keyword">def </span>test_matching_pennies_3p(self):</div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment"># We don&#39;t expect Deep CFR to necessarily converge on 3-player games but</span></div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment"># it&#39;s nonetheless interesting to see this result.</span></div>
+<div class="line"><span class="lineno">   52</span>    game = pyspiel.load_game_as_turn_based(<span class="stringliteral">&#39;matching_pennies_3p&#39;</span>)</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</div>
+<div class="line"><span class="lineno">   54</span>      deep_cfr_solver = deep_cfr.DeepCFRSolver(</div>
+<div class="line"><span class="lineno">   55</span>          sess,</div>
+<div class="line"><span class="lineno">   56</span>          game,</div>
+<div class="line"><span class="lineno">   57</span>          policy_network_layers=(16, 8),</div>
+<div class="line"><span class="lineno">   58</span>          advantage_network_layers=(32, 16),</div>
+<div class="line"><span class="lineno">   59</span>          num_iterations=2,</div>
+<div class="line"><span class="lineno">   60</span>          num_traversals=2,</div>
+<div class="line"><span class="lineno">   61</span>          learning_rate=1e-3,</div>
+<div class="line"><span class="lineno">   62</span>          batch_size_advantage=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   63</span>          batch_size_strategy=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   64</span>          memory_capacity=1e7)</div>
+<div class="line"><span class="lineno">   65</span>      sess.run(tf.global_variables_initializer())</div>
+<div class="line"><span class="lineno">   66</span>      deep_cfr_solver.solve()</div>
+<div class="line"><span class="lineno">   67</span>      conv = exploitability.nash_conv(</div>
+<div class="line"><span class="lineno">   68</span>          game,</div>
+<div class="line"><span class="lineno">   69</span>          policy.tabular_policy_from_callable(</div>
+<div class="line"><span class="lineno">   70</span>              game, deep_cfr_solver.action_probabilities))</div>
+<div class="line"><span class="lineno">   71</span>      print(<span class="stringliteral">&#39;Deep CFR in Matching Pennies 3p. NashConv: {}&#39;</span>.format(conv))</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>deep_cfr_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d8/de4/deep__cfr__test_8py_source.html">deep_cfr_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

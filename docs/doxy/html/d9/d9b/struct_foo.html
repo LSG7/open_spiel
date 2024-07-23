@@ -101,12 +101,49 @@ Collaboration diagram for Foo:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a415eb636a28e656e1402d24eb03a661a" id="r_a415eb636a28e656e1402d24eb03a661a"><td class="memItemLeft" align="right" valign="top"><a id="a415eb636a28e656e1402d24eb03a661a" name="a415eb636a28e656e1402d24eb03a661a"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>func</b> (int x)</td></tr>
+<tr class="memitem:a415eb636a28e656e1402d24eb03a661a" id="r_a415eb636a28e656e1402d24eb03a661a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a415eb636a28e656e1402d24eb03a661a">func</a> (int x)</td></tr>
 <tr class="separator:a415eb636a28e656e1402d24eb03a661a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d4/d13/symbolize__test_8cc_source.html#l00065">65</a> of file <a class="el" href="../../d4/d13/symbolize__test_8cc_source.html">symbolize_test.cc</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a415eb636a28e656e1402d24eb03a661a" name="a415eb636a28e656e1402d24eb03a661a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a415eb636a28e656e1402d24eb03a661a">&#9670;&#160;</a></span>func()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSL_SYMBOLIZE_TEST_NOINLINE void Foo::func </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d13/symbolize__test_8cc_source.html#l00070">70</a> of file <a class="el" href="../../d4/d13/symbolize__test_8cc_source.html">symbolize_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                                               {</div>
+<div class="line"><span class="lineno">   71</span>  <span class="comment">// The next line makes this a unique function to prevent the compiler from</span></div>
+<div class="line"><span class="lineno">   72</span>  <span class="comment">// folding identical functions together.</span></div>
+<div class="line"><span class="lineno">   73</span>  <span class="keyword">volatile</span> <span class="keywordtype">int</span> x = __LINE__;</div>
+<div class="line"><span class="lineno">   74</span>  <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(x);</div>
+<div class="line"><span class="lineno">   75</span>  ABSL_BLOCK_TAIL_CALL_OPTIMIZATION();</div>
+<div class="line"><span class="lineno">   76</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/debugging/<b>symbolize_test.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/debugging/<a class="el" href="../../d4/d13/symbolize__test_8cc_source.html">symbolize_test.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

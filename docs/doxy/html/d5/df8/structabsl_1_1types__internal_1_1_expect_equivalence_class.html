@@ -108,17 +108,77 @@ Collaboration diagram for absl::types_internal::ExpectEquivalenceClass&lt; T, Pr
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0f692b953235c1f8e325bcb014484e41" id="r_a0f692b953235c1f8e325bcb014484e41"><td class="memTemplParams" colspan="2"><a id="a0f692b953235c1f8e325bcb014484e41" name="a0f692b953235c1f8e325bcb014484e41"></a>
-template&lt;class... Funs&gt; </td></tr>
-<tr class="memitem:a0f692b953235c1f8e325bcb014484e41"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Funs... &gt; eq_class) const</td></tr>
+<tr class="memitem:a0f692b953235c1f8e325bcb014484e41" id="r_a0f692b953235c1f8e325bcb014484e41"><td class="memTemplParams" colspan="2">template&lt;class... Funs&gt; </td></tr>
+<tr class="memitem:a0f692b953235c1f8e325bcb014484e41"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0f692b953235c1f8e325bcb014484e41">operator()</a> (<a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Funs... &gt; eq_class) const</td></tr>
 <tr class="separator:a0f692b953235c1f8e325bcb014484e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a624255e6ec50e27f71cc5a2e59404323" id="r_a624255e6ec50e27f71cc5a2e59404323"><td class="memItemLeft" align="right" valign="top"><a id="a624255e6ec50e27f71cc5a2e59404323" name="a624255e6ec50e27f71cc5a2e59404323"></a>
-<a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>errors</b></td></tr>
+<tr class="memitem:a624255e6ec50e27f71cc5a2e59404323" id="r_a624255e6ec50e27f71cc5a2e59404323"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a624255e6ec50e27f71cc5a2e59404323">errors</a></td></tr>
 <tr class="separator:a624255e6ec50e27f71cc5a2e59404323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T, class Prof&gt;<br />
+struct absl::types_internal::ExpectEquivalenceClass&lt; T, Prof &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00727">727</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0f692b953235c1f8e325bcb014484e41" name="a0f692b953235c1f8e325bcb014484e41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f692b953235c1f8e325bcb014484e41">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Prof &gt; </div>
+<div class="memtemplate">
+template&lt;class... Funs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/df8/structabsl_1_1types__internal_1_1_expect_equivalence_class.html">absl::types_internal::ExpectEquivalenceClass</a>&lt; T, Prof &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Funs... &gt;</td>          <td class="paramname"><span class="paramname"><em>eq_class</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00729">729</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  729</span>                                                                {</div>
+<div class="line"><span class="lineno">  730</span>    (ForEachTupleElement)(ExpectConsistency&lt;T, Prof&gt;{errors},</div>
+<div class="line"><span class="lineno">  731</span>                          eq_class.generators);</div>
+<div class="line"><span class="lineno">  732</span> </div>
+<div class="line"><span class="lineno">  733</span>    (ForEveryTwo)(ExpectEquivalenceClassConsistency&lt;T, Prof&gt;{errors},</div>
+<div class="line"><span class="lineno">  734</span>                  eq_class.generators);</div>
+<div class="line"><span class="lineno">  735</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a624255e6ec50e27f71cc5a2e59404323" name="a624255e6ec50e27f71cc5a2e59404323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a624255e6ec50e27f71cc5a2e59404323">&#9670;&#160;</a></span>errors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Prof &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a>* <a class="el" href="../../d5/df8/structabsl_1_1types__internal_1_1_expect_equivalence_class.html">absl::types_internal::ExpectEquivalenceClass</a>&lt; T, Prof &gt;::errors</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00737">737</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a></li>
 </ul>

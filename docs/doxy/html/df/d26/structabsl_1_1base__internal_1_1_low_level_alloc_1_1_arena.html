@@ -108,8 +108,7 @@ Collaboration diagram for absl::base_internal::LowLevelAlloc::Arena:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a535d6f62b0b94c15c187dd265a5033e4" id="r_a535d6f62b0b94c15c187dd265a5033e4"><td class="memItemLeft" align="right" valign="top"><a id="a535d6f62b0b94c15c187dd265a5033e4" name="a535d6f62b0b94c15c187dd265a5033e4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Arena</b> (uint32_t flags_value)</td></tr>
+<tr class="memitem:a535d6f62b0b94c15c187dd265a5033e4" id="r_a535d6f62b0b94c15c187dd265a5033e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a535d6f62b0b94c15c187dd265a5033e4">Arena</a> (uint32_t flags_value)</td></tr>
 <tr class="separator:a535d6f62b0b94c15c187dd265a5033e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43dcf9808cde9248d6894d684f5d3b20" id="r_a43dcf9808cde9248d6894d684f5d3b20"><td class="memItemLeft" align="right" valign="top"><a id="a43dcf9808cde9248d6894d684f5d3b20" name="a43dcf9808cde9248d6894d684f5d3b20"></a>
 AllocList freelist&#160;</td><td class="memItemRight" valign="bottom"><b>ABSL_GUARDED_BY</b> (mu)</td></tr>
@@ -123,24 +122,147 @@ uint32_t random&#160;</td><td class="memItemRight" valign="bottom"><b>ABSL_GUARD
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2dffa23e4c41f5c8c17f8c6aa11cdb9b" id="r_a2dffa23e4c41f5c8c17f8c6aa11cdb9b"><td class="memItemLeft" align="right" valign="top"><a id="a2dffa23e4c41f5c8c17f8c6aa11cdb9b" name="a2dffa23e4c41f5c8c17f8c6aa11cdb9b"></a>
-<a class="el" href="../../dc/d7d/classabsl_1_1base__internal_1_1_spin_lock.html">base_internal::SpinLock</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mu</b></td></tr>
+<tr class="memitem:a2dffa23e4c41f5c8c17f8c6aa11cdb9b" id="r_a2dffa23e4c41f5c8c17f8c6aa11cdb9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d7d/classabsl_1_1base__internal_1_1_spin_lock.html">base_internal::SpinLock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dffa23e4c41f5c8c17f8c6aa11cdb9b">mu</a></td></tr>
 <tr class="separator:a2dffa23e4c41f5c8c17f8c6aa11cdb9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b3545017c65cbcbccd0679ee2ecde92" id="r_a6b3545017c65cbcbccd0679ee2ecde92"><td class="memItemLeft" align="right" valign="top"><a id="a6b3545017c65cbcbccd0679ee2ecde92" name="a6b3545017c65cbcbccd0679ee2ecde92"></a>
-const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b></td></tr>
+<tr class="memitem:a6b3545017c65cbcbccd0679ee2ecde92" id="r_a6b3545017c65cbcbccd0679ee2ecde92"><td class="memItemLeft" align="right" valign="top">const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b3545017c65cbcbccd0679ee2ecde92">flags</a></td></tr>
 <tr class="separator:a6b3545017c65cbcbccd0679ee2ecde92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a569423d4b899b416cec1a49e329c1080" id="r_a569423d4b899b416cec1a49e329c1080"><td class="memItemLeft" align="right" valign="top"><a id="a569423d4b899b416cec1a49e329c1080" name="a569423d4b899b416cec1a49e329c1080"></a>
-const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>pagesize</b></td></tr>
+<tr class="memitem:a569423d4b899b416cec1a49e329c1080" id="r_a569423d4b899b416cec1a49e329c1080"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a569423d4b899b416cec1a49e329c1080">pagesize</a></td></tr>
 <tr class="separator:a569423d4b899b416cec1a49e329c1080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af975696cb90e0e9da9291e575f148630" id="r_af975696cb90e0e9da9291e575f148630"><td class="memItemLeft" align="right" valign="top"><a id="af975696cb90e0e9da9291e575f148630" name="af975696cb90e0e9da9291e575f148630"></a>
-const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>round_up</b></td></tr>
+<tr class="memitem:af975696cb90e0e9da9291e575f148630" id="r_af975696cb90e0e9da9291e575f148630"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af975696cb90e0e9da9291e575f148630">round_up</a></td></tr>
 <tr class="separator:af975696cb90e0e9da9291e575f148630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f2e2389d0c843add432429b343e4fa8" id="r_a8f2e2389d0c843add432429b343e4fa8"><td class="memItemLeft" align="right" valign="top"><a id="a8f2e2389d0c843add432429b343e4fa8" name="a8f2e2389d0c843add432429b343e4fa8"></a>
-const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>min_size</b></td></tr>
+<tr class="memitem:a8f2e2389d0c843add432429b343e4fa8" id="r_a8f2e2389d0c843add432429b343e4fa8"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f2e2389d0c843add432429b343e4fa8">min_size</a></td></tr>
 <tr class="separator:a8f2e2389d0c843add432429b343e4fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00201">201</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a535d6f62b0b94c15c187dd265a5033e4" name="a535d6f62b0b94c15c187dd265a5033e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535d6f62b0b94c15c187dd265a5033e4">&#9670;&#160;</a></span>Arena()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::base_internal::LowLevelAlloc::Arena::Arena </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>flags_value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00350">350</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  351</span>    : mu(base_internal::SCHEDULE_KERNEL_ONLY),</div>
+<div class="line"><span class="lineno">  352</span>      allocation_count(0),</div>
+<div class="line"><span class="lineno">  353</span>      flags(flags_value),</div>
+<div class="line"><span class="lineno">  354</span>      pagesize(GetPageSize()),</div>
+<div class="line"><span class="lineno">  355</span>      round_up(RoundedUpBlockSize()),</div>
+<div class="line"><span class="lineno">  356</span>      min_size(2 * round_up),</div>
+<div class="line"><span class="lineno">  357</span>      random(0) {</div>
+<div class="line"><span class="lineno">  358</span>  freelist.header.size = 0;</div>
+<div class="line"><span class="lineno">  359</span>  freelist.header.magic =</div>
+<div class="line"><span class="lineno">  360</span>      Magic(kMagicUnallocated, &amp;freelist.header);</div>
+<div class="line"><span class="lineno">  361</span>  freelist.header.arena = <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  362</span>  freelist.levels = 0;</div>
+<div class="line"><span class="lineno">  363</span>  memset(freelist.next, 0, <span class="keyword">sizeof</span>(freelist.next));</div>
+<div class="line"><span class="lineno">  364</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6b3545017c65cbcbccd0679ee2ecde92" name="a6b3545017c65cbcbccd0679ee2ecde92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3545017c65cbcbccd0679ee2ecde92">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t absl::base_internal::LowLevelAlloc::Arena::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00211">211</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+
+</div>
+</div>
+<a id="a8f2e2389d0c843add432429b343e4fa8" name="a8f2e2389d0c843add432429b343e4fa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2e2389d0c843add432429b343e4fa8">&#9670;&#160;</a></span>min_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t absl::base_internal::LowLevelAlloc::Arena::min_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00217">217</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+
+</div>
+</div>
+<a id="a2dffa23e4c41f5c8c17f8c6aa11cdb9b" name="a2dffa23e4c41f5c8c17f8c6aa11cdb9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dffa23e4c41f5c8c17f8c6aa11cdb9b">&#9670;&#160;</a></span>mu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d7d/classabsl_1_1base__internal_1_1_spin_lock.html">base_internal::SpinLock</a> absl::base_internal::LowLevelAlloc::Arena::mu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00205">205</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/df8/response__graph__ucb_8py_source.html#l00302">open_spiel.python.algorithms.response_graph_ucb.ResponseGraphUCB::_lcb()</a>, <a class="el" href="../../d4/df8/response__graph__ucb_8py_source.html#l00284">open_spiel.python.algorithms.response_graph_ucb.ResponseGraphUCB::_ucb()</a>, <a class="el" href="../../d4/df8/response__graph__ucb_8py_source.html#l00351">open_spiel.python.algorithms.response_graph_ucb.ResponseGraphUCB::check_confidence()</a>, <a class="el" href="../../d4/df8/response__graph__ucb_8py_source.html#l00097">open_spiel.python.algorithms.response_graph_ucb.ResponseGraphUCB::initialise_mean_and_count()</a>, <a class="el" href="../../d4/df8/response__graph__ucb_8py_source.html#l00320">open_spiel.python.algorithms.response_graph_ucb.ResponseGraphUCB::ucb_check()</a>, <a class="el" href="../../d4/df8/response__graph__ucb_8py_source.html#l00106">open_spiel.python.algorithms.response_graph_ucb.ResponseGraphUCB::update_mean_and_count()</a>, and <a class="el" href="../../d4/df8/response__graph__ucb_8py_source.html#l00488">open_spiel.python.algorithms.response_graph_ucb.ResponseGraphUCB::visualise_2x2x2()</a>.</p>
+
+</div>
+</div>
+<a id="a569423d4b899b416cec1a49e329c1080" name="a569423d4b899b416cec1a49e329c1080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569423d4b899b416cec1a49e329c1080">&#9670;&#160;</a></span>pagesize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t absl::base_internal::LowLevelAlloc::Arena::pagesize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00213">213</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+
+</div>
+</div>
+<a id="af975696cb90e0e9da9291e575f148630" name="af975696cb90e0e9da9291e575f148630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af975696cb90e0e9da9291e575f148630">&#9670;&#160;</a></span>round_up</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t absl::base_internal::LowLevelAlloc::Arena::round_up</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00215">215</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/base/internal/<b>low_level_alloc.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

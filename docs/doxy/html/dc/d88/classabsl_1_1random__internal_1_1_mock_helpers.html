@@ -105,19 +105,144 @@ Collaboration diagram for absl::random_internal::MockHelpers:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab7d926fc125601ee4ce63d3dfd9d8201" id="r_ab7d926fc125601ee4ce63d3dfd9d8201"><td class="memTemplParams" colspan="2"><a id="ab7d926fc125601ee4ce63d3dfd9d8201" name="ab7d926fc125601ee4ce63d3dfd9d8201"></a>
-template&lt;typename URBG &gt; </td></tr>
-<tr class="memitem:ab7d926fc125601ee4ce63d3dfd9d8201"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>PrivateInvokeMock</b> (URBG *urbg, IdType type, void *args_tuple, void *result)</td></tr>
+<tr class="memitem:ab7d926fc125601ee4ce63d3dfd9d8201" id="r_ab7d926fc125601ee4ce63d3dfd9d8201"><td class="memTemplParams" colspan="2">template&lt;typename URBG &gt; </td></tr>
+<tr class="memitem:ab7d926fc125601ee4ce63d3dfd9d8201"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab7d926fc125601ee4ce63d3dfd9d8201">PrivateInvokeMock</a> (URBG *urbg, IdType type, void *args_tuple, void *result)</td></tr>
 <tr class="separator:ab7d926fc125601ee4ce63d3dfd9d8201"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a116711596ae96ed3d03f1cd6b3e63a" id="r_a9a116711596ae96ed3d03f1cd6b3e63a"><td class="memTemplParams" colspan="2"><a id="a9a116711596ae96ed3d03f1cd6b3e63a" name="a9a116711596ae96ed3d03f1cd6b3e63a"></a>
-template&lt;typename KeyT , typename URBG , typename... Args&gt; </td></tr>
-<tr class="memitem:a9a116711596ae96ed3d03f1cd6b3e63a"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>MaybeInvokeMock</b> (URBG *urbg, Args &amp;&amp;... args) -&gt; <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; typename KeySignature&lt; KeyT &gt;::result_type &gt;</td></tr>
+<tr class="memitem:a9a116711596ae96ed3d03f1cd6b3e63a" id="r_a9a116711596ae96ed3d03f1cd6b3e63a"><td class="memTemplParams" colspan="2">template&lt;typename KeyT , typename URBG , typename... Args&gt; </td></tr>
+<tr class="memitem:a9a116711596ae96ed3d03f1cd6b3e63a"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9a116711596ae96ed3d03f1cd6b3e63a">MaybeInvokeMock</a> (URBG *urbg, Args &amp;&amp;... args) -&gt; <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; typename KeySignature&lt; KeyT &gt;::result_type &gt;</td></tr>
 <tr class="separator:a9a116711596ae96ed3d03f1cd6b3e63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ef2543ba65d09e452df496702780da6" id="r_a9ef2543ba65d09e452df496702780da6"><td class="memTemplParams" colspan="2"><a id="a9ef2543ba65d09e452df496702780da6" name="a9ef2543ba65d09e452df496702780da6"></a>
-template&lt;typename KeyT , typename MockURBG &gt; </td></tr>
-<tr class="memitem:a9ef2543ba65d09e452df496702780da6"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>MockFor</b> (MockURBG &amp;m) -&gt; decltype(m.template RegisterMock&lt; typename KeySignature&lt; KeyT &gt;::result_type, typename KeySignature&lt; KeyT &gt;::arg_tuple_type &gt;(m, std::declval&lt; IdType &gt;()))</td></tr>
+<tr class="memitem:a9ef2543ba65d09e452df496702780da6" id="r_a9ef2543ba65d09e452df496702780da6"><td class="memTemplParams" colspan="2">template&lt;typename KeyT , typename MockURBG &gt; </td></tr>
+<tr class="memitem:a9ef2543ba65d09e452df496702780da6"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9ef2543ba65d09e452df496702780da6">MockFor</a> (MockURBG &amp;m) -&gt; decltype(m.template RegisterMock&lt; typename KeySignature&lt; KeyT &gt;::result_type, typename KeySignature&lt; KeyT &gt;::arg_tuple_type &gt;(m, std::declval&lt; IdType &gt;()))</td></tr>
 <tr class="separator:a9ef2543ba65d09e452df496702780da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/d2d/mock__helpers_8h_source.html#l00041">41</a> of file <a class="el" href="../../d7/d2d/mock__helpers_8h_source.html">mock_helpers.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9a116711596ae96ed3d03f1cd6b3e63a" name="a9a116711596ae96ed3d03f1cd6b3e63a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a116711596ae96ed3d03f1cd6b3e63a">&#9670;&#160;</a></span>MaybeInvokeMock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KeyT , typename URBG , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto absl::random_internal::MockHelpers::MaybeInvokeMock </td>
+          <td>(</td>
+          <td class="paramtype">URBG *</td>          <td class="paramname"><span class="paramname"><em>urbg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) -&gt; <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt;typename KeySignature&lt;KeyT&gt;::result_type&gt; </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2d/mock__helpers_8h_source.html#l00102">102</a> of file <a class="el" href="../../d7/d2d/mock__helpers_8h_source.html">mock_helpers.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                              {</div>
+<div class="line"><span class="lineno">  104</span>    <span class="comment">// Use function overloading to dispatch to the implemenation since</span></div>
+<div class="line"><span class="lineno">  105</span>    <span class="comment">// more modern patterns (e.g. require + constexpr) are not supported in all</span></div>
+<div class="line"><span class="lineno">  106</span>    <span class="comment">// compiler configurations.</span></div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">return</span> InvokeMockImpl&lt;KeyT, typename KeySignature&lt;KeyT&gt;::result_type,</div>
+<div class="line"><span class="lineno">  108</span>                          <span class="keyword">typename</span> KeySignature&lt;KeyT&gt;::arg_tuple_type, URBG&gt;(</div>
+<div class="line"><span class="lineno">  109</span>        0, urbg, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  110</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9ef2543ba65d09e452df496702780da6" name="a9ef2543ba65d09e452df496702780da6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef2543ba65d09e452df496702780da6">&#9670;&#160;</a></span>MockFor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KeyT , typename MockURBG &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto absl::random_internal::MockHelpers::MockFor </td>
+          <td>(</td>
+          <td class="paramtype">MockURBG &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td> -&gt; decltype(m.template RegisterMock&lt;
+                  typename KeySignature&lt;KeyT&gt;::result_type,
+                  typename KeySignature&lt;KeyT&gt;::arg_tuple_type&gt;(
+          m, std::declval&lt;IdType&gt;())) </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2d/mock__helpers_8h_source.html#l00120">120</a> of file <a class="el" href="../../d7/d2d/mock__helpers_8h_source.html">mock_helpers.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                    {</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span> m.template RegisterMock&lt;typename KeySignature&lt;KeyT&gt;::result_type,</div>
+<div class="line"><span class="lineno">  126</span>                                   <span class="keyword">typename</span> KeySignature&lt;KeyT&gt;::arg_tuple_type&gt;(</div>
+<div class="line"><span class="lineno">  127</span>        m, ::absl::base_internal::FastTypeId&lt;KeyT&gt;());</div>
+<div class="line"><span class="lineno">  128</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab7d926fc125601ee4ce63d3dfd9d8201" name="ab7d926fc125601ee4ce63d3dfd9d8201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d926fc125601ee4ce63d3dfd9d8201">&#9670;&#160;</a></span>PrivateInvokeMock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename URBG &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool absl::random_internal::MockHelpers::PrivateInvokeMock </td>
+          <td>(</td>
+          <td class="paramtype">URBG *</td>          <td class="paramname"><span class="paramname"><em>urbg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IdType</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>args_tuple</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2d/mock__helpers_8h_source.html#l00086">86</a> of file <a class="el" href="../../d7/d2d/mock__helpers_8h_source.html">mock_helpers.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                                       {</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">return</span> urbg-&gt;InvokeMock(type, args_tuple, result);</div>
+<div class="line"><span class="lineno">   89</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/random/internal/<a class="el" href="../../d7/d2d/mock__helpers_8h_source.html">mock_helpers.h</a></li>
 </ul>

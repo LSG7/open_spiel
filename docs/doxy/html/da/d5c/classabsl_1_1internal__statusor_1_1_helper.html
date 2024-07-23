@@ -105,16 +105,89 @@ Collaboration diagram for absl::internal_statusor::Helper:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4779687ba09e0ef1d73f03573d2a9503" id="r_a4779687ba09e0ef1d73f03573d2a9503"><td class="memItemLeft" align="right" valign="top"><a id="a4779687ba09e0ef1d73f03573d2a9503" name="a4779687ba09e0ef1d73f03573d2a9503"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleInvalidStatusCtorArg</b> (<a class="el" href="../../d8/d07/classabsl_1_1_status.html">Status</a> *)</td></tr>
+<tr class="memitem:a4779687ba09e0ef1d73f03573d2a9503" id="r_a4779687ba09e0ef1d73f03573d2a9503"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4779687ba09e0ef1d73f03573d2a9503">HandleInvalidStatusCtorArg</a> (<a class="el" href="../../d8/d07/classabsl_1_1_status.html">Status</a> *)</td></tr>
 <tr class="separator:a4779687ba09e0ef1d73f03573d2a9503"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a496699d09c8dc4784af33b1e486f8" id="r_ad5a496699d09c8dc4784af33b1e486f8"><td class="memItemLeft" align="right" valign="top"><a id="ad5a496699d09c8dc4784af33b1e486f8" name="ad5a496699d09c8dc4784af33b1e486f8"></a>
-static ABSL_ATTRIBUTE_NORETURN void&#160;</td><td class="memItemRight" valign="bottom"><b>Crash</b> (const <a class="el" href="../../d8/d07/classabsl_1_1_status.html">absl::Status</a> &amp;status)</td></tr>
+<tr class="memitem:ad5a496699d09c8dc4784af33b1e486f8" id="r_ad5a496699d09c8dc4784af33b1e486f8"><td class="memItemLeft" align="right" valign="top">static ABSL_ATTRIBUTE_NORETURN void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5a496699d09c8dc4784af33b1e486f8">Crash</a> (const <a class="el" href="../../d8/d07/classabsl_1_1_status.html">absl::Status</a> &amp;status)</td></tr>
 <tr class="separator:ad5a496699d09c8dc4784af33b1e486f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/da0/statusor__internal_8h_source.html#l00135">135</a> of file <a class="el" href="../../d7/da0/statusor__internal_8h_source.html">statusor_internal.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad5a496699d09c8dc4784af33b1e486f8" name="ad5a496699d09c8dc4784af33b1e486f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a496699d09c8dc4784af33b1e486f8">&#9670;&#160;</a></span>Crash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::internal_statusor::Helper::Crash </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d07/classabsl_1_1_status.html">absl::Status</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/da6/statusor_8cc_source.html#l00082">82</a> of file <a class="el" href="../../d9/da6/statusor_8cc_source.html">statusor.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                                           {</div>
+<div class="line"><span class="lineno">   83</span>  ABSL_INTERNAL_LOG(</div>
+<div class="line"><span class="lineno">   84</span>      FATAL,</div>
+<div class="line"><span class="lineno">   85</span>      absl::StrCat(<span class="stringliteral">&quot;Attempting to fetch value instead of handling error &quot;</span>,</div>
+<div class="line"><span class="lineno">   86</span>                   status.ToString()));</div>
+<div class="line"><span class="lineno">   87</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4779687ba09e0ef1d73f03573d2a9503" name="a4779687ba09e0ef1d73f03573d2a9503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4779687ba09e0ef1d73f03573d2a9503">&#9670;&#160;</a></span>HandleInvalidStatusCtorArg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::internal_statusor::Helper::HandleInvalidStatusCtorArg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/d07/classabsl_1_1_status.html">absl::Status</a> *</td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/da6/statusor_8cc_source.html#l00070">70</a> of file <a class="el" href="../../d9/da6/statusor_8cc_source.html">statusor.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                                                          {</div>
+<div class="line"><span class="lineno">   71</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* kMessage =</div>
+<div class="line"><span class="lineno">   72</span>      <span class="stringliteral">&quot;An OK status is not a valid constructor argument to StatusOr&lt;T&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">   73</span><span class="preprocessor">#ifdef NDEBUG</span></div>
+<div class="line"><span class="lineno">   74</span>  ABSL_INTERNAL_LOG(ERROR, kMessage);</div>
+<div class="line"><span class="lineno">   75</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   76</span>  ABSL_INTERNAL_LOG(FATAL, kMessage);</div>
+<div class="line"><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   78</span>  <span class="comment">// In optimized builds, we will fall back to InternalError.</span></div>
+<div class="line"><span class="lineno">   79</span>  *status = absl::InternalError(kMessage);</div>
+<div class="line"><span class="lineno">   80</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/status/internal/<a class="el" href="../../d7/da0/statusor__internal_8h_source.html">statusor_internal.h</a></li>
-<li>open_spiel/abseil-cpp/absl/status/<b>statusor.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/status/<a class="el" href="../../d9/da6/statusor_8cc_source.html">statusor.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

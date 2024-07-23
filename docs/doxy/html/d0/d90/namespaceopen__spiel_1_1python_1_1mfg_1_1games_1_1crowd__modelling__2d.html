@@ -140,7 +140,34 @@ Args:
 Returns:
   String representation of forbidden states in the form of x (column) and y
   (row) pairs, e.g. [1|1;0|2].
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html#l00023">23</a> of file <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html">crowd_modelling_2d.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span><span class="keyword">def </span>grid_to_forbidden_states(grid: Sequence[str]) -&gt; str:</div>
+<div class="line"><span class="lineno">   24</span>  <span class="stringliteral">&quot;&quot;&quot;Converts a grid into string representation of forbidden states.</span></div>
+<div class="line"><span class="lineno">   25</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   26</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   27</span><span class="stringliteral">    grid: Rows of the grid. &#39;#&#39; character denotes a forbidden state. All rows</span></div>
+<div class="line"><span class="lineno">   28</span><span class="stringliteral">      should have the same number of columns, i.e. cells.</span></div>
+<div class="line"><span class="lineno">   29</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">    String representation of forbidden states in the form of x (column) and y</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">    (row) pairs, e.g. [1|1;0|2].</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   34</span>  forbidden_states = []</div>
+<div class="line"><span class="lineno">   35</span>  num_cols = len(grid[0])</div>
+<div class="line"><span class="lineno">   36</span>  <span class="keywordflow">for</span> y, row <span class="keywordflow">in</span> enumerate(grid):</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keyword">assert</span> len(row) == num_cols, f<span class="stringliteral">&#39;Number of columns should be {num_cols}.&#39;</span></div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">for</span> x, cell <span class="keywordflow">in</span> enumerate(row):</div>
+<div class="line"><span class="lineno">   39</span>      <span class="keywordflow">if</span> cell == <span class="stringliteral">&#39;#&#39;</span>:</div>
+<div class="line"><span class="lineno">   40</span>        forbidden_states.append(f<span class="stringliteral">&#39;{x}|{y}&#39;</span>)</div>
+<div class="line"><span class="lineno">   41</span>  <span class="keywordflow">return</span> <span class="stringliteral">&#39;[&#39;</span> + <span class="stringliteral">&#39;;&#39;</span>.join(forbidden_states) + <span class="stringliteral">&#39;]&#39;</span></div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html#l00023">open_spiel.python.mfg.games.crowd_modelling_2d.grid_to_forbidden_states()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html#l00023">open_spiel.python.mfg.games.crowd_modelling_2d.grid_to_forbidden_states()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d90/namespaceopen__spiel_1_1python_1_1mfg_1_1games_1_1crowd__modelling__2d_a4f59770b1e4bb65073c41e123573ca33_cgraph.png" border="0" usemap="#ad0/d90/namespaceopen__spiel_1_1python_1_1mfg_1_1games_1_1crowd__modelling__2d_a4f59770b1e4bb65073c41e123573ca33_cgraph" alt=""/></div>
@@ -181,6 +208,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    6</span>    <span class="stringliteral">&#39;size&#39;</span>: 13,</div>
 <div class="line"><span class="lineno">    7</span>}</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html#l00061">61</a> of file <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html">crowd_modelling_2d.py</a>.</p>
+
 </div>
 </div>
 <a id="a4f732c1a7ff68b8933f206a253bdf0b4" name="a4f732c1a7ff68b8933f206a253bdf0b4"></a>
@@ -210,6 +239,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   14</span>    <span class="stringliteral">&#39;#############&#39;</span>,</div>
 <div class="line"><span class="lineno">   15</span>])</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html#l00044">44</a> of file <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html">crowd_modelling_2d.py</a>.</p>
+
 </div>
 </div>
 <a id="af39aae0ad2bfe553cb49546e9e564768" name="af39aae0ad2bfe553cb49546e9e564768"></a>
@@ -231,6 +262,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    6</span>    <span class="stringliteral">&#39;size&#39;</span>: 22,</div>
 <div class="line"><span class="lineno">    7</span>}</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html#l00095">95</a> of file <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html">crowd_modelling_2d.py</a>.</p>
+
 </div>
 </div>
 <a id="adf97e858cf77cdfac43f41fe55c9f2c9" name="adf97e858cf77cdfac43f41fe55c9f2c9"></a>
@@ -269,6 +302,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   23</span>    <span class="stringliteral">&#39;######################&#39;</span>,</div>
 <div class="line"><span class="lineno">   24</span>])</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html#l00069">69</a> of file <a class="el" href="../../d5/d46/crowd__modelling__2d_8py_source.html">crowd_modelling_2d.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

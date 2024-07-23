@@ -105,19 +105,99 @@ Collaboration diagram for open_spiel::colored_trails::ChipComboIterator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a18b1a1c1c9a7aec8a7189faf94c1382c" id="r_a18b1a1c1c9a7aec8a7189faf94c1382c"><td class="memItemLeft" align="right" valign="top"><a id="a18b1a1c1c9a7aec8a7189faf94c1382c" name="a18b1a1c1c9a7aec8a7189faf94c1382c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ChipComboIterator</b> (const std::vector&lt; int &gt; &amp;chips)</td></tr>
+<tr class="memitem:a18b1a1c1c9a7aec8a7189faf94c1382c" id="r_a18b1a1c1c9a7aec8a7189faf94c1382c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18b1a1c1c9a7aec8a7189faf94c1382c">ChipComboIterator</a> (const std::vector&lt; int &gt; &amp;chips)</td></tr>
 <tr class="separator:a18b1a1c1c9a7aec8a7189faf94c1382c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab182da62cb1752c1d55b23e6be5b3065" id="r_ab182da62cb1752c1d55b23e6be5b3065"><td class="memItemLeft" align="right" valign="top"><a id="ab182da62cb1752c1d55b23e6be5b3065" name="ab182da62cb1752c1d55b23e6be5b3065"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsFinished</b> () const</td></tr>
+<tr class="memitem:ab182da62cb1752c1d55b23e6be5b3065" id="r_ab182da62cb1752c1d55b23e6be5b3065"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab182da62cb1752c1d55b23e6be5b3065">IsFinished</a> () const</td></tr>
 <tr class="separator:ab182da62cb1752c1d55b23e6be5b3065"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81caafa6b0f46e63104ba8256b74b961" id="r_a81caafa6b0f46e63104ba8256b74b961"><td class="memItemLeft" align="right" valign="top"><a id="a81caafa6b0f46e63104ba8256b74b961" name="a81caafa6b0f46e63104ba8256b74b961"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Next</b> ()</td></tr>
+<tr class="memitem:a81caafa6b0f46e63104ba8256b74b961" id="r_a81caafa6b0f46e63104ba8256b74b961"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81caafa6b0f46e63104ba8256b74b961">Next</a> ()</td></tr>
 <tr class="separator:a81caafa6b0f46e63104ba8256b74b961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/d8b/colored__trails_8h_source.html#l00133">133</a> of file <a class="el" href="../../d5/d8b/colored__trails_8h_source.html">colored_trails.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a18b1a1c1c9a7aec8a7189faf94c1382c" name="a18b1a1c1c9a7aec8a7189faf94c1382c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b1a1c1c9a7aec8a7189faf94c1382c">&#9670;&#160;</a></span>ChipComboIterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::colored_trails::ChipComboIterator::ChipComboIterator </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>chips</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db2/colored__trails__utils_8cc_source.html#l00098">98</a> of file <a class="el" href="../../d1/db2/colored__trails__utils_8cc_source.html">colored_trails_utils.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>    : chips_(chips), cur_combo_(chips.size(), 0) {</div>
+<div class="line"><span class="lineno">  100</span>  SPIEL_CHECK_GT(std::accumulate(chips_.begin(), chips_.end(), 0), 0);</div>
+<div class="line"><span class="lineno">  101</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab182da62cb1752c1d55b23e6be5b3065" name="ab182da62cb1752c1d55b23e6be5b3065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab182da62cb1752c1d55b23e6be5b3065">&#9670;&#160;</a></span>IsFinished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool open_spiel::colored_trails::ChipComboIterator::IsFinished </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db2/colored__trails__utils_8cc_source.html#l00103">103</a> of file <a class="el" href="../../d1/db2/colored__trails__utils_8cc_source.html">colored_trails_utils.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                         {</div>
+<div class="line"><span class="lineno">  104</span>  <span class="comment">// If every digit is maximized, we are done.</span></div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">return</span> cur_combo_ == chips_;</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a81caafa6b0f46e63104ba8256b74b961" name="a81caafa6b0f46e63104ba8256b74b961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81caafa6b0f46e63104ba8256b74b961">&#9670;&#160;</a></span>Next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; int &gt; open_spiel::colored_trails::ChipComboIterator::Next </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db2/colored__trails__utils_8cc_source.html#l00108">108</a> of file <a class="el" href="../../d1/db2/colored__trails__utils_8cc_source.html">colored_trails_utils.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                                       {</div>
+<div class="line"><span class="lineno">  109</span>  <span class="comment">// Try to increase the left-most non-maximized chip with non-zero chips. Then</span></div>
+<div class="line"><span class="lineno">  110</span>  <span class="comment">// reset every digit to the left of it with nonzero chips.</span></div>
+<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> inc_idx = 0; inc_idx &lt; chips_.size(); ++inc_idx) {</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span> (cur_combo_[inc_idx] &lt; chips_[inc_idx]) {</div>
+<div class="line"><span class="lineno">  113</span>      cur_combo_[inc_idx]++;</div>
+<div class="line"><span class="lineno">  114</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = inc_idx - 1; j &gt;= 0; --j) {</div>
+<div class="line"><span class="lineno">  115</span>        cur_combo_[j] = 0;</div>
+<div class="line"><span class="lineno">  116</span>      }</div>
+<div class="line"><span class="lineno">  117</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+<div class="line"><span class="lineno">  119</span>  }</div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">return</span> cur_combo_;</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/games/colored_trails/<a class="el" href="../../d5/d8b/colored__trails_8h_source.html">colored_trails.h</a></li>
-<li>open_spiel/games/colored_trails/<b>colored_trails_utils.cc</b></li>
+<li>open_spiel/games/colored_trails/<a class="el" href="../../d1/db2/colored__trails__utils_8cc_source.html">colored_trails_utils.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -106,19 +106,81 @@ Collaboration diagram for absl::flags_internal::FlagDefaultSrc:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a36faf961c8b4b46de330debdb202a535" id="r_a36faf961c8b4b46de330debdb202a535"><td class="memItemLeft" align="right" valign="top"><a id="a36faf961c8b4b46de330debdb202a535" name="a36faf961c8b4b46de330debdb202a535"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>FlagDefaultSrc</b> (FlagDfltGenFunc gen_func_arg)</td></tr>
+<tr class="memitem:a36faf961c8b4b46de330debdb202a535" id="r_a36faf961c8b4b46de330debdb202a535"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36faf961c8b4b46de330debdb202a535">FlagDefaultSrc</a> (FlagDfltGenFunc gen_func_arg)</td></tr>
 <tr class="separator:a36faf961c8b4b46de330debdb202a535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2a9d03d00baabf18301261dfc24e144c" id="r_a2a9d03d00baabf18301261dfc24e144c"><td class="memItemLeft" align="right" valign="top"><a id="a2a9d03d00baabf18301261dfc24e144c" name="a2a9d03d00baabf18301261dfc24e144c"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>dynamic_value</b></td></tr>
+<tr class="memitem:a2a9d03d00baabf18301261dfc24e144c" id="r_a2a9d03d00baabf18301261dfc24e144c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a9d03d00baabf18301261dfc24e144c">dynamic_value</a></td></tr>
 <tr class="separator:a2a9d03d00baabf18301261dfc24e144c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9b594892ff7ec95aebdccb49a5abd36" id="r_ad9b594892ff7ec95aebdccb49a5abd36"><td class="memItemLeft" align="right" valign="top"><a id="ad9b594892ff7ec95aebdccb49a5abd36" name="ad9b594892ff7ec95aebdccb49a5abd36"></a>
-FlagDfltGenFunc&#160;</td><td class="memItemRight" valign="bottom"><b>gen_func</b></td></tr>
+<tr class="memitem:ad9b594892ff7ec95aebdccb49a5abd36" id="r_ad9b594892ff7ec95aebdccb49a5abd36"><td class="memItemLeft" align="right" valign="top">FlagDfltGenFunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9b594892ff7ec95aebdccb49a5abd36">gen_func</a></td></tr>
 <tr class="separator:ad9b594892ff7ec95aebdccb49a5abd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00251">251</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a36faf961c8b4b46de330debdb202a535" name="a36faf961c8b4b46de330debdb202a535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36faf961c8b4b46de330debdb202a535">&#9670;&#160;</a></span>FlagDefaultSrc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::flags_internal::FlagDefaultSrc::FlagDefaultSrc </td>
+          <td>(</td>
+          <td class="paramtype">FlagDfltGenFunc</td>          <td class="paramname"><span class="paramname"><em>gen_func_arg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00252">252</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  253</span>      : gen_func(gen_func_arg) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2a9d03d00baabf18301261dfc24e144c" name="a2a9d03d00baabf18301261dfc24e144c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a9d03d00baabf18301261dfc24e144c">&#9670;&#160;</a></span>dynamic_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* absl::flags_internal::FlagDefaultSrc::dynamic_value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00261">261</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+
+</div>
+</div>
+<a id="ad9b594892ff7ec95aebdccb49a5abd36" name="ad9b594892ff7ec95aebdccb49a5abd36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b594892ff7ec95aebdccb49a5abd36">&#9670;&#160;</a></span>gen_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FlagDfltGenFunc absl::flags_internal::FlagDefaultSrc::gen_func</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00262">262</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this union was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/flags/internal/<a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a></li>
 </ul>

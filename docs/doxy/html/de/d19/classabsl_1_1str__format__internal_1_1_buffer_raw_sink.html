@@ -105,19 +105,107 @@ Collaboration diagram for absl::str_format_internal::BufferRawSink:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a38b96ac33d0943cbd2d5ce1bae9ff07c" id="r_a38b96ac33d0943cbd2d5ce1bae9ff07c"><td class="memItemLeft" align="right" valign="top"><a id="a38b96ac33d0943cbd2d5ce1bae9ff07c" name="a38b96ac33d0943cbd2d5ce1bae9ff07c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BufferRawSink</b> (char *buffer, size_t size)</td></tr>
+<tr class="memitem:a38b96ac33d0943cbd2d5ce1bae9ff07c" id="r_a38b96ac33d0943cbd2d5ce1bae9ff07c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38b96ac33d0943cbd2d5ce1bae9ff07c">BufferRawSink</a> (char *buffer, size_t size)</td></tr>
 <tr class="separator:a38b96ac33d0943cbd2d5ce1bae9ff07c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29b487aa103762c358be8f4049400975" id="r_a29b487aa103762c358be8f4049400975"><td class="memItemLeft" align="right" valign="top"><a id="a29b487aa103762c358be8f4049400975" name="a29b487aa103762c358be8f4049400975"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>total_written</b> () const</td></tr>
+<tr class="memitem:a29b487aa103762c358be8f4049400975" id="r_a29b487aa103762c358be8f4049400975"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29b487aa103762c358be8f4049400975">total_written</a> () const</td></tr>
 <tr class="separator:a29b487aa103762c358be8f4049400975"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1fa6fed2755c7f364f9ea75d9e296ac" id="r_ae1fa6fed2755c7f364f9ea75d9e296ac"><td class="memItemLeft" align="right" valign="top"><a id="ae1fa6fed2755c7f364f9ea75d9e296ac" name="ae1fa6fed2755c7f364f9ea75d9e296ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">string_view</a> v)</td></tr>
+<tr class="memitem:ae1fa6fed2755c7f364f9ea75d9e296ac" id="r_ae1fa6fed2755c7f364f9ea75d9e296ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1fa6fed2755c7f364f9ea75d9e296ac">Write</a> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">string_view</a> v)</td></tr>
 <tr class="separator:ae1fa6fed2755c7f364f9ea75d9e296ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/d30/output_8h_source.html#l00039">39</a> of file <a class="el" href="../../d8/d30/output_8h_source.html">output.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a38b96ac33d0943cbd2d5ce1bae9ff07c" name="a38b96ac33d0943cbd2d5ce1bae9ff07c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b96ac33d0943cbd2d5ce1bae9ff07c">&#9670;&#160;</a></span>BufferRawSink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::str_format_internal::BufferRawSink::BufferRawSink </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d30/output_8h_source.html#l00041">41</a> of file <a class="el" href="../../d8/d30/output_8h_source.html">output.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>: buffer_(buffer), size_(size) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a29b487aa103762c358be8f4049400975" name="a29b487aa103762c358be8f4049400975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b487aa103762c358be8f4049400975">&#9670;&#160;</a></span>total_written()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t absl::str_format_internal::BufferRawSink::total_written </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d30/output_8h_source.html#l00043">43</a> of file <a class="el" href="../../d8/d30/output_8h_source.html">output.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{ <span class="keywordflow">return</span> total_written_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae1fa6fed2755c7f364f9ea75d9e296ac" name="ae1fa6fed2755c7f364f9ea75d9e296ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1fa6fed2755c7f364f9ea75d9e296ac">&#9670;&#160;</a></span>Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::str_format_internal::BufferRawSink::Write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">string_view</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d7a/output_8cc_source.html#l00034">34</a> of file <a class="el" href="../../d4/d7a/output_8cc_source.html">output.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>                                       {</div>
+<div class="line"><span class="lineno">   35</span>  <span class="keywordtype">size_t</span> to_write = std::min(v.size(), size_);</div>
+<div class="line"><span class="lineno">   36</span>  std::memcpy(buffer_, v.data(), to_write);</div>
+<div class="line"><span class="lineno">   37</span>  buffer_ += to_write;</div>
+<div class="line"><span class="lineno">   38</span>  size_ -= to_write;</div>
+<div class="line"><span class="lineno">   39</span>  total_written_ += v.size();</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/internal/str_format/<a class="el" href="../../d8/d30/output_8h_source.html">output.h</a></li>
-<li>open_spiel/abseil-cpp/absl/strings/internal/str_format/<b>output.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/strings/internal/str_format/<a class="el" href="../../d4/d7a/output_8cc_source.html">output.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

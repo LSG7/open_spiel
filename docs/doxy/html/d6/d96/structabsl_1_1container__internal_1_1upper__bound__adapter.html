@@ -105,14 +105,87 @@ Collaboration diagram for absl::container_internal::upper_bound_adapter&lt; Comp
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63cb639320db132f9f3229406e492b1b" id="r_a63cb639320db132f9f3229406e492b1b"><td class="memItemLeft" align="right" valign="top"><a id="a63cb639320db132f9f3229406e492b1b" name="a63cb639320db132f9f3229406e492b1b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>upper_bound_adapter</b> (const Compare &amp;c)</td></tr>
+<tr class="memitem:a63cb639320db132f9f3229406e492b1b" id="r_a63cb639320db132f9f3229406e492b1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63cb639320db132f9f3229406e492b1b">upper_bound_adapter</a> (const Compare &amp;c)</td></tr>
 <tr class="separator:a63cb639320db132f9f3229406e492b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9824bd6cdfcfbcd310f9b71117fefda7" id="r_a9824bd6cdfcfbcd310f9b71117fefda7"><td class="memTemplParams" colspan="2"><a id="a9824bd6cdfcfbcd310f9b71117fefda7" name="a9824bd6cdfcfbcd310f9b71117fefda7"></a>
-template&lt;typename K1 , typename K2 &gt; </td></tr>
-<tr class="memitem:a9824bd6cdfcfbcd310f9b71117fefda7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const K1 &amp;a, const K2 &amp;b) const</td></tr>
+<tr class="memitem:a9824bd6cdfcfbcd310f9b71117fefda7" id="r_a9824bd6cdfcfbcd310f9b71117fefda7"><td class="memTemplParams" colspan="2">template&lt;typename K1 , typename K2 &gt; </td></tr>
+<tr class="memitem:a9824bd6cdfcfbcd310f9b71117fefda7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9824bd6cdfcfbcd310f9b71117fefda7">operator()</a> (const K1 &amp;a, const K2 &amp;b) const</td></tr>
 <tr class="separator:a9824bd6cdfcfbcd310f9b71117fefda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Compare&gt;<br />
+struct absl::container_internal::upper_bound_adapter&lt; Compare &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00449">449</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a63cb639320db132f9f3229406e492b1b" name="a63cb639320db132f9f3229406e492b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63cb639320db132f9f3229406e492b1b">&#9670;&#160;</a></span>upper_bound_adapter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Compare &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d96/structabsl_1_1container__internal_1_1upper__bound__adapter.html">absl::container_internal::upper_bound_adapter</a>&lt; Compare &gt;::upper_bound_adapter </td>
+          <td>(</td>
+          <td class="paramtype">const Compare &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00450">450</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  450</span>: comp(c) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9824bd6cdfcfbcd310f9b71117fefda7" name="a9824bd6cdfcfbcd310f9b71117fefda7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9824bd6cdfcfbcd310f9b71117fefda7">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Compare &gt; </div>
+<div class="memtemplate">
+template&lt;typename K1 , typename K2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d6/d96/structabsl_1_1container__internal_1_1upper__bound__adapter.html">absl::container_internal::upper_bound_adapter</a>&lt; Compare &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const K1 &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const K2 &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00452">452</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  452</span>                                                  {</div>
+<div class="line"><span class="lineno">  453</span>    <span class="comment">// Returns true when a is not greater than b.</span></div>
+<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">return</span> !compare_internal::compare_result_as_less_than(comp(b, a));</div>
+<div class="line"><span class="lineno">  455</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a></li>
 </ul>

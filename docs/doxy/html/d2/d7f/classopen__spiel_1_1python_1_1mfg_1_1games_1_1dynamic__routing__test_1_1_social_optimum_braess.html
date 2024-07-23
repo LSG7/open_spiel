@@ -130,14 +130,15 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy')"><img src="../../closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html">open_spiel.python.policy.Policy</a></td></tr>
-<tr class="memitem:ae972849a1b0e68c8201c45dd6d27f1bd inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy" id="r_ae972849a1b0e68c8201c45dd6d27f1bd"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>game</b></td></tr>
+<tr class="memitem:ae972849a1b0e68c8201c45dd6d27f1bd inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy" id="r_ae972849a1b0e68c8201c45dd6d27f1bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html#ae972849a1b0e68c8201c45dd6d27f1bd">game</a></td></tr>
 <tr class="separator:ae972849a1b0e68c8201c45dd6d27f1bd inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a5df64ce79c1957078539d1ae40a44 inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy" id="r_ab8a5df64ce79c1957078539d1ae40a44"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>player_ids</b></td></tr>
+<tr class="memitem:ab8a5df64ce79c1957078539d1ae40a44 inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy" id="r_ab8a5df64ce79c1957078539d1ae40a44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html#ab8a5df64ce79c1957078539d1ae40a44">player_ids</a></td></tr>
 <tr class="separator:ab8a5df64ce79c1957078539d1ae40a44 inherit pub_attribs_classopen__spiel_1_1python_1_1policy_1_1_policy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html#l00039">39</a> of file <a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html">dynamic_routing_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a854229ba4b8cd394f560e97e019c9f7b" name="a854229ba4b8cd394f560e97e019c9f7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a854229ba4b8cd394f560e97e019c9f7b">&#9670;&#160;</a></span>action_probabilities()</h2>
 
@@ -184,6 +185,24 @@ Returns:
   supplied state.
 </pre> 
 <p>Reimplemented from <a class="el" href="../../de/dec/classopen__spiel_1_1python_1_1policy_1_1_policy.html#a061fd4bbafb4f18987d93bdbc6a0889b">open_spiel.python.policy.Policy</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html#l00041">41</a> of file <a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html">dynamic_routing_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>  <span class="keyword">def </span>action_probabilities(self, state, player_id=None):</div>
+<div class="line"><span class="lineno">   42</span>    legal_actions = state.legal_actions()</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> legal_actions:</div>
+<div class="line"><span class="lineno">   44</span>      <span class="keywordflow">return</span> {dynamic_routing_utils.NO_POSSIBLE_ACTION: 1.0}</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">elif</span> len(legal_actions) == 1:</div>
+<div class="line"><span class="lineno">   46</span>      <span class="keywordflow">return</span> {legal_actions[0]: 1.0}</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   48</span>      <span class="keywordflow">if</span> legal_actions[0] == 1:</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> {1: 0.5, 2: 0.5}</div>
+<div class="line"><span class="lineno">   50</span>      <span class="keywordflow">elif</span> legal_actions[0] == 3:</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">return</span> {4: 1.0}</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">raise</span> ValueError(f<span class="stringliteral">&quot;{legal_actions} is not correct.&quot;</span>)</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d5/d64/policy_8py_source.html#l00145">open_spiel.python.policy.Policy.__call__()</a>, and <a class="el" href="../../d5/d64/policy_8py_source.html#l00158">open_spiel.python.policy.Policy.to_tabular()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -200,7 +219,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/games/<b>dynamic_routing_test.py</b></li>
+<li>open_spiel/python/mfg/games/<a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html">dynamic_routing_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

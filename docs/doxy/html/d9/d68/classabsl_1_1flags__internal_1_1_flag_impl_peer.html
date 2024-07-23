@@ -105,19 +105,120 @@ Collaboration diagram for absl::flags_internal::FlagImplPeer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c1ff5415415156dae3faaaa9be9b48f" id="r_a4c1ff5415415156dae3faaaa9be9b48f"><td class="memTemplParams" colspan="2"><a id="a4c1ff5415415156dae3faaaa9be9b48f" name="a4c1ff5415415156dae3faaaa9be9b48f"></a>
-template&lt;typename T , typename FlagType &gt; </td></tr>
-<tr class="memitem:a4c1ff5415415156dae3faaaa9be9b48f"><td class="memTemplItemLeft" align="right" valign="top">static T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>InvokeGet</b> (const FlagType &amp;flag)</td></tr>
+<tr class="memitem:a4c1ff5415415156dae3faaaa9be9b48f" id="r_a4c1ff5415415156dae3faaaa9be9b48f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename FlagType &gt; </td></tr>
+<tr class="memitem:a4c1ff5415415156dae3faaaa9be9b48f"><td class="memTemplItemLeft" align="right" valign="top">static T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4c1ff5415415156dae3faaaa9be9b48f">InvokeGet</a> (const FlagType &amp;flag)</td></tr>
 <tr class="separator:a4c1ff5415415156dae3faaaa9be9b48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979eb1ae44da76ee542c40482337a2b5" id="r_a979eb1ae44da76ee542c40482337a2b5"><td class="memTemplParams" colspan="2"><a id="a979eb1ae44da76ee542c40482337a2b5" name="a979eb1ae44da76ee542c40482337a2b5"></a>
-template&lt;typename FlagType , typename T &gt; </td></tr>
-<tr class="memitem:a979eb1ae44da76ee542c40482337a2b5"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>InvokeSet</b> (FlagType &amp;flag, const T &amp;v)</td></tr>
+<tr class="memitem:a979eb1ae44da76ee542c40482337a2b5" id="r_a979eb1ae44da76ee542c40482337a2b5"><td class="memTemplParams" colspan="2">template&lt;typename FlagType , typename T &gt; </td></tr>
+<tr class="memitem:a979eb1ae44da76ee542c40482337a2b5"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a979eb1ae44da76ee542c40482337a2b5">InvokeSet</a> (FlagType &amp;flag, const T &amp;v)</td></tr>
 <tr class="separator:a979eb1ae44da76ee542c40482337a2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf369de45368ada2eca00129c7e205e1" id="r_aaf369de45368ada2eca00129c7e205e1"><td class="memTemplParams" colspan="2"><a id="aaf369de45368ada2eca00129c7e205e1" name="aaf369de45368ada2eca00129c7e205e1"></a>
-template&lt;typename FlagType &gt; </td></tr>
-<tr class="memitem:aaf369de45368ada2eca00129c7e205e1"><td class="memTemplItemLeft" align="right" valign="top">static const <a class="el" href="../../dd/de1/classabsl_1_1_command_line_flag.html">CommandLineFlag</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>InvokeReflect</b> (const FlagType &amp;f)</td></tr>
+<tr class="memitem:aaf369de45368ada2eca00129c7e205e1" id="r_aaf369de45368ada2eca00129c7e205e1"><td class="memTemplParams" colspan="2">template&lt;typename FlagType &gt; </td></tr>
+<tr class="memitem:aaf369de45368ada2eca00129c7e205e1"><td class="memTemplItemLeft" align="right" valign="top">static const <a class="el" href="../../dd/de1/classabsl_1_1_command_line_flag.html">CommandLineFlag</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaf369de45368ada2eca00129c7e205e1">InvokeReflect</a> (const FlagType &amp;f)</td></tr>
 <tr class="separator:aaf369de45368ada2eca00129c7e205e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00698">698</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4c1ff5415415156dae3faaaa9be9b48f" name="a4c1ff5415415156dae3faaaa9be9b48f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1ff5415415156dae3faaaa9be9b48f">&#9670;&#160;</a></span>InvokeGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename FlagType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T absl::flags_internal::FlagImplPeer::InvokeGet </td>
+          <td>(</td>
+          <td class="paramtype">const FlagType &amp;</td>          <td class="paramname"><span class="paramname"><em>flag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00701">701</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  701</span>                                           {</div>
+<div class="line"><span class="lineno">  702</span>    <span class="keywordflow">return</span> flag.Get();</div>
+<div class="line"><span class="lineno">  703</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaf369de45368ada2eca00129c7e205e1" name="aaf369de45368ada2eca00129c7e205e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf369de45368ada2eca00129c7e205e1">&#9670;&#160;</a></span>InvokeReflect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FlagType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="../../dd/de1/classabsl_1_1_command_line_flag.html">CommandLineFlag</a> &amp; absl::flags_internal::FlagImplPeer::InvokeReflect </td>
+          <td>(</td>
+          <td class="paramtype">const FlagType &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00709">709</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  709</span>                                                                 {</div>
+<div class="line"><span class="lineno">  710</span>    <span class="keywordflow">return</span> f.Reflect();</div>
+<div class="line"><span class="lineno">  711</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a979eb1ae44da76ee542c40482337a2b5" name="a979eb1ae44da76ee542c40482337a2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979eb1ae44da76ee542c40482337a2b5">&#9670;&#160;</a></span>InvokeSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FlagType , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void absl::flags_internal::FlagImplPeer::InvokeSet </td>
+          <td>(</td>
+          <td class="paramtype">FlagType &amp;</td>          <td class="paramname"><span class="paramname"><em>flag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00705">705</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  705</span>                                                    {</div>
+<div class="line"><span class="lineno">  706</span>    flag.Set(v);</div>
+<div class="line"><span class="lineno">  707</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/flags/internal/<a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a></li>
 </ul>

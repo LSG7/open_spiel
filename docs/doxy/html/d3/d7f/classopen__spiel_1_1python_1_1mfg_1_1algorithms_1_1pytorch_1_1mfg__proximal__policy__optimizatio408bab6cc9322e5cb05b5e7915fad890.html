@@ -121,7 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae631b4c20dda7198ce5c6bbde6f080d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Test the policy.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">Test the policy.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d81/mfg__proximal__policy__optimization__pytorch__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d5/d81/mfg__proximal__policy__optimization__pytorch__test_8py_source.html">mfg_proximal_policy_optimization_pytorch_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae631b4c20dda7198ce5c6bbde6f080d8" name="ae631b4c20dda7198ce5c6bbde6f080d8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae631b4c20dda7198ce5c6bbde6f080d8">&#9670;&#160;</a></span>test_train()</h2>
 
@@ -146,10 +148,82 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks that the training works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d81/mfg__proximal__policy__optimization__pytorch__test_8py_source.html#l00040">40</a> of file <a class="el" href="../../d5/d81/mfg__proximal__policy__optimization__pytorch__test_8py_source.html">mfg_proximal_policy_optimization_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>  <span class="keyword">def </span>test_train(self, name, setting):</div>
+<div class="line"><span class="lineno">   41</span>    <span class="stringliteral">&quot;&quot;&quot;Checks that the training works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   42</span>    device = torch.device(<span class="stringliteral">&quot;cpu&quot;</span>)</div>
+<div class="line"><span class="lineno">   43</span>    args = {</div>
+<div class="line"><span class="lineno">   44</span>        <span class="stringliteral">&quot;num_episodes&quot;</span>: 5,</div>
+<div class="line"><span class="lineno">   45</span>        <span class="stringliteral">&quot;gamma&quot;</span>: 0.9,</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="line"><span class="lineno">   47</span>    game = factory.create_game_with_setting(name, setting)</div>
+<div class="line"><span class="lineno">   48</span>    uniform_policy = policy_std.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   49</span>    mfg_dist = distribution.DistributionPolicy(game, uniform_policy)</div>
+<div class="line"><span class="lineno">   50</span>    env = rl_environment.Environment(</div>
+<div class="line"><span class="lineno">   51</span>        game, mfg_distribution=mfg_dist, mfg_population=0</div>
+<div class="line"><span class="lineno">   52</span>    )</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="comment"># Set the environment seed for reproduciblility</span></div>
+<div class="line"><span class="lineno">   55</span>    env.seed(0)</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment"># Creat the agent and population policies</span></div>
+<div class="line"><span class="lineno">   58</span>    info_state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">   59</span>    num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    agent = mfg_ppo_agent(info_state_size, num_actions).to(device)</div>
+<div class="line"><span class="lineno">   62</span>    ppo_policy = mfg_ppo_policy(game, agent, <span class="keywordtype">None</span>, device)</div>
+<div class="line"><span class="lineno">   63</span>    pop_agent = mfg_ppo_agent(info_state_size, num_actions).to(device)</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    optimizer_actor = optim.Adam(agent.actor.parameters(), lr=1e-3, eps=1e-5)</div>
+<div class="line"><span class="lineno">   66</span>    optimizer_critic = optim.Adam(agent.critic.parameters(), lr=1e-3, eps=1e-5)</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment"># calculate the exploitability</span></div>
+<div class="line"><span class="lineno">   69</span>    m = calculate_explotability(game, mfg_dist, ppo_policy)</div>
+<div class="line"><span class="lineno">   70</span>    init_nashc = m[<span class="stringliteral">&quot;nash_conv_ppo&quot;</span>]</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    steps = args[<span class="stringliteral">&quot;num_episodes&quot;</span>] * env.max_game_length</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(3):</div>
+<div class="line"><span class="lineno">   75</span>      <span class="comment"># collect rollout data</span></div>
+<div class="line"><span class="lineno">   76</span>      history = rollout(</div>
+<div class="line"><span class="lineno">   77</span>          env, pop_agent, agent, args[<span class="stringliteral">&quot;num_episodes&quot;</span>], steps, device</div>
+<div class="line"><span class="lineno">   78</span>      )</div>
+<div class="line"><span class="lineno">   79</span>      <span class="comment"># Calculate the advantage function</span></div>
+<div class="line"><span class="lineno">   80</span>      adv, returns = calculate_advantage(</div>
+<div class="line"><span class="lineno">   81</span>          args[<span class="stringliteral">&quot;gamma&quot;</span>],</div>
+<div class="line"><span class="lineno">   82</span>          <span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">   83</span>          history[<span class="stringliteral">&quot;rewards&quot;</span>],</div>
+<div class="line"><span class="lineno">   84</span>          history[<span class="stringliteral">&quot;values&quot;</span>],</div>
+<div class="line"><span class="lineno">   85</span>          history[<span class="stringliteral">&quot;dones&quot;</span>],</div>
+<div class="line"><span class="lineno">   86</span>          device,</div>
+<div class="line"><span class="lineno">   87</span>      )</div>
+<div class="line"><span class="lineno">   88</span>      history[<span class="stringliteral">&quot;advantages&quot;</span>] = adv</div>
+<div class="line"><span class="lineno">   89</span>      history[<span class="stringliteral">&quot;returns&quot;</span>] = returns</div>
+<div class="line"><span class="lineno">   90</span>      <span class="comment"># Update the learned policy and report loss for debugging</span></div>
+<div class="line"><span class="lineno">   91</span>      learn(history, optimizer_actor, optimizer_critic, agent)</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment"># Update the iteration policy with the new policy</span></div>
+<div class="line"><span class="lineno">   94</span>    pop_agent.load_state_dict(agent.state_dict())</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    <span class="comment"># Update the distribution</span></div>
+<div class="line"><span class="lineno">   97</span>    distrib = distribution.DistributionPolicy(game, ppo_policy)</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    <span class="comment"># calculate the exploitability</span></div>
+<div class="line"><span class="lineno">  100</span>    m = calculate_explotability(game, distrib, ppo_policy)</div>
+<div class="line"><span class="lineno">  101</span>    nashc = m[<span class="stringliteral">&quot;nash_conv_ppo&quot;</span>]</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>    <span class="comment"># update the environment distribution</span></div>
+<div class="line"><span class="lineno">  104</span>    env.update_mfg_distribution(distrib)</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>    <span class="comment"># Test convergence</span></div>
+<div class="line"><span class="lineno">  107</span>    self.assertLessEqual(nashc, 2 * init_nashc)</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/pytorch/<b>mfg_proximal_policy_optimization_pytorch_test.py</b></li>
+<li>open_spiel/python/mfg/algorithms/pytorch/<a class="el" href="../../d5/d81/mfg__proximal__policy__optimization__pytorch__test_8py_source.html">mfg_proximal_policy_optimization_pytorch_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

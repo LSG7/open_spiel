@@ -105,8 +105,7 @@ Collaboration diagram for absl::base_internal::SpinLockHolder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa9d8dcec63b7dcbb319f40d4df4a1012" id="r_aa9d8dcec63b7dcbb319f40d4df4a1012"><td class="memItemLeft" align="right" valign="top"><a id="aa9d8dcec63b7dcbb319f40d4df4a1012" name="aa9d8dcec63b7dcbb319f40d4df4a1012"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SpinLockHolder</b> (<a class="el" href="../../dc/d7d/classabsl_1_1base__internal_1_1_spin_lock.html">SpinLock</a> *l) ABSL_EXCLUSIVE_LOCK_FUNCTION(l)</td></tr>
+<tr class="memitem:aa9d8dcec63b7dcbb319f40d4df4a1012" id="r_aa9d8dcec63b7dcbb319f40d4df4a1012"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9d8dcec63b7dcbb319f40d4df4a1012">SpinLockHolder</a> (<a class="el" href="../../dc/d7d/classabsl_1_1base__internal_1_1_spin_lock.html">SpinLock</a> *l) ABSL_EXCLUSIVE_LOCK_FUNCTION(l)</td></tr>
 <tr class="separator:aa9d8dcec63b7dcbb319f40d4df4a1012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ae444f973e8a7bc62dbf0e7eff0acc1" id="r_a1ae444f973e8a7bc62dbf0e7eff0acc1"><td class="memItemLeft" align="right" valign="top"><a id="a1ae444f973e8a7bc62dbf0e7eff0acc1" name="a1ae444f973e8a7bc62dbf0e7eff0acc1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SpinLockHolder</b> (const <a class="el" href="../../d4/dee/classabsl_1_1base__internal_1_1_spin_lock_holder.html">SpinLockHolder</a> &amp;)=delete</td></tr>
@@ -115,6 +114,68 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../d4/dee/classabsl_1_1base__internal_1_1_spin_lock_holder.html">SpinLockHolder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d4/dee/classabsl_1_1base__internal_1_1_spin_lock_holder.html">SpinLockHolder</a> &amp;)=delete</td></tr>
 <tr class="separator:aa69a5dc2092bfec4663d26eb533bb79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/d63/spinlock_8h_source.html#l00192">192</a> of file <a class="el" href="../../df/d63/spinlock_8h_source.html">spinlock.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa9d8dcec63b7dcbb319f40d4df4a1012" name="aa9d8dcec63b7dcbb319f40d4df4a1012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d8dcec63b7dcbb319f40d4df4a1012">&#9670;&#160;</a></span>SpinLockHolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::base_internal::SpinLockHolder::SpinLockHolder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/d7d/classabsl_1_1base__internal_1_1_spin_lock.html">SpinLock</a> *</td>          <td class="paramname"><span class="paramname"><em>l</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d63/spinlock_8h_source.html#l00194">194</a> of file <a class="el" href="../../df/d63/spinlock_8h_source.html">spinlock.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>      : lock_(l) {</div>
+<div class="line"><span class="lineno">  196</span>    l-&gt;Lock();</div>
+<div class="line"><span class="lineno">  197</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a28441ae19f829711c8a8672600bbf606" name="a28441ae19f829711c8a8672600bbf606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28441ae19f829711c8a8672600bbf606">&#9670;&#160;</a></span>~SpinLockHolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::base_internal::SpinLockHolder::~SpinLockHolder </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d63/spinlock_8h_source.html#l00198">198</a> of file <a class="el" href="../../df/d63/spinlock_8h_source.html">spinlock.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>{ lock_-&gt;Unlock(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../df/d63/spinlock_8h_source.html">spinlock.h</a></li>
 </ul>

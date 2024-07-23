@@ -118,23 +118,55 @@ Collaboration diagram for open_spiel.python.pytorch.losses.rl_losses.BatchA2CLos
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95f61d9f5672e212103f735148896bf3" id="r_a95f61d9f5672e212103f735148896bf3"><td class="memItemLeft" align="right" valign="top"><a id="a95f61d9f5672e212103f735148896bf3" name="a95f61d9f5672e212103f735148896bf3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, entropy_cost=None, name=&quot;batch_a2c_loss&quot;)</td></tr>
+<tr class="memitem:a95f61d9f5672e212103f735148896bf3" id="r_a95f61d9f5672e212103f735148896bf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f61d9f5672e212103f735148896bf3">__init__</a> (self, entropy_cost=None, name=&quot;batch_a2c_loss&quot;)</td></tr>
 <tr class="separator:a95f61d9f5672e212103f735148896bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbdf83f6ef36545f5d259f90f26092e0" id="r_afbdf83f6ef36545f5d259f90f26092e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbdf83f6ef36545f5d259f90f26092e0">loss</a> (self, policy_logits, baseline, actions, returns)</td></tr>
 <tr class="separator:afbdf83f6ef36545f5d259f90f26092e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ad76f53a5bc6b285f5fb8db9e3f8ced48" id="r_ad76f53a5bc6b285f5fb8db9e3f8ced48"><td class="memItemLeft" align="right" valign="top"><a id="ad76f53a5bc6b285f5fb8db9e3f8ced48" name="ad76f53a5bc6b285f5fb8db9e3f8ced48"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_entropy_cost</b></td></tr>
+<tr class="memitem:ad76f53a5bc6b285f5fb8db9e3f8ced48" id="r_ad76f53a5bc6b285f5fb8db9e3f8ced48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad76f53a5bc6b285f5fb8db9e3f8ced48">_entropy_cost</a></td></tr>
 <tr class="separator:ad76f53a5bc6b285f5fb8db9e3f8ced48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc1fae16cc4846f24e7a64565934dfca" id="r_adc1fae16cc4846f24e7a64565934dfca"><td class="memItemLeft" align="right" valign="top"><a id="adc1fae16cc4846f24e7a64565934dfca" name="adc1fae16cc4846f24e7a64565934dfca"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_name</b></td></tr>
+<tr class="memitem:adc1fae16cc4846f24e7a64565934dfca" id="r_adc1fae16cc4846f24e7a64565934dfca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc1fae16cc4846f24e7a64565934dfca">_name</a></td></tr>
 <tr class="separator:adc1fae16cc4846f24e7a64565934dfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Defines the batch A2C loss op.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">Defines the batch A2C loss op.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00241">241</a> of file <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html">rl_losses.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a95f61d9f5672e212103f735148896bf3" name="a95f61d9f5672e212103f735148896bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f61d9f5672e212103f735148896bf3">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.losses.rl_losses.BatchA2CLoss.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>entropy_cost</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;batch_a2c_loss&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00244">244</a> of file <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html">rl_losses.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>  <span class="keyword">def </span>__init__(self, entropy_cost=None, name=&quot;batch_a2c_loss&quot;):</div>
+<div class="line"><span class="lineno">  245</span>    self._entropy_cost = entropy_cost</div>
+<div class="line"><span class="lineno">  246</span>    self._name = name</div>
+<div class="line"><span class="lineno">  247</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="afbdf83f6ef36545f5d259f90f26092e0" name="afbdf83f6ef36545f5d259f90f26092e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbdf83f6ef36545f5d259f90f26092e0">&#9670;&#160;</a></span>loss()</h2>
 
@@ -178,7 +210,37 @@ Args:
 
 Returns:
   loss: A 0-D `float` tensor corresponding the loss.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00248">248</a> of file <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html">rl_losses.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>  <span class="keyword">def </span>loss(self, policy_logits, baseline, actions, returns):</div>
+<div class="line"><span class="lineno">  249</span>    <span class="stringliteral">&quot;&quot;&quot;Constructs a PyTorch Crierion that computes the A2C loss for batches.</span></div>
+<div class="line"><span class="lineno">  250</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  251</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  252</span><span class="stringliteral">      policy_logits: `B x A` tensor corresponding to policy logits.</span></div>
+<div class="line"><span class="lineno">  253</span><span class="stringliteral">      baseline: `B` tensor corresponding to baseline (V-values).</span></div>
+<div class="line"><span class="lineno">  254</span><span class="stringliteral">      actions: `B` tensor corresponding to actions taken.</span></div>
+<div class="line"><span class="lineno">  255</span><span class="stringliteral">      returns: `B` tensor corresponds to returns accumulated.</span></div>
+<div class="line"><span class="lineno">  256</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  257</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  258</span><span class="stringliteral">      loss: A 0-D `float` tensor corresponding the loss.</span></div>
+<div class="line"><span class="lineno">  259</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  260</span>    _assert_rank_and_shape_compatibility([policy_logits], 2)</div>
+<div class="line"><span class="lineno">  261</span>    _assert_rank_and_shape_compatibility([baseline, actions, returns], 1)</div>
+<div class="line"><span class="lineno">  262</span>    advantages = returns - baseline</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>    policy_loss = compute_a2c_loss(policy_logits, actions, advantages)</div>
+<div class="line"><span class="lineno">  265</span>    total_loss = torch.mean(policy_loss, dim=0)</div>
+<div class="line"><span class="lineno">  266</span>    <span class="keywordflow">if</span> self._entropy_cost:</div>
+<div class="line"><span class="lineno">  267</span>      policy_entropy = torch.mean(compute_entropy(policy_logits))</div>
+<div class="line"><span class="lineno">  268</span>      entropy_loss = torch.mul(float(self._entropy_cost), policy_entropy)</div>
+<div class="line"><span class="lineno">  269</span>      total_loss = torch.add(total_loss, entropy_loss)</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>    <span class="keywordflow">return</span> total_loss</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/d3a/algorithms_2losses_2rl__losses_8py_source.html#l00221">open_spiel.python.algorithms.losses.rl_losses.BatchA2CLoss._entropy_cost</a>, <a class="el" href="../../dc/d3a/algorithms_2losses_2rl__losses_8py_source.html#l00122">open_spiel.python.algorithms.losses.rl_losses.BatchQPGLoss._entropy_cost</a>, <a class="el" href="../../dc/d3a/algorithms_2losses_2rl__losses_8py_source.html#l00155">open_spiel.python.algorithms.losses.rl_losses.BatchRMLoss._entropy_cost</a>, <a class="el" href="../../dc/d3a/algorithms_2losses_2rl__losses_8py_source.html#l00188">open_spiel.python.algorithms.losses.rl_losses.BatchRPGLoss._entropy_cost</a>, <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00245">open_spiel.python.pytorch.losses.rl_losses.BatchA2CLoss._entropy_cost</a>, <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00151">open_spiel.python.pytorch.losses.rl_losses.BatchNeuRDLoss._entropy_cost</a>, <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00120">open_spiel.python.pytorch.losses.rl_losses.BatchQPGLoss._entropy_cost</a>, <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00183">open_spiel.python.pytorch.losses.rl_losses.BatchRMLoss._entropy_cost</a>, and <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00214">open_spiel.python.pytorch.losses.rl_losses.BatchRPGLoss._entropy_cost</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d27/rnad_8py_source.html#l00734">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.init()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00209">open_spiel.python.coalitional_games.least_core_lagrangian.CoreOptimization.solve()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00353">open_spiel.python.coalitional_games.least_core_lagrangian.CoreOptimizationLogits.solve()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00183">open_spiel.python.coalitional_games.least_core_lagrangian.CoreOptimization.update_step()</a>, and <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00331">open_spiel.python.coalitional_games.least_core_lagrangian.CoreOptimizationLogits.update_step()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/da0/classopen__spiel_1_1python_1_1pytorch_1_1losses_1_1rl__losses_1_1_batch_a2_c_loss_afbdf83f6ef36545f5d259f90f26092e0_icgraph.png" border="0" usemap="#ad2/da0/classopen__spiel_1_1python_1_1pytorch_1_1losses_1_1rl__losses_1_1_batch_a2_c_loss_afbdf83f6ef36545f5d259f90f26092e0_icgraph" alt=""/></div>
@@ -217,8 +279,59 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad76f53a5bc6b285f5fb8db9e3f8ced48" name="ad76f53a5bc6b285f5fb8db9e3f8ced48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76f53a5bc6b285f5fb8db9e3f8ced48">&#9670;&#160;</a></span>_entropy_cost</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.losses.rl_losses.BatchA2CLoss._entropy_cost</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00245">245</a> of file <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html">rl_losses.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d3a/algorithms_2losses_2rl__losses_8py_source.html#l00224">open_spiel.python.algorithms.losses.rl_losses.BatchA2CLoss.loss()</a>, <a class="el" href="../../dc/d3a/algorithms_2losses_2rl__losses_8py_source.html#l00125">open_spiel.python.algorithms.losses.rl_losses.BatchQPGLoss.loss()</a>, <a class="el" href="../../dc/d3a/algorithms_2losses_2rl__losses_8py_source.html#l00158">open_spiel.python.algorithms.losses.rl_losses.BatchRMLoss.loss()</a>, <a class="el" href="../../dc/d3a/algorithms_2losses_2rl__losses_8py_source.html#l00191">open_spiel.python.algorithms.losses.rl_losses.BatchRPGLoss.loss()</a>, <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00248">open_spiel.python.pytorch.losses.rl_losses.BatchA2CLoss.loss()</a>, <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00154">open_spiel.python.pytorch.losses.rl_losses.BatchNeuRDLoss.loss()</a>, <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00123">open_spiel.python.pytorch.losses.rl_losses.BatchQPGLoss.loss()</a>, <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00186">open_spiel.python.pytorch.losses.rl_losses.BatchRMLoss.loss()</a>, and <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00217">open_spiel.python.pytorch.losses.rl_losses.BatchRPGLoss.loss()</a>.</p>
+
+</div>
+</div>
+<a id="adc1fae16cc4846f24e7a64565934dfca" name="adc1fae16cc4846f24e7a64565934dfca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1fae16cc4846f24e7a64565934dfca">&#9670;&#160;</a></span>_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.losses.rl_losses.BatchA2CLoss._name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html#l00246">246</a> of file <a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html">rl_losses.py</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/pytorch/losses/<b>rl_losses.py</b></li>
+<li>open_spiel/python/pytorch/losses/<a class="el" href="../../dc/dfc/pytorch_2losses_2rl__losses_8py_source.html">rl_losses.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

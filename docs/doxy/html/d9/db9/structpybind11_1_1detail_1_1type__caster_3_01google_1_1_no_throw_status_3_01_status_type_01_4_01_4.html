@@ -107,25 +107,136 @@ Collaboration diagram for pybind11::detail::type_caster&lt; google::NoThrowStatu
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:adb43414e4052b4b4fce6ed1196234bb1" id="r_adb43414e4052b4b4fce6ed1196234bb1"><td class="memItemLeft" align="right" valign="top"><a id="adb43414e4052b4b4fce6ed1196234bb1" name="adb43414e4052b4b4fce6ed1196234bb1"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>InputType</b> = <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">google::NoThrowStatus</a>&lt;StatusType&gt;</td></tr>
+<tr class="memitem:adb43414e4052b4b4fce6ed1196234bb1" id="r_adb43414e4052b4b4fce6ed1196234bb1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb43414e4052b4b4fce6ed1196234bb1">InputType</a> = <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">google::NoThrowStatus</a>&lt;StatusType&gt;</td></tr>
 <tr class="separator:adb43414e4052b4b4fce6ed1196234bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6a19c670fa8945177cd5cc0035af0e9" id="r_ae6a19c670fa8945177cd5cc0035af0e9"><td class="memItemLeft" align="right" valign="top"><a id="ae6a19c670fa8945177cd5cc0035af0e9" name="ae6a19c670fa8945177cd5cc0035af0e9"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>StatusCaster</b> = make_caster&lt;StatusType&gt;</td></tr>
+<tr class="memitem:ae6a19c670fa8945177cd5cc0035af0e9" id="r_ae6a19c670fa8945177cd5cc0035af0e9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6a19c670fa8945177cd5cc0035af0e9">StatusCaster</a> = make_caster&lt;StatusType&gt;</td></tr>
 <tr class="separator:ae6a19c670fa8945177cd5cc0035af0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aaffb8a0d108fc8eb26f4239c71e285ad" id="r_aaffb8a0d108fc8eb26f4239c71e285ad"><td class="memItemLeft" align="right" valign="top"><a id="aaffb8a0d108fc8eb26f4239c71e285ad" name="aaffb8a0d108fc8eb26f4239c71e285ad"></a>
-static handle&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (const <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">InputType</a> &amp;src, return_value_policy policy, handle parent)</td></tr>
+<tr class="memitem:aaffb8a0d108fc8eb26f4239c71e285ad" id="r_aaffb8a0d108fc8eb26f4239c71e285ad"><td class="memItemLeft" align="right" valign="top">static handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaffb8a0d108fc8eb26f4239c71e285ad">cast</a> (const <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">InputType</a> &amp;src, return_value_policy policy, handle parent)</td></tr>
 <tr class="separator:aaffb8a0d108fc8eb26f4239c71e285ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a942a964a97753744dc22e96f4fdaa35a" id="r_a942a964a97753744dc22e96f4fdaa35a"><td class="memItemLeft" align="right" valign="top"><a id="a942a964a97753744dc22e96f4fdaa35a" name="a942a964a97753744dc22e96f4fdaa35a"></a>
-static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = <a class="el" href="../../d3/d8e/structpybind11_1_1detail_1_1_no_throw_status_type.html">NoThrowStatusType</a>&lt;StatusType&gt;::name</td></tr>
+<tr class="memitem:a942a964a97753744dc22e96f4fdaa35a" id="r_a942a964a97753744dc22e96f4fdaa35a"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a942a964a97753744dc22e96f4fdaa35a">name</a> = <a class="el" href="../../d3/d8e/structpybind11_1_1detail_1_1_no_throw_status_type.html">NoThrowStatusType</a>&lt;StatusType&gt;::name</td></tr>
 <tr class="separator:a942a964a97753744dc22e96f4fdaa35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename StatusType&gt;<br />
+struct pybind11::detail::type_caster&lt; google::NoThrowStatus&lt; StatusType &gt; &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d5/d2c/status__caster_8h_source.html#l00032">32</a> of file <a class="el" href="../../d5/d2c/status__caster_8h_source.html">status_caster.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="adb43414e4052b4b4fce6ed1196234bb1" name="adb43414e4052b4b4fce6ed1196234bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb43414e4052b4b4fce6ed1196234bb1">&#9670;&#160;</a></span>InputType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StatusType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using pybind11::detail::type_caster&lt; <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">google::NoThrowStatus</a>&lt; StatusType &gt; &gt;::InputType = <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">google::NoThrowStatus</a>&lt;StatusType&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d2c/status__caster_8h_source.html#l00033">33</a> of file <a class="el" href="../../d5/d2c/status__caster_8h_source.html">status_caster.h</a>.</p>
+
+</div>
+</div>
+<a id="ae6a19c670fa8945177cd5cc0035af0e9" name="ae6a19c670fa8945177cd5cc0035af0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6a19c670fa8945177cd5cc0035af0e9">&#9670;&#160;</a></span>StatusCaster</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StatusType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using pybind11::detail::type_caster&lt; <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">google::NoThrowStatus</a>&lt; StatusType &gt; &gt;::StatusCaster = make_caster&lt;StatusType&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d2c/status__caster_8h_source.html#l00034">34</a> of file <a class="el" href="../../d5/d2c/status__caster_8h_source.html">status_caster.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaffb8a0d108fc8eb26f4239c71e285ad" name="aaffb8a0d108fc8eb26f4239c71e285ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffb8a0d108fc8eb26f4239c71e285ad">&#9670;&#160;</a></span>cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StatusType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static handle pybind11::detail::type_caster&lt; <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">google::NoThrowStatus</a>&lt; StatusType &gt; &gt;::cast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">InputType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">return_value_policy</td>          <td class="paramname"><span class="paramname"><em>policy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">handle</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d2c/status__caster_8h_source.html#l00038">38</a> of file <a class="el" href="../../d5/d2c/status__caster_8h_source.html">status_caster.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>                                    {</div>
+<div class="line"><span class="lineno">   40</span>    <span class="comment">// pybind11::cast applies a const qualifier, so this takes a const reference</span></div>
+<div class="line"><span class="lineno">   41</span>    <span class="comment">// argument. The qualifiers we care about are in StatusType, and we will</span></div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment">// forward those, but to do so, we must strip the const off the InputType.</span></div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">return</span> StatusCaster::cast(</div>
+<div class="line"><span class="lineno">   44</span>        std::forward&lt;StatusType&gt;(<span class="keyword">const_cast&lt;</span>InputType&amp;<span class="keyword">&gt;</span>(src).status), policy,</div>
+<div class="line"><span class="lineno">   45</span>        parent, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   46</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a942a964a97753744dc22e96f4fdaa35a" name="a942a964a97753744dc22e96f4fdaa35a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a942a964a97753744dc22e96f4fdaa35a">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StatusType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto pybind11::detail::type_caster&lt; <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">google::NoThrowStatus</a>&lt; StatusType &gt; &gt;::name = <a class="el" href="../../d3/d8e/structpybind11_1_1detail_1_1_no_throw_status_type.html">NoThrowStatusType</a>&lt;StatusType&gt;::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d2c/status__caster_8h_source.html#l00035">35</a> of file <a class="el" href="../../d5/d2c/status__caster_8h_source.html">status_caster.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/pybind11_abseil/pybind11_abseil/<a class="el" href="../../d5/d2c/status__caster_8h_source.html">status_caster.h</a></li>
 </ul>

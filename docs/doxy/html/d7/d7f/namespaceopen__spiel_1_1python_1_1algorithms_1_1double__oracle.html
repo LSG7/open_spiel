@@ -129,7 +129,16 @@ McMahan et al. (2003). Planning in the presence of cost functions controlled by
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns the sizes of lists in a list.</pre> <div class="dynheader">
+<pre class="fragment">Returns the sizes of lists in a list.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00030">30</a> of file <a class="el" href="../../d6/d11/double__oracle_8py_source.html">double_oracle.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span><span class="keyword">def </span>lens(lists):</div>
+<div class="line"><span class="lineno">   31</span>  <span class="stringliteral">&quot;&quot;&quot;Returns the sizes of lists in a list.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   32</span>  <span class="keywordflow">return</span> list(map(len, lists))</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00046">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.__init__()</a>, <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00074">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.oracle()</a>, and <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00126">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.solve_yield()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d7f/namespaceopen__spiel_1_1python_1_1algorithms_1_1double__oracle_adbba6eb2823f226e632c84e7c00a5ddf_icgraph.png" border="0" usemap="#ad7/d7f/namespaceopen__spiel_1_1python_1_1algorithms_1_1double__oracle_adbba6eb2823f226e632c84e7c00a5ddf_icgraph" alt=""/></div>
@@ -181,7 +190,19 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Solves the subgame using OpenSpiel's LP solver.</pre> <div class="dynheader">
+<pre class="fragment">Solves the subgame using OpenSpiel's LP solver.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00035">35</a> of file <a class="el" href="../../d6/d11/double__oracle_8py_source.html">double_oracle.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span><span class="keyword">def </span>solve_subgame(subgame_payoffs):</div>
+<div class="line"><span class="lineno">   36</span>  <span class="stringliteral">&quot;&quot;&quot;Solves the subgame using OpenSpiel&#39;s LP solver.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   37</span>  p0_sol, p1_sol, _, _ = lp_solver.solve_zero_sum_matrix_game(</div>
+<div class="line"><span class="lineno">   38</span>      pyspiel.create_matrix_game(*subgame_payoffs))</div>
+<div class="line"><span class="lineno">   39</span>  p0_sol, p1_sol = np.asarray(p0_sol), np.asarray(p1_sol)</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordflow">return</span> [p0_sol / p0_sol.sum(), p1_sol / p1_sol.sum()]</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00126">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.solve_yield()</a>, and <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00108">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.step()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d7f/namespaceopen__spiel_1_1python_1_1algorithms_1_1double__oracle_a9942cf651f5ea9f0d9472c633468c053_icgraph.png" border="0" usemap="#ad7/d7f/namespaceopen__spiel_1_1python_1_1algorithms_1_1double__oracle_a9942cf651f5ea9f0d9472c633468c053_icgraph" alt=""/></div>

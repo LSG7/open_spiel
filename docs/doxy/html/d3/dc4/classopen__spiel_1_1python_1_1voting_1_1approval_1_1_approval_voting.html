@@ -138,12 +138,13 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac96d4b0939935511084586ed3787ada4" id="r_ac96d4b0939935511084586ed3787ada4"><td class="memItemLeft" align="right" valign="top"><a id="ac96d4b0939935511084586ed3787ada4" name="ac96d4b0939935511084586ed3787ada4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_k</b></td></tr>
+<tr class="memitem:ac96d4b0939935511084586ed3787ada4" id="r_ac96d4b0939935511084586ed3787ada4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac96d4b0939935511084586ed3787ada4">_k</a></td></tr>
 <tr class="separator:ac96d4b0939935511084586ed3787ada4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Implements approval voting.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Implements approval voting.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d8/d38/approval_8py_source.html#l00027">27</a> of file <a class="el" href="../../d8/d38/approval_8py_source.html">approval.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3b77f0c427e1c29d2757a7454c0a89bc" name="a3b77f0c427e1c29d2757a7454c0a89bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b77f0c427e1c29d2757a7454c0a89bc">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -173,6 +174,22 @@ Arguments:
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#ae9c1b2370ac17ab398409dbd392bdfbf">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d8/d38/approval_8py_source.html#l00030">30</a> of file <a class="el" href="../../d8/d38/approval_8py_source.html">approval.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  <span class="keyword">def </span>__init__(self, k: int = 1):</div>
+<div class="line"><span class="lineno">   31</span>    <span class="stringliteral">&quot;&quot;&quot;Construct an k-Approval voting scheme.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">    Note: there are no checks on the length of the votes and how they relate to </span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral">    the value of k. So, the user is responsible for appropriately balancing the</span></div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">    lengths of the votes appropriately.</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">    Arguments:</span></div>
+<div class="line"><span class="lineno">   38</span><span class="stringliteral">      k: the number of top positions to count in each vote.</span></div>
+<div class="line"><span class="lineno">   39</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   40</span>    self._k = k</div>
+<div class="line"><span class="lineno">   41</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d8/d38/approval_8py_source.html#l00040">open_spiel.python.voting.approval.ApprovalVoting._k</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -193,6 +210,11 @@ Arguments:
 <pre class="fragment">Returns the name of the voting method.</pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#a4654f9ab5cc59f4092949162d620ca0c">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d8/d38/approval_8py_source.html#l00042">42</a> of file <a class="el" href="../../d8/d38/approval_8py_source.html">approval.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>  <span class="keyword">def </span>name(self) -&gt; str:</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">return</span> f<span class="stringliteral">&quot;approval(k={self._k})&quot;</span></div>
+<div class="line"><span class="lineno">   44</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeea6ef5984929be50f7cfed698f87bcd" name="aeea6ef5984929be50f7cfed698f87bcd"></a>
@@ -222,6 +244,24 @@ Returns:
     a RankOutcome object that can be queried for the results.
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#ad7674ed527518679d786984f7e2e45be">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d38/approval_8py_source.html#l00045">45</a> of file <a class="el" href="../../d8/d38/approval_8py_source.html">approval.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>  <span class="keyword">def </span>run_election(self, profile: base.PreferenceProfile) -&gt; base.RankOutcome:</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keyword">assert</span> self.is_valid_profile(profile)</div>
+<div class="line"><span class="lineno">   47</span>    scores = {alternative: 0 <span class="keywordflow">for</span> alternative <span class="keywordflow">in</span> profile.alternatives}</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">for</span> vote <span class="keywordflow">in</span> profile.votes:</div>
+<div class="line"><span class="lineno">   49</span>      vote_len = len(vote.vote)</div>
+<div class="line"><span class="lineno">   50</span>      <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(self._k):</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> i &gt;= vote_len: <span class="keywordflow">break</span></div>
+<div class="line"><span class="lineno">   52</span>        alternative = vote.vote[i]</div>
+<div class="line"><span class="lineno">   53</span>        scores[alternative] += vote.weight</div>
+<div class="line"><span class="lineno">   54</span>    sorted_scores = sorted(scores.items(), key=<span class="keyword">lambda</span> item: item[1],</div>
+<div class="line"><span class="lineno">   55</span>                           reverse=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   56</span>    outcome = base.RankOutcome()</div>
+<div class="line"><span class="lineno">   57</span>    outcome.unpack_from(sorted_scores)</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> outcome</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d8/d38/approval_8py_source.html#l00040">open_spiel.python.voting.approval.ApprovalVoting._k</a>, and <a class="el" href="../../d5/de2/base_8py_source.html#l00483">open_spiel.python.voting.base.AbstractVotingMethod.is_valid_profile()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -235,8 +275,35 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac96d4b0939935511084586ed3787ada4" name="ac96d4b0939935511084586ed3787ada4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac96d4b0939935511084586ed3787ada4">&#9670;&#160;</a></span>_k</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.voting.approval.ApprovalVoting._k</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d38/approval_8py_source.html#l00040">40</a> of file <a class="el" href="../../d8/d38/approval_8py_source.html">approval.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d38/approval_8py_source.html#l00030">open_spiel.python.voting.approval.ApprovalVoting.__init__()</a>, and <a class="el" href="../../d8/d38/approval_8py_source.html#l00045">open_spiel.python.voting.approval.ApprovalVoting.run_election()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/voting/<b>approval.py</b></li>
+<li>open_spiel/python/voting/<a class="el" href="../../d8/d38/approval_8py_source.html">approval.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

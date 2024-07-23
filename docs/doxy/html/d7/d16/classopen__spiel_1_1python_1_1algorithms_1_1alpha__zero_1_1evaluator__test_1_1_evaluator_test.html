@@ -117,15 +117,127 @@ Collaboration diagram for open_spiel.python.algorithms.alpha_zero.evaluator_test
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae7afa1258b667d938e5632c7c9194788" id="r_ae7afa1258b667d938e5632c7c9194788"><td class="memItemLeft" align="right" valign="top"><a id="ae7afa1258b667d938e5632c7c9194788" name="ae7afa1258b667d938e5632c7c9194788"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_evaluator_caching</b> (self)</td></tr>
+<tr class="memitem:ae7afa1258b667d938e5632c7c9194788" id="r_ae7afa1258b667d938e5632c7c9194788"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7afa1258b667d938e5632c7c9194788">test_evaluator_caching</a> (self)</td></tr>
 <tr class="separator:ae7afa1258b667d938e5632c7c9194788"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11c01a857304f57bd402c129e5243034" id="r_a11c01a857304f57bd402c129e5243034"><td class="memItemLeft" align="right" valign="top"><a id="a11c01a857304f57bd402c129e5243034" name="a11c01a857304f57bd402c129e5243034"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_works_with_mcts</b> (self)</td></tr>
+<tr class="memitem:a11c01a857304f57bd402c129e5243034" id="r_a11c01a857304f57bd402c129e5243034"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11c01a857304f57bd402c129e5243034">test_works_with_mcts</a> (self)</td></tr>
 <tr class="separator:a11c01a857304f57bd402c129e5243034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/dc5/evaluator__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../d7/dc5/evaluator__test_8py_source.html">evaluator_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae7afa1258b667d938e5632c7c9194788" name="ae7afa1258b667d938e5632c7c9194788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7afa1258b667d938e5632c7c9194788">&#9670;&#160;</a></span>test_evaluator_caching()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.evaluator_test.EvaluatorTest.test_evaluator_caching </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/dc5/evaluator__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d7/dc5/evaluator__test_8py_source.html">evaluator_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>  <span class="keyword">def </span>test_evaluator_caching(self):</div>
+<div class="line"><span class="lineno">   35</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">   36</span>    model = build_model(game)</div>
+<div class="line"><span class="lineno">   37</span>    evaluator = evaluator_lib.AlphaZeroEvaluator(game, model)</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   40</span>    obs = state.observation_tensor()</div>
+<div class="line"><span class="lineno">   41</span>    act_mask = state.legal_actions_mask()</div>
+<div class="line"><span class="lineno">   42</span>    action = state.legal_actions()[0]</div>
+<div class="line"><span class="lineno">   43</span>    policy = np.zeros(len(act_mask), dtype=float)</div>
+<div class="line"><span class="lineno">   44</span>    policy[action] = 1</div>
+<div class="line"><span class="lineno">   45</span>    train_inputs = [model_lib.TrainInput(obs, act_mask, policy, value=1)]</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    value = evaluator.evaluate(state)</div>
+<div class="line"><span class="lineno">   48</span>    self.assertEqual(value[0], -value[1])</div>
+<div class="line"><span class="lineno">   49</span>    value = value[0]</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    value2 = evaluator.evaluate(state)[0]</div>
+<div class="line"><span class="lineno">   52</span>    self.assertEqual(value, value2)</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    prior = evaluator.prior(state)</div>
+<div class="line"><span class="lineno">   55</span>    prior2 = evaluator.prior(state)</div>
+<div class="line"><span class="lineno">   56</span>    np.testing.assert_array_equal(prior, prior2)</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    info = evaluator.cache_info()</div>
+<div class="line"><span class="lineno">   59</span>    self.assertEqual(info.misses, 1)</div>
+<div class="line"><span class="lineno">   60</span>    self.assertEqual(info.hits, 3)</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(20):</div>
+<div class="line"><span class="lineno">   63</span>      model.update(train_inputs)</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment"># Still equal due to not clearing the cache</span></div>
+<div class="line"><span class="lineno">   66</span>    value3 = evaluator.evaluate(state)[0]</div>
+<div class="line"><span class="lineno">   67</span>    self.assertEqual(value, value3)</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    info = evaluator.cache_info()</div>
+<div class="line"><span class="lineno">   70</span>    self.assertEqual(info.misses, 1)</div>
+<div class="line"><span class="lineno">   71</span>    self.assertEqual(info.hits, 4)</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    evaluator.clear_cache()</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    info = evaluator.cache_info()</div>
+<div class="line"><span class="lineno">   76</span>    self.assertEqual(info.misses, 0)</div>
+<div class="line"><span class="lineno">   77</span>    self.assertEqual(info.hits, 0)</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="comment"># Now they differ from before</span></div>
+<div class="line"><span class="lineno">   80</span>    value4 = evaluator.evaluate(state)[0]</div>
+<div class="line"><span class="lineno">   81</span>    value5 = evaluator.evaluate(state)[0]</div>
+<div class="line"><span class="lineno">   82</span>    self.assertNotEqual(value, value4)</div>
+<div class="line"><span class="lineno">   83</span>    self.assertEqual(value4, value5)</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    info = evaluator.cache_info()</div>
+<div class="line"><span class="lineno">   86</span>    self.assertEqual(info.misses, 1)</div>
+<div class="line"><span class="lineno">   87</span>    self.assertEqual(info.hits, 1)</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>    value6 = evaluator.evaluate(game.new_initial_state())[0]</div>
+<div class="line"><span class="lineno">   90</span>    self.assertEqual(value4, value6)</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    info = evaluator.cache_info()</div>
+<div class="line"><span class="lineno">   93</span>    self.assertEqual(info.misses, 1)</div>
+<div class="line"><span class="lineno">   94</span>    self.assertEqual(info.hits, 2)</div>
+<div class="line"><span class="lineno">   95</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a11c01a857304f57bd402c129e5243034" name="a11c01a857304f57bd402c129e5243034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c01a857304f57bd402c129e5243034">&#9670;&#160;</a></span>test_works_with_mcts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.evaluator_test.EvaluatorTest.test_works_with_mcts </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/dc5/evaluator__test_8py_source.html#l00096">96</a> of file <a class="el" href="../../d7/dc5/evaluator__test_8py_source.html">evaluator_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>  <span class="keyword">def </span>test_works_with_mcts(self):</div>
+<div class="line"><span class="lineno">   97</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">   98</span>    model = build_model(game)</div>
+<div class="line"><span class="lineno">   99</span>    evaluator = evaluator_lib.AlphaZeroEvaluator(game, model)</div>
+<div class="line"><span class="lineno">  100</span>    bot = mcts.MCTSBot(</div>
+<div class="line"><span class="lineno">  101</span>        game, 1., 20, evaluator, solve=<span class="keyword">False</span>, dirichlet_noise=(0.25, 1.))</div>
+<div class="line"><span class="lineno">  102</span>    root = bot.mcts_search(game.new_initial_state())</div>
+<div class="line"><span class="lineno">  103</span>    self.assertEqual(root.explore_count, 20)</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/alpha_zero/<b>evaluator_test.py</b></li>
+<li>open_spiel/python/algorithms/alpha_zero/<a class="el" href="../../d7/dc5/evaluator__test_8py_source.html">evaluator_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

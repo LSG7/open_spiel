@@ -116,8 +116,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a76e59b86f9906e26f491d0bdbfec478c" id="r_a76e59b86f9906e26f491d0bdbfec478c"><td class="memItemLeft" align="right" valign="top"><a id="a76e59b86f9906e26f491d0bdbfec478c" name="a76e59b86f9906e26f491d0bdbfec478c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>NO_POSSIBLE_ACTION</b> = 0</td></tr>
+<tr class="memitem:a76e59b86f9906e26f491d0bdbfec478c" id="r_a76e59b86f9906e26f491d0bdbfec478c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76e59b86f9906e26f491d0bdbfec478c">NO_POSSIBLE_ACTION</a> = 0</td></tr>
 <tr class="separator:a76e59b86f9906e26f491d0bdbfec478c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -150,7 +149,17 @@ This module has three main classes:
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Split a road section 'A-&gt;B' to two nodes 'A' and 'B'.</pre> <div class="dynheader">
+<pre class="fragment">Split a road section 'A-&gt;B' to two nodes 'A' and 'B'.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00040">40</a> of file <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html">dynamic_routing_utils.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span><span class="keyword">def </span>_nodes_from_road_section(movement: str) -&gt; tuple[str, str]:</div>
+<div class="line"><span class="lineno">   41</span>  <span class="stringliteral">&quot;&quot;&quot;Split a road section &#39;A-&gt;B&#39; to two nodes &#39;A&#39; and &#39;B&#39;.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   42</span>  origin, destination = movement.split(<span class="stringliteral">&quot;-&gt;&quot;</span>)</div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">return</span> origin, destination</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00233">open_spiel.python.games.dynamic_routing_utils.Network.assert_valid_action()</a>, <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00195">open_spiel.python.games.dynamic_routing_utils.Network.is_location_at_sink_node()</a>, <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00271">open_spiel.python.games.dynamic_routing_utils.Network.return_list_for_matplotlib_quiver()</a>, and <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00261">open_spiel.python.games.dynamic_routing_utils.Network.return_position_of_road_section()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/dca/namespaceopen__spiel_1_1python_1_1games_1_1dynamic__routing__utils_a019410e59e310eb4f47b89296a2dcddc_icgraph.png" border="0" usemap="#ade/dca/namespaceopen__spiel_1_1python_1_1games_1_1dynamic__routing__utils_a019410e59e310eb4f47b89296a2dcddc_icgraph" alt=""/></div>
@@ -195,7 +204,16 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Create a road section 'A-&gt;B' from two nodes 'A' and 'B'.</pre> <div class="dynheader">
+<pre class="fragment">Create a road section 'A-&gt;B' from two nodes 'A' and 'B'.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00035">35</a> of file <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html">dynamic_routing_utils.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span><span class="keyword">def </span>_road_section_from_nodes(origin: str, destination: str) -&gt; str:</div>
+<div class="line"><span class="lineno">   36</span>  <span class="stringliteral">&quot;&quot;&quot;Create a road section &#39;A-&gt;B&#39; from two nodes &#39;A&#39; and &#39;B&#39;.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">return</span> f<span class="stringliteral">&quot;{origin}-&gt;{destination}&quot;</span></div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00143">open_spiel.python.games.dynamic_routing_utils.Network._create_action_by_road_section()</a>, and <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00186">open_spiel.python.games.dynamic_routing_utils.Network.get_action_id_from_movement()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/dca/namespaceopen__spiel_1_1python_1_1games_1_1dynamic__routing__utils_a14bcf335353b78a98e90416b1f33c8ed_icgraph.png" border="0" usemap="#ade/dca/namespaceopen__spiel_1_1python_1_1games_1_1dynamic__routing__utils_a14bcf335353b78a98e90416b1f33c8ed_icgraph" alt=""/></div>
@@ -234,6 +252,37 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Check dictionary has road sections has key or return default_value dict.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00046">46</a> of file <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html">dynamic_routing_utils.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                      default_value: Any) -&gt; dict[str, Any]:</div>
+<div class="line"><span class="lineno">   49</span>  <span class="stringliteral">&quot;&quot;&quot;Check dictionary has road sections has key or return default_value dict.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">if</span> dict_object:</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keyword">assert</span> set(dict_object) == set(road_sections), (</div>
+<div class="line"><span class="lineno">   52</span>        <span class="stringliteral">&quot;Objects are not defined for each road sections.&quot;</span>)</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">return</span> dict_object</div>
+<div class="line"><span class="lineno">   54</span>  dict_object_returned = {}</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">for</span> road_section <span class="keywordflow">in</span> road_sections:</div>
+<div class="line"><span class="lineno">   56</span>    dict_object_returned[road_section] = default_value</div>
+<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">return</span> dict_object_returned</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a76e59b86f9906e26f491d0bdbfec478c" name="a76e59b86f9906e26f491d0bdbfec478c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e59b86f9906e26f491d0bdbfec478c">&#9670;&#160;</a></span>NO_POSSIBLE_ACTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.games.dynamic_routing_utils.NO_POSSIBLE_ACTION = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00032">32</a> of file <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html">dynamic_routing_utils.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

@@ -117,12 +117,54 @@ Collaboration diagram for open_spiel.python.egt.dynamics_test._InternalTest:</di
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a12e205f2960b33aa88faa09ef2ee643f" id="r_a12e205f2960b33aa88faa09ef2ee643f"><td class="memItemLeft" align="right" valign="top"><a id="a12e205f2960b33aa88faa09ef2ee643f" name="a12e205f2960b33aa88faa09ef2ee643f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test__sum_j_x_j_ln_x_j_over_x_i</b> (self)</td></tr>
+<tr class="memitem:a12e205f2960b33aa88faa09ef2ee643f" id="r_a12e205f2960b33aa88faa09ef2ee643f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12e205f2960b33aa88faa09ef2ee643f">test__sum_j_x_j_ln_x_j_over_x_i</a> (self)</td></tr>
 <tr class="separator:a12e205f2960b33aa88faa09ef2ee643f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/dbe/dynamics__test_8py_source.html#l00048">48</a> of file <a class="el" href="../../d9/dbe/dynamics__test_8py_source.html">dynamics_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a12e205f2960b33aa88faa09ef2ee643f" name="a12e205f2960b33aa88faa09ef2ee643f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e205f2960b33aa88faa09ef2ee643f">&#9670;&#160;</a></span>test__sum_j_x_j_ln_x_j_over_x_i()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.egt.dynamics_test._InternalTest.test__sum_j_x_j_ln_x_j_over_x_i </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dbe/dynamics__test_8py_source.html#l00050">50</a> of file <a class="el" href="../../d9/dbe/dynamics__test_8py_source.html">dynamics_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>  <span class="keyword">def </span>test__sum_j_x_j_ln_x_j_over_x_i(self):</div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment"># This tests a sub-function of `_q_learning_dynamics` to ensure its</span></div>
+<div class="line"><span class="lineno">   52</span>    <span class="comment"># internals are correct.</span></div>
+<div class="line"><span class="lineno">   53</span>    x = np.asarray([1., 2., 3.])</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment"># We use 2 different formula to check we have the correct result.</span></div>
+<div class="line"><span class="lineno">   56</span>    expected = [sum([x_j * math.log(x_j / x_i) <span class="keywordflow">for</span> x_j <span class="keywordflow">in</span> x]) <span class="keywordflow">for</span> x_i <span class="keywordflow">in</span> x]</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    log = math.log</div>
+<div class="line"><span class="lineno">   59</span>    expected_0 = 1. * log(1 / 1.) + 2 * log(2 / 1.) + 3 * log(3 / 1.)</div>
+<div class="line"><span class="lineno">   60</span>    expected_1 = 1. * log(1 / 2.) + 2 * log(2 / 2.) + 3 * log(3 / 2.)</div>
+<div class="line"><span class="lineno">   61</span>    expected_2 = 1. * log(1 / 3.) + 2 * log(2 / 3.) + 3 * log(3 / 3.)</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    expected_2 = np.asarray([expected_0, expected_1, expected_2])</div>
+<div class="line"><span class="lineno">   64</span>    np.testing.assert_array_equal(expected, expected_2)</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    np.testing.assert_array_almost_equal(expected,</div>
+<div class="line"><span class="lineno">   67</span>                                         _sum_j_x_j_ln_x_j_over_x_i(x))</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/egt/<b>dynamics_test.py</b></li>
+<li>open_spiel/python/egt/<a class="el" href="../../d9/dbe/dynamics__test_8py_source.html">dynamics_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -105,15 +105,81 @@ Collaboration diagram for absl::base_internal::SpinLockTest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a15fb137ed825b6a4e3855bac75193c87" id="r_a15fb137ed825b6a4e3855bac75193c87"><td class="memItemLeft" align="right" valign="top"><a id="a15fb137ed825b6a4e3855bac75193c87" name="a15fb137ed825b6a4e3855bac75193c87"></a>
-static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>EncodeWaitCycles</b> (int64_t wait_start_time, int64_t wait_end_time)</td></tr>
+<tr class="memitem:a15fb137ed825b6a4e3855bac75193c87" id="r_a15fb137ed825b6a4e3855bac75193c87"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15fb137ed825b6a4e3855bac75193c87">EncodeWaitCycles</a> (int64_t wait_start_time, int64_t wait_end_time)</td></tr>
 <tr class="separator:a15fb137ed825b6a4e3855bac75193c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05ac10ad2585dc7421aa00a6a9f004bc" id="r_a05ac10ad2585dc7421aa00a6a9f004bc"><td class="memItemLeft" align="right" valign="top"><a id="a05ac10ad2585dc7421aa00a6a9f004bc" name="a05ac10ad2585dc7421aa00a6a9f004bc"></a>
-static int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>DecodeWaitCycles</b> (uint32_t lock_value)</td></tr>
+<tr class="memitem:a05ac10ad2585dc7421aa00a6a9f004bc" id="r_a05ac10ad2585dc7421aa00a6a9f004bc"><td class="memItemLeft" align="right" valign="top">static int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05ac10ad2585dc7421aa00a6a9f004bc">DecodeWaitCycles</a> (uint32_t lock_value)</td></tr>
 <tr class="separator:a05ac10ad2585dc7421aa00a6a9f004bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/da1/spinlock__test__common_8cc_source.html#l00046">46</a> of file <a class="el" href="../../d5/da1/spinlock__test__common_8cc_source.html">spinlock_test_common.cc</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a05ac10ad2585dc7421aa00a6a9f004bc" name="a05ac10ad2585dc7421aa00a6a9f004bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ac10ad2585dc7421aa00a6a9f004bc">&#9670;&#160;</a></span>DecodeWaitCycles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int64_t absl::base_internal::SpinLockTest::DecodeWaitCycles </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>lock_value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/da1/spinlock__test__common_8cc_source.html#l00051">51</a> of file <a class="el" href="../../d5/da1/spinlock__test__common_8cc_source.html">spinlock_test_common.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                       {</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">return</span> SpinLock::DecodeWaitCycles(lock_value);</div>
+<div class="line"><span class="lineno">   53</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a15fb137ed825b6a4e3855bac75193c87" name="a15fb137ed825b6a4e3855bac75193c87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15fb137ed825b6a4e3855bac75193c87">&#9670;&#160;</a></span>EncodeWaitCycles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t absl::base_internal::SpinLockTest::EncodeWaitCycles </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>wait_start_time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>wait_end_time</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/da1/spinlock__test__common_8cc_source.html#l00047">47</a> of file <a class="el" href="../../d5/da1/spinlock__test__common_8cc_source.html">spinlock_test_common.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                          {</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> SpinLock::EncodeWaitCycles(wait_start_time, wait_end_time);</div>
+<div class="line"><span class="lineno">   50</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/base/<b>spinlock_test_common.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/base/<a class="el" href="../../d5/da1/spinlock__test__common_8cc_source.html">spinlock_test_common.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

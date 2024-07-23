@@ -120,6 +120,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Plays random actions until the state is terminal.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/d86/test__utils_8py_source.html#l00022">22</a> of file <a class="el" href="../../db/d86/test__utils_8py_source.html">test_utils.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span><span class="keyword">def </span>random_playout(state: pyspiel.State, seed: Optional[int] = <span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">   23</span>  <span class="stringliteral">&quot;&quot;&quot;Plays random actions until the state is terminal.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   24</span>  rng = np.random.RandomState(seed)</div>
+<div class="line"><span class="lineno">   25</span>  <span class="keywordflow">while</span> <span class="keywordflow">not</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   26</span>    state.apply_action(rng.choice(state.legal_actions()))</div>
+<div class="line"><span class="lineno">   27</span>  <span class="keywordflow">return</span> state</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

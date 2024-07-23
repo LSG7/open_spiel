@@ -102,15 +102,91 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa70419c097c235b2ef77692541f5cc4f" id="r_aa70419c097c235b2ef77692541f5cc4f"><td class="memItemLeft" align="right" valign="top"><a id="aa70419c097c235b2ef77692541f5cc4f" name="aa70419c097c235b2ef77692541f5cc4f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>numerical_gradient</b> (fun, x, eps=np.sqrt(np.finfo(float).eps))</td></tr>
+<tr class="memitem:aa70419c097c235b2ef77692541f5cc4f" id="r_aa70419c097c235b2ef77692541f5cc4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa70419c097c235b2ef77692541f5cc4f">numerical_gradient</a> (fun, x, eps=np.sqrt(np.finfo(float).eps))</td></tr>
 <tr class="separator:aa70419c097c235b2ef77692541f5cc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99a914eb833debae608fddb2684e080a" id="r_a99a914eb833debae608fddb2684e080a"><td class="memItemLeft" align="right" valign="top"><a id="a99a914eb833debae608fddb2684e080a" name="a99a914eb833debae608fddb2684e080a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>prep_params</b> (dist, pt, num_params)</td></tr>
+<tr class="memitem:a99a914eb833debae608fddb2684e080a" id="r_a99a914eb833debae608fddb2684e080a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a914eb833debae608fddb2684e080a">prep_params</a> (dist, pt, num_params)</td></tr>
 <tr class="separator:a99a914eb833debae608fddb2684e080a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Tests for open_spiel.python.algorithms.adidas_utils.nonsymmetric.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">Tests for open_spiel.python.algorithms.adidas_utils.nonsymmetric.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="aa70419c097c235b2ef77692541f5cc4f" name="aa70419c097c235b2ef77692541f5cc4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70419c097c235b2ef77692541f5cc4f">&#9670;&#160;</a></span>numerical_gradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.solvers_test.numerical_gradient </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fun</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>eps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">np.sqrt(np.finfo(float).eps)</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d0e/nonsymmetric_2solvers__test_8py_source.html#l00035">35</a> of file <a class="el" href="../../d0/d0e/nonsymmetric_2solvers__test_8py_source.html">solvers_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span><span class="keyword">def </span>numerical_gradient(fun, x, eps=np.sqrt(np.finfo(float).eps)):</div>
+<div class="line"><span class="lineno">   36</span>  fun_0 = fun(x)</div>
+<div class="line"><span class="lineno">   37</span>  num_grad = [np.zeros_like(xi) <span class="keywordflow">for</span> xi <span class="keywordflow">in</span> x]</div>
+<div class="line"><span class="lineno">   38</span>  x_plus_dx = [np.copy(xi) <span class="keywordflow">for</span> xi <span class="keywordflow">in</span> x]</div>
+<div class="line"><span class="lineno">   39</span>  <span class="keywordflow">for</span> i, xi <span class="keywordflow">in</span> enumerate(x):</div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">for</span> j, xij <span class="keywordflow">in</span> enumerate(xi):</div>
+<div class="line"><span class="lineno">   41</span>      x_plus_dx[i][j] = xij + eps</div>
+<div class="line"><span class="lineno">   42</span>      num_grad[i][j] = (fun(x_plus_dx) - fun_0) / eps</div>
+<div class="line"><span class="lineno">   43</span>      x_plus_dx[i][j] = xij</div>
+<div class="line"><span class="lineno">   44</span>  <span class="keywordflow">return</span> num_grad</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a99a914eb833debae608fddb2684e080a" name="a99a914eb833debae608fddb2684e080a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a914eb833debae608fddb2684e080a">&#9670;&#160;</a></span>prep_params()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.solvers_test.prep_params </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dist</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>pt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_params</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d0e/nonsymmetric_2solvers__test_8py_source.html#l00047">47</a> of file <a class="el" href="../../d0/d0e/nonsymmetric_2solvers__test_8py_source.html">solvers_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span><span class="keyword">def </span>prep_params(dist, pt, num_params):</div>
+<div class="line"><span class="lineno">   48</span>  params = [dist]</div>
+<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">if</span> num_params &gt; 1:</div>
+<div class="line"><span class="lineno">   50</span>    num_players = len(dist)</div>
+<div class="line"><span class="lineno">   51</span>    nabla = [misc.pt_reduce(pt[i], dist, [i]) <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(num_players)]</div>
+<div class="line"><span class="lineno">   52</span>    params += [nabla]  <span class="comment"># policy_gradient</span></div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">return</span> tuple(params)</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

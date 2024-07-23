@@ -134,19 +134,18 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a043f674ad154f178b13ba6e152890f3b" id="r_a043f674ad154f178b13ba6e152890f3b"><td class="memItemLeft" align="right" valign="top"><a id="a043f674ad154f178b13ba6e152890f3b" name="a043f674ad154f178b13ba6e152890f3b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_weights</b></td></tr>
+<tr class="memitem:a043f674ad154f178b13ba6e152890f3b" id="r_a043f674ad154f178b13ba6e152890f3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a043f674ad154f178b13ba6e152890f3b">_weights</a></td></tr>
 <tr class="separator:a043f674ad154f178b13ba6e152890f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14ac0b26b9780ad85545d6dd023bd427" id="r_a14ac0b26b9780ad85545d6dd023bd427"><td class="memItemLeft" align="right" valign="top"><a id="a14ac0b26b9780ad85545d6dd023bd427" name="a14ac0b26b9780ad85545d6dd023bd427"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_quota</b></td></tr>
+<tr class="memitem:a14ac0b26b9780ad85545d6dd023bd427" id="r_a14ac0b26b9780ad85545d6dd023bd427"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14ac0b26b9780ad85545d6dd023bd427">_quota</a></td></tr>
 <tr class="separator:a14ac0b26b9780ad85545d6dd023bd427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d7/d34/classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game.html">open_spiel.python.coalitional_games.coalitional_game.CoalitionalGame</a></td></tr>
-<tr class="memitem:a9537a9621f49778dd941b9fc770b52c6 inherit pro_attribs_classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game" id="r_a9537a9621f49778dd941b9fc770b52c6"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>_num_players</b></td></tr>
+<tr class="memitem:a9537a9621f49778dd941b9fc770b52c6 inherit pro_attribs_classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game" id="r_a9537a9621f49778dd941b9fc770b52c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d34/classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game.html#a9537a9621f49778dd941b9fc770b52c6">_num_players</a></td></tr>
 <tr class="separator:a9537a9621f49778dd941b9fc770b52c6 inherit pro_attribs_classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Weighted Voting Game.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Weighted Voting Game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d4/d69/wvg_8py_source.html#l00032">32</a> of file <a class="el" href="../../d4/d69/wvg_8py_source.html">wvg.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3686a46057a34cb1c4006cc5d14260f4" name="a3686a46057a34cb1c4006cc5d14260f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3686a46057a34cb1c4006cc5d14260f4">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -173,6 +172,14 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d7/d34/classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game.html">open_spiel.python.coalitional_games.coalitional_game.CoalitionalGame</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d4/d69/wvg_8py_source.html#l00035">35</a> of file <a class="el" href="../../d4/d69/wvg_8py_source.html">wvg.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>  <span class="keyword">def </span>__init__(self, weights: np.ndarray, quota: float):</div>
+<div class="line"><span class="lineno">   36</span>    super().__init__(num_players=len(weights))</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keyword">assert</span> len(weights.shape) == 1</div>
+<div class="line"><span class="lineno">   38</span>    self._weights = weights</div>
+<div class="line"><span class="lineno">   39</span>    self._quota = quota</div>
+<div class="line"><span class="lineno">   40</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -201,6 +208,19 @@ Args:
     included) and zeroes (the player is excluded).
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d7/d34/classopen__spiel_1_1python_1_1coalitional__games_1_1coalitional__game_1_1_coalitional_game.html#a9f03eec48fb88aadb79a5117a6bb8520">open_spiel.python.coalitional_games.coalitional_game.CoalitionalGame</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d69/wvg_8py_source.html#l00041">41</a> of file <a class="el" href="../../d4/d69/wvg_8py_source.html">wvg.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>  <span class="keyword">def </span>coalition_value(self, coalition: np.ndarray) -&gt; float:</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keyword">assert</span> len(coalition) == self._num_players</div>
+<div class="line"><span class="lineno">   43</span>    total_weight = np.inner(coalition, self._weights)</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">if</span> total_weight &gt; self._quota:</div>
+<div class="line"><span class="lineno">   45</span>      <span class="keywordflow">return</span> 1.0</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   47</span>      <span class="keywordflow">return</span> 0.0</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00107">open_spiel.python.algorithms.best_response.BestResponsePolicy._num_players</a>, <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00161">open_spiel.python.algorithms.cfr._CFRSolverBase._num_players</a>, <a class="el" href="../../dd/dc5/cfr__br_8py_source.html#l00114">open_spiel.python.algorithms.cfr_br.CFRBRSolver._num_players</a>, <a class="el" href="../../d3/dc4/algorithms_2deep__cfr_8py_source.html#l00163">open_spiel.python.algorithms.deep_cfr.DeepCFRSolver._num_players</a>, <a class="el" href="../../d9/d36/algorithms_2deep__cfr__tf2_8py_source.html#l00327">open_spiel.python.algorithms.deep_cfr_tf2.DeepCFRSolver._num_players</a>, <a class="el" href="../../d1/dd6/algorithms_2discounted__cfr_8py_source.html#l00133">open_spiel.python.algorithms.discounted_cfr._DCFRSolver._num_players</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00105">open_spiel.python.algorithms.efr._EFRSolverBase._num_players</a>, <a class="el" href="../../db/d9b/external__sampling__mccfr_8py_source.html#l00063">open_spiel.python.algorithms.external_sampling_mccfr.ExternalSamplingSolver._num_players</a>, <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00135">open_spiel.python.algorithms.fictitious_play.XFPSolver._num_players</a>, <a class="el" href="../../d8/d79/mccfr_8py_source.html#l00070">open_spiel.python.algorithms.mccfr.MCCFRSolverBase._num_players</a>, <a class="el" href="../../dc/d55/nfg__utils_8py_source.html#l00035">open_spiel.python.algorithms.nfg_utils.StrategyAverager._num_players</a>, <a class="el" href="../../dc/d5d/outcome__sampling__mccfr_8py_source.html#l00043">open_spiel.python.algorithms.outcome_sampling_mccfr.OutcomeSamplingSolver._num_players</a>, <a class="el" href="../../d2/dc6/policy__aggregator_8py_source.html#l00108">open_spiel.python.algorithms.policy_aggregator.PolicyAggregator._num_players</a>, <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00101">open_spiel.python.algorithms.policy_aggregator_joint.JointPolicyAggregator._num_players</a>, <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00152">open_spiel.python.algorithms.psro_v2.abstract_meta_trainer.AbstractMetaTrainer._num_players</a>, <a class="el" href="../../d5/dfc/psro__v2_8py_source.html#l00193">open_spiel.python.algorithms.psro_v2.psro_v2.PSROSolver._num_players</a>, <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html#l00189">open_spiel.python.algorithms.tabular_multiagent_qlearner.MultiagentQLearner._num_players</a>, <a class="el" href="../../d2/dda/basic__games_8py_source.html#l00062">open_spiel.python.coalitional_games.basic_games.TabularGame._num_players</a>, <a class="el" href="../../d8/d84/coalitional__game_8py_source.html#l00025">open_spiel.python.coalitional_games.coalitional_game.CoalitionalGame._num_players</a>, <a class="el" href="../../d6/d54/heuristic__payoff__table_8py_source.html#l00323">open_spiel.python.egt.heuristic_payoff_table._PayoffTableInterface._num_players</a>, <a class="el" href="../../d6/d54/heuristic__payoff__table_8py_source.html#l00372">open_spiel.python.egt.heuristic_payoff_table.NumpyPayoffTable._num_players</a>, <a class="el" href="../../d6/d54/heuristic__payoff__table_8py_source.html#l00423">open_spiel.python.egt.heuristic_payoff_table.PayoffTable._num_players</a>, <a class="el" href="../../d4/d52/iterated__matrix__game_8py_source.html#l00046">open_spiel.python.environments.iterated_matrix_game.IteratedMatrixGame._num_players</a>, <a class="el" href="../../d6/dcb/chat__game_8py_source.html#l00247">open_spiel.python.games.chat_game.ChatGame._num_players</a>, <a class="el" href="../../df/d6c/chat__game__base_8py_source.html#l00781">open_spiel.python.games.chat_games.chat_game_base.BaseChatGame._num_players</a>, <a class="el" href="../../db/d35/liars__poker_8py_source.html#l00103">open_spiel.python.games.liars_poker.LiarsPokerState._num_players</a>, <a class="el" href="../../d0/d69/jax_2deep__cfr_8py_source.html#l00170">open_spiel.python.jax.deep_cfr.DeepCFRSolver._num_players</a>, <a class="el" href="../../db/d67/average__network__fictitious__play_8py_source.html#l00282">open_spiel.python.mfg.algorithms.average_network_fictitious_play.AverageNetworkFictitiousPlay._num_players</a>, <a class="el" href="../../d7/d95/pytorch_2deep__cfr_8py_source.html#l00253">open_spiel.python.pytorch.deep_cfr.DeepCFRSolver._num_players</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00188">open_spiel.python.rl_environment.Environment._num_players</a>, <a class="el" href="../../d4/d69/wvg_8py_source.html#l00039">open_spiel.python.coalitional_games.wvg.WeightedVotingGame._quota</a>, <a class="el" href="../../d2/dc6/policy__aggregator_8py_source.html#l00110">open_spiel.python.algorithms.policy_aggregator.PolicyAggregator._weights</a>, <a class="el" href="../../d4/d69/wvg_8py_source.html#l00038">open_spiel.python.coalitional_games.wvg.WeightedVotingGame._weights</a>, <a class="el" href="../../d4/d98/mfg_2algorithms_2fictitious__play_8py_source.html#l00077">open_spiel.python.mfg.algorithms.fictitious_play.MergedPolicy._weights</a>, <a class="el" href="../../d4/db1/joint__best__response__value_8py_source.html#l00060">open_spiel.python.mfg.algorithms.joint_best_response_value.JointBestResponse._weights</a>, <a class="el" href="../../de/d6e/mf__psro_8py_source.html#l00086">open_spiel.python.mfg.algorithms.mf_psro.MeanFieldPSRO._weights</a>, <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00052">open_spiel.python.mfg.algorithms.utils.MergedPolicy._weights</a>, <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00112">open_spiel.python.mfg.algorithms.utils.MixedDistribution._weights</a>, and <a class="el" href="../../d2/d9e/simple__nets_8py_source.html#l00048">open_spiel.python.simple_nets.Linear._weights</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d84/coalitional__game_8py_source.html#l00036">open_spiel.python.coalitional_games.coalitional_game.CoalitionalGame.coalition_values()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -214,8 +234,61 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a14ac0b26b9780ad85545d6dd023bd427" name="a14ac0b26b9780ad85545d6dd023bd427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14ac0b26b9780ad85545d6dd023bd427">&#9670;&#160;</a></span>_quota</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.coalitional_games.wvg.WeightedVotingGame._quota</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d69/wvg_8py_source.html#l00039">39</a> of file <a class="el" href="../../d4/d69/wvg_8py_source.html">wvg.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d69/wvg_8py_source.html#l00041">open_spiel.python.coalitional_games.wvg.WeightedVotingGame.coalition_value()</a>.</p>
+
+</div>
+</div>
+<a id="a043f674ad154f178b13ba6e152890f3b" name="a043f674ad154f178b13ba6e152890f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a043f674ad154f178b13ba6e152890f3b">&#9670;&#160;</a></span>_weights</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.coalitional_games.wvg.WeightedVotingGame._weights</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d69/wvg_8py_source.html#l00038">38</a> of file <a class="el" href="../../d4/d69/wvg_8py_source.html">wvg.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d98/mfg_2algorithms_2fictitious__play_8py_source.html#l00063">open_spiel.python.mfg.algorithms.fictitious_play.MergedPolicy.__init__()</a>, <a class="el" href="../../d4/db1/joint__best__response__value_8py_source.html#l00032">open_spiel.python.mfg.algorithms.joint_best_response_value.JointBestResponse.__init__()</a>, <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00038">open_spiel.python.mfg.algorithms.utils.MergedPolicy.__init__()</a>, <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00096">open_spiel.python.mfg.algorithms.utils.MixedDistribution.__init__()</a>, <a class="el" href="../../d2/d9e/simple__nets_8py_source.html#l00033">open_spiel.python.simple_nets.Linear.__init__()</a>, <a class="el" href="../../d2/dc6/policy__aggregator_8py_source.html#l00147">open_spiel.python.algorithms.policy_aggregator.PolicyAggregator._sub_aggregate()</a>, <a class="el" href="../../d4/d69/wvg_8py_source.html#l00041">open_spiel.python.coalitional_games.wvg.WeightedVotingGame.coalition_value()</a>, <a class="el" href="../../de/d6e/mf__psro_8py_source.html#l00092">open_spiel.python.mfg.algorithms.mf_psro.MeanFieldPSRO.step()</a>, <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00115">open_spiel.python.mfg.algorithms.utils.MixedDistribution.value()</a>, and <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00128">open_spiel.python.mfg.algorithms.utils.MixedDistribution.value_str()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/coalitional_games/<b>wvg.py</b></li>
+<li>open_spiel/python/coalitional_games/<a class="el" href="../../d4/d69/wvg_8py_source.html">wvg.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

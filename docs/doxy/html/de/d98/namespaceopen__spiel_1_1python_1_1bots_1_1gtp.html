@@ -135,7 +135,22 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Waits for a proc to shut down; terminates or kills it after `timeout`.</pre> <div class="dynheader">
+<pre class="fragment">Waits for a proc to shut down; terminates or kills it after `timeout`.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/d9c/gtp_8py_source.html#l00146">146</a> of file <a class="el" href="../../dd/d9c/gtp_8py_source.html">gtp.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span><span class="keyword">def </span>_shutdown_proc(p, timeout):</div>
+<div class="line"><span class="lineno">  147</span>  <span class="stringliteral">&quot;&quot;&quot;Waits for a proc to shut down; terminates or kills it after `timeout`.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  148</span>  freq = 10  <span class="comment"># how often to check per second</span></div>
+<div class="line"><span class="lineno">  149</span>  <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(1 + timeout * freq):</div>
+<div class="line"><span class="lineno">  150</span>    p.terminate()</div>
+<div class="line"><span class="lineno">  151</span>    ret = p.poll()</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">if</span> ret <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">  153</span>      <span class="keywordflow">return</span> ret</div>
+<div class="line"><span class="lineno">  154</span>    time.sleep(1 / freq)</div>
+<div class="line"><span class="lineno">  155</span>  p.kill()</div>
+<div class="line"><span class="lineno">  156</span>  <span class="keywordflow">return</span> p.wait()</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dd/d9c/gtp_8py_source.html#l00067">open_spiel.python.bots.gtp.GTPBot.close()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d98/namespaceopen__spiel_1_1python_1_1bots_1_1gtp_ab071cc29d33ea864805f559fc6546ded_icgraph.png" border="0" usemap="#ade/d98/namespaceopen__spiel_1_1python_1_1bots_1_1gtp_ab071cc29d33ea864805f559fc6546ded_icgraph" alt=""/></div>

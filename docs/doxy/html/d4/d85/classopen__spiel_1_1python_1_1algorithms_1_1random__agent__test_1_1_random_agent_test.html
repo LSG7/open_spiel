@@ -117,12 +117,57 @@ Collaboration diagram for open_spiel.python.algorithms.random_agent_test.RandomA
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2fe4609172bc1028927f5e83cfd4508c" id="r_a2fe4609172bc1028927f5e83cfd4508c"><td class="memItemLeft" align="right" valign="top"><a id="a2fe4609172bc1028927f5e83cfd4508c" name="a2fe4609172bc1028927f5e83cfd4508c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_step</b> (self)</td></tr>
+<tr class="memitem:a2fe4609172bc1028927f5e83cfd4508c" id="r_a2fe4609172bc1028927f5e83cfd4508c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fe4609172bc1028927f5e83cfd4508c">test_step</a> (self)</td></tr>
 <tr class="separator:a2fe4609172bc1028927f5e83cfd4508c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d2/dbc/random__agent__test_8py_source.html#l00023">23</a> of file <a class="el" href="../../d2/dbc/random__agent__test_8py_source.html">random_agent_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2fe4609172bc1028927f5e83cfd4508c" name="a2fe4609172bc1028927f5e83cfd4508c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe4609172bc1028927f5e83cfd4508c">&#9670;&#160;</a></span>test_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.random_agent_test.RandomAgentTest.test_step </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dbc/random__agent__test_8py_source.html#l00025">25</a> of file <a class="el" href="../../d2/dbc/random__agent__test_8py_source.html">random_agent_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>  <span class="keyword">def </span>test_step(self):</div>
+<div class="line"><span class="lineno">   26</span>    agent = random_agent.RandomAgent(player_id=0, num_actions=10)</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    legal_actions = [0, 2, 3, 5]</div>
+<div class="line"><span class="lineno">   29</span>    time_step = rl_environment.TimeStep(</div>
+<div class="line"><span class="lineno">   30</span>        observations={</div>
+<div class="line"><span class="lineno">   31</span>            <span class="stringliteral">&quot;info_state&quot;</span>: [[0], [1]],</div>
+<div class="line"><span class="lineno">   32</span>            <span class="stringliteral">&quot;legal_actions&quot;</span>: [legal_actions, []],</div>
+<div class="line"><span class="lineno">   33</span>            <span class="stringliteral">&quot;current_player&quot;</span>: 0</div>
+<div class="line"><span class="lineno">   34</span>        },</div>
+<div class="line"><span class="lineno">   35</span>        rewards=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   36</span>        discounts=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   37</span>        step_type=<span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">   38</span>    agent_output = agent.step(time_step)</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    self.assertIn(agent_output.action, legal_actions)</div>
+<div class="line"><span class="lineno">   41</span>    self.assertAlmostEqual(sum(agent_output.probs), 1.0)</div>
+<div class="line"><span class="lineno">   42</span>    self.assertEqual(</div>
+<div class="line"><span class="lineno">   43</span>        len([x <span class="keywordflow">for</span> x <span class="keywordflow">in</span> agent_output.probs <span class="keywordflow">if</span> x &gt; 0]), len(legal_actions))</div>
+<div class="line"><span class="lineno">   44</span>    self.assertTrue(</div>
+<div class="line"><span class="lineno">   45</span>        np.allclose(agent_output.probs[legal_actions], [.25] * 4, atol=1e-5))</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>random_agent_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d2/dbc/random__agent__test_8py_source.html">random_agent_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

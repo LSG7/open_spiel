@@ -105,13 +105,46 @@ Collaboration diagram for absl::container_internal::hash_internal::Generator&lt;
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a39d599489db073e60abc603d4c11ffab" id="r_a39d599489db073e60abc603d4c11ffab"><td class="memItemLeft" align="right" valign="top"><a id="a39d599489db073e60abc603d4c11ffab" name="a39d599489db073e60abc603d4c11ffab"></a>
-<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> () const</td></tr>
+<tr class="memitem:a39d599489db073e60abc603d4c11ffab" id="r_a39d599489db073e60abc603d4c11ffab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39d599489db073e60abc603d4c11ffab">operator()</a> () const</td></tr>
 <tr class="separator:a39d599489db073e60abc603d4c11ffab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html#l00111">111</a> of file <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html">hash_generator_testing.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a39d599489db073e60abc603d4c11ffab" name="a39d599489db073e60abc603d4c11ffab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d599489db073e60abc603d4c11ffab">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> <a class="el" href="../../d6/de7/structabsl_1_1container__internal_1_1hash__internal_1_1_generator.html">absl::container_internal::hash_internal::Generator</a>&lt; <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/de5/hash__generator__testing_8cc_source.html#l00061">61</a> of file <a class="el" href="../../db/de5/hash__generator__testing_8cc_source.html">hash_generator_testing.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                             {</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keyword">static</span> <span class="keyword">auto</span>* arena = <span class="keyword">new</span> std::deque&lt;std::string&gt;();</div>
+<div class="line"><span class="lineno">   63</span>  <span class="comment">// NOLINTNEXTLINE(runtime/int)</span></div>
+<div class="line"><span class="lineno">   64</span>  std::uniform_int_distribution&lt;short&gt; chars(0x20, 0x7E);</div>
+<div class="line"><span class="lineno">   65</span>  arena-&gt;emplace_back();</div>
+<div class="line"><span class="lineno">   66</span>  <span class="keyword">auto</span>&amp; res = arena-&gt;back();</div>
+<div class="line"><span class="lineno">   67</span>  res.resize(32);</div>
+<div class="line"><span class="lineno">   68</span>  std::generate(res.begin(), res.end(),</div>
+<div class="line"><span class="lineno">   69</span>                [&amp;]() { return chars(*GetSharedRng()); });</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">return</span> res;</div>
+<div class="line"><span class="lineno">   71</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html">hash_generator_testing.h</a></li>
-<li>open_spiel/abseil-cpp/absl/container/internal/<b>hash_generator_testing.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../db/de5/hash__generator__testing_8cc_source.html">hash_generator_testing.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -120,7 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad987d46a776501e64a129ef5ee777298" id="r_ad987d46a776501e64a129ef5ee777298"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad987d46a776501e64a129ef5ee777298">test_train</a> (self, name)</td></tr>
 <tr class="separator:ad987d46a776501e64a129ef5ee777298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/db1/average__network__fictitious__play__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../d7/db1/average__network__fictitious__play__test_8py_source.html">average_network_fictitious_play_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad987d46a776501e64a129ef5ee777298" name="ad987d46a776501e64a129ef5ee777298"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad987d46a776501e64a129ef5ee777298">&#9670;&#160;</a></span>test_train()</h2>
 
@@ -140,10 +143,66 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks that the training works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/db1/average__network__fictitious__play__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d7/db1/average__network__fictitious__play__test_8py_source.html">average_network_fictitious_play_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>  <span class="keyword">def </span>test_train(self, name):</div>
+<div class="line"><span class="lineno">   35</span>    <span class="stringliteral">&quot;&quot;&quot;Checks that the training works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   36</span>    game = pyspiel.load_game(name)</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keyword">assert</span> game.num_players() == 1</div>
+<div class="line"><span class="lineno">   38</span>    uniform_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   39</span>    uniform_dist = distribution.DistributionPolicy(game, uniform_policy)</div>
+<div class="line"><span class="lineno">   40</span>    env = rl_environment.Environment(</div>
+<div class="line"><span class="lineno">   41</span>        game, mfg_distribution=uniform_dist, mfg_population=0)</div>
+<div class="line"><span class="lineno">   42</span>    info_state_size = env.observation_spec()[<span class="stringliteral">&#39;info_state&#39;</span>][0]</div>
+<div class="line"><span class="lineno">   43</span>    num_actions = env.action_spec()[<span class="stringliteral">&#39;num_actions&#39;</span>]</div>
+<div class="line"><span class="lineno">   44</span>    np.random.seed(0)</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    dqn_args = {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="stringliteral">&#39;batch_size&#39;</span>: 32,</div>
+<div class="line"><span class="lineno">   48</span>        <span class="stringliteral">&#39;epsilon_end&#39;</span>: 0.1,</div>
+<div class="line"><span class="lineno">   49</span>        <span class="stringliteral">&#39;epsilon_start&#39;</span>: 0.1,</div>
+<div class="line"><span class="lineno">   50</span>        <span class="stringliteral">&#39;hidden_layers_sizes&#39;</span>: [128],</div>
+<div class="line"><span class="lineno">   51</span>        <span class="stringliteral">&#39;learn_every&#39;</span>: 32,</div>
+<div class="line"><span class="lineno">   52</span>        <span class="stringliteral">&#39;learning_rate&#39;</span>: 0.01,</div>
+<div class="line"><span class="lineno">   53</span>        <span class="stringliteral">&#39;min_buffer_size_to_learn&#39;</span>: 32,</div>
+<div class="line"><span class="lineno">   54</span>        <span class="stringliteral">&#39;optimizer_str&#39;</span>: <span class="stringliteral">&#39;adam&#39;</span>,</div>
+<div class="line"><span class="lineno">   55</span>        <span class="stringliteral">&#39;replay_buffer_capacity&#39;</span>: 2000,</div>
+<div class="line"><span class="lineno">   56</span>        <span class="stringliteral">&#39;update_target_network_every&#39;</span>: 32,</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span>    br_agent = dqn.DQN(0, info_state_size, num_actions, **dqn_args)</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    args = {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="stringliteral">&#39;batch_size&#39;</span>: 32,</div>
+<div class="line"><span class="lineno">   62</span>        <span class="stringliteral">&#39;hidden_layers_sizes&#39;</span>: [128],</div>
+<div class="line"><span class="lineno">   63</span>        <span class="stringliteral">&#39;reservoir_buffer_capacity&#39;</span>: 100000,</div>
+<div class="line"><span class="lineno">   64</span>        <span class="stringliteral">&#39;learning_rate&#39;</span>: 0.01,</div>
+<div class="line"><span class="lineno">   65</span>        <span class="stringliteral">&#39;min_buffer_size_to_learn&#39;</span>: 32,</div>
+<div class="line"><span class="lineno">   66</span>        <span class="stringliteral">&#39;optimizer_str&#39;</span>: <span class="stringliteral">&#39;adam&#39;</span>,</div>
+<div class="line"><span class="lineno">   67</span>        <span class="stringliteral">&#39;seed&#39;</span>: 0,</div>
+<div class="line"><span class="lineno">   68</span>        <span class="stringliteral">&#39;tau&#39;</span>: 1.0,</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   70</span>    fp = average_network_fictitious_play.AverageNetworkFictitiousPlay(</div>
+<div class="line"><span class="lineno">   71</span>        game, [env], [br_agent],</div>
+<div class="line"><span class="lineno">   72</span>        num_episodes_per_iteration=50,</div>
+<div class="line"><span class="lineno">   73</span>        num_training_steps_per_iteration=10,</div>
+<div class="line"><span class="lineno">   74</span>        **args)</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="comment"># Run several iterations.</span></div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(5):</div>
+<div class="line"><span class="lineno">   78</span>      training.run_episodes([env], [br_agent],</div>
+<div class="line"><span class="lineno">   79</span>                            num_episodes=50,</div>
+<div class="line"><span class="lineno">   80</span>                            is_evaluation=<span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   81</span>      fp.iteration()</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <span class="comment"># Just sanity check.</span></div>
+<div class="line"><span class="lineno">   84</span>    nash_conv_fp = nash_conv.NashConv(game, fp.policy)</div>
+<div class="line"><span class="lineno">   85</span>    self.assertLessEqual(nash_conv_fp.nash_conv(), 15)</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/<b>average_network_fictitious_play_test.py</b></li>
+<li>open_spiel/python/mfg/algorithms/<a class="el" href="../../d7/db1/average__network__fictitious__play__test_8py_source.html">average_network_fictitious_play_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

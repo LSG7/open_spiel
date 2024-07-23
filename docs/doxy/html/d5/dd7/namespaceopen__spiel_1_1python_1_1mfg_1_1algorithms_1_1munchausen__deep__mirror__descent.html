@@ -114,11 +114,9 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:ad513c13d277cbba4a37059ba7607ffd9" id="r_ad513c13d277cbba4a37059ba7607ffd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad513c13d277cbba4a37059ba7607ffd9">Transition</a></td></tr>
 <tr class="separator:ad513c13d277cbba4a37059ba7607ffd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3eeca001b6f7013b8425a463fd7fc80e" id="r_a3eeca001b6f7013b8425a463fd7fc80e"><td class="memItemLeft" align="right" valign="top"><a id="a3eeca001b6f7013b8425a463fd7fc80e" name="a3eeca001b6f7013b8425a463fd7fc80e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>ILLEGAL_ACTION_PENALTY</b> = -1e9</td></tr>
+<tr class="memitem:a3eeca001b6f7013b8425a463fd7fc80e" id="r_a3eeca001b6f7013b8425a463fd7fc80e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eeca001b6f7013b8425a463fd7fc80e">ILLEGAL_ACTION_PENALTY</a> = -1e9</td></tr>
 <tr class="separator:a3eeca001b6f7013b8425a463fd7fc80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3949330362f60cd9bcd1d900379cc87" id="r_aa3949330362f60cd9bcd1d900379cc87"><td class="memItemLeft" align="right" valign="top"><a id="aa3949330362f60cd9bcd1d900379cc87" name="aa3949330362f60cd9bcd1d900379cc87"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>MIN_ACTION_PROB</b> = 1e-6</td></tr>
+<tr class="memitem:aa3949330362f60cd9bcd1d900379cc87" id="r_aa3949330362f60cd9bcd1d900379cc87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3949330362f60cd9bcd1d900379cc87">MIN_ACTION_PROB</a> = 1e-6</td></tr>
 <tr class="separator:aa3949330362f60cd9bcd1d900379cc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -145,7 +143,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MIN_ACTION_PROB</b> = 
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns a copy of the params.</pre> <div class="dynheader">
+<pre class="fragment">Returns a copy of the params.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00047">47</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span><span class="keyword">def </span>_copy_params(params):</div>
+<div class="line"><span class="lineno">   48</span>  <span class="stringliteral">&quot;&quot;&quot;Returns a copy of the params.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">return</span> jax.tree_util.tree_map(<span class="keyword">lambda</span> x: x.copy(), params)</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00087">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.__init__()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00188">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.step()</a>, and <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00429">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.update_prev_q_network()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/dd7/namespaceopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__deep__mirror__descent_a43edaad999620848e83e450f8c2ee6f0_icgraph.png" border="0" usemap="#ad5/dd7/namespaceopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__deep__mirror__descent_a43edaad999620848e83e450f8c2ee6f0_icgraph" alt=""/></div>
@@ -183,6 +190,38 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a3eeca001b6f7013b8425a463fd7fc80e" name="a3eeca001b6f7013b8425a463fd7fc80e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eeca001b6f7013b8425a463fd7fc80e">&#9670;&#160;</a></span>ILLEGAL_ACTION_PENALTY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.ILLEGAL_ACTION_PENALTY = -1e9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00042">42</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+
+</div>
+</div>
+<a id="aa3949330362f60cd9bcd1d900379cc87" name="aa3949330362f60cd9bcd1d900379cc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3949330362f60cd9bcd1d900379cc87">&#9670;&#160;</a></span>MIN_ACTION_PROB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MIN_ACTION_PROB = 1e-6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00044">44</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+
+</div>
+</div>
 <a id="ad513c13d277cbba4a37059ba7607ffd9" name="ad513c13d277cbba4a37059ba7607ffd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad513c13d277cbba4a37059ba7607ffd9">&#9670;&#160;</a></span>Transition</h2>
 
@@ -199,6 +238,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    3</span>    <span class="stringliteral">&quot;info_state action legal_one_hots reward next_info_state is_final_step &quot;</span></div>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;next_legal_one_hots&quot;</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00034">34</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

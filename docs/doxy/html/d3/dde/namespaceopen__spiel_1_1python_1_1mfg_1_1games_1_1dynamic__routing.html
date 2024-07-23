@@ -116,8 +116,7 @@ Variables</h2></td></tr>
 <tr class="separator:ac78ebdca256dc6ff5bce1488eb09b15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae926661a25bef38e769ed139434ba862" id="r_ae926661a25bef38e769ed139434ba862"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae926661a25bef38e769ed139434ba862">_GAME_TYPE</a></td></tr>
 <tr class="separator:ae926661a25bef38e769ed139434ba862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94f0ed40f463fe5f61c3d4993e096753" id="r_a94f0ed40f463fe5f61c3d4993e096753"><td class="memItemLeft" align="right" valign="top"><a id="a94f0ed40f463fe5f61c3d4993e096753" name="a94f0ed40f463fe5f61c3d4993e096753"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>WAITING_TIME_NOT_ASSIGNED</b> = -1</td></tr>
+<tr class="memitem:a94f0ed40f463fe5f61c3d4993e096753" id="r_a94f0ed40f463fe5f61c3d4993e096753"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94f0ed40f463fe5f61c3d4993e096753">WAITING_TIME_NOT_ASSIGNED</a> = -1</td></tr>
 <tr class="separator:a94f0ed40f463fe5f61c3d4993e096753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -210,7 +209,50 @@ Args:
 
 Returns:
   state_string: string representing uniquely the mean field game.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html#l00072">72</a> of file <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html">dynamic_routing.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>) -&gt; str:</div>
+<div class="line"><span class="lineno">   81</span>  <span class="stringliteral">&quot;&quot;&quot;Convert the state to a string representation.</span></div>
+<div class="line"><span class="lineno">   82</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   83</span><span class="stringliteral">  As the string representation will be used in dictionaries for various</span></div>
+<div class="line"><span class="lineno">   84</span><span class="stringliteral">  algorithms that computes the state value, expected return, best response or</span></div>
+<div class="line"><span class="lineno">   85</span><span class="stringliteral">  find the mean field Nash equilibrium.</span></div>
+<div class="line"><span class="lineno">   86</span><span class="stringliteral">  The state is uniquely define by the current time, the type of node</span></div>
+<div class="line"><span class="lineno">   87</span><span class="stringliteral">  (decision, mean field or chance), the vehicle location, its destination and</span></div>
+<div class="line"><span class="lineno">   88</span><span class="stringliteral">  its waiting time.</span></div>
+<div class="line"><span class="lineno">   89</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   90</span><span class="stringliteral">    is_chance_init: True if at chance initialization.</span></div>
+<div class="line"><span class="lineno">   91</span><span class="stringliteral">    location: the location of the representative player.</span></div>
+<div class="line"><span class="lineno">   92</span><span class="stringliteral">    time_step: the current time step.</span></div>
+<div class="line"><span class="lineno">   93</span><span class="stringliteral">    player_id: the current node type as a player id.</span></div>
+<div class="line"><span class="lineno">   94</span><span class="stringliteral">    waiting_time: the representative player waiting time.</span></div>
+<div class="line"><span class="lineno">   95</span><span class="stringliteral">    destination: the destination of the representative player.</span></div>
+<div class="line"><span class="lineno">   96</span><span class="stringliteral">    final_arrival_time: time of arrival.</span></div>
+<div class="line"><span class="lineno">   97</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   98</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   99</span><span class="stringliteral">    state_string: string representing uniquely the mean field game.</span></div>
+<div class="line"><span class="lineno">  100</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">if</span> is_chance_init:</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;initial chance node&quot;</span></div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">if</span> player_id == pyspiel.PlayerId.DEFAULT_PLAYER_ID:</div>
+<div class="line"><span class="lineno">  104</span>    time = str(time_step)</div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">elif</span> player_id == pyspiel.PlayerId.MEAN_FIELD:</div>
+<div class="line"><span class="lineno">  106</span>    time = f<span class="stringliteral">&quot;{time_step}_mean_field&quot;</span></div>
+<div class="line"><span class="lineno">  107</span>  <span class="keywordflow">elif</span> player_id == pyspiel.PlayerId.CHANCE:</div>
+<div class="line"><span class="lineno">  108</span>    time = f<span class="stringliteral">&quot;{time_step}_chance&quot;</span></div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">raise</span> ValueError(</div>
+<div class="line"><span class="lineno">  111</span>        <span class="stringliteral">&quot;Player id should be DEFAULT_PLAYER_ID, MEAN_FIELD or CHANCE&quot;</span>)</div>
+<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">if</span> final_arrival_time:</div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">return</span> (f<span class="stringliteral">&quot;Arrived at {location}, with arrival time &quot;</span></div>
+<div class="line"><span class="lineno">  114</span>            f<span class="stringliteral">&quot;{final_arrival_time}, t={time}&quot;</span>)</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">return</span> (f<span class="stringliteral">&quot;Location={location}, waiting_time={waiting_time},&quot;</span></div>
+<div class="line"><span class="lineno">  116</span>          f<span class="stringliteral">&quot; t={time}, destination=&#39;{destination}&#39;&quot;</span>)</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html#l00313">open_spiel.python.mfg.games.dynamic_routing.MeanFieldRoutingGameState.state_to_str()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/dde/namespaceopen__spiel_1_1python_1_1mfg_1_1games_1_1dynamic__routing_a1ae4fcd193f8647198839af952319b5b_icgraph.png" border="0" usemap="#ad3/dde/namespaceopen__spiel_1_1python_1_1mfg_1_1games_1_1dynamic__routing_a1ae4fcd193f8647198839af952319b5b_icgraph" alt=""/></div>
@@ -423,6 +465,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;players&quot;</span>: -1</div>
 <div class="line"><span class="lineno">    5</span>}</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html#l00045">45</a> of file <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html">dynamic_routing.py</a>.</p>
+
 </div>
 </div>
 <a id="ae926661a25bef38e769ed139434ba862" name="ae926661a25bef38e769ed139434ba862"></a>
@@ -462,6 +506,24 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   16</span>    provides_factored_observation_string=<span class="keyword">True</span>,</div>
 <div class="line"><span class="lineno">   17</span>    parameter_specification=_DEFAULT_PARAMS)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html#l00050">50</a> of file <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html">dynamic_routing.py</a>.</p>
+
+</div>
+</div>
+<a id="a94f0ed40f463fe5f61c3d4993e096753" name="a94f0ed40f463fe5f61c3d4993e096753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94f0ed40f463fe5f61c3d4993e096753">&#9670;&#160;</a></span>WAITING_TIME_NOT_ASSIGNED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.mfg.games.dynamic_routing.WAITING_TIME_NOT_ASSIGNED = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html#l00068">68</a> of file <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html">dynamic_routing.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

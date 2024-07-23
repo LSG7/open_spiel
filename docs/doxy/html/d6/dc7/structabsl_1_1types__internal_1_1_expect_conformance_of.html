@@ -108,44 +108,346 @@ Collaboration diagram for absl::types_internal::ExpectConformanceOf&lt; ExpectSu
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5900fbc6130618fed27a7c6d19d38d93" id="r_a5900fbc6130618fed27a7c6d19d38d93"><td class="memTemplParams" colspan="2"><a id="a5900fbc6130618fed27a7c6d19d38d93" name="a5900fbc6130618fed27a7c6d19d38d93"></a>
-template&lt;class Fun , absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; &gt;, T &gt;::value &gt; **  = nullptr&gt; </td></tr>
-<tr class="memitem:a5900fbc6130618fed27a7c6d19d38d93"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Fun &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>initializer</b> (<a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; fun) &amp;&amp;</td></tr>
+<tr class="memitem:a5900fbc6130618fed27a7c6d19d38d93" id="r_a5900fbc6130618fed27a7c6d19d38d93"><td class="memTemplParams" colspan="2">template&lt;class Fun , absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; &gt;, T &gt;::value &gt; **  = nullptr&gt; </td></tr>
+<tr class="memitem:a5900fbc6130618fed27a7c6d19d38d93"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Fun &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5900fbc6130618fed27a7c6d19d38d93">initializer</a> (<a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; fun) &amp;&amp;</td></tr>
 <tr class="separator:a5900fbc6130618fed27a7c6d19d38d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ffb1171a64acad4a8e84c000914591f" id="r_a8ffb1171a64acad4a8e84c000914591f"><td class="memTemplParams" colspan="2"><a id="a8ffb1171a64acad4a8e84c000914591f" name="a8ffb1171a64acad4a8e84c000914591f"></a>
-template&lt;class... TestNames, absl::enable_if_t&lt;!ExpectSuccess &amp;&amp;sizeof...(EqClasses)==0 &amp;&amp;<a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_convertible&lt; TestNames, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> &gt;... &gt;::value &gt; **  = nullptr&gt; </td></tr>
-<tr class="memitem:a8ffb1171a64acad4a8e84c000914591f"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>due_to</b> (TestNames &amp;&amp;... test_names) &amp;&amp;</td></tr>
+<tr class="memitem:a8ffb1171a64acad4a8e84c000914591f" id="r_a8ffb1171a64acad4a8e84c000914591f"><td class="memTemplParams" colspan="2">template&lt;class... TestNames, absl::enable_if_t&lt;!ExpectSuccess &amp;&amp;sizeof...(EqClasses)==0 &amp;&amp;<a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_convertible&lt; TestNames, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> &gt;... &gt;::value &gt; **  = nullptr&gt; </td></tr>
+<tr class="memitem:a8ffb1171a64acad4a8e84c000914591f"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8ffb1171a64acad4a8e84c000914591f">due_to</a> (TestNames &amp;&amp;... test_names) &amp;&amp;</td></tr>
 <tr class="separator:a8ffb1171a64acad4a8e84c000914591f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a259fb213c22ba60ce15e3e40029c3fa7" id="r_a259fb213c22ba60ce15e3e40029c3fa7"><td class="memTemplParams" colspan="2"><a id="a259fb213c22ba60ce15e3e40029c3fa7" name="a259fb213c22ba60ce15e3e40029c3fa7"></a>
-template&lt;class... TestNames, int  = 0, absl::enable_if_t&lt; ExpectSuccess &amp;&amp;sizeof...(EqClasses)==0 &amp;&amp;<a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_convertible&lt; TestNames, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> &gt;... &gt;::value &gt; **  = nullptr&gt; </td></tr>
-<tr class="memitem:a259fb213c22ba60ce15e3e40029c3fa7"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>due_to</b> (TestNames &amp;&amp;... test_names) &amp;&amp;</td></tr>
+<tr class="memitem:a259fb213c22ba60ce15e3e40029c3fa7" id="r_a259fb213c22ba60ce15e3e40029c3fa7"><td class="memTemplParams" colspan="2">template&lt;class... TestNames, int  = 0, absl::enable_if_t&lt; ExpectSuccess &amp;&amp;sizeof...(EqClasses)==0 &amp;&amp;<a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_convertible&lt; TestNames, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> &gt;... &gt;::value &gt; **  = nullptr&gt; </td></tr>
+<tr class="memitem:a259fb213c22ba60ce15e3e40029c3fa7"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a259fb213c22ba60ce15e3e40029c3fa7">due_to</a> (TestNames &amp;&amp;... test_names) &amp;&amp;</td></tr>
 <tr class="separator:a259fb213c22ba60ce15e3e40029c3fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb351fcbc626eb4ef45c5de140c6f848" id="r_adb351fcbc626eb4ef45c5de140c6f848"><td class="memTemplParams" colspan="2"><a id="adb351fcbc626eb4ef45c5de140c6f848" name="adb351fcbc626eb4ef45c5de140c6f848"></a>
-template&lt;class Fun , absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; &gt;, T &gt;::value &gt; **  = nullptr&gt; </td></tr>
-<tr class="memitem:adb351fcbc626eb4ef45c5de140c6f848"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Fun &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>dont_class_directly_stateful_initializer</b> (<a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; fun) &amp;&amp;</td></tr>
+<tr class="memitem:adb351fcbc626eb4ef45c5de140c6f848" id="r_adb351fcbc626eb4ef45c5de140c6f848"><td class="memTemplParams" colspan="2">template&lt;class Fun , absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; &gt;, T &gt;::value &gt; **  = nullptr&gt; </td></tr>
+<tr class="memitem:adb351fcbc626eb4ef45c5de140c6f848"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Fun &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adb351fcbc626eb4ef45c5de140c6f848">dont_class_directly_stateful_initializer</a> (<a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; fun) &amp;&amp;</td></tr>
 <tr class="separator:adb351fcbc626eb4ef45c5de140c6f848"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90c11aa58bcb44a86619d3df86b16ea3" id="r_a90c11aa58bcb44a86619d3df86b16ea3"><td class="memTemplParams" colspan="2"><a id="a90c11aa58bcb44a86619d3df86b16ea3" name="a90c11aa58bcb44a86619d3df86b16ea3"></a>
-template&lt;class... Funs, absl::void_t&lt; absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Funs &gt; &gt;, T &gt;::value &gt;... &gt; **  = nullptr&gt; </td></tr>
-<tr class="memitem:a90c11aa58bcb44a86619d3df86b16ea3"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Funs... &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>equivalence_class</b> (<a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Funs &gt;... funs) &amp;&amp;</td></tr>
+<tr class="memitem:a90c11aa58bcb44a86619d3df86b16ea3" id="r_a90c11aa58bcb44a86619d3df86b16ea3"><td class="memTemplParams" colspan="2">template&lt;class... Funs, absl::void_t&lt; absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Funs &gt; &gt;, T &gt;::value &gt;... &gt; **  = nullptr&gt; </td></tr>
+<tr class="memitem:a90c11aa58bcb44a86619d3df86b16ea3"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Funs... &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a90c11aa58bcb44a86619d3df86b16ea3">equivalence_class</a> (<a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Funs &gt;... funs) &amp;&amp;</td></tr>
 <tr class="separator:a90c11aa58bcb44a86619d3df86b16ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a503f72ee4040ac62abd89fab141a0561" id="r_a503f72ee4040ac62abd89fab141a0561"><td class="memTemplParams" colspan="2"><a id="a503f72ee4040ac62abd89fab141a0561" name="a503f72ee4040ac62abd89fab141a0561"></a>
-template&lt;class ProfRange , absl::enable_if_t&lt; <a class="el" href="../../d8/db3/structabsl_1_1types__internal_1_1_is_profile_or_profile_range.html">IsProfileOrProfileRange</a>&lt; ProfRange &gt;::value &gt; **  = nullptr&gt; </td></tr>
-<tr class="memitem:a503f72ee4040ac62abd89fab141a0561"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT::testing::AssertionResult&#160;</td><td class="memTemplItemRight" valign="bottom"><b>with_strict_profile</b> (ProfRange)</td></tr>
+<tr class="memitem:a503f72ee4040ac62abd89fab141a0561" id="r_a503f72ee4040ac62abd89fab141a0561"><td class="memTemplParams" colspan="2">template&lt;class ProfRange , absl::enable_if_t&lt; <a class="el" href="../../d8/db3/structabsl_1_1types__internal_1_1_is_profile_or_profile_range.html">IsProfileOrProfileRange</a>&lt; ProfRange &gt;::value &gt; **  = nullptr&gt; </td></tr>
+<tr class="memitem:a503f72ee4040ac62abd89fab141a0561"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT::testing::AssertionResult&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a503f72ee4040ac62abd89fab141a0561">with_strict_profile</a> (ProfRange)</td></tr>
 <tr class="separator:a503f72ee4040ac62abd89fab141a0561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f89d43a414586aa5a87aa44dcc9663" id="r_a80f89d43a414586aa5a87aa44dcc9663"><td class="memTemplParams" colspan="2"><a id="a80f89d43a414586aa5a87aa44dcc9663" name="a80f89d43a414586aa5a87aa44dcc9663"></a>
-template&lt;class Prof , absl::enable_if_t&lt; <a class="el" href="../../d7/dde/structabsl_1_1types__internal_1_1_is_profile.html">IsProfile</a>&lt; Prof &gt;::value &gt; **  = nullptr&gt; </td></tr>
-<tr class="memitem:a80f89d43a414586aa5a87aa44dcc9663"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT::testing::AssertionResult&#160;</td><td class="memTemplItemRight" valign="bottom"><b>with_loose_profile</b> (Prof)</td></tr>
+<tr class="memitem:a80f89d43a414586aa5a87aa44dcc9663" id="r_a80f89d43a414586aa5a87aa44dcc9663"><td class="memTemplParams" colspan="2">template&lt;class Prof , absl::enable_if_t&lt; <a class="el" href="../../d7/dde/structabsl_1_1types__internal_1_1_is_profile.html">IsProfile</a>&lt; Prof &gt;::value &gt; **  = nullptr&gt; </td></tr>
+<tr class="memitem:a80f89d43a414586aa5a87aa44dcc9663"><td class="memTemplItemLeft" align="right" valign="top">ABSL_MUST_USE_RESULT::testing::AssertionResult&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a80f89d43a414586aa5a87aa44dcc9663">with_loose_profile</a> (Prof)</td></tr>
 <tr class="separator:a80f89d43a414586aa5a87aa44dcc9663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2197768e498666c094263764580cbe3f" id="r_a2197768e498666c094263764580cbe3f"><td class="memItemLeft" align="right" valign="top"><a id="a2197768e498666c094263764580cbe3f" name="a2197768e498666c094263764580cbe3f"></a>
-<a class="el" href="../../d6/d7e/structabsl_1_1types__internal_1_1_ordered_equivalence_classes.html">OrderedEquivalenceClasses</a>&lt; EqClasses... &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ordered_vals</b></td></tr>
+<tr class="memitem:a2197768e498666c094263764580cbe3f" id="r_a2197768e498666c094263764580cbe3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d7e/structabsl_1_1types__internal_1_1_ordered_equivalence_classes.html">OrderedEquivalenceClasses</a>&lt; EqClasses... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2197768e498666c094263764580cbe3f">ordered_vals</a></td></tr>
 <tr class="separator:a2197768e498666c094263764580cbe3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae2747f77f21f52c59a20321568cd1b8" id="r_aae2747f77f21f52c59a20321568cd1b8"><td class="memItemLeft" align="right" valign="top"><a id="aae2747f77f21f52c59a20321568cd1b8" name="aae2747f77f21f52c59a20321568cd1b8"></a>
-std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>expected_failed_tests</b></td></tr>
+<tr class="memitem:aae2747f77f21f52c59a20321568cd1b8" id="r_aae2747f77f21f52c59a20321568cd1b8"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae2747f77f21f52c59a20321568cd1b8">expected_failed_tests</a></td></tr>
 <tr class="separator:aae2747f77f21f52c59a20321568cd1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;bool ExpectSuccess, class T, class... EqClasses&gt;<br />
+struct absl::types_internal::ExpectConformanceOf&lt; ExpectSuccess, T, EqClasses &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01151">1151</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="adb351fcbc626eb4ef45c5de140c6f848" name="adb351fcbc626eb4ef45c5de140c6f848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb351fcbc626eb4ef45c5de140c6f848">&#9670;&#160;</a></span>dont_class_directly_stateful_initializer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+<div class="memtemplate">
+template&lt;class Fun , absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; &gt;, T &gt;::value &gt; **  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Fun &gt; &gt; <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::dont_class_directly_stateful_initializer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt;</td>          <td class="paramname"><span class="paramname"><em>fun</em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01210">1210</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1210</span>                                                                      {</div>
+<div class="line"><span class="lineno"> 1211</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno"> 1212</span>        {std::tuple_cat(absl::move(ordered_vals.eq_classes),</div>
+<div class="line"><span class="lineno"> 1213</span>                        std::make_tuple((EquivalenceClass)(absl::move(fun))))},</div>
+<div class="line"><span class="lineno"> 1214</span>        std::move(expected_failed_tests)};</div>
+<div class="line"><span class="lineno"> 1215</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8ffb1171a64acad4a8e84c000914591f" name="a8ffb1171a64acad4a8e84c000914591f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ffb1171a64acad4a8e84c000914591f">&#9670;&#160;</a></span>due_to() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+<div class="memtemplate">
+template&lt;class... TestNames, absl::enable_if_t&lt;!ExpectSuccess &amp;&amp;sizeof...(EqClasses)==0 &amp;&amp;<a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_convertible&lt; TestNames, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> &gt;... &gt;::value &gt; **  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses... &gt; <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::due_to </td>
+          <td>(</td>
+          <td class="paramtype">TestNames &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>test_names</em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01177">1177</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1177</span>                                       {</div>
+<div class="line"><span class="lineno"> 1178</span>    (InsertEach)(&amp;expected_failed_tests,</div>
+<div class="line"><span class="lineno"> 1179</span>                 absl::AsciiStrToLower(<a class="code hl_class" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>(test_names))...);</div>
+<div class="line"><span class="lineno"> 1180</span> </div>
+<div class="line"><span class="lineno"> 1181</span>    <span class="keywordflow">return</span> {absl::move(ordered_vals), std::move(expected_failed_tests)};</div>
+<div class="line"><span class="lineno"> 1182</span>  }</div>
+<div class="ttc" id="aclassabsl_1_1string__view_html"><div class="ttname"><a href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1d/string__view_8h_source.html#l00161">string_view.h:161</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a259fb213c22ba60ce15e3e40029c3fa7" name="a259fb213c22ba60ce15e3e40029c3fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259fb213c22ba60ce15e3e40029c3fa7">&#9670;&#160;</a></span>due_to() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+<div class="memtemplate">
+template&lt;class... TestNames, int  = 0, absl::enable_if_t&lt; ExpectSuccess &amp;&amp;sizeof...(EqClasses)==0 &amp;&amp;<a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_convertible&lt; TestNames, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> &gt;... &gt;::value &gt; **  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses... &gt; <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::due_to </td>
+          <td>(</td>
+          <td class="paramtype">TestNames &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>test_names</em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01190">1190</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1190</span>                                       {</div>
+<div class="line"><span class="lineno"> 1191</span>    <span class="comment">// TODO(calabrese) Instead have DUE_TO only exist via a CRTP base.</span></div>
+<div class="line"><span class="lineno"> 1192</span>    <span class="comment">// This would produce better errors messages than the static_assert.</span></div>
+<div class="line"><span class="lineno"> 1193</span>    <span class="keyword">static_assert</span>(!ExpectSuccess,</div>
+<div class="line"><span class="lineno"> 1194</span>                  <span class="stringliteral">&quot;DUE_TO cannot be called when conformance is expected -- did &quot;</span></div>
+<div class="line"><span class="lineno"> 1195</span>                  <span class="stringliteral">&quot;you mean to use ASSERT_NONCONFORMANCE_OF?&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1196</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a90c11aa58bcb44a86619d3df86b16ea3" name="a90c11aa58bcb44a86619d3df86b16ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c11aa58bcb44a86619d3df86b16ea3">&#9670;&#160;</a></span>equivalence_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+<div class="memtemplate">
+template&lt;class... Funs, absl::void_t&lt; absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Funs &gt; &gt;, T &gt;::value &gt;... &gt; **  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Funs... &gt; &gt; <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::equivalence_class </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Funs &gt;...</td>          <td class="paramname"><span class="paramname"><em>funs</em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01225">1225</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1225</span>                                                    {</div>
+<div class="line"><span class="lineno"> 1226</span>    <span class="keywordflow">return</span> {{std::tuple_cat(</div>
+<div class="line"><span class="lineno"> 1227</span>                absl::move(ordered_vals.eq_classes),</div>
+<div class="line"><span class="lineno"> 1228</span>                std::make_tuple((EquivalenceClass)(absl::move(funs)...)))},</div>
+<div class="line"><span class="lineno"> 1229</span>            std::move(expected_failed_tests)};</div>
+<div class="line"><span class="lineno"> 1230</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5900fbc6130618fed27a7c6d19d38d93" name="a5900fbc6130618fed27a7c6d19d38d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5900fbc6130618fed27a7c6d19d38d93">&#9670;&#160;</a></span>initializer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+<div class="memtemplate">
+template&lt;class Fun , absl::enable_if_t&lt; std::is_same&lt; ResultOfGeneratorT&lt; <a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt; &gt;, T &gt;::value &gt; **  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSL_MUST_USE_RESULT <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses..., <a class="el" href="../../da/ddb/structabsl_1_1types__internal_1_1_equivalence_class_type.html">EquivalenceClassType</a>&lt; Fun &gt; &gt; <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::initializer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/dce/structabsl_1_1types__internal_1_1_generator_type.html">GeneratorType</a>&lt; Fun &gt;</td>          <td class="paramname"><span class="paramname"><em>fun</em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01164">1164</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1164</span>                                         {</div>
+<div class="line"><span class="lineno"> 1165</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno"> 1166</span>        {std::tuple_cat(absl::move(ordered_vals.eq_classes),</div>
+<div class="line"><span class="lineno"> 1167</span>                        std::make_tuple((EquivalenceClass)(absl::move(fun))))},</div>
+<div class="line"><span class="lineno"> 1168</span>        std::move(expected_failed_tests)};</div>
+<div class="line"><span class="lineno"> 1169</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a80f89d43a414586aa5a87aa44dcc9663" name="a80f89d43a414586aa5a87aa44dcc9663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f89d43a414586aa5a87aa44dcc9663">&#9670;&#160;</a></span>with_loose_profile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+<div class="memtemplate">
+template&lt;class Prof , absl::enable_if_t&lt; <a class="el" href="../../d7/dde/structabsl_1_1types__internal_1_1_is_profile.html">IsProfile</a>&lt; Prof &gt;::value &gt; **  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSL_MUST_USE_RESULT::testing::AssertionResult <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::with_loose_profile </td>
+          <td>(</td>
+          <td class="paramtype">Prof</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01253">1253</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1254</span>              {</div>
+<div class="line"><span class="lineno"> 1255</span>    ConformanceErrors test_result =</div>
+<div class="line"><span class="lineno"> 1256</span>        (ExpectRegularityImpl&lt;</div>
+<div class="line"><span class="lineno"> 1257</span>            T, Prof, Prof,</div>
+<div class="line"><span class="lineno"> 1258</span>            CombineProfiles&lt;TriviallyCompleteProfile,</div>
+<div class="line"><span class="lineno"> 1259</span>                            NothrowComparableProfile&gt;&gt;)(absl::</div>
+<div class="line"><span class="lineno"> 1260</span>                                                            move(ordered_vals));</div>
+<div class="line"><span class="lineno"> 1261</span> </div>
+<div class="line"><span class="lineno"> 1262</span>    <span class="keywordflow">return</span> ExpectSuccess ? test_result.assertionResult()</div>
+<div class="line"><span class="lineno"> 1263</span>                         : test_result.expectFailedTests(expected_failed_tests);</div>
+<div class="line"><span class="lineno"> 1264</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a503f72ee4040ac62abd89fab141a0561" name="a503f72ee4040ac62abd89fab141a0561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a503f72ee4040ac62abd89fab141a0561">&#9670;&#160;</a></span>with_strict_profile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+<div class="memtemplate">
+template&lt;class ProfRange , absl::enable_if_t&lt; <a class="el" href="../../d8/db3/structabsl_1_1types__internal_1_1_is_profile_or_profile_range.html">IsProfileOrProfileRange</a>&lt; ProfRange &gt;::value &gt; **  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ABSL_MUST_USE_RESULT::testing::AssertionResult <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::with_strict_profile </td>
+          <td>(</td>
+          <td class="paramtype">ProfRange</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01237">1237</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1238</span>                   {</div>
+<div class="line"><span class="lineno"> 1239</span>    ConformanceErrors test_result =</div>
+<div class="line"><span class="lineno"> 1240</span>        (ExpectRegularityImpl&lt;</div>
+<div class="line"><span class="lineno"> 1241</span>            T, LogicalProfileOfT&lt;ProfRange&gt;, MinProfileOfT&lt;ProfRange&gt;,</div>
+<div class="line"><span class="lineno"> 1242</span>            MaxProfileOfT&lt;ProfRange&gt;&gt;)(absl::move(ordered_vals));</div>
+<div class="line"><span class="lineno"> 1243</span> </div>
+<div class="line"><span class="lineno"> 1244</span>    <span class="keywordflow">return</span> ExpectSuccess ? test_result.assertionResult()</div>
+<div class="line"><span class="lineno"> 1245</span>                         : test_result.expectFailedTests(expected_failed_tests);</div>
+<div class="line"><span class="lineno"> 1246</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aae2747f77f21f52c59a20321568cd1b8" name="aae2747f77f21f52c59a20321568cd1b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae2747f77f21f52c59a20321568cd1b8">&#9670;&#160;</a></span>expected_failed_tests</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;std::string&gt; <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::expected_failed_tests</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01267">1267</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+
+</div>
+</div>
+<a id="a2197768e498666c094263764580cbe3f" name="a2197768e498666c094263764580cbe3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2197768e498666c094263764580cbe3f">&#9670;&#160;</a></span>ordered_vals</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool ExpectSuccess, class T , class... EqClasses&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d7e/structabsl_1_1types__internal_1_1_ordered_equivalence_classes.html">OrderedEquivalenceClasses</a>&lt;EqClasses...&gt; <a class="el" href="../../d6/dc7/structabsl_1_1types__internal_1_1_expect_conformance_of.html">absl::types_internal::ExpectConformanceOf</a>&lt; ExpectSuccess, T, EqClasses &gt;::ordered_vals</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l01266">1266</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a></li>
 </ul>

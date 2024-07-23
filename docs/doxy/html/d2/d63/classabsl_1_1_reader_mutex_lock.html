@@ -105,11 +105,9 @@ Collaboration diagram for absl::ReaderMutexLock:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a67e7ffa77c485252b818154dc342778d" id="r_a67e7ffa77c485252b818154dc342778d"><td class="memItemLeft" align="right" valign="top"><a id="a67e7ffa77c485252b818154dc342778d" name="a67e7ffa77c485252b818154dc342778d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ReaderMutexLock</b> (<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *mu) ABSL_SHARED_LOCK_FUNCTION(mu)</td></tr>
+<tr class="memitem:a67e7ffa77c485252b818154dc342778d" id="r_a67e7ffa77c485252b818154dc342778d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67e7ffa77c485252b818154dc342778d">ReaderMutexLock</a> (<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *mu) ABSL_SHARED_LOCK_FUNCTION(mu)</td></tr>
 <tr class="separator:a67e7ffa77c485252b818154dc342778d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00a2e63be45043000544dae4ea8f9942" id="r_a00a2e63be45043000544dae4ea8f9942"><td class="memItemLeft" align="right" valign="top"><a id="a00a2e63be45043000544dae4ea8f9942" name="a00a2e63be45043000544dae4ea8f9942"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ReaderMutexLock</b> (<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *mu, const <a class="el" href="../../d4/daa/classabsl_1_1_condition.html">Condition</a> &amp;cond) ABSL_SHARED_LOCK_FUNCTION(mu)</td></tr>
+<tr class="memitem:a00a2e63be45043000544dae4ea8f9942" id="r_a00a2e63be45043000544dae4ea8f9942"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00a2e63be45043000544dae4ea8f9942">ReaderMutexLock</a> (<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *mu, const <a class="el" href="../../d4/daa/classabsl_1_1_condition.html">Condition</a> &amp;cond) ABSL_SHARED_LOCK_FUNCTION(mu)</td></tr>
 <tr class="separator:a00a2e63be45043000544dae4ea8f9942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18a76439728488741a922baf02008d05" id="r_a18a76439728488741a922baf02008d05"><td class="memItemLeft" align="right" valign="top"><a id="a18a76439728488741a922baf02008d05" name="a18a76439728488741a922baf02008d05"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ReaderMutexLock</b> (const <a class="el" href="../../d2/d63/classabsl_1_1_reader_mutex_lock.html">ReaderMutexLock</a> &amp;)=delete</td></tr>
@@ -124,6 +122,102 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../d2/d63/classabsl_1_1_reader_mutex_lock.html">ReaderMutexLock</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d2/d63/classabsl_1_1_reader_mutex_lock.html">ReaderMutexLock</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a76438efb8bdb91cf8c55e932d234cf54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/df8/mutex_8h_source.html#l00562">562</a> of file <a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a67e7ffa77c485252b818154dc342778d" name="a67e7ffa77c485252b818154dc342778d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e7ffa77c485252b818154dc342778d">&#9670;&#160;</a></span>ReaderMutexLock() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::ReaderMutexLock::ReaderMutexLock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *</td>          <td class="paramname"><span class="paramname"><em>mu</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/df8/mutex_8h_source.html#l00564">564</a> of file <a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  564</span>                                                                    : mu_(mu) {</div>
+<div class="line"><span class="lineno">  565</span>    mu-&gt;ReaderLock();</div>
+<div class="line"><span class="lineno">  566</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a00a2e63be45043000544dae4ea8f9942" name="a00a2e63be45043000544dae4ea8f9942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a2e63be45043000544dae4ea8f9942">&#9670;&#160;</a></span>ReaderMutexLock() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::ReaderMutexLock::ReaderMutexLock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *</td>          <td class="paramname"><span class="paramname"><em>mu</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/daa/classabsl_1_1_condition.html">Condition</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cond</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/df8/mutex_8h_source.html#l00568">568</a> of file <a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  570</span>      : mu_(mu) {</div>
+<div class="line"><span class="lineno">  571</span>    mu-&gt;ReaderLockWhen(cond);</div>
+<div class="line"><span class="lineno">  572</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8fee311e3c720e8c70d61e299b937b6f" name="a8fee311e3c720e8c70d61e299b937b6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fee311e3c720e8c70d61e299b937b6f">&#9670;&#160;</a></span>~ReaderMutexLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::ReaderMutexLock::~ReaderMutexLock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/df8/mutex_8h_source.html#l00579">579</a> of file <a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  579</span>{ this-&gt;mu_-&gt;ReaderUnlock(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/synchronization/<a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a></li>
 </ul>

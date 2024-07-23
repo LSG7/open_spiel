@@ -97,18 +97,96 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adf5f3140bae126a7c3bcdaf328bd2ef1" id="r_adf5f3140bae126a7c3bcdaf328bd2ef1"><td class="memItemLeft" align="right" valign="top"><a id="adf5f3140bae126a7c3bcdaf328bd2ef1" name="adf5f3140bae126a7c3bcdaf328bd2ef1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (_)</td></tr>
+<tr class="memitem:adf5f3140bae126a7c3bcdaf328bd2ef1" id="r_adf5f3140bae126a7c3bcdaf328bd2ef1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf5f3140bae126a7c3bcdaf328bd2ef1">main</a> (_)</td></tr>
 <tr class="separator:adf5f3140bae126a7c3bcdaf328bd2ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac0b7fb576a87b4449b99f146b5babd44" id="r_ac0b7fb576a87b4449b99f146b5babd44"><td class="memItemLeft" align="right" valign="top"><a id="ac0b7fb576a87b4449b99f146b5babd44" name="ac0b7fb576a87b4449b99f146b5babd44"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:ac0b7fb576a87b4449b99f146b5babd44" id="r_ac0b7fb576a87b4449b99f146b5babd44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0b7fb576a87b4449b99f146b5babd44">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:ac0b7fb576a87b4449b99f146b5babd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Example use of the CFR algorithm on Kuhn Poker.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">Example use of the CFR algorithm on Kuhn Poker.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="adf5f3140bae126a7c3bcdaf328bd2ef1" name="adf5f3140bae126a7c3bcdaf328bd2ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf5f3140bae126a7c3bcdaf328bd2ef1">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.cfr_cpp_example.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d6a/cfr__cpp__example_8py_source.html#l00032">32</a> of file <a class="el" href="../../de/d6a/cfr__cpp__example_8py_source.html">cfr_cpp_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(_):</div>
+<div class="line"><span class="lineno">   33</span>  game = pyspiel.load_game(</div>
+<div class="line"><span class="lineno">   34</span>      FLAGS.game,</div>
+<div class="line"><span class="lineno">   35</span>      {<span class="stringliteral">&quot;players&quot;</span>: FLAGS.players},</div>
+<div class="line"><span class="lineno">   36</span>  )</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>  solver = <span class="keywordtype">None</span></div>
+<div class="line"><span class="lineno">   39</span>  <span class="keywordflow">if</span> FLAGS.solver == <span class="stringliteral">&quot;cfr&quot;</span>:</div>
+<div class="line"><span class="lineno">   40</span>    solver = pyspiel.CFRSolver(game)</div>
+<div class="line"><span class="lineno">   41</span>  <span class="keywordflow">elif</span> FLAGS.solver == <span class="stringliteral">&quot;cfrplus&quot;</span>:</div>
+<div class="line"><span class="lineno">   42</span>    solver = pyspiel.CFRPlusSolver(game)</div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">elif</span> FLAGS.solver == <span class="stringliteral">&quot;cfrbr&quot;</span>:</div>
+<div class="line"><span class="lineno">   44</span>    solver = pyspiel.CFRBRSolver(game)</div>
+<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   46</span>    print(<span class="stringliteral">&quot;Unknown solver&quot;</span>)</div>
+<div class="line"><span class="lineno">   47</span>    sys.exit(0)</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(int(FLAGS.iterations / 2)):</div>
+<div class="line"><span class="lineno">   50</span>    solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">   51</span>    print(<span class="stringliteral">&quot;Iteration {} exploitability: {:.6f}&quot;</span>.format(</div>
+<div class="line"><span class="lineno">   52</span>        i, pyspiel.exploitability(game, solver.average_policy())))</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>  filename = <span class="stringliteral">&quot;/tmp/{}_solver.pickle&quot;</span>.format(FLAGS.solver)</div>
+<div class="line"><span class="lineno">   55</span>  print(<span class="stringliteral">&quot;Persisting the model...&quot;</span>)</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keyword">with</span> open(filename, <span class="stringliteral">&quot;wb&quot;</span>) <span class="keyword">as</span> file:</div>
+<div class="line"><span class="lineno">   57</span>    pickle.dump(solver, file, pickle.HIGHEST_PROTOCOL)</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  print(<span class="stringliteral">&quot;Loading the model...&quot;</span>)</div>
+<div class="line"><span class="lineno">   60</span>  <span class="keyword">with</span> open(filename, <span class="stringliteral">&quot;rb&quot;</span>) <span class="keyword">as</span> file:</div>
+<div class="line"><span class="lineno">   61</span>    loaded_solver = pickle.load(file)</div>
+<div class="line"><span class="lineno">   62</span>  print(<span class="stringliteral">&quot;Exploitability of the loaded model: {:.6f}&quot;</span>.format(</div>
+<div class="line"><span class="lineno">   63</span>      pyspiel.exploitability(game, loaded_solver.average_policy())))</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(int(FLAGS.iterations / 2)):</div>
+<div class="line"><span class="lineno">   66</span>    loaded_solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">   67</span>    tabular_policy = loaded_solver.tabular_average_policy()</div>
+<div class="line"><span class="lineno">   68</span>    print(f<span class="stringliteral">&quot;Tabular policy length: {len(tabular_policy)}&quot;</span>)</div>
+<div class="line"><span class="lineno">   69</span>    print(<span class="stringliteral">&quot;Iteration {} exploitability: {:.6f}&quot;</span>.format(</div>
+<div class="line"><span class="lineno">   70</span>        int(FLAGS.iterations / 2) + i,</div>
+<div class="line"><span class="lineno">   71</span>        pyspiel.exploitability(game, loaded_solver.average_policy())))</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ac0b7fb576a87b4449b99f146b5babd44" name="ac0b7fb576a87b4449b99f146b5babd44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b7fb576a87b4449b99f146b5babd44">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.cfr_cpp_example.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d6a/cfr__cpp__example_8py_source.html#l00024">24</a> of file <a class="el" href="../../de/d6a/cfr__cpp__example_8py_source.html">cfr_cpp_example.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

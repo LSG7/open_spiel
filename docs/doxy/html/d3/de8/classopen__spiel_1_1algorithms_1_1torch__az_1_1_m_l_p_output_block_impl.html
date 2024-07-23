@@ -117,16 +117,97 @@ Collaboration diagram for open_spiel::algorithms::torch_az::MLPOutputBlockImpl:<
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeca0c128331d4655557292abfb9e6c09" id="r_aeca0c128331d4655557292abfb9e6c09"><td class="memItemLeft" align="right" valign="top"><a id="aeca0c128331d4655557292abfb9e6c09" name="aeca0c128331d4655557292abfb9e6c09"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MLPOutputBlockImpl</b> (const int nn_width, const int policy_linear_out_features)</td></tr>
+<tr class="memitem:aeca0c128331d4655557292abfb9e6c09" id="r_aeca0c128331d4655557292abfb9e6c09"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeca0c128331d4655557292abfb9e6c09">MLPOutputBlockImpl</a> (const int nn_width, const int policy_linear_out_features)</td></tr>
 <tr class="separator:aeca0c128331d4655557292abfb9e6c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb15138866575434845d240f62e4ce0f" id="r_abb15138866575434845d240f62e4ce0f"><td class="memItemLeft" align="right" valign="top"><a id="abb15138866575434845d240f62e4ce0f" name="abb15138866575434845d240f62e4ce0f"></a>
-std::vector&lt; torch::Tensor &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (torch::Tensor x, torch::Tensor mask)</td></tr>
+<tr class="memitem:abb15138866575434845d240f62e4ce0f" id="r_abb15138866575434845d240f62e4ce0f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; torch::Tensor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb15138866575434845d240f62e4ce0f">forward</a> (torch::Tensor x, torch::Tensor mask)</td></tr>
 <tr class="separator:abb15138866575434845d240f62e4ce0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/d51/model_8h_source.html#l00169">169</a> of file <a class="el" href="../../dc/d51/model_8h_source.html">model.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aeca0c128331d4655557292abfb9e6c09" name="aeca0c128331d4655557292abfb9e6c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca0c128331d4655557292abfb9e6c09">&#9670;&#160;</a></span>MLPOutputBlockImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::torch_az::MLPOutputBlockImpl::MLPOutputBlockImpl </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nn_width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>policy_linear_out_features</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d3b/model_8cc_source.html#l00223">223</a> of file <a class="el" href="../../d5/d3b/model_8cc_source.html">model.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>    : value_linear1_(torch::nn::LinearOptions(</div>
+<div class="line"><span class="lineno">  226</span>                         <span class="comment">/*in_features=*/</span>nn_width,</div>
+<div class="line"><span class="lineno">  227</span>                         <span class="comment">/*out_features=*/</span>nn_width)</div>
+<div class="line"><span class="lineno">  228</span>                         .bias(<span class="keyword">true</span>)),</div>
+<div class="line"><span class="lineno">  229</span>      value_linear2_(torch::nn::LinearOptions(</div>
+<div class="line"><span class="lineno">  230</span>                         <span class="comment">/*in_features=*/</span>nn_width,</div>
+<div class="line"><span class="lineno">  231</span>                         <span class="comment">/*out_features=*/</span>1)</div>
+<div class="line"><span class="lineno">  232</span>                         .bias(<span class="keyword">true</span>)),</div>
+<div class="line"><span class="lineno">  233</span>      policy_linear1_(torch::nn::LinearOptions(</div>
+<div class="line"><span class="lineno">  234</span>                          <span class="comment">/*input_channels=*/</span>nn_width,</div>
+<div class="line"><span class="lineno">  235</span>                          <span class="comment">/*output_channels=*/</span>nn_width)</div>
+<div class="line"><span class="lineno">  236</span>                          .bias(<span class="keyword">true</span>)),</div>
+<div class="line"><span class="lineno">  237</span>      policy_linear2_(torch::nn::LinearOptions(</div>
+<div class="line"><span class="lineno">  238</span>                          <span class="comment">/*in_features=*/</span>nn_width,</div>
+<div class="line"><span class="lineno">  239</span>                          <span class="comment">/*out_features=*/</span>policy_linear_out_features)</div>
+<div class="line"><span class="lineno">  240</span>                          .bias(<span class="keyword">true</span>)) {</div>
+<div class="line"><span class="lineno">  241</span>  register_module(<span class="stringliteral">&quot;value_linear_1&quot;</span>, value_linear1_);</div>
+<div class="line"><span class="lineno">  242</span>  register_module(<span class="stringliteral">&quot;value_linear_2&quot;</span>, value_linear2_);</div>
+<div class="line"><span class="lineno">  243</span>  register_module(<span class="stringliteral">&quot;policy_linear_1&quot;</span>, policy_linear1_);</div>
+<div class="line"><span class="lineno">  244</span>  register_module(<span class="stringliteral">&quot;policy_linear_2&quot;</span>, policy_linear2_);</div>
+<div class="line"><span class="lineno">  245</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abb15138866575434845d240f62e4ce0f" name="abb15138866575434845d240f62e4ce0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb15138866575434845d240f62e4ce0f">&#9670;&#160;</a></span>forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; torch::Tensor &gt; open_spiel::algorithms::torch_az::MLPOutputBlockImpl::forward </td>
+          <td>(</td>
+          <td class="paramtype">torch::Tensor</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">torch::Tensor</td>          <td class="paramname"><span class="paramname"><em>mask</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d3b/model_8cc_source.html#l00247">247</a> of file <a class="el" href="../../d5/d3b/model_8cc_source.html">model.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>                                                                         {</div>
+<div class="line"><span class="lineno">  249</span>  torch::Tensor value_output = torch::relu(value_linear1_(x));</div>
+<div class="line"><span class="lineno">  250</span>  value_output = torch::tanh(value_linear2_(value_output));</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>  torch::Tensor policy_logits = torch::relu(policy_linear1_(x));</div>
+<div class="line"><span class="lineno">  253</span>  policy_logits = policy_linear2_(policy_logits);</div>
+<div class="line"><span class="lineno">  254</span>  policy_logits = torch::where(mask, policy_logits,</div>
+<div class="line"><span class="lineno">  255</span>                               -(1 &lt;&lt; 16) * torch::ones_like(policy_logits));</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>  <span class="keywordflow">return</span> {value_output, policy_logits};</div>
+<div class="line"><span class="lineno">  258</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/alpha_zero_torch/<a class="el" href="../../dc/d51/model_8h_source.html">model.h</a></li>
-<li>open_spiel/algorithms/alpha_zero_torch/<b>model.cc</b></li>
+<li>open_spiel/algorithms/alpha_zero_torch/<a class="el" href="../../d5/d3b/model_8cc_source.html">model.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -103,18 +103,110 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a01e530831b0c9d2426b05585230dbab2" id="r_a01e530831b0c9d2426b05585230dbab2"><td class="memItemLeft" align="right" valign="top"><a id="a01e530831b0c9d2426b05585230dbab2" name="a01e530831b0c9d2426b05585230dbab2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (_)</td></tr>
+<tr class="memitem:a01e530831b0c9d2426b05585230dbab2" id="r_a01e530831b0c9d2426b05585230dbab2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01e530831b0c9d2426b05585230dbab2">main</a> (_)</td></tr>
 <tr class="separator:a01e530831b0c9d2426b05585230dbab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a416e6d035e84a6e6706f297d92b66839" id="r_a416e6d035e84a6e6706f297d92b66839"><td class="memItemLeft" align="right" valign="top"><a id="a416e6d035e84a6e6706f297d92b66839" name="a416e6d035e84a6e6706f297d92b66839"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:a416e6d035e84a6e6706f297d92b66839" id="r_a416e6d035e84a6e6706f297d92b66839"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a416e6d035e84a6e6706f297d92b66839">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:a416e6d035e84a6e6706f297d92b66839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">TD Learning with N-Tuple Networks for 2048.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">TD Learning with N-Tuple Networks for 2048.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a01e530831b0c9d2426b05585230dbab2" name="a01e530831b0c9d2426b05585230dbab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e530831b0c9d2426b05585230dbab2">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.twenty_forty_eight_td_n_tuple_network.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d97/twenty__forty__eight__td__n__tuple__network_8py_source.html#l00112">112</a> of file <a class="el" href="../../d8/d97/twenty__forty__eight__td__n__tuple__network_8py_source.html">twenty_forty_eight_td_n_tuple_network.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(_):</div>
+<div class="line"><span class="lineno">  113</span>  n_tuple_network = NTupleNetwork(</div>
+<div class="line"><span class="lineno">  114</span>      6,</div>
+<div class="line"><span class="lineno">  115</span>      15,</div>
+<div class="line"><span class="lineno">  116</span>      [</div>
+<div class="line"><span class="lineno">  117</span>          [0, 1, 2, 3, 4, 5],</div>
+<div class="line"><span class="lineno">  118</span>          [4, 5, 6, 7, 8, 9],</div>
+<div class="line"><span class="lineno">  119</span>          [0, 1, 2, 4, 5, 6],</div>
+<div class="line"><span class="lineno">  120</span>          [4, 5, 6, 8, 9, 10],</div>
+<div class="line"><span class="lineno">  121</span>      ],</div>
+<div class="line"><span class="lineno">  122</span>  )</div>
+<div class="line"><span class="lineno">  123</span>  game = pyspiel.load_game(FLAGS.game)</div>
+<div class="line"><span class="lineno">  124</span>  sum_rewards = 0</div>
+<div class="line"><span class="lineno">  125</span>  largest_tile = 0</div>
+<div class="line"><span class="lineno">  126</span>  max_score = 0</div>
+<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">for</span> ep <span class="keywordflow">in</span> range(FLAGS.num_train_episodes):</div>
+<div class="line"><span class="lineno">  128</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">  129</span>    states_in_episode = []</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">while</span> <span class="keywordflow">not</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">  131</span>      <span class="keywordflow">if</span> state.is_chance_node():</div>
+<div class="line"><span class="lineno">  132</span>        outcomes = state.chance_outcomes()</div>
+<div class="line"><span class="lineno">  133</span>        action_list, prob_list = zip(*outcomes)</div>
+<div class="line"><span class="lineno">  134</span>        action = np.random.choice(action_list, p=prob_list)</div>
+<div class="line"><span class="lineno">  135</span>        state.apply_action(action)</div>
+<div class="line"><span class="lineno">  136</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  137</span>        legal_actions = state.legal_actions(state.current_player())</div>
+<div class="line"><span class="lineno">  138</span>        <span class="comment"># pylint: disable=cell-var-from-loop</span></div>
+<div class="line"><span class="lineno">  139</span>        best_action = max(</div>
+<div class="line"><span class="lineno">  140</span>            legal_actions,</div>
+<div class="line"><span class="lineno">  141</span>            key=<span class="keyword">lambda</span> action: n_tuple_network.evaluator(state, action),</div>
+<div class="line"><span class="lineno">  142</span>        )</div>
+<div class="line"><span class="lineno">  143</span>        state.apply_action(best_action)</div>
+<div class="line"><span class="lineno">  144</span>        states_in_episode.append(state.clone())</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    sum_rewards += state.returns()[0]</div>
+<div class="line"><span class="lineno">  147</span>    largest_tile_from_episode = max(state.observation_tensor(0))</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">if</span> largest_tile_from_episode &gt; largest_tile:</div>
+<div class="line"><span class="lineno">  149</span>      largest_tile = largest_tile_from_episode</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">if</span> state.returns()[0] &gt; max_score:</div>
+<div class="line"><span class="lineno">  151</span>      max_score = state.returns()[0]</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>    n_tuple_network.learn(states_in_episode)</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">if</span> (ep + 1) % FLAGS.eval_every == 0:</div>
+<div class="line"><span class="lineno">  156</span>      logging.info(</div>
+<div class="line"><span class="lineno">  157</span>          <span class="stringliteral">&quot;[%s] Average Score: %s, Max Score: %s, Largest Tile Reached: %s&quot;</span>,</div>
+<div class="line"><span class="lineno">  158</span>          ep + 1,</div>
+<div class="line"><span class="lineno">  159</span>          int(sum_rewards / FLAGS.eval_every),</div>
+<div class="line"><span class="lineno">  160</span>          int(max_score),</div>
+<div class="line"><span class="lineno">  161</span>          int(largest_tile),</div>
+<div class="line"><span class="lineno">  162</span>      )</div>
+<div class="line"><span class="lineno">  163</span>      sum_rewards = 0</div>
+<div class="line"><span class="lineno">  164</span>      largest_tile = 0</div>
+<div class="line"><span class="lineno">  165</span>      max_score = 0</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a416e6d035e84a6e6706f297d92b66839" name="a416e6d035e84a6e6706f297d92b66839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416e6d035e84a6e6706f297d92b66839">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.twenty_forty_eight_td_n_tuple_network.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d97/twenty__forty__eight__td__n__tuple__network_8py_source.html#l00023">23</a> of file <a class="el" href="../../d8/d97/twenty__forty__eight__td__n__tuple__network_8py_source.html">twenty_forty_eight_td_n_tuple_network.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

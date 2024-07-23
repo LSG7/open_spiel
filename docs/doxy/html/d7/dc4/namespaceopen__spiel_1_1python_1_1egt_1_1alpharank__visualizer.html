@@ -181,7 +181,46 @@ Args:
   size: pie size.
   clip_on: control clipping of pie (e.g., to show it when it's out of axis).
   zorder: plot z order (e.g., to show pie on top of other plot elements).
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00272">272</a> of file <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html">alpharank_visualizer.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  279</span>              zorder=0):</div>
+<div class="line"><span class="lineno">  280</span>  <span class="stringliteral">&quot;&quot;&quot;Plots a pie chart.</span></div>
+<div class="line"><span class="lineno">  281</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  282</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  283</span><span class="stringliteral">    ax: plot axis.</span></div>
+<div class="line"><span class="lineno">  284</span><span class="stringliteral">    ratios: list indicating size of each pie slice, with elements summing to 1.</span></div>
+<div class="line"><span class="lineno">  285</span><span class="stringliteral">    colors: list indicating color of each pie slice.</span></div>
+<div class="line"><span class="lineno">  286</span><span class="stringliteral">    x_center: x coordinate of pie center.</span></div>
+<div class="line"><span class="lineno">  287</span><span class="stringliteral">    y_center: y coordinate of pie center.</span></div>
+<div class="line"><span class="lineno">  288</span><span class="stringliteral">    size: pie size.</span></div>
+<div class="line"><span class="lineno">  289</span><span class="stringliteral">    clip_on: control clipping of pie (e.g., to show it when it&#39;s out of axis).</span></div>
+<div class="line"><span class="lineno">  290</span><span class="stringliteral">    zorder: plot z order (e.g., to show pie on top of other plot elements).</span></div>
+<div class="line"><span class="lineno">  291</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  292</span>  xy = []</div>
+<div class="line"><span class="lineno">  293</span>  start = 0.</div>
+<div class="line"><span class="lineno">  294</span>  <span class="keywordflow">for</span> ratio <span class="keywordflow">in</span> ratios:</div>
+<div class="line"><span class="lineno">  295</span>    x = [0] + np.cos(</div>
+<div class="line"><span class="lineno">  296</span>        np.linspace(2 * np.pi * start, 2 * np.pi *</div>
+<div class="line"><span class="lineno">  297</span>                    (start + ratio), 30)).tolist()</div>
+<div class="line"><span class="lineno">  298</span>    y = [0] + np.sin(</div>
+<div class="line"><span class="lineno">  299</span>        np.linspace(2 * np.pi * start, 2 * np.pi *</div>
+<div class="line"><span class="lineno">  300</span>                    (start + ratio), 30)).tolist()</div>
+<div class="line"><span class="lineno">  301</span>    xy.append(list(zip(x, y)))</div>
+<div class="line"><span class="lineno">  302</span>    start += ratio</div>
+<div class="line"><span class="lineno">  303</span> </div>
+<div class="line"><span class="lineno">  304</span>  <span class="keywordflow">for</span> i, xyi <span class="keywordflow">in</span> enumerate(xy):</div>
+<div class="line"><span class="lineno">  305</span>    ax.scatter([x_center], [y_center],</div>
+<div class="line"><span class="lineno">  306</span>               marker=xyi,</div>
+<div class="line"><span class="lineno">  307</span>               s=size,</div>
+<div class="line"><span class="lineno">  308</span>               facecolor=colors[i],</div>
+<div class="line"><span class="lineno">  309</span>               edgecolors=<span class="stringliteral">&quot;none&quot;</span>,</div>
+<div class="line"><span class="lineno">  310</span>               clip_on=clip_on,</div>
+<div class="line"><span class="lineno">  311</span>               zorder=zorder)</div>
+<div class="line"><span class="lineno">  312</span> </div>
+<div class="line"><span class="lineno">  313</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00365">open_spiel.python.egt.alpharank_visualizer.plot_pi_vs_alpha()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dc4/namespaceopen__spiel_1_1python_1_1egt_1_1alpharank__visualizer_af5354079629ed905649c899aed4cf0a3_icgraph.png" border="0" usemap="#ad7/dc4/namespaceopen__spiel_1_1python_1_1egt_1_1alpharank__visualizer_af5354079629ed905649c899aed4cf0a3_icgraph" alt=""/></div>
@@ -226,7 +265,55 @@ Args:
 
 Returns:
   Sorted list of (mass, strats) tuples.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00314">314</a> of file <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html">alpharank_visualizer.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span><span class="keyword">def </span>generate_sorted_masses_strats(pi_list, curr_alpha_idx, strats_to_go):</div>
+<div class="line"><span class="lineno">  315</span>  <span class="stringliteral">&quot;&quot;&quot;Generates a sorted list of (mass, strats) tuples.</span></div>
+<div class="line"><span class="lineno">  316</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  317</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  318</span><span class="stringliteral">    pi_list: List of stationary distributions, pi</span></div>
+<div class="line"><span class="lineno">  319</span><span class="stringliteral">    curr_alpha_idx: Index in alpha_list for which to start clustering</span></div>
+<div class="line"><span class="lineno">  320</span><span class="stringliteral">    strats_to_go: List of strategies that still need to be ordered</span></div>
+<div class="line"><span class="lineno">  321</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  322</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  323</span><span class="stringliteral">    Sorted list of (mass, strats) tuples.</span></div>
+<div class="line"><span class="lineno">  324</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  325</span>  <span class="keywordflow">if</span> curr_alpha_idx &gt; 0:</div>
+<div class="line"><span class="lineno">  326</span>    sorted_masses_strats = list()</div>
+<div class="line"><span class="lineno">  327</span>    masses_to_strats = utils.cluster_strats(pi_list[curr_alpha_idx,</div>
+<div class="line"><span class="lineno">  328</span>                                                    strats_to_go])</div>
+<div class="line"><span class="lineno">  329</span> </div>
+<div class="line"><span class="lineno">  330</span>    <span class="keywordflow">for</span> mass, strats <span class="keywordflow">in</span> sorted(masses_to_strats.items(), reverse=<span class="keyword">True</span>):</div>
+<div class="line"><span class="lineno">  331</span>      <span class="keywordflow">if</span> len(strats) &gt; 1:</div>
+<div class="line"><span class="lineno">  332</span>        to_append = generate_sorted_masses_strats(pi_list, curr_alpha_idx - 1,</div>
+<div class="line"><span class="lineno">  333</span>                                                  strats)</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>        to_append = [(mass, [strats_to_go[s]</div>
+<div class="line"><span class="lineno">  336</span>                             <span class="keywordflow">for</span> s <span class="keywordflow">in</span> strats_list])</div>
+<div class="line"><span class="lineno">  337</span>                     <span class="keywordflow">for</span> (mass, strats_list) <span class="keywordflow">in</span> to_append]</div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>        sorted_masses_strats.extend(to_append)</div>
+<div class="line"><span class="lineno">  340</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  341</span>        sorted_masses_strats.append((mass, [</div>
+<div class="line"><span class="lineno">  342</span>            strats_to_go[strats[0]],</div>
+<div class="line"><span class="lineno">  343</span>        ]))</div>
+<div class="line"><span class="lineno">  344</span> </div>
+<div class="line"><span class="lineno">  345</span>    <span class="keywordflow">return</span> sorted_masses_strats</div>
+<div class="line"><span class="lineno">  346</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  347</span>    to_return = sorted(</div>
+<div class="line"><span class="lineno">  348</span>        utils.cluster_strats(pi_list[curr_alpha_idx, strats_to_go]).items(),</div>
+<div class="line"><span class="lineno">  349</span>        reverse=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">  350</span>    to_return = [(mass, [strats_to_go[s]</div>
+<div class="line"><span class="lineno">  351</span>                         <span class="keywordflow">for</span> s <span class="keywordflow">in</span> strats_list])</div>
+<div class="line"><span class="lineno">  352</span>                 <span class="keywordflow">for</span> (mass, strats_list) <span class="keywordflow">in</span> to_return]</div>
+<div class="line"><span class="lineno">  353</span>    <span class="keywordflow">return</span> to_return</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00314">open_spiel.python.egt.alpharank_visualizer.generate_sorted_masses_strats()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00314">open_spiel.python.egt.alpharank_visualizer.generate_sorted_masses_strats()</a>, and <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00365">open_spiel.python.egt.alpharank_visualizer.plot_pi_vs_alpha()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dc4/namespaceopen__spiel_1_1python_1_1egt_1_1alpharank__visualizer_a6a1903688d496b51af03abd248da7364_cgraph.png" border="0" usemap="#ad7/dc4/namespaceopen__spiel_1_1python_1_1egt_1_1alpharank__visualizer_a6a1903688d496b51af03abd248da7364_cgraph" alt=""/></div>
@@ -323,7 +410,144 @@ Args:
     the legend according to orderings for earlier alpha values. Primarily for
     visualization purposes! Rankings for lower alpha values should be
     interpreted carefully.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00356">356</a> of file <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html">alpharank_visualizer.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  365</span>                     legend_sort_clusters=<span class="keyword">False</span>):</div>
+<div class="line"><span class="lineno">  366</span>  <span class="stringliteral">&quot;&quot;&quot;Plots stationary distributions, pi, against selection intensities, alpha.</span></div>
+<div class="line"><span class="lineno">  367</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  368</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  369</span><span class="stringliteral">    pi_list: List of stationary distributions, pi.</span></div>
+<div class="line"><span class="lineno">  370</span><span class="stringliteral">    alpha_list: List of selection intensities, alpha.</span></div>
+<div class="line"><span class="lineno">  371</span><span class="stringliteral">    num_populations: The number of populations.</span></div>
+<div class="line"><span class="lineno">  372</span><span class="stringliteral">    num_strats_per_population: List of the number of strategies per population.</span></div>
+<div class="line"><span class="lineno">  373</span><span class="stringliteral">    strat_labels: Human-readable strategy labels.</span></div>
+<div class="line"><span class="lineno">  374</span><span class="stringliteral">    num_strats_to_label: The number of top strategies to label in the legend.</span></div>
+<div class="line"><span class="lineno">  375</span><span class="stringliteral">    plot_semilogx: Boolean set to enable/disable semilogx plot.</span></div>
+<div class="line"><span class="lineno">  376</span><span class="stringliteral">    xlabel: Plot xlabel.</span></div>
+<div class="line"><span class="lineno">  377</span><span class="stringliteral">    ylabel: Plot ylabel.</span></div>
+<div class="line"><span class="lineno">  378</span><span class="stringliteral">    legend_sort_clusters: If true, strategies in the same cluster are sorted in</span></div>
+<div class="line"><span class="lineno">  379</span><span class="stringliteral">      the legend according to orderings for earlier alpha values. Primarily for</span></div>
+<div class="line"><span class="lineno">  380</span><span class="stringliteral">      visualization purposes! Rankings for lower alpha values should be</span></div>
+<div class="line"><span class="lineno">  381</span><span class="stringliteral">      interpreted carefully.</span></div>
+<div class="line"><span class="lineno">  382</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  383</span> </div>
+<div class="line"><span class="lineno">  384</span>  <span class="comment"># Cluster strategies for which the stationary distribution has similar masses</span></div>
+<div class="line"><span class="lineno">  385</span>  masses_to_strats = utils.cluster_strats(pi_list[-1, :])</div>
+<div class="line"><span class="lineno">  386</span> </div>
+<div class="line"><span class="lineno">  387</span>  <span class="comment"># Set colors</span></div>
+<div class="line"><span class="lineno">  388</span>  num_strat_profiles = np.shape(pi_list)[1]</div>
+<div class="line"><span class="lineno">  389</span>  num_strats_to_label = min(num_strats_to_label, num_strat_profiles)</div>
+<div class="line"><span class="lineno">  390</span>  cmap = plt.get_cmap(<span class="stringliteral">&quot;Paired&quot;</span>)</div>
+<div class="line"><span class="lineno">  391</span>  colors = [cmap(i) <span class="keywordflow">for</span> i <span class="keywordflow">in</span> np.linspace(0, 1, num_strat_profiles)]</div>
+<div class="line"><span class="lineno">  392</span> </div>
+<div class="line"><span class="lineno">  393</span>  <span class="comment"># Plots stationary distribution vs. alpha series</span></div>
+<div class="line"><span class="lineno">  394</span>  plt.figure(facecolor=<span class="stringliteral">&quot;w&quot;</span>)</div>
+<div class="line"><span class="lineno">  395</span>  axes = plt.gca()</div>
+<div class="line"><span class="lineno">  396</span> </div>
+<div class="line"><span class="lineno">  397</span>  legend_line_objects = []</div>
+<div class="line"><span class="lineno">  398</span>  legend_labels = []</div>
+<div class="line"><span class="lineno">  399</span> </div>
+<div class="line"><span class="lineno">  400</span>  rank = 1</div>
+<div class="line"><span class="lineno">  401</span>  num_strats_printed = 0</div>
+<div class="line"><span class="lineno">  402</span>  add_legend_entries = <span class="keyword">True</span></div>
+<div class="line"><span class="lineno">  403</span> </div>
+<div class="line"><span class="lineno">  404</span>  <span class="keywordflow">if</span> legend_sort_clusters:</div>
+<div class="line"><span class="lineno">  405</span>    sorted_masses_strats = generate_sorted_masses_strats(</div>
+<div class="line"><span class="lineno">  406</span>        pi_list, pi_list.shape[0] - 1, range(pi_list.shape[1]))</div>
+<div class="line"><span class="lineno">  407</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  408</span>    sorted_masses_strats = sorted(masses_to_strats.items(), reverse=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>  <span class="keywordflow">for</span> mass, strats <span class="keywordflow">in</span> sorted_masses_strats:</div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">for</span> profile_id <span class="keywordflow">in</span> strats:</div>
+<div class="line"><span class="lineno">  412</span>      <span class="keywordflow">if</span> num_populations == 1:</div>
+<div class="line"><span class="lineno">  413</span>        strat_profile = profile_id</div>
+<div class="line"><span class="lineno">  414</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  415</span>        strat_profile = utils.get_strat_profile_from_id(</div>
+<div class="line"><span class="lineno">  416</span>            num_strats_per_population, profile_id)</div>
+<div class="line"><span class="lineno">  417</span> </div>
+<div class="line"><span class="lineno">  418</span>      <span class="keywordflow">if</span> plot_semilogx:</div>
+<div class="line"><span class="lineno">  419</span>        series = plt.semilogx(</div>
+<div class="line"><span class="lineno">  420</span>            alpha_list,</div>
+<div class="line"><span class="lineno">  421</span>            pi_list[:, profile_id],</div>
+<div class="line"><span class="lineno">  422</span>            color=colors[profile_id],</div>
+<div class="line"><span class="lineno">  423</span>            linewidth=2)</div>
+<div class="line"><span class="lineno">  424</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  425</span>        series = plt.plot(</div>
+<div class="line"><span class="lineno">  426</span>            alpha_list,</div>
+<div class="line"><span class="lineno">  427</span>            pi_list[:, profile_id],</div>
+<div class="line"><span class="lineno">  428</span>            color=colors[profile_id],</div>
+<div class="line"><span class="lineno">  429</span>            linewidth=2)</div>
+<div class="line"><span class="lineno">  430</span> </div>
+<div class="line"><span class="lineno">  431</span>      <span class="keywordflow">if</span> add_legend_entries:</div>
+<div class="line"><span class="lineno">  432</span>        <span class="keywordflow">if</span> num_strats_printed &gt;= num_strats_to_label:</div>
+<div class="line"><span class="lineno">  433</span>          <span class="comment"># Placeholder blank series for remaining entries</span></div>
+<div class="line"><span class="lineno">  434</span>          series = plt.semilogx(np.NaN, np.NaN, <span class="stringliteral">&quot;-&quot;</span>, color=<span class="stringliteral">&quot;none&quot;</span>)</div>
+<div class="line"><span class="lineno">  435</span>          label = <span class="stringliteral">&quot;...&quot;</span></div>
+<div class="line"><span class="lineno">  436</span>          add_legend_entries = <span class="keyword">False</span></div>
+<div class="line"><span class="lineno">  437</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  438</span>          label = utils.get_label_from_strat_profile(num_populations,</div>
+<div class="line"><span class="lineno">  439</span>                                                     strat_profile,</div>
+<div class="line"><span class="lineno">  440</span>                                                     strat_labels)</div>
+<div class="line"><span class="lineno">  441</span>        legend_labels.append(label)</div>
+<div class="line"><span class="lineno">  442</span>        legend_line_objects.append(series[0])</div>
+<div class="line"><span class="lineno">  443</span>      num_strats_printed += 1</div>
+<div class="line"><span class="lineno">  444</span>    rank += 1</div>
+<div class="line"><span class="lineno">  445</span> </div>
+<div class="line"><span class="lineno">  446</span>  <span class="comment"># Plots pie charts on far right of figure to indicate clusters of strategies</span></div>
+<div class="line"><span class="lineno">  447</span>  <span class="comment"># with identical rank</span></div>
+<div class="line"><span class="lineno">  448</span>  <span class="keywordflow">for</span> mass, strats <span class="keywordflow">in</span> iter(masses_to_strats.items()):</div>
+<div class="line"><span class="lineno">  449</span>    _draw_pie(</div>
+<div class="line"><span class="lineno">  450</span>        axes,</div>
+<div class="line"><span class="lineno">  451</span>        ratios=[1 / len(strats)] * len(strats),</div>
+<div class="line"><span class="lineno">  452</span>        colors=[colors[i] <span class="keywordflow">for</span> i <span class="keywordflow">in</span> strats],</div>
+<div class="line"><span class="lineno">  453</span>        x_center=alpha_list[-1],</div>
+<div class="line"><span class="lineno">  454</span>        y_center=mass,</div>
+<div class="line"><span class="lineno">  455</span>        size=200,</div>
+<div class="line"><span class="lineno">  456</span>        clip_on=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  457</span>        zorder=10)</div>
+<div class="line"><span class="lineno">  458</span> </div>
+<div class="line"><span class="lineno">  459</span>  <span class="comment"># Axes ymax set slightly above highest stationary distribution mass</span></div>
+<div class="line"><span class="lineno">  460</span>  max_mass = np.amax(pi_list)</div>
+<div class="line"><span class="lineno">  461</span>  axes_y_max = np.ceil(</div>
+<div class="line"><span class="lineno">  462</span>      10. * max_mass) / 10  <span class="comment"># Round upward to nearest first decimal</span></div>
+<div class="line"><span class="lineno">  463</span>  axes_y_max = np.clip(axes_y_max, 0., 1.)</div>
+<div class="line"><span class="lineno">  464</span> </div>
+<div class="line"><span class="lineno">  465</span>  <span class="comment"># Plots a rectangle highlighting the rankings on the far right of the figure</span></div>
+<div class="line"><span class="lineno">  466</span>  box_x_min = alpha_list[-1] * 0.7</div>
+<div class="line"><span class="lineno">  467</span>  box_y_min = np.min(pi_list[-1, :]) - 0.05 * axes_y_max</div>
+<div class="line"><span class="lineno">  468</span>  width = 0.7 * alpha_list[-1]</div>
+<div class="line"><span class="lineno">  469</span>  height = np.max(pi_list[-1, :]) - np.min(</div>
+<div class="line"><span class="lineno">  470</span>      pi_list[-1, :]) + 0.05 * axes_y_max * 2</div>
+<div class="line"><span class="lineno">  471</span>  axes.add_patch(</div>
+<div class="line"><span class="lineno">  472</span>      patches.Rectangle((box_x_min, box_y_min),</div>
+<div class="line"><span class="lineno">  473</span>                        width,</div>
+<div class="line"><span class="lineno">  474</span>                        height,</div>
+<div class="line"><span class="lineno">  475</span>                        edgecolor=<span class="stringliteral">&quot;b&quot;</span>,</div>
+<div class="line"><span class="lineno">  476</span>                        facecolor=(1, 0, 0, 0),</div>
+<div class="line"><span class="lineno">  477</span>                        clip_on=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  478</span>                        linewidth=5,</div>
+<div class="line"><span class="lineno">  479</span>                        zorder=20))</div>
+<div class="line"><span class="lineno">  480</span> </div>
+<div class="line"><span class="lineno">  481</span>  <span class="comment"># Plot formatting</span></div>
+<div class="line"><span class="lineno">  482</span>  axes.set_xlim(np.min(alpha_list), np.max(alpha_list))</div>
+<div class="line"><span class="lineno">  483</span>  axes.set_ylim([0.0, axes_y_max])</div>
+<div class="line"><span class="lineno">  484</span>  axes.set_xlabel(xlabel)</div>
+<div class="line"><span class="lineno">  485</span>  axes.set_ylabel(ylabel)</div>
+<div class="line"><span class="lineno">  486</span>  axes.set_axisbelow(<span class="keyword">True</span>)  <span class="comment"># Axes appear below data series in terms of zorder</span></div>
+<div class="line"><span class="lineno">  487</span> </div>
+<div class="line"><span class="lineno">  488</span>  <span class="comment"># Legend on the right side of the current axis</span></div>
+<div class="line"><span class="lineno">  489</span>  box = axes.get_position()</div>
+<div class="line"><span class="lineno">  490</span>  axes.set_position([box.x0, box.y0, box.width * 0.8, box.height])</div>
+<div class="line"><span class="lineno">  491</span>  axes.legend(</div>
+<div class="line"><span class="lineno">  492</span>      legend_line_objects,</div>
+<div class="line"><span class="lineno">  493</span>      legend_labels,</div>
+<div class="line"><span class="lineno">  494</span>      loc=<span class="stringliteral">&quot;center left&quot;</span>,</div>
+<div class="line"><span class="lineno">  495</span>      bbox_to_anchor=(1.05, 0.5))</div>
+<div class="line"><span class="lineno">  496</span>  plt.grid()</div>
+<div class="line"><span class="lineno">  497</span>  plt.show()</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00279">open_spiel.python.egt.alpharank_visualizer._draw_pie()</a>, and <a class="el" href="../../dd/dde/alpharank__visualizer_8py_source.html#l00314">open_spiel.python.egt.alpharank_visualizer.generate_sorted_masses_strats()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dc4/namespaceopen__spiel_1_1python_1_1egt_1_1alpharank__visualizer_a3cef1f6b8891ec9956f86dc51dd06ba3_cgraph.png" border="0" usemap="#ad7/dc4/namespaceopen__spiel_1_1python_1_1egt_1_1alpharank__visualizer_a3cef1f6b8891ec9956f86dc51dd06ba3_cgraph" alt=""/></div>

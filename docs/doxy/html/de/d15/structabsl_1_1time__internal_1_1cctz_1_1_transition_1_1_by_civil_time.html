@@ -105,10 +105,47 @@ Collaboration diagram for absl::time_internal::cctz::Transition::ByCivilTime:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9793f4a4a35f85cc62ef46292b92ef27" id="r_a9793f4a4a35f85cc62ef46292b92ef27"><td class="memItemLeft" align="right" valign="top"><a id="a9793f4a4a35f85cc62ef46292b92ef27" name="a9793f4a4a35f85cc62ef46292b92ef27"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="../../da/dc1/structabsl_1_1time__internal_1_1cctz_1_1_transition.html">Transition</a> &amp;lhs, const <a class="el" href="../../da/dc1/structabsl_1_1time__internal_1_1cctz_1_1_transition.html">Transition</a> &amp;rhs) const</td></tr>
+<tr class="memitem:a9793f4a4a35f85cc62ef46292b92ef27" id="r_a9793f4a4a35f85cc62ef46292b92ef27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9793f4a4a35f85cc62ef46292b92ef27">operator()</a> (const <a class="el" href="../../da/dc1/structabsl_1_1time__internal_1_1cctz_1_1_transition.html">Transition</a> &amp;lhs, const <a class="el" href="../../da/dc1/structabsl_1_1time__internal_1_1cctz_1_1_transition.html">Transition</a> &amp;rhs) const</td></tr>
 <tr class="separator:a9793f4a4a35f85cc62ef46292b92ef27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d2/d0b/time__zone__info_8h_source.html#l00048">48</a> of file <a class="el" href="../../d2/d0b/time__zone__info_8h_source.html">time_zone_info.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9793f4a4a35f85cc62ef46292b92ef27" name="a9793f4a4a35f85cc62ef46292b92ef27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9793f4a4a35f85cc62ef46292b92ef27">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool absl::time_internal::cctz::Transition::ByCivilTime::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/dc1/structabsl_1_1time__internal_1_1cctz_1_1_transition.html">Transition</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../da/dc1/structabsl_1_1time__internal_1_1cctz_1_1_transition.html">Transition</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d0b/time__zone__info_8h_source.html#l00049">49</a> of file <a class="el" href="../../d2/d0b/time__zone__info_8h_source.html">time_zone_info.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                               {</div>
+<div class="line"><span class="lineno">   50</span>      <span class="keywordflow">return</span> lhs.civil_sec &lt; rhs.civil_sec;</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/time/internal/cctz/src/<a class="el" href="../../d2/d0b/time__zone__info_8h_source.html">time_zone_info.h</a></li>
 </ul>

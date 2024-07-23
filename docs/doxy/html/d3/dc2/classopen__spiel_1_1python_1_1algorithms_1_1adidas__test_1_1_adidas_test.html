@@ -122,7 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3074162405b838520c286dce919552d7" id="r_a3074162405b838520c286dce919552d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3074162405b838520c286dce919552d7">test_adidas_on_elfarol</a> (self)</td></tr>
 <tr class="separator:a3074162405b838520c286dce919552d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/dfb/adidas__test_8py_source.html#l00028">28</a> of file <a class="el" href="../../de/dfb/adidas__test_8py_source.html">adidas_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3074162405b838520c286dce919552d7" name="a3074162405b838520c286dce919552d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3074162405b838520c286dce919552d7">&#9670;&#160;</a></span>test_adidas_on_elfarol()</h2>
 
@@ -138,6 +141,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test ADIDAS on a 10-player, symmetric El Farol bar game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/dfb/adidas__test_8py_source.html#l00059">59</a> of file <a class="el" href="../../de/dfb/adidas__test_8py_source.html">adidas_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>  <span class="keyword">def </span>test_adidas_on_elfarol(self):</div>
+<div class="line"><span class="lineno">   60</span>    <span class="stringliteral">&quot;&quot;&quot;Test ADIDAS on a 10-player, symmetric El Farol bar game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   61</span>    game = ElFarol(n=10, c=0.7)</div>
+<div class="line"><span class="lineno">   62</span>    solver = qre_anneal_sym.Solver(temperature=100,</div>
+<div class="line"><span class="lineno">   63</span>                                   proj_grad=<span class="keyword">False</span>, euclidean=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">   64</span>                                   lrs=(1e-4, 1e-2), exp_thresh=0.01,</div>
+<div class="line"><span class="lineno">   65</span>                                   seed=0)</div>
+<div class="line"><span class="lineno">   66</span>    lle = adidas.ADIDAS(seed=0)</div>
+<div class="line"><span class="lineno">   67</span>    lle.approximate_nash(game, solver, sym=<span class="keyword">True</span>, num_iterations=1,</div>
+<div class="line"><span class="lineno">   68</span>                         num_samples=np.inf, num_eval_samples=int(1e5),</div>
+<div class="line"><span class="lineno">   69</span>                         approx_eval=<span class="keyword">True</span>, exact_eval=<span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">   70</span>                         avg_trajectory=<span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   71</span>    self.assertLess(lle.results[<span class="stringliteral">&#39;exps_exact&#39;</span>][-1], 0.5)</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac9b5948466f2ab3b13f905ba48314ce8" name="ac9b5948466f2ab3b13f905ba48314ce8"></a>
@@ -155,10 +175,41 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Tests ADIDAS on a 2-player prisoner's dilemma game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/dfb/adidas__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../de/dfb/adidas__test_8py_source.html">adidas_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  <span class="keyword">def </span>test_adidas_on_prisoners_dilemma(self):</div>
+<div class="line"><span class="lineno">   31</span>    <span class="stringliteral">&quot;&quot;&quot;Tests ADIDAS on a 2-player prisoner&#39;s dilemma game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   32</span>    <span class="comment"># pylint:disable=bad-whitespace</span></div>
+<div class="line"><span class="lineno">   33</span>    pt_r = np.array([[-1, -3],</div>
+<div class="line"><span class="lineno">   34</span>                     [0,  -2]])</div>
+<div class="line"><span class="lineno">   35</span>    <span class="comment"># pylint:enable=bad-whitespace</span></div>
+<div class="line"><span class="lineno">   36</span>    <span class="comment"># shift tensor to ensure positivity required if run adidas w/ Tsallis entrpy</span></div>
+<div class="line"><span class="lineno">   37</span>    pt_r -= pt_r.min()</div>
+<div class="line"><span class="lineno">   38</span>    pt_c = pt_r.T  <span class="comment"># symmetric game</span></div>
+<div class="line"><span class="lineno">   39</span>    pt = np.stack((pt_r, pt_c), axis=0).astype(float)</div>
+<div class="line"><span class="lineno">   40</span>    pt /= pt.max()  <span class="comment"># arbitrary design choice to upper bound entries to 1</span></div>
+<div class="line"><span class="lineno">   41</span>    game = MatrixGame(pt, seed=0)</div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment"># for games with more than 2 players, see adidas_utils/games/big.py</span></div>
+<div class="line"><span class="lineno">   43</span>    solver = qre_anneal_sym.Solver(temperature=100,</div>
+<div class="line"><span class="lineno">   44</span>                                   proj_grad=<span class="keyword">False</span>, euclidean=<span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">   45</span>                                   lrs=(1e-4, 1e-4), exp_thresh=0.01,</div>
+<div class="line"><span class="lineno">   46</span>                                   rnd_init=<span class="keyword">True</span>, seed=0)</div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment"># note we set rnd_init to True which initializes adidas&#39; initial</span></div>
+<div class="line"><span class="lineno">   48</span>    <span class="comment"># approximation to nash to a random point on the simplex. if rnd_init is</span></div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment"># False, adidas is initialized to uniform which is the Nash equilibrium</span></div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment"># of the prisoner&#39;s dilemma, in which case adidas trivially solves this</span></div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment"># game in 0 iterations.</span></div>
+<div class="line"><span class="lineno">   52</span>    lle = adidas.ADIDAS(seed=0)</div>
+<div class="line"><span class="lineno">   53</span>    lle.approximate_nash(game, solver, sym=<span class="keyword">True</span>, num_iterations=1,</div>
+<div class="line"><span class="lineno">   54</span>                         num_samples=1, num_eval_samples=int(1e5),</div>
+<div class="line"><span class="lineno">   55</span>                         approx_eval=<span class="keyword">True</span>, exact_eval=<span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">   56</span>                         avg_trajectory=<span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   57</span>    self.assertLess(lle.results[<span class="stringliteral">&#39;exps_exact&#39;</span>][-1], 0.2)</div>
+<div class="line"><span class="lineno">   58</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>adidas_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../de/dfb/adidas__test_8py_source.html">adidas_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

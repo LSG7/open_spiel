@@ -105,19 +105,128 @@ Collaboration diagram for absl::random_internal::RandenHwAes:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab23c05570cf0b470e716224e54ff4912" id="r_ab23c05570cf0b470e716224e54ff4912"><td class="memItemLeft" align="right" valign="top"><a id="ab23c05570cf0b470e716224e54ff4912" name="ab23c05570cf0b470e716224e54ff4912"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Generate</b> (const void *keys, void *state_void)</td></tr>
+<tr class="memitem:ab23c05570cf0b470e716224e54ff4912" id="r_ab23c05570cf0b470e716224e54ff4912"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab23c05570cf0b470e716224e54ff4912">Generate</a> (const void *keys, void *state_void)</td></tr>
 <tr class="separator:ab23c05570cf0b470e716224e54ff4912"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab28e2d180ee39587a8dda955004fa987" id="r_ab28e2d180ee39587a8dda955004fa987"><td class="memItemLeft" align="right" valign="top"><a id="ab28e2d180ee39587a8dda955004fa987" name="ab28e2d180ee39587a8dda955004fa987"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Absorb</b> (const void *seed_void, void *state_void)</td></tr>
+<tr class="memitem:ab28e2d180ee39587a8dda955004fa987" id="r_ab28e2d180ee39587a8dda955004fa987"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab28e2d180ee39587a8dda955004fa987">Absorb</a> (const void *seed_void, void *state_void)</td></tr>
 <tr class="separator:ab28e2d180ee39587a8dda955004fa987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57208a993f4841089f94e0c742329b07" id="r_a57208a993f4841089f94e0c742329b07"><td class="memItemLeft" align="right" valign="top"><a id="a57208a993f4841089f94e0c742329b07" name="a57208a993f4841089f94e0c742329b07"></a>
-static const void *&#160;</td><td class="memItemRight" valign="bottom"><b>GetKeys</b> ()</td></tr>
+<tr class="memitem:a57208a993f4841089f94e0c742329b07" id="r_a57208a993f4841089f94e0c742329b07"><td class="memItemLeft" align="right" valign="top">static const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57208a993f4841089f94e0c742329b07">GetKeys</a> ()</td></tr>
 <tr class="separator:a57208a993f4841089f94e0c742329b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/d74/randen__hwaes_8h_source.html#l00034">34</a> of file <a class="el" href="../../df/d74/randen__hwaes_8h_source.html">randen_hwaes.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab28e2d180ee39587a8dda955004fa987" name="ab28e2d180ee39587a8dda955004fa987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28e2d180ee39587a8dda955004fa987">&#9670;&#160;</a></span>Absorb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::random_internal::RandenHwAes::Absorb </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>seed_void</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>state_void</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d60/randen__hwaes_8cc_source.html#l00066">66</a> of file <a class="el" href="../../db/d60/randen__hwaes_8cc_source.html">randen_hwaes.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                                           {</div>
+<div class="line"><span class="lineno">   67</span>  <span class="comment">// Attempted to dispatch to an unsupported dispatch target.</span></div>
+<div class="line"><span class="lineno">   68</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> d = ABSL_RANDOM_INTERNAL_AES_DISPATCH;</div>
+<div class="line"><span class="lineno">   69</span>  fprintf(stderr, <span class="stringliteral">&quot;AES Hardware detection failed (%d).\n&quot;</span>, d);</div>
+<div class="line"><span class="lineno">   70</span>  exit(1);</div>
+<div class="line"><span class="lineno">   71</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab23c05570cf0b470e716224e54ff4912" name="ab23c05570cf0b470e716224e54ff4912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23c05570cf0b470e716224e54ff4912">&#9670;&#160;</a></span>Generate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::random_internal::RandenHwAes::Generate </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>keys</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>state_void</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d60/randen__hwaes_8cc_source.html#l00074">74</a> of file <a class="el" href="../../db/d60/randen__hwaes_8cc_source.html">randen_hwaes.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                                             {</div>
+<div class="line"><span class="lineno">   75</span>  <span class="comment">// Attempted to dispatch to an unsupported dispatch target.</span></div>
+<div class="line"><span class="lineno">   76</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> d = ABSL_RANDOM_INTERNAL_AES_DISPATCH;</div>
+<div class="line"><span class="lineno">   77</span>  fprintf(stderr, <span class="stringliteral">&quot;AES Hardware detection failed (%d).\n&quot;</span>, d);</div>
+<div class="line"><span class="lineno">   78</span>  exit(1);</div>
+<div class="line"><span class="lineno">   79</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a57208a993f4841089f94e0c742329b07" name="a57208a993f4841089f94e0c742329b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57208a993f4841089f94e0c742329b07">&#9670;&#160;</a></span>GetKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void * absl::random_internal::RandenHwAes::GetKeys </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d60/randen__hwaes_8cc_source.html#l00057">57</a> of file <a class="el" href="../../db/d60/randen__hwaes_8cc_source.html">randen_hwaes.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                 {</div>
+<div class="line"><span class="lineno">   58</span>  <span class="comment">// Attempted to dispatch to an unsupported dispatch target.</span></div>
+<div class="line"><span class="lineno">   59</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> d = ABSL_RANDOM_INTERNAL_AES_DISPATCH;</div>
+<div class="line"><span class="lineno">   60</span>  fprintf(stderr, <span class="stringliteral">&quot;AES Hardware detection failed (%d).\n&quot;</span>, d);</div>
+<div class="line"><span class="lineno">   61</span>  exit(1);</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   63</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/random/internal/<a class="el" href="../../df/d74/randen__hwaes_8h_source.html">randen_hwaes.h</a></li>
-<li>open_spiel/abseil-cpp/absl/random/internal/<b>randen_hwaes.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/random/internal/<a class="el" href="../../db/d60/randen__hwaes_8cc_source.html">randen_hwaes.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

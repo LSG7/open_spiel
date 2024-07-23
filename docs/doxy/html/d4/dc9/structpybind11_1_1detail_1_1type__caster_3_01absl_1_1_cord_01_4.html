@@ -107,8 +107,7 @@ Collaboration diagram for pybind11::detail::type_caster&lt; absl::Cord &gt;:</di
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:af95b3c9f135995e599a4c5ba14473d42" id="r_af95b3c9f135995e599a4c5ba14473d42"><td class="memItemLeft" align="right" valign="top"><a id="af95b3c9f135995e599a4c5ba14473d42" name="af95b3c9f135995e599a4c5ba14473d42"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>StringViewCaster</b> = make_caster&lt;<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>&gt;</td></tr>
+<tr class="memitem:af95b3c9f135995e599a4c5ba14473d42" id="r_af95b3c9f135995e599a4c5ba14473d42"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af95b3c9f135995e599a4c5ba14473d42">StringViewCaster</a> = make_caster&lt;<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>&gt;</td></tr>
 <tr class="separator:af95b3c9f135995e599a4c5ba14473d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -116,16 +115,116 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af02b8ad6a3cd5b4b0fda990eb47e0efa" id="r_af02b8ad6a3cd5b4b0fda990eb47e0efa"><td class="memItemLeft" align="right" valign="top"><a id="af02b8ad6a3cd5b4b0fda990eb47e0efa" name="af02b8ad6a3cd5b4b0fda990eb47e0efa"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PYBIND11_TYPE_CASTER</b> (<a class="el" href="../../d9/de8/classabsl_1_1_cord.html">absl::Cord</a>, const_name(&quot;absl::Cord&quot;))</td></tr>
 <tr class="separator:af02b8ad6a3cd5b4b0fda990eb47e0efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a442d267eb13fcc893149f27a85f75a8b" id="r_a442d267eb13fcc893149f27a85f75a8b"><td class="memItemLeft" align="right" valign="top"><a id="a442d267eb13fcc893149f27a85f75a8b" name="a442d267eb13fcc893149f27a85f75a8b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (handle src, bool convert)</td></tr>
+<tr class="memitem:a442d267eb13fcc893149f27a85f75a8b" id="r_a442d267eb13fcc893149f27a85f75a8b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a442d267eb13fcc893149f27a85f75a8b">load</a> (handle src, bool convert)</td></tr>
 <tr class="separator:a442d267eb13fcc893149f27a85f75a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa25e71308c4337ad4aba67eabdad3928" id="r_aa25e71308c4337ad4aba67eabdad3928"><td class="memItemLeft" align="right" valign="top"><a id="aa25e71308c4337ad4aba67eabdad3928" name="aa25e71308c4337ad4aba67eabdad3928"></a>
-static handle&#160;</td><td class="memItemRight" valign="bottom"><b>cast</b> (const <a class="el" href="../../d9/de8/classabsl_1_1_cord.html">absl::Cord</a> &amp;src, return_value_policy policy, handle parent)</td></tr>
+<tr class="memitem:aa25e71308c4337ad4aba67eabdad3928" id="r_aa25e71308c4337ad4aba67eabdad3928"><td class="memItemLeft" align="right" valign="top">static handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa25e71308c4337ad4aba67eabdad3928">cast</a> (const <a class="el" href="../../d9/de8/classabsl_1_1_cord.html">absl::Cord</a> &amp;src, return_value_policy policy, handle parent)</td></tr>
 <tr class="separator:aa25e71308c4337ad4aba67eabdad3928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/d04/absl__casters_8h_source.html#l00429">429</a> of file <a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af95b3c9f135995e599a4c5ba14473d42" name="af95b3c9f135995e599a4c5ba14473d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af95b3c9f135995e599a4c5ba14473d42">&#9670;&#160;</a></span>StringViewCaster</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using pybind11::detail::type_caster&lt; <a class="el" href="../../d9/de8/classabsl_1_1_cord.html">absl::Cord</a> &gt;::StringViewCaster = make_caster&lt;<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d04/absl__casters_8h_source.html#l00431">431</a> of file <a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa25e71308c4337ad4aba67eabdad3928" name="aa25e71308c4337ad4aba67eabdad3928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25e71308c4337ad4aba67eabdad3928">&#9670;&#160;</a></span>cast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static handle pybind11::detail::type_caster&lt; <a class="el" href="../../d9/de8/classabsl_1_1_cord.html">absl::Cord</a> &gt;::cast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/de8/classabsl_1_1_cord.html">absl::Cord</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">return_value_policy</td>          <td class="paramname"><span class="paramname"><em>policy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">handle</td>          <td class="paramname"><span class="paramname"><em>parent</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d04/absl__casters_8h_source.html#l00446">446</a> of file <a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  447</span>                                    {</div>
+<div class="line"><span class="lineno">  448</span>    <span class="keywordflow">return</span> StringViewCaster::cast(</div>
+<div class="line"><span class="lineno">  449</span>        <a class="code hl_class" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>(std::string(src)), policy, parent);</div>
+<div class="line"><span class="lineno">  450</span>  }</div>
+<div class="ttc" id="aclassabsl_1_1string__view_html"><div class="ttname"><a href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1d/string__view_8h_source.html#l00161">string_view.h:161</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a442d267eb13fcc893149f27a85f75a8b" name="a442d267eb13fcc893149f27a85f75a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a442d267eb13fcc893149f27a85f75a8b">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pybind11::detail::type_caster&lt; <a class="el" href="../../d9/de8/classabsl_1_1_cord.html">absl::Cord</a> &gt;::load </td>
+          <td>(</td>
+          <td class="paramtype">handle</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>convert</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d04/absl__casters_8h_source.html#l00435">435</a> of file <a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  435</span>                                      {</div>
+<div class="line"><span class="lineno">  436</span>    <span class="keyword">auto</span> caster = StringViewCaster();</div>
+<div class="line"><span class="lineno">  437</span>    <span class="keywordflow">if</span> (caster.load(src, convert)) {</div>
+<div class="line"><span class="lineno">  438</span>      <a class="code hl_class" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> view = cast_op&lt;absl::string_view&gt;(std::move(caster));</div>
+<div class="line"><span class="lineno">  439</span>      value = view;</div>
+<div class="line"><span class="lineno">  440</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  441</span>    }</div>
+<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  443</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/pybind11_abseil/pybind11_abseil/<a class="el" href="../../da/d04/absl__casters_8h_source.html">absl_casters.h</a></li>
 </ul>

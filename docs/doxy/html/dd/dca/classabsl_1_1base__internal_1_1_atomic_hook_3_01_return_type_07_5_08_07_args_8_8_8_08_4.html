@@ -106,26 +106,207 @@ Collaboration diagram for absl::base_internal::AtomicHook&lt; ReturnType(*)(Args
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:af16bdbd3e669516dba14b79c46edfd84" id="r_af16bdbd3e669516dba14b79c46edfd84"><td class="memItemLeft" align="right" valign="top"><a id="af16bdbd3e669516dba14b79c46edfd84" name="af16bdbd3e669516dba14b79c46edfd84"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>FnPtr</b> = ReturnType (*)(Args...)</td></tr>
+<tr class="memitem:af16bdbd3e669516dba14b79c46edfd84" id="r_af16bdbd3e669516dba14b79c46edfd84"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af16bdbd3e669516dba14b79c46edfd84">FnPtr</a> = ReturnType (*)(Args...)</td></tr>
 <tr class="separator:af16bdbd3e669516dba14b79c46edfd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac51ec600c7ec208a8a8613e34d80dabb" id="r_ac51ec600c7ec208a8a8613e34d80dabb"><td class="memItemLeft" align="right" valign="top"><a id="ac51ec600c7ec208a8a8613e34d80dabb" name="ac51ec600c7ec208a8a8613e34d80dabb"></a>
-constexpr&#160;</td><td class="memItemRight" valign="bottom"><b>AtomicHook</b> (FnPtr default_fn)</td></tr>
+<tr class="memitem:ac51ec600c7ec208a8a8613e34d80dabb" id="r_ac51ec600c7ec208a8a8613e34d80dabb"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac51ec600c7ec208a8a8613e34d80dabb">AtomicHook</a> (FnPtr default_fn)</td></tr>
 <tr class="separator:ac51ec600c7ec208a8a8613e34d80dabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd3d59739faaeb560a7944f048e9f978" id="r_abd3d59739faaeb560a7944f048e9f978"><td class="memItemLeft" align="right" valign="top"><a id="abd3d59739faaeb560a7944f048e9f978" name="abd3d59739faaeb560a7944f048e9f978"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Store</b> (FnPtr fn)</td></tr>
+<tr class="memitem:abd3d59739faaeb560a7944f048e9f978" id="r_abd3d59739faaeb560a7944f048e9f978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd3d59739faaeb560a7944f048e9f978">Store</a> (FnPtr fn)</td></tr>
 <tr class="separator:abd3d59739faaeb560a7944f048e9f978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc7038b0e2a9a27acb99e5e360e05421" id="r_adc7038b0e2a9a27acb99e5e360e05421"><td class="memTemplParams" colspan="2"><a id="adc7038b0e2a9a27acb99e5e360e05421" name="adc7038b0e2a9a27acb99e5e360e05421"></a>
-template&lt;typename... CallArgs&gt; </td></tr>
-<tr class="memitem:adc7038b0e2a9a27acb99e5e360e05421"><td class="memTemplItemLeft" align="right" valign="top">ReturnType&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (CallArgs &amp;&amp;... args) const</td></tr>
+<tr class="memitem:adc7038b0e2a9a27acb99e5e360e05421" id="r_adc7038b0e2a9a27acb99e5e360e05421"><td class="memTemplParams" colspan="2">template&lt;typename... CallArgs&gt; </td></tr>
+<tr class="memitem:adc7038b0e2a9a27acb99e5e360e05421"><td class="memTemplItemLeft" align="right" valign="top">ReturnType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adc7038b0e2a9a27acb99e5e360e05421">operator()</a> (CallArgs &amp;&amp;... args) const</td></tr>
 <tr class="separator:adc7038b0e2a9a27acb99e5e360e05421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64f7adafe2f962fcc9c684b5be389950" id="r_a64f7adafe2f962fcc9c684b5be389950"><td class="memItemLeft" align="right" valign="top"><a id="a64f7adafe2f962fcc9c684b5be389950" name="a64f7adafe2f962fcc9c684b5be389950"></a>
-FnPtr&#160;</td><td class="memItemRight" valign="bottom"><b>Load</b> () const</td></tr>
+<tr class="memitem:a64f7adafe2f962fcc9c684b5be389950" id="r_a64f7adafe2f962fcc9c684b5be389950"><td class="memItemLeft" align="right" valign="top">FnPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64f7adafe2f962fcc9c684b5be389950">Load</a> () const</td></tr>
 <tr class="separator:a64f7adafe2f962fcc9c684b5be389950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename ReturnType, typename... Args&gt;<br />
+class absl::base_internal::AtomicHook&lt; ReturnType(*)(Args...)&gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d02/atomic__hook_8h_source.html#l00072">72</a> of file <a class="el" href="../../d9/d02/atomic__hook_8h_source.html">atomic_hook.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="af16bdbd3e669516dba14b79c46edfd84" name="af16bdbd3e669516dba14b79c46edfd84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af16bdbd3e669516dba14b79c46edfd84">&#9670;&#160;</a></span>FnPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ReturnType , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d8/d5b/classabsl_1_1base__internal_1_1_atomic_hook.html">absl::base_internal::AtomicHook</a>&lt; ReturnType(*)(Args...)&gt;::FnPtr = ReturnType (*)(Args...)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d02/atomic__hook_8h_source.html#l00074">74</a> of file <a class="el" href="../../d9/d02/atomic__hook_8h_source.html">atomic_hook.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a37d69a1b7a7442b01213aedf4cddd433" name="a37d69a1b7a7442b01213aedf4cddd433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d69a1b7a7442b01213aedf4cddd433">&#9670;&#160;</a></span>AtomicHook() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ReturnType , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d5b/classabsl_1_1base__internal_1_1_atomic_hook.html">absl::base_internal::AtomicHook</a>&lt; ReturnType(*)(Args...)&gt;::AtomicHook </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d02/atomic__hook_8h_source.html#l00078">78</a> of file <a class="el" href="../../d9/d02/atomic__hook_8h_source.html">atomic_hook.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>: AtomicHook(DummyFunction) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac51ec600c7ec208a8a8613e34d80dabb" name="ac51ec600c7ec208a8a8613e34d80dabb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac51ec600c7ec208a8a8613e34d80dabb">&#9670;&#160;</a></span>AtomicHook() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ReturnType , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d5b/classabsl_1_1base__internal_1_1_atomic_hook.html">absl::base_internal::AtomicHook</a>&lt; ReturnType(*)(Args...)&gt;::AtomicHook </td>
+          <td>(</td>
+          <td class="paramtype">FnPtr</td>          <td class="paramname"><span class="paramname"><em>default_fn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d02/atomic__hook_8h_source.html#l00083">83</a> of file <a class="el" href="../../d9/d02/atomic__hook_8h_source.html">atomic_hook.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>      : hook_(default_fn), default_fn_(default_fn) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a64f7adafe2f962fcc9c684b5be389950" name="a64f7adafe2f962fcc9c684b5be389950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f7adafe2f962fcc9c684b5be389950">&#9670;&#160;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ReturnType , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FnPtr <a class="el" href="../../d8/d5b/classabsl_1_1base__internal_1_1_atomic_hook.html">absl::base_internal::AtomicHook</a>&lt; ReturnType(*)(Args...)&gt;::Load </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d02/atomic__hook_8h_source.html#l00129">129</a> of file <a class="el" href="../../d9/d02/atomic__hook_8h_source.html">atomic_hook.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>                     {</div>
+<div class="line"><span class="lineno">  130</span>    FnPtr ptr = DoLoad();</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">return</span> (ptr == DummyFunction) ? nullptr : ptr;</div>
+<div class="line"><span class="lineno">  132</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adc7038b0e2a9a27acb99e5e360e05421" name="adc7038b0e2a9a27acb99e5e360e05421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7038b0e2a9a27acb99e5e360e05421">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ReturnType , typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... CallArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnType <a class="el" href="../../d8/d5b/classabsl_1_1base__internal_1_1_atomic_hook.html">absl::base_internal::AtomicHook</a>&lt; ReturnType(*)(Args...)&gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">CallArgs &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d02/atomic__hook_8h_source.html#l00116">116</a> of file <a class="el" href="../../d9/d02/atomic__hook_8h_source.html">atomic_hook.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                  {</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> DoLoad()(std::forward&lt;CallArgs&gt;(args)...);</div>
+<div class="line"><span class="lineno">  118</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abd3d59739faaeb560a7944f048e9f978" name="abd3d59739faaeb560a7944f048e9f978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3d59739faaeb560a7944f048e9f978">&#9670;&#160;</a></span>Store()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ReturnType , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/d5b/classabsl_1_1base__internal_1_1_atomic_hook.html">absl::base_internal::AtomicHook</a>&lt; ReturnType(*)(Args...)&gt;::Store </td>
+          <td>(</td>
+          <td class="paramtype">FnPtr</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d02/atomic__hook_8h_source.html#l00107">107</a> of file <a class="el" href="../../d9/d02/atomic__hook_8h_source.html">atomic_hook.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                       {</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordtype">bool</span> success = DoStore(fn);</div>
+<div class="line"><span class="lineno">  109</span>    <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(success);</div>
+<div class="line"><span class="lineno">  110</span>    assert(success);</div>
+<div class="line"><span class="lineno">  111</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../d9/d02/atomic__hook_8h_source.html">atomic_hook.h</a></li>
 </ul>

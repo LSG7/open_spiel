@@ -105,19 +105,140 @@ Collaboration diagram for absl::ReleasableMutexLock:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a79a9b479b3b687b29172711ce6c46d44" id="r_a79a9b479b3b687b29172711ce6c46d44"><td class="memItemLeft" align="right" valign="top"><a id="a79a9b479b3b687b29172711ce6c46d44" name="a79a9b479b3b687b29172711ce6c46d44"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ReleasableMutexLock</b> (<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu)</td></tr>
+<tr class="memitem:a79a9b479b3b687b29172711ce6c46d44" id="r_a79a9b479b3b687b29172711ce6c46d44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79a9b479b3b687b29172711ce6c46d44">ReleasableMutexLock</a> (<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu)</td></tr>
 <tr class="separator:a79a9b479b3b687b29172711ce6c46d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3da97e458e23faa5e5c4cbc2c45d1f50" id="r_a3da97e458e23faa5e5c4cbc2c45d1f50"><td class="memItemLeft" align="right" valign="top"><a id="a3da97e458e23faa5e5c4cbc2c45d1f50" name="a3da97e458e23faa5e5c4cbc2c45d1f50"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ReleasableMutexLock</b> (<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *mu, const <a class="el" href="../../d4/daa/classabsl_1_1_condition.html">Condition</a> &amp;cond) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu)</td></tr>
+<tr class="memitem:a3da97e458e23faa5e5c4cbc2c45d1f50" id="r_a3da97e458e23faa5e5c4cbc2c45d1f50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3da97e458e23faa5e5c4cbc2c45d1f50">ReleasableMutexLock</a> (<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *mu, const <a class="el" href="../../d4/daa/classabsl_1_1_condition.html">Condition</a> &amp;cond) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu)</td></tr>
 <tr class="separator:a3da97e458e23faa5e5c4cbc2c45d1f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0731a900ed50fc8871d773c4e36ea4fb" id="r_a0731a900ed50fc8871d773c4e36ea4fb"><td class="memItemLeft" align="right" valign="top"><a id="a0731a900ed50fc8871d773c4e36ea4fb" name="a0731a900ed50fc8871d773c4e36ea4fb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Release</b> () ABSL_UNLOCK_FUNCTION()</td></tr>
+<tr class="memitem:a0731a900ed50fc8871d773c4e36ea4fb" id="r_a0731a900ed50fc8871d773c4e36ea4fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0731a900ed50fc8871d773c4e36ea4fb">Release</a> () ABSL_UNLOCK_FUNCTION()</td></tr>
 <tr class="separator:a0731a900ed50fc8871d773c4e36ea4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/df8/mutex_8h_source.html#l00948">948</a> of file <a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a79a9b479b3b687b29172711ce6c46d44" name="a79a9b479b3b687b29172711ce6c46d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79a9b479b3b687b29172711ce6c46d44">&#9670;&#160;</a></span>ReleasableMutexLock() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::ReleasableMutexLock::ReleasableMutexLock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *</td>          <td class="paramname"><span class="paramname"><em>mu</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/df8/mutex_8h_source.html#l00950">950</a> of file <a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  951</span>      : mu_(mu) {</div>
+<div class="line"><span class="lineno">  952</span>    this-&gt;mu_-&gt;Lock();</div>
+<div class="line"><span class="lineno">  953</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3da97e458e23faa5e5c4cbc2c45d1f50" name="a3da97e458e23faa5e5c4cbc2c45d1f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da97e458e23faa5e5c4cbc2c45d1f50">&#9670;&#160;</a></span>ReleasableMutexLock() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::ReleasableMutexLock::ReleasableMutexLock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">Mutex</a> *</td>          <td class="paramname"><span class="paramname"><em>mu</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/daa/classabsl_1_1_condition.html">Condition</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cond</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/df8/mutex_8h_source.html#l00955">955</a> of file <a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  957</span>      : mu_(mu) {</div>
+<div class="line"><span class="lineno">  958</span>    this-&gt;mu_-&gt;LockWhen(cond);</div>
+<div class="line"><span class="lineno">  959</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5afa7fc549d7643d9977289272ade8e4" name="a5afa7fc549d7643d9977289272ade8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5afa7fc549d7643d9977289272ade8e4">&#9670;&#160;</a></span>~ReleasableMutexLock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::ReleasableMutexLock::~ReleasableMutexLock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/df8/mutex_8h_source.html#l00961">961</a> of file <a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  961</span>                                                {</div>
+<div class="line"><span class="lineno">  962</span>    <span class="keywordflow">if</span> (this-&gt;mu_ != <span class="keyword">nullptr</span>) { this-&gt;mu_-&gt;Unlock(); }</div>
+<div class="line"><span class="lineno">  963</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0731a900ed50fc8871d773c4e36ea4fb" name="a0731a900ed50fc8871d773c4e36ea4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0731a900ed50fc8871d773c4e36ea4fb">&#9670;&#160;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::ReleasableMutexLock::Release </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d08/mutex_8cc_source.html#l02769">2769</a> of file <a class="el" href="../../d1/d08/mutex_8cc_source.html">mutex.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2769</span>                                  {</div>
+<div class="line"><span class="lineno"> 2770</span>  ABSL_RAW_CHECK(this-&gt;mu_ != <span class="keyword">nullptr</span>,</div>
+<div class="line"><span class="lineno"> 2771</span>                 <span class="stringliteral">&quot;ReleasableMutexLock::Release may only be called once&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2772</span>  this-&gt;mu_-&gt;Unlock();</div>
+<div class="line"><span class="lineno"> 2773</span>  this-&gt;mu_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno"> 2774</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/synchronization/<a class="el" href="../../d0/df8/mutex_8h_source.html">mutex.h</a></li>
-<li>open_spiel/abseil-cpp/absl/synchronization/<b>mutex.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/synchronization/<a class="el" href="../../d1/d08/mutex_8cc_source.html">mutex.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

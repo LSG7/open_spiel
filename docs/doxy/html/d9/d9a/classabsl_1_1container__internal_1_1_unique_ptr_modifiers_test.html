@@ -113,6 +113,45 @@ Collaboration diagram for absl::container_internal::UniquePtrModifiersTest&lt; U
 <area shape="poly" title=" " alt="" coords="91,100,91,134,86,134,86,100"/>
 </map>
 </div>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class UnordMap&gt;<br />
+class absl::container_internal::UniquePtrModifiersTest&lt; UnordMap &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../df/d13/unordered__map__modifiers__test_8h_source.html#l00314">314</a> of file <a class="el" href="../../df/d13/unordered__map__modifiers__test_8h_source.html">unordered_map_modifiers_test.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa8392498b496827575796f9b5659b2de" name="aa8392498b496827575796f9b5659b2de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8392498b496827575796f9b5659b2de">&#9670;&#160;</a></span>UniquePtrModifiersTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class UnordMap &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d9a/classabsl_1_1container__internal_1_1_unique_ptr_modifiers_test.html">absl::container_internal::UniquePtrModifiersTest</a>&lt; UnordMap &gt;::UniquePtrModifiersTest </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d13/unordered__map__modifiers__test_8h_source.html#l00316">316</a> of file <a class="el" href="../../df/d13/unordered__map__modifiers__test_8h_source.html">unordered_map_modifiers_test.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  316</span>                           {</div>
+<div class="line"><span class="lineno">  317</span>    <span class="keyword">static_assert</span>(is_unique_ptr&lt;typename UnordMap::mapped_type&gt;::value,</div>
+<div class="line"><span class="lineno">  318</span>                  <span class="stringliteral">&quot;UniquePtrModifiersTyest may only be called with a &quot;</span></div>
+<div class="line"><span class="lineno">  319</span>                  <span class="stringliteral">&quot;std::unique_ptr value type.&quot;</span>);</div>
+<div class="line"><span class="lineno">  320</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../df/d13/unordered__map__modifiers__test_8h_source.html">unordered_map_modifiers_test.h</a></li>
 </ul>

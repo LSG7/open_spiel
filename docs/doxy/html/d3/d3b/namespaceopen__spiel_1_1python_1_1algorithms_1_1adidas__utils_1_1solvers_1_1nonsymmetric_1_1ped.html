@@ -148,7 +148,76 @@ Returns:
   gradient of exploitability w.r.t. (dist) as tuple
   unregularized exploitability (stochastic estimate)
   unregularized exploitability (stochastic estimate) *duplicate
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../df/d5f/nonsymmetric_2ped_8py_source.html#l00051">51</a> of file <a class="el" href="../../df/d5f/nonsymmetric_2ped_8py_source.html">ped.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span><span class="keyword">def </span>gradients(dist, payoff_matrices, num_players, proj_grad=True):</div>
+<div class="line"><span class="lineno">   52</span>  <span class="stringliteral">&quot;&quot;&quot;Computes exploitablity gradient.</span></div>
+<div class="line"><span class="lineno">   53</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   54</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   55</span><span class="stringliteral">    dist: list of 1-d np.arrays, current estimate of nash distribution</span></div>
+<div class="line"><span class="lineno">   56</span><span class="stringliteral">    payoff_matrices: dictionary with keys as tuples of agents (i, j) and</span></div>
+<div class="line"><span class="lineno">   57</span><span class="stringliteral">        values of (2 x A x A) np.arrays, payoffs for each joint action. keys</span></div>
+<div class="line"><span class="lineno">   58</span><span class="stringliteral">        are sorted and arrays should be indexed in the same order</span></div>
+<div class="line"><span class="lineno">   59</span><span class="stringliteral">    num_players: int, number of players, in case payoff_matrices is abbreviated</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral">    proj_grad: bool, if True, projects dist gradient onto simplex</span></div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">    gradient of exploitability w.r.t. (dist) as tuple</span></div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">    unregularized exploitability (stochastic estimate)</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">    unregularized exploitability (stochastic estimate) *duplicate</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   66</span>  <span class="comment"># first compute best responses and payoff gradients</span></div>
+<div class="line"><span class="lineno">   67</span>  nabla = []</div>
+<div class="line"><span class="lineno">   68</span>  br = []</div>
+<div class="line"><span class="lineno">   69</span>  unreg_exp = []</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(num_players):</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    nabla_i = np.zeros_like(dist[i])</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">for</span> j <span class="keywordflow">in</span> range(num_players):</div>
+<div class="line"><span class="lineno">   74</span>      <span class="keywordflow">if</span> j == i:</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">continue</span></div>
+<div class="line"><span class="lineno">   76</span>      <span class="keywordflow">if</span> i &lt; j:</div>
+<div class="line"><span class="lineno">   77</span>        hess_i_ij = payoff_matrices[(i, j)][0]</div>
+<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   79</span>        hess_i_ij = payoff_matrices[(j, i)][1].T</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>      nabla_ij = hess_i_ij.dot(dist[j])</div>
+<div class="line"><span class="lineno">   82</span>      nabla_i += nabla_ij / float(num_players - 1)</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    nabla.append(nabla_i)</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    power = np.inf</div>
+<div class="line"><span class="lineno">   87</span>    s_i = np.linalg.norm(nabla_i, ord=power)</div>
+<div class="line"><span class="lineno">   88</span>    br_i = np.zeros_like(nabla_i)</div>
+<div class="line"><span class="lineno">   89</span>    maxima_i = (nabla_i == s_i)</div>
+<div class="line"><span class="lineno">   90</span>    br_i[maxima_i] = 1. / maxima_i.sum()</div>
+<div class="line"><span class="lineno">   91</span>    br.append(br_i)</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    unreg_exp.append(np.max(nabla_i) - nabla_i.dot(dist[i]))</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>  <span class="comment"># then construct exploitability gradient</span></div>
+<div class="line"><span class="lineno">   96</span>  grad_dist = []</div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(num_players):</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    grad_dist_i = -nabla[i]</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">for</span> j <span class="keywordflow">in</span> range(num_players):</div>
+<div class="line"><span class="lineno">  101</span>      <span class="keywordflow">if</span> j == i:</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">continue</span></div>
+<div class="line"><span class="lineno">  103</span>      <span class="keywordflow">if</span> i &lt; j:</div>
+<div class="line"><span class="lineno">  104</span>        hess_j_ij = payoff_matrices[(i, j)][1]</div>
+<div class="line"><span class="lineno">  105</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  106</span>        hess_j_ij = payoff_matrices[(j, i)][0].T</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>      grad_dist_i += hess_j_ij.dot(br[j] - dist[j])</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> proj_grad:</div>
+<div class="line"><span class="lineno">  111</span>      grad_dist_i = simplex.project_grad(grad_dist_i)</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    grad_dist.append(grad_dist_i)</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">return</span> (grad_dist,), np.mean(unreg_exp), np.mean(unreg_exp)</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../df/d5f/nonsymmetric_2ped_8py_source.html#l00035">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ped.Solver.compute_gradients()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d3b/namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ped_a887025251fe61070cfaee546f823934b_icgraph.png" border="0" usemap="#ad3/d3b/namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ped_a887025251fe61070cfaee546f823934b_icgraph" alt=""/></div>

@@ -117,12 +117,83 @@ Collaboration diagram for open_spiel.python.pytorch.ppo_pytorch_test.PPOTest:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4afeff84bfed123ea9f62170615fdc05" id="r_a4afeff84bfed123ea9f62170615fdc05"><td class="memItemLeft" align="right" valign="top"><a id="a4afeff84bfed123ea9f62170615fdc05" name="a4afeff84bfed123ea9f62170615fdc05"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_simple_game</b> (self)</td></tr>
+<tr class="memitem:a4afeff84bfed123ea9f62170615fdc05" id="r_a4afeff84bfed123ea9f62170615fdc05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4afeff84bfed123ea9f62170615fdc05">test_simple_game</a> (self)</td></tr>
 <tr class="separator:a4afeff84bfed123ea9f62170615fdc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/df9/ppo__pytorch__test_8py_source.html#l00038">38</a> of file <a class="el" href="../../db/df9/ppo__pytorch__test_8py_source.html">ppo_pytorch_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4afeff84bfed123ea9f62170615fdc05" name="a4afeff84bfed123ea9f62170615fdc05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4afeff84bfed123ea9f62170615fdc05">&#9670;&#160;</a></span>test_simple_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo_pytorch_test.PPOTest.test_simple_game </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/df9/ppo__pytorch__test_8py_source.html#l00040">40</a> of file <a class="el" href="../../db/df9/ppo__pytorch__test_8py_source.html">ppo_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>  <span class="keyword">def </span>test_simple_game(self):</div>
+<div class="line"><span class="lineno">   41</span>    game = pyspiel.load_efg_game(SIMPLE_EFG_DATA)</div>
+<div class="line"><span class="lineno">   42</span>    env = rl_environment.Environment(game=game)</div>
+<div class="line"><span class="lineno">   43</span>    envs = SyncVectorEnv([env])</div>
+<div class="line"><span class="lineno">   44</span>    agent_fn = PPOAgent</div>
+<div class="line"><span class="lineno">   45</span>    anneal_lr = <span class="keyword">True</span></div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    info_state_shape = tuple(</div>
+<div class="line"><span class="lineno">   48</span>        np.array(env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>]).flatten())</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    total_timesteps = 1000</div>
+<div class="line"><span class="lineno">   51</span>    steps_per_batch = 8</div>
+<div class="line"><span class="lineno">   52</span>    batch_size = int(len(envs) * steps_per_batch)</div>
+<div class="line"><span class="lineno">   53</span>    num_updates = total_timesteps // batch_size</div>
+<div class="line"><span class="lineno">   54</span>    agent = PPO(</div>
+<div class="line"><span class="lineno">   55</span>        input_shape=info_state_shape,</div>
+<div class="line"><span class="lineno">   56</span>        num_actions=game.num_distinct_actions(),</div>
+<div class="line"><span class="lineno">   57</span>        num_players=game.num_players(),</div>
+<div class="line"><span class="lineno">   58</span>        player_id=0,</div>
+<div class="line"><span class="lineno">   59</span>        num_envs=1,</div>
+<div class="line"><span class="lineno">   60</span>        agent_fn=agent_fn,</div>
+<div class="line"><span class="lineno">   61</span>    )</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    time_step = envs.reset()</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">for</span> update <span class="keywordflow">in</span> range(num_updates):</div>
+<div class="line"><span class="lineno">   65</span>      <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(steps_per_batch):</div>
+<div class="line"><span class="lineno">   66</span>        agent_output = agent.step(time_step)</div>
+<div class="line"><span class="lineno">   67</span>        time_step, reward, done, _ = envs.step(</div>
+<div class="line"><span class="lineno">   68</span>            agent_output, reset_if_done=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   69</span>        agent.post_step(reward, done)</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>      <span class="keywordflow">if</span> anneal_lr:</div>
+<div class="line"><span class="lineno">   72</span>        agent.anneal_learning_rate(update, num_updates)</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>      agent.learn(time_step)</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    total_eval_reward = 0</div>
+<div class="line"><span class="lineno">   77</span>    n_total_evaluations = 1000</div>
+<div class="line"><span class="lineno">   78</span>    n_evaluations = 0</div>
+<div class="line"><span class="lineno">   79</span>    time_step = envs.reset()</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">while</span> n_evaluations &lt; n_total_evaluations:</div>
+<div class="line"><span class="lineno">   81</span>      agent_output = agent.step(time_step, is_evaluation=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   82</span>      time_step, reward, done, _ = envs.step(</div>
+<div class="line"><span class="lineno">   83</span>          agent_output, reset_if_done=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   84</span>      total_eval_reward += reward[0][0]</div>
+<div class="line"><span class="lineno">   85</span>      n_evaluations += sum(done)</div>
+<div class="line"><span class="lineno">   86</span>    self.assertGreaterEqual(total_eval_reward, 900)</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/pytorch/<b>ppo_pytorch_test.py</b></li>
+<li>open_spiel/python/pytorch/<a class="el" href="../../db/df9/ppo__pytorch__test_8py_source.html">ppo_pytorch_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

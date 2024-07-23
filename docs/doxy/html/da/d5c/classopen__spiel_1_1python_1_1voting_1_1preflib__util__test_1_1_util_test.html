@@ -117,12 +117,47 @@ Collaboration diagram for open_spiel.python.voting.preflib_util_test.UtilTest:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d4e2b8a8a584a5c1606fd5edc7df1ce" id="r_a5d4e2b8a8a584a5c1606fd5edc7df1ce"><td class="memItemLeft" align="right" valign="top"><a id="a5d4e2b8a8a584a5c1606fd5edc7df1ce" name="a5d4e2b8a8a584a5c1606fd5edc7df1ce"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_load_preflib</b> (self)</td></tr>
+<tr class="memitem:a5d4e2b8a8a584a5c1606fd5edc7df1ce" id="r_a5d4e2b8a8a584a5c1606fd5edc7df1ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d4e2b8a8a584a5c1606fd5edc7df1ce">test_load_preflib</a> (self)</td></tr>
 <tr class="separator:a5d4e2b8a8a584a5c1606fd5edc7df1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/d30/preflib__util__test_8py_source.html#l00045">45</a> of file <a class="el" href="../../da/d30/preflib__util__test_8py_source.html">preflib_util_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5d4e2b8a8a584a5c1606fd5edc7df1ce" name="a5d4e2b8a8a584a5c1606fd5edc7df1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d4e2b8a8a584a5c1606fd5edc7df1ce">&#9670;&#160;</a></span>test_load_preflib()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.voting.preflib_util_test.UtilTest.test_load_preflib </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d30/preflib__util__test_8py_source.html#l00046">46</a> of file <a class="el" href="../../da/d30/preflib__util__test_8py_source.html">preflib_util_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>  <span class="keyword">def </span>test_load_preflib(self):</div>
+<div class="line"><span class="lineno">   47</span>    print(TEST_DATA)</div>
+<div class="line"><span class="lineno">   48</span>    profile = preflib_util.parse_preflib_data(TEST_DATA)</div>
+<div class="line"><span class="lineno">   49</span>    print(profile)</div>
+<div class="line"><span class="lineno">   50</span>    self.assertEqual(profile.num_alternatives(), 3)</div>
+<div class="line"><span class="lineno">   51</span>    self.assertEqual(profile.num_votes(), 391)</div>
+<div class="line"><span class="lineno">   52</span>    self.assertListEqual(profile.alternatives, [</div>
+<div class="line"><span class="lineno">   53</span>        <span class="stringliteral">&quot;The Amityville Horror&quot;</span>, <span class="stringliteral">&quot;Mars Attacks!&quot;</span>, <span class="stringliteral">&quot;Lean on Me&quot;</span></div>
+<div class="line"><span class="lineno">   54</span>    ])</div>
+<div class="line"><span class="lineno">   55</span>    print(profile.alternatives)</div>
+<div class="line"><span class="lineno">   56</span>    print(profile.margin_matrix())</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/voting/<b>preflib_util_test.py</b></li>
+<li>open_spiel/python/voting/<a class="el" href="../../da/d30/preflib__util__test_8py_source.html">preflib_util_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -97,18 +97,97 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4136596ff56c11ab6f4caf9107424105" id="r_a4136596ff56c11ab6f4caf9107424105"><td class="memItemLeft" align="right" valign="top"><a id="a4136596ff56c11ab6f4caf9107424105" name="a4136596ff56c11ab6f4caf9107424105"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (unused_argv)</td></tr>
+<tr class="memitem:a4136596ff56c11ab6f4caf9107424105" id="r_a4136596ff56c11ab6f4caf9107424105"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4136596ff56c11ab6f4caf9107424105">main</a> (unused_argv)</td></tr>
 <tr class="separator:a4136596ff56c11ab6f4caf9107424105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:afa59e832729f8c27ffa9bb218479994f" id="r_afa59e832729f8c27ffa9bb218479994f"><td class="memItemLeft" align="right" valign="top"><a id="afa59e832729f8c27ffa9bb218479994f" name="afa59e832729f8c27ffa9bb218479994f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:afa59e832729f8c27ffa9bb218479994f" id="r_afa59e832729f8c27ffa9bb218479994f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa59e832729f8c27ffa9bb218479994f">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:afa59e832729f8c27ffa9bb218479994f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Python Deep CFR example.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">Python Deep CFR example.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a4136596ff56c11ab6f4caf9107424105" name="a4136596ff56c11ab6f4caf9107424105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4136596ff56c11ab6f4caf9107424105">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.deep_cfr.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>unused_argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d37/examples_2deep__cfr_8py_source.html#l00039">39</a> of file <a class="el" href="../../d0/d37/examples_2deep__cfr_8py_source.html">deep_cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(unused_argv):</div>
+<div class="line"><span class="lineno">   40</span>  logging.info(<span class="stringliteral">&quot;Loading %s&quot;</span>, FLAGS.game_name)</div>
+<div class="line"><span class="lineno">   41</span>  game = pyspiel.load_game(FLAGS.game_name)</div>
+<div class="line"><span class="lineno">   42</span>  <span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</div>
+<div class="line"><span class="lineno">   43</span>    deep_cfr_solver = deep_cfr.DeepCFRSolver(</div>
+<div class="line"><span class="lineno">   44</span>        sess,</div>
+<div class="line"><span class="lineno">   45</span>        game,</div>
+<div class="line"><span class="lineno">   46</span>        policy_network_layers=(16,),</div>
+<div class="line"><span class="lineno">   47</span>        advantage_network_layers=(16,),</div>
+<div class="line"><span class="lineno">   48</span>        num_iterations=FLAGS.num_iterations,</div>
+<div class="line"><span class="lineno">   49</span>        num_traversals=FLAGS.num_traversals,</div>
+<div class="line"><span class="lineno">   50</span>        learning_rate=1e-3,</div>
+<div class="line"><span class="lineno">   51</span>        batch_size_advantage=128,</div>
+<div class="line"><span class="lineno">   52</span>        batch_size_strategy=1024,</div>
+<div class="line"><span class="lineno">   53</span>        memory_capacity=1e7,</div>
+<div class="line"><span class="lineno">   54</span>        policy_network_train_steps=400,</div>
+<div class="line"><span class="lineno">   55</span>        advantage_network_train_steps=20,</div>
+<div class="line"><span class="lineno">   56</span>        reinitialize_advantage_networks=<span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   57</span>    sess.run(tf.global_variables_initializer())</div>
+<div class="line"><span class="lineno">   58</span>    _, advantage_losses, policy_loss = deep_cfr_solver.solve()</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">for</span> player, losses <span class="keywordflow">in</span> advantage_losses.items():</div>
+<div class="line"><span class="lineno">   60</span>      logging.info(<span class="stringliteral">&quot;Advantage for player %d: %s&quot;</span>, player,</div>
+<div class="line"><span class="lineno">   61</span>                   losses[:2] + [<span class="stringliteral">&quot;...&quot;</span>] + losses[-2:])</div>
+<div class="line"><span class="lineno">   62</span>      logging.info(<span class="stringliteral">&quot;Advantage Buffer Size for player %s: &#39;%s&#39;&quot;</span>, player,</div>
+<div class="line"><span class="lineno">   63</span>                   len(deep_cfr_solver.advantage_buffers[player]))</div>
+<div class="line"><span class="lineno">   64</span>    logging.info(<span class="stringliteral">&quot;Strategy Buffer Size: &#39;%s&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">   65</span>                 len(deep_cfr_solver.strategy_buffer))</div>
+<div class="line"><span class="lineno">   66</span>    logging.info(<span class="stringliteral">&quot;Final policy loss: &#39;%s&#39;&quot;</span>, policy_loss)</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    average_policy = policy.tabular_policy_from_callable(</div>
+<div class="line"><span class="lineno">   69</span>        game, deep_cfr_solver.action_probabilities)</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    conv = exploitability.nash_conv(game, average_policy)</div>
+<div class="line"><span class="lineno">   72</span>    logging.info(<span class="stringliteral">&quot;Deep CFR in &#39;%s&#39; - NashConv: %s&quot;</span>, FLAGS.game_name, conv)</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    average_policy_values = expected_game_score.policy_value(</div>
+<div class="line"><span class="lineno">   75</span>        game.new_initial_state(), [average_policy] * 2)</div>
+<div class="line"><span class="lineno">   76</span>    print(<span class="stringliteral">&quot;Computed player 0 value: {}&quot;</span>.format(average_policy_values[0]))</div>
+<div class="line"><span class="lineno">   77</span>    print(<span class="stringliteral">&quot;Expected player 0 value: {}&quot;</span>.format(-1 / 18))</div>
+<div class="line"><span class="lineno">   78</span>    print(<span class="stringliteral">&quot;Computed player 1 value: {}&quot;</span>.format(average_policy_values[1]))</div>
+<div class="line"><span class="lineno">   79</span>    print(<span class="stringliteral">&quot;Expected player 1 value: {}&quot;</span>.format(1 / 18))</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="afa59e832729f8c27ffa9bb218479994f" name="afa59e832729f8c27ffa9bb218479994f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa59e832729f8c27ffa9bb218479994f">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.deep_cfr.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d37/examples_2deep__cfr_8py_source.html#l00032">32</a> of file <a class="el" href="../../d0/d37/examples_2deep__cfr_8py_source.html">deep_cfr.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

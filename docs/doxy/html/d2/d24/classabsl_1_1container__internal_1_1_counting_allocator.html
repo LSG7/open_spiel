@@ -114,73 +114,564 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8cb7f3b596ffd174bd83304b987a2fc8" id="r_a8cb7f3b596ffd174bd83304b987a2fc8"><td class="memItemLeft" align="right" valign="top"><a id="a8cb7f3b596ffd174bd83304b987a2fc8" name="a8cb7f3b596ffd174bd83304b987a2fc8"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>Allocator</b> = std::allocator&lt;T&gt;</td></tr>
+<tr class="memitem:a8cb7f3b596ffd174bd83304b987a2fc8" id="r_a8cb7f3b596ffd174bd83304b987a2fc8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cb7f3b596ffd174bd83304b987a2fc8">Allocator</a> = std::allocator&lt;T&gt;</td></tr>
 <tr class="separator:a8cb7f3b596ffd174bd83304b987a2fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0ddee1091c1d9a94da3e3dbf94f50e9" id="r_ab0ddee1091c1d9a94da3e3dbf94f50e9"><td class="memItemLeft" align="right" valign="top"><a id="ab0ddee1091c1d9a94da3e3dbf94f50e9" name="ab0ddee1091c1d9a94da3e3dbf94f50e9"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>AllocatorTraits</b> = std::allocator_traits&lt;Allocator&gt;</td></tr>
+<tr class="memitem:ab0ddee1091c1d9a94da3e3dbf94f50e9" id="r_ab0ddee1091c1d9a94da3e3dbf94f50e9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0ddee1091c1d9a94da3e3dbf94f50e9">AllocatorTraits</a> = std::allocator_traits&lt;Allocator&gt;</td></tr>
 <tr class="separator:ab0ddee1091c1d9a94da3e3dbf94f50e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9759b9f341bbb210364e796b71753f3f" id="r_a9759b9f341bbb210364e796b71753f3f"><td class="memItemLeft" align="right" valign="top"><a id="a9759b9f341bbb210364e796b71753f3f" name="a9759b9f341bbb210364e796b71753f3f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = typename AllocatorTraits::value_type</td></tr>
+<tr class="memitem:a9759b9f341bbb210364e796b71753f3f" id="r_a9759b9f341bbb210364e796b71753f3f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9759b9f341bbb210364e796b71753f3f">value_type</a> = typename AllocatorTraits::value_type</td></tr>
 <tr class="separator:a9759b9f341bbb210364e796b71753f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac64a46844e78400f62535b790bb966a8" id="r_ac64a46844e78400f62535b790bb966a8"><td class="memItemLeft" align="right" valign="top"><a id="ac64a46844e78400f62535b790bb966a8" name="ac64a46844e78400f62535b790bb966a8"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = typename AllocatorTraits::pointer</td></tr>
+<tr class="memitem:ac64a46844e78400f62535b790bb966a8" id="r_ac64a46844e78400f62535b790bb966a8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac64a46844e78400f62535b790bb966a8">pointer</a> = typename AllocatorTraits::pointer</td></tr>
 <tr class="separator:ac64a46844e78400f62535b790bb966a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38f34a8a5be0c4a905328c51b525b5ad" id="r_a38f34a8a5be0c4a905328c51b525b5ad"><td class="memItemLeft" align="right" valign="top"><a id="a38f34a8a5be0c4a905328c51b525b5ad" name="a38f34a8a5be0c4a905328c51b525b5ad"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>const_pointer</b> = typename AllocatorTraits::const_pointer</td></tr>
+<tr class="memitem:a38f34a8a5be0c4a905328c51b525b5ad" id="r_a38f34a8a5be0c4a905328c51b525b5ad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38f34a8a5be0c4a905328c51b525b5ad">const_pointer</a> = typename AllocatorTraits::const_pointer</td></tr>
 <tr class="separator:a38f34a8a5be0c4a905328c51b525b5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e091f66bc31e1d80469eb85f2b1ba6c" id="r_a0e091f66bc31e1d80469eb85f2b1ba6c"><td class="memItemLeft" align="right" valign="top"><a id="a0e091f66bc31e1d80469eb85f2b1ba6c" name="a0e091f66bc31e1d80469eb85f2b1ba6c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>size_type</b> = typename AllocatorTraits::size_type</td></tr>
+<tr class="memitem:a0e091f66bc31e1d80469eb85f2b1ba6c" id="r_a0e091f66bc31e1d80469eb85f2b1ba6c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e091f66bc31e1d80469eb85f2b1ba6c">size_type</a> = typename AllocatorTraits::size_type</td></tr>
 <tr class="separator:a0e091f66bc31e1d80469eb85f2b1ba6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7df7e1318e60b4ed5d833eb0a7d55c9d" id="r_a7df7e1318e60b4ed5d833eb0a7d55c9d"><td class="memItemLeft" align="right" valign="top"><a id="a7df7e1318e60b4ed5d833eb0a7d55c9d" name="a7df7e1318e60b4ed5d833eb0a7d55c9d"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b> = typename AllocatorTraits::difference_type</td></tr>
+<tr class="memitem:a7df7e1318e60b4ed5d833eb0a7d55c9d" id="r_a7df7e1318e60b4ed5d833eb0a7d55c9d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7df7e1318e60b4ed5d833eb0a7d55c9d">difference_type</a> = typename AllocatorTraits::difference_type</td></tr>
 <tr class="separator:a7df7e1318e60b4ed5d833eb0a7d55c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae70eee4f409af66c11c4a2d221f2072b" id="r_ae70eee4f409af66c11c4a2d221f2072b"><td class="memItemLeft" align="right" valign="top"><a id="ae70eee4f409af66c11c4a2d221f2072b" name="ae70eee4f409af66c11c4a2d221f2072b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CountingAllocator</b> (int64_t *bytes_used)</td></tr>
+<tr class="memitem:ae70eee4f409af66c11c4a2d221f2072b" id="r_ae70eee4f409af66c11c4a2d221f2072b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae70eee4f409af66c11c4a2d221f2072b">CountingAllocator</a> (int64_t *bytes_used)</td></tr>
 <tr class="separator:ae70eee4f409af66c11c4a2d221f2072b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb2f27728749f56b54b28b91e1aae761" id="r_afb2f27728749f56b54b28b91e1aae761"><td class="memItemLeft" align="right" valign="top"><a id="afb2f27728749f56b54b28b91e1aae761" name="afb2f27728749f56b54b28b91e1aae761"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CountingAllocator</b> (int64_t *bytes_used, int64_t *instance_count)</td></tr>
+<tr class="memitem:afb2f27728749f56b54b28b91e1aae761" id="r_afb2f27728749f56b54b28b91e1aae761"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb2f27728749f56b54b28b91e1aae761">CountingAllocator</a> (int64_t *bytes_used, int64_t *instance_count)</td></tr>
 <tr class="separator:afb2f27728749f56b54b28b91e1aae761"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a289304d21f3acc065381d00c83f2bba5" id="r_a289304d21f3acc065381d00c83f2bba5"><td class="memTemplParams" colspan="2"><a id="a289304d21f3acc065381d00c83f2bba5" name="a289304d21f3acc065381d00c83f2bba5"></a>
-template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a289304d21f3acc065381d00c83f2bba5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CountingAllocator</b> (const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a>&lt; U &gt; &amp;x)</td></tr>
+<tr class="memitem:a289304d21f3acc065381d00c83f2bba5" id="r_a289304d21f3acc065381d00c83f2bba5"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a289304d21f3acc065381d00c83f2bba5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a289304d21f3acc065381d00c83f2bba5">CountingAllocator</a> (const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a>&lt; U &gt; &amp;x)</td></tr>
 <tr class="separator:a289304d21f3acc065381d00c83f2bba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acebb926fce61eb28e4a9f3ad3758aa45" id="r_acebb926fce61eb28e4a9f3ad3758aa45"><td class="memItemLeft" align="right" valign="top"><a id="acebb926fce61eb28e4a9f3ad3758aa45" name="acebb926fce61eb28e4a9f3ad3758aa45"></a>
-pointer&#160;</td><td class="memItemRight" valign="bottom"><b>allocate</b> (size_type n, typename AllocatorTraits::const_void_pointer hint=nullptr)</td></tr>
+<tr class="memitem:acebb926fce61eb28e4a9f3ad3758aa45" id="r_acebb926fce61eb28e4a9f3ad3758aa45"><td class="memItemLeft" align="right" valign="top">pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acebb926fce61eb28e4a9f3ad3758aa45">allocate</a> (size_type n, typename AllocatorTraits::const_void_pointer hint=nullptr)</td></tr>
 <tr class="separator:acebb926fce61eb28e4a9f3ad3758aa45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37eff5c05ae3489e4cb023aa243b9e70" id="r_a37eff5c05ae3489e4cb023aa243b9e70"><td class="memItemLeft" align="right" valign="top"><a id="a37eff5c05ae3489e4cb023aa243b9e70" name="a37eff5c05ae3489e4cb023aa243b9e70"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deallocate</b> (pointer p, size_type n)</td></tr>
+<tr class="memitem:a37eff5c05ae3489e4cb023aa243b9e70" id="r_a37eff5c05ae3489e4cb023aa243b9e70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37eff5c05ae3489e4cb023aa243b9e70">deallocate</a> (pointer p, size_type n)</td></tr>
 <tr class="separator:a37eff5c05ae3489e4cb023aa243b9e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb5cc093b17d4405719c0ed9d9d98bb3" id="r_adb5cc093b17d4405719c0ed9d9d98bb3"><td class="memTemplParams" colspan="2"><a id="adb5cc093b17d4405719c0ed9d9d98bb3" name="adb5cc093b17d4405719c0ed9d9d98bb3"></a>
-template&lt;typename U , typename... Args&gt; </td></tr>
-<tr class="memitem:adb5cc093b17d4405719c0ed9d9d98bb3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>construct</b> (U *p, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:adb5cc093b17d4405719c0ed9d9d98bb3" id="r_adb5cc093b17d4405719c0ed9d9d98bb3"><td class="memTemplParams" colspan="2">template&lt;typename U , typename... Args&gt; </td></tr>
+<tr class="memitem:adb5cc093b17d4405719c0ed9d9d98bb3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adb5cc093b17d4405719c0ed9d9d98bb3">construct</a> (U *p, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:adb5cc093b17d4405719c0ed9d9d98bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e84cb9ec6b4434d88206e23d5806e0c" id="r_a4e84cb9ec6b4434d88206e23d5806e0c"><td class="memTemplParams" colspan="2"><a id="a4e84cb9ec6b4434d88206e23d5806e0c" name="a4e84cb9ec6b4434d88206e23d5806e0c"></a>
-template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a4e84cb9ec6b4434d88206e23d5806e0c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>destroy</b> (U *p)</td></tr>
+<tr class="memitem:a4e84cb9ec6b4434d88206e23d5806e0c" id="r_a4e84cb9ec6b4434d88206e23d5806e0c"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a4e84cb9ec6b4434d88206e23d5806e0c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4e84cb9ec6b4434d88206e23d5806e0c">destroy</a> (U *p)</td></tr>
 <tr class="separator:a4e84cb9ec6b4434d88206e23d5806e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a0897b4078d5617b0988367e8c1a4804f" id="r_a0897b4078d5617b0988367e8c1a4804f"><td class="memItemLeft" align="right" valign="top"><a id="a0897b4078d5617b0988367e8c1a4804f" name="a0897b4078d5617b0988367e8c1a4804f"></a>
-int64_t *&#160;</td><td class="memItemRight" valign="bottom"><b>bytes_used_</b> = nullptr</td></tr>
+<tr class="memitem:a0897b4078d5617b0988367e8c1a4804f" id="r_a0897b4078d5617b0988367e8c1a4804f"><td class="memItemLeft" align="right" valign="top">int64_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0897b4078d5617b0988367e8c1a4804f">bytes_used_</a> = nullptr</td></tr>
 <tr class="separator:a0897b4078d5617b0988367e8c1a4804f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69ef8d4b6ae1510f5f6994e4d6e02c1b" id="r_a69ef8d4b6ae1510f5f6994e4d6e02c1b"><td class="memItemLeft" align="right" valign="top"><a id="a69ef8d4b6ae1510f5f6994e4d6e02c1b" name="a69ef8d4b6ae1510f5f6994e4d6e02c1b"></a>
-int64_t *&#160;</td><td class="memItemRight" valign="bottom"><b>instance_count_</b> = nullptr</td></tr>
+<tr class="memitem:a69ef8d4b6ae1510f5f6994e4d6e02c1b" id="r_a69ef8d4b6ae1510f5f6994e4d6e02c1b"><td class="memItemLeft" align="right" valign="top">int64_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69ef8d4b6ae1510f5f6994e4d6e02c1b">instance_count_</a> = nullptr</td></tr>
 <tr class="separator:a69ef8d4b6ae1510f5f6994e4d6e02c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a2cc982815fac17be908b7917e96379ed" id="r_a2cc982815fac17be908b7917e96379ed"><td class="memItemLeft" align="right" valign="top"><a id="a2cc982815fac17be908b7917e96379ed" name="a2cc982815fac17be908b7917e96379ed"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a> &amp;a, const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a> &amp;b)</td></tr>
+<tr class="memitem:a2cc982815fac17be908b7917e96379ed" id="r_a2cc982815fac17be908b7917e96379ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cc982815fac17be908b7917e96379ed">operator==</a> (const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a> &amp;a, const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a> &amp;b)</td></tr>
 <tr class="separator:a2cc982815fac17be908b7917e96379ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5ffe43943e59e0f8dfed9b6f61868bc" id="r_ad5ffe43943e59e0f8dfed9b6f61868bc"><td class="memItemLeft" align="right" valign="top"><a id="ad5ffe43943e59e0f8dfed9b6f61868bc" name="ad5ffe43943e59e0f8dfed9b6f61868bc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a> &amp;a, const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a> &amp;b)</td></tr>
+<tr class="memitem:ad5ffe43943e59e0f8dfed9b6f61868bc" id="r_ad5ffe43943e59e0f8dfed9b6f61868bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5ffe43943e59e0f8dfed9b6f61868bc">operator!=</a> (const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a> &amp;a, const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a> &amp;b)</td></tr>
 <tr class="separator:ad5ffe43943e59e0f8dfed9b6f61868bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class absl::container_internal::CountingAllocator&lt; T &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00033">33</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a8cb7f3b596ffd174bd83304b987a2fc8" name="a8cb7f3b596ffd174bd83304b987a2fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb7f3b596ffd174bd83304b987a2fc8">&#9670;&#160;</a></span>Allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::Allocator = std::allocator&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00035">35</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
+<a id="ab0ddee1091c1d9a94da3e3dbf94f50e9" name="ab0ddee1091c1d9a94da3e3dbf94f50e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ddee1091c1d9a94da3e3dbf94f50e9">&#9670;&#160;</a></span>AllocatorTraits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::AllocatorTraits = std::allocator_traits&lt;Allocator&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00036">36</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
+<a id="a38f34a8a5be0c4a905328c51b525b5ad" name="a38f34a8a5be0c4a905328c51b525b5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f34a8a5be0c4a905328c51b525b5ad">&#9670;&#160;</a></span>const_pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::const_pointer = typename AllocatorTraits::const_pointer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00039">39</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
+<a id="a7df7e1318e60b4ed5d833eb0a7d55c9d" name="a7df7e1318e60b4ed5d833eb0a7d55c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df7e1318e60b4ed5d833eb0a7d55c9d">&#9670;&#160;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::difference_type = typename AllocatorTraits::difference_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00041">41</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
+<a id="ac64a46844e78400f62535b790bb966a8" name="ac64a46844e78400f62535b790bb966a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64a46844e78400f62535b790bb966a8">&#9670;&#160;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::pointer = typename AllocatorTraits::pointer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00038">38</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
+<a id="a0e091f66bc31e1d80469eb85f2b1ba6c" name="a0e091f66bc31e1d80469eb85f2b1ba6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e091f66bc31e1d80469eb85f2b1ba6c">&#9670;&#160;</a></span>size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::size_type = typename AllocatorTraits::size_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00040">40</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
+<a id="a9759b9f341bbb210364e796b71753f3f" name="a9759b9f341bbb210364e796b71753f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9759b9f341bbb210364e796b71753f3f">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::value_type = typename AllocatorTraits::value_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00037">37</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae70eee4f409af66c11c4a2d221f2072b" name="ae70eee4f409af66c11c4a2d221f2072b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70eee4f409af66c11c4a2d221f2072b">&#9670;&#160;</a></span>CountingAllocator() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::CountingAllocator </td>
+          <td>(</td>
+          <td class="paramtype">int64_t *</td>          <td class="paramname"><span class="paramname"><em>bytes_used</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00044">44</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>: bytes_used_(bytes_used) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afb2f27728749f56b54b28b91e1aae761" name="afb2f27728749f56b54b28b91e1aae761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb2f27728749f56b54b28b91e1aae761">&#9670;&#160;</a></span>CountingAllocator() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::CountingAllocator </td>
+          <td>(</td>
+          <td class="paramtype">int64_t *</td>          <td class="paramname"><span class="paramname"><em>bytes_used</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t *</td>          <td class="paramname"><span class="paramname"><em>instance_count</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00045">45</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>      : bytes_used_(bytes_used), instance_count_(instance_count) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a289304d21f3acc065381d00c83f2bba5" name="a289304d21f3acc065381d00c83f2bba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a289304d21f3acc065381d00c83f2bba5">&#9670;&#160;</a></span>CountingAllocator() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::CountingAllocator </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a>&lt; U &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00049">49</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>      : bytes_used_(x.bytes_used_), instance_count_(x.instance_count_) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acebb926fce61eb28e4a9f3ad3758aa45" name="acebb926fce61eb28e4a9f3ad3758aa45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebb926fce61eb28e4a9f3ad3758aa45">&#9670;&#160;</a></span>allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pointer <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::allocate </td>
+          <td>(</td>
+          <td class="paramtype">size_type</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename AllocatorTraits::const_void_pointer</td>          <td class="paramname"><span class="paramname"><em>hint</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00052">52</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                                 {</div>
+<div class="line"><span class="lineno">   55</span>    Allocator allocator;</div>
+<div class="line"><span class="lineno">   56</span>    pointer ptr = AllocatorTraits::allocate(allocator, n, hint);</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> (bytes_used_ != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   58</span>      *bytes_used_ += n * <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><span class="lineno">   61</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adb5cc093b17d4405719c0ed9d9d98bb3" name="adb5cc093b17d4405719c0ed9d9d98bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5cc093b17d4405719c0ed9d9d98bb3">&#9670;&#160;</a></span>construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::construct </td>
+          <td>(</td>
+          <td class="paramtype">U *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00072">72</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                       {</div>
+<div class="line"><span class="lineno">   73</span>    Allocator allocator;</div>
+<div class="line"><span class="lineno">   74</span>    AllocatorTraits::construct(allocator, p, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (instance_count_ != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   76</span>      *instance_count_ += 1;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="line"><span class="lineno">   78</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a37eff5c05ae3489e4cb023aa243b9e70" name="a37eff5c05ae3489e4cb023aa243b9e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37eff5c05ae3489e4cb023aa243b9e70">&#9670;&#160;</a></span>deallocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::deallocate </td>
+          <td>(</td>
+          <td class="paramtype">pointer</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_type</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00063">63</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                                          {</div>
+<div class="line"><span class="lineno">   64</span>    Allocator allocator;</div>
+<div class="line"><span class="lineno">   65</span>    AllocatorTraits::deallocate(allocator, p, n);</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> (bytes_used_ != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   67</span>      *bytes_used_ -= n * <span class="keyword">sizeof</span>(T);</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4e84cb9ec6b4434d88206e23d5806e0c" name="a4e84cb9ec6b4434d88206e23d5806e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e84cb9ec6b4434d88206e23d5806e0c">&#9670;&#160;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::destroy </td>
+          <td>(</td>
+          <td class="paramtype">U *</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00081">81</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                     {</div>
+<div class="line"><span class="lineno">   82</span>    Allocator allocator;</div>
+<div class="line"><span class="lineno">   83</span>    <span class="comment">// Ignore GCC warning bug.</span></div>
+<div class="line"><span class="lineno">   84</span><span class="preprocessor">#if ABSL_INTERNAL_HAVE_MIN_GNUC_VERSION(12, 0)</span></div>
+<div class="line"><span class="lineno">   85</span><span class="preprocessor">#pragma GCC diagnostic push</span></div>
+<div class="line"><span class="lineno">   86</span><span class="preprocessor">#pragma GCC diagnostic ignored &quot;-Wuse-after-free&quot;</span></div>
+<div class="line"><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   88</span>    AllocatorTraits::destroy(allocator, p);</div>
+<div class="line"><span class="lineno">   89</span><span class="preprocessor">#if ABSL_INTERNAL_HAVE_MIN_GNUC_VERSION(12, 0)</span></div>
+<div class="line"><span class="lineno">   90</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (instance_count_ != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   93</span>      *instance_count_ -= 1;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   95</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ad5ffe43943e59e0f8dfed9b6f61868bc" name="ad5ffe43943e59e0f8dfed9b6f61868bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ffe43943e59e0f8dfed9b6f61868bc">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00109">109</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                     {</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> !(a == b);</div>
+<div class="line"><span class="lineno">  112</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2cc982815fac17be908b7917e96379ed" name="a2cc982815fac17be908b7917e96379ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc982815fac17be908b7917e96379ed">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">CountingAllocator</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00103">103</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                     {</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> a.bytes_used_ == b.bytes_used_ &amp;&amp;</div>
+<div class="line"><span class="lineno">  106</span>           a.instance_count_ == b.instance_count_;</div>
+<div class="line"><span class="lineno">  107</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0897b4078d5617b0988367e8c1a4804f" name="a0897b4078d5617b0988367e8c1a4804f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0897b4078d5617b0988367e8c1a4804f">&#9670;&#160;</a></span>bytes_used_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t* <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::bytes_used_ = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00114">114</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
+<a id="a69ef8d4b6ae1510f5f6994e4d6e02c1b" name="a69ef8d4b6ae1510f5f6994e4d6e02c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ef8d4b6ae1510f5f6994e4d6e02c1b">&#9670;&#160;</a></span>instance_count_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t* <a class="el" href="../../d2/d24/classabsl_1_1container__internal_1_1_counting_allocator.html">absl::container_internal::CountingAllocator</a>&lt; T &gt;::instance_count_ = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d96/counting__allocator_8h_source.html#l00115">115</a> of file <a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../d8/d96/counting__allocator_8h_source.html">counting_allocator.h</a></li>
 </ul>

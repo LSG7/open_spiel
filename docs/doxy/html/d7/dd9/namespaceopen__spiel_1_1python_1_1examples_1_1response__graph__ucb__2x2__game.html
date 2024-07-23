@@ -96,15 +96,92 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7918c5c66cbe1a79415343909e61e61d" id="r_a7918c5c66cbe1a79415343909e61e61d"><td class="memItemLeft" align="right" valign="top"><a id="a7918c5c66cbe1a79415343909e61e61d" name="a7918c5c66cbe1a79415343909e61e61d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>get_example_2x2_payoffs</b> ()</td></tr>
+<tr class="memitem:a7918c5c66cbe1a79415343909e61e61d" id="r_a7918c5c66cbe1a79415343909e61e61d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7918c5c66cbe1a79415343909e61e61d">get_example_2x2_payoffs</a> ()</td></tr>
 <tr class="separator:a7918c5c66cbe1a79415343909e61e61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a472578a47a988e51cca18b1bd83138a1" id="r_a472578a47a988e51cca18b1bd83138a1"><td class="memItemLeft" align="right" valign="top"><a id="a472578a47a988e51cca18b1bd83138a1" name="a472578a47a988e51cca18b1bd83138a1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (argv)</td></tr>
+<tr class="memitem:a472578a47a988e51cca18b1bd83138a1" id="r_a472578a47a988e51cca18b1bd83138a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a472578a47a988e51cca18b1bd83138a1">main</a> (argv)</td></tr>
 <tr class="separator:a472578a47a988e51cca18b1bd83138a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Example of ResponseGraphUCB run on a 2x2 game.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">Example of ResponseGraphUCB run on a 2x2 game.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a7918c5c66cbe1a79415343909e61e61d" name="a7918c5c66cbe1a79415343909e61e61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7918c5c66cbe1a79415343909e61e61d">&#9670;&#160;</a></span>get_example_2x2_payoffs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.response_graph_ucb_2x2_game.get_example_2x2_payoffs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/response__graph__ucb__2x2__game_8py_source.html#l00025">25</a> of file <a class="el" href="../../dd/d06/response__graph__ucb__2x2__game_8py_source.html">response_graph_ucb_2x2_game.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span><span class="keyword">def </span>get_example_2x2_payoffs():</div>
+<div class="line"><span class="lineno">   26</span>  mean_payoffs = np.random.uniform(-1, 1, size=(2, 2, 2))</div>
+<div class="line"><span class="lineno">   27</span>  mean_payoffs[0, :, :] = np.asarray([[0.5, 0.85], [0.15, 0.5]])</div>
+<div class="line"><span class="lineno">   28</span>  mean_payoffs[1, :, :] = 1 - mean_payoffs[0, :, :]</div>
+<div class="line"><span class="lineno">   29</span>  <span class="keywordflow">return</span> mean_payoffs</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a472578a47a988e51cca18b1bd83138a1" name="a472578a47a988e51cca18b1bd83138a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472578a47a988e51cca18b1bd83138a1">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.response_graph_ucb_2x2_game.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/response__graph__ucb__2x2__game_8py_source.html#l00032">32</a> of file <a class="el" href="../../dd/d06/response__graph__ucb__2x2__game_8py_source.html">response_graph_ucb_2x2_game.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(argv):</div>
+<div class="line"><span class="lineno">   33</span>  <span class="keywordflow">if</span> len(argv) &gt; 1:</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">raise</span> app.UsageError(<span class="stringliteral">&#39;Too many command-line arguments.&#39;</span>)</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>  mean_payoffs = get_example_2x2_payoffs()</div>
+<div class="line"><span class="lineno">   37</span>  game = response_graph_ucb_utils.BernoulliGameSampler(</div>
+<div class="line"><span class="lineno">   38</span>      [2, 2], mean_payoffs, payoff_bounds=[-1., 1.])</div>
+<div class="line"><span class="lineno">   39</span>  game.p_max = mean_payoffs</div>
+<div class="line"><span class="lineno">   40</span>  game.means = mean_payoffs</div>
+<div class="line"><span class="lineno">   41</span>  print(<span class="stringliteral">&#39;Game means:\n&#39;</span>, game.means)</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>  exploration_strategy = <span class="stringliteral">&#39;uniform-exhaustive&#39;</span></div>
+<div class="line"><span class="lineno">   44</span>  confidence_method = <span class="stringliteral">&#39;ucb-standard&#39;</span></div>
+<div class="line"><span class="lineno">   45</span>  r_ucb = response_graph_ucb.ResponseGraphUCB(</div>
+<div class="line"><span class="lineno">   46</span>      game,</div>
+<div class="line"><span class="lineno">   47</span>      exploration_strategy=exploration_strategy,</div>
+<div class="line"><span class="lineno">   48</span>      confidence_method=confidence_method,</div>
+<div class="line"><span class="lineno">   49</span>      delta=0.1)</div>
+<div class="line"><span class="lineno">   50</span>  results = r_ucb.run()</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>  <span class="comment"># Plotting</span></div>
+<div class="line"><span class="lineno">   53</span>  print(<span class="stringliteral">&#39;Number of total samples: {}&#39;</span>.format(np.sum(r_ucb.count[0])))</div>
+<div class="line"><span class="lineno">   54</span>  r_ucb.visualise_2x2x2(real_values=game.means, graph=results[<span class="stringliteral">&#39;graph&#39;</span>])</div>
+<div class="line"><span class="lineno">   55</span>  r_ucb.visualise_count_history(figsize=(5, 3))</div>
+<div class="line"><span class="lineno">   56</span>  plt.gca().xaxis.label.set_fontsize(15)</div>
+<div class="line"><span class="lineno">   57</span>  plt.gca().yaxis.label.set_fontsize(15)</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  <span class="comment"># Compare to ground truth graph</span></div>
+<div class="line"><span class="lineno">   60</span>  real_graph = r_ucb.construct_real_graph()</div>
+<div class="line"><span class="lineno">   61</span>  r_ucb.plot_graph(real_graph)</div>
+<div class="line"><span class="lineno">   62</span>  plt.show()</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

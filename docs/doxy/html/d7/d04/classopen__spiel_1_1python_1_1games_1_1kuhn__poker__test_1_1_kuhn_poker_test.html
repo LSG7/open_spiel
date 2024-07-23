@@ -130,7 +130,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a86ba025c0813b9d84b0b10ec775091e4" id="r_a86ba025c0813b9d84b0b10ec775091e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86ba025c0813b9d84b0b10ec775091e4">test_cfr_cc</a> (self)</td></tr>
 <tr class="separator:a86ba025c0813b9d84b0b10ec775091e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html">kuhn_poker_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a86ba025c0813b9d84b0b10ec775091e4" name="a86ba025c0813b9d84b0b10ec775091e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86ba025c0813b9d84b0b10ec775091e4">&#9670;&#160;</a></span>test_cfr_cc()</h2>
 
@@ -146,6 +149,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Runs a C++ CFR algorithm on the game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html#l00084">84</a> of file <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html">kuhn_poker_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>  <span class="keyword">def </span>test_cfr_cc(self):</div>
+<div class="line"><span class="lineno">   85</span>    <span class="stringliteral">&quot;&quot;&quot;Runs a C++ CFR algorithm on the game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   86</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   87</span>    unused_results = pyspiel.CFRSolver(game)</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0191f8e7ef25710254a5a8b491d2e01b" name="a0191f8e7ef25710254a5a8b491d2e01b"></a>
@@ -163,6 +174,28 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks the Python and C++ game implementations are the same.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html#l00037">37</a> of file <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html">kuhn_poker_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>  <span class="keyword">def </span>test_consistent(self):</div>
+<div class="line"><span class="lineno">   38</span>    <span class="stringliteral">&quot;&quot;&quot;Checks the Python and C++ game implementations are the same.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   39</span>    py_game = pyspiel.load_game(<span class="stringliteral">&quot;python_kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   40</span>    cc_game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   41</span>    obs_types = [<span class="keywordtype">None</span>, pyspiel.IIGObservationType(perfect_recall=<span class="keyword">True</span>)]</div>
+<div class="line"><span class="lineno">   42</span>    py_observations = [make_observation(py_game, o) <span class="keywordflow">for</span> o <span class="keywordflow">in</span> obs_types]</div>
+<div class="line"><span class="lineno">   43</span>    cc_observations = [make_observation(cc_game, o) <span class="keywordflow">for</span> o <span class="keywordflow">in</span> obs_types]</div>
+<div class="line"><span class="lineno">   44</span>    py_states = get_all_states(py_game)</div>
+<div class="line"><span class="lineno">   45</span>    cc_states = get_all_states(cc_game)</div>
+<div class="line"><span class="lineno">   46</span>    self.assertCountEqual(list(cc_states), list(py_states))</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">for</span> key, cc_state <span class="keywordflow">in</span> cc_states.items():</div>
+<div class="line"><span class="lineno">   48</span>      py_state = py_states[key]</div>
+<div class="line"><span class="lineno">   49</span>      np.testing.assert_array_equal(py_state.history(), cc_state.history())</div>
+<div class="line"><span class="lineno">   50</span>      np.testing.assert_array_equal(py_state.returns(), cc_state.returns())</div>
+<div class="line"><span class="lineno">   51</span>      <span class="keywordflow">for</span> py_obs, cc_obs <span class="keywordflow">in</span> zip(py_observations, cc_observations):</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">for</span> player <span class="keywordflow">in</span> (0, 1):</div>
+<div class="line"><span class="lineno">   53</span>          py_obs.set_from(py_state, player)</div>
+<div class="line"><span class="lineno">   54</span>          cc_obs.set_from(cc_state, player)</div>
+<div class="line"><span class="lineno">   55</span>          np.testing.assert_array_equal(py_obs.tensor, cc_obs.tensor)</div>
+<div class="line"><span class="lineno">   56</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2d1db74e2ff70c36a5fd1dc857197cb0" name="a2d1db74e2ff70c36a5fd1dc857197cb0"></a>
@@ -180,6 +213,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks the exploitability of the uniform random policy using C++.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html#l00076">76</a> of file <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html">kuhn_poker_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>  <span class="keyword">def </span>test_exploitability_uniform_random_cc(self):</div>
+<div class="line"><span class="lineno">   77</span>    <span class="stringliteral">&quot;&quot;&quot;Checks the exploitability of the uniform random policy using C++.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   78</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   79</span>    test_policy = pyspiel.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   80</span>    expected_nash_conv = 11 / 12</div>
+<div class="line"><span class="lineno">   81</span>    self.assertAlmostEqual(</div>
+<div class="line"><span class="lineno">   82</span>        pyspiel.exploitability(game, test_policy), expected_nash_conv / 2)</div>
+<div class="line"><span class="lineno">   83</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab6598d4a9dbba87eb14ff9a7ba47e4ef" name="ab6598d4a9dbba87eb14ff9a7ba47e4ef"></a>
@@ -197,6 +240,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks the exploitability of the uniform random policy using Python.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html#l00065">65</a> of file <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html">kuhn_poker_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>  <span class="keyword">def </span>test_exploitability_uniform_random_py(self):</div>
+<div class="line"><span class="lineno">   66</span>    <span class="stringliteral">&quot;&quot;&quot;Checks the exploitability of the uniform random policy using Python.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   67</span>    <span class="comment"># NashConv of uniform random test_policy from (found on Google books):</span></div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment"># https://link.springer.com/chapter/10.1007/978-3-319-75931-9_5</span></div>
+<div class="line"><span class="lineno">   69</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   70</span>    test_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   71</span>    expected_nash_conv = 11 / 12</div>
+<div class="line"><span class="lineno">   72</span>    self.assertAlmostEqual(</div>
+<div class="line"><span class="lineno">   73</span>        exploitability.exploitability(game, test_policy),</div>
+<div class="line"><span class="lineno">   74</span>        expected_nash_conv / 2)</div>
+<div class="line"><span class="lineno">   75</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4f4b9093179c04b8880c7a74736381a2" name="a4f4b9093179c04b8880c7a74736381a2"></a>
@@ -214,6 +270,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Runs our standard game tests, checking API consistency.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html">kuhn_poker_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>  <span class="keyword">def </span>test_game_from_cc(self):</div>
+<div class="line"><span class="lineno">   33</span>    <span class="stringliteral">&quot;&quot;&quot;Runs our standard game tests, checking API consistency.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   34</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   35</span>    pyspiel.random_sim_test(game, num_sims=10, serialize=<span class="keyword">False</span>, verbose=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   36</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abf9660bdc638452396aa7bdbdf8e5809" name="abf9660bdc638452396aa7bdbdf8e5809"></a>
@@ -231,10 +294,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks Nash value using a Python sequence form LP solver.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html#l00057">57</a> of file <a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html">kuhn_poker_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>  <span class="keyword">def </span>test_nash_value_sequence_form_lp(self):</div>
+<div class="line"><span class="lineno">   58</span>    <span class="stringliteral">&quot;&quot;&quot;Checks Nash value using a Python sequence form LP solver.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   59</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   60</span>    val1, val2, _, _ = sequence_form_lp.solve_zero_sum_game(game)</div>
+<div class="line"><span class="lineno">   61</span>    <span class="comment"># value from Kuhn 1950 or https://en.wikipedia.org/wiki/Kuhn_poker</span></div>
+<div class="line"><span class="lineno">   62</span>    self.assertAlmostEqual(val1, -1 / 18)</div>
+<div class="line"><span class="lineno">   63</span>    self.assertAlmostEqual(val2, +1 / 18)</div>
+<div class="line"><span class="lineno">   64</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>kuhn_poker_test.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../db/dba/kuhn__poker__test_8py_source.html">kuhn_poker_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

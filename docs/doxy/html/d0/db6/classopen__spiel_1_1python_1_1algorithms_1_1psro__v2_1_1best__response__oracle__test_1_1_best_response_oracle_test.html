@@ -121,12 +121,88 @@ Collaboration diagram for open_spiel.python.algorithms.psro_v2.best_response_ora
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a11c6370ce6a256ba38303e2e50869603" id="r_a11c6370ce6a256ba38303e2e50869603"><td class="memItemLeft" align="right" valign="top"><a id="a11c6370ce6a256ba38303e2e50869603" name="a11c6370ce6a256ba38303e2e50869603"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_cpp_python_best_response_oracle</b> (self, game_name, num_players)</td></tr>
+<tr class="memitem:a11c6370ce6a256ba38303e2e50869603" id="r_a11c6370ce6a256ba38303e2e50869603"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11c6370ce6a256ba38303e2e50869603">test_cpp_python_best_response_oracle</a> (self, game_name, num_players)</td></tr>
 <tr class="separator:a11c6370ce6a256ba38303e2e50869603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d4/d02/best__response__oracle__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../d4/d02/best__response__oracle__test_8py_source.html">best_response_oracle_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a11c6370ce6a256ba38303e2e50869603" name="a11c6370ce6a256ba38303e2e50869603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c6370ce6a256ba38303e2e50869603">&#9670;&#160;</a></span>test_cpp_python_best_response_oracle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.psro_v2.best_response_oracle_test.BestResponseOracleTest.test_cpp_python_best_response_oracle </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_players</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d02/best__response__oracle__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../d4/d02/best__response__oracle__test_8py_source.html">best_response_oracle_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  <span class="keyword">def </span>test_cpp_python_best_response_oracle(self, game_name, num_players):</div>
+<div class="line"><span class="lineno">   31</span>    <span class="comment"># Tests that these best responses interface well with Best Response Oracle</span></div>
+<div class="line"><span class="lineno">   32</span>    game = pyspiel.load_game(game_name, {<span class="stringliteral">&quot;players&quot;</span>: num_players})</div>
+<div class="line"><span class="lineno">   33</span>    all_states, _ = best_response.compute_states_and_info_states_if_none(</div>
+<div class="line"><span class="lineno">   34</span>        game, all_states=<span class="keywordtype">None</span>, state_to_information_state=<span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>    current_best = [</div>
+<div class="line"><span class="lineno">   37</span>        [policy.TabularPolicy(game).__copy__()] <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(num_players)</div>
+<div class="line"><span class="lineno">   38</span>    ]</div>
+<div class="line"><span class="lineno">   39</span>    probabilities_of_playing_policies = [[1.] <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(num_players)]</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <span class="comment"># Construct the python oracle</span></div>
+<div class="line"><span class="lineno">   42</span>    py_oracle = best_response_oracle.BestResponseOracle(</div>
+<div class="line"><span class="lineno">   43</span>        best_response_backend=<span class="stringliteral">&quot;py&quot;</span>)</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    <span class="comment"># Construct the cpp oracle. Note that in this regime, BestResponseOracle</span></div>
+<div class="line"><span class="lineno">   46</span>    <span class="comment"># uses base_policy to construct and cache TabularBestResponse internally.</span></div>
+<div class="line"><span class="lineno">   47</span>    cpp_oracle = best_response_oracle.BestResponseOracle(</div>
+<div class="line"><span class="lineno">   48</span>        game=game, best_response_backend=<span class="stringliteral">&quot;cpp&quot;</span>)</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment"># Prepare the computation of the best responses with each backend</span></div>
+<div class="line"><span class="lineno">   51</span>    <span class="comment"># pylint:disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">   52</span>    training_params = [[{</div>
+<div class="line"><span class="lineno">   53</span>        <span class="stringliteral">&quot;total_policies&quot;</span>: current_best,</div>
+<div class="line"><span class="lineno">   54</span>        <span class="stringliteral">&quot;current_player&quot;</span>: i,</div>
+<div class="line"><span class="lineno">   55</span>        <span class="stringliteral">&quot;probabilities_of_playing_policies&quot;</span>: probabilities_of_playing_policies</div>
+<div class="line"><span class="lineno">   56</span>    }] <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(num_players)]</div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment"># pylint:enable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    py_best_rep = py_oracle(game, training_params)</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    cpp_best_rep = cpp_oracle(game, training_params)</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="comment"># Compare the policies</span></div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">for</span> state <span class="keywordflow">in</span> all_states.values():</div>
+<div class="line"><span class="lineno">   65</span>      i_player = state.current_player()</div>
+<div class="line"><span class="lineno">   66</span>      py_dict = py_best_rep[i_player][0].action_probabilities(state)</div>
+<div class="line"><span class="lineno">   67</span>      cpp_dict = cpp_best_rep[i_player][0].action_probabilities(state)</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>      <span class="keywordflow">for</span> action <span class="keywordflow">in</span> py_dict.keys():</div>
+<div class="line"><span class="lineno">   70</span>        self.assertEqual(py_dict.get(action, 0.0), cpp_dict.get(action, 0.0))</div>
+<div class="line"><span class="lineno">   71</span>      <span class="keywordflow">for</span> action <span class="keywordflow">in</span> cpp_dict.keys():</div>
+<div class="line"><span class="lineno">   72</span>        self.assertEqual(py_dict.get(action, 0.0), cpp_dict.get(action, 0.0))</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/psro_v2/<b>best_response_oracle_test.py</b></li>
+<li>open_spiel/python/algorithms/psro_v2/<a class="el" href="../../d4/d02/best__response__oracle__test_8py_source.html">best_response_oracle_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -117,25 +117,238 @@ Collaboration diagram for open_spiel::algorithms::torch_dqn::DQN:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af50b3a1105481f51afc415b343228363" id="r_af50b3a1105481f51afc415b343228363"><td class="memItemLeft" align="right" valign="top"><a id="af50b3a1105481f51afc415b343228363" name="af50b3a1105481f51afc415b343228363"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DQN</b> (const <a class="el" href="../../dd/dc1/structopen__spiel_1_1algorithms_1_1torch__dqn_1_1_d_q_n_settings.html">DQNSettings</a> &amp;settings)</td></tr>
+<tr class="memitem:af50b3a1105481f51afc415b343228363" id="r_af50b3a1105481f51afc415b343228363"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af50b3a1105481f51afc415b343228363">DQN</a> (const <a class="el" href="../../dd/dc1/structopen__spiel_1_1algorithms_1_1torch__dqn_1_1_d_q_n_settings.html">DQNSettings</a> &amp;settings)</td></tr>
 <tr class="separator:af50b3a1105481f51afc415b343228363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa743ee963da1799af78b1595ff5e4dcd" id="r_aa743ee963da1799af78b1595ff5e4dcd"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa743ee963da1799af78b1595ff5e4dcd">Step</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, bool is_evaluation=false) override</td></tr>
 <tr class="separator:aa743ee963da1799af78b1595ff5e4dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd7116eadb68c80e6e7d61f8446e490b" id="r_acd7116eadb68c80e6e7d61f8446e490b"><td class="memItemLeft" align="right" valign="top"><a id="acd7116eadb68c80e6e7d61f8446e490b" name="acd7116eadb68c80e6e7d61f8446e490b"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>GetEpsilon</b> (bool is_evaluation, int power=1.0)</td></tr>
+<tr class="memitem:acd7116eadb68c80e6e7d61f8446e490b" id="r_acd7116eadb68c80e6e7d61f8446e490b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd7116eadb68c80e6e7d61f8446e490b">GetEpsilon</a> (bool is_evaluation, int power=1.0)</td></tr>
 <tr class="separator:acd7116eadb68c80e6e7d61f8446e490b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bd9f5a06a50a9e500a9d911010f3df6" id="r_a1bd9f5a06a50a9e500a9d911010f3df6"><td class="memItemLeft" align="right" valign="top"><a id="a1bd9f5a06a50a9e500a9d911010f3df6" name="a1bd9f5a06a50a9e500a9d911010f3df6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> () const</td></tr>
+<tr class="memitem:a1bd9f5a06a50a9e500a9d911010f3df6" id="r_a1bd9f5a06a50a9e500a9d911010f3df6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bd9f5a06a50a9e500a9d911010f3df6">seed</a> () const</td></tr>
 <tr class="separator:a1bd9f5a06a50a9e500a9d911010f3df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f82d2487aed240c741b8b435900f3ef" id="r_a5f82d2487aed240c741b8b435900f3ef"><td class="memItemLeft" align="right" valign="top"><a id="a5f82d2487aed240c741b8b435900f3ef" name="a5f82d2487aed240c741b8b435900f3ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Load</b> (const std::string &amp;data_path, const std::string &amp;optimizer_data_path=&quot;&quot;)</td></tr>
+<tr class="memitem:a5f82d2487aed240c741b8b435900f3ef" id="r_a5f82d2487aed240c741b8b435900f3ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f82d2487aed240c741b8b435900f3ef">Load</a> (const std::string &amp;data_path, const std::string &amp;optimizer_data_path=&quot;&quot;)</td></tr>
 <tr class="separator:a5f82d2487aed240c741b8b435900f3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3c50aaec4c1e4354e88c3fae0407684" id="r_ae3c50aaec4c1e4354e88c3fae0407684"><td class="memItemLeft" align="right" valign="top"><a id="ae3c50aaec4c1e4354e88c3fae0407684" name="ae3c50aaec4c1e4354e88c3fae0407684"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Save</b> (const std::string &amp;data_path, const std::string &amp;optimizer_data_path=&quot;&quot;)</td></tr>
+<tr class="memitem:ae3c50aaec4c1e4354e88c3fae0407684" id="r_ae3c50aaec4c1e4354e88c3fae0407684"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3c50aaec4c1e4354e88c3fae0407684">Save</a> (const std::string &amp;data_path, const std::string &amp;optimizer_data_path=&quot;&quot;)</td></tr>
 <tr class="separator:ae3c50aaec4c1e4354e88c3fae0407684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d3/d26/dqn_8h_source.html#l00096">96</a> of file <a class="el" href="../../d3/d26/dqn_8h_source.html">dqn.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af50b3a1105481f51afc415b343228363" name="af50b3a1105481f51afc415b343228363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af50b3a1105481f51afc415b343228363">&#9670;&#160;</a></span>DQN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::torch_dqn::DQN::DQN </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/dc1/structopen__spiel_1_1algorithms_1_1torch__dqn_1_1_d_q_n_settings.html">DQNSettings</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>settings</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d4e/dqn_8cc_source.html#l00047">47</a> of file <a class="el" href="../../de/d4e/dqn_8cc_source.html">dqn.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>    : seed_(settings.seed),</div>
+<div class="line"><span class="lineno">   49</span>      use_observation_(settings.use_observation),</div>
+<div class="line"><span class="lineno">   50</span>      player_id_(settings.player_id),</div>
+<div class="line"><span class="lineno">   51</span>      input_size_(settings.state_representation_size),</div>
+<div class="line"><span class="lineno">   52</span>      num_actions_(settings.num_actions),</div>
+<div class="line"><span class="lineno">   53</span>      hidden_layers_sizes_(settings.hidden_layers_sizes),</div>
+<div class="line"><span class="lineno">   54</span>      batch_size_(settings.batch_size),</div>
+<div class="line"><span class="lineno">   55</span>      update_target_network_every_(settings.update_target_network_every),</div>
+<div class="line"><span class="lineno">   56</span>      learn_every_(settings.learn_every),</div>
+<div class="line"><span class="lineno">   57</span>      min_buffer_size_to_learn_(settings.min_buffer_size_to_learn),</div>
+<div class="line"><span class="lineno">   58</span>      discount_factor_(settings.discount_factor),</div>
+<div class="line"><span class="lineno">   59</span>      epsilon_start_(settings.epsilon_start),</div>
+<div class="line"><span class="lineno">   60</span>      epsilon_end_(settings.epsilon_end),</div>
+<div class="line"><span class="lineno">   61</span>      epsilon_decay_duration_(settings.epsilon_decay_duration),</div>
+<div class="line"><span class="lineno">   62</span>      replay_buffer_(settings.replay_buffer_capacity),</div>
+<div class="line"><span class="lineno">   63</span>      q_network_(input_size_, hidden_layers_sizes_, num_actions_),</div>
+<div class="line"><span class="lineno">   64</span>      target_q_network_(input_size_, hidden_layers_sizes_, num_actions_),</div>
+<div class="line"><span class="lineno">   65</span>      optimizer_(q_network_-&gt;parameters(),</div>
+<div class="line"><span class="lineno">   66</span>                 torch::optim::SGDOptions(settings.learning_rate)),</div>
+<div class="line"><span class="lineno">   67</span>      loss_str_(settings.loss_str),</div>
+<div class="line"><span class="lineno">   68</span>      exists_prev_(<span class="keyword">false</span>),</div>
+<div class="line"><span class="lineno">   69</span>      prev_state_(<span class="keyword">nullptr</span>),</div>
+<div class="line"><span class="lineno">   70</span>      prev_action_(0),</div>
+<div class="line"><span class="lineno">   71</span>      step_counter_(0),</div>
+<div class="line"><span class="lineno">   72</span>      rng_(settings.seed) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acd7116eadb68c80e6e7d61f8446e490b" name="acd7116eadb68c80e6e7d61f8446e490b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7116eadb68c80e6e7d61f8446e490b">&#9670;&#160;</a></span>GetEpsilon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double open_spiel::algorithms::torch_dqn::DQN::GetEpsilon </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_evaluation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>power</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d4e/dqn_8cc_source.html#l00181">181</a> of file <a class="el" href="../../de/d4e/dqn_8cc_source.html">dqn.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                    {</div>
+<div class="line"><span class="lineno">  182</span>  <span class="keywordflow">if</span> (is_evaluation) {</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><span class="lineno">  184</span>  }</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>  <span class="keywordtype">double</span> decay_steps = std::min(</div>
+<div class="line"><span class="lineno">  187</span>      <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(step_counter_), epsilon_decay_duration_);</div>
+<div class="line"><span class="lineno">  188</span>  <span class="keywordtype">double</span> decayed_epsilon = (</div>
+<div class="line"><span class="lineno">  189</span>    epsilon_end_ + (epsilon_start_ - epsilon_end_) *</div>
+<div class="line"><span class="lineno">  190</span>    std::pow((1 - decay_steps / epsilon_decay_duration_), power));</div>
+<div class="line"><span class="lineno">  191</span>  <span class="keywordflow">return</span> decayed_epsilon;</div>
+<div class="line"><span class="lineno">  192</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5f82d2487aed240c741b8b435900f3ef" name="a5f82d2487aed240c741b8b435900f3ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f82d2487aed240c741b8b435900f3ef">&#9670;&#160;</a></span>Load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::algorithms::torch_dqn::DQN::Load </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>data_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>optimizer_data_path</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d4e/dqn_8cc_source.html#l00275">275</a> of file <a class="el" href="../../de/d4e/dqn_8cc_source.html">dqn.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>                                                     {</div>
+<div class="line"><span class="lineno">  277</span>  torch::load(q_network_, data_path);</div>
+<div class="line"><span class="lineno">  278</span>  torch::load(target_q_network_, data_path);</div>
+<div class="line"><span class="lineno">  279</span>  <span class="keywordflow">if</span> (!optimizer_data_path.empty()) {</div>
+<div class="line"><span class="lineno">  280</span>    torch::load(optimizer_, optimizer_data_path);</div>
+<div class="line"><span class="lineno">  281</span>  }</div>
+<div class="line"><span class="lineno">  282</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae3c50aaec4c1e4354e88c3fae0407684" name="ae3c50aaec4c1e4354e88c3fae0407684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c50aaec4c1e4354e88c3fae0407684">&#9670;&#160;</a></span>Save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::algorithms::torch_dqn::DQN::Save </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>data_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>optimizer_data_path</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d4e/dqn_8cc_source.html#l00284">284</a> of file <a class="el" href="../../de/d4e/dqn_8cc_source.html">dqn.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>                                                     {</div>
+<div class="line"><span class="lineno">  286</span>  torch::save(q_network_, data_path);</div>
+<div class="line"><span class="lineno">  287</span>  <span class="keywordflow">if</span> (!optimizer_data_path.empty()) {</div>
+<div class="line"><span class="lineno">  288</span>    torch::save(optimizer_, optimizer_data_path);</div>
+<div class="line"><span class="lineno">  289</span>  }</div>
+<div class="line"><span class="lineno">  290</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1bd9f5a06a50a9e500a9d911010f3df6" name="a1bd9f5a06a50a9e500a9d911010f3df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd9f5a06a50a9e500a9d911010f3df6">&#9670;&#160;</a></span>seed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel::algorithms::torch_dqn::DQN::seed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d26/dqn_8h_source.html#l00103">103</a> of file <a class="el" href="../../d3/d26/dqn_8h_source.html">dqn.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>{ <span class="keywordflow">return</span> seed_; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d9/d12/big_8py_source.html#l00027">open_spiel.python.algorithms.adidas_utils.games.big.TensorGame::__init__()</a>, <a class="el" href="../../d8/d85/gamut_8py_source.html#l00032">open_spiel.python.algorithms.adidas_utils.games.gamut.GAMUT::__init__()</a>, <a class="el" href="../../dc/dd6/pyspiel__tensor__game_8py_source.html#l00029">open_spiel.python.algorithms.adidas_utils.games.pyspiel_tensor_game.PyspielTensorGame::__init__()</a>, <a class="el" href="../../df/d9c/small_8py_source.html#l00027">open_spiel.python.algorithms.adidas_utils.games.small.MatrixGame::__init__()</a>, <a class="el" href="../../db/db9/nonsymmetric_2updates_8py_source.html#l00030">open_spiel.python.algorithms.adidas_utils.helpers.nonsymmetric.updates.Solver::__init__()</a>, <a class="el" href="../../d8/d4f/symmetric_2updates_8py_source.html#l00030">open_spiel.python.algorithms.adidas_utils.helpers.symmetric.updates.Solver::__init__()</a>, <a class="el" href="../../d9/d81/nonsymmetric_2ate_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate.Solver::__init__()</a>, <a class="el" href="../../dd/d54/nonsymmetric_2ate__anneal_8py_source.html#l00032">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_anneal.Solver::__init__()</a>, <a class="el" href="../../d3/d19/ate__poly_8py_source.html#l00032">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_poly.Solver::__init__()</a>, <a class="el" href="../../d8/d15/ate__regmatch_8py_source.html#l00029">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_regmatch.Solver::__init__()</a>, <a class="el" href="../../dd/d63/nonsymmetric_2qre_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.qre.Solver::__init__()</a>, <a class="el" href="../../de/d42/nonsymmetric_2qre__anneal_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.qre_anneal.Solver::__init__()</a>, <a class="el" href="../../de/d05/nonsymmetric_2regmatch_8py_source.html#l00026">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.regmatch.Solver::__init__()</a>, <a class="el" href="../../d8/d6e/symmetric_2ate_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ate.Solver::__init__()</a>, <a class="el" href="../../dd/d32/symmetric_2ate__anneal_8py_source.html#l00032">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ate_anneal.Solver::__init__()</a>, <a class="el" href="../../d9/db3/symmetric_2qre_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre.Solver::__init__()</a>, <a class="el" href="../../de/dc5/symmetric_2qre__anneal_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre_anneal.Solver::__init__()</a>, <a class="el" href="../../d6/d5f/qre__anneal__noaux_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre_anneal_noaux.Solver::__init__()</a>, and <a class="el" href="../../d6/d3c/symmetric_2regmatch_8py_source.html#l00026">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.regmatch.Solver::__init__()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d86/classopen__spiel_1_1algorithms_1_1torch__dqn_1_1_d_q_n_a1bd9f5a06a50a9e500a9d911010f3df6_icgraph.png" border="0" usemap="#ad3/d86/classopen__spiel_1_1algorithms_1_1torch__dqn_1_1_d_q_n_a1bd9f5a06a50a9e500a9d911010f3df6_icgraph" alt=""/></div>
+<map name="ad3/d86/classopen__spiel_1_1algorithms_1_1torch__dqn_1_1_d_q_n_a1bd9f5a06a50a9e500a9d911010f3df6_icgraph" id="ad3/d86/classopen__spiel_1_1algorithms_1_1torch__dqn_1_1_d_q_n_a1bd9f5a06a50a9e500a9d911010f3df6_icgraph">
+<area shape="rect" title=" " alt="" coords="364,656,524,697"/>
+<area shape="rect" href="../../d2/dae/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1big_1_1_tensor_game.html#aae97170c2cee2893d8611e7b6aa59037" title=" " alt="" coords="39,5,282,46"/>
+<area shape="poly" title=" " alt="" coords="438,641,426,512,403,337,387,249,366,169,342,104,328,79,314,61,299,49,282,40,284,35,302,44,318,57,333,77,347,102,371,168,392,248,408,336,431,511,443,640"/>
+<area shape="rect" href="../../d8/dc3/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1gamut_1_1_g_a_m_u_t.html#a02bede8171bf7322dc9a68a4a0d274b5" title=" " alt="" coords="43,71,278,111"/>
+<area shape="poly" title=" " alt="" coords="437,641,423,523,399,368,382,290,363,220,340,163,314,125,297,112,277,102,279,98,299,107,318,121,344,160,368,218,387,289,404,367,429,523,442,640"/>
+<area shape="rect" href="../../d3/d6e/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1pyspiel__tensor__game_1_1_pyspiel_tensor_game.html#a0900bb76262ebff9ce4ef0f919da3f25" title=" " alt="" coords="44,135,277,191"/>
+<area shape="poly" title=" " alt="" coords="435,641,419,539,392,409,376,343,357,285,336,237,314,205,296,191,276,181,278,176,299,187,318,201,341,234,362,283,381,342,398,407,424,539,440,640"/>
+<area shape="rect" href="../../de/d98/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small_1_1_matrix_game.html#a1d86a250635b2bc67866bdee74b1d427" title=" " alt="" coords="33,215,288,255"/>
+<area shape="poly" title=" " alt="" coords="440,640,435,563,417,462,401,409,379,357,351,310,314,269,287,251,290,247,317,265,355,307,384,355,406,407,422,460,440,562,445,640"/>
+<area shape="rect" href="../../d6/d6f/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1helpers_1_1nonsymmetric_1_1updates_1_1_solver.html#a01563b77018f9bef93ea6c8eb3ea0de7" title=" " alt="" coords="41,279,280,335"/>
+<area shape="poly" title=" " alt="" coords="437,641,426,578,405,499,389,458,369,418,344,381,314,349,279,327,281,323,317,345,348,378,373,415,394,456,410,497,432,577,442,640"/>
+<area shape="rect" href="../../d3/d05/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1helpers_1_1symmetric_1_1updates_1_1_solver.html#aa5cc89d69f367c9aa3c14d1f4ae85467" title=" " alt="" coords="9,359,312,399"/>
+<area shape="poly" title=" " alt="" coords="433,641,420,590,396,528,362,466,340,438,314,414,295,402,298,398,317,410,344,435,366,463,401,526,425,588,438,640"/>
+<area shape="rect" href="../../d0/da0/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate_1_1_solver.html#aa8d4022ae288f783c6870a9db9c57010" title=" " alt="" coords="13,424,308,465"/>
+<area shape="poly" title=" " alt="" coords="428,642,411,603,386,559,354,515,314,478,295,468,298,463,317,474,358,511,391,556,416,601,433,640"/>
+<area shape="rect" href="../../dd/dc7/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__anneal_1_1_solver.html#aae75647ce88cdbec9c1fb379f2d60d99" title=" " alt="" coords="44,488,277,544"/>
+<area shape="poly" title=" " alt="" coords="415,646,371,600,344,578,314,559,276,542,278,537,317,554,347,573,374,596,418,642"/>
+<area shape="rect" href="../../d2/df8/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__poly_1_1_solver.html#ae16492511268b244cc23dae29cad45a2" title=" " alt="" coords="44,568,277,624"/>
+<area shape="poly" title=" " alt="" coords="363,653,315,639,273,627,274,622,316,634,365,648"/>
+<area shape="rect" href="../../d0/d22/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1ate__regmatch_1_1_solver.html#a71098eed671bfbf29deed31c039abf17" title=" " alt="" coords="44,648,277,704"/>
+<area shape="poly" title=" " alt="" coords="348,679,277,679,277,674,348,674"/>
+<area shape="rect" href="../../db/d93/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1qre_1_1_solver.html#a873ed63c8b2ccab0eb5d5c2498afcd53" title=" " alt="" coords="13,728,308,769"/>
+<area shape="poly" title=" " alt="" coords="367,704,316,719,270,730,269,725,315,714,365,699"/>
+<area shape="rect" href="../../db/dd8/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1qre__anneal_1_1_solver.html#a69a578a214d9ee410504e9787cb55773" title=" " alt="" coords="44,792,277,848"/>
+<area shape="poly" title=" " alt="" coords="414,710,370,748,317,783,278,799,276,794,314,778,367,744,410,706"/>
+<area shape="rect" href="../../d5/d48/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1nonsymmetric_1_1regmatch_1_1_solver.html#acd4d565352a4851a9f9721f7bbbf9922" title=" " alt="" coords="37,872,284,928"/>
+<area shape="poly" title=" " alt="" coords="430,712,412,748,387,788,355,829,317,863,286,880,283,875,314,858,352,825,383,785,408,745,426,709"/>
+<area shape="rect" href="../../d5/d2d/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1ate_1_1_solver.html#a24bc37d83b31a9730b622594ecd3fe1a" title=" " alt="" coords="23,952,298,993"/>
+<area shape="poly" title=" " alt="" coords="438,713,425,765,401,827,366,890,344,918,317,942,300,954,297,949,314,938,340,914,362,887,396,825,420,763,433,711"/>
+<area shape="rect" href="../../d7/d3b/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1ate__anneal_1_1_solver.html#a818bde6248942e6fc9cc2037a9fd2b31" title=" " alt="" coords="44,1016,277,1072"/>
+<area shape="poly" title=" " alt="" coords="442,713,431,776,410,855,394,896,373,937,348,974,317,1006,299,1020,278,1030,276,1025,296,1015,314,1002,344,970,369,934,389,894,405,853,426,775,437,712"/>
+<area shape="rect" href="../../d3/d4c/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1qre_1_1_solver.html#aa6708c416844f5a3f5d98f8c1220feab" title=" " alt="" coords="23,1096,298,1137"/>
+<area shape="poly" title=" " alt="" coords="445,712,440,790,422,891,406,945,384,997,355,1045,317,1086,300,1099,297,1095,314,1082,350,1041,379,994,401,943,417,890,435,790,440,712"/>
+<area shape="rect" href="../../d6/dc9/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1qre__anneal_1_1_solver.html#a9f3cb977616cb7630c221cbb98127c52" title=" " alt="" coords="44,1160,277,1216"/>
+<area shape="poly" title=" " alt="" coords="440,713,424,814,397,945,381,1010,362,1069,341,1117,318,1150,299,1165,278,1175,276,1171,296,1160,314,1147,336,1114,357,1067,376,1008,392,943,419,813,435,712"/>
+<area shape="rect" href="../../d8/dc4/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1qre__anneal__noaux_1_1_solver.html#a0587f32a5dfbddbfe8fd6cdacebe7694" title=" " alt="" coords="44,1240,277,1296"/>
+<area shape="poly" title=" " alt="" coords="442,712,428,829,403,984,386,1062,367,1132,344,1190,318,1230,299,1245,278,1256,276,1251,296,1241,314,1227,339,1188,362,1131,381,1060,398,983,423,828,436,712"/>
+<area shape="rect" href="../../df/d3d/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1regmatch_1_1_solver.html#a15a91d06b1a72adad7e230ee3b81c3bb" title=" " alt="" coords="5,1320,316,1361"/>
+<area shape="poly" title=" " alt="" coords="443,713,432,845,410,1024,393,1115,372,1197,348,1264,333,1290,318,1310,304,1322,300,1317,314,1306,329,1287,343,1262,367,1195,388,1114,404,1023,427,845,438,712"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aa743ee963da1799af78b1595ff5e4dcd" name="aa743ee963da1799af78b1595ff5e4dcd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa743ee963da1799af78b1595ff5e4dcd">&#9670;&#160;</a></span>Step()</h2>
 
@@ -165,11 +378,59 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Save</b> (const std::
 
 <p>Implements <a class="el" href="../../d2/d97/classopen__spiel_1_1algorithms_1_1torch__dqn_1_1_agent.html">open_spiel::algorithms::torch_dqn::Agent</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../de/d4e/dqn_8cc_source.html#l00084">84</a> of file <a class="el" href="../../de/d4e/dqn_8cc_source.html">dqn.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                       {</div>
+<div class="line"><span class="lineno">   85</span>  <span class="comment">// Chance nodes should be handled externally to the agent.</span></div>
+<div class="line"><span class="lineno">   86</span>  SPIEL_CHECK_TRUE(!state.IsChanceNode());</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>  Action action;</div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">if</span> (!state.IsTerminal() &amp;&amp;</div>
+<div class="line"><span class="lineno">   90</span>      (state.CurrentPlayer() == player_id_ || state.IsSimultaneousNode())) {</div>
+<div class="line"><span class="lineno">   91</span>    std::vector&lt;float&gt; info_state = GetInfoState(state,</div>
+<div class="line"><span class="lineno">   92</span>                                                 player_id_,</div>
+<div class="line"><span class="lineno">   93</span>                                                 use_observation_);</div>
+<div class="line"><span class="lineno">   94</span>    std::vector&lt;Action&gt; legal_actions = state.LegalActions(player_id_);</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordtype">double</span> epsilon = GetEpsilon(is_evaluation);</div>
+<div class="line"><span class="lineno">   96</span>    action = EpsilonGreedy(info_state, legal_actions, epsilon);</div>
+<div class="line"><span class="lineno">   97</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   98</span>    action = 0;</div>
+<div class="line"><span class="lineno">   99</span>  }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">if</span> (!is_evaluation) {</div>
+<div class="line"><span class="lineno">  102</span>    step_counter_++;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> (step_counter_ % learn_every_ == 0) {</div>
+<div class="line"><span class="lineno">  105</span>      Learn();</div>
+<div class="line"><span class="lineno">  106</span>    }</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span> (step_counter_ % update_target_network_every_ == 0) {</div>
+<div class="line"><span class="lineno">  108</span>      std::stringstream stream;</div>
+<div class="line"><span class="lineno">  109</span>      torch::save(q_network_, stream);</div>
+<div class="line"><span class="lineno">  110</span>      torch::load(target_q_network_, stream);</div>
+<div class="line"><span class="lineno">  111</span>    }</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span> (exists_prev_) {</div>
+<div class="line"><span class="lineno">  113</span>      AddTransition(*prev_state_, prev_action_, state);</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+<div class="line"><span class="lineno">  115</span>  }</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">if</span> (state.IsTerminal()) {</div>
+<div class="line"><span class="lineno">  118</span>    exists_prev_ = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  119</span>    prev_action_ = 0;</div>
+<div class="line"><span class="lineno">  120</span>    prev_state_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">return</span> kInvalidAction;</div>
+<div class="line"><span class="lineno">  122</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  123</span>    exists_prev_ = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  124</span>    prev_state_ = state.Clone();</div>
+<div class="line"><span class="lineno">  125</span>    prev_action_ = action;</div>
+<div class="line"><span class="lineno">  126</span>  }</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  <span class="keywordflow">return</span> action;</div>
+<div class="line"><span class="lineno">  129</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/dqn_torch/<a class="el" href="../../d3/d26/dqn_8h_source.html">dqn.h</a></li>
-<li>open_spiel/algorithms/dqn_torch/<b>dqn.cc</b></li>
+<li>open_spiel/algorithms/dqn_torch/<a class="el" href="../../de/d4e/dqn_8cc_source.html">dqn.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

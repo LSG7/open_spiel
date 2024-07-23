@@ -111,11 +111,14 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a26f098a312c4b66f24b1e025f024c130" id="r_a26f098a312c4b66f24b1e025f024c130"><td class="memItemLeft" align="right" valign="top"><a id="a26f098a312c4b66f24b1e025f024c130" name="a26f098a312c4b66f24b1e025f024c130"></a>
-static VariantTuple&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> (int index)</td></tr>
+<tr class="memitem:a26f098a312c4b66f24b1e025f024c130" id="r_a26f098a312c4b66f24b1e025f024c130"><td class="memItemLeft" align="right" valign="top">static VariantTuple&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26f098a312c4b66f24b1e025f024c130">Run</a> (int index)</td></tr>
 <tr class="separator:a26f098a312c4b66f24b1e025f024c130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;std::size_t NumIndices, std::size_t... Dimensions&gt;<br />
+struct absl::ABSL_NAMESPACE_BEGIN::MakeVariantTuple&lt; NumIndices, absl::index_sequence&lt; Dimensions... &gt; &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/d04/variant__benchmark_8cc_source.html#l00109">109</a> of file <a class="el" href="../../d0/d04/variant__benchmark_8cc_source.html">variant_benchmark.cc</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7a044d36f3f9f5353a55a01e276efe27" name="a7a044d36f3f9f5353a55a01e276efe27"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a044d36f3f9f5353a55a01e276efe27">&#9670;&#160;</a></span>VariantTuple</h2>
 
@@ -132,10 +135,45 @@ template&lt;std::size_t NumIndices, std::size_t... Dimensions&gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line"> </div>
 <div class="line">      std::tuple&lt;always_t&lt;VariantOfAlternatives&lt;NumIndices&gt;, Dimensions&gt;...&gt;</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d0/d04/variant__benchmark_8cc_source.html#l00110">110</a> of file <a class="el" href="../../d0/d04/variant__benchmark_8cc_source.html">variant_benchmark.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a26f098a312c4b66f24b1e025f024c130" name="a26f098a312c4b66f24b1e025f024c130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26f098a312c4b66f24b1e025f024c130">&#9670;&#160;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t NumIndices, std::size_t... Dimensions&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static VariantTuple <a class="el" href="../../d0/dc4/structabsl_1_1_a_b_s_l___n_a_m_e_s_p_a_c_e___b_e_g_i_n_1_1_make_variant_tuple.html">absl::ABSL_NAMESPACE_BEGIN::MakeVariantTuple</a>&lt; NumIndices, <a class="el" href="../../d1/dd9/structabsl_1_1integer__sequence.html">absl::index_sequence</a>&lt; Dimensions... &gt; &gt;::Run </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d04/variant__benchmark_8cc_source.html#l00113">113</a> of file <a class="el" href="../../d0/d04/variant__benchmark_8cc_source.html">variant_benchmark.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>                                     {</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span> std::make_tuple(MakeVariant&lt;NumIndices&gt;(Dimensions, index)...);</div>
+<div class="line"><span class="lineno">  115</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/types/<b>variant_benchmark.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/types/<a class="el" href="../../d0/d04/variant__benchmark_8cc_source.html">variant_benchmark.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

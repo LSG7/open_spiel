@@ -112,20 +112,93 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adef0824ba874eb515cd733ca2794418b" id="r_adef0824ba874eb515cd733ca2794418b"><td class="memTemplParams" colspan="2"><a id="adef0824ba874eb515cd733ca2794418b" name="adef0824ba874eb515cd733ca2794418b"></a>
-template&lt;class Lhs &gt; </td></tr>
-<tr class="memitem:adef0824ba874eb515cd733ca2794418b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const Lhs &amp;lhs) const</td></tr>
+<tr class="memitem:adef0824ba874eb515cd733ca2794418b" id="r_adef0824ba874eb515cd733ca2794418b"><td class="memTemplParams" colspan="2">template&lt;class Lhs &gt; </td></tr>
+<tr class="memitem:adef0824ba874eb515cd733ca2794418b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adef0824ba874eb515cd733ca2794418b">operator()</a> (const Lhs &amp;lhs) const</td></tr>
 <tr class="separator:adef0824ba874eb515cd733ca2794418b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a706679ffaf049e49e47dec214c2fe42c" id="r_a706679ffaf049e49e47dec214c2fe42c"><td class="memItemLeft" align="right" valign="top"><a id="a706679ffaf049e49e47dec214c2fe42c" name="a706679ffaf049e49e47dec214c2fe42c"></a>
-Fun&#160;</td><td class="memItemRight" valign="bottom"><b>fun</b></td></tr>
+<tr class="memitem:a706679ffaf049e49e47dec214c2fe42c" id="r_a706679ffaf049e49e47dec214c2fe42c"><td class="memItemLeft" align="right" valign="top">Fun&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a706679ffaf049e49e47dec214c2fe42c">fun</a></td></tr>
 <tr class="separator:a706679ffaf049e49e47dec214c2fe42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76fce1b3fc8f15d61ec6c441e1c19ba7" id="r_a76fce1b3fc8f15d61ec6c441e1c19ba7"><td class="memItemLeft" align="right" valign="top"><a id="a76fce1b3fc8f15d61ec6c441e1c19ba7" name="a76fce1b3fc8f15d61ec6c441e1c19ba7"></a>
-std::tuple&lt; T... &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>args</b></td></tr>
+<tr class="memitem:a76fce1b3fc8f15d61ec6c441e1c19ba7" id="r_a76fce1b3fc8f15d61ec6c441e1c19ba7"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; T... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76fce1b3fc8f15d61ec6c441e1c19ba7">args</a></td></tr>
 <tr class="separator:a76fce1b3fc8f15d61ec6c441e1c19ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class Fun, class... T&gt;<br />
+struct absl::types_internal::ForEveryTwoImpl&lt; Fun, T &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html#l00305">305</a> of file <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="adef0824ba874eb515cd733ca2794418b" name="adef0824ba874eb515cd733ca2794418b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef0824ba874eb515cd733ca2794418b">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Fun , class... T&gt; </div>
+<div class="memtemplate">
+template&lt;class Lhs &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/d02/structabsl_1_1types__internal_1_1_for_every_two_impl.html">absl::types_internal::ForEveryTwoImpl</a>&lt; Fun, T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const Lhs &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html#l00318">318</a> of file <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  318</span>                                        {</div>
+<div class="line"><span class="lineno">  319</span>    (ForEachTupleElement)(WithBoundLhs&lt;Lhs&gt;{fun, lhs}, args);</div>
+<div class="line"><span class="lineno">  320</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a76fce1b3fc8f15d61ec6c441e1c19ba7" name="a76fce1b3fc8f15d61ec6c441e1c19ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76fce1b3fc8f15d61ec6c441e1c19ba7">&#9670;&#160;</a></span>args</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Fun , class... T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt;T...&gt; <a class="el" href="../../d8/d02/structabsl_1_1types__internal_1_1_for_every_two_impl.html">absl::types_internal::ForEveryTwoImpl</a>&lt; Fun, T &gt;::args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html#l00323">323</a> of file <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a>.</p>
+
+</div>
+</div>
+<a id="a706679ffaf049e49e47dec214c2fe42c" name="a706679ffaf049e49e47dec214c2fe42c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706679ffaf049e49e47dec214c2fe42c">&#9670;&#160;</a></span>fun</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Fun , class... T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Fun <a class="el" href="../../d8/d02/structabsl_1_1types__internal_1_1_for_every_two_impl.html">absl::types_internal::ForEveryTwoImpl</a>&lt; Fun, T &gt;::fun</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html#l00322">322</a> of file <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a></li>
 </ul>

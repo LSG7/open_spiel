@@ -118,20 +118,116 @@ Collaboration diagram for absl::random_internal::gaussian_distribution_base:</di
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab5adf2f68ac7dd4da14efea2f4412501" id="r_ab5adf2f68ac7dd4da14efea2f4412501"><td class="memTemplParams" colspan="2"><a id="ab5adf2f68ac7dd4da14efea2f4412501" name="ab5adf2f68ac7dd4da14efea2f4412501"></a>
-template&lt;typename URBG &gt; </td></tr>
-<tr class="memitem:ab5adf2f68ac7dd4da14efea2f4412501"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>zignor</b> (URBG &amp;g)</td></tr>
+<tr class="memitem:ab5adf2f68ac7dd4da14efea2f4412501" id="r_ab5adf2f68ac7dd4da14efea2f4412501"><td class="memTemplParams" colspan="2">template&lt;typename URBG &gt; </td></tr>
+<tr class="memitem:ab5adf2f68ac7dd4da14efea2f4412501"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab5adf2f68ac7dd4da14efea2f4412501">zignor</a> (URBG &amp;g)</td></tr>
 <tr class="separator:ab5adf2f68ac7dd4da14efea2f4412501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a286e8432a1e1bc82eb9752645f822d63" id="r_a286e8432a1e1bc82eb9752645f822d63"><td class="memItemLeft" align="right" valign="top"><a id="a286e8432a1e1bc82eb9752645f822d63" name="a286e8432a1e1bc82eb9752645f822d63"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>TableGenerator</b></td></tr>
+<tr class="memitem:a286e8432a1e1bc82eb9752645f822d63" id="r_a286e8432a1e1bc82eb9752645f822d63"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a286e8432a1e1bc82eb9752645f822d63">TableGenerator</a></td></tr>
 <tr class="separator:a286e8432a1e1bc82eb9752645f822d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d2/dff/gaussian__distribution_8h_source.html#l00047">47</a> of file <a class="el" href="../../d2/dff/gaussian__distribution_8h_source.html">gaussian_distribution.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab5adf2f68ac7dd4da14efea2f4412501" name="ab5adf2f68ac7dd4da14efea2f4412501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5adf2f68ac7dd4da14efea2f4412501">&#9670;&#160;</a></span>zignor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename URBG &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double absl::random_internal::gaussian_distribution_base::zignor </td>
+          <td>(</td>
+          <td class="paramtype">URBG &amp;</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dff/gaussian__distribution_8h_source.html#l00229">229</a> of file <a class="el" href="../../d2/dff/gaussian__distribution_8h_source.html">gaussian_distribution.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>             {  <span class="comment">// NOLINT(runtime/references)</span></div>
+<div class="line"><span class="lineno">  231</span>  <span class="keyword">using </span>random_internal::GeneratePositiveTag;</div>
+<div class="line"><span class="lineno">  232</span>  <span class="keyword">using </span>random_internal::GenerateRealFromBits;</div>
+<div class="line"><span class="lineno">  233</span>  <span class="keyword">using </span>random_internal::GenerateSignedTag;</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><span class="lineno">  236</span>    <span class="comment">// We use a single uint64_t to generate both a double and a strip.</span></div>
+<div class="line"><span class="lineno">  237</span>    <span class="comment">// These bits are unused when the generated double is &gt; 1/2^5.</span></div>
+<div class="line"><span class="lineno">  238</span>    <span class="comment">// This may introduce some bias from the duplicated low bits of small</span></div>
+<div class="line"><span class="lineno">  239</span>    <span class="comment">// values (those smaller than 1/2^5, which all end up on the left tail).</span></div>
+<div class="line"><span class="lineno">  240</span>    uint64_t bits = fast_u64_(g);</div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordtype">int</span> i = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(bits &amp; kMask);  <span class="comment">// pick a random strip</span></div>
+<div class="line"><span class="lineno">  242</span>    <span class="keywordtype">double</span> j = GenerateRealFromBits&lt;double, GenerateSignedTag, false&gt;(</div>
+<div class="line"><span class="lineno">  243</span>        bits);  <span class="comment">// U(-1, 1)</span></div>
+<div class="line"><span class="lineno">  244</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> x = j * zg_.x[i];</div>
+<div class="line"><span class="lineno">  245</span> </div>
+<div class="line"><span class="lineno">  246</span>    <span class="comment">// Retangular box. Handles &gt;97% of all cases.</span></div>
+<div class="line"><span class="lineno">  247</span>    <span class="comment">// For any given box, this handles between 75% and 99% of values.</span></div>
+<div class="line"><span class="lineno">  248</span>    <span class="comment">// Equivalent to U(01) &lt; (x[i+1] / x[i]), and when i == 0, ~93.5%</span></div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">if</span> (std::abs(x) &lt; zg_.x[i + 1]) {</div>
+<div class="line"><span class="lineno">  250</span>      <span class="keywordflow">return</span> x;</div>
+<div class="line"><span class="lineno">  251</span>    }</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span>    <span class="comment">// i == 0: Base box. Sample using a ratio of uniforms.</span></div>
+<div class="line"><span class="lineno">  254</span>    <span class="keywordflow">if</span> (i == 0) {</div>
+<div class="line"><span class="lineno">  255</span>      <span class="comment">// This path happens about 0.05% of the time.</span></div>
+<div class="line"><span class="lineno">  256</span>      <span class="keywordflow">return</span> zignor_fallback(g, j &lt; 0);</div>
+<div class="line"><span class="lineno">  257</span>    }</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>    <span class="comment">// i &gt; 0: Wedge samples using precomputed values.</span></div>
+<div class="line"><span class="lineno">  260</span>    <span class="keywordtype">double</span> v = GenerateRealFromBits&lt;double, GeneratePositiveTag, false&gt;(</div>
+<div class="line"><span class="lineno">  261</span>        fast_u64_(g));  <span class="comment">// U(0, 1)</span></div>
+<div class="line"><span class="lineno">  262</span>    <span class="keywordflow">if</span> ((zg_.f[i + 1] + v * (zg_.f[i] - zg_.f[i + 1])) &lt;</div>
+<div class="line"><span class="lineno">  263</span>        std::exp(-0.5 * x * x)) {</div>
+<div class="line"><span class="lineno">  264</span>      <span class="keywordflow">return</span> x;</div>
+<div class="line"><span class="lineno">  265</span>    }</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>    <span class="comment">// The wedge was missed; reject the value and try again.</span></div>
+<div class="line"><span class="lineno">  268</span>  }</div>
+<div class="line"><span class="lineno">  269</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a286e8432a1e1bc82eb9752645f822d63" name="a286e8432a1e1bc82eb9752645f822d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286e8432a1e1bc82eb9752645f822d63">&#9670;&#160;</a></span>TableGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../d5/d17/classabsl_1_1random__internal_1_1_table_generator.html">TableGenerator</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dff/gaussian__distribution_8h_source.html#l00053">53</a> of file <a class="el" href="../../d2/dff/gaussian__distribution_8h_source.html">gaussian_distribution.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/random/<a class="el" href="../../d2/dff/gaussian__distribution_8h_source.html">gaussian_distribution.h</a></li>
-<li>open_spiel/abseil-cpp/absl/random/<b>gaussian_distribution.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/random/<a class="el" href="../../d1/db6/gaussian__distribution_8cc_source.html">gaussian_distribution.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -89,7 +89,6 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../db/d00/structabsl_1_1profiling__internal_1_1_sample-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">absl::profiling_internal::Sample&lt; T &gt; Struct Template Reference</div></div>
@@ -100,30 +99,60 @@ Collaboration diagram for absl::profiling_internal::Sample&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/def/structabsl_1_1profiling__internal_1_1_sample__coll__graph.png" border="0" usemap="#aabsl_1_1profiling__internal_1_1_sample_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="aabsl_1_1profiling__internal_1_1_sample_3_01_t_01_4_coll__map" id="aabsl_1_1profiling__internal_1_1_sample_3_01_t_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="16,368,181,468"/>
+<area shape="rect" title=" " alt="" coords="29,368,168,448"/>
 <area shape="rect" href="../../d3/d37/classabsl_1_1_mutex.html" title=" " alt="" coords="5,5,192,305"/>
 <area shape="poly" title=" " alt="" coords="101,305,101,351,96,351,96,305"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a69fcfabb421ccbbca74ab71a05bd94f7" id="r_a69fcfabb421ccbbca74ab71a05bd94f7"><td class="memItemLeft" align="right" valign="top"><a id="a69fcfabb421ccbbca74ab71a05bd94f7" name="a69fcfabb421ccbbca74ab71a05bd94f7"></a>
-T *dead&#160;</td><td class="memItemRight" valign="bottom"><b>ABSL_GUARDED_BY</b> (init_mu)</td></tr>
-<tr class="separator:a69fcfabb421ccbbca74ab71a05bd94f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae96d051477a60152f431f8178e664e19" id="r_ae96d051477a60152f431f8178e664e19"><td class="memItemLeft" align="right" valign="top"><a id="ae96d051477a60152f431f8178e664e19" name="ae96d051477a60152f431f8178e664e19"></a>
-<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">absl::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>init_mu</b></td></tr>
+<tr class="memitem:ae96d051477a60152f431f8178e664e19" id="r_ae96d051477a60152f431f8178e664e19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">absl::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae96d051477a60152f431f8178e664e19">init_mu</a></td></tr>
 <tr class="separator:ae96d051477a60152f431f8178e664e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39c9e4230d47cbb7640e1b648915f532" id="r_a39c9e4230d47cbb7640e1b648915f532"><td class="memItemLeft" align="right" valign="top"><a id="a39c9e4230d47cbb7640e1b648915f532" name="a39c9e4230d47cbb7640e1b648915f532"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> = nullptr</td></tr>
+<tr class="memitem:a39c9e4230d47cbb7640e1b648915f532" id="r_a39c9e4230d47cbb7640e1b648915f532"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39c9e4230d47cbb7640e1b648915f532">next</a> = nullptr</td></tr>
 <tr class="separator:a39c9e4230d47cbb7640e1b648915f532"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a837fdf46a919f3cf86cd502d8c68c87b" id="r_a837fdf46a919f3cf86cd502d8c68c87b"><td class="memItemLeft" align="right" valign="top"><a id="a837fdf46a919f3cf86cd502d8c68c87b" name="a837fdf46a919f3cf86cd502d8c68c87b"></a>
-int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>weight</b></td></tr>
-<tr class="separator:a837fdf46a919f3cf86cd502d8c68c87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct absl::profiling_internal::Sample&lt; T &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d6/d53/sample__recorder_8h_source.html#l00043">43</a> of file <a class="el" href="../../d6/d53/sample__recorder_8h_source.html">sample_recorder.h</a>.</p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae96d051477a60152f431f8178e664e19" name="ae96d051477a60152f431f8178e664e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae96d051477a60152f431f8178e664e19">&#9670;&#160;</a></span>init_mu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">absl::Mutex</a> <a class="el" href="../../d6/d5c/structabsl_1_1profiling__internal_1_1_sample.html">absl::profiling_internal::Sample</a>&lt; T &gt;::init_mu</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d53/sample__recorder_8h_source.html#l00046">46</a> of file <a class="el" href="../../d6/d53/sample__recorder_8h_source.html">sample_recorder.h</a>.</p>
+
+</div>
+</div>
+<a id="a39c9e4230d47cbb7640e1b648915f532" name="a39c9e4230d47cbb7640e1b648915f532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c9e4230d47cbb7640e1b648915f532">&#9670;&#160;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="../../d6/d5c/structabsl_1_1profiling__internal_1_1_sample.html">absl::profiling_internal::Sample</a>&lt; T &gt;::next = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d53/sample__recorder_8h_source.html#l00047">47</a> of file <a class="el" href="../../d6/d53/sample__recorder_8h_source.html">sample_recorder.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/profiling/internal/<a class="el" href="../../d6/d53/sample__recorder_8h_source.html">sample_recorder.h</a></li>
 </ul>

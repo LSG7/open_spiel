@@ -106,17 +106,85 @@ Collaboration diagram for absl::random_internal::MockSingleOverload&lt; DistrT, 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae724dcd0587d33dabf8d7bcf3b69e475" id="r_ae724dcd0587d33dabf8d7bcf3b69e475"><td class="memItemLeft" align="right" valign="top"><a id="ae724dcd0587d33dabf8d7bcf3b69e475" name="ae724dcd0587d33dabf8d7bcf3b69e475"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>KeyT</b> = Ret(DistrT, std::tuple&lt;Arg, Args...&gt;)</td></tr>
+<tr class="memitem:ae724dcd0587d33dabf8d7bcf3b69e475" id="r_ae724dcd0587d33dabf8d7bcf3b69e475"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae724dcd0587d33dabf8d7bcf3b69e475">KeyT</a> = Ret(DistrT, std::tuple&lt;Arg, Args...&gt;)</td></tr>
 <tr class="separator:ae724dcd0587d33dabf8d7bcf3b69e475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a60eeb3522ebc31301363057e4417c045" id="r_a60eeb3522ebc31301363057e4417c045"><td class="memTemplParams" colspan="2"><a id="a60eeb3522ebc31301363057e4417c045" name="a60eeb3522ebc31301363057e4417c045"></a>
-template&lt;typename MockURBG &gt; </td></tr>
-<tr class="memitem:a60eeb3522ebc31301363057e4417c045"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>gmock_Call</b> (const ::testing::Matcher&lt; Arg &gt; &amp;matcher, MockURBG &amp;gen, const ::testing::Matcher&lt; Args &gt; &amp;... matchers) -&gt; decltype(MockHelpers::MockFor&lt; KeyT &gt;(gen).gmock_Call(matcher, matchers...))</td></tr>
+<tr class="memitem:a60eeb3522ebc31301363057e4417c045" id="r_a60eeb3522ebc31301363057e4417c045"><td class="memTemplParams" colspan="2">template&lt;typename MockURBG &gt; </td></tr>
+<tr class="memitem:a60eeb3522ebc31301363057e4417c045"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a60eeb3522ebc31301363057e4417c045">gmock_Call</a> (const ::testing::Matcher&lt; Arg &gt; &amp;matcher, MockURBG &amp;gen, const ::testing::Matcher&lt; Args &gt; &amp;... matchers) -&gt; decltype(MockHelpers::MockFor&lt; KeyT &gt;(gen).gmock_Call(matcher, matchers...))</td></tr>
 <tr class="separator:a60eeb3522ebc31301363057e4417c045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename DistrT, typename Ret, typename Arg, typename... Args&gt;<br />
+struct absl::random_internal::MockSingleOverload&lt; DistrT, Ret(Arg, MockingBitGen &amp;, Args...)&gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../df/daa/mock__overload__set_8h_source.html#l00058">58</a> of file <a class="el" href="../../df/daa/mock__overload__set_8h_source.html">mock_overload_set.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ae724dcd0587d33dabf8d7bcf3b69e475" name="ae724dcd0587d33dabf8d7bcf3b69e475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae724dcd0587d33dabf8d7bcf3b69e475">&#9670;&#160;</a></span>KeyT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DistrT , typename Ret , typename Arg , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../dc/dee/structabsl_1_1random__internal_1_1_mock_single_overload.html">absl::random_internal::MockSingleOverload</a>&lt; DistrT, Ret(Arg, <a class="el" href="../../d2/d44/classabsl_1_1_mocking_bit_gen.html">MockingBitGen</a> &amp;, Args...)&gt;::KeyT = Ret(DistrT, std::tuple&lt;Arg, Args...&gt;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daa/mock__overload__set_8h_source.html#l00062">62</a> of file <a class="el" href="../../df/daa/mock__overload__set_8h_source.html">mock_overload_set.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a60eeb3522ebc31301363057e4417c045" name="a60eeb3522ebc31301363057e4417c045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60eeb3522ebc31301363057e4417c045">&#9670;&#160;</a></span>gmock_Call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DistrT , typename Ret , typename Arg , typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename MockURBG &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../dc/dee/structabsl_1_1random__internal_1_1_mock_single_overload.html">absl::random_internal::MockSingleOverload</a>&lt; DistrT, Ret(Arg, <a class="el" href="../../d2/d44/classabsl_1_1_mocking_bit_gen.html">MockingBitGen</a> &amp;, Args...)&gt;::gmock_Call </td>
+          <td>(</td>
+          <td class="paramtype">const ::testing::Matcher&lt; Arg &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>matcher</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MockURBG &amp;</td>          <td class="paramname"><span class="paramname"><em>gen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::testing::Matcher&lt; Args &gt; &amp;...</td>          <td class="paramname"><span class="paramname"><em>matchers</em></span>&#160;) -&gt; decltype(MockHelpers::MockFor&lt;KeyT&gt;(gen).gmock_Call(matcher,
+                                                             matchers...)) </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daa/mock__overload__set_8h_source.html#l00065">65</a> of file <a class="el" href="../../df/daa/mock__overload__set_8h_source.html">mock_overload_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                           {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keyword">static_assert</span>(std::is_base_of&lt;MockingBitGen, MockURBG&gt;::value,</div>
+<div class="line"><span class="lineno">   70</span>                  <span class="stringliteral">&quot;Mocking requires an absl::MockingBitGen&quot;</span>);</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">return</span> MockHelpers::MockFor&lt;KeyT&gt;(gen).gmock_Call(matcher, matchers...);</div>
+<div class="line"><span class="lineno">   72</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/random/internal/<a class="el" href="../../df/daa/mock__overload__set_8h_source.html">mock_overload_set.h</a></li>
 </ul>

@@ -106,21 +106,131 @@ Collaboration diagram for open_spiel::BinaryCompress:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a895394e4f18b247a59451b6673e9e1de" id="r_a895394e4f18b247a59451b6673e9e1de"><td class="memItemLeft" align="right" valign="top"><a id="a895394e4f18b247a59451b6673e9e1de" name="a895394e4f18b247a59451b6673e9e1de"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Compress</b> (<a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; const float &gt; buffer)</td></tr>
+<tr class="memitem:a895394e4f18b247a59451b6673e9e1de" id="r_a895394e4f18b247a59451b6673e9e1de"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a895394e4f18b247a59451b6673e9e1de">Compress</a> (<a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; const float &gt; buffer)</td></tr>
 <tr class="separator:a895394e4f18b247a59451b6673e9e1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af39b201900da7fb1cdb2205d26a28ad1" id="r_af39b201900da7fb1cdb2205d26a28ad1"><td class="memItemLeft" align="right" valign="top"><a id="af39b201900da7fb1cdb2205d26a28ad1" name="af39b201900da7fb1cdb2205d26a28ad1"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Decompress</b> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> compressed, <a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; float &gt; buffer)</td></tr>
+<tr class="memitem:af39b201900da7fb1cdb2205d26a28ad1" id="r_af39b201900da7fb1cdb2205d26a28ad1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af39b201900da7fb1cdb2205d26a28ad1">Decompress</a> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> compressed, <a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; float &gt; buffer)</td></tr>
 <tr class="separator:af39b201900da7fb1cdb2205d26a28ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a36d871481646e126819bbc36bf1a6b06" id="r_a36d871481646e126819bbc36bf1a6b06"><td class="memItemLeft" align="right" valign="top"><a id="a36d871481646e126819bbc36bf1a6b06" name="a36d871481646e126819bbc36bf1a6b06"></a>
-static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>kBitsPerByte</b> = 8</td></tr>
+<tr class="memitem:a36d871481646e126819bbc36bf1a6b06" id="r_a36d871481646e126819bbc36bf1a6b06"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a> = 8</td></tr>
 <tr class="separator:a36d871481646e126819bbc36bf1a6b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/d22/observer_8cc_source.html#l00253">253</a> of file <a class="el" href="../../df/d22/observer_8cc_source.html">observer.cc</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a895394e4f18b247a59451b6673e9e1de" name="a895394e4f18b247a59451b6673e9e1de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895394e4f18b247a59451b6673e9e1de">&#9670;&#160;</a></span>Compress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string open_spiel::BinaryCompress::Compress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; const float &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d22/observer_8cc_source.html#l00256">256</a> of file <a class="el" href="../../df/d22/observer_8cc_source.html">observer.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>                                                          {</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_bytes = (buffer.size() + kBitsPerByte - 1) / kBitsPerByte;</div>
+<div class="line"><span class="lineno">  258</span>    std::string str(num_bytes + kNumHeaderBytes, <span class="charliteral">&#39;\0&#39;</span>);</div>
+<div class="line"><span class="lineno">  259</span>    str[0] = kCompressionBinary;</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; buffer.size(); ++i) {</div>
+<div class="line"><span class="lineno">  262</span>      <span class="keywordflow">if</span> (buffer[i]) {</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">byte</span> = i / kBitsPerByte;</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> bit = i % kBitsPerByte;</div>
+<div class="line"><span class="lineno">  265</span>        str[kNumHeaderBytes + byte] += (1 &lt;&lt; bit);</div>
+<div class="line"><span class="lineno">  266</span>      }</div>
+<div class="line"><span class="lineno">  267</span>    }</div>
+<div class="line"><span class="lineno">  268</span>    <span class="keywordflow">return</span> str;</div>
+<div class="line"><span class="lineno">  269</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af39b201900da7fb1cdb2205d26a28ad1" name="af39b201900da7fb1cdb2205d26a28ad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39b201900da7fb1cdb2205d26a28ad1">&#9670;&#160;</a></span>Decompress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void open_spiel::BinaryCompress::Decompress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>compressed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; float &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d22/observer_8cc_source.html#l00271">271</a> of file <a class="el" href="../../df/d22/observer_8cc_source.html">observer.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>                                                 {</div>
+<div class="line"><span class="lineno">  273</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_bytes = (buffer.size() + kBitsPerByte - 1) / kBitsPerByte;</div>
+<div class="line"><span class="lineno">  274</span>    absl::c_fill(buffer, 0);</div>
+<div class="line"><span class="lineno">  275</span>    SPIEL_CHECK_EQ(compressed.size(), num_bytes + kNumHeaderBytes);</div>
+<div class="line"><span class="lineno">  276</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">byte</span> = 0; <span class="keywordtype">byte</span> &lt; num_bytes; ++byte) {</div>
+<div class="line"><span class="lineno">  277</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> bit = 0; bit &lt; kBitsPerByte; ++bit) {</div>
+<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">if</span> (compressed[kNumHeaderBytes + <span class="keywordtype">byte</span>] &amp; (1 &lt;&lt; bit)) {</div>
+<div class="line"><span class="lineno">  279</span>          buffer[<span class="keywordtype">byte</span> * kBitsPerByte + bit] = 1;</div>
+<div class="line"><span class="lineno">  280</span>        }</div>
+<div class="line"><span class="lineno">  281</span>      }</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
+<div class="line"><span class="lineno">  283</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a36d871481646e126819bbc36bf1a6b06" name="a36d871481646e126819bbc36bf1a6b06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36d871481646e126819bbc36bf1a6b06">&#9670;&#160;</a></span>kBitsPerByte</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel::BinaryCompress::kBitsPerByte = 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d22/observer_8cc_source.html#l00254">254</a> of file <a class="el" href="../../df/d22/observer_8cc_source.html">observer.cc</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>open_spiel/<b>observer.cc</b></li>
+<li>open_spiel/<a class="el" href="../../df/d22/observer_8cc_source.html">observer.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

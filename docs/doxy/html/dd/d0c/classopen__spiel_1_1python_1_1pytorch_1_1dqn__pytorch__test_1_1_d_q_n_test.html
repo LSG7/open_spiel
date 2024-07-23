@@ -117,18 +117,171 @@ Collaboration diagram for open_spiel.python.pytorch.dqn_pytorch_test.DQNTest:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a371e55705fc31f36ead7b50aceef8d06" id="r_a371e55705fc31f36ead7b50aceef8d06"><td class="memItemLeft" align="right" valign="top"><a id="a371e55705fc31f36ead7b50aceef8d06" name="a371e55705fc31f36ead7b50aceef8d06"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_simple_game</b> (self)</td></tr>
+<tr class="memitem:a371e55705fc31f36ead7b50aceef8d06" id="r_a371e55705fc31f36ead7b50aceef8d06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a371e55705fc31f36ead7b50aceef8d06">test_simple_game</a> (self)</td></tr>
 <tr class="separator:a371e55705fc31f36ead7b50aceef8d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad566eb7b993b94b048de23b51651d8e7" id="r_ad566eb7b993b94b048de23b51651d8e7"><td class="memItemLeft" align="right" valign="top"><a id="ad566eb7b993b94b048de23b51651d8e7" name="ad566eb7b993b94b048de23b51651d8e7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_run_tic_tac_toe</b> (self)</td></tr>
+<tr class="memitem:ad566eb7b993b94b048de23b51651d8e7" id="r_ad566eb7b993b94b048de23b51651d8e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad566eb7b993b94b048de23b51651d8e7">test_run_tic_tac_toe</a> (self)</td></tr>
 <tr class="separator:ad566eb7b993b94b048de23b51651d8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84e6bb17588052029f5125d7733646e1" id="r_a84e6bb17588052029f5125d7733646e1"><td class="memItemLeft" align="right" valign="top"><a id="a84e6bb17588052029f5125d7733646e1" name="a84e6bb17588052029f5125d7733646e1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_run_hanabi</b> (self)</td></tr>
+<tr class="memitem:a84e6bb17588052029f5125d7733646e1" id="r_a84e6bb17588052029f5125d7733646e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84e6bb17588052029f5125d7733646e1">test_run_hanabi</a> (self)</td></tr>
 <tr class="separator:a84e6bb17588052029f5125d7733646e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html#l00037">37</a> of file <a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html">dqn_pytorch_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a84e6bb17588052029f5125d7733646e1" name="a84e6bb17588052029f5125d7733646e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e6bb17588052029f5125d7733646e1">&#9670;&#160;</a></span>test_run_hanabi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.dqn_pytorch_test.DQNTest.test_run_hanabi </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html#l00095">95</a> of file <a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html">dqn_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>  <span class="keyword">def </span>test_run_hanabi(self):</div>
+<div class="line"><span class="lineno">   96</span>    <span class="comment"># Hanabi is an optional game, so check we have it before running the test.</span></div>
+<div class="line"><span class="lineno">   97</span>    game = <span class="stringliteral">&quot;hanabi&quot;</span></div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">if</span> game <span class="keywordflow">not</span> <span class="keywordflow">in</span> pyspiel.registered_names():</div>
+<div class="line"><span class="lineno">   99</span>      <span class="keywordflow">return</span></div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    num_players = 3</div>
+<div class="line"><span class="lineno">  102</span>    env_configs = {</div>
+<div class="line"><span class="lineno">  103</span>        <span class="stringliteral">&quot;players&quot;</span>: num_players,</div>
+<div class="line"><span class="lineno">  104</span>        <span class="stringliteral">&quot;max_life_tokens&quot;</span>: 1,</div>
+<div class="line"><span class="lineno">  105</span>        <span class="stringliteral">&quot;colors&quot;</span>: 2,</div>
+<div class="line"><span class="lineno">  106</span>        <span class="stringliteral">&quot;ranks&quot;</span>: 3,</div>
+<div class="line"><span class="lineno">  107</span>        <span class="stringliteral">&quot;hand_size&quot;</span>: 2,</div>
+<div class="line"><span class="lineno">  108</span>        <span class="stringliteral">&quot;max_information_tokens&quot;</span>: 3,</div>
+<div class="line"><span class="lineno">  109</span>        <span class="stringliteral">&quot;discount&quot;</span>: 0.</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  111</span>    env = rl_environment.Environment(game, **env_configs)</div>
+<div class="line"><span class="lineno">  112</span>    state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">  113</span>    num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    agents = [</div>
+<div class="line"><span class="lineno">  116</span>        dqn.DQN(  <span class="comment"># pylint: disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">  117</span>            player_id,</div>
+<div class="line"><span class="lineno">  118</span>            state_representation_size=state_size,</div>
+<div class="line"><span class="lineno">  119</span>            num_actions=num_actions,</div>
+<div class="line"><span class="lineno">  120</span>            hidden_layers_sizes=[16],</div>
+<div class="line"><span class="lineno">  121</span>            replay_buffer_capacity=10,</div>
+<div class="line"><span class="lineno">  122</span>            batch_size=5) <span class="keywordflow">for</span> player_id <span class="keywordflow">in</span> range(num_players)</div>
+<div class="line"><span class="lineno">  123</span>    ]</div>
+<div class="line"><span class="lineno">  124</span>    time_step = env.reset()</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">  126</span>      current_player = time_step.observations[<span class="stringliteral">&quot;current_player&quot;</span>]</div>
+<div class="line"><span class="lineno">  127</span>      agent_output = [agent.step(time_step) <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents]</div>
+<div class="line"><span class="lineno">  128</span>      time_step = env.step([agent_output[current_player].action])</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents:</div>
+<div class="line"><span class="lineno">  131</span>      agent.step(time_step)</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad566eb7b993b94b048de23b51651d8e7" name="ad566eb7b993b94b048de23b51651d8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad566eb7b993b94b048de23b51651d8e7">&#9670;&#160;</a></span>test_run_tic_tac_toe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.dqn_pytorch_test.DQNTest.test_run_tic_tac_toe </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html#l00071">71</a> of file <a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html">dqn_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>  <span class="keyword">def </span>test_run_tic_tac_toe(self):</div>
+<div class="line"><span class="lineno">   72</span>    env = rl_environment.Environment(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">   73</span>    state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">   74</span>    num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    agents = [</div>
+<div class="line"><span class="lineno">   77</span>        dqn.DQN(  <span class="comment"># pylint: disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">   78</span>            player_id,</div>
+<div class="line"><span class="lineno">   79</span>            state_representation_size=state_size,</div>
+<div class="line"><span class="lineno">   80</span>            num_actions=num_actions,</div>
+<div class="line"><span class="lineno">   81</span>            hidden_layers_sizes=[16],</div>
+<div class="line"><span class="lineno">   82</span>            replay_buffer_capacity=10,</div>
+<div class="line"><span class="lineno">   83</span>            batch_size=5) <span class="keywordflow">for</span> player_id <span class="keywordflow">in</span> [0, 1]</div>
+<div class="line"><span class="lineno">   84</span>    ]</div>
+<div class="line"><span class="lineno">   85</span>    time_step = env.reset()</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   87</span>      current_player = time_step.observations[<span class="stringliteral">&quot;current_player&quot;</span>]</div>
+<div class="line"><span class="lineno">   88</span>      current_agent = agents[current_player]</div>
+<div class="line"><span class="lineno">   89</span>      agent_output = current_agent.step(time_step)</div>
+<div class="line"><span class="lineno">   90</span>      time_step = env.step([agent_output.action])</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents:</div>
+<div class="line"><span class="lineno">   93</span>      agent.step(time_step)</div>
+<div class="line"><span class="lineno">   94</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a371e55705fc31f36ead7b50aceef8d06" name="a371e55705fc31f36ead7b50aceef8d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371e55705fc31f36ead7b50aceef8d06">&#9670;&#160;</a></span>test_simple_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.dqn_pytorch_test.DQNTest.test_simple_game </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html#l00039">39</a> of file <a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html">dqn_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>  <span class="keyword">def </span>test_simple_game(self):</div>
+<div class="line"><span class="lineno">   40</span>    game = pyspiel.load_efg_game(SIMPLE_EFG_DATA)</div>
+<div class="line"><span class="lineno">   41</span>    env = rl_environment.Environment(game=game)</div>
+<div class="line"><span class="lineno">   42</span>    agent = dqn.DQN(</div>
+<div class="line"><span class="lineno">   43</span>        0,</div>
+<div class="line"><span class="lineno">   44</span>        state_representation_size=game.information_state_tensor_shape()[0],</div>
+<div class="line"><span class="lineno">   45</span>        num_actions=game.num_distinct_actions(),</div>
+<div class="line"><span class="lineno">   46</span>        min_buffer_size_to_learn=10,</div>
+<div class="line"><span class="lineno">   47</span>        hidden_layers_sizes=[16],</div>
+<div class="line"><span class="lineno">   48</span>        replay_buffer_capacity=1000,</div>
+<div class="line"><span class="lineno">   49</span>        update_target_network_every=100,</div>
+<div class="line"><span class="lineno">   50</span>        learn_every=10,</div>
+<div class="line"><span class="lineno">   51</span>        discount_factor=0.99,</div>
+<div class="line"><span class="lineno">   52</span>        epsilon_decay_duration=1000,</div>
+<div class="line"><span class="lineno">   53</span>        batch_size=32,</div>
+<div class="line"><span class="lineno">   54</span>        epsilon_start=0.5,</div>
+<div class="line"><span class="lineno">   55</span>        epsilon_end=0.01)</div>
+<div class="line"><span class="lineno">   56</span>    total_eval_reward = 0</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(1000):</div>
+<div class="line"><span class="lineno">   58</span>      time_step = env.reset()</div>
+<div class="line"><span class="lineno">   59</span>      <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   60</span>        agent_output = agent.step(time_step)</div>
+<div class="line"><span class="lineno">   61</span>        time_step = env.step([agent_output.action])</div>
+<div class="line"><span class="lineno">   62</span>      agent.step(time_step)</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(1000):</div>
+<div class="line"><span class="lineno">   64</span>      time_step = env.reset()</div>
+<div class="line"><span class="lineno">   65</span>      <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   66</span>        agent_output = agent.step(time_step, is_evaluation=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   67</span>        time_step = env.step([agent_output.action])</div>
+<div class="line"><span class="lineno">   68</span>        total_eval_reward += time_step.rewards[0]</div>
+<div class="line"><span class="lineno">   69</span>    self.assertGreaterEqual(total_eval_reward, 250)</div>
+<div class="line"><span class="lineno">   70</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/pytorch/<b>dqn_pytorch_test.py</b></li>
+<li>open_spiel/python/pytorch/<a class="el" href="../../d2/d9c/dqn__pytorch__test_8py_source.html">dqn_pytorch_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

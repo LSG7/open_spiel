@@ -120,6 +120,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Saves the parametric distribution to a Pickle file.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/de8/python_2mfg_2utils_8py_source.html#l00022">22</a> of file <a class="el" href="../../d5/de8/python_2mfg_2utils_8py_source.html">utils.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>                                 filename: str):</div>
+<div class="line"><span class="lineno">   24</span>  <span class="stringliteral">&quot;&quot;&quot;Saves the parametric distribution to a Pickle file.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   25</span>  <span class="keyword">with</span> gfile.Open(filename, <span class="stringliteral">&quot;wb&quot;</span>) <span class="keyword">as</span> f:</div>
+<div class="line"><span class="lineno">   26</span>    pickle.dump(dist.get_params(), f, protocol=pickle.DEFAULT_PROTOCOL)</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

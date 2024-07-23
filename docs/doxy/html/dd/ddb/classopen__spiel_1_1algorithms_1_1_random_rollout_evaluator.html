@@ -117,14 +117,49 @@ Collaboration diagram for open_spiel::algorithms::RandomRolloutEvaluator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acdc426b47730c0cfabdacb127ff6fa42" id="r_acdc426b47730c0cfabdacb127ff6fa42"><td class="memItemLeft" align="right" valign="top"><a id="acdc426b47730c0cfabdacb127ff6fa42" name="acdc426b47730c0cfabdacb127ff6fa42"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RandomRolloutEvaluator</b> (int n_rollouts, int seed)</td></tr>
+<tr class="memitem:acdc426b47730c0cfabdacb127ff6fa42" id="r_acdc426b47730c0cfabdacb127ff6fa42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdc426b47730c0cfabdacb127ff6fa42">RandomRolloutEvaluator</a> (int n_rollouts, int seed)</td></tr>
 <tr class="separator:acdc426b47730c0cfabdacb127ff6fa42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac88012d18e32e28760cb5f83525fca17" id="r_ac88012d18e32e28760cb5f83525fca17"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac88012d18e32e28760cb5f83525fca17">Evaluate</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state) override</td></tr>
 <tr class="separator:ac88012d18e32e28760cb5f83525fca17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ae1f019b0bd0378e2f380cc3469355b" id="r_a9ae1f019b0bd0378e2f380cc3469355b"><td class="memItemLeft" align="right" valign="top">ActionsAndProbs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ae1f019b0bd0378e2f380cc3469355b">Prior</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state) override</td></tr>
 <tr class="separator:a9ae1f019b0bd0378e2f380cc3469355b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/df2/mcts_8h_source.html#l00097">97</a> of file <a class="el" href="../../df/df2/mcts_8h_source.html">mcts.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="acdc426b47730c0cfabdacb127ff6fa42" name="acdc426b47730c0cfabdacb127ff6fa42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdc426b47730c0cfabdacb127ff6fa42">&#9670;&#160;</a></span>RandomRolloutEvaluator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::RandomRolloutEvaluator::RandomRolloutEvaluator </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n_rollouts</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>seed</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/df2/mcts_8h_source.html#l00099">99</a> of file <a class="el" href="../../df/df2/mcts_8h_source.html">mcts.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>      : n_rollouts_(n_rollouts), rng_(seed) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac88012d18e32e28760cb5f83525fca17" name="ac88012d18e32e28760cb5f83525fca17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac88012d18e32e28760cb5f83525fca17">&#9670;&#160;</a></span>Evaluate()</h2>
@@ -151,6 +186,38 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../da/d69/classopen__spiel_1_1algorithms_1_1_evaluator.html">open_spiel::algorithms::Evaluator</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d7/df3/mcts_8cc_source.html#l00043">43</a> of file <a class="el" href="../../d7/df3/mcts_8cc_source.html">mcts.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                     {</div>
+<div class="line"><span class="lineno">   44</span>  std::vector&lt;double&gt; result;</div>
+<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n_rollouts_; ++i) {</div>
+<div class="line"><span class="lineno">   46</span>    std::unique_ptr&lt;State&gt; working_state = state.Clone();</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">while</span> (!working_state-&gt;IsTerminal()) {</div>
+<div class="line"><span class="lineno">   48</span>      <span class="keywordflow">if</span> (working_state-&gt;IsChanceNode()) {</div>
+<div class="line"><span class="lineno">   49</span>        ActionsAndProbs outcomes = working_state-&gt;ChanceOutcomes();</div>
+<div class="line"><span class="lineno">   50</span>        working_state-&gt;ApplyAction(SampleAction(outcomes, rng_).first);</div>
+<div class="line"><span class="lineno">   51</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   52</span>        std::vector&lt;Action&gt; actions = working_state-&gt;LegalActions();</div>
+<div class="line"><span class="lineno">   53</span>        working_state-&gt;ApplyAction(</div>
+<div class="line"><span class="lineno">   54</span>            actions[absl::Uniform(rng_, 0u, actions.size())]);</div>
+<div class="line"><span class="lineno">   55</span>      }</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    std::vector&lt;double&gt; returns = working_state-&gt;Returns();</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span> (result.empty()) {</div>
+<div class="line"><span class="lineno">   60</span>      result.swap(returns);</div>
+<div class="line"><span class="lineno">   61</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   62</span>      SPIEL_CHECK_EQ(returns.size(), result.size());</div>
+<div class="line"><span class="lineno">   63</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; result.size(); ++i) {</div>
+<div class="line"><span class="lineno">   64</span>        result[i] += returns[i];</div>
+<div class="line"><span class="lineno">   65</span>      }</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="line"><span class="lineno">   67</span>  }</div>
+<div class="line"><span class="lineno">   68</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; result.size(); ++i) {</div>
+<div class="line"><span class="lineno">   69</span>    result[i] /= n_rollouts_;</div>
+<div class="line"><span class="lineno">   70</span>  }</div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   72</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9ae1f019b0bd0378e2f380cc3469355b" name="a9ae1f019b0bd0378e2f380cc3469355b"></a>
@@ -178,11 +245,27 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../da/d69/classopen__spiel_1_1algorithms_1_1_evaluator.html">open_spiel::algorithms::Evaluator</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d7/df3/mcts_8cc_source.html#l00074">74</a> of file <a class="el" href="../../d7/df3/mcts_8cc_source.html">mcts.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                                {</div>
+<div class="line"><span class="lineno">   75</span>  <span class="comment">// Returns equal probability for all actions.</span></div>
+<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">if</span> (state.IsChanceNode()) {</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> state.ChanceOutcomes();</div>
+<div class="line"><span class="lineno">   78</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   79</span>    std::vector&lt;Action&gt; legal_actions = state.LegalActions();</div>
+<div class="line"><span class="lineno">   80</span>    ActionsAndProbs prior;</div>
+<div class="line"><span class="lineno">   81</span>    prior.reserve(legal_actions.size());</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> Action&amp; action : legal_actions) {</div>
+<div class="line"><span class="lineno">   83</span>      prior.emplace_back(action, 1.0 / legal_actions.size());</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> prior;</div>
+<div class="line"><span class="lineno">   86</span>  }</div>
+<div class="line"><span class="lineno">   87</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/<a class="el" href="../../df/df2/mcts_8h_source.html">mcts.h</a></li>
-<li>open_spiel/algorithms/<b>mcts.cc</b></li>
+<li>open_spiel/algorithms/<a class="el" href="../../d7/df3/mcts_8cc_source.html">mcts.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -99,8 +99,7 @@ $(function(){ initResizable(false); });
 Functions</h2></td></tr>
 <tr class="memitem:a5ab507231332d3a8a2def5abf1e6d6d3" id="r_a5ab507231332d3a8a2def5abf1e6d6d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ab507231332d3a8a2def5abf1e6d6d3">uniform_strategy</a> (solver, return_joint=False)</td></tr>
 <tr class="separator:a5ab507231332d3a8a2def5abf1e6d6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf6871bf71c1b113e87d2d9ce35d0c81" id="r_adf6871bf71c1b113e87d2d9ce35d0c81"><td class="memItemLeft" align="right" valign="top"><a id="adf6871bf71c1b113e87d2d9ce35d0c81" name="adf6871bf71c1b113e87d2d9ce35d0c81"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>softmax_on_range</b> (number_policies)</td></tr>
+<tr class="memitem:adf6871bf71c1b113e87d2d9ce35d0c81" id="r_adf6871bf71c1b113e87d2d9ce35d0c81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf6871bf71c1b113e87d2d9ce35d0c81">softmax_on_range</a> (number_policies)</td></tr>
 <tr class="separator:adf6871bf71c1b113e87d2d9ce35d0c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae51fbcb9e84c7bfdf3b3b64da46ec3d1" id="r_ae51fbcb9e84c7bfdf3b3b64da46ec3d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae51fbcb9e84c7bfdf3b3b64da46ec3d1">uniform_biased_strategy</a> (solver, return_joint=False)</td></tr>
 <tr class="separator:ae51fbcb9e84c7bfdf3b3b64da46ec3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,8 +116,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ab8b3e76e5de5ed6d477678dcb85d9ccc" id="r_ab8b3e76e5de5ed6d477678dcb85d9ccc"><td class="memItemLeft" align="right" valign="top"><a id="ab8b3e76e5de5ed6d477678dcb85d9ccc" name="ab8b3e76e5de5ed6d477678dcb85d9ccc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>EPSILON_MIN_POSITIVE_PROBA</b> = 1e-8</td></tr>
+<tr class="memitem:ab8b3e76e5de5ed6d477678dcb85d9ccc" id="r_ab8b3e76e5de5ed6d477678dcb85d9ccc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8b3e76e5de5ed6d477678dcb85d9ccc">EPSILON_MIN_POSITIVE_PROBA</a> = 1e-8</td></tr>
 <tr class="separator:ab8b3e76e5de5ed6d477678dcb85d9ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e653dec52c952807d7549822b75020d" id="r_a5e653dec52c952807d7549822b75020d"><td class="memItemLeft" align="right" valign="top">dict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e653dec52c952807d7549822b75020d">META_STRATEGY_METHODS</a></td></tr>
 <tr class="separator:a5e653dec52c952807d7549822b75020d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,7 +144,26 @@ Args:
 
 Returns:
   A flat joint strategy from a list of marginals.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00097">97</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span><span class="keyword">def </span>get_joint_strategy_from_marginals(probabilities):</div>
+<div class="line"><span class="lineno">   98</span>  <span class="stringliteral">&quot;&quot;&quot;Returns a joint strategy tensor from a list of marginals.</span></div>
+<div class="line"><span class="lineno">   99</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  100</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  101</span><span class="stringliteral">    probabilities: list of probabilities.</span></div>
+<div class="line"><span class="lineno">  102</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  103</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  104</span><span class="stringliteral">    A flat joint strategy from a list of marginals.</span></div>
+<div class="line"><span class="lineno">  105</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  106</span>  res = np.ones((1,), dtype=np.float64)</div>
+<div class="line"><span class="lineno">  107</span>  <span class="keywordflow">for</span> prob <span class="keywordflow">in</span> probabilities:</div>
+<div class="line"><span class="lineno">  108</span>    res = res[..., <span class="keywordtype">None</span>] @ np.asarray(prob).reshape((1,) * res.ndim + (-1,))</div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">return</span> res.reshape(-1)</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00112">open_spiel.python.algorithms.psro_v2.meta_strategies.nash_strategy()</a>, <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00148">open_spiel.python.algorithms.psro_v2.meta_strategies.prd_strategy()</a>, <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00172">open_spiel.python.algorithms.psro_v2.meta_strategies.rm_strategy()</a>, <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00056">open_spiel.python.algorithms.psro_v2.meta_strategies.uniform_biased_strategy()</a>, and <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00028">open_spiel.python.algorithms.psro_v2.meta_strategies.uniform_strategy()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_ad45804a5c7dacb79c6923291c8c84d75_icgraph.png" border="0" usemap="#ad1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_ad45804a5c7dacb79c6923291c8c84d75_icgraph" alt=""/></div>
@@ -196,7 +213,47 @@ Args:
 
 Returns:
   Nash distribution on strategies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00112">112</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span><span class="keyword">def </span>nash_strategy(solver, return_joint=False):</div>
+<div class="line"><span class="lineno">  113</span>  <span class="stringliteral">&quot;&quot;&quot;Returns nash distribution on meta game matrix.</span></div>
+<div class="line"><span class="lineno">  114</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  115</span><span class="stringliteral">  This method only works for two player zero-sum games.</span></div>
+<div class="line"><span class="lineno">  116</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  117</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  118</span><span class="stringliteral">    solver: GenPSROSolver instance.</span></div>
+<div class="line"><span class="lineno">  119</span><span class="stringliteral">    return_joint: If true, only returns marginals. Otherwise marginals as well</span></div>
+<div class="line"><span class="lineno">  120</span><span class="stringliteral">      as joint probabilities.</span></div>
+<div class="line"><span class="lineno">  121</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  122</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  123</span><span class="stringliteral">    Nash distribution on strategies.</span></div>
+<div class="line"><span class="lineno">  124</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  125</span>  meta_games = solver.get_meta_game()</div>
+<div class="line"><span class="lineno">  126</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> isinstance(meta_games, list):</div>
+<div class="line"><span class="lineno">  127</span>    meta_games = [meta_games, -meta_games]</div>
+<div class="line"><span class="lineno">  128</span>  meta_games = [x.tolist() <span class="keywordflow">for</span> x <span class="keywordflow">in</span> meta_games]</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">if</span> len(meta_games) != 2:</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">raise</span> NotImplementedError(</div>
+<div class="line"><span class="lineno">  131</span>        <span class="stringliteral">&quot;nash_strategy solver works only for 2p zero-sum&quot;</span></div>
+<div class="line"><span class="lineno">  132</span>        <span class="stringliteral">&quot;games, but was invoked for a {} player game&quot;</span>.format(len(meta_games)))</div>
+<div class="line"><span class="lineno">  133</span>  nash_prob_1, nash_prob_2, _, _ = (</div>
+<div class="line"><span class="lineno">  134</span>      lp_solver.solve_zero_sum_matrix_game(</div>
+<div class="line"><span class="lineno">  135</span>          pyspiel.create_matrix_game(*meta_games)))</div>
+<div class="line"><span class="lineno">  136</span>  result = [</div>
+<div class="line"><span class="lineno">  137</span>      renormalize(np.array(nash_prob_1).reshape(-1)),</div>
+<div class="line"><span class="lineno">  138</span>      renormalize(np.array(nash_prob_2).reshape(-1))</div>
+<div class="line"><span class="lineno">  139</span>  ]</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> return_joint:</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">return</span> result</div>
+<div class="line"><span class="lineno">  143</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  144</span>    joint_strategies = get_joint_strategy_from_marginals(result)</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">return</span> result, joint_strategies</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00097">open_spiel.python.algorithms.psro_v2.meta_strategies.get_joint_strategy_from_marginals()</a>, and <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00083">open_spiel.python.algorithms.psro_v2.meta_strategies.renormalize()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_aaf7d5587df462f8fb1d4011fc2b9c972_cgraph.png" border="0" usemap="#ad1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_aaf7d5587df462f8fb1d4011fc2b9c972_cgraph" alt=""/></div>
@@ -238,7 +295,35 @@ Args:
 
 Returns:
   PRD-computed strategies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00148">148</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span><span class="keyword">def </span>prd_strategy(solver, return_joint=False):</div>
+<div class="line"><span class="lineno">  149</span>  <span class="stringliteral">&quot;&quot;&quot;Computes Projected Replicator Dynamics strategies.</span></div>
+<div class="line"><span class="lineno">  150</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  151</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  152</span><span class="stringliteral">    solver: GenPSROSolver instance.</span></div>
+<div class="line"><span class="lineno">  153</span><span class="stringliteral">    return_joint: If true, only returns marginals. Otherwise marginals as well</span></div>
+<div class="line"><span class="lineno">  154</span><span class="stringliteral">      as joint probabilities.</span></div>
+<div class="line"><span class="lineno">  155</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  156</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  157</span><span class="stringliteral">    PRD-computed strategies.</span></div>
+<div class="line"><span class="lineno">  158</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  159</span>  meta_games = solver.get_meta_game()</div>
+<div class="line"><span class="lineno">  160</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> isinstance(meta_games, list):</div>
+<div class="line"><span class="lineno">  161</span>    meta_games = [meta_games, -meta_games]</div>
+<div class="line"><span class="lineno">  162</span>  kwargs = solver.get_kwargs()</div>
+<div class="line"><span class="lineno">  163</span>  result = projected_replicator_dynamics.projected_replicator_dynamics(</div>
+<div class="line"><span class="lineno">  164</span>      meta_games, **kwargs)</div>
+<div class="line"><span class="lineno">  165</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> return_joint:</div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">return</span> result</div>
+<div class="line"><span class="lineno">  167</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  168</span>    joint_strategies = get_joint_strategy_from_marginals(result)</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">return</span> result, joint_strategies</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00097">open_spiel.python.algorithms.psro_v2.meta_strategies.get_joint_strategy_from_marginals()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_aff7243fef18b60cbf303a9986e88946d_cgraph.png" border="0" usemap="#ad1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_aff7243fef18b60cbf303a9986e88946d_cgraph" alt=""/></div>
@@ -272,7 +357,25 @@ Args:
 
 Returns:
   Renormalized probabilities.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00083">83</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span><span class="keyword">def </span>renormalize(probabilities):</div>
+<div class="line"><span class="lineno">   84</span>  <span class="stringliteral">&quot;&quot;&quot;Replaces all negative entries with zeroes and normalizes the result.</span></div>
+<div class="line"><span class="lineno">   85</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   86</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   87</span><span class="stringliteral">    probabilities: probability vector to renormalize. Has to be one-dimensional.</span></div>
+<div class="line"><span class="lineno">   88</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   89</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   90</span><span class="stringliteral">    Renormalized probabilities.</span></div>
+<div class="line"><span class="lineno">   91</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   92</span>  probabilities[probabilities &lt; 0] = 0</div>
+<div class="line"><span class="lineno">   93</span>  probabilities = probabilities / np.sum(probabilities)</div>
+<div class="line"><span class="lineno">   94</span>  <span class="keywordflow">return</span> probabilities</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00112">open_spiel.python.algorithms.psro_v2.meta_strategies.nash_strategy()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_a6a0779b6da17f55586e8ab8413d375a3_icgraph.png" border="0" usemap="#ad1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_a6a0779b6da17f55586e8ab8413d375a3_icgraph" alt=""/></div>
@@ -312,7 +415,35 @@ Args:
 
 Returns:
   PRD-computed strategies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00172">172</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span><span class="keyword">def </span>rm_strategy(solver, return_joint=False):</div>
+<div class="line"><span class="lineno">  173</span>  <span class="stringliteral">&quot;&quot;&quot;Computes regret-matching strategies.</span></div>
+<div class="line"><span class="lineno">  174</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  175</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  176</span><span class="stringliteral">    solver: GenPSROSolver instance.</span></div>
+<div class="line"><span class="lineno">  177</span><span class="stringliteral">    return_joint: If true, only returns marginals. Otherwise marginals as well</span></div>
+<div class="line"><span class="lineno">  178</span><span class="stringliteral">      as joint probabilities.</span></div>
+<div class="line"><span class="lineno">  179</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  180</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  181</span><span class="stringliteral">    PRD-computed strategies.</span></div>
+<div class="line"><span class="lineno">  182</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  183</span>  meta_games = solver.get_meta_game()</div>
+<div class="line"><span class="lineno">  184</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> isinstance(meta_games, list):</div>
+<div class="line"><span class="lineno">  185</span>    meta_games = [meta_games, -meta_games]</div>
+<div class="line"><span class="lineno">  186</span>  kwargs = solver.get_kwargs()</div>
+<div class="line"><span class="lineno">  187</span>  result = <a class="code hl_function" href="../../df/d91/namespaceregret__matching.html#a2a34634f8665e8c6f1085a811ceb0892">regret_matching.regret_matching</a>(meta_games, **kwargs)</div>
+<div class="line"><span class="lineno">  188</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> return_joint:</div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordflow">return</span> result</div>
+<div class="line"><span class="lineno">  190</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  191</span>    joint_strategies = get_joint_strategy_from_marginals(result)</div>
+<div class="line"><span class="lineno">  192</span>    <span class="keywordflow">return</span> result, joint_strategies</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="ttc" id="anamespaceregret__matching_html_a2a34634f8665e8c6f1085a811ceb0892"><div class="ttname"><a href="../../df/d91/namespaceregret__matching.html#a2a34634f8665e8c6f1085a811ceb0892">regret_matching.regret_matching</a></div><div class="ttdeci">regret_matching(regrets)</div><div class="ttdef"><b>Definition</b> <a href="../../d1/da5/mfg_2algorithms_2regret_2regret__matching_8py_source.html#l00025">regret_matching.py:25</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00097">open_spiel.python.algorithms.psro_v2.meta_strategies.get_joint_strategy_from_marginals()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_a6be387e48f8b6ff7066ccfc725cd888e_cgraph.png" border="0" usemap="#ad1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_a6be387e48f8b6ff7066ccfc725cd888e_cgraph" alt=""/></div>
@@ -323,6 +454,32 @@ Here is the call graph for this function:</div>
 </map>
 </div>
 
+</div>
+</div>
+<a id="adf6871bf71c1b113e87d2d9ce35d0c81" name="adf6871bf71c1b113e87d2d9ce35d0c81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6871bf71c1b113e87d2d9ce35d0c81">&#9670;&#160;</a></span>softmax_on_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.psro_v2.meta_strategies.softmax_on_range </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>number_policies</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00049">49</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span><span class="keyword">def </span>softmax_on_range(number_policies):</div>
+<div class="line"><span class="lineno">   50</span>  x = np.array(list(range(number_policies)))</div>
+<div class="line"><span class="lineno">   51</span>  x = np.exp(x-x.max())</div>
+<div class="line"><span class="lineno">   52</span>  x /= np.sum(x)</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">return</span> x</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae51fbcb9e84c7bfdf3b3b64da46ec3d1" name="ae51fbcb9e84c7bfdf3b3b64da46ec3d1"></a>
@@ -356,7 +513,38 @@ Args:
 
 Returns:
   uniform distribution on strategies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00056">56</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span><span class="keyword">def </span>uniform_biased_strategy(solver, return_joint=False):</div>
+<div class="line"><span class="lineno">   57</span>  <span class="stringliteral">&quot;&quot;&quot;Returns a Biased Random Uniform distribution on policies.</span></div>
+<div class="line"><span class="lineno">   58</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   59</span><span class="stringliteral">  The uniform distribution is biased to prioritize playing against more recent</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral">  policies (Policies that were appended to the policy list later in training)</span></div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  instead of older ones.</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">    solver: GenPSROSolver instance.</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">    return_joint: If true, only returns marginals. Otherwise marginals as well</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">      as joint probabilities.</span></div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   68</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   69</span><span class="stringliteral">    uniform distribution on strategies.</span></div>
+<div class="line"><span class="lineno">   70</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   71</span>  policies = solver.get_policies()</div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> isinstance(policies[0], list):</div>
+<div class="line"><span class="lineno">   73</span>    policies = [policies]</div>
+<div class="line"><span class="lineno">   74</span>  policy_lengths = [len(pol) <span class="keywordflow">for</span> pol <span class="keywordflow">in</span> policies]</div>
+<div class="line"><span class="lineno">   75</span>  result = [softmax_on_range(pol_len) <span class="keywordflow">for</span> pol_len <span class="keywordflow">in</span> policy_lengths]</div>
+<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> return_joint:</div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> result</div>
+<div class="line"><span class="lineno">   78</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   79</span>    joint_strategies = get_joint_strategy_from_marginals(result)</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> result, joint_strategies</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00097">open_spiel.python.algorithms.psro_v2.meta_strategies.get_joint_strategy_from_marginals()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_ae51fbcb9e84c7bfdf3b3b64da46ec3d1_cgraph.png" border="0" usemap="#ad1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_ae51fbcb9e84c7bfdf3b3b64da46ec3d1_cgraph" alt=""/></div>
@@ -396,7 +584,32 @@ Args:
 
 Returns:
   uniform distribution on strategies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00028">28</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span><span class="keyword">def </span>uniform_strategy(solver, return_joint=False):</div>
+<div class="line"><span class="lineno">   29</span>  <span class="stringliteral">&quot;&quot;&quot;Returns a Random Uniform distribution on policies.</span></div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">    solver: GenPSROSolver instance.</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">    return_joint: If true, only returns marginals. Otherwise marginals as well</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral">      as joint probabilities.</span></div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">    uniform distribution on strategies.</span></div>
+<div class="line"><span class="lineno">   38</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   39</span>  policies = solver.get_policies()</div>
+<div class="line"><span class="lineno">   40</span>  policy_lengths = [len(pol) <span class="keywordflow">for</span> pol <span class="keywordflow">in</span> policies]</div>
+<div class="line"><span class="lineno">   41</span>  result = [np.ones(pol_len) / pol_len <span class="keywordflow">for</span> pol_len <span class="keywordflow">in</span> policy_lengths]</div>
+<div class="line"><span class="lineno">   42</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> return_joint:</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">return</span> result</div>
+<div class="line"><span class="lineno">   44</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   45</span>    joint_strategies = get_joint_strategy_from_marginals(result)</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">return</span> result, joint_strategies</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00097">open_spiel.python.algorithms.psro_v2.meta_strategies.get_joint_strategy_from_marginals()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_a5ab507231332d3a8a2def5abf1e6d6d3_cgraph.png" border="0" usemap="#ad1/da0/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1meta__strategies_a5ab507231332d3a8a2def5abf1e6d6d3_cgraph" alt=""/></div>
@@ -410,6 +623,22 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="ab8b3e76e5de5ed6d477678dcb85d9ccc" name="ab8b3e76e5de5ed6d477678dcb85d9ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b3e76e5de5ed6d477678dcb85d9ccc">&#9670;&#160;</a></span>EPSILON_MIN_POSITIVE_PROBA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.algorithms.psro_v2.meta_strategies.EPSILON_MIN_POSITIVE_PROBA = 1e-8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00025">25</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+
+</div>
+</div>
 <a id="a5e653dec52c952807d7549822b75020d" name="a5e653dec52c952807d7549822b75020d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e653dec52c952807d7549822b75020d">&#9670;&#160;</a></span>META_STRATEGY_METHODS</h2>
 
@@ -429,6 +658,8 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">    6</span>    <span class="stringliteral">&quot;rm&quot;</span>: rm_strategy,</div>
 <div class="line"><span class="lineno">    7</span>}</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../da/df2/meta__strategies_8py_source.html#l00195">195</a> of file <a class="el" href="../../da/df2/meta__strategies_8py_source.html">meta_strategies.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

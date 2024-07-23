@@ -117,18 +117,120 @@ Collaboration diagram for open_spiel.python.algorithms.response_graph_ucb_test.R
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7e28017e59ce964a14523b187ac2f5e9" id="r_a7e28017e59ce964a14523b187ac2f5e9"><td class="memItemLeft" align="right" valign="top"><a id="a7e28017e59ce964a14523b187ac2f5e9" name="a7e28017e59ce964a14523b187ac2f5e9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>get_example_2x2_payoffs</b> (self)</td></tr>
+<tr class="memitem:a7e28017e59ce964a14523b187ac2f5e9" id="r_a7e28017e59ce964a14523b187ac2f5e9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e28017e59ce964a14523b187ac2f5e9">get_example_2x2_payoffs</a> (self)</td></tr>
 <tr class="separator:a7e28017e59ce964a14523b187ac2f5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1b16f00cdbcc35c06b71b6167f89b46" id="r_aa1b16f00cdbcc35c06b71b6167f89b46"><td class="memItemLeft" align="right" valign="top"><a id="aa1b16f00cdbcc35c06b71b6167f89b46" name="aa1b16f00cdbcc35c06b71b6167f89b46"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_sampler</b> (self)</td></tr>
+<tr class="memitem:aa1b16f00cdbcc35c06b71b6167f89b46" id="r_aa1b16f00cdbcc35c06b71b6167f89b46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1b16f00cdbcc35c06b71b6167f89b46">test_sampler</a> (self)</td></tr>
 <tr class="separator:aa1b16f00cdbcc35c06b71b6167f89b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34a41ea0fc3dbe604a5f3b243330c376" id="r_a34a41ea0fc3dbe604a5f3b243330c376"><td class="memItemLeft" align="right" valign="top"><a id="a34a41ea0fc3dbe604a5f3b243330c376" name="a34a41ea0fc3dbe604a5f3b243330c376"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_soccer_data_import</b> (self)</td></tr>
+<tr class="memitem:a34a41ea0fc3dbe604a5f3b243330c376" id="r_a34a41ea0fc3dbe604a5f3b243330c376"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34a41ea0fc3dbe604a5f3b243330c376">test_soccer_data_import</a> (self)</td></tr>
 <tr class="separator:a34a41ea0fc3dbe604a5f3b243330c376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html#l00031">31</a> of file <a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html">response_graph_ucb_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7e28017e59ce964a14523b187ac2f5e9" name="a7e28017e59ce964a14523b187ac2f5e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e28017e59ce964a14523b187ac2f5e9">&#9670;&#160;</a></span>get_example_2x2_payoffs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.response_graph_ucb_test.ResponseGraphUcbTest.get_example_2x2_payoffs </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html#l00033">33</a> of file <a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html">response_graph_ucb_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>  <span class="keyword">def </span>get_example_2x2_payoffs(self):</div>
+<div class="line"><span class="lineno">   34</span>    mean_payoffs = np.random.uniform(-1, 1, size=(2, 2, 2))</div>
+<div class="line"><span class="lineno">   35</span>    mean_payoffs[0, :, :] = np.asarray([[0.5, 0.85], [0.15, 0.5]])</div>
+<div class="line"><span class="lineno">   36</span>    mean_payoffs[1, :, :] = 1 - mean_payoffs[0, :, :]</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">return</span> mean_payoffs</div>
+<div class="line"><span class="lineno">   38</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa1b16f00cdbcc35c06b71b6167f89b46" name="aa1b16f00cdbcc35c06b71b6167f89b46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b16f00cdbcc35c06b71b6167f89b46">&#9670;&#160;</a></span>test_sampler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.response_graph_ucb_test.ResponseGraphUcbTest.test_sampler </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html#l00039">39</a> of file <a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html">response_graph_ucb_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>  <span class="keyword">def </span>test_sampler(self):</div>
+<div class="line"><span class="lineno">   40</span>    mean_payoffs = self.get_example_2x2_payoffs()</div>
+<div class="line"><span class="lineno">   41</span>    game = response_graph_ucb_utils.BernoulliGameSampler(</div>
+<div class="line"><span class="lineno">   42</span>        [2, 2], mean_payoffs, payoff_bounds=[-1., 1.])</div>
+<div class="line"><span class="lineno">   43</span>    game.p_max = mean_payoffs</div>
+<div class="line"><span class="lineno">   44</span>    game.means = mean_payoffs</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    <span class="comment"># Parameters to run</span></div>
+<div class="line"><span class="lineno">   47</span>    sampling_methods = [</div>
+<div class="line"><span class="lineno">   48</span>        <span class="stringliteral">&#39;uniform-exhaustive&#39;</span>, <span class="stringliteral">&#39;uniform&#39;</span>, <span class="stringliteral">&#39;valence-weighted&#39;</span>, <span class="stringliteral">&#39;count-weighted&#39;</span></div>
+<div class="line"><span class="lineno">   49</span>    ]</div>
+<div class="line"><span class="lineno">   50</span>    conf_methods = [</div>
+<div class="line"><span class="lineno">   51</span>        <span class="stringliteral">&#39;ucb-standard&#39;</span>, <span class="stringliteral">&#39;ucb-standard-relaxed&#39;</span>, <span class="stringliteral">&#39;clopper-pearson-ucb&#39;</span>,</div>
+<div class="line"><span class="lineno">   52</span>        <span class="stringliteral">&#39;clopper-pearson-ucb-relaxed&#39;</span></div>
+<div class="line"><span class="lineno">   53</span>    ]</div>
+<div class="line"><span class="lineno">   54</span>    per_payoff_confidence = [<span class="keyword">True</span>, <span class="keyword">False</span>]</div>
+<div class="line"><span class="lineno">   55</span>    time_dependent_delta = [<span class="keyword">True</span>, <span class="keyword">False</span>]</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    methods = list(itertools.product(sampling_methods,</div>
+<div class="line"><span class="lineno">   58</span>                                     conf_methods,</div>
+<div class="line"><span class="lineno">   59</span>                                     per_payoff_confidence,</div>
+<div class="line"><span class="lineno">   60</span>                                     time_dependent_delta))</div>
+<div class="line"><span class="lineno">   61</span>    max_total_interactions = 50</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">for</span> m <span class="keywordflow">in</span> methods:</div>
+<div class="line"><span class="lineno">   64</span>      r_ucb = response_graph_ucb.ResponseGraphUCB(</div>
+<div class="line"><span class="lineno">   65</span>          game,</div>
+<div class="line"><span class="lineno">   66</span>          exploration_strategy=m[0],</div>
+<div class="line"><span class="lineno">   67</span>          confidence_method=m[1],</div>
+<div class="line"><span class="lineno">   68</span>          delta=0.1,</div>
+<div class="line"><span class="lineno">   69</span>          ucb_eps=1e-1,</div>
+<div class="line"><span class="lineno">   70</span>          per_payoff_confidence=m[2],</div>
+<div class="line"><span class="lineno">   71</span>          time_dependent_delta=m[3])</div>
+<div class="line"><span class="lineno">   72</span>      _ = r_ucb.run(max_total_iterations=max_total_interactions)</div>
+<div class="line"><span class="lineno">   73</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a34a41ea0fc3dbe604a5f3b243330c376" name="a34a41ea0fc3dbe604a5f3b243330c376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a41ea0fc3dbe604a5f3b243330c376">&#9670;&#160;</a></span>test_soccer_data_import()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.response_graph_ucb_test.ResponseGraphUcbTest.test_soccer_data_import </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html#l00074">74</a> of file <a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html">response_graph_ucb_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>  <span class="keyword">def </span>test_soccer_data_import(self):</div>
+<div class="line"><span class="lineno">   75</span>    response_graph_ucb_utils.get_soccer_data()</div>
+<div class="line"><span class="lineno">   76</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>response_graph_ucb_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../db/dc5/response__graph__ucb__test_8py_source.html">response_graph_ucb_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

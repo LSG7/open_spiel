@@ -105,10 +105,43 @@ Collaboration diagram for absl::log_internal::NullGuard&lt; const unsigned char 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3d4e955dd3b523fc09ec371b9c66efad" id="r_a3d4e955dd3b523fc09ec371b9c66efad"><td class="memItemLeft" align="right" valign="top"><a id="a3d4e955dd3b523fc09ec371b9c66efad" name="a3d4e955dd3b523fc09ec371b9c66efad"></a>
-static const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>Guard</b> (const unsigned char *v)</td></tr>
+<tr class="memitem:a3d4e955dd3b523fc09ec371b9c66efad" id="r_a3d4e955dd3b523fc09ec371b9c66efad"><td class="memItemLeft" align="right" valign="top">static const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4e955dd3b523fc09ec371b9c66efad">Guard</a> (const unsigned char *v)</td></tr>
 <tr class="separator:a3d4e955dd3b523fc09ec371b9c66efad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d4/ddc/nullguard_8h_source.html#l00074">74</a> of file <a class="el" href="../../d4/ddc/nullguard_8h_source.html">nullguard.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3d4e955dd3b523fc09ec371b9c66efad" name="a3d4e955dd3b523fc09ec371b9c66efad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4e955dd3b523fc09ec371b9c66efad">&#9670;&#160;</a></span>Guard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const unsigned char * <a class="el" href="../../d5/dfe/structabsl_1_1log__internal_1_1_null_guard.html">absl::log_internal::NullGuard</a>&lt; const unsigned char * &gt;::Guard </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/ddc/nullguard_8h_source.html#l00075">75</a> of file <a class="el" href="../../d4/ddc/nullguard_8h_source.html">nullguard.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                                                            {</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">return</span> v ? v : kUnsignedCharNull.data();</div>
+<div class="line"><span class="lineno">   77</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/log/internal/<a class="el" href="../../d4/ddc/nullguard_8h_source.html">nullguard.h</a></li>
 </ul>

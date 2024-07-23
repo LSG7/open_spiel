@@ -105,16 +105,83 @@ Collaboration diagram for open_spiel::SamplerFromRng:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acea8254b33e8b7d5f5c5a8d91fbb5060" id="r_acea8254b33e8b7d5f5c5a8d91fbb5060"><td class="memItemLeft" align="right" valign="top"><a id="acea8254b33e8b7d5f5c5a8d91fbb5060" name="acea8254b33e8b7d5f5c5a8d91fbb5060"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SamplerFromRng</b> (std::function&lt; double()&gt; rng)</td></tr>
+<tr class="memitem:acea8254b33e8b7d5f5c5a8d91fbb5060" id="r_acea8254b33e8b7d5f5c5a8d91fbb5060"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acea8254b33e8b7d5f5c5a8d91fbb5060">SamplerFromRng</a> (std::function&lt; double()&gt; rng)</td></tr>
 <tr class="separator:acea8254b33e8b7d5f5c5a8d91fbb5060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f5569c54d6bd6f94970ea5cac49ab92" id="r_a6f5569c54d6bd6f94970ea5cac49ab92"><td class="memItemLeft" align="right" valign="top"><a id="a6f5569c54d6bd6f94970ea5cac49ab92" name="a6f5569c54d6bd6f94970ea5cac49ab92"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; const double &gt; probs)</td></tr>
+<tr class="memitem:a6f5569c54d6bd6f94970ea5cac49ab92" id="r_a6f5569c54d6bd6f94970ea5cac49ab92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f5569c54d6bd6f94970ea5cac49ab92">operator()</a> (<a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; const double &gt; probs)</td></tr>
 <tr class="separator:a6f5569c54d6bd6f94970ea5cac49ab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/d96/spiel__utils_8h_source.html#l00430">430</a> of file <a class="el" href="../../d9/d96/spiel__utils_8h_source.html">spiel_utils.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="acea8254b33e8b7d5f5c5a8d91fbb5060" name="acea8254b33e8b7d5f5c5a8d91fbb5060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea8254b33e8b7d5f5c5a8d91fbb5060">&#9670;&#160;</a></span>SamplerFromRng()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::SamplerFromRng::SamplerFromRng </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; double()&gt;</td>          <td class="paramname"><span class="paramname"><em>rng</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d96/spiel__utils_8h_source.html#l00432">432</a> of file <a class="el" href="../../d9/d96/spiel__utils_8h_source.html">spiel_utils.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  432</span>: rng_(std::move(rng)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6f5569c54d6bd6f94970ea5cac49ab92" name="a6f5569c54d6bd6f94970ea5cac49ab92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f5569c54d6bd6f94970ea5cac49ab92">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel::SamplerFromRng::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; const double &gt;</td>          <td class="paramname"><span class="paramname"><em>probs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d20/spiel__utils_8cc_source.html#l00183">183</a> of file <a class="el" href="../../db/d20/spiel__utils_8cc_source.html">spiel_utils.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>                                                           {</div>
+<div class="line"><span class="lineno">  184</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> cutoff = rng_();</div>
+<div class="line"><span class="lineno">  185</span>  <span class="keywordtype">float</span> sum = 0.0f;</div>
+<div class="line"><span class="lineno">  186</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; probs.size(); ++i) {</div>
+<div class="line"><span class="lineno">  187</span>    sum += probs[i];</div>
+<div class="line"><span class="lineno">  188</span>    <span class="keywordflow">if</span> (cutoff &lt; sum) {</div>
+<div class="line"><span class="lineno">  189</span>      <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="line"><span class="lineno">  191</span>  }</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>  <span class="comment">// To be on the safe side, cover case cutoff == 1.0 and sum &lt; 1</span></div>
+<div class="line"><span class="lineno">  194</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = probs.size() - 1; i &gt;= 0; --i) {</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (probs[i] &gt; 0.0) <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  196</span>  }</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>  SpielFatalError(<span class="stringliteral">&quot;SamplerFromRng: not a probability distribution.&quot;</span>);</div>
+<div class="line"><span class="lineno">  199</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/<a class="el" href="../../d9/d96/spiel__utils_8h_source.html">spiel_utils.h</a></li>
-<li>open_spiel/<b>spiel_utils.cc</b></li>
+<li>open_spiel/<a class="el" href="../../db/d20/spiel__utils_8cc_source.html">spiel_utils.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

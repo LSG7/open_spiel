@@ -144,7 +144,37 @@ TODO:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Computes the least core value of a game.</pre> <div class="dynheader">
+<pre class="fragment">Computes the least core value of a game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00049">49</a> of file <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html">least_core_lagrangian.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>) -&gt; LeastCoreValue:</div>
+<div class="line"><span class="lineno">   52</span>  <span class="stringliteral">&quot;&quot;&quot;Computes the least core value of a game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   53</span>  opt_primal = optax.adam(learning_rate=alg_config.init.lr_primal)</div>
+<div class="line"><span class="lineno">   54</span>  opt_dual = optax.adam(learning_rate=alg_config.init.lr_dual)</div>
+<div class="line"><span class="lineno">   55</span>  evaluation_iterations = alg_config.eval.evaluation_iterations</div>
+<div class="line"><span class="lineno">   56</span>  evaluate_every = 2 * alg_config.solve.n_iter  <span class="comment"># do not evaluate</span></div>
+<div class="line"><span class="lineno">   57</span>  cl = CoreLagrangian(cvc, opt_primal, opt_dual)</div>
+<div class="line"><span class="lineno">   58</span>  payoffs, epsilons, _, duration = cl.solve(</div>
+<div class="line"><span class="lineno">   59</span>      evaluation_iterations=evaluation_iterations,</div>
+<div class="line"><span class="lineno">   60</span>      evaluate_every=evaluate_every,</div>
+<div class="line"><span class="lineno">   61</span>      **alg_config.solve,</div>
+<div class="line"><span class="lineno">   62</span>  )</div>
+<div class="line"><span class="lineno">   63</span>  lcvs = np.full(payoffs.shape[0], np.inf)</div>
+<div class="line"><span class="lineno">   64</span>  payoff = payoffs[-1]</div>
+<div class="line"><span class="lineno">   65</span>  lcv = np.inf</div>
+<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(payoffs.shape[0]):</div>
+<div class="line"><span class="lineno">   67</span>    payoff = payoffs[i]</div>
+<div class="line"><span class="lineno">   68</span>    epsilon = epsilons[i]</div>
+<div class="line"><span class="lineno">   69</span>    max_violation = payoff_evaluation(</div>
+<div class="line"><span class="lineno">   70</span>        cvc, payoff, epsilon, evaluation_iterations)</div>
+<div class="line"><span class="lineno">   71</span>    lcv = epsilon + max_violation</div>
+<div class="line"><span class="lineno">   72</span>    lcvs[i] = lcv</div>
+<div class="line"><span class="lineno">   73</span>  meta = dict(payoffs=payoffs, epsilons=epsilons, lcvs=lcvs)</div>
+<div class="line"><span class="lineno">   74</span>  <span class="keywordflow">return</span> LeastCoreValue(payoff, lcv, duration, meta)</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00083">open_spiel.python.coalitional_games.least_core_lagrangian.payoff_evaluation()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/dc6/namespaceopen__spiel_1_1python_1_1coalitional__games_1_1least__core__lagrangian_aa22f32516bb895051650731c848a1692_cgraph.png" border="0" usemap="#ad3/dc6/namespaceopen__spiel_1_1python_1_1coalitional__games_1_1least__core__lagrangian_aa22f32516bb895051650731c848a1692_cgraph" alt=""/></div>
@@ -202,7 +232,58 @@ Args:
 
 Returns:
   Expected loss, relu(deficit), over random batch of coalitions
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00077">77</a> of file <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html">least_core_lagrangian.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>) -&gt; float:</div>
+<div class="line"><span class="lineno">   84</span>  <span class="stringliteral">&quot;&quot;&quot;Evaluate deficit over a set of random coalitions.</span></div>
+<div class="line"><span class="lineno">   85</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   86</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   87</span><span class="stringliteral">    cv_calc: the game to work on</span></div>
+<div class="line"><span class="lineno">   88</span><span class="stringliteral">    payoffs: the payoff vector to test</span></div>
+<div class="line"><span class="lineno">   89</span><span class="stringliteral">    epsilon: desired approximation of the epsilon-core</span></div>
+<div class="line"><span class="lineno">   90</span><span class="stringliteral">    batch_size: number of random coalitions to sample</span></div>
+<div class="line"><span class="lineno">   91</span><span class="stringliteral">    max_exponent: examine at maxixum 2**max_exponent constraints in one batch</span></div>
+<div class="line"><span class="lineno">   92</span><span class="stringliteral">      default 13, assume 2**13 ~ 10k coalitions is mem limit for single batch</span></div>
+<div class="line"><span class="lineno">   93</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   94</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   95</span><span class="stringliteral">    Expected loss, relu(deficit), over random batch of coalitions</span></div>
+<div class="line"><span class="lineno">   96</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   97</span>  max_batch = 2**max_exponent</div>
+<div class="line"><span class="lineno">   98</span>  num_players = cv_calc.num_players()</div>
+<div class="line"><span class="lineno">   99</span>  violation = 0.</div>
+<div class="line"><span class="lineno">  100</span>  <span class="keywordflow">if</span> batch_size &gt;= 2**num_players:</div>
+<div class="line"><span class="lineno">  101</span>    num_suffix_repeats = min(max_exponent, num_players)</div>
+<div class="line"><span class="lineno">  102</span>    num_prefix_repeats = max(0, num_players - num_suffix_repeats)</div>
+<div class="line"><span class="lineno">  103</span>    zo = [0, 1]</div>
+<div class="line"><span class="lineno">  104</span>    suffix = np.array(list(itertools.product(zo, repeat=num_suffix_repeats)))</div>
+<div class="line"><span class="lineno">  105</span>    prefixes = itertools.product(zo, repeat=num_prefix_repeats)</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">for</span> prefix <span class="keywordflow">in</span> prefixes:</div>
+<div class="line"><span class="lineno">  107</span>      <span class="keywordflow">if</span> prefix:</div>
+<div class="line"><span class="lineno">  108</span>        prefix_rep = np.repeat([prefix], suffix.shape[0], axis=0)</div>
+<div class="line"><span class="lineno">  109</span>        coalitions = np.concatenate([prefix_rep, suffix], axis=1)</div>
+<div class="line"><span class="lineno">  110</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  111</span>        coalitions = suffix</div>
+<div class="line"><span class="lineno">  112</span>      batch_contributions = cv_calc.coalition_values(coalitions)</div>
+<div class="line"><span class="lineno">  113</span>      batch_payouts = np.dot(coalitions, payoffs)</div>
+<div class="line"><span class="lineno">  114</span>      batch_deficits = batch_contributions - batch_payouts - epsilon</div>
+<div class="line"><span class="lineno">  115</span>      batch_deficits = np.clip(batch_deficits, 0., np.inf)</div>
+<div class="line"><span class="lineno">  116</span>      violation = max(violation, np.max(batch_deficits))</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  118</span>    q, r = divmod(batch_size, max_batch)</div>
+<div class="line"><span class="lineno">  119</span>    num_loops = q + (r &gt; 0)</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(num_loops):</div>
+<div class="line"><span class="lineno">  121</span>      coalitions = np.random.randint(2, size=(max_batch, num_players))</div>
+<div class="line"><span class="lineno">  122</span>      batch_contributions = cv_calc.coalition_values(coalitions)</div>
+<div class="line"><span class="lineno">  123</span>      batch_payouts = np.dot(coalitions, payoffs)</div>
+<div class="line"><span class="lineno">  124</span>      batch_deficits = batch_contributions - batch_payouts - epsilon</div>
+<div class="line"><span class="lineno">  125</span>      batch_deficits = np.clip(batch_deficits, 0., np.inf)</div>
+<div class="line"><span class="lineno">  126</span>      violation = max(violation, np.max(batch_deficits))</div>
+<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">return</span> float(violation)</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00051">open_spiel.python.coalitional_games.least_core_lagrangian.compute_least_core_value()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00534">open_spiel.python.coalitional_games.least_core_lagrangian.CoreLagrangian.solve()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00209">open_spiel.python.coalitional_games.least_core_lagrangian.CoreOptimization.solve()</a>, and <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00353">open_spiel.python.coalitional_games.least_core_lagrangian.CoreOptimizationLogits.solve()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/dc6/namespaceopen__spiel_1_1python_1_1coalitional__games_1_1least__core__lagrangian_a3754c4cb9f2a7218cd6ac72e925d7f32_icgraph.png" border="0" usemap="#ad3/dc6/namespaceopen__spiel_1_1python_1_1coalitional__games_1_1least__core__lagrangian_a3754c4cb9f2a7218cd6ac72e925d7f32_icgraph" alt=""/></div>

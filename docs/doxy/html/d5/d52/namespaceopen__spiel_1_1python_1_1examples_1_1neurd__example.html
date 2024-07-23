@@ -97,14 +97,12 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6c7a005aa30a4bc9d549798901bcf054" id="r_a6c7a005aa30a4bc9d549798901bcf054"><td class="memItemLeft" align="right" valign="top"><a id="a6c7a005aa30a4bc9d549798901bcf054" name="a6c7a005aa30a4bc9d549798901bcf054"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (_)</td></tr>
+<tr class="memitem:a6c7a005aa30a4bc9d549798901bcf054" id="r_a6c7a005aa30a4bc9d549798901bcf054"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c7a005aa30a4bc9d549798901bcf054">main</a> (_)</td></tr>
 <tr class="separator:a6c7a005aa30a4bc9d549798901bcf054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af8d3daf8fba5dce5e0080eaf0b8e9802" id="r_af8d3daf8fba5dce5e0080eaf0b8e9802"><td class="memItemLeft" align="right" valign="top"><a id="af8d3daf8fba5dce5e0080eaf0b8e9802" name="af8d3daf8fba5dce5e0080eaf0b8e9802"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:af8d3daf8fba5dce5e0080eaf0b8e9802" id="r_af8d3daf8fba5dce5e0080eaf0b8e9802"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8d3daf8fba5dce5e0080eaf0b8e9802">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:af8d3daf8fba5dce5e0080eaf0b8e9802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -114,7 +112,78 @@ This NeuRD implementation does not use an entropy bonus to ensure that the
 current joint policy approaches an equilibrium in zero-sum games, but it
 tracks the exact tabular average so that the average policy approaches an
 equilibrium (assuming the policy networks train well).
-</pre> </div></div><!-- contents -->
+</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a6c7a005aa30a4bc9d549798901bcf054" name="a6c7a005aa30a4bc9d549798901bcf054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c7a005aa30a4bc9d549798901bcf054">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.neurd_example.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/ddb/neurd__example_8py_source.html#l00062">62</a> of file <a class="el" href="../../d2/ddb/neurd__example_8py_source.html">neurd_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(_):</div>
+<div class="line"><span class="lineno">   63</span>  game = pyspiel.load_game(FLAGS.game, {<span class="stringliteral">&quot;players&quot;</span>: FLAGS.players})</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  models = []</div>
+<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(game.num_players()):</div>
+<div class="line"><span class="lineno">   67</span>    models.append(</div>
+<div class="line"><span class="lineno">   68</span>        neurd.DeepNeurdModel(</div>
+<div class="line"><span class="lineno">   69</span>            game,</div>
+<div class="line"><span class="lineno">   70</span>            num_hidden_layers=FLAGS.num_hidden_layers,</div>
+<div class="line"><span class="lineno">   71</span>            num_hidden_units=FLAGS.num_hidden_units,</div>
+<div class="line"><span class="lineno">   72</span>            num_hidden_factors=FLAGS.num_hidden_factors,</div>
+<div class="line"><span class="lineno">   73</span>            use_skip_connections=FLAGS.use_skip_connections,</div>
+<div class="line"><span class="lineno">   74</span>            autoencode=FLAGS.autoencode))</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>  solver = neurd.CounterfactualNeurdSolver(game, models)</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>  <span class="keyword">def </span>_train(model, data):</div>
+<div class="line"><span class="lineno">   79</span>    neurd.train(</div>
+<div class="line"><span class="lineno">   80</span>        model,</div>
+<div class="line"><span class="lineno">   81</span>        data,</div>
+<div class="line"><span class="lineno">   82</span>        batch_size=FLAGS.batch_size,</div>
+<div class="line"><span class="lineno">   83</span>        step_size=FLAGS.step_size,</div>
+<div class="line"><span class="lineno">   84</span>        threshold=FLAGS.threshold,</div>
+<div class="line"><span class="lineno">   85</span>        autoencoder_loss=(tf.compat.v1.losses.huber_loss</div>
+<div class="line"><span class="lineno">   86</span>                          <span class="keywordflow">if</span> FLAGS.autoencode <span class="keywordflow">else</span> <span class="keywordtype">None</span>))</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(FLAGS.iterations):</div>
+<div class="line"><span class="lineno">   89</span>    solver.evaluate_and_update_policy(_train)</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">if</span> i % FLAGS.print_freq == 0:</div>
+<div class="line"><span class="lineno">   91</span>      conv = pyspiel.exploitability(game, solver.average_policy())</div>
+<div class="line"><span class="lineno">   92</span>      print(<span class="stringliteral">&quot;Iteration {} exploitability {}&quot;</span>.format(i, conv))</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="af8d3daf8fba5dce5e0080eaf0b8e9802" name="af8d3daf8fba5dce5e0080eaf0b8e9802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d3daf8fba5dce5e0080eaf0b8e9802">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.neurd_example.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/ddb/neurd__example_8py_source.html#l00032">32</a> of file <a class="el" href="../../d2/ddb/neurd__example_8py_source.html">neurd_example.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

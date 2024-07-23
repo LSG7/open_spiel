@@ -117,15 +117,90 @@ Collaboration diagram for open_spiel.python.bots.uniform_random_test.BotTest:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a87af3b867834db1a2b3939f9798d6bf7" id="r_a87af3b867834db1a2b3939f9798d6bf7"><td class="memItemLeft" align="right" valign="top"><a id="a87af3b867834db1a2b3939f9798d6bf7" name="a87af3b867834db1a2b3939f9798d6bf7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_policy_is_uniform</b> (self)</td></tr>
+<tr class="memitem:a87af3b867834db1a2b3939f9798d6bf7" id="r_a87af3b867834db1a2b3939f9798d6bf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87af3b867834db1a2b3939f9798d6bf7">test_policy_is_uniform</a> (self)</td></tr>
 <tr class="separator:a87af3b867834db1a2b3939f9798d6bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ad6f8802a434585ceea020519cbb768" id="r_a9ad6f8802a434585ceea020519cbb768"><td class="memItemLeft" align="right" valign="top"><a id="a9ad6f8802a434585ceea020519cbb768" name="a9ad6f8802a434585ceea020519cbb768"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_no_legal_actions</b> (self)</td></tr>
+<tr class="memitem:a9ad6f8802a434585ceea020519cbb768" id="r_a9ad6f8802a434585ceea020519cbb768"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ad6f8802a434585ceea020519cbb768">test_no_legal_actions</a> (self)</td></tr>
 <tr class="separator:a9ad6f8802a434585ceea020519cbb768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d4/da1/uniform__random__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../d4/da1/uniform__random__test_8py_source.html">uniform_random_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ad6f8802a434585ceea020519cbb768" name="a9ad6f8802a434585ceea020519cbb768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad6f8802a434585ceea020519cbb768">&#9670;&#160;</a></span>test_no_legal_actions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.bots.uniform_random_test.BotTest.test_no_legal_actions </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/da1/uniform__random__test_8py_source.html#l00047">47</a> of file <a class="el" href="../../d4/da1/uniform__random__test_8py_source.html">uniform_random_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>  <span class="keyword">def </span>test_no_legal_actions(self):</div>
+<div class="line"><span class="lineno">   48</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   49</span>    bot = uniform_random.UniformRandomBot(0, random)</div>
+<div class="line"><span class="lineno">   50</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   51</span>    state.apply_action(2)  <span class="comment"># deal</span></div>
+<div class="line"><span class="lineno">   52</span>    state.apply_action(1)  <span class="comment"># deal</span></div>
+<div class="line"><span class="lineno">   53</span>    state.apply_action(1)  <span class="comment"># bet</span></div>
+<div class="line"><span class="lineno">   54</span>    state.apply_action(0)  <span class="comment"># fold</span></div>
+<div class="line"><span class="lineno">   55</span>    bot.restart_at(state)</div>
+<div class="line"><span class="lineno">   56</span>    policy, action = bot.step_with_policy(state)</div>
+<div class="line"><span class="lineno">   57</span>    self.assertEqual(policy, [])</div>
+<div class="line"><span class="lineno">   58</span>    self.assertEqual(action, pyspiel.INVALID_ACTION)</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a87af3b867834db1a2b3939f9798d6bf7" name="a87af3b867834db1a2b3939f9798d6bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87af3b867834db1a2b3939f9798d6bf7">&#9670;&#160;</a></span>test_policy_is_uniform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.bots.uniform_random_test.BotTest.test_policy_is_uniform </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/da1/uniform__random__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../d4/da1/uniform__random__test_8py_source.html">uniform_random_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>  <span class="keyword">def </span>test_policy_is_uniform(self):</div>
+<div class="line"><span class="lineno">   27</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;leduc_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   28</span>    bots = [</div>
+<div class="line"><span class="lineno">   29</span>        uniform_random.UniformRandomBot(0, random),</div>
+<div class="line"><span class="lineno">   30</span>        uniform_random.UniformRandomBot(1, random)</div>
+<div class="line"><span class="lineno">   31</span>    ]</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>    <span class="comment"># deal each player a card</span></div>
+<div class="line"><span class="lineno">   34</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   35</span>    state.apply_action(2)</div>
+<div class="line"><span class="lineno">   36</span>    state.apply_action(4)</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    <span class="comment"># p0 starts: uniform from [check, bet]</span></div>
+<div class="line"><span class="lineno">   39</span>    policy, _ = bots[0].step_with_policy(state)</div>
+<div class="line"><span class="lineno">   40</span>    self.assertCountEqual(policy, [(1, 0.5), (2, 0.5)])</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment"># Afte p0 bets, p1 chooses from [fold, call, raise]</span></div>
+<div class="line"><span class="lineno">   43</span>    state.apply_action(2)</div>
+<div class="line"><span class="lineno">   44</span>    policy, _ = bots[1].step_with_policy(state)</div>
+<div class="line"><span class="lineno">   45</span>    self.assertCountEqual(policy, [(0, 1 / 3), (1, 1 / 3), (2, 1 / 3)])</div>
+<div class="line"><span class="lineno">   46</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/bots/<b>uniform_random_test.py</b></li>
+<li>open_spiel/python/bots/<a class="el" href="../../d4/da1/uniform__random__test_8py_source.html">uniform_random_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

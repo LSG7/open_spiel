@@ -106,49 +106,395 @@ Collaboration diagram for open_spiel::algorithms::HistoryNode:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a078d0e2282f563cc14a346e264ceae75" id="r_a078d0e2282f563cc14a346e264ceae75"><td class="memItemLeft" align="right" valign="top"><a id="a078d0e2282f563cc14a346e264ceae75" name="a078d0e2282f563cc14a346e264ceae75"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>HistoryNode</b> (Player player_id, std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt; game_state)</td></tr>
+<tr class="memitem:a078d0e2282f563cc14a346e264ceae75" id="r_a078d0e2282f563cc14a346e264ceae75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a078d0e2282f563cc14a346e264ceae75">HistoryNode</a> (Player player_id, std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt; game_state)</td></tr>
 <tr class="separator:a078d0e2282f563cc14a346e264ceae75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab493cc992ad5684bc2da462e516290cf" id="r_ab493cc992ad5684bc2da462e516290cf"><td class="memItemLeft" align="right" valign="top"><a id="ab493cc992ad5684bc2da462e516290cf" name="ab493cc992ad5684bc2da462e516290cf"></a>
-<a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetState</b> ()</td></tr>
+<tr class="memitem:ab493cc992ad5684bc2da462e516290cf" id="r_ab493cc992ad5684bc2da462e516290cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab493cc992ad5684bc2da462e516290cf">GetState</a> ()</td></tr>
 <tr class="separator:ab493cc992ad5684bc2da462e516290cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a519cc77764dde1f4ac229445e7bbc223" id="r_a519cc77764dde1f4ac229445e7bbc223"><td class="memItemLeft" align="right" valign="top"><a id="a519cc77764dde1f4ac229445e7bbc223" name="a519cc77764dde1f4ac229445e7bbc223"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetInfoState</b> ()</td></tr>
+<tr class="memitem:a519cc77764dde1f4ac229445e7bbc223" id="r_a519cc77764dde1f4ac229445e7bbc223"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a519cc77764dde1f4ac229445e7bbc223">GetInfoState</a> ()</td></tr>
 <tr class="separator:a519cc77764dde1f4ac229445e7bbc223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c563a2b8c238fcc22ba17712058e0d6" id="r_a8c563a2b8c238fcc22ba17712058e0d6"><td class="memItemLeft" align="right" valign="top"><a id="a8c563a2b8c238fcc22ba17712058e0d6" name="a8c563a2b8c238fcc22ba17712058e0d6"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetHistory</b> ()</td></tr>
+<tr class="memitem:a8c563a2b8c238fcc22ba17712058e0d6" id="r_a8c563a2b8c238fcc22ba17712058e0d6"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c563a2b8c238fcc22ba17712058e0d6">GetHistory</a> ()</td></tr>
 <tr class="separator:a8c563a2b8c238fcc22ba17712058e0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a637bc80b832518128f48dbb8961e32f0" id="r_a637bc80b832518128f48dbb8961e32f0"><td class="memItemLeft" align="right" valign="top"><a id="a637bc80b832518128f48dbb8961e32f0" name="a637bc80b832518128f48dbb8961e32f0"></a>
-const StateType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetType</b> ()</td></tr>
+<tr class="memitem:a637bc80b832518128f48dbb8961e32f0" id="r_a637bc80b832518128f48dbb8961e32f0"><td class="memItemLeft" align="right" valign="top">const StateType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a637bc80b832518128f48dbb8961e32f0">GetType</a> ()</td></tr>
 <tr class="separator:a637bc80b832518128f48dbb8961e32f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc64f21838c509555b7a697f1171056" id="r_a5cc64f21838c509555b7a697f1171056"><td class="memItemLeft" align="right" valign="top"><a id="a5cc64f21838c509555b7a697f1171056" name="a5cc64f21838c509555b7a697f1171056"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>GetValue</b> () const</td></tr>
+<tr class="memitem:a5cc64f21838c509555b7a697f1171056" id="r_a5cc64f21838c509555b7a697f1171056"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cc64f21838c509555b7a697f1171056">GetValue</a> () const</td></tr>
 <tr class="separator:a5cc64f21838c509555b7a697f1171056"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46577b9f1f042d1dddf2fed44cc0ea2c" id="r_a46577b9f1f042d1dddf2fed44cc0ea2c"><td class="memItemLeft" align="right" valign="top"><a id="a46577b9f1f042d1dddf2fed44cc0ea2c" name="a46577b9f1f042d1dddf2fed44cc0ea2c"></a>
-Action&#160;</td><td class="memItemRight" valign="bottom"><b>NumChildren</b> () const</td></tr>
+<tr class="memitem:a46577b9f1f042d1dddf2fed44cc0ea2c" id="r_a46577b9f1f042d1dddf2fed44cc0ea2c"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46577b9f1f042d1dddf2fed44cc0ea2c">NumChildren</a> () const</td></tr>
 <tr class="separator:a46577b9f1f042d1dddf2fed44cc0ea2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f2d26b7da1c0a9d9087f7291b7d233" id="r_a06f2d26b7da1c0a9d9087f7291b7d233"><td class="memItemLeft" align="right" valign="top"><a id="a06f2d26b7da1c0a9d9087f7291b7d233" name="a06f2d26b7da1c0a9d9087f7291b7d233"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddChild</b> (Action outcome, std::pair&lt; double, std::unique_ptr&lt; <a class="el" href="../../d8/dd2/classopen__spiel_1_1algorithms_1_1_history_node.html">HistoryNode</a> &gt; &gt; child)</td></tr>
+<tr class="memitem:a06f2d26b7da1c0a9d9087f7291b7d233" id="r_a06f2d26b7da1c0a9d9087f7291b7d233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06f2d26b7da1c0a9d9087f7291b7d233">AddChild</a> (Action outcome, std::pair&lt; double, std::unique_ptr&lt; <a class="el" href="../../d8/dd2/classopen__spiel_1_1algorithms_1_1_history_node.html">HistoryNode</a> &gt; &gt; child)</td></tr>
 <tr class="separator:a06f2d26b7da1c0a9d9087f7291b7d233"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f59b48ee8b22797975d4b28e4346187" id="r_a0f59b48ee8b22797975d4b28e4346187"><td class="memItemLeft" align="right" valign="top"><a id="a0f59b48ee8b22797975d4b28e4346187" name="a0f59b48ee8b22797975d4b28e4346187"></a>
-std::vector&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetChildActions</b> () const</td></tr>
+<tr class="memitem:a0f59b48ee8b22797975d4b28e4346187" id="r_a0f59b48ee8b22797975d4b28e4346187"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f59b48ee8b22797975d4b28e4346187">GetChildActions</a> () const</td></tr>
 <tr class="separator:a0f59b48ee8b22797975d4b28e4346187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a140398b3d2635ebbb018c4c84b2ec122" id="r_a140398b3d2635ebbb018c4c84b2ec122"><td class="memItemLeft" align="right" valign="top"><a id="a140398b3d2635ebbb018c4c84b2ec122" name="a140398b3d2635ebbb018c4c84b2ec122"></a>
-std::pair&lt; double, <a class="el" href="../../d8/dd2/classopen__spiel_1_1algorithms_1_1_history_node.html">HistoryNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetChild</b> (Action outcome)</td></tr>
+<tr class="memitem:a140398b3d2635ebbb018c4c84b2ec122" id="r_a140398b3d2635ebbb018c4c84b2ec122"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, <a class="el" href="../../d8/dd2/classopen__spiel_1_1algorithms_1_1_history_node.html">HistoryNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a140398b3d2635ebbb018c4c84b2ec122">GetChild</a> (Action outcome)</td></tr>
 <tr class="separator:a140398b3d2635ebbb018c4c84b2ec122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a59ea139a9f2dd6266fe0f0cba4fb0956" id="r_a59ea139a9f2dd6266fe0f0cba4fb0956"><td class="memItemLeft" align="right" valign="top"><a id="a59ea139a9f2dd6266fe0f0cba4fb0956" name="a59ea139a9f2dd6266fe0f0cba4fb0956"></a>
-static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><b>kChanceNodeInfostateString</b> = &quot;Chance Node&quot;</td></tr>
+<tr class="memitem:a59ea139a9f2dd6266fe0f0cba4fb0956" id="r_a59ea139a9f2dd6266fe0f0cba4fb0956"><td class="memItemLeft" align="right" valign="top">static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59ea139a9f2dd6266fe0f0cba4fb0956">kChanceNodeInfostateString</a> = &quot;Chance Node&quot;</td></tr>
 <tr class="separator:a59ea139a9f2dd6266fe0f0cba4fb0956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f8a087ae530953849716f32b1a0c6cd" id="r_a6f8a087ae530953849716f32b1a0c6cd"><td class="memItemLeft" align="right" valign="top"><a id="a6f8a087ae530953849716f32b1a0c6cd" name="a6f8a087ae530953849716f32b1a0c6cd"></a>
-static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><b>kTerminalNodeInfostateString</b> = &quot;Terminal node&quot;</td></tr>
+<tr class="memitem:a6f8a087ae530953849716f32b1a0c6cd" id="r_a6f8a087ae530953849716f32b1a0c6cd"><td class="memItemLeft" align="right" valign="top">static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f8a087ae530953849716f32b1a0c6cd">kTerminalNodeInfostateString</a> = &quot;Terminal node&quot;</td></tr>
 <tr class="separator:a6f8a087ae530953849716f32b1a0c6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00037">37</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a078d0e2282f563cc14a346e264ceae75" name="a078d0e2282f563cc14a346e264ceae75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078d0e2282f563cc14a346e264ceae75">&#9670;&#160;</a></span>HistoryNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::HistoryNode::HistoryNode </td>
+          <td>(</td>
+          <td class="paramtype">Player</td>          <td class="paramname"><span class="paramname"><em>player_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>game_state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d0b/history__tree_8cc_source.html#l00082">82</a> of file <a class="el" href="../../d3/d0b/history__tree_8cc_source.html">history_tree.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>    : state_(std::move(game_state)),</div>
+<div class="line"><span class="lineno">   84</span>      history_(state_-&gt;HistoryString()),</div>
+<div class="line"><span class="lineno">   85</span>      type_(state_-&gt;GetType()) {</div>
+<div class="line"><span class="lineno">   86</span>  <span class="comment">// Unless it&#39;s the opposing player&#39;s turn, we always view the game from the</span></div>
+<div class="line"><span class="lineno">   87</span>  <span class="comment">// view of player player_id.</span></div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">if</span> (type_ == StateType::kDecision &amp;&amp; state_-&gt;CurrentPlayer() != player_id) {</div>
+<div class="line"><span class="lineno">   89</span>    infostate_ = state_-&gt;InformationStateString();</div>
+<div class="line"><span class="lineno">   90</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type_ == StateType::kChance) {</div>
+<div class="line"><span class="lineno">   91</span>    infostate_ = kChanceNodeInfostateString;</div>
+<div class="line"><span class="lineno">   92</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type_ == StateType::kTerminal) {</div>
+<div class="line"><span class="lineno">   93</span>    infostate_ = kTerminalNodeInfostateString;</div>
+<div class="line"><span class="lineno">   94</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   95</span>    infostate_ = state_-&gt;InformationStateString(player_id);</div>
+<div class="line"><span class="lineno">   96</span>  }</div>
+<div class="line"><span class="lineno">   97</span>  <span class="comment">// Compute &amp; store the legal actions so we can check that all actions we&#39;re</span></div>
+<div class="line"><span class="lineno">   98</span>  <span class="comment">// adding are legal.</span></div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">for</span> (Action action : state_-&gt;LegalActions()) legal_actions_.insert(action);</div>
+<div class="line"><span class="lineno">  100</span>  <span class="keywordflow">if</span> (type_ == StateType::kTerminal) value_ = state_-&gt;PlayerReturn(player_id);</div>
+<div class="line"><span class="lineno">  101</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a06f2d26b7da1c0a9d9087f7291b7d233" name="a06f2d26b7da1c0a9d9087f7291b7d233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f2d26b7da1c0a9d9087f7291b7d233">&#9670;&#160;</a></span>AddChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::algorithms::HistoryNode::AddChild </td>
+          <td>(</td>
+          <td class="paramtype">Action</td>          <td class="paramname"><span class="paramname"><em>outcome</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::pair&lt; double, std::unique_ptr&lt; <a class="el" href="../../d8/dd2/classopen__spiel_1_1algorithms_1_1_history_node.html">HistoryNode</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>child</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d0b/history__tree_8cc_source.html#l00103">103</a> of file <a class="el" href="../../d3/d0b/history__tree_8cc_source.html">history_tree.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                                       {</div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">if</span> (!legal_actions_.count(outcome)) SpielFatalError(<span class="stringliteral">&quot;Child is not legal.&quot;</span>);</div>
+<div class="line"><span class="lineno">  106</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy.html#a7830f1fa91a3081532b9e8a78f3c208b">child</a>.second == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  107</span>    SpielFatalError(<span class="stringliteral">&quot;Error inserting child; child is null.&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span>  }</div>
+<div class="line"><span class="lineno">  109</span>  SPIEL_CHECK_PROB_TOLERANCE(<a class="code hl_function" href="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy.html#a7830f1fa91a3081532b9e8a78f3c208b">child</a>.first, ProbabilityDefaultTolerance());</div>
+<div class="line"><span class="lineno">  110</span>  child_info_[outcome] = std::move(child);</div>
+<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">if</span> (child_info_.size() &gt; legal_actions_.size()) {</div>
+<div class="line"><span class="lineno">  112</span>    SpielFatalError(<span class="stringliteral">&quot;More children than legal actions.&quot;</span>);</div>
+<div class="line"><span class="lineno">  113</span>  }</div>
+<div class="line"><span class="lineno">  114</span>}</div>
+<div class="ttc" id="anamespaceopen__spiel_1_1python_1_1policy_html_a7830f1fa91a3081532b9e8a78f3c208b"><div class="ttname"><a href="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy.html#a7830f1fa91a3081532b9e8a78f3c208b">open_spiel.python.policy.child</a></div><div class="ttdeci">child(state, action)</div><div class="ttdef"><b>Definition</b> <a href="../../d5/d64/policy_8py_source.html#l00043">policy.py:43</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a140398b3d2635ebbb018c4c84b2ec122" name="a140398b3d2635ebbb018c4c84b2ec122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140398b3d2635ebbb018c4c84b2ec122">&#9670;&#160;</a></span>GetChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; double, <a class="el" href="../../d8/dd2/classopen__spiel_1_1algorithms_1_1_history_node.html">HistoryNode</a> * &gt; open_spiel::algorithms::HistoryNode::GetChild </td>
+          <td>(</td>
+          <td class="paramtype">Action</td>          <td class="paramname"><span class="paramname"><em>outcome</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d0b/history__tree_8cc_source.html#l00116">116</a> of file <a class="el" href="../../d3/d0b/history__tree_8cc_source.html">history_tree.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                  {</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keyword">auto</span> it = child_info_.find(outcome);</div>
+<div class="line"><span class="lineno">  118</span>  <span class="keywordflow">if</span> (it == child_info_.end()) {</div>
+<div class="line"><span class="lineno">  119</span>    SpielFatalError(<span class="stringliteral">&quot;Error getting child; action not found.&quot;</span>);</div>
+<div class="line"><span class="lineno">  120</span>  }</div>
+<div class="line"><span class="lineno">  121</span>  <span class="comment">// it-&gt;second.first is the probability associated with outcome, so as it is a</span></div>
+<div class="line"><span class="lineno">  122</span>  <span class="comment">// probability, it must be in [0, 1].</span></div>
+<div class="line"><span class="lineno">  123</span>  SPIEL_CHECK_PROB_TOLERANCE(it-&gt;second.first, ProbabilityDefaultTolerance());</div>
+<div class="line"><span class="lineno">  124</span>  std::pair&lt;double, HistoryNode*&gt; <a class="code hl_function" href="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy.html#a7830f1fa91a3081532b9e8a78f3c208b">child</a> =</div>
+<div class="line"><span class="lineno">  125</span>      std::make_pair(it-&gt;second.first, it-&gt;second.second.get());</div>
+<div class="line"><span class="lineno">  126</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy.html#a7830f1fa91a3081532b9e8a78f3c208b">child</a>.second == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  127</span>    SpielFatalError(<span class="stringliteral">&quot;Error getting child; child is null.&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>  }</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy.html#a7830f1fa91a3081532b9e8a78f3c208b">child</a>;</div>
+<div class="line"><span class="lineno">  130</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0f59b48ee8b22797975d4b28e4346187" name="a0f59b48ee8b22797975d4b28e4346187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f59b48ee8b22797975d4b28e4346187">&#9670;&#160;</a></span>GetChildActions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Action &gt; open_spiel::algorithms::HistoryNode::GetChildActions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d0b/history__tree_8cc_source.html#l00132">132</a> of file <a class="el" href="../../d3/d0b/history__tree_8cc_source.html">history_tree.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                     {</div>
+<div class="line"><span class="lineno">  133</span>  std::vector&lt;Action&gt; actions;</div>
+<div class="line"><span class="lineno">  134</span>  actions.reserve(child_info_.size());</div>
+<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [action, _] : child_info_) actions.push_back(action);</div>
+<div class="line"><span class="lineno">  136</span>  <span class="keywordflow">return</span> actions;</div>
+<div class="line"><span class="lineno">  137</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8c563a2b8c238fcc22ba17712058e0d6" name="a8c563a2b8c238fcc22ba17712058e0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c563a2b8c238fcc22ba17712058e0d6">&#9670;&#160;</a></span>GetHistory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; open_spiel::algorithms::HistoryNode::GetHistory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00050">50</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>{ <span class="keywordflow">return</span> history_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a519cc77764dde1f4ac229445e7bbc223" name="a519cc77764dde1f4ac229445e7bbc223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519cc77764dde1f4ac229445e7bbc223">&#9670;&#160;</a></span>GetInfoState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; open_spiel::algorithms::HistoryNode::GetInfoState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00048">48</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{ <span class="keywordflow">return</span> infostate_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab493cc992ad5684bc2da462e516290cf" name="ab493cc992ad5684bc2da462e516290cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab493cc992ad5684bc2da462e516290cf">&#9670;&#160;</a></span>GetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> * open_spiel::algorithms::HistoryNode::GetState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00046">46</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>{ <span class="keywordflow">return</span> state_.get(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a637bc80b832518128f48dbb8961e32f0" name="a637bc80b832518128f48dbb8961e32f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a637bc80b832518128f48dbb8961e32f0">&#9670;&#160;</a></span>GetType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const StateType &amp; open_spiel::algorithms::HistoryNode::GetType </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00052">52</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>{ <span class="keywordflow">return</span> type_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5cc64f21838c509555b7a697f1171056" name="a5cc64f21838c509555b7a697f1171056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc64f21838c509555b7a697f1171056">&#9670;&#160;</a></span>GetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double open_spiel::algorithms::HistoryNode::GetValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00054">54</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>{ <span class="keywordflow">return</span> value_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a46577b9f1f042d1dddf2fed44cc0ea2c" name="a46577b9f1f042d1dddf2fed44cc0ea2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46577b9f1f042d1dddf2fed44cc0ea2c">&#9670;&#160;</a></span>NumChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action open_spiel::algorithms::HistoryNode::NumChildren </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00056">56</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>{ <span class="keywordflow">return</span> child_info_.size(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a59ea139a9f2dd6266fe0f0cba4fb0956" name="a59ea139a9f2dd6266fe0f0cba4fb0956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ea139a9f2dd6266fe0f0cba4fb0956">&#9670;&#160;</a></span>kChanceNodeInfostateString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* open_spiel::algorithms::HistoryNode::kChanceNodeInfostateString = &quot;Chance Node&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00041">41</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+
+</div>
+</div>
+<a id="a6f8a087ae530953849716f32b1a0c6cd" name="a6f8a087ae530953849716f32b1a0c6cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8a087ae530953849716f32b1a0c6cd">&#9670;&#160;</a></span>kTerminalNodeInfostateString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* open_spiel::algorithms::HistoryNode::kTerminalNodeInfostateString = &quot;Terminal node&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/dad/history__tree_8h_source.html#l00042">42</a> of file <a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/<a class="el" href="../../df/dad/history__tree_8h_source.html">history_tree.h</a></li>
-<li>open_spiel/algorithms/<b>history_tree.cc</b></li>
+<li>open_spiel/algorithms/<a class="el" href="../../d3/d0b/history__tree_8cc_source.html">history_tree.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

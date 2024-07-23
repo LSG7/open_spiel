@@ -105,10 +105,62 @@ Collaboration diagram for absl::types_internal::ExpectModels&lt; T, MinProf, Max
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4b724edf05226cc364657d2f2947449b" id="r_a4b724edf05226cc364657d2f2947449b"><td class="memItemLeft" align="right" valign="top"><a id="a4b724edf05226cc364657d2f2947449b" name="a4b724edf05226cc364657d2f2947449b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *errors) const</td></tr>
+<tr class="memitem:a4b724edf05226cc364657d2f2947449b" id="r_a4b724edf05226cc364657d2f2947449b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b724edf05226cc364657d2f2947449b">operator()</a> (<a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *errors) const</td></tr>
 <tr class="separator:a4b724edf05226cc364657d2f2947449b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T, class MinProf, class MaxProf&gt;<br />
+struct absl::types_internal::ExpectModels&lt; T, MinProf, MaxProf &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00910">910</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4b724edf05226cc364657d2f2947449b" name="a4b724edf05226cc364657d2f2947449b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b724edf05226cc364657d2f2947449b">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class MinProf , class MaxProf &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dd/dea/structabsl_1_1types__internal_1_1_expect_models.html">absl::types_internal::ExpectModels</a>&lt; T, MinProf, MaxProf &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *</td>          <td class="paramname"><span class="paramname"><em>errors</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00911">911</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  911</span>                                                   {</div>
+<div class="line"><span class="lineno">  912</span>    ExpectModelOfDefaultConstructible&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  913</span>    ExpectModelOfMoveConstructible&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  914</span>    ExpectModelOfCopyConstructible&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  915</span>    ExpectModelOfMoveAssignable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  916</span>    ExpectModelOfCopyAssignable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  917</span>    ExpectModelOfDestructible&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  918</span>    ExpectModelOfEqualityComparable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  919</span>    ExpectModelOfInequalityComparable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  920</span>    ExpectModelOfLessThanComparable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  921</span>    ExpectModelOfLessEqualComparable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  922</span>    ExpectModelOfGreaterEqualComparable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  923</span>    ExpectModelOfGreaterThanComparable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  924</span>    ExpectModelOfSwappable&lt;T, MinProf, MaxProf&gt;(errors);</div>
+<div class="line"><span class="lineno">  925</span> </div>
+<div class="line"><span class="lineno">  926</span>    <span class="comment">// Only check hashability on compilers that have a compliant default-hash.</span></div>
+<div class="line"><span class="lineno">  927</span>    If&lt;!poisoned_hash_fails_instantiation()&gt;::Invoke(</div>
+<div class="line"><span class="lineno">  928</span>        ExpectHashable&lt;T, MinProf, MaxProf&gt;{errors});</div>
+<div class="line"><span class="lineno">  929</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a></li>
 </ul>

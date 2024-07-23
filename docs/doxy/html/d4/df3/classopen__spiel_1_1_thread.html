@@ -111,8 +111,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9f67e0951b6d199ae9ee000ac6832460" id="r_a9f67e0951b6d199ae9ee000ac6832460"><td class="memItemLeft" align="right" valign="top"><a id="a9f67e0951b6d199ae9ee000ac6832460" name="a9f67e0951b6d199ae9ee000ac6832460"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Thread</b> (std::function&lt; void()&gt; fn)</td></tr>
+<tr class="memitem:a9f67e0951b6d199ae9ee000ac6832460" id="r_a9f67e0951b6d199ae9ee000ac6832460"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f67e0951b6d199ae9ee000ac6832460">Thread</a> (std::function&lt; void()&gt; fn)</td></tr>
 <tr class="separator:a9f67e0951b6d199ae9ee000ac6832460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83c7eff7d37f3cd2ac1734174cf263c0" id="r_a83c7eff7d37f3cd2ac1734174cf263c0"><td class="memItemLeft" align="right" valign="top"><a id="a83c7eff7d37f3cd2ac1734174cf263c0" name="a83c7eff7d37f3cd2ac1734174cf263c0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Thread</b> (<a class="el" href="../../d4/df3/classopen__spiel_1_1_thread.html">Thread</a> &amp;&amp;other)</td></tr>
@@ -126,13 +125,65 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad22e90f6bf58433d5c9fd0c1f34bcda2" id="r_ad22e90f6bf58433d5c9fd0c1f34bcda2"><td class="memItemLeft" align="right" valign="top"><a id="ad22e90f6bf58433d5c9fd0c1f34bcda2" name="ad22e90f6bf58433d5c9fd0c1f34bcda2"></a>
 <a class="el" href="../../d4/df3/classopen__spiel_1_1_thread.html">Thread</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d4/df3/classopen__spiel_1_1_thread.html">Thread</a> &amp;)=delete</td></tr>
 <tr class="separator:ad22e90f6bf58433d5c9fd0c1f34bcda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a242f141ac94ab1377b75ddb5bb7cbde1" id="r_a242f141ac94ab1377b75ddb5bb7cbde1"><td class="memItemLeft" align="right" valign="top"><a id="a242f141ac94ab1377b75ddb5bb7cbde1" name="a242f141ac94ab1377b75ddb5bb7cbde1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>join</b> ()</td></tr>
+<tr class="memitem:a242f141ac94ab1377b75ddb5bb7cbde1" id="r_a242f141ac94ab1377b75ddb5bb7cbde1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a242f141ac94ab1377b75ddb5bb7cbde1">join</a> ()</td></tr>
 <tr class="separator:a242f141ac94ab1377b75ddb5bb7cbde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/dd5/thread_8h_source.html#l00027">27</a> of file <a class="el" href="../../db/dd5/thread_8h_source.html">thread.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9f67e0951b6d199ae9ee000ac6832460" name="a9f67e0951b6d199ae9ee000ac6832460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f67e0951b6d199ae9ee000ac6832460">&#9670;&#160;</a></span>Thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::Thread::Thread </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>fn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/de1/thread_8cc_source.html#l00026">26</a> of file <a class="el" href="../../de/de1/thread_8cc_source.html">thread.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>: thread_(<span class="keyword">new</span> ThreadImpl(fn)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a242f141ac94ab1377b75ddb5bb7cbde1" name="a242f141ac94ab1377b75ddb5bb7cbde1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a242f141ac94ab1377b75ddb5bb7cbde1">&#9670;&#160;</a></span>join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::Thread::join </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/de1/thread_8cc_source.html#l00033">33</a> of file <a class="el" href="../../de/de1/thread_8cc_source.html">thread.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{ thread_-&gt;join(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/utils/<a class="el" href="../../db/dd5/thread_8h_source.html">thread.h</a></li>
-<li>open_spiel/utils/<b>thread.cc</b></li>
+<li>open_spiel/utils/<a class="el" href="../../de/de1/thread_8cc_source.html">thread.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

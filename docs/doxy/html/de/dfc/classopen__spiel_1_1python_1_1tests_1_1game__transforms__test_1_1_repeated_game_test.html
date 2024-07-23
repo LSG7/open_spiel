@@ -120,7 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4c73a1b8d1cbce39bb822559d18043e" id="r_ae4c73a1b8d1cbce39bb822559d18043e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4c73a1b8d1cbce39bb822559d18043e">test_create_repeated_game</a> (self)</td></tr>
 <tr class="separator:ae4c73a1b8d1cbce39bb822559d18043e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/d0d/game__transforms__test_8py_source.html#l00022">22</a> of file <a class="el" href="../../d0/d0d/game__transforms__test_8py_source.html">game_transforms_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae4c73a1b8d1cbce39bb822559d18043e" name="ae4c73a1b8d1cbce39bb822559d18043e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae4c73a1b8d1cbce39bb822559d18043e">&#9670;&#160;</a></span>test_create_repeated_game()</h2>
 
@@ -136,10 +139,36 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test both create_repeated_game function signatures.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d0/d0d/game__transforms__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../d0/d0d/game__transforms__test_8py_source.html">game_transforms_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>  <span class="keyword">def </span>test_create_repeated_game(self):</div>
+<div class="line"><span class="lineno">   25</span>    <span class="stringliteral">&quot;&quot;&quot;Test both create_repeated_game function signatures.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   26</span>    repeated_game = pyspiel.create_repeated_game(<span class="stringliteral">&quot;matrix_rps&quot;</span>,</div>
+<div class="line"><span class="lineno">   27</span>                                                 {<span class="stringliteral">&quot;num_repetitions&quot;</span>: 10})</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keyword">assert</span> repeated_game.utility_sum() == 0</div>
+<div class="line"><span class="lineno">   29</span>    state = repeated_game.new_initial_state()</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">   31</span>      state.apply_actions([0, 0])</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keyword">assert</span> state.is_terminal()</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    stage_game = pyspiel.load_game(<span class="stringliteral">&quot;matrix_mp&quot;</span>)</div>
+<div class="line"><span class="lineno">   35</span>    repeated_game = pyspiel.create_repeated_game(stage_game,</div>
+<div class="line"><span class="lineno">   36</span>                                                 {<span class="stringliteral">&quot;num_repetitions&quot;</span>: 5})</div>
+<div class="line"><span class="lineno">   37</span>    state = repeated_game.new_initial_state()</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(5):</div>
+<div class="line"><span class="lineno">   39</span>      state.apply_actions([0, 0])</div>
+<div class="line"><span class="lineno">   40</span>    <span class="keyword">assert</span> state.is_terminal()</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    stage_game = pyspiel.load_game(<span class="stringliteral">&quot;matrix_pd&quot;</span>)</div>
+<div class="line"><span class="lineno">   43</span>    repeated_game = pyspiel.create_repeated_game(stage_game,</div>
+<div class="line"><span class="lineno">   44</span>                                                 {<span class="stringliteral">&quot;num_repetitions&quot;</span>: 5})</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keyword">assert</span> repeated_game.utility_sum() <span class="keywordflow">is</span> <span class="keywordtype">None</span></div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/tests/<b>game_transforms_test.py</b></li>
+<li>open_spiel/python/tests/<a class="el" href="../../d0/d0d/game__transforms__test_8py_source.html">game_transforms_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -105,10 +105,42 @@ Collaboration diagram for absl::span_internal::IsView&lt; T, absl::void_t&lt; de
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a30464bc56dd7a57983e0a31a0f8fcd38" id="r_a30464bc56dd7a57983e0a31a0f8fcd38"><td class="memItemLeft" align="right" valign="top"><a id="a30464bc56dd7a57983e0a31a0f8fcd38" name="a30464bc56dd7a57983e0a31a0f8fcd38"></a>
-static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> = std::is_same&lt;ConstData, MutData&gt;::value</td></tr>
+<tr class="memitem:a30464bc56dd7a57983e0a31a0f8fcd38" id="r_a30464bc56dd7a57983e0a31a0f8fcd38"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30464bc56dd7a57983e0a31a0f8fcd38">value</a> = std::is_same&lt;ConstData, MutData&gt;::value</td></tr>
 <tr class="separator:a30464bc56dd7a57983e0a31a0f8fcd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct absl::span_internal::IsView&lt; T, absl::void_t&lt; decltype(span_internal::GetData(std::declval&lt; const T &amp; &gt;()))&gt;, absl::void_t&lt; decltype(span_internal::GetData(std::declval&lt; T &amp; &gt;()))&gt; &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d60/internal_2span_8h_source.html#l00115">115</a> of file <a class="el" href="../../d3/d60/internal_2span_8h_source.html">span.h</a>.</p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a30464bc56dd7a57983e0a31a0f8fcd38" name="a30464bc56dd7a57983e0a31a0f8fcd38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30464bc56dd7a57983e0a31a0f8fcd38">&#9670;&#160;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../da/d85/structabsl_1_1span__internal_1_1_is_view.html">absl::span_internal::IsView</a>&lt; T, absl::void_t&lt; decltype(span_internal::GetData(std::declval&lt; const T &amp; &gt;()))&gt;, absl::void_t&lt; decltype(span_internal::GetData(std::declval&lt; T &amp; &gt;()))&gt; &gt;::value = std::is_same&lt;ConstData, MutData&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d60/internal_2span_8h_source.html#l00124">124</a> of file <a class="el" href="../../d3/d60/internal_2span_8h_source.html">span.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00146">open_spiel.python.mfg.algorithms.utils.MixedDistribution::__call__()</a>, <a class="el" href="../../d0/d85/distribution_8py_source.html#l00075">open_spiel.python.mfg.distribution.Distribution::__call__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00069">open_spiel.python.mfg.value.ValueFunction::__call__()</a>, <a class="el" href="../../df/d3d/mirror__descent_8py_source.html#l00042">open_spiel.python.mfg.algorithms.mirror_descent.ProjectedPolicy::__init__()</a>, <a class="el" href="../../d1/d5d/munchausen__mirror__descent_8py_source.html#l00036">open_spiel.python.mfg.algorithms.munchausen_mirror_descent.ProjectedPolicyMunchausen::__init__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00103">open_spiel.python.mfg.value.ValueFunction::add_value()</a>, <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00185">open_spiel.python.algorithms.best_response.BestResponsePolicy::q_value()</a>, and <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00324">open_spiel.python.algorithms.best_response.CPPBestResponsePolicy::q_value()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d3/d60/internal_2span_8h_source.html">span.h</a></li>
 </ul>

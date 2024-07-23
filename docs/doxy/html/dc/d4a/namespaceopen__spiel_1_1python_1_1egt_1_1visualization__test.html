@@ -133,7 +133,18 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Build multi-population dynamics.</pre> <div class="dynheader">
+<pre class="fragment">Build multi-population dynamics.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00041">41</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span><span class="keyword">def </span>_build_dynamics2x2():</div>
+<div class="line"><span class="lineno">   42</span>  <span class="stringliteral">&quot;&quot;&quot;Build multi-population dynamics.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   43</span>  game = pyspiel.load_game(<span class="stringliteral">&quot;matrix_pd&quot;</span>)</div>
+<div class="line"><span class="lineno">   44</span>  payoff_tensor = utils.game_payoffs_array(game)</div>
+<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">return</span> dynamics.MultiPopulationDynamics(payoff_tensor, dynamics.replicator)</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00077">open_spiel.python.egt.visualization_test.VisualizationTest.test_quiver2x2()</a>, and <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00085">open_spiel.python.egt.visualization_test.VisualizationTest.test_streamplot2x2()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d4a/namespaceopen__spiel_1_1python_1_1egt_1_1visualization__test_aba6e2fd6fb62f266e62f94751a33f664_icgraph.png" border="0" usemap="#adc/d4a/namespaceopen__spiel_1_1python_1_1egt_1_1visualization__test_aba6e2fd6fb62f266e62f94751a33f664_icgraph" alt=""/></div>
@@ -170,7 +181,18 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Build single-population dynamics.</pre> <div class="dynheader">
+<pre class="fragment">Build single-population dynamics.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00048">48</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span><span class="keyword">def </span>_build_dynamics3x3():</div>
+<div class="line"><span class="lineno">   49</span>  <span class="stringliteral">&quot;&quot;&quot;Build single-population dynamics.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   50</span>  game = pyspiel.load_game(<span class="stringliteral">&quot;matrix_rps&quot;</span>)</div>
+<div class="line"><span class="lineno">   51</span>  payoff_tensor = utils.game_payoffs_array(game)</div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">return</span> dynamics.SinglePopulationDynamics(payoff_tensor, dynamics.replicator)</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00093">open_spiel.python.egt.visualization_test.VisualizationTest.test_quiver3x3()</a>, and <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00101">open_spiel.python.egt.visualization_test.VisualizationTest.test_streamplot3x3()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d4a/namespaceopen__spiel_1_1python_1_1egt_1_1visualization__test_a35c9a66b36ba00ea9eb26416e1f5b47b_icgraph.png" border="0" usemap="#adc/d4a/namespaceopen__spiel_1_1python_1_1egt_1_1visualization__test_a35c9a66b36ba00ea9eb26416e1f5b47b_icgraph" alt=""/></div>
@@ -208,6 +230,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns same input as output.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00055">55</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span><span class="keyword">def </span>_identity_dynamics(x):</div>
+<div class="line"><span class="lineno">   56</span>  <span class="stringliteral">&quot;&quot;&quot;Returns same input as output.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">return</span> x</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

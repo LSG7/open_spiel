@@ -111,23 +111,185 @@ Collaboration diagram for absl::optional_internal::optional_data_dtor_base&lt; T
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6c74d6db2fc9e77d2eb6288f5d571662" id="r_a6c74d6db2fc9e77d2eb6288f5d571662"><td class="memItemLeft" align="right" valign="top"><a id="a6c74d6db2fc9e77d2eb6288f5d571662" name="a6c74d6db2fc9e77d2eb6288f5d571662"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>destruct</b> () noexcept</td></tr>
+<tr class="memitem:a6c74d6db2fc9e77d2eb6288f5d571662" id="r_a6c74d6db2fc9e77d2eb6288f5d571662"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c74d6db2fc9e77d2eb6288f5d571662">destruct</a> () noexcept</td></tr>
 <tr class="separator:a6c74d6db2fc9e77d2eb6288f5d571662"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94acdf175c316638207f4baf2c7684a6" id="r_a94acdf175c316638207f4baf2c7684a6"><td class="memTemplParams" colspan="2"><a id="a94acdf175c316638207f4baf2c7684a6" name="a94acdf175c316638207f4baf2c7684a6"></a>
-template&lt;typename... Args&gt; </td></tr>
-<tr class="memitem:a94acdf175c316638207f4baf2c7684a6"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><b>optional_data_dtor_base</b> (<a class="el" href="../../d2/d64/structabsl_1_1in__place__t.html">in_place_t</a>, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a94acdf175c316638207f4baf2c7684a6" id="r_a94acdf175c316638207f4baf2c7684a6"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a94acdf175c316638207f4baf2c7684a6"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a94acdf175c316638207f4baf2c7684a6">optional_data_dtor_base</a> (<a class="el" href="../../d2/d64/structabsl_1_1in__place__t.html">in_place_t</a>, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a94acdf175c316638207f4baf2c7684a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a45ccc9d2f38a5dfb26b2fda559564a7b" id="r_a45ccc9d2f38a5dfb26b2fda559564a7b"><td class="memItemLeft" align="right" valign="top"><a id="a45ccc9d2f38a5dfb26b2fda559564a7b" name="a45ccc9d2f38a5dfb26b2fda559564a7b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>engaged_</b></td></tr>
+<tr class="memitem:a45ccc9d2f38a5dfb26b2fda559564a7b" id="r_a45ccc9d2f38a5dfb26b2fda559564a7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45ccc9d2f38a5dfb26b2fda559564a7b">engaged_</a></td></tr>
 <tr class="separator:a45ccc9d2f38a5dfb26b2fda559564a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2499c47ffcffbad72da0b40989d9ab27" id="r_a2499c47ffcffbad72da0b40989d9ab27"><td class="memItemLeft" align="right" valign="top"><a id="a2499c47ffcffbad72da0b40989d9ab27" name="a2499c47ffcffbad72da0b40989d9ab27"></a>
 union <a class="el" href="../../dc/d68/classabsl_1_1optional__internal_1_1optional__data__dtor__base.html">absl::optional_internal::optional_data_dtor_base</a>&lt; T, true &gt;:: { ... } &#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:a2499c47ffcffbad72da0b40989d9ab27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class absl::optional_internal::optional_data_dtor_base&lt; T, true &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00119">119</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a025ea3525b4752d4412a31537eedacee" name="a025ea3525b4752d4412a31537eedacee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025ea3525b4752d4412a31537eedacee">&#9670;&#160;</a></span>optional_data_dtor_base() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d68/classabsl_1_1optional__internal_1_1optional__data__dtor__base.html">absl::optional_internal::optional_data_dtor_base</a>&lt; T, true &gt;::optional_data_dtor_base </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00137">137</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>: engaged_(<span class="keyword">false</span>), dummy_{{}} {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a94acdf175c316638207f4baf2c7684a6" name="a94acdf175c316638207f4baf2c7684a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94acdf175c316638207f4baf2c7684a6">&#9670;&#160;</a></span>optional_data_dtor_base() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d68/classabsl_1_1optional__internal_1_1optional__data__dtor__base.html">absl::optional_internal::optional_data_dtor_base</a>&lt; T, true &gt;::optional_data_dtor_base </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d64/structabsl_1_1in__place__t.html">in_place_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00140">140</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>      : engaged_(<span class="keyword">true</span>), data_(absl::forward&lt;Args&gt;(args)...) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6c74d6db2fc9e77d2eb6288f5d571662" name="a6c74d6db2fc9e77d2eb6288f5d571662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c74d6db2fc9e77d2eb6288f5d571662">&#9670;&#160;</a></span>destruct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dc/d68/classabsl_1_1optional__internal_1_1optional__data__dtor__base.html">absl::optional_internal::optional_data_dtor_base</a>&lt; T, true &gt;::destruct </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00134">134</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>{ engaged_ = <span class="keyword">false</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adcac5611259a83b2089ebeb5efa6482a" name="adcac5611259a83b2089ebeb5efa6482a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcac5611259a83b2089ebeb5efa6482a">&#9670;&#160;</a></span>data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="../../dc/d68/classabsl_1_1optional__internal_1_1optional__data__dtor__base.html">absl::optional_internal::optional_data_dtor_base</a>&lt; T, true &gt;::data_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00131">131</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+
+</div>
+</div>
+<a id="a7ad4feff06d80f62edd5052f0430b04e" name="a7ad4feff06d80f62edd5052f0430b04e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad4feff06d80f62edd5052f0430b04e">&#9670;&#160;</a></span>dummy_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">dummy_type <a class="el" href="../../dc/d68/classabsl_1_1optional__internal_1_1optional__data__dtor__base.html">absl::optional_internal::optional_data_dtor_base</a>&lt; T, true &gt;::dummy_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00132">132</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+
+</div>
+</div>
+<a id="a45ccc9d2f38a5dfb26b2fda559564a7b" name="a45ccc9d2f38a5dfb26b2fda559564a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ccc9d2f38a5dfb26b2fda559564a7b">&#9670;&#160;</a></span>engaged_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../dc/d68/classabsl_1_1optional__internal_1_1optional__data__dtor__base.html">absl::optional_internal::optional_data_dtor_base</a>&lt; T, true &gt;::engaged_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00128">128</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a></li>
 </ul>

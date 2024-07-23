@@ -117,18 +117,122 @@ Collaboration diagram for open_spiel.python.voting.stv_test.STVTest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1ec735d0dd464b2391178da3a3714632" id="r_a1ec735d0dd464b2391178da3a3714632"><td class="memItemLeft" align="right" valign="top"><a id="a1ec735d0dd464b2391178da3a3714632" name="a1ec735d0dd464b2391178da3a3714632"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_stv_records_number</b> (self, num)</td></tr>
+<tr class="memitem:a1ec735d0dd464b2391178da3a3714632" id="r_a1ec735d0dd464b2391178da3a3714632"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ec735d0dd464b2391178da3a3714632">test_stv_records_number</a> (self, num)</td></tr>
 <tr class="separator:a1ec735d0dd464b2391178da3a3714632"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4651eb4e59c2bd4df3c8b2cc882a43f3" id="r_a4651eb4e59c2bd4df3c8b2cc882a43f3"><td class="memItemLeft" align="right" valign="top"><a id="a4651eb4e59c2bd4df3c8b2cc882a43f3" name="a4651eb4e59c2bd4df3c8b2cc882a43f3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_ranked_pairs_wikipedia_example</b> (self)</td></tr>
+<tr class="memitem:a4651eb4e59c2bd4df3c8b2cc882a43f3" id="r_a4651eb4e59c2bd4df3c8b2cc882a43f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4651eb4e59c2bd4df3c8b2cc882a43f3">test_ranked_pairs_wikipedia_example</a> (self)</td></tr>
 <tr class="separator:a4651eb4e59c2bd4df3c8b2cc882a43f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ab193d39bf65dc5486a37cf97df15c3" id="r_a7ab193d39bf65dc5486a37cf97df15c3"><td class="memItemLeft" align="right" valign="top"><a id="a7ab193d39bf65dc5486a37cf97df15c3" name="a7ab193d39bf65dc5486a37cf97df15c3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_meeple_pentathlon</b> (self)</td></tr>
+<tr class="memitem:a7ab193d39bf65dc5486a37cf97df15c3" id="r_a7ab193d39bf65dc5486a37cf97df15c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ab193d39bf65dc5486a37cf97df15c3">test_meeple_pentathlon</a> (self)</td></tr>
 <tr class="separator:a7ab193d39bf65dc5486a37cf97df15c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/db0/stv__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../da/db0/stv__test_8py_source.html">stv_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7ab193d39bf65dc5486a37cf97df15c3" name="a7ab193d39bf65dc5486a37cf97df15c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ab193d39bf65dc5486a37cf97df15c3">&#9670;&#160;</a></span>test_meeple_pentathlon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.voting.stv_test.STVTest.test_meeple_pentathlon </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/db0/stv__test_8py_source.html#l00053">53</a> of file <a class="el" href="../../da/db0/stv__test_8py_source.html">stv_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>  <span class="keyword">def </span>test_meeple_pentathlon(self):</div>
+<div class="line"><span class="lineno">   54</span>    alternatives = [<span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>, <span class="stringliteral">&quot;C&quot;</span>]</div>
+<div class="line"><span class="lineno">   55</span>    votes = [</div>
+<div class="line"><span class="lineno">   56</span>        base.WeightedVote(1, [<span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>, <span class="stringliteral">&quot;C&quot;</span>]),</div>
+<div class="line"><span class="lineno">   57</span>        base.WeightedVote(1, [<span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;C&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>]),</div>
+<div class="line"><span class="lineno">   58</span>        base.WeightedVote(2, [<span class="stringliteral">&quot;C&quot;</span>, <span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>]),</div>
+<div class="line"><span class="lineno">   59</span>        base.WeightedVote(1, [<span class="stringliteral">&quot;B&quot;</span>, <span class="stringliteral">&quot;C&quot;</span>, <span class="stringliteral">&quot;A&quot;</span>]),</div>
+<div class="line"><span class="lineno">   60</span>    ]</div>
+<div class="line"><span class="lineno">   61</span>    profile = base.PreferenceProfile(votes=votes, alternatives=alternatives)</div>
+<div class="line"><span class="lineno">   62</span>    method = stv.STVVoting()</div>
+<div class="line"><span class="lineno">   63</span>    outcome = method.run_election(profile)</div>
+<div class="line"><span class="lineno">   64</span>    self.assertListEqual(outcome.ranking, [<span class="stringliteral">&quot;C&quot;</span>, <span class="stringliteral">&quot;A&quot;</span>, <span class="stringliteral">&quot;B&quot;</span>])</div>
+<div class="line"><span class="lineno">   65</span>    self.assertListEqual(outcome.scores, [6.3, 3.2, 2.1])</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4651eb4e59c2bd4df3c8b2cc882a43f3" name="a4651eb4e59c2bd4df3c8b2cc882a43f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4651eb4e59c2bd4df3c8b2cc882a43f3">&#9670;&#160;</a></span>test_ranked_pairs_wikipedia_example()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.voting.stv_test.STVTest.test_ranked_pairs_wikipedia_example </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/db0/stv__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../da/db0/stv__test_8py_source.html">stv_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>  <span class="keyword">def </span>test_ranked_pairs_wikipedia_example(self):</div>
+<div class="line"><span class="lineno">   33</span>    alternatives = [<span class="stringliteral">&quot;Orange&quot;</span>, <span class="stringliteral">&quot;Pear&quot;</span>, <span class="stringliteral">&quot;Strawberry&quot;</span>, <span class="stringliteral">&quot;Cake&quot;</span>, <span class="stringliteral">&quot;Chocolate&quot;</span>,</div>
+<div class="line"><span class="lineno">   34</span>                    <span class="stringliteral">&quot;Hamburger&quot;</span>, <span class="stringliteral">&quot;Chicken&quot;</span>]</div>
+<div class="line"><span class="lineno">   35</span>    votes = [</div>
+<div class="line"><span class="lineno">   36</span>        base.WeightedVote(4, [<span class="stringliteral">&quot;Orange&quot;</span>, <span class="stringliteral">&quot;Pear&quot;</span>]),</div>
+<div class="line"><span class="lineno">   37</span>        base.WeightedVote(7, [<span class="stringliteral">&quot;Pear&quot;</span>, <span class="stringliteral">&quot;Strawberry&quot;</span>, <span class="stringliteral">&quot;Cake&quot;</span>]),</div>
+<div class="line"><span class="lineno">   38</span>        base.WeightedVote(1, [<span class="stringliteral">&quot;Strawberry&quot;</span>, <span class="stringliteral">&quot;Cake&quot;</span>, <span class="stringliteral">&quot;Pear&quot;</span>]),</div>
+<div class="line"><span class="lineno">   39</span>        base.WeightedVote(3, [<span class="stringliteral">&quot;Cake&quot;</span>, <span class="stringliteral">&quot;Chocolate&quot;</span>, <span class="stringliteral">&quot;Strawberry&quot;</span>]),</div>
+<div class="line"><span class="lineno">   40</span>        base.WeightedVote(1, [<span class="stringliteral">&quot;Cake&quot;</span>, <span class="stringliteral">&quot;Chocolate&quot;</span>, <span class="stringliteral">&quot;Hamburger&quot;</span>]),</div>
+<div class="line"><span class="lineno">   41</span>        base.WeightedVote(4, [<span class="stringliteral">&quot;Hamburger&quot;</span>]),</div>
+<div class="line"><span class="lineno">   42</span>        base.WeightedVote(3, [<span class="stringliteral">&quot;Chicken&quot;</span>, <span class="stringliteral">&quot;Hamburger&quot;</span>]),</div>
+<div class="line"><span class="lineno">   43</span>    ]</div>
+<div class="line"><span class="lineno">   44</span>    profile = base.PreferenceProfile(votes=votes,</div>
+<div class="line"><span class="lineno">   45</span>                                     alternatives=alternatives)</div>
+<div class="line"><span class="lineno">   46</span>    method = stv.STVVoting(num_winners=3)</div>
+<div class="line"><span class="lineno">   47</span>    outcome = method.run_election(profile)</div>
+<div class="line"><span class="lineno">   48</span>    self.assertListEqual(outcome.ranking,</div>
+<div class="line"><span class="lineno">   49</span>                         [<span class="stringliteral">&quot;Pear&quot;</span>, <span class="stringliteral">&quot;Cake&quot;</span>, <span class="stringliteral">&quot;Hamburger&quot;</span>, <span class="stringliteral">&quot;Orange&quot;</span>, <span class="stringliteral">&quot;Chicken&quot;</span>,</div>
+<div class="line"><span class="lineno">   50</span>                          <span class="stringliteral">&quot;Strawberry&quot;</span>, <span class="stringliteral">&quot;Chocolate&quot;</span>])</div>
+<div class="line"><span class="lineno">   51</span>    self.assertListEqual(outcome.scores, [14.7, 13.6, 12.7, 7.4, 6.3, 5.2, 4.0])</div>
+<div class="line"><span class="lineno">   52</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1ec735d0dd464b2391178da3a3714632" name="a1ec735d0dd464b2391178da3a3714632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ec735d0dd464b2391178da3a3714632">&#9670;&#160;</a></span>test_stv_records_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.voting.stv_test.STVTest.test_stv_records_number </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/db0/stv__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../da/db0/stv__test_8py_source.html">stv_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>  <span class="keyword">def </span>test_stv_records_number(self, num):</div>
+<div class="line"><span class="lineno">   27</span>    method = stv.STVVoting(num_winners=num)</div>
+<div class="line"><span class="lineno">   28</span>    self.assertEqual(</div>
+<div class="line"><span class="lineno">   29</span>        method.name(), f<span class="stringliteral">&quot;single_transferable_vote(num_winners={num})&quot;</span></div>
+<div class="line"><span class="lineno">   30</span>    )</div>
+<div class="line"><span class="lineno">   31</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/voting/<b>stv_test.py</b></li>
+<li>open_spiel/python/voting/<a class="el" href="../../da/db0/stv__test_8py_source.html">stv_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

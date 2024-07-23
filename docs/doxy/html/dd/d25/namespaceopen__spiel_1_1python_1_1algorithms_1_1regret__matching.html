@@ -106,8 +106,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a93ad3b7803cc62d5362c420520b532a3" id="r_a93ad3b7803cc62d5362c420520b532a3"><td class="memItemLeft" align="right" valign="top"><a id="a93ad3b7803cc62d5362c420520b532a3" name="a93ad3b7803cc62d5362c420520b532a3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>INITIAL_REGRET_DENOM</b> = 1e6</td></tr>
+<tr class="memitem:a93ad3b7803cc62d5362c420520b532a3" id="r_a93ad3b7803cc62d5362c420520b532a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93ad3b7803cc62d5362c420520b532a3">INITIAL_REGRET_DENOM</a> = 1e6</td></tr>
 <tr class="separator:a93ad3b7803cc62d5362c420520b532a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -165,7 +164,40 @@ Args:
 Returns:
   Vector of expected returns for each action of player [the player indexed by
     index_avoided].
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html#l00029">29</a> of file <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html">regret_matching.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span><span class="keyword">def </span>_partial_multi_dot(player_payoff_tensor, strategies, index_avoided):</div>
+<div class="line"><span class="lineno">   30</span>  <span class="stringliteral">&quot;&quot;&quot;Computes a generalized dot product avoiding one dimension.</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">  This is used to directly get the expected return of a given action, given</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">  other players&#39; strategies, for the player indexed by index_avoided.</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral">  Note that the numpy.dot function is used to compute this product, as it ended</span></div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">  up being (Slightly) faster in performance tests than np.tensordot. Using the</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral">  reduce function proved slower for both np.dot and np.tensordot.</span></div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   38</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   39</span><span class="stringliteral">    player_payoff_tensor: payoff tensor for player[index_avoided], of dimension</span></div>
+<div class="line"><span class="lineno">   40</span><span class="stringliteral">      (dim(vector[0]), dim(vector[1]), ..., dim(vector[-1])).</span></div>
+<div class="line"><span class="lineno">   41</span><span class="stringliteral">    strategies: Meta strategy probabilities for each player.</span></div>
+<div class="line"><span class="lineno">   42</span><span class="stringliteral">    index_avoided: Player for which we do not compute the dot product.</span></div>
+<div class="line"><span class="lineno">   43</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   44</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   45</span><span class="stringliteral">    Vector of expected returns for each action of player [the player indexed by</span></div>
+<div class="line"><span class="lineno">   46</span><span class="stringliteral">      index_avoided].</span></div>
+<div class="line"><span class="lineno">   47</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   48</span>  new_axis_order = [index_avoided] + [</div>
+<div class="line"><span class="lineno">   49</span>      i <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(strategies)) <span class="keywordflow">if</span> (i != index_avoided)</div>
+<div class="line"><span class="lineno">   50</span>  ]</div>
+<div class="line"><span class="lineno">   51</span>  accumulator = np.transpose(player_payoff_tensor, new_axis_order)</div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(strategies) - 1, -1, -1):</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">if</span> i != index_avoided:</div>
+<div class="line"><span class="lineno">   54</span>      accumulator = np.dot(accumulator, strategies[i])</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">return</span> accumulator</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html#l00058">open_spiel.python.algorithms.regret_matching._regret_matching_step()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d25/namespaceopen__spiel_1_1python_1_1algorithms_1_1regret__matching_a1f38f9c069474620e78b12158ccadb03_icgraph.png" border="0" usemap="#add/d25/namespaceopen__spiel_1_1python_1_1algorithms_1_1regret__matching_a1f38f9c069474620e78b12158ccadb03_icgraph" alt=""/></div>
@@ -226,7 +258,53 @@ Args:
 
 Returns:
   A list of updated strategies for each player.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html#l00058">58</a> of file <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html">regret_matching.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span><span class="keyword">def </span>_regret_matching_step(payoff_tensors, strategies, regrets, gamma):</div>
+<div class="line"><span class="lineno">   59</span>  <span class="stringliteral">&quot;&quot;&quot;Does one step of the projected replicator dynamics algorithm.</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">    payoff_tensors: List of payoff tensors for each player.</span></div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">    strategies: List of the strategies used by each player.</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">    regrets: List of cumulative regrets used by each player.</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">    gamma: Minimum exploratory probability term.</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   68</span><span class="stringliteral">    A list of updated strategies for each player.</span></div>
+<div class="line"><span class="lineno">   69</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>  <span class="comment"># TODO(author4): Investigate whether this update could be fully vectorized.</span></div>
+<div class="line"><span class="lineno">   72</span>  new_strategies = []</div>
+<div class="line"><span class="lineno">   73</span>  <span class="keywordflow">for</span> player <span class="keywordflow">in</span> range(len(payoff_tensors)):</div>
+<div class="line"><span class="lineno">   74</span>    current_payoff_tensor = payoff_tensors[player]</div>
+<div class="line"><span class="lineno">   75</span>    current_strategy = strategies[player]</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>    values_per_strategy = _partial_multi_dot(current_payoff_tensor, strategies,</div>
+<div class="line"><span class="lineno">   78</span>                                             player)</div>
+<div class="line"><span class="lineno">   79</span>    average_return = np.dot(values_per_strategy, current_strategy)</div>
+<div class="line"><span class="lineno">   80</span>    regrets[player] += values_per_strategy - average_return</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    updated_strategy = regrets[player].copy()</div>
+<div class="line"><span class="lineno">   83</span>    updated_strategy[updated_strategy &lt; 0] = 0.0</div>
+<div class="line"><span class="lineno">   84</span>    sum_regret = updated_strategy.sum()</div>
+<div class="line"><span class="lineno">   85</span>    uniform_strategy = np.ones(len(updated_strategy)) / len(updated_strategy)</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">if</span> sum_regret &gt; 0:</div>
+<div class="line"><span class="lineno">   88</span>      updated_strategy /= sum_regret</div>
+<div class="line"><span class="lineno">   89</span>      updated_strategy = gamma * uniform_strategy + (1 -</div>
+<div class="line"><span class="lineno">   90</span>                                                     gamma) * updated_strategy</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   92</span>      updated_strategy = uniform_strategy</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    new_strategies.append(updated_strategy)</div>
+<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">return</span> new_strategies</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html#l00029">open_spiel.python.algorithms.regret_matching._partial_multi_dot()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html#l00103">open_spiel.python.algorithms.regret_matching.regret_matching()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d25/namespaceopen__spiel_1_1python_1_1algorithms_1_1regret__matching_aba596424488ec92e3cb27179f92c7774_cgraph.png" border="0" usemap="#add/d25/namespaceopen__spiel_1_1python_1_1algorithms_1_1regret__matching_aba596424488ec92e3cb27179f92c7774_cgraph" alt=""/></div>
@@ -303,7 +381,53 @@ Args:
 
 Returns:
   RM-computed strategies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html#l00098">98</a> of file <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html">regret_matching.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                    **unused_kwargs):</div>
+<div class="line"><span class="lineno">  104</span>  <span class="stringliteral">&quot;&quot;&quot;Runs regret-matching for the stated number of iterations.</span></div>
+<div class="line"><span class="lineno">  105</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  106</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  107</span><span class="stringliteral">    payoff_tensors: List of payoff tensors for each player.</span></div>
+<div class="line"><span class="lineno">  108</span><span class="stringliteral">    initial_strategies: Initial list of the strategies used by each player, if</span></div>
+<div class="line"><span class="lineno">  109</span><span class="stringliteral">      any. Could be used to speed up the search by providing a good initial</span></div>
+<div class="line"><span class="lineno">  110</span><span class="stringliteral">      solution.</span></div>
+<div class="line"><span class="lineno">  111</span><span class="stringliteral">    iterations: Number of algorithmic steps to take before returning an answer.</span></div>
+<div class="line"><span class="lineno">  112</span><span class="stringliteral">    gamma: Minimum exploratory probability term.</span></div>
+<div class="line"><span class="lineno">  113</span><span class="stringliteral">    average_over_last_n_strategies: Running average window size for average</span></div>
+<div class="line"><span class="lineno">  114</span><span class="stringliteral">      policy computation. If None, use the whole trajectory.</span></div>
+<div class="line"><span class="lineno">  115</span><span class="stringliteral">    **unused_kwargs: Convenient way of exposing an API compatible with other</span></div>
+<div class="line"><span class="lineno">  116</span><span class="stringliteral">      methods with possibly different arguments.</span></div>
+<div class="line"><span class="lineno">  117</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  118</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  119</span><span class="stringliteral">    RM-computed strategies.</span></div>
+<div class="line"><span class="lineno">  120</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  121</span>  number_players = len(payoff_tensors)</div>
+<div class="line"><span class="lineno">  122</span>  <span class="comment"># Number of actions available to each player.</span></div>
+<div class="line"><span class="lineno">  123</span>  action_space_shapes = payoff_tensors[0].shape</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>  <span class="comment"># If no initial starting position is given, start with uniform probabilities.</span></div>
+<div class="line"><span class="lineno">  126</span>  new_strategies = initial_strategies <span class="keywordflow">or</span> [</div>
+<div class="line"><span class="lineno">  127</span>      np.ones(action_space_shapes[k]) / action_space_shapes[k]</div>
+<div class="line"><span class="lineno">  128</span>      <span class="keywordflow">for</span> k <span class="keywordflow">in</span> range(number_players)</div>
+<div class="line"><span class="lineno">  129</span>  ]</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>  regrets = [</div>
+<div class="line"><span class="lineno">  132</span>      np.ones(action_space_shapes[k]) / INITIAL_REGRET_DENOM</div>
+<div class="line"><span class="lineno">  133</span>      <span class="keywordflow">for</span> k <span class="keywordflow">in</span> range(number_players)</div>
+<div class="line"><span class="lineno">  134</span>  ]</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>  averager = nfg_utils.StrategyAverager(number_players, action_space_shapes,</div>
+<div class="line"><span class="lineno">  137</span>                                        average_over_last_n_strategies)</div>
+<div class="line"><span class="lineno">  138</span>  averager.append(new_strategies)</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>  <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(iterations):</div>
+<div class="line"><span class="lineno">  141</span>    new_strategies = _regret_matching_step(payoff_tensors, new_strategies,</div>
+<div class="line"><span class="lineno">  142</span>                                           regrets, gamma)</div>
+<div class="line"><span class="lineno">  143</span>    averager.append(new_strategies)</div>
+<div class="line"><span class="lineno">  144</span>  <span class="keywordflow">return</span> averager.average_strategies()</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html#l00058">open_spiel.python.algorithms.regret_matching._regret_matching_step()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d25/namespaceopen__spiel_1_1python_1_1algorithms_1_1regret__matching_acf15d1242c7c381c8eabb6dd418b84f3_cgraph.png" border="0" usemap="#add/d25/namespaceopen__spiel_1_1python_1_1algorithms_1_1regret__matching_acf15d1242c7c381c8eabb6dd418b84f3_cgraph" alt=""/></div>
@@ -315,6 +439,23 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="509,23,541,23,541,28,509,28"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a93ad3b7803cc62d5362c420520b532a3" name="a93ad3b7803cc62d5362c420520b532a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ad3b7803cc62d5362c420520b532a3">&#9670;&#160;</a></span>INITIAL_REGRET_DENOM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.algorithms.regret_matching.INITIAL_REGRET_DENOM = 1e6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html#l00026">26</a> of file <a class="el" href="../../dc/db8/algorithms_2regret__matching_8py_source.html">regret_matching.py</a>.</p>
 
 </div>
 </div>

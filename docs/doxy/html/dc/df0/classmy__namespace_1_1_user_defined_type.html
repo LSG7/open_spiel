@@ -106,21 +106,113 @@ Collaboration diagram for my_namespace::UserDefinedType:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeafe9fdf307526aefcfb846aa607d7b5" id="r_aeafe9fdf307526aefcfb846aa607d7b5"><td class="memItemLeft" align="right" valign="top"><a id="aeafe9fdf307526aefcfb846aa607d7b5" name="aeafe9fdf307526aefcfb846aa607d7b5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Append</b> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> str)</td></tr>
+<tr class="memitem:aeafe9fdf307526aefcfb846aa607d7b5" id="r_aeafe9fdf307526aefcfb846aa607d7b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeafe9fdf307526aefcfb846aa607d7b5">Append</a> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> str)</td></tr>
 <tr class="separator:aeafe9fdf307526aefcfb846aa607d7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac74617f49e3d35c9a1d5e5b20f753035" id="r_ac74617f49e3d35c9a1d5e5b20f753035"><td class="memItemLeft" align="right" valign="top"><a id="ac74617f49e3d35c9a1d5e5b20f753035" name="ac74617f49e3d35c9a1d5e5b20f753035"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> () const</td></tr>
+<tr class="memitem:ac74617f49e3d35c9a1d5e5b20f753035" id="r_ac74617f49e3d35c9a1d5e5b20f753035"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac74617f49e3d35c9a1d5e5b20f753035">Value</a> () const</td></tr>
 <tr class="separator:ac74617f49e3d35c9a1d5e5b20f753035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ace7dadc2df5c3e456e4f0c838700c127" id="r_ace7dadc2df5c3e456e4f0c838700c127"><td class="memItemLeft" align="right" valign="top"><a id="ace7dadc2df5c3e456e4f0c838700c127" name="ace7dadc2df5c3e456e4f0c838700c127"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AbslFormatFlush</b> (<a class="el" href="../../dc/df0/classmy__namespace_1_1_user_defined_type.html">UserDefinedType</a> *x, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> str)</td></tr>
+<tr class="memitem:ace7dadc2df5c3e456e4f0c838700c127" id="r_ace7dadc2df5c3e456e4f0c838700c127"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace7dadc2df5c3e456e4f0c838700c127">AbslFormatFlush</a> (<a class="el" href="../../dc/df0/classmy__namespace_1_1_user_defined_type.html">UserDefinedType</a> *x, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> str)</td></tr>
 <tr class="separator:ace7dadc2df5c3e456e4f0c838700c127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/d3f/extension__test_8cc_source.html#l00028">28</a> of file <a class="el" href="../../de/d3f/extension__test_8cc_source.html">extension_test.cc</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aeafe9fdf307526aefcfb846aa607d7b5" name="aeafe9fdf307526aefcfb846aa607d7b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeafe9fdf307526aefcfb846aa607d7b5">&#9670;&#160;</a></span>Append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void my_namespace::UserDefinedType::Append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d3f/extension__test_8cc_source.html#l00032">32</a> of file <a class="el" href="../../de/d3f/extension__test_8cc_source.html">extension_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{ value_.append(str.data(), str.size()); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac74617f49e3d35c9a1d5e5b20f753035" name="ac74617f49e3d35c9a1d5e5b20f753035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac74617f49e3d35c9a1d5e5b20f753035">&#9670;&#160;</a></span>Value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; my_namespace::UserDefinedType::Value </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d3f/extension__test_8cc_source.html#l00033">33</a> of file <a class="el" href="../../de/d3f/extension__test_8cc_source.html">extension_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{ <span class="keywordflow">return</span> value_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ace7dadc2df5c3e456e4f0c838700c127" name="ace7dadc2df5c3e456e4f0c838700c127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7dadc2df5c3e456e4f0c838700c127">&#9670;&#160;</a></span>AbslFormatFlush</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AbslFormatFlush </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/df0/classmy__namespace_1_1_user_defined_type.html">UserDefinedType</a> *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>str</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d3f/extension__test_8cc_source.html#l00035">35</a> of file <a class="el" href="../../de/d3f/extension__test_8cc_source.html">extension_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                       {</div>
+<div class="line"><span class="lineno">   36</span>    x-&gt;Append(str);</div>
+<div class="line"><span class="lineno">   37</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/strings/internal/str_format/<b>extension_test.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/strings/internal/str_format/<a class="el" href="../../de/d3f/extension__test_8cc_source.html">extension_test.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

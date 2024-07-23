@@ -125,6 +125,34 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Plays bots against each other, returns terminal utility for each bot.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/dd2/evaluate__bots_8py_source.html#l00020">20</a> of file <a class="el" href="../../d5/dd2/evaluate__bots_8py_source.html">evaluate_bots.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span><span class="keyword">def </span>evaluate_bots(state, bots, rng):</div>
+<div class="line"><span class="lineno">   21</span>  <span class="stringliteral">&quot;&quot;&quot;Plays bots against each other, returns terminal utility for each bot.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">for</span> bot <span class="keywordflow">in</span> bots:</div>
+<div class="line"><span class="lineno">   23</span>    bot.restart_at(state)</div>
+<div class="line"><span class="lineno">   24</span>  <span class="keywordflow">while</span> <span class="keywordflow">not</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">if</span> state.is_chance_node():</div>
+<div class="line"><span class="lineno">   26</span>      outcomes, probs = zip(*state.chance_outcomes())</div>
+<div class="line"><span class="lineno">   27</span>      action = rng.choice(outcomes, p=probs)</div>
+<div class="line"><span class="lineno">   28</span>      <span class="keywordflow">for</span> bot <span class="keywordflow">in</span> bots:</div>
+<div class="line"><span class="lineno">   29</span>        bot.inform_action(state, pyspiel.PlayerId.CHANCE, action)</div>
+<div class="line"><span class="lineno">   30</span>      state.apply_action(action)</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">elif</span> state.is_simultaneous_node():</div>
+<div class="line"><span class="lineno">   32</span>      joint_actions = [</div>
+<div class="line"><span class="lineno">   33</span>          bot.step(state)</div>
+<div class="line"><span class="lineno">   34</span>          <span class="keywordflow">if</span> state.legal_actions(player_id) <span class="keywordflow">else</span> pyspiel.INVALID_ACTION</div>
+<div class="line"><span class="lineno">   35</span>          <span class="keywordflow">for</span> player_id, bot <span class="keywordflow">in</span> enumerate(bots)</div>
+<div class="line"><span class="lineno">   36</span>      ]</div>
+<div class="line"><span class="lineno">   37</span>      state.apply_actions(joint_actions)</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   39</span>      current_player = state.current_player()</div>
+<div class="line"><span class="lineno">   40</span>      action = bots[current_player].step(state)</div>
+<div class="line"><span class="lineno">   41</span>      <span class="keywordflow">for</span> i, bot <span class="keywordflow">in</span> enumerate(bots):</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span> i != current_player:</div>
+<div class="line"><span class="lineno">   43</span>          bot.inform_action(state, current_player, action)</div>
+<div class="line"><span class="lineno">   44</span>      state.apply_action(action)</div>
+<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">return</span> state.returns()</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

@@ -117,17 +117,75 @@ Collaboration diagram for absl::types_internal::IsNullaryCallableImpl&lt; Fun, a
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a512b095132f7e17c5db56755b3911154" id="r_a512b095132f7e17c5db56755b3911154"><td class="memItemLeft" align="right" valign="top"><a id="a512b095132f7e17c5db56755b3911154" name="a512b095132f7e17c5db56755b3911154"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = decltype(std::declval&lt;const Fun&amp;&gt;()())</td></tr>
+<tr class="memitem:a512b095132f7e17c5db56755b3911154" id="r_a512b095132f7e17c5db56755b3911154"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a512b095132f7e17c5db56755b3911154">result_type</a> = decltype(std::declval&lt;const Fun&amp;&gt;()())</td></tr>
 <tr class="separator:a512b095132f7e17c5db56755b3911154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a351d23f94787706a1ae9e66aaf7c1b6c" id="r_a351d23f94787706a1ae9e66aaf7c1b6c"><td class="memTemplParams" colspan="2"><a id="a351d23f94787706a1ae9e66aaf7c1b6c" name="a351d23f94787706a1ae9e66aaf7c1b6c"></a>
-template&lt;class ValueType &gt; </td></tr>
-<tr class="memitem:a351d23f94787706a1ae9e66aaf7c1b6c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>for_type</b> = std::is_same&lt;ValueType, result_type&gt;</td></tr>
+<tr class="memitem:a351d23f94787706a1ae9e66aaf7c1b6c" id="r_a351d23f94787706a1ae9e66aaf7c1b6c"><td class="memTemplParams" colspan="2">template&lt;class ValueType &gt; </td></tr>
+<tr class="memitem:a351d23f94787706a1ae9e66aaf7c1b6c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a351d23f94787706a1ae9e66aaf7c1b6c">for_type</a> = std::is_same&lt;ValueType, result_type&gt;</td></tr>
 <tr class="separator:a351d23f94787706a1ae9e66aaf7c1b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a921833e592e0f48e643c2da26ae4a105" id="r_a921833e592e0f48e643c2da26ae4a105"><td class="memItemLeft" align="right" valign="top"><a id="a921833e592e0f48e643c2da26ae4a105" name="a921833e592e0f48e643c2da26ae4a105"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>void_if_true</b> = void</td></tr>
+<tr class="memitem:a921833e592e0f48e643c2da26ae4a105" id="r_a921833e592e0f48e643c2da26ae4a105"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a921833e592e0f48e643c2da26ae4a105">void_if_true</a> = void</td></tr>
 <tr class="separator:a921833e592e0f48e643c2da26ae4a105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class Fun&gt;<br />
+struct absl::types_internal::IsNullaryCallableImpl&lt; Fun, absl::void_t&lt; decltype(std::declval&lt; const Fun &amp; &gt;()())&gt; &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html#l00093">93</a> of file <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a351d23f94787706a1ae9e66aaf7c1b6c" name="a351d23f94787706a1ae9e66aaf7c1b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a351d23f94787706a1ae9e66aaf7c1b6c">&#9670;&#160;</a></span>for_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Fun &gt; </div>
+<div class="memtemplate">
+template&lt;class ValueType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d9b/structabsl_1_1types__internal_1_1_is_nullary_callable_impl.html">absl::types_internal::IsNullaryCallableImpl</a>&lt; Fun, absl::void_t&lt; decltype(std::declval&lt; const Fun &amp; &gt;()())&gt; &gt;::for_type = std::is_same&lt;ValueType, result_type&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html#l00099">99</a> of file <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a>.</p>
+
+</div>
+</div>
+<a id="a512b095132f7e17c5db56755b3911154" name="a512b095132f7e17c5db56755b3911154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a512b095132f7e17c5db56755b3911154">&#9670;&#160;</a></span>result_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Fun &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d9b/structabsl_1_1types__internal_1_1_is_nullary_callable_impl.html">absl::types_internal::IsNullaryCallableImpl</a>&lt; Fun, absl::void_t&lt; decltype(std::declval&lt; const Fun &amp; &gt;()())&gt; &gt;::result_type = decltype(std::declval&lt;const Fun&amp;&gt;()())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html#l00096">96</a> of file <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a>.</p>
+
+</div>
+</div>
+<a id="a921833e592e0f48e643c2da26ae4a105" name="a921833e592e0f48e643c2da26ae4a105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921833e592e0f48e643c2da26ae4a105">&#9670;&#160;</a></span>void_if_true</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Fun &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d9b/structabsl_1_1types__internal_1_1_is_nullary_callable_impl.html">absl::types_internal::IsNullaryCallableImpl</a>&lt; Fun, absl::void_t&lt; decltype(std::declval&lt; const Fun &amp; &gt;()())&gt; &gt;::void_if_true = void</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html#l00101">101</a> of file <a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d9/dcb/conformance__testing__helpers_8h_source.html">conformance_testing_helpers.h</a></li>
 </ul>

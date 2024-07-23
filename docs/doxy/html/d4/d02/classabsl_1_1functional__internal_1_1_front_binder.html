@@ -105,27 +105,208 @@ Collaboration diagram for absl::functional_internal::FrontBinder&lt; F, BoundArg
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae16c1d9c390fae670025950a56c59231" id="r_ae16c1d9c390fae670025950a56c59231"><td class="memTemplParams" colspan="2"><a id="ae16c1d9c390fae670025950a56c59231" name="ae16c1d9c390fae670025950a56c59231"></a>
-template&lt;class... Ts&gt; </td></tr>
-<tr class="memitem:ae16c1d9c390fae670025950a56c59231"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><b>FrontBinder</b> (<a class="el" href="../../d2/d64/structabsl_1_1in__place__t.html">absl::in_place_t</a>, Ts &amp;&amp;... ts)</td></tr>
+<tr class="memitem:ae16c1d9c390fae670025950a56c59231" id="r_ae16c1d9c390fae670025950a56c59231"><td class="memTemplParams" colspan="2">template&lt;class... Ts&gt; </td></tr>
+<tr class="memitem:ae16c1d9c390fae670025950a56c59231"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae16c1d9c390fae670025950a56c59231">FrontBinder</a> (<a class="el" href="../../d2/d64/structabsl_1_1in__place__t.html">absl::in_place_t</a>, Ts &amp;&amp;... ts)</td></tr>
 <tr class="separator:ae16c1d9c390fae670025950a56c59231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8d5a988fc8069a771d800e9ce1a6869" id="r_ad8d5a988fc8069a771d800e9ce1a6869"><td class="memTemplParams" colspan="2"><a id="ad8d5a988fc8069a771d800e9ce1a6869" name="ad8d5a988fc8069a771d800e9ce1a6869"></a>
-template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                                   F&amp;, BoundArgs&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </td></tr>
-<tr class="memitem:ad8d5a988fc8069a771d800e9ce1a6869"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (FreeArgs &amp;&amp;... free_args) &amp;</td></tr>
+<tr class="memitem:ad8d5a988fc8069a771d800e9ce1a6869" id="r_ad8d5a988fc8069a771d800e9ce1a6869"><td class="memTemplParams" colspan="2">template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                                   F&amp;, BoundArgs&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </td></tr>
+<tr class="memitem:ad8d5a988fc8069a771d800e9ce1a6869"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad8d5a988fc8069a771d800e9ce1a6869">operator()</a> (FreeArgs &amp;&amp;... free_args) &amp;</td></tr>
 <tr class="separator:ad8d5a988fc8069a771d800e9ce1a6869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0ddd3d55354f47a02df9ac88f68b9b5" id="r_aa0ddd3d55354f47a02df9ac88f68b9b5"><td class="memTemplParams" colspan="2"><a id="aa0ddd3d55354f47a02df9ac88f68b9b5" name="aa0ddd3d55354f47a02df9ac88f68b9b5"></a>
-template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                const F&amp;, const BoundArgs&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </td></tr>
-<tr class="memitem:aa0ddd3d55354f47a02df9ac88f68b9b5"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (FreeArgs &amp;&amp;... free_args) const &amp;</td></tr>
+<tr class="memitem:aa0ddd3d55354f47a02df9ac88f68b9b5" id="r_aa0ddd3d55354f47a02df9ac88f68b9b5"><td class="memTemplParams" colspan="2">template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                const F&amp;, const BoundArgs&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </td></tr>
+<tr class="memitem:aa0ddd3d55354f47a02df9ac88f68b9b5"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa0ddd3d55354f47a02df9ac88f68b9b5">operator()</a> (FreeArgs &amp;&amp;... free_args) const &amp;</td></tr>
 <tr class="separator:aa0ddd3d55354f47a02df9ac88f68b9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09ad9ca0b74ee0c44b803cabf69f53e1" id="r_a09ad9ca0b74ee0c44b803cabf69f53e1"><td class="memTemplParams" colspan="2"><a id="a09ad9ca0b74ee0c44b803cabf69f53e1" name="a09ad9ca0b74ee0c44b803cabf69f53e1"></a>
-template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                                   F&amp;&amp;, BoundArgs&amp;&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </td></tr>
-<tr class="memitem:a09ad9ca0b74ee0c44b803cabf69f53e1"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (FreeArgs &amp;&amp;... free_args) &amp;&amp;</td></tr>
+<tr class="memitem:a09ad9ca0b74ee0c44b803cabf69f53e1" id="r_a09ad9ca0b74ee0c44b803cabf69f53e1"><td class="memTemplParams" colspan="2">template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                                   F&amp;&amp;, BoundArgs&amp;&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </td></tr>
+<tr class="memitem:a09ad9ca0b74ee0c44b803cabf69f53e1"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a09ad9ca0b74ee0c44b803cabf69f53e1">operator()</a> (FreeArgs &amp;&amp;... free_args) &amp;&amp;</td></tr>
 <tr class="separator:a09ad9ca0b74ee0c44b803cabf69f53e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbdca413583c9b291db5042092f4bfe6" id="r_abbdca413583c9b291db5042092f4bfe6"><td class="memTemplParams" colspan="2"><a id="abbdca413583c9b291db5042092f4bfe6" name="abbdca413583c9b291db5042092f4bfe6"></a>
-template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                const F&amp;&amp;, const BoundArgs&amp;&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </td></tr>
-<tr class="memitem:abbdca413583c9b291db5042092f4bfe6"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (FreeArgs &amp;&amp;... free_args) const &amp;&amp;</td></tr>
+<tr class="memitem:abbdca413583c9b291db5042092f4bfe6" id="r_abbdca413583c9b291db5042092f4bfe6"><td class="memTemplParams" colspan="2">template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                const F&amp;&amp;, const BoundArgs&amp;&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </td></tr>
+<tr class="memitem:abbdca413583c9b291db5042092f4bfe6"><td class="memTemplItemLeft" align="right" valign="top">R&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abbdca413583c9b291db5042092f4bfe6">operator()</a> (FreeArgs &amp;&amp;... free_args) const &amp;&amp;</td></tr>
 <tr class="separator:abbdca413583c9b291db5042092f4bfe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class F, class... BoundArgs&gt;<br />
+class absl::functional_internal::FrontBinder&lt; F, BoundArgs &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/d13/front__binder_8h_source.html#l00042">42</a> of file <a class="el" href="../../d8/d13/front__binder_8h_source.html">front_binder.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae16c1d9c390fae670025950a56c59231" name="ae16c1d9c390fae670025950a56c59231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae16c1d9c390fae670025950a56c59231">&#9670;&#160;</a></span>FrontBinder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F , class... BoundArgs&gt; </div>
+<div class="memtemplate">
+template&lt;class... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d02/classabsl_1_1functional__internal_1_1_front_binder.html">absl::functional_internal::FrontBinder</a>&lt; F, BoundArgs &gt;::FrontBinder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d64/structabsl_1_1in__place__t.html">absl::in_place_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ts &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>ts</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d13/front__binder_8h_source.html#l00050">50</a> of file <a class="el" href="../../d8/d13/front__binder_8h_source.html">front_binder.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>      : bound_args_(absl::forward&lt;Ts&gt;(ts)...) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad8d5a988fc8069a771d800e9ce1a6869" name="ad8d5a988fc8069a771d800e9ce1a6869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d5a988fc8069a771d800e9ce1a6869">&#9670;&#160;</a></span>operator()() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F , class... BoundArgs&gt; </div>
+<div class="memtemplate">
+template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                                   F&amp;, BoundArgs&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">R <a class="el" href="../../d4/d02/classabsl_1_1functional__internal_1_1_front_binder.html">absl::functional_internal::FrontBinder</a>&lt; F, BoundArgs &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">FreeArgs &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>free_args</em></span></td><td>)</td>
+          <td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d13/front__binder_8h_source.html#l00055">55</a> of file <a class="el" href="../../d8/d13/front__binder_8h_source.html">front_binder.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                          {</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> functional_internal::Apply&lt;R&gt;(bound_args_, Idx(),</div>
+<div class="line"><span class="lineno">   57</span>                                         absl::forward&lt;FreeArgs&gt;(free_args)...);</div>
+<div class="line"><span class="lineno">   58</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a09ad9ca0b74ee0c44b803cabf69f53e1" name="a09ad9ca0b74ee0c44b803cabf69f53e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ad9ca0b74ee0c44b803cabf69f53e1">&#9670;&#160;</a></span>operator()() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F , class... BoundArgs&gt; </div>
+<div class="memtemplate">
+template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                                   F&amp;&amp;, BoundArgs&amp;&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">R <a class="el" href="../../d4/d02/classabsl_1_1functional__internal_1_1_front_binder.html">absl::functional_internal::FrontBinder</a>&lt; F, BoundArgs &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">FreeArgs &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>free_args</em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d13/front__binder_8h_source.html#l00070">70</a> of file <a class="el" href="../../d8/d13/front__binder_8h_source.html">front_binder.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                                           {</div>
+<div class="line"><span class="lineno">   71</span>    <span class="comment">// This overload is called when *this is an rvalue. If some of the bound</span></div>
+<div class="line"><span class="lineno">   72</span>    <span class="comment">// arguments are stored by value or rvalue reference, we move them.</span></div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">return</span> functional_internal::Apply&lt;R&gt;(absl::move(bound_args_), Idx(),</div>
+<div class="line"><span class="lineno">   74</span>                                         absl::forward&lt;FreeArgs&gt;(free_args)...);</div>
+<div class="line"><span class="lineno">   75</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa0ddd3d55354f47a02df9ac88f68b9b5" name="aa0ddd3d55354f47a02df9ac88f68b9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ddd3d55354f47a02df9ac88f68b9b5">&#9670;&#160;</a></span>operator()() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F , class... BoundArgs&gt; </div>
+<div class="memtemplate">
+template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                const F&amp;, const BoundArgs&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">R <a class="el" href="../../d4/d02/classabsl_1_1functional__internal_1_1_front_binder.html">absl::functional_internal::FrontBinder</a>&lt; F, BoundArgs &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">FreeArgs &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>free_args</em></span></td><td>)</td>
+          <td> const &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d13/front__binder_8h_source.html#l00063">63</a> of file <a class="el" href="../../d8/d13/front__binder_8h_source.html">front_binder.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                                               {</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">return</span> functional_internal::Apply&lt;R&gt;(bound_args_, Idx(),</div>
+<div class="line"><span class="lineno">   65</span>                                         absl::forward&lt;FreeArgs&gt;(free_args)...);</div>
+<div class="line"><span class="lineno">   66</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abbdca413583c9b291db5042092f4bfe6" name="abbdca413583c9b291db5042092f4bfe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbdca413583c9b291db5042092f4bfe6">&#9670;&#160;</a></span>operator()() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class F , class... BoundArgs&gt; </div>
+<div class="memtemplate">
+template&lt;class... FreeArgs, class R  = base_internal::invoke_result_t&lt;                const F&amp;&amp;, const BoundArgs&amp;&amp;..., FreeArgs&amp;&amp;...&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">R <a class="el" href="../../d4/d02/classabsl_1_1functional__internal_1_1_front_binder.html">absl::functional_internal::FrontBinder</a>&lt; F, BoundArgs &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">FreeArgs &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>free_args</em></span></td><td>)</td>
+          <td> const &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d13/front__binder_8h_source.html#l00080">80</a> of file <a class="el" href="../../d8/d13/front__binder_8h_source.html">front_binder.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                {</div>
+<div class="line"><span class="lineno">   81</span>    <span class="comment">// This overload is called when *this is an rvalue. If some of the bound</span></div>
+<div class="line"><span class="lineno">   82</span>    <span class="comment">// arguments are stored by value or rvalue reference, we move them.</span></div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">return</span> functional_internal::Apply&lt;R&gt;(absl::move(bound_args_), Idx(),</div>
+<div class="line"><span class="lineno">   84</span>                                         absl::forward&lt;FreeArgs&gt;(free_args)...);</div>
+<div class="line"><span class="lineno">   85</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/functional/internal/<a class="el" href="../../d8/d13/front__binder_8h_source.html">front_binder.h</a></li>
 </ul>

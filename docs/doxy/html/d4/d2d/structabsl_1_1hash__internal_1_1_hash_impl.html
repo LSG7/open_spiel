@@ -105,10 +105,46 @@ Collaboration diagram for absl::hash_internal::HashImpl&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aac31a6a508c69fadd561d59eafd52cf1" id="r_aac31a6a508c69fadd561d59eafd52cf1"><td class="memItemLeft" align="right" valign="top"><a id="aac31a6a508c69fadd561d59eafd52cf1" name="aac31a6a508c69fadd561d59eafd52cf1"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const T &amp;value) const</td></tr>
+<tr class="memitem:aac31a6a508c69fadd561d59eafd52cf1" id="r_aac31a6a508c69fadd561d59eafd52cf1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac31a6a508c69fadd561d59eafd52cf1">operator()</a> (const T &amp;value) const</td></tr>
 <tr class="separator:aac31a6a508c69fadd561d59eafd52cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct absl::hash_internal::HashImpl&lt; T &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l01228">1228</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aac31a6a508c69fadd561d59eafd52cf1" name="aac31a6a508c69fadd561d59eafd52cf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac31a6a508c69fadd561d59eafd52cf1">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="../../d4/d2d/structabsl_1_1hash__internal_1_1_hash_impl.html">absl::hash_internal::HashImpl</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l01229">1229</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1229</span>                                          {</div>
+<div class="line"><span class="lineno"> 1230</span>    <span class="keywordflow">return</span> MixingHashState::hash(value);</div>
+<div class="line"><span class="lineno"> 1231</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/hash/internal/<a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a></li>
 </ul>

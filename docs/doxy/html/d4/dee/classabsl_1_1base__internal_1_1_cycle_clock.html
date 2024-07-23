@@ -106,22 +106,110 @@ Collaboration diagram for absl::base_internal::CycleClock:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a85c8ef09d43c0646a2399d0245eb905f" id="r_a85c8ef09d43c0646a2399d0245eb905f"><td class="memItemLeft" align="right" valign="top"><a id="a85c8ef09d43c0646a2399d0245eb905f" name="a85c8ef09d43c0646a2399d0245eb905f"></a>
-static int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>Now</b> ()</td></tr>
+<tr class="memitem:a85c8ef09d43c0646a2399d0245eb905f" id="r_a85c8ef09d43c0646a2399d0245eb905f"><td class="memItemLeft" align="right" valign="top">static int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85c8ef09d43c0646a2399d0245eb905f">Now</a> ()</td></tr>
 <tr class="separator:a85c8ef09d43c0646a2399d0245eb905f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff51a076eaf300d859d1433c92b14140" id="r_aff51a076eaf300d859d1433c92b14140"><td class="memItemLeft" align="right" valign="top"><a id="aff51a076eaf300d859d1433c92b14140" name="aff51a076eaf300d859d1433c92b14140"></a>
-static double&#160;</td><td class="memItemRight" valign="bottom"><b>Frequency</b> ()</td></tr>
+<tr class="memitem:aff51a076eaf300d859d1433c92b14140" id="r_aff51a076eaf300d859d1433c92b14140"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff51a076eaf300d859d1433c92b14140">Frequency</a> ()</td></tr>
 <tr class="separator:aff51a076eaf300d859d1433c92b14140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ab08c1ba102f13c5df3a5d1a9217196b2" id="r_ab08c1ba102f13c5df3a5d1a9217196b2"><td class="memItemLeft" align="right" valign="top"><a id="ab08c1ba102f13c5df3a5d1a9217196b2" name="ab08c1ba102f13c5df3a5d1a9217196b2"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>CycleClockSource</b></td></tr>
+<tr class="memitem:ab08c1ba102f13c5df3a5d1a9217196b2" id="r_ab08c1ba102f13c5df3a5d1a9217196b2"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab08c1ba102f13c5df3a5d1a9217196b2">CycleClockSource</a></td></tr>
 <tr class="separator:ab08c1ba102f13c5df3a5d1a9217196b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dd/da9/cycleclock_8h_source.html#l00062">62</a> of file <a class="el" href="../../dd/da9/cycleclock_8h_source.html">cycleclock.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aff51a076eaf300d859d1433c92b14140" name="aff51a076eaf300d859d1433c92b14140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff51a076eaf300d859d1433c92b14140">&#9670;&#160;</a></span>Frequency()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double absl::base_internal::CycleClock::Frequency </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d9e/cycleclock_8cc_source.html#l00069">69</a> of file <a class="el" href="../../d4/d9e/cycleclock_8cc_source.html">cycleclock.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>                             {</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">return</span> 1e9;</div>
+<div class="line"><span class="lineno">   71</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a85c8ef09d43c0646a2399d0245eb905f" name="a85c8ef09d43c0646a2399d0245eb905f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85c8ef09d43c0646a2399d0245eb905f">&#9670;&#160;</a></span>Now()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t absl::base_internal::CycleClock::Now </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d9e/cycleclock_8cc_source.html#l00063">63</a> of file <a class="el" href="../../d4/d9e/cycleclock_8cc_source.html">cycleclock.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                        {</div>
+<div class="line"><span class="lineno">   64</span>  <span class="keywordflow">return</span> std::chrono::duration_cast&lt;std::chrono::nanoseconds&gt;(</div>
+<div class="line"><span class="lineno">   65</span>             std::chrono::steady_clock::now().time_since_epoch())</div>
+<div class="line"><span class="lineno">   66</span>      .count();</div>
+<div class="line"><span class="lineno">   67</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ab08c1ba102f13c5df3a5d1a9217196b2" name="ab08c1ba102f13c5df3a5d1a9217196b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab08c1ba102f13c5df3a5d1a9217196b2">&#9670;&#160;</a></span>CycleClockSource</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../dd/d1a/classabsl_1_1base__internal_1_1_cycle_clock_source.html">CycleClockSource</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/da9/cycleclock_8h_source.html#l00090">90</a> of file <a class="el" href="../../dd/da9/cycleclock_8h_source.html">cycleclock.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../dd/da9/cycleclock_8h_source.html">cycleclock.h</a></li>
-<li>open_spiel/abseil-cpp/absl/base/internal/<b>cycleclock.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../d4/d9e/cycleclock_8cc_source.html">cycleclock.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

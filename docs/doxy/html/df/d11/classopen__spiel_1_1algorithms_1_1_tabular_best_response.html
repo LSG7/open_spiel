@@ -105,55 +105,619 @@ Collaboration diagram for open_spiel::algorithms::TabularBestResponse:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af607dba3d6878c33cf6e3d8162402cbb" id="r_af607dba3d6878c33cf6e3d8162402cbb"><td class="memItemLeft" align="right" valign="top"><a id="af607dba3d6878c33cf6e3d8162402cbb" name="af607dba3d6878c33cf6e3d8162402cbb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TabularBestResponse</b> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;game, Player best_responder, const <a class="el" href="../../d4/de8/classopen__spiel_1_1_policy.html">Policy</a> *policy, const float prob_cut_threshold=-1.0, const float action_value_tolerance=-1.0)</td></tr>
+<tr class="memitem:af607dba3d6878c33cf6e3d8162402cbb" id="r_af607dba3d6878c33cf6e3d8162402cbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af607dba3d6878c33cf6e3d8162402cbb">TabularBestResponse</a> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;game, Player best_responder, const <a class="el" href="../../d4/de8/classopen__spiel_1_1_policy.html">Policy</a> *policy, const float prob_cut_threshold=-1.0, const float action_value_tolerance=-1.0)</td></tr>
 <tr class="separator:af607dba3d6878c33cf6e3d8162402cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca249f6fbb1de90f41edb6f065483c0" id="r_abca249f6fbb1de90f41edb6f065483c0"><td class="memItemLeft" align="right" valign="top"><a id="abca249f6fbb1de90f41edb6f065483c0" name="abca249f6fbb1de90f41edb6f065483c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TabularBestResponse</b> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;game, Player best_responder, const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;policy_table, const float prob_cut_threshold=-1.0, const float action_value_tolerance=-1.0)</td></tr>
+<tr class="memitem:abca249f6fbb1de90f41edb6f065483c0" id="r_abca249f6fbb1de90f41edb6f065483c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abca249f6fbb1de90f41edb6f065483c0">TabularBestResponse</a> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;game, Player best_responder, const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;policy_table, const float prob_cut_threshold=-1.0, const float action_value_tolerance=-1.0)</td></tr>
 <tr class="separator:abca249f6fbb1de90f41edb6f065483c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf94e2c498c8aed72cf40b2efa82e54" id="r_abcf94e2c498c8aed72cf40b2efa82e54"><td class="memItemLeft" align="right" valign="top"><a id="abcf94e2c498c8aed72cf40b2efa82e54" name="abcf94e2c498c8aed72cf40b2efa82e54"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TabularBestResponse</b> (<a class="el" href="../../df/d11/classopen__spiel_1_1algorithms_1_1_tabular_best_response.html">TabularBestResponse</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:abcf94e2c498c8aed72cf40b2efa82e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d5ecd3bb0dca8223203f1da94ac6953" id="r_a4d5ecd3bb0dca8223203f1da94ac6953"><td class="memItemLeft" align="right" valign="top"><a id="a4d5ecd3bb0dca8223203f1da94ac6953" name="a4d5ecd3bb0dca8223203f1da94ac6953"></a>
-Action&#160;</td><td class="memItemRight" valign="bottom"><b>BestResponseAction</b> (const std::string &amp;infostate)</td></tr>
+<tr class="memitem:a4d5ecd3bb0dca8223203f1da94ac6953" id="r_a4d5ecd3bb0dca8223203f1da94ac6953"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d5ecd3bb0dca8223203f1da94ac6953">BestResponseAction</a> (const std::string &amp;infostate)</td></tr>
 <tr class="separator:a4d5ecd3bb0dca8223203f1da94ac6953"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af299a311c6e4c00a982aed3f3025f8d0" id="r_af299a311c6e4c00a982aed3f3025f8d0"><td class="memItemLeft" align="right" valign="top"><a id="af299a311c6e4c00a982aed3f3025f8d0" name="af299a311c6e4c00a982aed3f3025f8d0"></a>
-Action&#160;</td><td class="memItemRight" valign="bottom"><b>BestResponseAction</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
+<tr class="memitem:af299a311c6e4c00a982aed3f3025f8d0" id="r_af299a311c6e4c00a982aed3f3025f8d0"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af299a311c6e4c00a982aed3f3025f8d0">BestResponseAction</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
 <tr class="separator:af299a311c6e4c00a982aed3f3025f8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74dc964230d465197c22d0681c672336" id="r_a74dc964230d465197c22d0681c672336"><td class="memItemLeft" align="right" valign="top"><a id="a74dc964230d465197c22d0681c672336" name="a74dc964230d465197c22d0681c672336"></a>
-std::vector&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BestResponseActions</b> (const std::string &amp;infostate, double tolerance)</td></tr>
+<tr class="memitem:a74dc964230d465197c22d0681c672336" id="r_a74dc964230d465197c22d0681c672336"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74dc964230d465197c22d0681c672336">BestResponseActions</a> (const std::string &amp;infostate, double tolerance)</td></tr>
 <tr class="separator:a74dc964230d465197c22d0681c672336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3da6619471bcb791b43aff362eeefa1c" id="r_a3da6619471bcb791b43aff362eeefa1c"><td class="memItemLeft" align="right" valign="top"><a id="a3da6619471bcb791b43aff362eeefa1c" name="a3da6619471bcb791b43aff362eeefa1c"></a>
-std::vector&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BestResponseActions</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, double tolerance)</td></tr>
+<tr class="memitem:a3da6619471bcb791b43aff362eeefa1c" id="r_a3da6619471bcb791b43aff362eeefa1c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3da6619471bcb791b43aff362eeefa1c">BestResponseActions</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, double tolerance)</td></tr>
 <tr class="separator:a3da6619471bcb791b43aff362eeefa1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1db2296afa9011b6a803071d5e71e93" id="r_ae1db2296afa9011b6a803071d5e71e93"><td class="memItemLeft" align="right" valign="top"><a id="ae1db2296afa9011b6a803071d5e71e93" name="ae1db2296afa9011b6a803071d5e71e93"></a>
-std::vector&lt; std::pair&lt; Action, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BestResponseActionValues</b> (const std::string &amp;infostate)</td></tr>
+<tr class="memitem:ae1db2296afa9011b6a803071d5e71e93" id="r_ae1db2296afa9011b6a803071d5e71e93"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; Action, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1db2296afa9011b6a803071d5e71e93">BestResponseActionValues</a> (const std::string &amp;infostate)</td></tr>
 <tr class="separator:ae1db2296afa9011b6a803071d5e71e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed07ae8ab771724232f89b04d22519cb" id="r_aed07ae8ab771724232f89b04d22519cb"><td class="memItemLeft" align="right" valign="top"><a id="aed07ae8ab771724232f89b04d22519cb" name="aed07ae8ab771724232f89b04d22519cb"></a>
-std::vector&lt; std::pair&lt; Action, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BestResponseActionValues</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
+<tr class="memitem:aed07ae8ab771724232f89b04d22519cb" id="r_aed07ae8ab771724232f89b04d22519cb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; Action, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed07ae8ab771724232f89b04d22519cb">BestResponseActionValues</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
 <tr class="separator:aed07ae8ab771724232f89b04d22519cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31b79df31ca06c9529efa86a152cbb36" id="r_a31b79df31ca06c9529efa86a152cbb36"><td class="memItemLeft" align="right" valign="top"><a id="a31b79df31ca06c9529efa86a152cbb36" name="a31b79df31ca06c9529efa86a152cbb36"></a>
-std::unordered_map&lt; std::string, Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetBestResponseActions</b> ()</td></tr>
+<tr class="memitem:a31b79df31ca06c9529efa86a152cbb36" id="r_a31b79df31ca06c9529efa86a152cbb36"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31b79df31ca06c9529efa86a152cbb36">GetBestResponseActions</a> ()</td></tr>
 <tr class="separator:a31b79df31ca06c9529efa86a152cbb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3c305b1a6efc899f08ec6e0a5ef983a" id="r_af3c305b1a6efc899f08ec6e0a5ef983a"><td class="memItemLeft" align="right" valign="top"><a id="af3c305b1a6efc899f08ec6e0a5ef983a" name="af3c305b1a6efc899f08ec6e0a5ef983a"></a>
-<a class="el" href="../../da/dad/classopen__spiel_1_1_tabular_policy.html">TabularPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetBestResponsePolicy</b> ()</td></tr>
+<tr class="memitem:af3c305b1a6efc899f08ec6e0a5ef983a" id="r_af3c305b1a6efc899f08ec6e0a5ef983a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dad/classopen__spiel_1_1_tabular_policy.html">TabularPolicy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3c305b1a6efc899f08ec6e0a5ef983a">GetBestResponsePolicy</a> ()</td></tr>
 <tr class="separator:af3c305b1a6efc899f08ec6e0a5ef983a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3fe69af60d64016afcb1ee48a7e3679" id="r_ae3fe69af60d64016afcb1ee48a7e3679"><td class="memItemLeft" align="right" valign="top"><a id="ae3fe69af60d64016afcb1ee48a7e3679" name="ae3fe69af60d64016afcb1ee48a7e3679"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> (const std::string &amp;history)</td></tr>
+<tr class="memitem:ae3fe69af60d64016afcb1ee48a7e3679" id="r_ae3fe69af60d64016afcb1ee48a7e3679"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3fe69af60d64016afcb1ee48a7e3679">Value</a> (const std::string &amp;history)</td></tr>
 <tr class="separator:ae3fe69af60d64016afcb1ee48a7e3679"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68d00fafe04e59f68dba0f538931e6b7" id="r_a68d00fafe04e59f68dba0f538931e6b7"><td class="memItemLeft" align="right" valign="top"><a id="a68d00fafe04e59f68dba0f538931e6b7" name="a68d00fafe04e59f68dba0f538931e6b7"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
+<tr class="memitem:a68d00fafe04e59f68dba0f538931e6b7" id="r_a68d00fafe04e59f68dba0f538931e6b7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68d00fafe04e59f68dba0f538931e6b7">Value</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
 <tr class="separator:a68d00fafe04e59f68dba0f538931e6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2ccccfbdd7aa06d896df895ddddf906" id="r_ad2ccccfbdd7aa06d896df895ddddf906"><td class="memItemLeft" align="right" valign="top"><a id="ad2ccccfbdd7aa06d896df895ddddf906" name="ad2ccccfbdd7aa06d896df895ddddf906"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPolicy</b> (const <a class="el" href="../../d4/de8/classopen__spiel_1_1_policy.html">Policy</a> *policy)</td></tr>
+<tr class="memitem:ad2ccccfbdd7aa06d896df895ddddf906" id="r_ad2ccccfbdd7aa06d896df895ddddf906"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2ccccfbdd7aa06d896df895ddddf906">SetPolicy</a> (const <a class="el" href="../../d4/de8/classopen__spiel_1_1_policy.html">Policy</a> *policy)</td></tr>
 <tr class="separator:ad2ccccfbdd7aa06d896df895ddddf906"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac35be5095b6630580cbb2028cfc3639d" id="r_ac35be5095b6630580cbb2028cfc3639d"><td class="memItemLeft" align="right" valign="top"><a id="ac35be5095b6630580cbb2028cfc3639d" name="ac35be5095b6630580cbb2028cfc3639d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPolicy</b> (const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;policy_table)</td></tr>
+<tr class="memitem:ac35be5095b6630580cbb2028cfc3639d" id="r_ac35be5095b6630580cbb2028cfc3639d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac35be5095b6630580cbb2028cfc3639d">SetPolicy</a> (const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;policy_table)</td></tr>
 <tr class="separator:ac35be5095b6630580cbb2028cfc3639d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00055">55</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af607dba3d6878c33cf6e3d8162402cbb" name="af607dba3d6878c33cf6e3d8162402cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af607dba3d6878c33cf6e3d8162402cbb">&#9670;&#160;</a></span>TabularBestResponse() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::TabularBestResponse::TabularBestResponse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Player</td>          <td class="paramname"><span class="paramname"><em>best_responder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/de8/classopen__spiel_1_1_policy.html">Policy</a> *</td>          <td class="paramname"><span class="paramname"><em>policy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>prob_cut_threshold</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1.0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>action_value_tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1.0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d3e/best__response_8cc_source.html#l00034">34</a> of file <a class="el" href="../../df/d3e/best__response_8cc_source.html">best_response.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>    : best_responder_(best_responder),</div>
+<div class="line"><span class="lineno">   40</span>      tabular_policy_container_(),</div>
+<div class="line"><span class="lineno">   41</span>      policy_(policy),</div>
+<div class="line"><span class="lineno">   42</span>      tree_(HistoryTree(game.NewInitialState(), best_responder_)),</div>
+<div class="line"><span class="lineno">   43</span>      num_players_(game.NumPlayers()),</div>
+<div class="line"><span class="lineno">   44</span>      prob_cut_threshold_(prob_cut_threshold),</div>
+<div class="line"><span class="lineno">   45</span>      action_value_tolerance_(action_value_tolerance),</div>
+<div class="line"><span class="lineno">   46</span>      infosets_(GetAllInfoSets(game.NewInitialState(), best_responder, policy,</div>
+<div class="line"><span class="lineno">   47</span>                               &amp;tree_)),</div>
+<div class="line"><span class="lineno">   48</span>      root_(game.NewInitialState()),</div>
+<div class="line"><span class="lineno">   49</span>      dummy_policy_(<span class="keyword">new</span> TabularPolicy(GetUniformPolicy(game))) {</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">if</span> (game.GetType().dynamics != GameType::Dynamics::kSequential) {</div>
+<div class="line"><span class="lineno">   51</span>    SpielFatalError(<span class="stringliteral">&quot;The game must be turn-based.&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>  }</div>
+<div class="line"><span class="lineno">   53</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abca249f6fbb1de90f41edb6f065483c0" name="abca249f6fbb1de90f41edb6f065483c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abca249f6fbb1de90f41edb6f065483c0">&#9670;&#160;</a></span>TabularBestResponse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::TabularBestResponse::TabularBestResponse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Player</td>          <td class="paramname"><span class="paramname"><em>best_responder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>policy_table</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>prob_cut_threshold</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1.0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>action_value_tolerance</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1.0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d3e/best__response_8cc_source.html#l00055">55</a> of file <a class="el" href="../../df/d3e/best__response_8cc_source.html">best_response.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>    : best_responder_(best_responder),</div>
+<div class="line"><span class="lineno">   60</span>      tabular_policy_container_(policy_table),</div>
+<div class="line"><span class="lineno">   61</span>      policy_(&amp;tabular_policy_container_),</div>
+<div class="line"><span class="lineno">   62</span>      tree_(HistoryTree(game.NewInitialState(), best_responder_)),</div>
+<div class="line"><span class="lineno">   63</span>      num_players_(game.NumPlayers()),</div>
+<div class="line"><span class="lineno">   64</span>      prob_cut_threshold_(prob_cut_threshold),</div>
+<div class="line"><span class="lineno">   65</span>      action_value_tolerance_(action_value_tolerance),</div>
+<div class="line"><span class="lineno">   66</span>      infosets_(GetAllInfoSets(game.NewInitialState(), best_responder, policy_,</div>
+<div class="line"><span class="lineno">   67</span>                               &amp;tree_)),</div>
+<div class="line"><span class="lineno">   68</span>      root_(game.NewInitialState()),</div>
+<div class="line"><span class="lineno">   69</span>      dummy_policy_(<span class="keyword">new</span> TabularPolicy(GetUniformPolicy(game))) {</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">if</span> (game.GetType().dynamics != GameType::Dynamics::kSequential) {</div>
+<div class="line"><span class="lineno">   71</span>    SpielFatalError(<span class="stringliteral">&quot;The game must be turn-based.&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span>  }</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af299a311c6e4c00a982aed3f3025f8d0" name="af299a311c6e4c00a982aed3f3025f8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af299a311c6e4c00a982aed3f3025f8d0">&#9670;&#160;</a></span>BestResponseAction() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action open_spiel::algorithms::TabularBestResponse::BestResponseAction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00073">73</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                {</div>
+<div class="line"><span class="lineno">   74</span>    SPIEL_CHECK_EQ(state.CurrentPlayer(), best_responder_);</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> BestResponseAction(state.InformationStateString(best_responder_));</div>
+<div class="line"><span class="lineno">   76</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4d5ecd3bb0dca8223203f1da94ac6953" name="a4d5ecd3bb0dca8223203f1da94ac6953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5ecd3bb0dca8223203f1da94ac6953">&#9670;&#160;</a></span>BestResponseAction() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action open_spiel::algorithms::TabularBestResponse::BestResponseAction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>infostate</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d3e/best__response_8cc_source.html#l00194">194</a> of file <a class="el" href="../../df/d3e/best__response_8cc_source.html">best_response.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                                         {</div>
+<div class="line"><span class="lineno">  195</span>  <span class="keyword">auto</span> it = best_response_policy_.find(infostate);</div>
+<div class="line"><span class="lineno">  196</span>  <span class="keywordflow">if</span> (it != best_response_policy_.end()) <span class="keywordflow">return</span> it-&gt;second.begin()-&gt;first;</div>
+<div class="line"><span class="lineno">  197</span>  std::vector&lt;std::pair&lt;HistoryNode*, double&gt;&gt; infoset = infosets_[infostate];</div>
+<div class="line"><span class="lineno">  198</span>  Action best_action = -1;</div>
+<div class="line"><span class="lineno">  199</span>  <span class="keywordtype">double</span> best_value = std::numeric_limits&lt;double&gt;::lowest();</div>
+<div class="line"><span class="lineno">  200</span>  <span class="comment">// The legal actions are the same for all children, so we arbitrarily pick</span></div>
+<div class="line"><span class="lineno">  201</span>  <span class="comment">// the first one to get the legal actions from.</span></div>
+<div class="line"><span class="lineno">  202</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; action : infoset[0].first-&gt;GetChildActions()) {</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordtype">double</span> value = 0;</div>
+<div class="line"><span class="lineno">  204</span>    <span class="comment">// Prob here is the counterfactual reach-weighted probability.</span></div>
+<div class="line"><span class="lineno">  205</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; state_and_prob : infoset) {</div>
+<div class="line"><span class="lineno">  206</span>      <span class="keywordflow">if</span> (state_and_prob.second &lt;= prob_cut_threshold_) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  207</span>      HistoryNode* state_node = state_and_prob.first;</div>
+<div class="line"><span class="lineno">  208</span>      HistoryNode* child_node = state_node-&gt;GetChild(action).second;</div>
+<div class="line"><span class="lineno">  209</span>      SPIEL_CHECK_TRUE(child_node != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  210</span>      value += state_and_prob.second * Value(child_node-&gt;GetHistory());</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
+<div class="line"><span class="lineno">  212</span>    <span class="keywordflow">if</span> (value &gt; best_value) {</div>
+<div class="line"><span class="lineno">  213</span>      best_value = value;</div>
+<div class="line"><span class="lineno">  214</span>      best_action = action;</div>
+<div class="line"><span class="lineno">  215</span>    }</div>
+<div class="line"><span class="lineno">  216</span>  }</div>
+<div class="line"><span class="lineno">  217</span>  <span class="keywordflow">if</span> (best_action == -1) SpielFatalError(<span class="stringliteral">&quot;No action was chosen.&quot;</span>);</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>  ActionsAndProbs actions_and_probs;</div>
+<div class="line"><span class="lineno">  220</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; action : infoset[0].first-&gt;GetChildActions()) {</div>
+<div class="line"><span class="lineno">  221</span>    <span class="keywordtype">double</span> prob = 0.0;</div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">if</span> (action == best_action) prob = 1.0;</div>
+<div class="line"><span class="lineno">  223</span>    actions_and_probs.push_back(std::make_pair(action, prob));</div>
+<div class="line"><span class="lineno">  224</span>  }</div>
+<div class="line"><span class="lineno">  225</span>  best_response_policy_[infostate] = actions_and_probs;</div>
+<div class="line"><span class="lineno">  226</span>  best_response_actions_[infostate] = best_action;</div>
+<div class="line"><span class="lineno">  227</span>  <span class="keywordflow">return</span> best_action;</div>
+<div class="line"><span class="lineno">  228</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3da6619471bcb791b43aff362eeefa1c" name="a3da6619471bcb791b43aff362eeefa1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da6619471bcb791b43aff362eeefa1c">&#9670;&#160;</a></span>BestResponseActions() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Action &gt; open_spiel::algorithms::TabularBestResponse::BestResponseActions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00083">83</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                            {</div>
+<div class="line"><span class="lineno">   85</span>    SPIEL_CHECK_EQ(state.CurrentPlayer(), best_responder_);</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">return</span> BestResponseActions(state.InformationStateString(best_responder_),</div>
+<div class="line"><span class="lineno">   87</span>                               tolerance);</div>
+<div class="line"><span class="lineno">   88</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74dc964230d465197c22d0681c672336" name="a74dc964230d465197c22d0681c672336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74dc964230d465197c22d0681c672336">&#9670;&#160;</a></span>BestResponseActions() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Action &gt; open_spiel::algorithms::TabularBestResponse::BestResponseActions </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>infostate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d3e/best__response_8cc_source.html#l00229">229</a> of file <a class="el" href="../../df/d3e/best__response_8cc_source.html">best_response.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>                                                  {</div>
+<div class="line"><span class="lineno">  231</span>  <a class="code hl_class" href="../../d8/dda/classabsl_1_1btree__set.html">absl::btree_set&lt;Action&gt;</a> best_actions;</div>
+<div class="line"><span class="lineno">  232</span>  std::vector&lt;std::pair&lt;Action, double&gt;&gt; action_values;</div>
+<div class="line"><span class="lineno">  233</span>  std::vector&lt;std::pair&lt;HistoryNode*, double&gt;&gt; infoset =</div>
+<div class="line"><span class="lineno">  234</span>      infosets_.at(infostate);</div>
+<div class="line"><span class="lineno">  235</span>  <span class="keywordtype">double</span> best_value = std::numeric_limits&lt;double&gt;::lowest();</div>
+<div class="line"><span class="lineno">  236</span>  <span class="comment">// The legal actions are the same for all children, so we arbitrarily pick</span></div>
+<div class="line"><span class="lineno">  237</span>  <span class="comment">// the first one to get the legal actions from.</span></div>
+<div class="line"><span class="lineno">  238</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> Action&amp; action : infoset[0].first-&gt;GetChildActions()) {</div>
+<div class="line"><span class="lineno">  239</span>    <span class="keywordtype">double</span> value = 0;</div>
+<div class="line"><span class="lineno">  240</span>    <span class="comment">// Prob here is the counterfactual reach-weighted probability.</span></div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [state_node, prob] : infoset) {</div>
+<div class="line"><span class="lineno">  242</span>      <span class="keywordflow">if</span> (prob &lt;= prob_cut_threshold_) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  243</span>      HistoryNode* child_node = state_node-&gt;GetChild(action).second;</div>
+<div class="line"><span class="lineno">  244</span>      SPIEL_CHECK_TRUE(child_node != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  245</span>      value += prob * Value(child_node-&gt;GetHistory());</div>
+<div class="line"><span class="lineno">  246</span>    }</div>
+<div class="line"><span class="lineno">  247</span>    action_values.push_back({action, value});</div>
+<div class="line"><span class="lineno">  248</span>    <span class="keywordflow">if</span> (value &gt; best_value) {</div>
+<div class="line"><span class="lineno">  249</span>      best_value = value;</div>
+<div class="line"><span class="lineno">  250</span>    }</div>
+<div class="line"><span class="lineno">  251</span>  }</div>
+<div class="line"><span class="lineno">  252</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [action, value] : action_values) {</div>
+<div class="line"><span class="lineno">  253</span>    <span class="keywordflow">if</span> (value &gt;= best_value - tolerance) {</div>
+<div class="line"><span class="lineno">  254</span>      best_actions.insert(action);</div>
+<div class="line"><span class="lineno">  255</span>    }</div>
+<div class="line"><span class="lineno">  256</span>  }</div>
+<div class="line"><span class="lineno">  257</span>  <span class="keywordflow">if</span> (best_actions.empty()) SpielFatalError(<span class="stringliteral">&quot;No action was chosen.&quot;</span>);</div>
+<div class="line"><span class="lineno">  258</span>  ActionsAndProbs actions_and_probs;</div>
+<div class="line"><span class="lineno">  259</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; action : infoset[0].first-&gt;GetChildActions()) {</div>
+<div class="line"><span class="lineno">  260</span>    <span class="keywordtype">double</span> prob = 0.0;</div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">if</span> (best_actions.count(action)) {</div>
+<div class="line"><span class="lineno">  262</span>      prob = 1.0 / best_actions.size();</div>
+<div class="line"><span class="lineno">  263</span>    }</div>
+<div class="line"><span class="lineno">  264</span>    actions_and_probs.push_back(std::make_pair(action, prob));</div>
+<div class="line"><span class="lineno">  265</span>  }</div>
+<div class="line"><span class="lineno">  266</span>  best_response_policy_[infostate] = actions_and_probs;</div>
+<div class="line"><span class="lineno">  267</span>  <span class="keywordflow">return</span> std::vector&lt;Action&gt;(best_actions.begin(), best_actions.end());</div>
+<div class="line"><span class="lineno">  268</span>}</div>
+<div class="ttc" id="aclassabsl_1_1btree__set_html"><div class="ttname"><a href="../../d8/dda/classabsl_1_1btree__set.html">absl::btree_set</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d01/btree__set_8h_source.html#l00089">btree_set.h:93</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aed07ae8ab771724232f89b04d22519cb" name="aed07ae8ab771724232f89b04d22519cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed07ae8ab771724232f89b04d22519cb">&#9670;&#160;</a></span>BestResponseActionValues() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::pair&lt; Action, double &gt; &gt; open_spiel::algorithms::TabularBestResponse::BestResponseActionValues </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00094">94</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                          {</div>
+<div class="line"><span class="lineno">   96</span>    SPIEL_CHECK_EQ(state.CurrentPlayer(), best_responder_);</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> BestResponseActionValues(</div>
+<div class="line"><span class="lineno">   98</span>        state.InformationStateString(best_responder_));</div>
+<div class="line"><span class="lineno">   99</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae1db2296afa9011b6a803071d5e71e93" name="ae1db2296afa9011b6a803071d5e71e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1db2296afa9011b6a803071d5e71e93">&#9670;&#160;</a></span>BestResponseActionValues() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::pair&lt; Action, double &gt; &gt; open_spiel::algorithms::TabularBestResponse::BestResponseActionValues </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>infostate</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d3e/best__response_8cc_source.html#l00270">270</a> of file <a class="el" href="../../df/d3e/best__response_8cc_source.html">best_response.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                                        {</div>
+<div class="line"><span class="lineno">  271</span>  std::vector&lt;std::pair&lt;Action, double&gt;&gt; action_values;</div>
+<div class="line"><span class="lineno">  272</span>  std::vector&lt;std::pair&lt;HistoryNode*, double&gt;&gt; infoset =</div>
+<div class="line"><span class="lineno">  273</span>      infosets_.at(infostate);</div>
+<div class="line"><span class="lineno">  274</span>  action_values.reserve(infoset[0].first-&gt;GetChildActions().size());</div>
+<div class="line"><span class="lineno">  275</span>  <span class="keywordflow">for</span> (Action action : infoset[0].first-&gt;GetChildActions()) {</div>
+<div class="line"><span class="lineno">  276</span>    <span class="keywordtype">double</span> value = 0;</div>
+<div class="line"><span class="lineno">  277</span>    <span class="keywordtype">double</span> normalizer = 0;</div>
+<div class="line"><span class="lineno">  278</span>    <span class="comment">// Prob here is the counterfactual reach-weighted probability.</span></div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [state_node, prob] : infoset) {</div>
+<div class="line"><span class="lineno">  280</span>      <span class="keywordflow">if</span> (prob &lt;= prob_cut_threshold_) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  281</span>      HistoryNode* child_node = state_node-&gt;GetChild(action).second;</div>
+<div class="line"><span class="lineno">  282</span>      SPIEL_CHECK_TRUE(child_node != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  283</span>      value += prob * Value(child_node-&gt;GetHistory());</div>
+<div class="line"><span class="lineno">  284</span>      normalizer += prob;</div>
+<div class="line"><span class="lineno">  285</span>    }</div>
+<div class="line"><span class="lineno">  286</span>    SPIEL_CHECK_GT(normalizer, 0);</div>
+<div class="line"><span class="lineno">  287</span>    action_values.push_back({action, value / normalizer});</div>
+<div class="line"><span class="lineno">  288</span>  }</div>
+<div class="line"><span class="lineno">  289</span>  <span class="keywordflow">return</span> action_values;</div>
+<div class="line"><span class="lineno">  290</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a31b79df31ca06c9529efa86a152cbb36" name="a31b79df31ca06c9529efa86a152cbb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b79df31ca06c9529efa86a152cbb36">&#9670;&#160;</a></span>GetBestResponseActions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, Action &gt; open_spiel::algorithms::TabularBestResponse::GetBestResponseActions </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00106">106</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                               {</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span> (action_value_tolerance_ &gt;= 0.0)</div>
+<div class="line"><span class="lineno">  108</span>      SpielFatalError(</div>
+<div class="line"><span class="lineno">  109</span>          <span class="stringliteral">&quot;TabularBestResponse is returning the max-entropy best-response but &quot;</span></div>
+<div class="line"><span class="lineno">  110</span>          <span class="stringliteral">&quot;deterministic best-response is requested.&quot;</span>);</div>
+<div class="line"><span class="lineno">  111</span>    <span class="comment">// If the best_response_policy_ cache is empty, we fill it by</span></div>
+<div class="line"><span class="lineno">  112</span>    <span class="comment">// calculating all best responses, starting at the root.</span></div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">if</span> (best_response_actions_.empty()) Value(*root_);</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span> best_response_actions_;</div>
+<div class="line"><span class="lineno">  115</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af3c305b1a6efc899f08ec6e0a5ef983a" name="af3c305b1a6efc899f08ec6e0a5ef983a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3c305b1a6efc899f08ec6e0a5ef983a">&#9670;&#160;</a></span>GetBestResponsePolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/dad/classopen__spiel_1_1_tabular_policy.html">TabularPolicy</a> open_spiel::algorithms::TabularBestResponse::GetBestResponsePolicy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00118">118</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>                                        {</div>
+<div class="line"><span class="lineno">  119</span>    <span class="comment">// If the best_response_policy_ cache is empty, we fill it by calculating</span></div>
+<div class="line"><span class="lineno">  120</span>    <span class="comment">// all best responses, starting at the root.</span></div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">if</span> (best_response_policy_.empty()) Value(*root_);</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">return</span> TabularPolicy(best_response_policy_);</div>
+<div class="line"><span class="lineno">  123</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad2ccccfbdd7aa06d896df895ddddf906" name="ad2ccccfbdd7aa06d896df895ddddf906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2ccccfbdd7aa06d896df895ddddf906">&#9670;&#160;</a></span>SetPolicy() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::algorithms::TabularBestResponse::SetPolicy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/de8/classopen__spiel_1_1_policy.html">Policy</a> *</td>          <td class="paramname"><span class="paramname"><em>policy</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00133">133</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>                                       {</div>
+<div class="line"><span class="lineno">  134</span>    policy_ = policy;</div>
+<div class="line"><span class="lineno">  135</span>    value_cache_.clear();</div>
+<div class="line"><span class="lineno">  136</span>    best_response_actions_.clear();</div>
+<div class="line"><span class="lineno">  137</span>    best_response_policy_.clear();</div>
+<div class="line"><span class="lineno">  138</span>    <span class="comment">// TODO(author1): Replace this with something that traverses the tree</span></div>
+<div class="line"><span class="lineno">  139</span>    <span class="comment">// and rebuilds the probabilities.</span></div>
+<div class="line"><span class="lineno">  140</span>    infosets_ =</div>
+<div class="line"><span class="lineno">  141</span>        GetAllInfoSets(root_-&gt;Clone(), best_responder_, policy_, &amp;tree_);</div>
+<div class="line"><span class="lineno">  142</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac35be5095b6630580cbb2028cfc3639d" name="ac35be5095b6630580cbb2028cfc3639d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35be5095b6630580cbb2028cfc3639d">&#9670;&#160;</a></span>SetPolicy() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::algorithms::TabularBestResponse::SetPolicy </td>
+          <td>(</td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>policy_table</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00145">145</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                                                                        {</div>
+<div class="line"><span class="lineno">  147</span>    tabular_policy_container_ = TabularPolicy(policy_table);</div>
+<div class="line"><span class="lineno">  148</span>    SetPolicy(&amp;tabular_policy_container_);</div>
+<div class="line"><span class="lineno">  149</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a68d00fafe04e59f68dba0f538931e6b7" name="a68d00fafe04e59f68dba0f538931e6b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d00fafe04e59f68dba0f538931e6b7">&#9670;&#160;</a></span>Value() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double open_spiel::algorithms::TabularBestResponse::Value </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d2b/best__response_8h_source.html#l00128">128</a> of file <a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>{ <span class="keywordflow">return</span> Value(state.HistoryString()); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae3fe69af60d64016afcb1ee48a7e3679" name="ae3fe69af60d64016afcb1ee48a7e3679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3fe69af60d64016afcb1ee48a7e3679">&#9670;&#160;</a></span>Value() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double open_spiel::algorithms::TabularBestResponse::Value </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>history</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d3e/best__response_8cc_source.html#l00168">168</a> of file <a class="el" href="../../df/d3e/best__response_8cc_source.html">best_response.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>                                                          {</div>
+<div class="line"><span class="lineno">  169</span>  <span class="keyword">auto</span> it = value_cache_.find(history);</div>
+<div class="line"><span class="lineno">  170</span>  <span class="keywordflow">if</span> (it != value_cache_.end()) <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><span class="lineno">  171</span>  HistoryNode* node = tree_.GetByHistory(history);</div>
+<div class="line"><span class="lineno">  172</span>  <span class="keywordflow">if</span> (node == <span class="keyword">nullptr</span>) SpielFatalError(<span class="stringliteral">&quot;node returned is null.&quot;</span>);</div>
+<div class="line"><span class="lineno">  173</span>  <span class="keywordtype">double</span> cache_value = 0;</div>
+<div class="line"><span class="lineno">  174</span>  <span class="keywordflow">switch</span> (node-&gt;GetType()) {</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">case</span> StateType::kTerminal: {</div>
+<div class="line"><span class="lineno">  176</span>      cache_value = HandleTerminalCase(*node);</div>
+<div class="line"><span class="lineno">  177</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+<div class="line"><span class="lineno">  179</span>    <span class="keywordflow">case</span> StateType::kDecision: {</div>
+<div class="line"><span class="lineno">  180</span>      cache_value = HandleDecisionCase(node);</div>
+<div class="line"><span class="lineno">  181</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  182</span>    }</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">case</span> StateType::kChance: {</div>
+<div class="line"><span class="lineno">  184</span>      cache_value = HandleChanceCase(node);</div>
+<div class="line"><span class="lineno">  185</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  186</span>    }</div>
+<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">case</span> StateType::kMeanField: {</div>
+<div class="line"><span class="lineno">  188</span>      SpielFatalError(<span class="stringliteral">&quot;kMeanField not supported.&quot;</span>);</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
+<div class="line"><span class="lineno">  190</span>  }</div>
+<div class="line"><span class="lineno">  191</span>  value_cache_[history] = cache_value;</div>
+<div class="line"><span class="lineno">  192</span>  <span class="keywordflow">return</span> value_cache_[history];</div>
+<div class="line"><span class="lineno">  193</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/<a class="el" href="../../d7/d2b/best__response_8h_source.html">best_response.h</a></li>
-<li>open_spiel/algorithms/<b>best_response.cc</b></li>
+<li>open_spiel/algorithms/<a class="el" href="../../df/d3e/best__response_8cc_source.html">best_response.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

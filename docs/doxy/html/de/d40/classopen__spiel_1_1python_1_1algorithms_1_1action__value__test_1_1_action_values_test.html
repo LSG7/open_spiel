@@ -117,15 +117,148 @@ Collaboration diagram for open_spiel.python.algorithms.action_value_test.ActionV
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a97662e6f1e7c507ac16e277c397650f3" id="r_a97662e6f1e7c507ac16e277c397650f3"><td class="memItemLeft" align="right" valign="top"><a id="a97662e6f1e7c507ac16e277c397650f3" name="a97662e6f1e7c507ac16e277c397650f3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_runs_with_uniform_policies</b> (self, game_name, num_players)</td></tr>
+<tr class="memitem:a97662e6f1e7c507ac16e277c397650f3" id="r_a97662e6f1e7c507ac16e277c397650f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97662e6f1e7c507ac16e277c397650f3">test_runs_with_uniform_policies</a> (self, game_name, num_players)</td></tr>
 <tr class="separator:a97662e6f1e7c507ac16e277c397650f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab09c4744306f474d1a751e77e9270d77" id="r_ab09c4744306f474d1a751e77e9270d77"><td class="memItemLeft" align="right" valign="top"><a id="ab09c4744306f474d1a751e77e9270d77" name="ab09c4744306f474d1a751e77e9270d77"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_kuhn_poker_always_pass_p0</b> (self)</td></tr>
+<tr class="memitem:ab09c4744306f474d1a751e77e9270d77" id="r_ab09c4744306f474d1a751e77e9270d77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab09c4744306f474d1a751e77e9270d77">test_kuhn_poker_always_pass_p0</a> (self)</td></tr>
 <tr class="separator:ab09c4744306f474d1a751e77e9270d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/d16/action__value__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../d9/d16/action__value__test_8py_source.html">action_value_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab09c4744306f474d1a751e77e9270d77" name="ab09c4744306f474d1a751e77e9270d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09c4744306f474d1a751e77e9270d77">&#9670;&#160;</a></span>test_kuhn_poker_always_pass_p0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.action_value_test.ActionValuesTest.test_kuhn_poker_always_pass_p0 </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d16/action__value__test_8py_source.html#l00036">36</a> of file <a class="el" href="../../d9/d16/action__value__test_8py_source.html">action_value_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>  <span class="keyword">def </span>test_kuhn_poker_always_pass_p0(self):</div>
+<div class="line"><span class="lineno">   37</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   38</span>    calc = action_value.TreeWalkCalculator(game)</div>
+<div class="line"><span class="lineno">   39</span>    uniform_policy = policy.TabularPolicy(game)</div>
+<div class="line"><span class="lineno">   40</span>    always_pass_policy = policy.FirstActionPolicy(game).to_tabular()</div>
+<div class="line"><span class="lineno">   41</span>    returned_values = calc([always_pass_policy, uniform_policy],</div>
+<div class="line"><span class="lineno">   42</span>                           always_pass_policy)</div>
+<div class="line"><span class="lineno">   43</span>    root_node_values = calc.get_root_node_values(</div>
+<div class="line"><span class="lineno">   44</span>        [always_pass_policy, uniform_policy])</div>
+<div class="line"><span class="lineno">   45</span>    self.assertTrue(</div>
+<div class="line"><span class="lineno">   46</span>        np.allclose(root_node_values, returned_values.root_node_values))</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>    <span class="comment"># Action 0 == Pass. Action 1 == Bet</span></div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment"># Some values are 0 because the states are not reached, thus the expected</span></div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment"># value of that node is undefined.</span></div>
+<div class="line"><span class="lineno">   51</span>    np.testing.assert_array_almost_equal(</div>
+<div class="line"><span class="lineno">   52</span>        np.asarray([</div>
+<div class="line"><span class="lineno">   53</span>            <span class="comment"># Player 0 states</span></div>
+<div class="line"><span class="lineno">   54</span>            [-1.0, -0.5],    <span class="comment"># &#39;0&#39;</span></div>
+<div class="line"><span class="lineno">   55</span>            [-1.0, -2.0],    <span class="comment"># &#39;0pb&#39;</span></div>
+<div class="line"><span class="lineno">   56</span>            [-0.5, 0.5],     <span class="comment"># &#39;1&#39;</span></div>
+<div class="line"><span class="lineno">   57</span>            [-1.0, 0.0],     <span class="comment"># &#39;1pb&#39;</span></div>
+<div class="line"><span class="lineno">   58</span>            [0.0, 1.5],      <span class="comment"># &#39;2&#39;</span></div>
+<div class="line"><span class="lineno">   59</span>            [-1.0, 2.0],     <span class="comment"># &#39;2pb&#39;</span></div>
+<div class="line"><span class="lineno">   60</span>            <span class="comment"># Player 1 states</span></div>
+<div class="line"><span class="lineno">   61</span>            [0.0, 1.0],      <span class="comment"># &#39;1p&#39;</span></div>
+<div class="line"><span class="lineno">   62</span>            [0, 0],          <span class="comment"># Unreachable</span></div>
+<div class="line"><span class="lineno">   63</span>            [1.0, 1.0],      <span class="comment"># &#39;2p&#39;</span></div>
+<div class="line"><span class="lineno">   64</span>            [0, 0],          <span class="comment"># Unreachable</span></div>
+<div class="line"><span class="lineno">   65</span>            [-1.0, 1.0],     <span class="comment"># &#39;0p&#39;</span></div>
+<div class="line"><span class="lineno">   66</span>            [0, 0],          <span class="comment"># Unreachable</span></div>
+<div class="line"><span class="lineno">   67</span>        ]), returned_values.action_values)</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    np.testing.assert_array_almost_equal(</div>
+<div class="line"><span class="lineno">   70</span>        np.asarray([</div>
+<div class="line"><span class="lineno">   71</span>            <span class="comment"># Player 0 states</span></div>
+<div class="line"><span class="lineno">   72</span>            1 / 3,  <span class="comment"># &#39;0&#39;</span></div>
+<div class="line"><span class="lineno">   73</span>            1 / 6,  <span class="comment"># &#39;0pb&#39;</span></div>
+<div class="line"><span class="lineno">   74</span>            1 / 3,  <span class="comment"># &#39;1&#39;</span></div>
+<div class="line"><span class="lineno">   75</span>            1 / 6,  <span class="comment"># &#39;1pb&#39;</span></div>
+<div class="line"><span class="lineno">   76</span>            1 / 3,  <span class="comment"># &#39;2&#39;</span></div>
+<div class="line"><span class="lineno">   77</span>            1 / 6,  <span class="comment"># &#39;2pb&#39;</span></div>
+<div class="line"><span class="lineno">   78</span>            <span class="comment"># Player 1 states</span></div>
+<div class="line"><span class="lineno">   79</span>            1 / 3,  <span class="comment"># &#39;1p&#39;</span></div>
+<div class="line"><span class="lineno">   80</span>            0.0,  <span class="comment"># &#39;1b&#39;: zero because player 0 always play pass</span></div>
+<div class="line"><span class="lineno">   81</span>            1 / 3,  <span class="comment"># 2p&#39;</span></div>
+<div class="line"><span class="lineno">   82</span>            0.0,  <span class="comment"># &#39;2b&#39;: zero because player 0 always play pass</span></div>
+<div class="line"><span class="lineno">   83</span>            1 / 3,  <span class="comment"># &#39;0p&#39;</span></div>
+<div class="line"><span class="lineno">   84</span>            0.0,  <span class="comment"># &#39;0b&#39;:  zero because player 0 always play pass</span></div>
+<div class="line"><span class="lineno">   85</span>        ]),</div>
+<div class="line"><span class="lineno">   86</span>        returned_values.counterfactual_reach_probs)</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment"># The reach probabilities are always one, even though we have player 0</span></div>
+<div class="line"><span class="lineno">   89</span>    <span class="comment"># who only plays pass, because the unreachable nodes for player 0 are</span></div>
+<div class="line"><span class="lineno">   90</span>    <span class="comment"># terminal nodes: e.g.  &#39;x x b b p&#39; has a player 0 reach of 0, but it is</span></div>
+<div class="line"><span class="lineno">   91</span>    <span class="comment"># a terminal node, thus it does not appear in the tabular policy</span></div>
+<div class="line"><span class="lineno">   92</span>    <span class="comment"># states.</span></div>
+<div class="line"><span class="lineno">   93</span>    np.testing.assert_array_equal(</div>
+<div class="line"><span class="lineno">   94</span>        [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],</div>
+<div class="line"><span class="lineno">   95</span>        returned_values.player_reach_probs)</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>    np.testing.assert_array_almost_equal(</div>
+<div class="line"><span class="lineno">   98</span>        np.asarray([</div>
+<div class="line"><span class="lineno">   99</span>            np.array([-1/3, -1/6]),</div>
+<div class="line"><span class="lineno">  100</span>            np.array([-1/6, -1/3]),</div>
+<div class="line"><span class="lineno">  101</span>            np.array([-1/6, 1/6]),</div>
+<div class="line"><span class="lineno">  102</span>            np.array([-1/6, 0.]),</div>
+<div class="line"><span class="lineno">  103</span>            np.array([0., 0.5]),</div>
+<div class="line"><span class="lineno">  104</span>            np.array([-1/6, 1/3]),</div>
+<div class="line"><span class="lineno">  105</span>            np.array([0., 1/3]),</div>
+<div class="line"><span class="lineno">  106</span>            np.array([0., 0.]),</div>
+<div class="line"><span class="lineno">  107</span>            np.array([1/3, 1/3]),</div>
+<div class="line"><span class="lineno">  108</span>            np.array([0., 0.]),</div>
+<div class="line"><span class="lineno">  109</span>            np.array([-1/3, 1/3]),</div>
+<div class="line"><span class="lineno">  110</span>            np.array([0., 0.])</div>
+<div class="line"><span class="lineno">  111</span>        ]), returned_values.sum_cfr_reach_by_action_value)</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a97662e6f1e7c507ac16e277c397650f3" name="a97662e6f1e7c507ac16e277c397650f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97662e6f1e7c507ac16e277c397650f3">&#9670;&#160;</a></span>test_runs_with_uniform_policies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.action_value_test.ActionValuesTest.test_runs_with_uniform_policies </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_players</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d16/action__value__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../d9/d16/action__value__test_8py_source.html">action_value_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  <span class="keyword">def </span>test_runs_with_uniform_policies(self, game_name, num_players):</div>
+<div class="line"><span class="lineno">   31</span>    game = pyspiel.load_game(game_name, {<span class="stringliteral">&quot;players&quot;</span>: num_players})</div>
+<div class="line"><span class="lineno">   32</span>    calc = action_value.TreeWalkCalculator(game)</div>
+<div class="line"><span class="lineno">   33</span>    uniform_policy = policy.TabularPolicy(game)</div>
+<div class="line"><span class="lineno">   34</span>    calc.compute_all_states_action_values([uniform_policy] * num_players)</div>
+<div class="line"><span class="lineno">   35</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>action_value_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d9/d16/action__value__test_8py_source.html">action_value_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

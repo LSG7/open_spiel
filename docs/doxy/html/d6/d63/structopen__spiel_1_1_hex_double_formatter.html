@@ -105,10 +105,47 @@ Collaboration diagram for open_spiel::HexDoubleFormatter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab36fa497df65fca6d10d576613bf835b" id="r_ab36fa497df65fca6d10d576613bf835b"><td class="memItemLeft" align="right" valign="top"><a id="ab36fa497df65fca6d10d576613bf835b" name="ab36fa497df65fca6d10d576613bf835b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (std::string *out, const double &amp;d) const</td></tr>
+<tr class="memitem:ab36fa497df65fca6d10d576613bf835b" id="r_ab36fa497df65fca6d10d576613bf835b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab36fa497df65fca6d10d576613bf835b">operator()</a> (std::string *out, const double &amp;d) const</td></tr>
 <tr class="separator:ab36fa497df65fca6d10d576613bf835b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dd/d50/serialization_8h_source.html#l00042">42</a> of file <a class="el" href="../../dd/d50/serialization_8h_source.html">serialization.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab36fa497df65fca6d10d576613bf835b" name="ab36fa497df65fca6d10d576613bf835b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36fa497df65fca6d10d576613bf835b">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::HexDoubleFormatter::operator() </td>
+          <td>(</td>
+          <td class="paramtype">std::string *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;</td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d50/serialization_8h_source.html#l00043">43</a> of file <a class="el" href="../../dd/d50/serialization_8h_source.html">serialization.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                         {</div>
+<div class="line"><span class="lineno">   44</span>    absl::StrAppend(out, absl::StrFormat(<span class="stringliteral">&quot;%a&quot;</span>, d));</div>
+<div class="line"><span class="lineno">   45</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/utils/<a class="el" href="../../dd/d50/serialization_8h_source.html">serialization.h</a></li>
 </ul>

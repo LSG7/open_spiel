@@ -111,13 +111,54 @@ Collaboration diagram for TypeErasedInterface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a5a7f370f4c9f292688c29cfd8296657e" id="r_a5a7f370f4c9f292688c29cfd8296657e"><td class="memTemplParams" colspan="2"><a id="a5a7f370f4c9f292688c29cfd8296657e" name="a5a7f370f4c9f292688c29cfd8296657e"></a>
-template&lt;typename H &gt; </td></tr>
-<tr class="memitem:a5a7f370f4c9f292688c29cfd8296657e"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AbslHashValue</b> (H state, const <a class="el" href="../../d6/d40/class_type_erased_interface.html">TypeErasedInterface</a> &amp;wrapper)</td></tr>
+<tr class="memitem:a5a7f370f4c9f292688c29cfd8296657e" id="r_a5a7f370f4c9f292688c29cfd8296657e"><td class="memTemplParams" colspan="2">template&lt;typename H &gt; </td></tr>
+<tr class="memitem:a5a7f370f4c9f292688c29cfd8296657e"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5a7f370f4c9f292688c29cfd8296657e">AbslHashValue</a> (H state, const <a class="el" href="../../d6/d40/class_type_erased_interface.html">TypeErasedInterface</a> &amp;wrapper)</td></tr>
 <tr class="separator:a5a7f370f4c9f292688c29cfd8296657e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html#l00048">48</a> of file <a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html">hash_benchmark.cc</a>.</p>
+</div><h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a5a7f370f4c9f292688c29cfd8296657e" name="a5a7f370f4c9f292688c29cfd8296657e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a7f370f4c9f292688c29cfd8296657e">&#9670;&#160;</a></span>AbslHashValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">H AbslHashValue </td>
+          <td>(</td>
+          <td class="paramtype">H</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d6/d40/class_type_erased_interface.html">TypeErasedInterface</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>wrapper</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html#l00053">53</a> of file <a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html">hash_benchmark.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                                      {</div>
+<div class="line"><span class="lineno">   54</span>    state = H::combine(std::move(state), std::type_index(<span class="keyword">typeid</span>(wrapper)));</div>
+<div class="line"><span class="lineno">   55</span>    wrapper.HashValue(absl::HashState::Create(&amp;state));</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> state;</div>
+<div class="line"><span class="lineno">   57</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/hash/<b>hash_benchmark.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/hash/<a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html">hash_benchmark.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

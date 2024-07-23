@@ -97,18 +97,66 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0bcebe05dc4058ab14cb6933bf3d196c" id="r_a0bcebe05dc4058ab14cb6933bf3d196c"><td class="memItemLeft" align="right" valign="top"><a id="a0bcebe05dc4058ab14cb6933bf3d196c" name="a0bcebe05dc4058ab14cb6933bf3d196c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (_)</td></tr>
+<tr class="memitem:a0bcebe05dc4058ab14cb6933bf3d196c" id="r_a0bcebe05dc4058ab14cb6933bf3d196c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bcebe05dc4058ab14cb6933bf3d196c">main</a> (_)</td></tr>
 <tr class="separator:a0bcebe05dc4058ab14cb6933bf3d196c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a57c2325c6ea0ea20978315b076c44439" id="r_a57c2325c6ea0ea20978315b076c44439"><td class="memItemLeft" align="right" valign="top"><a id="a57c2325c6ea0ea20978315b076c44439" name="a57c2325c6ea0ea20978315b076c44439"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:a57c2325c6ea0ea20978315b076c44439" id="r_a57c2325c6ea0ea20978315b076c44439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57c2325c6ea0ea20978315b076c44439">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:a57c2325c6ea0ea20978315b076c44439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Example use of the CFR algorithm on Kuhn Poker.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">Example use of the CFR algorithm on Kuhn Poker.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a0bcebe05dc4058ab14cb6933bf3d196c" name="a0bcebe05dc4058ab14cb6933bf3d196c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bcebe05dc4058ab14cb6933bf3d196c">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.discounted_cfr.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/de5/examples_2discounted__cfr_8py_source.html#l00035">35</a> of file <a class="el" href="../../de/de5/examples_2discounted__cfr_8py_source.html">discounted_cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(_):</div>
+<div class="line"><span class="lineno">   36</span>  game = pyspiel.load_game(FLAGS.game)</div>
+<div class="line"><span class="lineno">   37</span>  discounted_cfr_solver = discounted_cfr.DCFRSolver(game)</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(FLAGS.iterations):</div>
+<div class="line"><span class="lineno">   40</span>    discounted_cfr_solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span> i % FLAGS.print_freq == 0:</div>
+<div class="line"><span class="lineno">   42</span>      conv = exploitability.exploitability(</div>
+<div class="line"><span class="lineno">   43</span>          game, discounted_cfr_solver.average_policy())</div>
+<div class="line"><span class="lineno">   44</span>      print(<span class="stringliteral">&quot;Iteration {} exploitability {}&quot;</span>.format(i, conv))</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a57c2325c6ea0ea20978315b076c44439" name="a57c2325c6ea0ea20978315b076c44439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c2325c6ea0ea20978315b076c44439">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.discounted_cfr.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/de5/examples_2discounted__cfr_8py_source.html#l00024">24</a> of file <a class="el" href="../../de/de5/examples_2discounted__cfr_8py_source.html">discounted_cfr.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

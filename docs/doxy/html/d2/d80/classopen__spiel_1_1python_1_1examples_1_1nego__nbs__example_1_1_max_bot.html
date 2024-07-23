@@ -117,14 +117,38 @@ Collaboration diagram for open_spiel.python.examples.nego_nbs_example.MaxBot:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae1494127847e5f8c2c72505f48951d73" id="r_ae1494127847e5f8c2c72505f48951d73"><td class="memItemLeft" align="right" valign="top"><a id="ae1494127847e5f8c2c72505f48951d73" name="ae1494127847e5f8c2c72505f48951d73"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self)</td></tr>
+<tr class="memitem:ae1494127847e5f8c2c72505f48951d73" id="r_ae1494127847e5f8c2c72505f48951d73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1494127847e5f8c2c72505f48951d73">__init__</a> (self)</td></tr>
 <tr class="separator:ae1494127847e5f8c2c72505f48951d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43ec23d542ca18f91a37b5a529aebbed" id="r_a43ec23d542ca18f91a37b5a529aebbed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43ec23d542ca18f91a37b5a529aebbed">step</a> (self, state)</td></tr>
 <tr class="separator:a43ec23d542ca18f91a37b5a529aebbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Finds the single (deterministic) trade offer that maximizes the NBS.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">Finds the single (deterministic) trade offer that maximizes the NBS.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d8/d06/nego__nbs__example_8py_source.html#l00220">220</a> of file <a class="el" href="../../d8/d06/nego__nbs__example_8py_source.html">nego_nbs_example.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae1494127847e5f8c2c72505f48951d73" name="ae1494127847e5f8c2c72505f48951d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1494127847e5f8c2c72505f48951d73">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.nego_nbs_example.MaxBot.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d06/nego__nbs__example_8py_source.html#l00223">223</a> of file <a class="el" href="../../d8/d06/nego__nbs__example_8py_source.html">nego_nbs_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  223</span>  <span class="keyword">def </span>__init__(self):</div>
+<div class="line"><span class="lineno">  224</span>    <span class="keywordflow">pass</span></div>
+<div class="line"><span class="lineno">  225</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a43ec23d542ca18f91a37b5a529aebbed" name="a43ec23d542ca18f91a37b5a529aebbed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43ec23d542ca18f91a37b5a529aebbed">&#9670;&#160;</a></span>step()</h2>
 
@@ -151,7 +175,39 @@ Player 1 just always agrees.
 
 Args:
   state: the OpenSpiel state to act from.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d8/d06/nego__nbs__example_8py_source.html#l00226">226</a> of file <a class="el" href="../../d8/d06/nego__nbs__example_8py_source.html">nego_nbs_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>  <span class="keyword">def </span>step(self, state):</div>
+<div class="line"><span class="lineno">  227</span>    <span class="stringliteral">&quot;&quot;&quot;Returns the NBS-maximizing action.</span></div>
+<div class="line"><span class="lineno">  228</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  229</span><span class="stringliteral">    If i&#39;m player 0, then search over all possible moves, assume player 2</span></div>
+<div class="line"><span class="lineno">  230</span><span class="stringliteral">    takes the agree action, and choose the action that maximizes the NBS</span></div>
+<div class="line"><span class="lineno">  231</span><span class="stringliteral">    Player 1 just always agrees.</span></div>
+<div class="line"><span class="lineno">  232</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  233</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  234</span><span class="stringliteral">      state: the OpenSpiel state to act from.</span></div>
+<div class="line"><span class="lineno">  235</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  236</span>    player = state.current_player()</div>
+<div class="line"><span class="lineno">  237</span>    <span class="keywordflow">if</span> player == 1:</div>
+<div class="line"><span class="lineno">  238</span>      <span class="keywordflow">return</span> state.agree_action()</div>
+<div class="line"><span class="lineno">  239</span>    max_nbs = -1</div>
+<div class="line"><span class="lineno">  240</span>    max_action = -1</div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> state.legal_actions():</div>
+<div class="line"><span class="lineno">  242</span>      state_clone = state.clone()</div>
+<div class="line"><span class="lineno">  243</span>      state_clone.apply_action(action)</div>
+<div class="line"><span class="lineno">  244</span>      state_clone.apply_action(state.agree_action())</div>
+<div class="line"><span class="lineno">  245</span>      returns = state_clone.returns()</div>
+<div class="line"><span class="lineno">  246</span>      nbs = np.prod(returns)</div>
+<div class="line"><span class="lineno">  247</span>      <span class="keywordflow">if</span> nbs &gt; max_nbs:</div>
+<div class="line"><span class="lineno">  248</span>        max_nbs = nbs</div>
+<div class="line"><span class="lineno">  249</span>        max_action = action</div>
+<div class="line"><span class="lineno">  250</span>    <span class="keyword">assert</span> max_action &gt;= 0</div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">return</span> max_action</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00359">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.evaluate_and_update_policy()</a>, <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00350">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.multiple_steps()</a>, <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00126">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.solve_yield()</a>, <a class="el" href="../../d4/d2e/nash__evolutionary__search_8py_source.html#l00094">nash_evolutionary_search.NashCMAES.step_for()</a>, <a class="el" href="../../df/dd1/nash__random__search_8py_source.html#l00100">nash_random_search.NashRandomSearch.step_for()</a>, <a class="el" href="../../d2/d0e/bandit__regret_8py_source.html#l00363">open_spiel.python.mfg.algorithms.bandit_regret.PolynomialWeightAlgorithm.step_for()</a>, and <a class="el" href="../../dd/ddd/regret__minimizer_8py_source.html#l00107">regret_minimizer.RegretMinimizer.step_for()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d80/classopen__spiel_1_1python_1_1examples_1_1nego__nbs__example_1_1_max_bot_a43ec23d542ca18f91a37b5a529aebbed_icgraph.png" border="0" usemap="#ad2/d80/classopen__spiel_1_1python_1_1examples_1_1nego__nbs__example_1_1_max_bot_a43ec23d542ca18f91a37b5a529aebbed_icgraph" alt=""/></div>
@@ -183,7 +239,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/examples/<b>nego_nbs_example.py</b></li>
+<li>open_spiel/python/examples/<a class="el" href="../../d8/d06/nego__nbs__example_8py_source.html">nego_nbs_example.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

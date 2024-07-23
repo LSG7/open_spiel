@@ -106,16 +106,71 @@ Collaboration diagram for absl::variant_internal::MakeVisitationMatrix&lt; Retur
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a6232e694e84c16bd3b1c8be53b65c40f" id="r_a6232e694e84c16bd3b1c8be53b65c40f"><td class="memItemLeft" align="right" valign="top"><a id="a6232e694e84c16bd3b1c8be53b65c40f" name="a6232e694e84c16bd3b1c8be53b65c40f"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ResultType</b> = ReturnType (*)(FunctionObject&amp;&amp;)</td></tr>
+<tr class="memitem:a6232e694e84c16bd3b1c8be53b65c40f" id="r_a6232e694e84c16bd3b1c8be53b65c40f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6232e694e84c16bd3b1c8be53b65c40f">ResultType</a> = ReturnType (*)(FunctionObject&amp;&amp;)</td></tr>
 <tr class="separator:a6232e694e84c16bd3b1c8be53b65c40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af34fd37f8f532b4ead596d9ea308e8de" id="r_af34fd37f8f532b4ead596d9ea308e8de"><td class="memItemLeft" align="right" valign="top"><a id="af34fd37f8f532b4ead596d9ea308e8de" name="af34fd37f8f532b4ead596d9ea308e8de"></a>
-static constexpr ResultType&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> ()</td></tr>
+<tr class="memitem:af34fd37f8f532b4ead596d9ea308e8de" id="r_af34fd37f8f532b4ead596d9ea308e8de"><td class="memItemLeft" align="right" valign="top">static constexpr ResultType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af34fd37f8f532b4ead596d9ea308e8de">Run</a> ()</td></tr>
 <tr class="separator:af34fd37f8f532b4ead596d9ea308e8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class ReturnType, class FunctionObject, std::size_t... BoundIndices&gt;<br />
+struct absl::variant_internal::MakeVisitationMatrix&lt; ReturnType, FunctionObject, index_sequence&lt;&gt;, index_sequence&lt; BoundIndices... &gt; &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00221">221</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a6232e694e84c16bd3b1c8be53b65c40f" name="a6232e694e84c16bd3b1c8be53b65c40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6232e694e84c16bd3b1c8be53b65c40f">&#9670;&#160;</a></span>ResultType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ReturnType , class FunctionObject , std::size_t... BoundIndices&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d8c/structabsl_1_1variant__internal_1_1_make_visitation_matrix.html">absl::variant_internal::MakeVisitationMatrix</a>&lt; ReturnType, FunctionObject, <a class="el" href="../../d1/dd9/structabsl_1_1integer__sequence.html">index_sequence</a>&lt;&gt;, <a class="el" href="../../d1/dd9/structabsl_1_1integer__sequence.html">index_sequence</a>&lt; BoundIndices... &gt; &gt;::ResultType = ReturnType (*)(FunctionObject&amp;&amp;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00223">223</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af34fd37f8f532b4ead596d9ea308e8de" name="af34fd37f8f532b4ead596d9ea308e8de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af34fd37f8f532b4ead596d9ea308e8de">&#9670;&#160;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ReturnType , class FunctionObject , std::size_t... BoundIndices&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr ResultType <a class="el" href="../../d5/d8c/structabsl_1_1variant__internal_1_1_make_visitation_matrix.html">absl::variant_internal::MakeVisitationMatrix</a>&lt; ReturnType, FunctionObject, <a class="el" href="../../d1/dd9/structabsl_1_1integer__sequence.html">index_sequence</a>&lt;&gt;, <a class="el" href="../../d1/dd9/structabsl_1_1integer__sequence.html">index_sequence</a>&lt; BoundIndices... &gt; &gt;::Run </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00224">224</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>                                    {</div>
+<div class="line"><span class="lineno">  225</span>    <span class="keywordflow">return</span> &amp;call_with_indices&lt;ReturnType, FunctionObject,</div>
+<div class="line"><span class="lineno">  226</span>                              (BoundIndices - 1)...&gt;;</div>
+<div class="line"><span class="lineno">  227</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a></li>
 </ul>

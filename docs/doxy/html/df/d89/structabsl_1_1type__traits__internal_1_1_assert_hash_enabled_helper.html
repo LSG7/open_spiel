@@ -105,11 +105,47 @@ Collaboration diagram for absl::type_traits_internal::AssertHashEnabledHelper:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a9ae7a6b434e9cb0d8af7a805fb5ef33e" id="r_a9ae7a6b434e9cb0d8af7a805fb5ef33e"><td class="memTemplParams" colspan="2"><a id="a9ae7a6b434e9cb0d8af7a805fb5ef33e" name="a9ae7a6b434e9cb0d8af7a805fb5ef33e"></a>
-template&lt;class... Ts&gt; </td></tr>
-<tr class="memitem:a9ae7a6b434e9cb0d8af7a805fb5ef33e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>AssertHashEnabled</b> ()</td></tr>
+<tr class="memitem:a9ae7a6b434e9cb0d8af7a805fb5ef33e" id="r_a9ae7a6b434e9cb0d8af7a805fb5ef33e"><td class="memTemplParams" colspan="2">template&lt;class... Ts&gt; </td></tr>
+<tr class="memitem:a9ae7a6b434e9cb0d8af7a805fb5ef33e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9ae7a6b434e9cb0d8af7a805fb5ef33e">AssertHashEnabled</a> ()</td></tr>
 <tr class="separator:a9ae7a6b434e9cb0d8af7a805fb5ef33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/d63/type__traits_8h_source.html#l00712">712</a> of file <a class="el" href="../../df/d63/type__traits_8h_source.html">type_traits.h</a>.</p>
+</div><h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a9ae7a6b434e9cb0d8af7a805fb5ef33e" name="a9ae7a6b434e9cb0d8af7a805fb5ef33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae7a6b434e9cb0d8af7a805fb5ef33e">&#9670;&#160;</a></span>AssertHashEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AssertHashEnabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d63/type__traits_8h_source.html#l00749">749</a> of file <a class="el" href="../../df/d63/type__traits_8h_source.html">type_traits.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  749</span>                                {</div>
+<div class="line"><span class="lineno">  750</span>  <span class="keyword">using </span>Helper = AssertHashEnabledHelper;</div>
+<div class="line"><span class="lineno">  751</span>  Helper::Sink(Helper::DoIt&lt;Ts&gt;()...);</div>
+<div class="line"><span class="lineno">  752</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/meta/<a class="el" href="../../df/d63/type__traits_8h_source.html">type_traits.h</a></li>
 </ul>

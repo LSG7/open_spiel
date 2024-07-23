@@ -120,7 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afcbf1c6823945a3991a7c05d27360ee8" id="r_afcbf1c6823945a3991a7c05d27360ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcbf1c6823945a3991a7c05d27360ee8">test_policy_value</a> (self, name)</td></tr>
 <tr class="separator:afcbf1c6823945a3991a7c05d27360ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d3/df0/policy__value__test_8py_source.html#l00028">28</a> of file <a class="el" href="../../d3/df0/policy__value__test_8py_source.html">policy_value_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afcbf1c6823945a3991a7c05d27360ee8" name="afcbf1c6823945a3991a7c05d27360ee8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afcbf1c6823945a3991a7c05d27360ee8">&#9670;&#160;</a></span>test_policy_value()</h2>
 
@@ -144,10 +147,27 @@ Public Member Functions</h2></td></tr>
 Args:
   name: Name of the game.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d3/df0/policy__value__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../d3/df0/policy__value__test_8py_source.html">policy_value_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>  <span class="keyword">def </span>test_policy_value(self, name):</div>
+<div class="line"><span class="lineno">   33</span>    <span class="stringliteral">&quot;&quot;&quot;Checks if the value of a policy computation works.</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral">      name: Name of the game.</span></div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   38</span>    game = pyspiel.load_game(name)</div>
+<div class="line"><span class="lineno">   39</span>    uniform_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   40</span>    dist = distribution.DistributionPolicy(game, uniform_policy)</div>
+<div class="line"><span class="lineno">   41</span>    py_value = policy_value.PolicyValue(game, dist, uniform_policy,</div>
+<div class="line"><span class="lineno">   42</span>                                        value.TabularValueFunction(game))</div>
+<div class="line"><span class="lineno">   43</span>    py_val = py_value(game.new_initial_state())</div>
+<div class="line"><span class="lineno">   44</span>    self.assertAlmostEqual(py_val, 27.215850929940448)</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/<b>policy_value_test.py</b></li>
+<li>open_spiel/python/mfg/algorithms/<a class="el" href="../../d3/df0/policy__value__test_8py_source.html">policy_value_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

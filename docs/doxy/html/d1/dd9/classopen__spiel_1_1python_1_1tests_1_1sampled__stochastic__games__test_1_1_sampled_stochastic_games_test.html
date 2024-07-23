@@ -117,12 +117,53 @@ Collaboration diagram for open_spiel.python.tests.sampled_stochastic_games_test.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a650da8a01cf5b6fe789627af7370e918" id="r_a650da8a01cf5b6fe789627af7370e918"><td class="memItemLeft" align="right" valign="top"><a id="a650da8a01cf5b6fe789627af7370e918" name="a650da8a01cf5b6fe789627af7370e918"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_stateful_game_serialization</b> (self, game_info)</td></tr>
+<tr class="memitem:a650da8a01cf5b6fe789627af7370e918" id="r_a650da8a01cf5b6fe789627af7370e918"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a650da8a01cf5b6fe789627af7370e918">test_stateful_game_serialization</a> (self, game_info)</td></tr>
 <tr class="separator:a650da8a01cf5b6fe789627af7370e918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/d7c/sampled__stochastic__games__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../db/d7c/sampled__stochastic__games__test_8py_source.html">sampled_stochastic_games_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a650da8a01cf5b6fe789627af7370e918" name="a650da8a01cf5b6fe789627af7370e918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650da8a01cf5b6fe789627af7370e918">&#9670;&#160;</a></span>test_stateful_game_serialization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.sampled_stochastic_games_test.SampledStochasticGamesTest.test_stateful_game_serialization </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game_info</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d7c/sampled__stochastic__games__test_8py_source.html#l00037">37</a> of file <a class="el" href="../../db/d7c/sampled__stochastic__games__test_8py_source.html">sampled_stochastic_games_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>  <span class="keyword">def </span>test_stateful_game_serialization(self, game_info):</div>
+<div class="line"><span class="lineno">   38</span>    game = pyspiel.load_game(game_info.short_name, {<span class="stringliteral">&quot;rng_seed&quot;</span>: 0})</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">for</span> seed <span class="keywordflow">in</span> range(NUM_RUNS):</div>
+<div class="line"><span class="lineno">   41</span>      <span class="comment"># Mutate game&#39;s internal RNG state by doing a full playout.</span></div>
+<div class="line"><span class="lineno">   42</span>      test_utils.random_playout(game.new_initial_state(), seed)</div>
+<div class="line"><span class="lineno">   43</span>      deserialized_game = pickle.loads(pickle.dumps(game))</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>      <span class="comment"># Make sure initial states are the same after game deserialization.</span></div>
+<div class="line"><span class="lineno">   46</span>      state = test_utils.random_playout(game.new_initial_state(), seed)</div>
+<div class="line"><span class="lineno">   47</span>      deserialized_state = test_utils.random_playout(</div>
+<div class="line"><span class="lineno">   48</span>          deserialized_game.new_initial_state(), seed)</div>
+<div class="line"><span class="lineno">   49</span>      self.assertEqual(str(state), str(deserialized_state))</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/tests/<b>sampled_stochastic_games_test.py</b></li>
+<li>open_spiel/python/tests/<a class="el" href="../../db/d7c/sampled__stochastic__games__test_8py_source.html">sampled_stochastic_games_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -102,11 +102,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa0fcec753996af6d381ac0321f1755dc" id="r_aa0fcec753996af6d381ac0321f1755dc"><td class="memItemLeft" align="right" valign="top"><a id="aa0fcec753996af6d381ac0321f1755dc" name="aa0fcec753996af6d381ac0321f1755dc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>neg_entropy</b> (probs)</td></tr>
+<tr class="memitem:aa0fcec753996af6d381ac0321f1755dc" id="r_aa0fcec753996af6d381ac0321f1755dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0fcec753996af6d381ac0321f1755dc">neg_entropy</a> (probs)</td></tr>
 <tr class="separator:aa0fcec753996af6d381ac0321f1755dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd9a9765ef56ddb9407450fa19a2106" id="r_a7dd9a9765ef56ddb9407450fa19a2106"><td class="memItemLeft" align="right" valign="top"><a id="a7dd9a9765ef56ddb9407450fa19a2106" name="a7dd9a9765ef56ddb9407450fa19a2106"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>softmax</b> (x)</td></tr>
+<tr class="memitem:a7dd9a9765ef56ddb9407450fa19a2106" id="r_a7dd9a9765ef56ddb9407450fa19a2106"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dd9a9765ef56ddb9407450fa19a2106">softmax</a> (x)</td></tr>
 <tr class="separator:a7dd9a9765ef56ddb9407450fa19a2106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6707c00f4984c6cf013753fbf3b6c772" id="r_a6707c00f4984c6cf013753fbf3b6c772"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6707c00f4984c6cf013753fbf3b6c772">divergence</a> (x, y, psi_x, psi_y, grad_psi_y)</td></tr>
 <tr class="separator:a6707c00f4984c6cf013753fbf3b6c772"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,7 +157,35 @@ Args:
 
 Returns:
     Scalar.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html#l00074">74</a> of file <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html">mmd_dilated.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span><span class="keyword">def </span>dilated_dgf_divergence(mmd_1, mmd_2):</div>
+<div class="line"><span class="lineno">   75</span>  <span class="stringliteral">&quot;&quot;&quot;Bregman divergence between two MMDDilatedEnt objects.</span></div>
+<div class="line"><span class="lineno">   76</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   77</span><span class="stringliteral">      The value is equivalent to a sum of two Bregman divergences</span></div>
+<div class="line"><span class="lineno">   78</span><span class="stringliteral">      over the sequence form, one for each player.</span></div>
+<div class="line"><span class="lineno">   79</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   80</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   81</span><span class="stringliteral">      mmd_1: MMDDilatedEnt Object</span></div>
+<div class="line"><span class="lineno">   82</span><span class="stringliteral">      mmd_2: MMDDilatedEnt Object</span></div>
+<div class="line"><span class="lineno">   83</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   84</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   85</span><span class="stringliteral">      Scalar.</span></div>
+<div class="line"><span class="lineno">   86</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>  dgf_values = [mmd_1.dgf_eval(), mmd_2.dgf_eval()]</div>
+<div class="line"><span class="lineno">   89</span>  dgf_grads = mmd_2.dgf_grads()</div>
+<div class="line"><span class="lineno">   90</span>  div = 0</div>
+<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">for</span> player <span class="keywordflow">in</span> range(2):</div>
+<div class="line"><span class="lineno">   92</span>    div += divergence(mmd_1.sequences[player], mmd_2.sequences[player],</div>
+<div class="line"><span class="lineno">   93</span>                      dgf_values[0][player], dgf_values[1][player],</div>
+<div class="line"><span class="lineno">   94</span>                      dgf_grads[player])</div>
+<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">return</span> div</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html#l00058">open_spiel.python.algorithms.mmd_dilated.divergence()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d08/namespaceopen__spiel_1_1python_1_1algorithms_1_1mmd__dilated_a53812e65342126509f7e7ffcecdab8e2_cgraph.png" border="0" usemap="#ad2/d08/namespaceopen__spiel_1_1python_1_1algorithms_1_1mmd__dilated_a53812e65342126509f7e7ffcecdab8e2_cgraph" alt=""/></div>
@@ -216,7 +242,27 @@ Args:
 
 Returns:
     Scalar.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html#l00058">58</a> of file <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html">mmd_dilated.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span><span class="keyword">def </span>divergence(x, y, psi_x, psi_y, grad_psi_y):</div>
+<div class="line"><span class="lineno">   59</span>  <span class="stringliteral">&quot;&quot;&quot;Compute Bregman divergence between x and y, B_psi(x;y).</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">      x: Numpy array.</span></div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">      y: Numpy array.</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">      psi_x: Value of psi evaluated at x.</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">      psi_y: Value of psi evaluated at y.</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">      grad_psi_y: Gradient of psi evaluated at y.</span></div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   68</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   69</span><span class="stringliteral">      Scalar.</span></div>
+<div class="line"><span class="lineno">   70</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordflow">return</span> psi_x - psi_y - np.dot(grad_psi_y, x - y)</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html#l00074">open_spiel.python.algorithms.mmd_dilated.dilated_dgf_divergence()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d08/namespaceopen__spiel_1_1python_1_1algorithms_1_1mmd__dilated_a6707c00f4984c6cf013753fbf3b6c772_icgraph.png" border="0" usemap="#ad2/d08/namespaceopen__spiel_1_1python_1_1algorithms_1_1mmd__dilated_a6707c00f4984c6cf013753fbf3b6c772_icgraph" alt=""/></div>
@@ -227,6 +273,53 @@ Here is the caller graph for this function:</div>
 </map>
 </div>
 
+</div>
+</div>
+<a id="aa0fcec753996af6d381ac0321f1755dc" name="aa0fcec753996af6d381ac0321f1755dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fcec753996af6d381ac0321f1755dc">&#9670;&#160;</a></span>neg_entropy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.mmd_dilated.neg_entropy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>probs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html#l00049">49</a> of file <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html">mmd_dilated.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span><span class="keyword">def </span>neg_entropy(probs):</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">return</span> -scipy_stats.entropy(probs)</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7dd9a9765ef56ddb9407450fa19a2106" name="a7dd9a9765ef56ddb9407450fa19a2106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd9a9765ef56ddb9407450fa19a2106">&#9670;&#160;</a></span>softmax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.mmd_dilated.softmax </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html#l00053">53</a> of file <a class="el" href="../../db/d9e/mmd__dilated_8py_source.html">mmd_dilated.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span><span class="keyword">def </span>softmax(x):</div>
+<div class="line"><span class="lineno">   54</span>  unnormalized = np.exp(x - np.max(x))</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">return</span> unnormalized / np.sum(unnormalized)</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

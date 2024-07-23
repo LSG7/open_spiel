@@ -126,7 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e11aa07ec20523cd8dda5b93ff37a54" id="r_a3e11aa07ec20523cd8dda5b93ff37a54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/de4/classabsl_1_1crc32c__t.html">crc32c_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e11aa07ec20523cd8dda5b93ff37a54">Compute</a> (void *__restrict dst, const void *__restrict src, std::size_t length, <a class="el" href="../../dd/de4/classabsl_1_1crc32c__t.html">crc32c_t</a> initial_crc) const override</td></tr>
 <tr class="separator:a3e11aa07ec20523cd8dda5b93ff37a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/da9/crc__memcpy_8h_source.html#l00071">71</a> of file <a class="el" href="../../de/da9/crc__memcpy_8h_source.html">crc_memcpy.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3e11aa07ec20523cd8dda5b93ff37a54" name="a3e11aa07ec20523cd8dda5b93ff37a54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e11aa07ec20523cd8dda5b93ff37a54">&#9670;&#160;</a></span>Compute()</h2>
 
@@ -166,11 +169,41 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../dc/def/classabsl_1_1crc__internal_1_1_crc_memcpy_engine.html">absl::crc_internal::CrcMemcpyEngine</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d1/dc5/crc__memcpy__fallback_8cc_source.html#l00026">26</a> of file <a class="el" href="../../d1/dc5/crc__memcpy__fallback_8cc_source.html">crc_memcpy_fallback.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                            {</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> kBlockSize = 8192;</div>
+<div class="line"><span class="lineno">   31</span>  <a class="code hl_class" href="../../dd/de4/classabsl_1_1crc32c__t.html">absl::crc32c_t</a> crc = initial_crc;</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* src_bytes = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(src);</div>
+<div class="line"><span class="lineno">   34</span>  <span class="keywordtype">char</span>* dst_bytes = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(dst);</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>  <span class="comment">// Copy + CRC loop - run 8k chunks until we are out of full chunks.  CRC</span></div>
+<div class="line"><span class="lineno">   37</span>  <span class="comment">// then copy was found to be slightly more efficient in our test cases.</span></div>
+<div class="line"><span class="lineno">   38</span>  std::size_t offset = 0;</div>
+<div class="line"><span class="lineno">   39</span>  <span class="keywordflow">for</span> (; offset + kBlockSize &lt; length; offset += kBlockSize) {</div>
+<div class="line"><span class="lineno">   40</span>    crc = absl::ExtendCrc32c(crc,</div>
+<div class="line"><span class="lineno">   41</span>                             <a class="code hl_class" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>(src_bytes + offset, kBlockSize));</div>
+<div class="line"><span class="lineno">   42</span>    memcpy(dst_bytes + offset, src_bytes + offset, kBlockSize);</div>
+<div class="line"><span class="lineno">   43</span>  }</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>  <span class="comment">// Save some work if length is 0.</span></div>
+<div class="line"><span class="lineno">   46</span>  <span class="keywordflow">if</span> (offset &lt; length) {</div>
+<div class="line"><span class="lineno">   47</span>    std::size_t final_copy_size = length - offset;</div>
+<div class="line"><span class="lineno">   48</span>    crc = absl::ExtendCrc32c(</div>
+<div class="line"><span class="lineno">   49</span>        crc, <a class="code hl_class" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a>(src_bytes + offset, final_copy_size));</div>
+<div class="line"><span class="lineno">   50</span>    memcpy(dst_bytes + offset, src_bytes + offset, final_copy_size);</div>
+<div class="line"><span class="lineno">   51</span>  }</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">return</span> crc;</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+<div class="ttc" id="aclassabsl_1_1crc32c__t_html"><div class="ttname"><a href="../../dd/de4/classabsl_1_1crc32c__t.html">absl::crc32c_t</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d96/crc32c_8h_source.html#l00048">crc32c.h:48</a></div></div>
+<div class="ttc" id="aclassabsl_1_1string__view_html"><div class="ttname"><a href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></div><div class="ttdef"><b>Definition</b> <a href="../../d2/d1d/string__view_8h_source.html#l00161">string_view.h:161</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/crc/internal/<a class="el" href="../../de/da9/crc__memcpy_8h_source.html">crc_memcpy.h</a></li>
-<li>open_spiel/abseil-cpp/absl/crc/internal/<b>crc_memcpy_fallback.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/crc/internal/<a class="el" href="../../d1/dc5/crc__memcpy__fallback_8cc_source.html">crc_memcpy_fallback.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

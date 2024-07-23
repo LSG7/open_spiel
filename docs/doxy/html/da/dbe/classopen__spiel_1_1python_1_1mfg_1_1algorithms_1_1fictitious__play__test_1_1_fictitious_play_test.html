@@ -128,7 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa829f98862b979642a4c210693fb7c0d" id="r_aa829f98862b979642a4c210693fb7c0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa829f98862b979642a4c210693fb7c0d">test_average</a> (self)</td></tr>
 <tr class="separator:aa829f98862b979642a4c210693fb7c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html">fictitious_play_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa829f98862b979642a4c210693fb7c0d" name="aa829f98862b979642a4c210693fb7c0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa829f98862b979642a4c210693fb7c0d">&#9670;&#160;</a></span>test_average()</h2>
 
@@ -147,6 +150,35 @@ Public Member Functions</h2></td></tr>
 
 Here we test that the average of values is the value of the average policy.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html#l00107">107</a> of file <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html">fictitious_play_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>  <span class="keyword">def </span>test_average(self):</div>
+<div class="line"><span class="lineno">  108</span>    <span class="stringliteral">&quot;&quot;&quot;Test the average of policies.</span></div>
+<div class="line"><span class="lineno">  109</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  110</span><span class="stringliteral">    Here we test that the average of values is the value of the average policy.</span></div>
+<div class="line"><span class="lineno">  111</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  112</span>    game = crowd_modelling.MFGCrowdModellingGame()</div>
+<div class="line"><span class="lineno">  113</span>    uniform_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">  114</span>    mfg_dist = distribution.DistributionPolicy(game, uniform_policy)</div>
+<div class="line"><span class="lineno">  115</span>    br_value = best_response_value.BestResponse(</div>
+<div class="line"><span class="lineno">  116</span>        game, mfg_dist, value.TabularValueFunction(game))</div>
+<div class="line"><span class="lineno">  117</span>    py_value = policy_value.PolicyValue(game, mfg_dist, uniform_policy,</div>
+<div class="line"><span class="lineno">  118</span>                                        value.TabularValueFunction(game))</div>
+<div class="line"><span class="lineno">  119</span>    greedy_pi = greedy_policy.GreedyPolicy(game, <span class="keywordtype">None</span>, br_value)</div>
+<div class="line"><span class="lineno">  120</span>    greedy_pi = greedy_pi.to_tabular()</div>
+<div class="line"><span class="lineno">  121</span>    merged_pi = fictitious_play.MergedPolicy(</div>
+<div class="line"><span class="lineno">  122</span>        game, list(range(game.num_players())), [uniform_policy, greedy_pi],</div>
+<div class="line"><span class="lineno">  123</span>        [mfg_dist, distribution.DistributionPolicy(game, greedy_pi)],</div>
+<div class="line"><span class="lineno">  124</span>        [0.5, 0.5])</div>
+<div class="line"><span class="lineno">  125</span>    merged_pi_value = policy_value.PolicyValue(game, mfg_dist, merged_pi,</div>
+<div class="line"><span class="lineno">  126</span>                                               value.TabularValueFunction(game))</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    self.assertAlmostEqual(</div>
+<div class="line"><span class="lineno">  129</span>        merged_pi_value(game.new_initial_state()),</div>
+<div class="line"><span class="lineno">  130</span>        (br_value(game.new_initial_state()) +</div>
+<div class="line"><span class="lineno">  131</span>         py_value(game.new_initial_state())) / 2)</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a662299966480b9301757684ae09825f1" name="a662299966480b9301757684ae09825f1"></a>
@@ -168,6 +200,40 @@ Here we test that the average of values is the value of the average policy.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks if fictitious play with DQN-based value function works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html#l00075">75</a> of file <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html">fictitious_play_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>  <span class="keyword">def </span>test_dqn(self, name):</div>
+<div class="line"><span class="lineno">   76</span>    <span class="stringliteral">&quot;&quot;&quot;Checks if fictitious play with DQN-based value function works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   77</span>    game = pyspiel.load_game(name)</div>
+<div class="line"><span class="lineno">   78</span>    dfp = fictitious_play.FictitiousPlay(game)</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    uniform_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   81</span>    dist = distribution.DistributionPolicy(game, uniform_policy)</div>
+<div class="line"><span class="lineno">   82</span>    envs = [</div>
+<div class="line"><span class="lineno">   83</span>        rl_environment.Environment(</div>
+<div class="line"><span class="lineno">   84</span>            game, mfg_distribution=dist, mfg_population=p)</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">for</span> p <span class="keywordflow">in</span> range(game.num_players())</div>
+<div class="line"><span class="lineno">   86</span>    ]</div>
+<div class="line"><span class="lineno">   87</span>    dqn_agent = dqn.DQN(</div>
+<div class="line"><span class="lineno">   88</span>        0,</div>
+<div class="line"><span class="lineno">   89</span>        state_representation_size=envs[0].observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0],</div>
+<div class="line"><span class="lineno">   90</span>        num_actions=envs[0].action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>],</div>
+<div class="line"><span class="lineno">   91</span>        hidden_layers_sizes=[256, 128, 64],</div>
+<div class="line"><span class="lineno">   92</span>        replay_buffer_capacity=100,</div>
+<div class="line"><span class="lineno">   93</span>        batch_size=5,</div>
+<div class="line"><span class="lineno">   94</span>        epsilon_start=0.02,</div>
+<div class="line"><span class="lineno">   95</span>        epsilon_end=0.01)</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>    br_policy = rl_agent_policy.RLAgentPolicy(</div>
+<div class="line"><span class="lineno">   98</span>        game, dqn_agent, 0, use_observation=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">  100</span>      dfp.iteration(br_policy=br_policy)</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    dfp_policy = dfp.get_policy()</div>
+<div class="line"><span class="lineno">  103</span>    nash_conv_dfp = nash_conv.NashConv(game, dfp_policy)</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    self.assertAlmostEqual(nash_conv_dfp.nash_conv(), 1.056, places=3)</div>
+<div class="line"><span class="lineno">  106</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a743af15ca226c9512c7705b650f6b83a" name="a743af15ca226c9512c7705b650f6b83a"></a>
@@ -189,6 +255,20 @@ Here we test that the average of values is the value of the average policy.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks if learning rate works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html#l00050">50</a> of file <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html">fictitious_play_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>  <span class="keyword">def </span>test_learning_rate(self, at_init: bool):</div>
+<div class="line"><span class="lineno">   51</span>    <span class="stringliteral">&quot;&quot;&quot;Checks if learning rate works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   52</span>    game = crowd_modelling.MFGCrowdModellingGame()</div>
+<div class="line"><span class="lineno">   53</span>    lr = 1.0</div>
+<div class="line"><span class="lineno">   54</span>    fp = fictitious_play.FictitiousPlay(game, lr=lr <span class="keywordflow">if</span> at_init <span class="keywordflow">else</span> <span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">   56</span>      fp.iteration(learning_rate=<span class="keywordtype">None</span> <span class="keywordflow">if</span> at_init <span class="keywordflow">else</span> lr)</div>
+<div class="line"><span class="lineno">   57</span>    fp_policy = fp.get_policy()</div>
+<div class="line"><span class="lineno">   58</span>    nash_conv_fp = nash_conv.NashConv(game, fp_policy)</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    self.assertAlmostEqual(nash_conv_fp.nash_conv(), 55.745, places=3)</div>
+<div class="line"><span class="lineno">   61</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a49c80d2dfa3d98fbc0e5257f00a7c703" name="a49c80d2dfa3d98fbc0e5257f00a7c703"></a>
@@ -210,6 +290,19 @@ Here we test that the average of values is the value of the average policy.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks if fictitious play works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html#l00038">38</a> of file <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html">fictitious_play_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>  <span class="keyword">def </span>test_run(self, name: str):</div>
+<div class="line"><span class="lineno">   39</span>    <span class="stringliteral">&quot;&quot;&quot;Checks if fictitious play works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   40</span>    game = pyspiel.load_game(name)</div>
+<div class="line"><span class="lineno">   41</span>    fp = fictitious_play.FictitiousPlay(game)</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">   43</span>      fp.iteration()</div>
+<div class="line"><span class="lineno">   44</span>    fp_policy = fp.get_policy()</div>
+<div class="line"><span class="lineno">   45</span>    nash_conv_fp = nash_conv.NashConv(game, fp_policy)</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    self.assertAlmostEqual(nash_conv_fp.nash_conv(), 0.991, places=3)</div>
+<div class="line"><span class="lineno">   48</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a602c7d5a1addd5d7f19643016a5d4cae" name="a602c7d5a1addd5d7f19643016a5d4cae"></a>
@@ -227,10 +320,23 @@ Here we test that the average of values is the value of the average policy.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks if soft-max policy works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html#l00062">62</a> of file <a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html">fictitious_play_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>  <span class="keyword">def </span>test_soft_max(self):</div>
+<div class="line"><span class="lineno">   63</span>    <span class="stringliteral">&quot;&quot;&quot;Checks if soft-max policy works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   64</span>    game = crowd_modelling.MFGCrowdModellingGame()</div>
+<div class="line"><span class="lineno">   65</span>    fp = fictitious_play.FictitiousPlay(game, temperature=1)</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">   67</span>      fp.iteration()</div>
+<div class="line"><span class="lineno">   68</span>    fp_policy = fp.get_policy()</div>
+<div class="line"><span class="lineno">   69</span>    nash_conv_fp = nash_conv.NashConv(game, fp_policy)</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    self.assertAlmostEqual(nash_conv_fp.nash_conv(), 1.062, places=3)</div>
+<div class="line"><span class="lineno">   72</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/<b>fictitious_play_test.py</b></li>
+<li>open_spiel/python/mfg/algorithms/<a class="el" href="../../d5/d6f/mfg_2algorithms_2fictitious__play__test_8py_source.html">fictitious_play_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

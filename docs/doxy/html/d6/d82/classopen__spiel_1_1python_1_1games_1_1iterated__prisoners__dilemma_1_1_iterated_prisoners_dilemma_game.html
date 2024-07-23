@@ -118,8 +118,7 @@ Collaboration diagram for open_spiel.python.games.iterated_prisoners_dilemma.Ite
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a241d5812365247a72edf41d4d4c2e225" id="r_a241d5812365247a72edf41d4d4c2e225"><td class="memItemLeft" align="right" valign="top"><a id="a241d5812365247a72edf41d4d4c2e225" name="a241d5812365247a72edf41d4d4c2e225"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, params=_DEFAULT_PARAMS)</td></tr>
+<tr class="memitem:a241d5812365247a72edf41d4d4c2e225" id="r_a241d5812365247a72edf41d4d4c2e225"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a241d5812365247a72edf41d4d4c2e225">__init__</a> (self, params=_DEFAULT_PARAMS)</td></tr>
 <tr class="separator:a241d5812365247a72edf41d4d4c2e225"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a5de6c33265ee10e6ed6f72b1495184" id="r_a2a5de6c33265ee10e6ed6f72b1495184"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a5de6c33265ee10e6ed6f72b1495184">new_initial_state</a> (self)</td></tr>
 <tr class="separator:a2a5de6c33265ee10e6ed6f72b1495184"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,12 +127,54 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:adb2b11d7d4fe3b94a3b25a99e930ee48" id="r_adb2b11d7d4fe3b94a3b25a99e930ee48"><td class="memItemLeft" align="right" valign="top"><a id="adb2b11d7d4fe3b94a3b25a99e930ee48" name="adb2b11d7d4fe3b94a3b25a99e930ee48"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_termination_probability</b></td></tr>
+<tr class="memitem:adb2b11d7d4fe3b94a3b25a99e930ee48" id="r_adb2b11d7d4fe3b94a3b25a99e930ee48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb2b11d7d4fe3b94a3b25a99e930ee48">_termination_probability</a></td></tr>
 <tr class="separator:adb2b11d7d4fe3b94a3b25a99e930ee48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">The game, from which states and observers can be made.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">The game, from which states and observers can be made.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00058">58</a> of file <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html">iterated_prisoners_dilemma.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a241d5812365247a72edf41d4d4c2e225" name="a241d5812365247a72edf41d4d4c2e225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241d5812365247a72edf41d4d4c2e225">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.games.iterated_prisoners_dilemma.IteratedPrisonersDilemmaGame.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">_DEFAULT_PARAMS</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00062">62</a> of file <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html">iterated_prisoners_dilemma.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>  <span class="keyword">def </span>__init__(self, params=_DEFAULT_PARAMS):</div>
+<div class="line"><span class="lineno">   63</span>    max_game_length = params[<span class="stringliteral">&quot;max_game_length&quot;</span>]</div>
+<div class="line"><span class="lineno">   64</span>    super().__init__(</div>
+<div class="line"><span class="lineno">   65</span>        _GAME_TYPE,</div>
+<div class="line"><span class="lineno">   66</span>        pyspiel.GameInfo(</div>
+<div class="line"><span class="lineno">   67</span>            num_distinct_actions=2,</div>
+<div class="line"><span class="lineno">   68</span>            max_chance_outcomes=2,</div>
+<div class="line"><span class="lineno">   69</span>            num_players=2,</div>
+<div class="line"><span class="lineno">   70</span>            min_utility=np.min(_PAYOFF) * max_game_length,</div>
+<div class="line"><span class="lineno">   71</span>            max_utility=np.max(_PAYOFF) * max_game_length,</div>
+<div class="line"><span class="lineno">   72</span>            utility_sum=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   73</span>            max_game_length=max_game_length,</div>
+<div class="line"><span class="lineno">   74</span>        ),</div>
+<div class="line"><span class="lineno">   75</span>        params,</div>
+<div class="line"><span class="lineno">   76</span>    )</div>
+<div class="line"><span class="lineno">   77</span>    self._termination_probability = params[<span class="stringliteral">&quot;termination_probability&quot;</span>]</div>
+<div class="line"><span class="lineno">   78</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac179226a7a11c5411606bdec3ece05e4" name="ac179226a7a11c5411606bdec3ece05e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac179226a7a11c5411606bdec3ece05e4">&#9670;&#160;</a></span>make_py_observer()</h2>
 
@@ -158,6 +199,15 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns an object used for observing game state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00083">83</a> of file <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html">iterated_prisoners_dilemma.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>  <span class="keyword">def </span>make_py_observer(self, iig_obs_type=None, params=None):</div>
+<div class="line"><span class="lineno">   84</span>    <span class="stringliteral">&quot;&quot;&quot;Returns an object used for observing game state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> IteratedPrisonersDilemmaObserver(</div>
+<div class="line"><span class="lineno">   86</span>        iig_obs_type <span class="keywordflow">or</span> pyspiel.IIGObservationType(perfect_recall=<span class="keyword">False</span>),</div>
+<div class="line"><span class="lineno">   87</span>        params)</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2a5de6c33265ee10e6ed6f72b1495184" name="a2a5de6c33265ee10e6ed6f72b1495184"></a>
@@ -175,10 +225,45 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns a state corresponding to the start of a game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00079">79</a> of file <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html">iterated_prisoners_dilemma.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>  <span class="keyword">def </span>new_initial_state(self):</div>
+<div class="line"><span class="lineno">   80</span>    <span class="stringliteral">&quot;&quot;&quot;Returns a state corresponding to the start of a game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">return</span> IteratedPrisonersDilemmaState(self, self._termination_probability)</div>
+<div class="line"><span class="lineno">   82</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00077">open_spiel.python.games.iterated_prisoners_dilemma.IteratedPrisonersDilemmaGame._termination_probability</a>, and <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00097">open_spiel.python.games.iterated_prisoners_dilemma.IteratedPrisonersDilemmaState._termination_probability</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adb2b11d7d4fe3b94a3b25a99e930ee48" name="adb2b11d7d4fe3b94a3b25a99e930ee48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2b11d7d4fe3b94a3b25a99e930ee48">&#9670;&#160;</a></span>_termination_probability</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.games.iterated_prisoners_dilemma.IteratedPrisonersDilemmaGame._termination_probability</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00077">77</a> of file <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html">iterated_prisoners_dilemma.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00093">open_spiel.python.games.iterated_prisoners_dilemma.IteratedPrisonersDilemmaState.__init__()</a>, <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00120">open_spiel.python.games.iterated_prisoners_dilemma.IteratedPrisonersDilemmaState.chance_outcomes()</a>, and <a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html#l00079">open_spiel.python.games.iterated_prisoners_dilemma.IteratedPrisonersDilemmaGame.new_initial_state()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>iterated_prisoners_dilemma.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../d9/da3/iterated__prisoners__dilemma_8py_source.html">iterated_prisoners_dilemma.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

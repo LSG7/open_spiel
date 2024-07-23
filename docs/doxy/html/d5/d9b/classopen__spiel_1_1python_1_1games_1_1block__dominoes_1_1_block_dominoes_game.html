@@ -117,8 +117,7 @@ Collaboration diagram for open_spiel.python.games.block_dominoes.BlockDominoesGa
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab13d54d82285c2af14e95450ff04a2ab" id="r_ab13d54d82285c2af14e95450ff04a2ab"><td class="memItemLeft" align="right" valign="top"><a id="ab13d54d82285c2af14e95450ff04a2ab" name="ab13d54d82285c2af14e95450ff04a2ab"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, params=None)</td></tr>
+<tr class="memitem:ab13d54d82285c2af14e95450ff04a2ab" id="r_ab13d54d82285c2af14e95450ff04a2ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab13d54d82285c2af14e95450ff04a2ab">__init__</a> (self, params=None)</td></tr>
 <tr class="separator:ab13d54d82285c2af14e95450ff04a2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ffa7c3ee076e4b60f80aae2279ff106" id="r_a5ffa7c3ee076e4b60f80aae2279ff106"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ffa7c3ee076e4b60f80aae2279ff106">new_initial_state</a> (self)</td></tr>
 <tr class="separator:a5ffa7c3ee076e4b60f80aae2279ff106"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,7 +125,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa95694dbf01ccefc4c611dcc6e4f825e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A Python version of Block Dominoes.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">A Python version of Block Dominoes.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d0/db6/block__dominoes_8py_source.html#l00096">96</a> of file <a class="el" href="../../d0/db6/block__dominoes_8py_source.html">block_dominoes.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab13d54d82285c2af14e95450ff04a2ab" name="ab13d54d82285c2af14e95450ff04a2ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13d54d82285c2af14e95450ff04a2ab">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.games.block_dominoes.BlockDominoesGame.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/db6/block__dominoes_8py_source.html#l00099">99</a> of file <a class="el" href="../../d0/db6/block__dominoes_8py_source.html">block_dominoes.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>  <span class="keyword">def </span>__init__(self, params=None):</div>
+<div class="line"><span class="lineno">  100</span>    super().__init__(_GAME_TYPE, _GAME_INFO, params <span class="keywordflow">or</span> dict())</div>
+<div class="line"><span class="lineno">  101</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa95694dbf01ccefc4c611dcc6e4f825e" name="aa95694dbf01ccefc4c611dcc6e4f825e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa95694dbf01ccefc4c611dcc6e4f825e">&#9670;&#160;</a></span>make_py_observer()</h2>
 
@@ -151,6 +179,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns an object used for observing game state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d0/db6/block__dominoes_8py_source.html#l00106">106</a> of file <a class="el" href="../../d0/db6/block__dominoes_8py_source.html">block_dominoes.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>  <span class="keyword">def </span>make_py_observer(self, iig_obs_type=None, params=None):</div>
+<div class="line"><span class="lineno">  107</span>    <span class="stringliteral">&quot;&quot;&quot;Returns an object used for observing game state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">return</span> BlockDominoesObserver(</div>
+<div class="line"><span class="lineno">  109</span>        iig_obs_type <span class="keywordflow">or</span> pyspiel.IIGObservationType(perfect_recall=<span class="keyword">False</span>), params</div>
+<div class="line"><span class="lineno">  110</span>    )</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5ffa7c3ee076e4b60f80aae2279ff106" name="a5ffa7c3ee076e4b60f80aae2279ff106"></a>
@@ -168,10 +205,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns a state corresponding to the start of a game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d0/db6/block__dominoes_8py_source.html#l00102">102</a> of file <a class="el" href="../../d0/db6/block__dominoes_8py_source.html">block_dominoes.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>  <span class="keyword">def </span>new_initial_state(self):</div>
+<div class="line"><span class="lineno">  103</span>    <span class="stringliteral">&quot;&quot;&quot;Returns a state corresponding to the start of a game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> BlockDominoesState(self)</div>
+<div class="line"><span class="lineno">  105</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>block_dominoes.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../d0/db6/block__dominoes_8py_source.html">block_dominoes.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

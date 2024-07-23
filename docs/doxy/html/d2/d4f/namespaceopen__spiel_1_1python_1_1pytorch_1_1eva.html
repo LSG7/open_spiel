@@ -104,11 +104,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aa2589c8176f2a0217c37964ad9c288e4" id="r_aa2589c8176f2a0217c37964ad9c288e4"><td class="memItemLeft" align="right" valign="top"><a id="aa2589c8176f2a0217c37964ad9c288e4" name="aa2589c8176f2a0217c37964ad9c288e4"></a>
-str&#160;</td><td class="memItemRight" valign="bottom"><b>MEM_KEY_NAME</b> = &quot;embedding&quot;</td></tr>
+<tr class="memitem:aa2589c8176f2a0217c37964ad9c288e4" id="r_aa2589c8176f2a0217c37964ad9c288e4"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2589c8176f2a0217c37964ad9c288e4">MEM_KEY_NAME</a> = &quot;embedding&quot;</td></tr>
 <tr class="separator:aa2589c8176f2a0217c37964ad9c288e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af31923b7676739b03e4f408fafb3467e" id="r_af31923b7676739b03e4f408fafb3467e"><td class="memItemLeft" align="right" valign="top"><a id="af31923b7676739b03e4f408fafb3467e" name="af31923b7676739b03e4f408fafb3467e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ValueBufferElement</b> = collections.namedtuple(&quot;ValueElement&quot;, &quot;embedding value&quot;)</td></tr>
+<tr class="memitem:af31923b7676739b03e4f408fafb3467e" id="r_af31923b7676739b03e4f408fafb3467e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af31923b7676739b03e4f408fafb3467e">ValueBufferElement</a> = collections.namedtuple(&quot;ValueElement&quot;, &quot;embedding value&quot;)</td></tr>
 <tr class="separator:af31923b7676739b03e4f408fafb3467e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83d2f8a30d26f40d18b01b6ed9b147ee" id="r_a83d2f8a30d26f40d18b01b6ed9b147ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83d2f8a30d26f40d18b01b6ed9b147ee">ReplayBufferElement</a></td></tr>
 <tr class="separator:a83d2f8a30d26f40d18b01b6ed9b147ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +121,22 @@ counterfactual state-action pairs when integrating across those trajectories.
 Finally, a weighted average between the parametric (DQN in this case) and the
 non-parametric model is used to compute the policy.
 </pre> </div><h2 class="groupheader">Variable Documentation</h2>
+<a id="aa2589c8176f2a0217c37964ad9c288e4" name="aa2589c8176f2a0217c37964ad9c288e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2589c8176f2a0217c37964ad9c288e4">&#9670;&#160;</a></span>MEM_KEY_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">str open_spiel.python.pytorch.eva.MEM_KEY_NAME = &quot;embedding&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00035">35</a> of file <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html">eva.py</a>.</p>
+
+</div>
+</div>
 <a id="a83d2f8a30d26f40d18b01b6ed9b147ee" name="a83d2f8a30d26f40d18b01b6ed9b147ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83d2f8a30d26f40d18b01b6ed9b147ee">&#9670;&#160;</a></span>ReplayBufferElement</h2>
 
@@ -138,6 +152,24 @@ non-parametric model is used to compute the policy.
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;ReplayElement&quot;</span>, <span class="stringliteral">&quot;embedding info_state action reward next_info_state &quot;</span></div>
 <div class="line"><span class="lineno">    3</span>    <span class="stringliteral">&quot;is_final_step legal_actions_mask&quot;</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00039">39</a> of file <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html">eva.py</a>.</p>
+
+</div>
+</div>
+<a id="af31923b7676739b03e4f408fafb3467e" name="af31923b7676739b03e4f408fafb3467e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31923b7676739b03e4f408fafb3467e">&#9670;&#160;</a></span>ValueBufferElement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.eva.ValueBufferElement = collections.namedtuple(&quot;ValueElement&quot;, &quot;embedding value&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00037">37</a> of file <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html">eva.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

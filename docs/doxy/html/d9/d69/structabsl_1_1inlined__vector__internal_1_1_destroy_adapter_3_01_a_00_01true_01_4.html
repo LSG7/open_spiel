@@ -105,10 +105,57 @@ Collaboration diagram for absl::inlined_vector_internal::DestroyAdapter&lt; A, t
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa012342e28705c4785ba35601d7abf18" id="r_aa012342e28705c4785ba35601d7abf18"><td class="memItemLeft" align="right" valign="top"><a id="aa012342e28705c4785ba35601d7abf18" name="aa012342e28705c4785ba35601d7abf18"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyElements</b> (A &amp;allocator, Pointer&lt; A &gt; destroy_first, SizeType&lt; A &gt; destroy_size)</td></tr>
+<tr class="memitem:aa012342e28705c4785ba35601d7abf18" id="r_aa012342e28705c4785ba35601d7abf18"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa012342e28705c4785ba35601d7abf18">DestroyElements</a> (A &amp;allocator, Pointer&lt; A &gt; destroy_first, SizeType&lt; A &gt; destroy_size)</td></tr>
 <tr class="separator:aa012342e28705c4785ba35601d7abf18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename A&gt;<br />
+struct absl::inlined_vector_internal::DestroyAdapter&lt; A, true &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00117">117</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa012342e28705c4785ba35601d7abf18" name="aa012342e28705c4785ba35601d7abf18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa012342e28705c4785ba35601d7abf18">&#9670;&#160;</a></span>DestroyElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../dc/d1a/structabsl_1_1inlined__vector__internal_1_1_destroy_adapter.html">absl::inlined_vector_internal::DestroyAdapter</a>&lt; A, true &gt;::DestroyElements </td>
+          <td>(</td>
+          <td class="paramtype">A &amp;</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pointer&lt; A &gt;</td>          <td class="paramname"><span class="paramname"><em>destroy_first</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeType&lt; A &gt;</td>          <td class="paramname"><span class="paramname"><em>destroy_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00118">118</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                                                        {</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(allocator);</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(destroy_first);</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span><span class="keyword">&gt;</span>(destroy_size);</div>
+<div class="line"><span class="lineno">  123</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a></li>
 </ul>

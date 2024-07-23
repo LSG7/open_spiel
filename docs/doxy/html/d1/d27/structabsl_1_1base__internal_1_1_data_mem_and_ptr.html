@@ -125,11 +125,50 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a14f568929907639eecd683a076a80801" id="r_a14f568929907639eecd683a076a80801"><td class="memTemplParams" colspan="2"><a id="a14f568929907639eecd683a076a80801" name="a14f568929907639eecd683a076a80801"></a>
-template&lt;typename DataMem , typename Ptr &gt; </td></tr>
-<tr class="memitem:a14f568929907639eecd683a076a80801"><td class="memTemplItemLeft" align="right" valign="top">static decltype((*std::declval&lt; Ptr &gt;()).*std::declval&lt; DataMem &gt;())&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Invoke</b> (DataMem &amp;&amp;data_mem, Ptr &amp;&amp;ptr)</td></tr>
+<tr class="memitem:a14f568929907639eecd683a076a80801" id="r_a14f568929907639eecd683a076a80801"><td class="memTemplParams" colspan="2">template&lt;typename DataMem , typename Ptr &gt; </td></tr>
+<tr class="memitem:a14f568929907639eecd683a076a80801"><td class="memTemplItemLeft" align="right" valign="top">static decltype((*std::declval&lt; Ptr &gt;()).*std::declval&lt; DataMem &gt;())&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a14f568929907639eecd683a076a80801">Invoke</a> (DataMem &amp;&amp;data_mem, Ptr &amp;&amp;ptr)</td></tr>
 <tr class="separator:a14f568929907639eecd683a076a80801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/dc0/invoke_8h_source.html#l00162">162</a> of file <a class="el" href="../../d0/dc0/invoke_8h_source.html">invoke.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a14f568929907639eecd683a076a80801" name="a14f568929907639eecd683a076a80801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f568929907639eecd683a076a80801">&#9670;&#160;</a></span>Invoke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataMem , typename Ptr &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static decltype((*std::declval&lt; Ptr &gt;()).*std::declval&lt; DataMem &gt;()) absl::base_internal::DataMemAndPtr::Invoke </td>
+          <td>(</td>
+          <td class="paramtype">DataMem &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>data_mem</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dc0/invoke_8h_source.html#l00172">172</a> of file <a class="el" href="../../d0/dc0/invoke_8h_source.html">invoke.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>                                     {</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">return</span> (*std::forward&lt;Ptr&gt;(ptr)).*std::forward&lt;DataMem&gt;(data_mem);</div>
+<div class="line"><span class="lineno">  175</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../d0/dc0/invoke_8h_source.html">invoke.h</a></li>
 </ul>

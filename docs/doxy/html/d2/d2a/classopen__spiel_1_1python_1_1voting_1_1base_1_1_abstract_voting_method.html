@@ -149,7 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae4741e55d3840a3f61ed68cc3c836224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Abstract base class for voting methods.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Abstract base class for voting methods.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/de2/base_8py_source.html#l00457">457</a> of file <a class="el" href="../../d5/de2/base_8py_source.html">base.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae9c1b2370ac17ab398409dbd392bdfbf" name="ae9c1b2370ac17ab398409dbd392bdfbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9c1b2370ac17ab398409dbd392bdfbf">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -175,6 +177,15 @@ Args:
 </pre> 
 <p>Reimplemented in <a class="el" href="../../d3/dc4/classopen__spiel_1_1python_1_1voting_1_1approval_1_1_approval_voting.html#a3b77f0c427e1c29d2757a7454c0a89bc">open_spiel.python.voting.approval.ApprovalVoting</a>, <a class="el" href="../../d4/d1c/classopen__spiel_1_1python_1_1voting_1_1borda_1_1_borda_voting.html#a16e35a6cf0615b6bf0a389788bf2aadf">open_spiel.python.voting.borda.BordaVoting</a>, <a class="el" href="../../d1/d09/classopen__spiel_1_1python_1_1voting_1_1copeland_1_1_copeland_voting.html#a11527e5a5ccf699b74dab920643d1fe3">open_spiel.python.voting.copeland.CopelandVoting</a>, <a class="el" href="../../db/da4/classopen__spiel_1_1python_1_1voting_1_1kemeny__young_1_1_kemeny_young_voting.html#a2da19cc33e371a4ffbaab73ea7bca7e5">open_spiel.python.voting.kemeny_young.KemenyYoungVoting</a>, <a class="el" href="../../d0/d55/classopen__spiel_1_1python_1_1voting_1_1maximal__lotteries_1_1_maximal_lotteries_voting.html#ac6c2cff9947f344dc2d7f0d9157ae366">open_spiel.python.voting.maximal_lotteries.MaximalLotteriesVoting</a>, <a class="el" href="../../dc/d2b/classopen__spiel_1_1python_1_1voting_1_1plurality_1_1_plurality_voting.html#adf79ef66a2e23ffc5a3a338fa7feaddf">open_spiel.python.voting.plurality.PluralityVoting</a>, <a class="el" href="../../de/d08/classopen__spiel_1_1python_1_1voting_1_1ranked__pairs_1_1_ranked_pairs_voting.html#a8673b394536bdda4c8d4b587c6d62fee">open_spiel.python.voting.ranked_pairs.RankedPairsVoting</a>, <a class="el" href="../../d0/dc6/classopen__spiel_1_1python_1_1voting_1_1schulze_1_1_schulze_voting.html#a5ca1a8457074d7a87e080f4d67bf1f62">open_spiel.python.voting.schulze.SchulzeVoting</a>, and <a class="el" href="../../d2/da9/classopen__spiel_1_1python_1_1voting_1_1stv_1_1_s_t_v_voting.html#acfd973b1240e28a290e3b328fa466eff">open_spiel.python.voting.stv.STVVoting</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d5/de2/base_8py_source.html#l00461">461</a> of file <a class="el" href="../../d5/de2/base_8py_source.html">base.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  461</span>  <span class="keyword">def </span>__init__(self, **method_specific_kwargs):</div>
+<div class="line"><span class="lineno">  462</span>    <span class="stringliteral">&quot;&quot;&quot;Initializes the voting method.</span></div>
+<div class="line"><span class="lineno">  463</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  464</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  465</span><span class="stringliteral">      **method_specific_kwargs: optional extra args.</span></div>
+<div class="line"><span class="lineno">  466</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  467</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -203,7 +214,22 @@ alternative. Most voting schemes can't run unless the profile is valid.
 
 Args:
   profile: the profile to check.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/de2/base_8py_source.html#l00483">483</a> of file <a class="el" href="../../d5/de2/base_8py_source.html">base.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>  <span class="keyword">def </span>is_valid_profile(self, profile: PreferenceProfile) -&gt; bool:</div>
+<div class="line"><span class="lineno">  484</span>    <span class="stringliteral">&quot;&quot;&quot;Returns true if a profile is valid.</span></div>
+<div class="line"><span class="lineno">  485</span><span class="stringliteral"> </span></div>
+<div class="line"><span class="lineno">  486</span><span class="stringliteral">    A valid profile is valid if it contains at least one vote and one</span></div>
+<div class="line"><span class="lineno">  487</span><span class="stringliteral">    alternative. Most voting schemes can&#39;t run unless the profile is valid.</span></div>
+<div class="line"><span class="lineno">  488</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  489</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  490</span><span class="stringliteral">      profile: the profile to check.</span></div>
+<div class="line"><span class="lineno">  491</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  492</span>    <span class="keywordflow">return</span> profile.num_votes() &gt; 0 <span class="keywordflow">and</span> profile.num_alternatives() &gt; 0</div>
+<div class="line"><span class="lineno">  493</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d8/d38/approval_8py_source.html#l00045">open_spiel.python.voting.approval.ApprovalVoting.run_election()</a>, <a class="el" href="../../d8/d77/borda_8py_source.html#l00032">open_spiel.python.voting.borda.BordaVoting.run_election()</a>, <a class="el" href="../../dc/d7e/copeland_8py_source.html#l00031">open_spiel.python.voting.copeland.CopelandVoting.run_election()</a>, <a class="el" href="../../d6/d08/kemeny__young_8py_source.html#l00056">open_spiel.python.voting.kemeny_young.KemenyYoungVoting.run_election()</a>, <a class="el" href="../../d7/da5/plurality_8py_source.html#l00032">open_spiel.python.voting.plurality.PluralityVoting.run_election()</a>, <a class="el" href="../../d9/d4e/ranked__pairs_8py_source.html#l00163">open_spiel.python.voting.ranked_pairs.RankedPairsVoting.run_election()</a>, <a class="el" href="../../dc/d1d/schulze_8py_source.html#l00033">open_spiel.python.voting.schulze.SchulzeVoting.run_election()</a>, and <a class="el" href="../../d6/d5b/stv_8py_source.html#l00111">open_spiel.python.voting.stv.STVVoting.run_election()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method_ae4741e55d3840a3f61ed68cc3c836224_icgraph.png" border="0" usemap="#ad2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method_ae4741e55d3840a3f61ed68cc3c836224_icgraph" alt=""/></div>
@@ -247,6 +273,11 @@ Here is the caller graph for this function:</div>
 <pre class="fragment">Returns the name of the voting method.</pre> 
 <p>Reimplemented in <a class="el" href="../../d3/dc4/classopen__spiel_1_1python_1_1voting_1_1approval_1_1_approval_voting.html#a85e1e6cc8f2fa512acf84a6bbfdd74f1">open_spiel.python.voting.approval.ApprovalVoting</a>, <a class="el" href="../../d4/d1c/classopen__spiel_1_1python_1_1voting_1_1borda_1_1_borda_voting.html#a7635a223859e27670d05e151d85e4fc6">open_spiel.python.voting.borda.BordaVoting</a>, <a class="el" href="../../d1/d09/classopen__spiel_1_1python_1_1voting_1_1copeland_1_1_copeland_voting.html#a515c3a5320888b9b37aaac4b7bcd119c">open_spiel.python.voting.copeland.CopelandVoting</a>, <a class="el" href="../../db/da4/classopen__spiel_1_1python_1_1voting_1_1kemeny__young_1_1_kemeny_young_voting.html#a1baa846fd7c8b1c5810cf2819adcc882">open_spiel.python.voting.kemeny_young.KemenyYoungVoting</a>, <a class="el" href="../../d0/d55/classopen__spiel_1_1python_1_1voting_1_1maximal__lotteries_1_1_maximal_lotteries_voting.html#ad1f6b5e6b4196dd36ee37e02a2c4b06e">open_spiel.python.voting.maximal_lotteries.MaximalLotteriesVoting</a>, <a class="el" href="../../dc/d2b/classopen__spiel_1_1python_1_1voting_1_1plurality_1_1_plurality_voting.html#a35c89a8905f3322a8d850121d3675e32">open_spiel.python.voting.plurality.PluralityVoting</a>, <a class="el" href="../../de/d08/classopen__spiel_1_1python_1_1voting_1_1ranked__pairs_1_1_ranked_pairs_voting.html#a26c5ee48fc476d8838be364171fdcab9">open_spiel.python.voting.ranked_pairs.RankedPairsVoting</a>, <a class="el" href="../../d0/dc6/classopen__spiel_1_1python_1_1voting_1_1schulze_1_1_schulze_voting.html#aff0fa59b9b19d76e77e62d61ceac8bce">open_spiel.python.voting.schulze.SchulzeVoting</a>, and <a class="el" href="../../d2/da9/classopen__spiel_1_1python_1_1voting_1_1stv_1_1_s_t_v_voting.html#a38df466e3ab23a7b52f716e77e46becb">open_spiel.python.voting.stv.STVVoting</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d5/de2/base_8py_source.html#l00469">469</a> of file <a class="el" href="../../d5/de2/base_8py_source.html">base.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  469</span>  <span class="keyword">def </span>name(self) -&gt; str:</div>
+<div class="line"><span class="lineno">  470</span>    <span class="stringliteral">&quot;&quot;&quot;Returns the name of the voting method.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  471</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad7674ed527518679d786984f7e2e45be" name="ad7674ed527518679d786984f7e2e45be"></a>
@@ -277,10 +308,22 @@ Returns:
 </pre> 
 <p>Reimplemented in <a class="el" href="../../d3/dc4/classopen__spiel_1_1python_1_1voting_1_1approval_1_1_approval_voting.html#aeea6ef5984929be50f7cfed698f87bcd">open_spiel.python.voting.approval.ApprovalVoting</a>, <a class="el" href="../../d4/d1c/classopen__spiel_1_1python_1_1voting_1_1borda_1_1_borda_voting.html#a62cfe7fe130fac79fa6e34c5ccfa85e6">open_spiel.python.voting.borda.BordaVoting</a>, <a class="el" href="../../d1/d09/classopen__spiel_1_1python_1_1voting_1_1copeland_1_1_copeland_voting.html#a97e60b57d2a965eb535754a79c494a01">open_spiel.python.voting.copeland.CopelandVoting</a>, <a class="el" href="../../db/da4/classopen__spiel_1_1python_1_1voting_1_1kemeny__young_1_1_kemeny_young_voting.html#aec7ec587fd70144febb7391c9c541578">open_spiel.python.voting.kemeny_young.KemenyYoungVoting</a>, <a class="el" href="../../d0/d55/classopen__spiel_1_1python_1_1voting_1_1maximal__lotteries_1_1_maximal_lotteries_voting.html#a90377dfc5153a746679da380e14eff5d">open_spiel.python.voting.maximal_lotteries.MaximalLotteriesVoting</a>, <a class="el" href="../../dc/d2b/classopen__spiel_1_1python_1_1voting_1_1plurality_1_1_plurality_voting.html#a7858b41d5168a891f3d9205eec5e2b91">open_spiel.python.voting.plurality.PluralityVoting</a>, <a class="el" href="../../de/d08/classopen__spiel_1_1python_1_1voting_1_1ranked__pairs_1_1_ranked_pairs_voting.html#ac282dbb0175ea2c99b5aad9a04cb7a89">open_spiel.python.voting.ranked_pairs.RankedPairsVoting</a>, <a class="el" href="../../d0/dc6/classopen__spiel_1_1python_1_1voting_1_1schulze_1_1_schulze_voting.html#a172965c50b038154b3955927fd8ceb38">open_spiel.python.voting.schulze.SchulzeVoting</a>, and <a class="el" href="../../d2/da9/classopen__spiel_1_1python_1_1voting_1_1stv_1_1_s_t_v_voting.html#a422fba2dc45d0ec1b538a95142d961da">open_spiel.python.voting.stv.STVVoting</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d5/de2/base_8py_source.html#l00473">473</a> of file <a class="el" href="../../d5/de2/base_8py_source.html">base.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  473</span>  <span class="keyword">def </span>run_election(self, profile: PreferenceProfile) -&gt; RankOutcome:</div>
+<div class="line"><span class="lineno">  474</span>    <span class="stringliteral">&quot;&quot;&quot;Runs the election and returns the result.</span></div>
+<div class="line"><span class="lineno">  475</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  476</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  477</span><span class="stringliteral">        profile: a preference profile.</span></div>
+<div class="line"><span class="lineno">  478</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  479</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  480</span><span class="stringliteral">        a RankOutcome object that can be queried for the results.</span></div>
+<div class="line"><span class="lineno">  481</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  482</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/voting/<b>base.py</b></li>
+<li>open_spiel/python/voting/<a class="el" href="../../d5/de2/base_8py_source.html">base.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

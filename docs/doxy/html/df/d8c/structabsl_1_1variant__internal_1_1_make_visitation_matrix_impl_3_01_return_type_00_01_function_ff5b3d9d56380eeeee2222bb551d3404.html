@@ -111,11 +111,14 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3d6ef7b43b4488eaf98ea597f7f550ee" id="r_a3d6ef7b43b4488eaf98ea597f7f550ee"><td class="memItemLeft" align="right" valign="top"><a id="a3d6ef7b43b4488eaf98ea597f7f550ee" name="a3d6ef7b43b4488eaf98ea597f7f550ee"></a>
-static constexpr <a class="el" href="../../dc/d41/structabsl_1_1variant__internal_1_1_simple_array.html">ResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> ()</td></tr>
+<tr class="memitem:a3d6ef7b43b4488eaf98ea597f7f550ee" id="r_a3d6ef7b43b4488eaf98ea597f7f550ee"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../dc/d41/structabsl_1_1variant__internal_1_1_simple_array.html">ResultType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d6ef7b43b4488eaf98ea597f7f550ee">Run</a> ()</td></tr>
 <tr class="separator:a3d6ef7b43b4488eaf98ea597f7f550ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class ReturnType, class FunctionObject, class EndIndices, std::size_t... CurrIndices, class BoundIndices&gt;<br />
+struct absl::variant_internal::MakeVisitationMatrixImpl&lt; ReturnType, FunctionObject, EndIndices, index_sequence&lt; CurrIndices... &gt;, BoundIndices &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00247">247</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a3126e6ec5e241a8b3770bf988dd2a78c" name="a3126e6ec5e241a8b3770bf988dd2a78c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3126e6ec5e241a8b3770bf988dd2a78c">&#9670;&#160;</a></span>ResultType</h2>
 
@@ -133,6 +136,43 @@ template&lt;class ReturnType , class FunctionObject , class EndIndices , std::si
 <div class="line">      <span class="keyword">typename</span> MakeVisitationMatrix&lt;ReturnType, FunctionObject, EndIndices,</div>
 <div class="line">                                    index_sequence&lt;&gt;&gt;::ResultType,</div>
 <div class="line">      <span class="keyword">sizeof</span>...(CurrIndices)&gt;</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00249">249</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3d6ef7b43b4488eaf98ea597f7f550ee" name="a3d6ef7b43b4488eaf98ea597f7f550ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d6ef7b43b4488eaf98ea597f7f550ee">&#9670;&#160;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ReturnType , class FunctionObject , class EndIndices , std::size_t... CurrIndices, class BoundIndices &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="../../dc/d41/structabsl_1_1variant__internal_1_1_simple_array.html">ResultType</a> <a class="el" href="../../d1/d3e/structabsl_1_1variant__internal_1_1_make_visitation_matrix_impl.html">absl::variant_internal::MakeVisitationMatrixImpl</a>&lt; ReturnType, FunctionObject, EndIndices, <a class="el" href="../../d1/dd9/structabsl_1_1integer__sequence.html">index_sequence</a>&lt; CurrIndices... &gt;, BoundIndices &gt;::Run </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00254">254</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  254</span>                                    {</div>
+<div class="line"><span class="lineno">  255</span>    <span class="keywordflow">return</span> {{MakeVisitationMatrix&lt;</div>
+<div class="line"><span class="lineno">  256</span>        ReturnType, FunctionObject, EndIndices,</div>
+<div class="line"><span class="lineno">  257</span>        AppendToIndexSequenceT&lt;BoundIndices, CurrIndices&gt;&gt;::Run()...}};</div>
+<div class="line"><span class="lineno">  258</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

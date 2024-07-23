@@ -105,11 +105,57 @@ Collaboration diagram for absl::variant_internal::VisitIndicesFallback&lt; EndIn
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a36f1206f77a95479d1a04a6b774dced3" id="r_a36f1206f77a95479d1a04a6b774dced3"><td class="memTemplParams" colspan="2"><a id="a36f1206f77a95479d1a04a6b774dced3" name="a36f1206f77a95479d1a04a6b774dced3"></a>
-template&lt;class Op , class... SizeT&gt; </td></tr>
-<tr class="memitem:a36f1206f77a95479d1a04a6b774dced3"><td class="memTemplItemLeft" align="right" valign="top">static VisitIndicesResultT&lt; Op, SizeT... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Run</b> (Op &amp;&amp;op, SizeT... indices)</td></tr>
+<tr class="memitem:a36f1206f77a95479d1a04a6b774dced3" id="r_a36f1206f77a95479d1a04a6b774dced3"><td class="memTemplParams" colspan="2">template&lt;class Op , class... SizeT&gt; </td></tr>
+<tr class="memitem:a36f1206f77a95479d1a04a6b774dced3"><td class="memTemplItemLeft" align="right" valign="top">static VisitIndicesResultT&lt; Op, SizeT... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a36f1206f77a95479d1a04a6b774dced3">Run</a> (Op &amp;&amp;op, SizeT... indices)</td></tr>
 <tr class="separator:a36f1206f77a95479d1a04a6b774dced3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;std::size_t... EndIndices&gt;<br />
+struct absl::variant_internal::VisitIndicesFallback&lt; EndIndices &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00433">433</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a36f1206f77a95479d1a04a6b774dced3" name="a36f1206f77a95479d1a04a6b774dced3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f1206f77a95479d1a04a6b774dced3">&#9670;&#160;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t... EndIndices&gt; </div>
+<div class="memtemplate">
+template&lt;class Op , class... SizeT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static VisitIndicesResultT&lt; Op, SizeT... &gt; <a class="el" href="../../dd/d4e/structabsl_1_1variant__internal_1_1_visit_indices_fallback.html">absl::variant_internal::VisitIndicesFallback</a>&lt; EndIndices &gt;::Run </td>
+          <td>(</td>
+          <td class="paramtype">Op &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>op</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeT...</td>          <td class="paramname"><span class="paramname"><em>indices</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00435">435</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  435</span>                                                                          {</div>
+<div class="line"><span class="lineno">  436</span>    <span class="keywordflow">return</span> AccessSimpleArray(</div>
+<div class="line"><span class="lineno">  437</span>        MakeVisitationMatrix&lt;VisitIndicesResultT&lt;Op, SizeT...&gt;, Op,</div>
+<div class="line"><span class="lineno">  438</span>                             index_sequence&lt;(EndIndices + 1)...&gt;,</div>
+<div class="line"><span class="lineno">  439</span>                             index_sequence&lt;&gt;&gt;::Run(),</div>
+<div class="line"><span class="lineno">  440</span>        (indices + 1)...)(absl::forward&lt;Op&gt;(op));</div>
+<div class="line"><span class="lineno">  441</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a></li>
 </ul>

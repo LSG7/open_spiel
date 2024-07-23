@@ -123,18 +123,17 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ac5531fd7133055fe43b02cc34314f4f9" id="r_ac5531fd7133055fe43b02cc34314f4f9"><td class="memItemLeft" align="right" valign="top"><a id="ac5531fd7133055fe43b02cc34314f4f9" name="ac5531fd7133055fe43b02cc34314f4f9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>vid</b></td></tr>
+<tr class="memitem:ac5531fd7133055fe43b02cc34314f4f9" id="r_ac5531fd7133055fe43b02cc34314f4f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5531fd7133055fe43b02cc34314f4f9">vid</a></td></tr>
 <tr class="separator:ac5531fd7133055fe43b02cc34314f4f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d2eae3703408cc0a61449934d40ca19" id="r_a1d2eae3703408cc0a61449934d40ca19"><td class="memItemLeft" align="right" valign="top"><a id="a1d2eae3703408cc0a61449934d40ca19" name="a1d2eae3703408cc0a61449934d40ca19"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>lb</b></td></tr>
+<tr class="memitem:a1d2eae3703408cc0a61449934d40ca19" id="r_a1d2eae3703408cc0a61449934d40ca19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d2eae3703408cc0a61449934d40ca19">lb</a></td></tr>
 <tr class="separator:a1d2eae3703408cc0a61449934d40ca19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4864b5a8f6c7fd3ee0c2211a9994c414" id="r_a4864b5a8f6c7fd3ee0c2211a9994c414"><td class="memItemLeft" align="right" valign="top"><a id="a4864b5a8f6c7fd3ee0c2211a9994c414" name="a4864b5a8f6c7fd3ee0c2211a9994c414"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ub</b></td></tr>
+<tr class="memitem:a4864b5a8f6c7fd3ee0c2211a9994c414" id="r_a4864b5a8f6c7fd3ee0c2211a9994c414"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4864b5a8f6c7fd3ee0c2211a9994c414">ub</a></td></tr>
 <tr class="separator:a4864b5a8f6c7fd3ee0c2211a9994c414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A variable in an LP.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">A variable in an LP.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00036">36</a> of file <a class="el" href="../../de/d0f/lp__solver_8py_source.html">lp_solver.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac71ef2e58be07877db5559ccb86925be" name="ac71ef2e58be07877db5559ccb86925be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac71ef2e58be07877db5559ccb86925be">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -170,10 +169,82 @@ Args:
   lb: the lower bound on the variable's value (None means no lower bound)
   ub: the upper bound on the variable's valie (None means no upper bound)
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00039">39</a> of file <a class="el" href="../../de/d0f/lp__solver_8py_source.html">lp_solver.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>  <span class="keyword">def </span>__init__(self, vid, lb=None, ub=None):</div>
+<div class="line"><span class="lineno">   40</span>    <span class="stringliteral">&quot;&quot;&quot;Creates a variable in a linear program.</span></div>
+<div class="line"><span class="lineno">   41</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   42</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">   43</span><span class="stringliteral">      vid: (integer) the variable id (should be unique for each variable)</span></div>
+<div class="line"><span class="lineno">   44</span><span class="stringliteral">      lb: the lower bound on the variable&#39;s value (None means no lower bound)</span></div>
+<div class="line"><span class="lineno">   45</span><span class="stringliteral">      ub: the upper bound on the variable&#39;s valie (None means no upper bound)</span></div>
+<div class="line"><span class="lineno">   46</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   47</span>    self.vid = vid</div>
+<div class="line"><span class="lineno">   48</span>    self.lb = lb</div>
+<div class="line"><span class="lineno">   49</span>    self.ub = ub</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00048">open_spiel.python.algorithms.lp_solver._Variable.lb</a>, <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00049">open_spiel.python.algorithms.lp_solver._Variable.ub</a>, and <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00047">open_spiel.python.algorithms.lp_solver._Variable.vid</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1d2eae3703408cc0a61449934d40ca19" name="a1d2eae3703408cc0a61449934d40ca19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2eae3703408cc0a61449934d40ca19">&#9670;&#160;</a></span>lb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.lp_solver._Variable.lb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00048">48</a> of file <a class="el" href="../../de/d0f/lp__solver_8py_source.html">lp_solver.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00039">open_spiel.python.algorithms.lp_solver._Variable.__init__()</a>.</p>
+
+</div>
+</div>
+<a id="a4864b5a8f6c7fd3ee0c2211a9994c414" name="a4864b5a8f6c7fd3ee0c2211a9994c414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4864b5a8f6c7fd3ee0c2211a9994c414">&#9670;&#160;</a></span>ub</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.lp_solver._Variable.ub</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00049">49</a> of file <a class="el" href="../../de/d0f/lp__solver_8py_source.html">lp_solver.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00039">open_spiel.python.algorithms.lp_solver._Variable.__init__()</a>.</p>
+
+</div>
+</div>
+<a id="ac5531fd7133055fe43b02cc34314f4f9" name="ac5531fd7133055fe43b02cc34314f4f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5531fd7133055fe43b02cc34314f4f9">&#9670;&#160;</a></span>vid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.lp_solver._Variable.vid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00047">47</a> of file <a class="el" href="../../de/d0f/lp__solver_8py_source.html">lp_solver.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d0f/lp__solver_8py_source.html#l00039">open_spiel.python.algorithms.lp_solver._Variable.__init__()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>lp_solver.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../de/d0f/lp__solver_8py_source.html">lp_solver.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

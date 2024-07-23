@@ -117,12 +117,68 @@ Collaboration diagram for open_spiel.python.jax.boltzmann_dqn_jax_test.DQNTest:<
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9e31ecea5df93ea7d993d281110416b" id="r_ae9e31ecea5df93ea7d993d281110416b"><td class="memItemLeft" align="right" valign="top"><a id="ae9e31ecea5df93ea7d993d281110416b" name="ae9e31ecea5df93ea7d993d281110416b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_train</b> (self)</td></tr>
+<tr class="memitem:ae9e31ecea5df93ea7d993d281110416b" id="r_ae9e31ecea5df93ea7d993d281110416b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9e31ecea5df93ea7d993d281110416b">test_train</a> (self)</td></tr>
 <tr class="separator:ae9e31ecea5df93ea7d993d281110416b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/boltzmann__dqn__jax__test_8py_source.html#l00033">33</a> of file <a class="el" href="../../d4/da3/boltzmann__dqn__jax__test_8py_source.html">boltzmann_dqn_jax_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae9e31ecea5df93ea7d993d281110416b" name="ae9e31ecea5df93ea7d993d281110416b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e31ecea5df93ea7d993d281110416b">&#9670;&#160;</a></span>test_train()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.jax.boltzmann_dqn_jax_test.DQNTest.test_train </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/boltzmann__dqn__jax__test_8py_source.html#l00035">35</a> of file <a class="el" href="../../d4/da3/boltzmann__dqn__jax__test_8py_source.html">boltzmann_dqn_jax_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>  <span class="keyword">def </span>test_train(self):</div>
+<div class="line"><span class="lineno">   36</span>    game = pyspiel.load_efg_game(SIMPLE_EFG_DATA)</div>
+<div class="line"><span class="lineno">   37</span>    env = rl_environment.Environment(game=game)</div>
+<div class="line"><span class="lineno">   38</span>    agent = boltzmann_dqn.BoltzmannDQN(</div>
+<div class="line"><span class="lineno">   39</span>        0,</div>
+<div class="line"><span class="lineno">   40</span>        state_representation_size=game.information_state_tensor_shape()[0],</div>
+<div class="line"><span class="lineno">   41</span>        num_actions=game.num_distinct_actions(),</div>
+<div class="line"><span class="lineno">   42</span>        hidden_layers_sizes=[16],</div>
+<div class="line"><span class="lineno">   43</span>        replay_buffer_capacity=100,</div>
+<div class="line"><span class="lineno">   44</span>        batch_size=5,</div>
+<div class="line"><span class="lineno">   45</span>        epsilon_start=0.02,</div>
+<div class="line"><span class="lineno">   46</span>        epsilon_end=0.01,</div>
+<div class="line"><span class="lineno">   47</span>        eta=5.0)</div>
+<div class="line"><span class="lineno">   48</span>    total_reward = 0</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment"># Training. This will use the epsilon-greedy actions.</span></div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(100):</div>
+<div class="line"><span class="lineno">   52</span>      time_step = env.reset()</div>
+<div class="line"><span class="lineno">   53</span>      <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   54</span>        agent_output = agent.step(time_step)</div>
+<div class="line"><span class="lineno">   55</span>        time_step = env.step([agent_output.action])</div>
+<div class="line"><span class="lineno">   56</span>        total_reward += time_step.rewards[0]</div>
+<div class="line"><span class="lineno">   57</span>      agent.step(time_step)</div>
+<div class="line"><span class="lineno">   58</span>    self.assertGreaterEqual(total_reward, -100)</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <span class="comment"># Update the previous Q-network.</span></div>
+<div class="line"><span class="lineno">   61</span>    agent.update_prev_q_network()</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="comment"># This will use the soft-max actions.</span></div>
+<div class="line"><span class="lineno">   64</span>    policy = rl_agent_policy.RLAgentPolicy(game, agent, 0, <span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   65</span>    probs = policy.action_probabilities(game.new_initial_state())</div>
+<div class="line"><span class="lineno">   66</span>    self.assertAlmostEqual(probs[0], 0.54, places=2)</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/jax/<b>boltzmann_dqn_jax_test.py</b></li>
+<li>open_spiel/python/jax/<a class="el" href="../../d4/da3/boltzmann__dqn__jax__test_8py_source.html">boltzmann_dqn_jax_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

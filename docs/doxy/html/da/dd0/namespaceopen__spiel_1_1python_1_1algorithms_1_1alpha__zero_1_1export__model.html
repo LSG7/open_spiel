@@ -97,18 +97,71 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7a7d2f34b9f6a7c09af954cfdf354cfa" id="r_a7a7d2f34b9f6a7c09af954cfdf354cfa"><td class="memItemLeft" align="right" valign="top"><a id="a7a7d2f34b9f6a7c09af954cfdf354cfa" name="a7a7d2f34b9f6a7c09af954cfdf354cfa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (_)</td></tr>
+<tr class="memitem:a7a7d2f34b9f6a7c09af954cfdf354cfa" id="r_a7a7d2f34b9f6a7c09af954cfdf354cfa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a7d2f34b9f6a7c09af954cfdf354cfa">main</a> (_)</td></tr>
 <tr class="separator:a7a7d2f34b9f6a7c09af954cfdf354cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aacf881a9c51ad10b6a8b30dd3a7cdabe" id="r_aacf881a9c51ad10b6a8b30dd3a7cdabe"><td class="memItemLeft" align="right" valign="top"><a id="aacf881a9c51ad10b6a8b30dd3a7cdabe" name="aacf881a9c51ad10b6a8b30dd3a7cdabe"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:aacf881a9c51ad10b6a8b30dd3a7cdabe" id="r_aacf881a9c51ad10b6a8b30dd3a7cdabe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacf881a9c51ad10b6a8b30dd3a7cdabe">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:aacf881a9c51ad10b6a8b30dd3a7cdabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Export the model's Tensorflow graph as a protobuf.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">Export the model's Tensorflow graph as a protobuf.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a7a7d2f34b9f6a7c09af954cfdf354cfa" name="a7a7d2f34b9f6a7c09af954cfdf354cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7d2f34b9f6a7c09af954cfdf354cfa">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.export_model.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d60/export__model_8py_source.html#l00039">39</a> of file <a class="el" href="../../de/d60/export__model_8py_source.html">export_model.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(_):</div>
+<div class="line"><span class="lineno">   40</span>  game = pyspiel.load_game(FLAGS.game)</div>
+<div class="line"><span class="lineno">   41</span>  model = model_lib.Model.build_model(</div>
+<div class="line"><span class="lineno">   42</span>      FLAGS.nn_model, game.observation_tensor_shape(),</div>
+<div class="line"><span class="lineno">   43</span>      game.num_distinct_actions(), FLAGS.nn_width, FLAGS.nn_depth,</div>
+<div class="line"><span class="lineno">   44</span>      FLAGS.weight_decay, FLAGS.learning_rate, FLAGS.path)</div>
+<div class="line"><span class="lineno">   45</span>  model.write_graph(FLAGS.graph_def)</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  <span class="keywordflow">if</span> FLAGS.verbose:</div>
+<div class="line"><span class="lineno">   48</span>    print(<span class="stringliteral">&quot;Game:&quot;</span>, FLAGS.game)</div>
+<div class="line"><span class="lineno">   49</span>    print(<span class="stringliteral">&quot;Model type: %s(%s, %s)&quot;</span> % (FLAGS.nn_model, FLAGS.nn_width,</div>
+<div class="line"><span class="lineno">   50</span>                                      FLAGS.nn_depth))</div>
+<div class="line"><span class="lineno">   51</span>    print(<span class="stringliteral">&quot;Model size:&quot;</span>, model.num_trainable_variables, <span class="stringliteral">&quot;variables&quot;</span>)</div>
+<div class="line"><span class="lineno">   52</span>    print(<span class="stringliteral">&quot;Variables:&quot;</span>)</div>
+<div class="line"><span class="lineno">   53</span>    model.print_trainable_variables()</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aacf881a9c51ad10b6a8b30dd3a7cdabe" name="aacf881a9c51ad10b6a8b30dd3a7cdabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf881a9c51ad10b6a8b30dd3a7cdabe">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.export_model.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d60/export__model_8py_source.html#l00023">23</a> of file <a class="el" href="../../de/d60/export__model_8py_source.html">export_model.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

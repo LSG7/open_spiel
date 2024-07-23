@@ -118,137 +118,94 @@ Collaboration diagram for open_spiel.python.pytorch.ppo.PPO:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae678e609787ca7d321a12f89b67c3015" id="r_ae678e609787ca7d321a12f89b67c3015"><td class="memItemLeft" align="right" valign="top"><a id="ae678e609787ca7d321a12f89b67c3015" name="ae678e609787ca7d321a12f89b67c3015"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, input_shape, num_actions, num_players, player_id=0, num_envs=1, steps_per_batch=128, num_minibatches=4, update_epochs=4, learning_rate=2.5e-4, gae=True, gamma=0.99, gae_lambda=0.95, normalize_advantages=True, clip_coef=0.2, clip_vloss=True, entropy_coef=0.01, value_coef=0.5, max_grad_norm=0.5, target_kl=None, device=&quot;cpu&quot;, writer=None, agent_fn=<a class="el" href="../../d8/d1b/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_atari_agent.html">PPOAtariAgent</a>)</td></tr>
+<tr class="memitem:ae678e609787ca7d321a12f89b67c3015" id="r_ae678e609787ca7d321a12f89b67c3015"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae678e609787ca7d321a12f89b67c3015">__init__</a> (self, input_shape, num_actions, num_players, player_id=0, num_envs=1, steps_per_batch=128, num_minibatches=4, update_epochs=4, learning_rate=2.5e-4, gae=True, gamma=0.99, gae_lambda=0.95, normalize_advantages=True, clip_coef=0.2, clip_vloss=True, entropy_coef=0.01, value_coef=0.5, max_grad_norm=0.5, target_kl=None, device=&quot;cpu&quot;, writer=None, agent_fn=<a class="el" href="../../d8/d1b/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_atari_agent.html">PPOAtariAgent</a>)</td></tr>
 <tr class="separator:ae678e609787ca7d321a12f89b67c3015"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b56fdcaecdfe4dde17a4e5b72455c24" id="r_a8b56fdcaecdfe4dde17a4e5b72455c24"><td class="memItemLeft" align="right" valign="top"><a id="a8b56fdcaecdfe4dde17a4e5b72455c24" name="a8b56fdcaecdfe4dde17a4e5b72455c24"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>get_value</b> (self, x)</td></tr>
+<tr class="memitem:a8b56fdcaecdfe4dde17a4e5b72455c24" id="r_a8b56fdcaecdfe4dde17a4e5b72455c24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b56fdcaecdfe4dde17a4e5b72455c24">get_value</a> (self, x)</td></tr>
 <tr class="separator:a8b56fdcaecdfe4dde17a4e5b72455c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4011fd9f9802ab662682aac5558079f0" id="r_a4011fd9f9802ab662682aac5558079f0"><td class="memItemLeft" align="right" valign="top"><a id="a4011fd9f9802ab662682aac5558079f0" name="a4011fd9f9802ab662682aac5558079f0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>get_action_and_value</b> (self, x, legal_actions_mask=None, action=None)</td></tr>
+<tr class="memitem:a4011fd9f9802ab662682aac5558079f0" id="r_a4011fd9f9802ab662682aac5558079f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4011fd9f9802ab662682aac5558079f0">get_action_and_value</a> (self, x, legal_actions_mask=None, action=None)</td></tr>
 <tr class="separator:a4011fd9f9802ab662682aac5558079f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7af75e55376d447f5f30e75bd947e242" id="r_a7af75e55376d447f5f30e75bd947e242"><td class="memItemLeft" align="right" valign="top"><a id="a7af75e55376d447f5f30e75bd947e242" name="a7af75e55376d447f5f30e75bd947e242"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>step</b> (self, time_step, is_evaluation=False)</td></tr>
+<tr class="memitem:a7af75e55376d447f5f30e75bd947e242" id="r_a7af75e55376d447f5f30e75bd947e242"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7af75e55376d447f5f30e75bd947e242">step</a> (self, time_step, is_evaluation=False)</td></tr>
 <tr class="separator:a7af75e55376d447f5f30e75bd947e242"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31b58990ee3a2adeb69ee7b5bd343ded" id="r_a31b58990ee3a2adeb69ee7b5bd343ded"><td class="memItemLeft" align="right" valign="top"><a id="a31b58990ee3a2adeb69ee7b5bd343ded" name="a31b58990ee3a2adeb69ee7b5bd343ded"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>post_step</b> (self, reward, done)</td></tr>
+<tr class="memitem:a31b58990ee3a2adeb69ee7b5bd343ded" id="r_a31b58990ee3a2adeb69ee7b5bd343ded"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31b58990ee3a2adeb69ee7b5bd343ded">post_step</a> (self, reward, done)</td></tr>
 <tr class="separator:a31b58990ee3a2adeb69ee7b5bd343ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa4e8f32bf33f09c1f0be204d2926600" id="r_aaa4e8f32bf33f09c1f0be204d2926600"><td class="memItemLeft" align="right" valign="top"><a id="aaa4e8f32bf33f09c1f0be204d2926600" name="aaa4e8f32bf33f09c1f0be204d2926600"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>learn</b> (self, time_step)</td></tr>
+<tr class="memitem:aaa4e8f32bf33f09c1f0be204d2926600" id="r_aaa4e8f32bf33f09c1f0be204d2926600"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa4e8f32bf33f09c1f0be204d2926600">learn</a> (self, time_step)</td></tr>
 <tr class="separator:aaa4e8f32bf33f09c1f0be204d2926600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affd3e6b217dcf0496395753fc8740e45" id="r_affd3e6b217dcf0496395753fc8740e45"><td class="memItemLeft" align="right" valign="top"><a id="affd3e6b217dcf0496395753fc8740e45" name="affd3e6b217dcf0496395753fc8740e45"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>anneal_learning_rate</b> (self, update, num_total_updates)</td></tr>
+<tr class="memitem:affd3e6b217dcf0496395753fc8740e45" id="r_affd3e6b217dcf0496395753fc8740e45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affd3e6b217dcf0496395753fc8740e45">anneal_learning_rate</a> (self, update, num_total_updates)</td></tr>
 <tr class="separator:affd3e6b217dcf0496395753fc8740e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aca0dc46ae1bea2aa783f8296e66670cf" id="r_aca0dc46ae1bea2aa783f8296e66670cf"><td class="memItemLeft" align="right" valign="top"><a id="aca0dc46ae1bea2aa783f8296e66670cf" name="aca0dc46ae1bea2aa783f8296e66670cf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>input_shape</b></td></tr>
+<tr class="memitem:aca0dc46ae1bea2aa783f8296e66670cf" id="r_aca0dc46ae1bea2aa783f8296e66670cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca0dc46ae1bea2aa783f8296e66670cf">input_shape</a></td></tr>
 <tr class="separator:aca0dc46ae1bea2aa783f8296e66670cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a6cb9159a706da0f01366cc4c420dee" id="r_a2a6cb9159a706da0f01366cc4c420dee"><td class="memItemLeft" align="right" valign="top"><a id="a2a6cb9159a706da0f01366cc4c420dee" name="a2a6cb9159a706da0f01366cc4c420dee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>num_actions</b></td></tr>
+<tr class="memitem:a2a6cb9159a706da0f01366cc4c420dee" id="r_a2a6cb9159a706da0f01366cc4c420dee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a6cb9159a706da0f01366cc4c420dee">num_actions</a></td></tr>
 <tr class="separator:a2a6cb9159a706da0f01366cc4c420dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1f6ffe981d1addfd928565b97f493c9" id="r_aa1f6ffe981d1addfd928565b97f493c9"><td class="memItemLeft" align="right" valign="top"><a id="aa1f6ffe981d1addfd928565b97f493c9" name="aa1f6ffe981d1addfd928565b97f493c9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>num_players</b></td></tr>
+<tr class="memitem:aa1f6ffe981d1addfd928565b97f493c9" id="r_aa1f6ffe981d1addfd928565b97f493c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1f6ffe981d1addfd928565b97f493c9">num_players</a></td></tr>
 <tr class="separator:aa1f6ffe981d1addfd928565b97f493c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55231a303c62fbc124227ff3b7c00a08" id="r_a55231a303c62fbc124227ff3b7c00a08"><td class="memItemLeft" align="right" valign="top"><a id="a55231a303c62fbc124227ff3b7c00a08" name="a55231a303c62fbc124227ff3b7c00a08"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>player_id</b></td></tr>
+<tr class="memitem:a55231a303c62fbc124227ff3b7c00a08" id="r_a55231a303c62fbc124227ff3b7c00a08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55231a303c62fbc124227ff3b7c00a08">player_id</a></td></tr>
 <tr class="separator:a55231a303c62fbc124227ff3b7c00a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf356d29aa657556ffdd57eb8fd256b" id="r_adbf356d29aa657556ffdd57eb8fd256b"><td class="memItemLeft" align="right" valign="top"><a id="adbf356d29aa657556ffdd57eb8fd256b" name="adbf356d29aa657556ffdd57eb8fd256b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>device</b></td></tr>
+<tr class="memitem:adbf356d29aa657556ffdd57eb8fd256b" id="r_adbf356d29aa657556ffdd57eb8fd256b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbf356d29aa657556ffdd57eb8fd256b">device</a></td></tr>
 <tr class="separator:adbf356d29aa657556ffdd57eb8fd256b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a5e375b26add93961eae98f9682ce3d" id="r_a5a5e375b26add93961eae98f9682ce3d"><td class="memItemLeft" align="right" valign="top"><a id="a5a5e375b26add93961eae98f9682ce3d" name="a5a5e375b26add93961eae98f9682ce3d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>num_envs</b></td></tr>
+<tr class="memitem:a5a5e375b26add93961eae98f9682ce3d" id="r_a5a5e375b26add93961eae98f9682ce3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a5e375b26add93961eae98f9682ce3d">num_envs</a></td></tr>
 <tr class="separator:a5a5e375b26add93961eae98f9682ce3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecc6d18c7595f118473682e34a5995bb" id="r_aecc6d18c7595f118473682e34a5995bb"><td class="memItemLeft" align="right" valign="top"><a id="aecc6d18c7595f118473682e34a5995bb" name="aecc6d18c7595f118473682e34a5995bb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>steps_per_batch</b></td></tr>
+<tr class="memitem:aecc6d18c7595f118473682e34a5995bb" id="r_aecc6d18c7595f118473682e34a5995bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecc6d18c7595f118473682e34a5995bb">steps_per_batch</a></td></tr>
 <tr class="separator:aecc6d18c7595f118473682e34a5995bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab24ad0b0c1a750d9ec74ac56347ac547" id="r_ab24ad0b0c1a750d9ec74ac56347ac547"><td class="memItemLeft" align="right" valign="top"><a id="ab24ad0b0c1a750d9ec74ac56347ac547" name="ab24ad0b0c1a750d9ec74ac56347ac547"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>batch_size</b></td></tr>
+<tr class="memitem:ab24ad0b0c1a750d9ec74ac56347ac547" id="r_ab24ad0b0c1a750d9ec74ac56347ac547"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab24ad0b0c1a750d9ec74ac56347ac547">batch_size</a></td></tr>
 <tr class="separator:ab24ad0b0c1a750d9ec74ac56347ac547"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade22b0609308ee01deff8531165fa06b" id="r_ade22b0609308ee01deff8531165fa06b"><td class="memItemLeft" align="right" valign="top"><a id="ade22b0609308ee01deff8531165fa06b" name="ade22b0609308ee01deff8531165fa06b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>num_minibatches</b></td></tr>
+<tr class="memitem:ade22b0609308ee01deff8531165fa06b" id="r_ade22b0609308ee01deff8531165fa06b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade22b0609308ee01deff8531165fa06b">num_minibatches</a></td></tr>
 <tr class="separator:ade22b0609308ee01deff8531165fa06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75ff4b7b8e31833b4907421a1b20c1cb" id="r_a75ff4b7b8e31833b4907421a1b20c1cb"><td class="memItemLeft" align="right" valign="top"><a id="a75ff4b7b8e31833b4907421a1b20c1cb" name="a75ff4b7b8e31833b4907421a1b20c1cb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>minibatch_size</b></td></tr>
+<tr class="memitem:a75ff4b7b8e31833b4907421a1b20c1cb" id="r_a75ff4b7b8e31833b4907421a1b20c1cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75ff4b7b8e31833b4907421a1b20c1cb">minibatch_size</a></td></tr>
 <tr class="separator:a75ff4b7b8e31833b4907421a1b20c1cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1330e751671e632b088b2a8c41a331bd" id="r_a1330e751671e632b088b2a8c41a331bd"><td class="memItemLeft" align="right" valign="top"><a id="a1330e751671e632b088b2a8c41a331bd" name="a1330e751671e632b088b2a8c41a331bd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>update_epochs</b></td></tr>
+<tr class="memitem:a1330e751671e632b088b2a8c41a331bd" id="r_a1330e751671e632b088b2a8c41a331bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1330e751671e632b088b2a8c41a331bd">update_epochs</a></td></tr>
 <tr class="separator:a1330e751671e632b088b2a8c41a331bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabe56f8af2eaa4caf2ffe1071e173afd" id="r_aabe56f8af2eaa4caf2ffe1071e173afd"><td class="memItemLeft" align="right" valign="top"><a id="aabe56f8af2eaa4caf2ffe1071e173afd" name="aabe56f8af2eaa4caf2ffe1071e173afd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>learning_rate</b></td></tr>
+<tr class="memitem:aabe56f8af2eaa4caf2ffe1071e173afd" id="r_aabe56f8af2eaa4caf2ffe1071e173afd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabe56f8af2eaa4caf2ffe1071e173afd">learning_rate</a></td></tr>
 <tr class="separator:aabe56f8af2eaa4caf2ffe1071e173afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4d04aaf4960c1b3f7f28be641d1e9d4" id="r_ae4d04aaf4960c1b3f7f28be641d1e9d4"><td class="memItemLeft" align="right" valign="top"><a id="ae4d04aaf4960c1b3f7f28be641d1e9d4" name="ae4d04aaf4960c1b3f7f28be641d1e9d4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>gae</b></td></tr>
+<tr class="memitem:ae4d04aaf4960c1b3f7f28be641d1e9d4" id="r_ae4d04aaf4960c1b3f7f28be641d1e9d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4d04aaf4960c1b3f7f28be641d1e9d4">gae</a></td></tr>
 <tr class="separator:ae4d04aaf4960c1b3f7f28be641d1e9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad343e12b6f8b6fd485214c568ff007fd" id="r_ad343e12b6f8b6fd485214c568ff007fd"><td class="memItemLeft" align="right" valign="top"><a id="ad343e12b6f8b6fd485214c568ff007fd" name="ad343e12b6f8b6fd485214c568ff007fd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>gamma</b></td></tr>
+<tr class="memitem:ad343e12b6f8b6fd485214c568ff007fd" id="r_ad343e12b6f8b6fd485214c568ff007fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad343e12b6f8b6fd485214c568ff007fd">gamma</a></td></tr>
 <tr class="separator:ad343e12b6f8b6fd485214c568ff007fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af94c96d5e6fb6b9b8019988b074f42af" id="r_af94c96d5e6fb6b9b8019988b074f42af"><td class="memItemLeft" align="right" valign="top"><a id="af94c96d5e6fb6b9b8019988b074f42af" name="af94c96d5e6fb6b9b8019988b074f42af"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>gae_lambda</b></td></tr>
+<tr class="memitem:af94c96d5e6fb6b9b8019988b074f42af" id="r_af94c96d5e6fb6b9b8019988b074f42af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af94c96d5e6fb6b9b8019988b074f42af">gae_lambda</a></td></tr>
 <tr class="separator:af94c96d5e6fb6b9b8019988b074f42af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b5f7dd88ff5162f013963f1f45d10bb" id="r_a4b5f7dd88ff5162f013963f1f45d10bb"><td class="memItemLeft" align="right" valign="top"><a id="a4b5f7dd88ff5162f013963f1f45d10bb" name="a4b5f7dd88ff5162f013963f1f45d10bb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>normalize_advantages</b></td></tr>
+<tr class="memitem:a4b5f7dd88ff5162f013963f1f45d10bb" id="r_a4b5f7dd88ff5162f013963f1f45d10bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b5f7dd88ff5162f013963f1f45d10bb">normalize_advantages</a></td></tr>
 <tr class="separator:a4b5f7dd88ff5162f013963f1f45d10bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41012f60a7b9faf83bdd96890abe542f" id="r_a41012f60a7b9faf83bdd96890abe542f"><td class="memItemLeft" align="right" valign="top"><a id="a41012f60a7b9faf83bdd96890abe542f" name="a41012f60a7b9faf83bdd96890abe542f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>clip_coef</b></td></tr>
+<tr class="memitem:a41012f60a7b9faf83bdd96890abe542f" id="r_a41012f60a7b9faf83bdd96890abe542f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41012f60a7b9faf83bdd96890abe542f">clip_coef</a></td></tr>
 <tr class="separator:a41012f60a7b9faf83bdd96890abe542f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc83f9e9bd69c01674eefbd805656ba" id="r_a5cc83f9e9bd69c01674eefbd805656ba"><td class="memItemLeft" align="right" valign="top"><a id="a5cc83f9e9bd69c01674eefbd805656ba" name="a5cc83f9e9bd69c01674eefbd805656ba"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>clip_vloss</b></td></tr>
+<tr class="memitem:a5cc83f9e9bd69c01674eefbd805656ba" id="r_a5cc83f9e9bd69c01674eefbd805656ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cc83f9e9bd69c01674eefbd805656ba">clip_vloss</a></td></tr>
 <tr class="separator:a5cc83f9e9bd69c01674eefbd805656ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad904c7cd25d8465db8aead6180ae8043" id="r_ad904c7cd25d8465db8aead6180ae8043"><td class="memItemLeft" align="right" valign="top"><a id="ad904c7cd25d8465db8aead6180ae8043" name="ad904c7cd25d8465db8aead6180ae8043"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>entropy_coef</b></td></tr>
+<tr class="memitem:ad904c7cd25d8465db8aead6180ae8043" id="r_ad904c7cd25d8465db8aead6180ae8043"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad904c7cd25d8465db8aead6180ae8043">entropy_coef</a></td></tr>
 <tr class="separator:ad904c7cd25d8465db8aead6180ae8043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23863071c47fb2a22f28eeb43eaf9690" id="r_a23863071c47fb2a22f28eeb43eaf9690"><td class="memItemLeft" align="right" valign="top"><a id="a23863071c47fb2a22f28eeb43eaf9690" name="a23863071c47fb2a22f28eeb43eaf9690"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>value_coef</b></td></tr>
+<tr class="memitem:a23863071c47fb2a22f28eeb43eaf9690" id="r_a23863071c47fb2a22f28eeb43eaf9690"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23863071c47fb2a22f28eeb43eaf9690">value_coef</a></td></tr>
 <tr class="separator:a23863071c47fb2a22f28eeb43eaf9690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5ed3104bb5e264411d65c704634d453" id="r_ad5ed3104bb5e264411d65c704634d453"><td class="memItemLeft" align="right" valign="top"><a id="ad5ed3104bb5e264411d65c704634d453" name="ad5ed3104bb5e264411d65c704634d453"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>max_grad_norm</b></td></tr>
+<tr class="memitem:ad5ed3104bb5e264411d65c704634d453" id="r_ad5ed3104bb5e264411d65c704634d453"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5ed3104bb5e264411d65c704634d453">max_grad_norm</a></td></tr>
 <tr class="separator:ad5ed3104bb5e264411d65c704634d453"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e0bc1237842a9b45a7c7704784417e" id="r_a29e0bc1237842a9b45a7c7704784417e"><td class="memItemLeft" align="right" valign="top"><a id="a29e0bc1237842a9b45a7c7704784417e" name="a29e0bc1237842a9b45a7c7704784417e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>target_kl</b></td></tr>
+<tr class="memitem:a29e0bc1237842a9b45a7c7704784417e" id="r_a29e0bc1237842a9b45a7c7704784417e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29e0bc1237842a9b45a7c7704784417e">target_kl</a></td></tr>
 <tr class="separator:a29e0bc1237842a9b45a7c7704784417e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace87ca8574b04fa5b8301b3770025974" id="r_ace87ca8574b04fa5b8301b3770025974"><td class="memItemLeft" align="right" valign="top"><a id="ace87ca8574b04fa5b8301b3770025974" name="ace87ca8574b04fa5b8301b3770025974"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>writer</b></td></tr>
+<tr class="memitem:ace87ca8574b04fa5b8301b3770025974" id="r_ace87ca8574b04fa5b8301b3770025974"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace87ca8574b04fa5b8301b3770025974">writer</a></td></tr>
 <tr class="separator:ace87ca8574b04fa5b8301b3770025974"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d7593735c2bb287516c4c8205e4bb8e" id="r_a0d7593735c2bb287516c4c8205e4bb8e"><td class="memItemLeft" align="right" valign="top"><a id="a0d7593735c2bb287516c4c8205e4bb8e" name="a0d7593735c2bb287516c4c8205e4bb8e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>network</b></td></tr>
+<tr class="memitem:a0d7593735c2bb287516c4c8205e4bb8e" id="r_a0d7593735c2bb287516c4c8205e4bb8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d7593735c2bb287516c4c8205e4bb8e">network</a></td></tr>
 <tr class="separator:a0d7593735c2bb287516c4c8205e4bb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bdccaccbf638d4187930e57d045d4dc" id="r_a7bdccaccbf638d4187930e57d045d4dc"><td class="memItemLeft" align="right" valign="top"><a id="a7bdccaccbf638d4187930e57d045d4dc" name="a7bdccaccbf638d4187930e57d045d4dc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>optimizer</b></td></tr>
+<tr class="memitem:a7bdccaccbf638d4187930e57d045d4dc" id="r_a7bdccaccbf638d4187930e57d045d4dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bdccaccbf638d4187930e57d045d4dc">optimizer</a></td></tr>
 <tr class="separator:a7bdccaccbf638d4187930e57d045d4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa2358416814fc9fe05ebc9c0af93be3" id="r_aaa2358416814fc9fe05ebc9c0af93be3"><td class="memItemLeft" align="right" valign="top"><a id="aaa2358416814fc9fe05ebc9c0af93be3" name="aaa2358416814fc9fe05ebc9c0af93be3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>legal_actions_mask</b></td></tr>
+<tr class="memitem:aaa2358416814fc9fe05ebc9c0af93be3" id="r_aaa2358416814fc9fe05ebc9c0af93be3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa2358416814fc9fe05ebc9c0af93be3">legal_actions_mask</a></td></tr>
 <tr class="separator:aaa2358416814fc9fe05ebc9c0af93be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af35c4319a7bbfff93e2e305c89a46c9c" id="r_af35c4319a7bbfff93e2e305c89a46c9c"><td class="memItemLeft" align="right" valign="top"><a id="af35c4319a7bbfff93e2e305c89a46c9c" name="af35c4319a7bbfff93e2e305c89a46c9c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>obs</b></td></tr>
+<tr class="memitem:af35c4319a7bbfff93e2e305c89a46c9c" id="r_af35c4319a7bbfff93e2e305c89a46c9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af35c4319a7bbfff93e2e305c89a46c9c">obs</a></td></tr>
 <tr class="separator:af35c4319a7bbfff93e2e305c89a46c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a4fa2939d827c3facc50ead57431f82" id="r_a8a4fa2939d827c3facc50ead57431f82"><td class="memItemLeft" align="right" valign="top"><a id="a8a4fa2939d827c3facc50ead57431f82" name="a8a4fa2939d827c3facc50ead57431f82"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>actions</b></td></tr>
+<tr class="memitem:a8a4fa2939d827c3facc50ead57431f82" id="r_a8a4fa2939d827c3facc50ead57431f82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a4fa2939d827c3facc50ead57431f82">actions</a></td></tr>
 <tr class="separator:a8a4fa2939d827c3facc50ead57431f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aef952a80164979fd6ebf2801134515" id="r_a1aef952a80164979fd6ebf2801134515"><td class="memItemLeft" align="right" valign="top"><a id="a1aef952a80164979fd6ebf2801134515" name="a1aef952a80164979fd6ebf2801134515"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>logprobs</b></td></tr>
+<tr class="memitem:a1aef952a80164979fd6ebf2801134515" id="r_a1aef952a80164979fd6ebf2801134515"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aef952a80164979fd6ebf2801134515">logprobs</a></td></tr>
 <tr class="separator:a1aef952a80164979fd6ebf2801134515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa785bdbb395932c9a74a08784339cc53" id="r_aa785bdbb395932c9a74a08784339cc53"><td class="memItemLeft" align="right" valign="top"><a id="aa785bdbb395932c9a74a08784339cc53" name="aa785bdbb395932c9a74a08784339cc53"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>rewards</b></td></tr>
+<tr class="memitem:aa785bdbb395932c9a74a08784339cc53" id="r_aa785bdbb395932c9a74a08784339cc53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa785bdbb395932c9a74a08784339cc53">rewards</a></td></tr>
 <tr class="separator:aa785bdbb395932c9a74a08784339cc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b8b5beab025f6967334a64013b2d7c2" id="r_a0b8b5beab025f6967334a64013b2d7c2"><td class="memItemLeft" align="right" valign="top"><a id="a0b8b5beab025f6967334a64013b2d7c2" name="a0b8b5beab025f6967334a64013b2d7c2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>dones</b></td></tr>
+<tr class="memitem:a0b8b5beab025f6967334a64013b2d7c2" id="r_a0b8b5beab025f6967334a64013b2d7c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b8b5beab025f6967334a64013b2d7c2">dones</a></td></tr>
 <tr class="separator:a0b8b5beab025f6967334a64013b2d7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d3de9072956b8087dcfdd8d8e81143" id="r_af5d3de9072956b8087dcfdd8d8e81143"><td class="memItemLeft" align="right" valign="top"><a id="af5d3de9072956b8087dcfdd8d8e81143" name="af5d3de9072956b8087dcfdd8d8e81143"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>values</b></td></tr>
+<tr class="memitem:af5d3de9072956b8087dcfdd8d8e81143" id="r_af5d3de9072956b8087dcfdd8d8e81143"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5d3de9072956b8087dcfdd8d8e81143">values</a></td></tr>
 <tr class="separator:af5d3de9072956b8087dcfdd8d8e81143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a357c60e63fac5acfb00ead6d98fce6b8" id="r_a357c60e63fac5acfb00ead6d98fce6b8"><td class="memItemLeft" align="right" valign="top"><a id="a357c60e63fac5acfb00ead6d98fce6b8" name="a357c60e63fac5acfb00ead6d98fce6b8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>cur_batch_idx</b></td></tr>
+<tr class="memitem:a357c60e63fac5acfb00ead6d98fce6b8" id="r_a357c60e63fac5acfb00ead6d98fce6b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a357c60e63fac5acfb00ead6d98fce6b8">cur_batch_idx</a></td></tr>
 <tr class="separator:a357c60e63fac5acfb00ead6d98fce6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb8f364accf87e7a314db452f6f7ead9" id="r_aeb8f364accf87e7a314db452f6f7ead9"><td class="memItemLeft" align="right" valign="top"><a id="aeb8f364accf87e7a314db452f6f7ead9" name="aeb8f364accf87e7a314db452f6f7ead9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>total_steps_done</b></td></tr>
+<tr class="memitem:aeb8f364accf87e7a314db452f6f7ead9" id="r_aeb8f364accf87e7a314db452f6f7ead9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb8f364accf87e7a314db452f6f7ead9">total_steps_done</a></td></tr>
 <tr class="separator:aeb8f364accf87e7a314db452f6f7ead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc0ee3adcbcd502f0f9fbae63763abd5" id="r_adc0ee3adcbcd502f0f9fbae63763abd5"><td class="memItemLeft" align="right" valign="top"><a id="adc0ee3adcbcd502f0f9fbae63763abd5" name="adc0ee3adcbcd502f0f9fbae63763abd5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>updates_done</b></td></tr>
+<tr class="memitem:adc0ee3adcbcd502f0f9fbae63763abd5" id="r_adc0ee3adcbcd502f0f9fbae63763abd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc0ee3adcbcd502f0f9fbae63763abd5">updates_done</a></td></tr>
 <tr class="separator:adc0ee3adcbcd502f0f9fbae63763abd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0830a72276731afc0f8c1e36ac0bea52" id="r_a0830a72276731afc0f8c1e36ac0bea52"><td class="memItemLeft" align="right" valign="top"><a id="a0830a72276731afc0f8c1e36ac0bea52" name="a0830a72276731afc0f8c1e36ac0bea52"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>start_time</b></td></tr>
+<tr class="memitem:a0830a72276731afc0f8c1e36ac0bea52" id="r_a0830a72276731afc0f8c1e36ac0bea52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0830a72276731afc0f8c1e36ac0bea52">start_time</a></td></tr>
 <tr class="separator:a0830a72276731afc0f8c1e36ac0bea52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -260,8 +217,1255 @@ Note that PPO runs multiple environments concurrently on each step (see
 open_spiel/python/vector_env.py). In practice, this tends to improve PPO's
 performance. The number of parallel environments is controlled by the
 num_envs argument.
-</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/pytorch/<b>ppo.py</b></li>
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00157">157</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae678e609787ca7d321a12f89b67c3015" name="ae678e609787ca7d321a12f89b67c3015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae678e609787ca7d321a12f89b67c3015">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>input_shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_actions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_players</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>player_id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_envs</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>steps_per_batch</em></span><span class="paramdefsep"> = </span><span class="paramdefval">128</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_minibatches</em></span><span class="paramdefsep"> = </span><span class="paramdefval">4</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>update_epochs</em></span><span class="paramdefsep"> = </span><span class="paramdefval">4</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>learning_rate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">2.5e-4</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>gae</em></span><span class="paramdefsep"> = </span><span class="paramdefval">True</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>gamma</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.99</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>gae_lambda</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.95</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>normalize_advantages</em></span><span class="paramdefsep"> = </span><span class="paramdefval">True</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>clip_coef</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.2</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>clip_vloss</em></span><span class="paramdefsep"> = </span><span class="paramdefval">True</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>entropy_coef</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.01</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>value_coef</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.5</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max_grad_norm</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.5</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>target_kl</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>device</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;cpu&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>writer</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>agent_fn</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="../../d8/d1b/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_atari_agent.html">PPOAtariAgent</a></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00168">168</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>  ):</div>
+<div class="line"><span class="lineno">  193</span>    super().__init__()</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>    self.input_shape = input_shape</div>
+<div class="line"><span class="lineno">  196</span>    self.num_actions = num_actions</div>
+<div class="line"><span class="lineno">  197</span>    self.num_players = num_players</div>
+<div class="line"><span class="lineno">  198</span>    self.player_id = player_id</div>
+<div class="line"><span class="lineno">  199</span>    self.device = device</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    <span class="comment"># Training settings</span></div>
+<div class="line"><span class="lineno">  202</span>    self.num_envs = num_envs</div>
+<div class="line"><span class="lineno">  203</span>    self.steps_per_batch = steps_per_batch</div>
+<div class="line"><span class="lineno">  204</span>    self.batch_size = self.num_envs * self.steps_per_batch</div>
+<div class="line"><span class="lineno">  205</span>    self.num_minibatches = num_minibatches</div>
+<div class="line"><span class="lineno">  206</span>    self.minibatch_size = self.batch_size // self.num_minibatches</div>
+<div class="line"><span class="lineno">  207</span>    self.update_epochs = update_epochs</div>
+<div class="line"><span class="lineno">  208</span>    self.learning_rate = learning_rate</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>    <span class="comment"># Loss function</span></div>
+<div class="line"><span class="lineno">  211</span>    self.gae = gae</div>
+<div class="line"><span class="lineno">  212</span>    self.gamma = gamma</div>
+<div class="line"><span class="lineno">  213</span>    self.gae_lambda = gae_lambda</div>
+<div class="line"><span class="lineno">  214</span>    self.normalize_advantages = normalize_advantages</div>
+<div class="line"><span class="lineno">  215</span>    self.clip_coef = clip_coef</div>
+<div class="line"><span class="lineno">  216</span>    self.clip_vloss = clip_vloss</div>
+<div class="line"><span class="lineno">  217</span>    self.entropy_coef = entropy_coef</div>
+<div class="line"><span class="lineno">  218</span>    self.value_coef = value_coef</div>
+<div class="line"><span class="lineno">  219</span>    self.max_grad_norm = max_grad_norm</div>
+<div class="line"><span class="lineno">  220</span>    self.target_kl = target_kl</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    <span class="comment"># Logging</span></div>
+<div class="line"><span class="lineno">  223</span>    self.writer = writer</div>
+<div class="line"><span class="lineno">  224</span> </div>
+<div class="line"><span class="lineno">  225</span>    <span class="comment"># Initialize networks</span></div>
+<div class="line"><span class="lineno">  226</span>    self.network = agent_fn(self.num_actions, self.input_shape,</div>
+<div class="line"><span class="lineno">  227</span>                            device).to(device)</div>
+<div class="line"><span class="lineno">  228</span>    self.optimizer = optim.Adam(</div>
+<div class="line"><span class="lineno">  229</span>        self.parameters(), lr=self.learning_rate, eps=1e-5)</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>    <span class="comment"># Initialize training buffers</span></div>
+<div class="line"><span class="lineno">  232</span>    self.legal_actions_mask = torch.zeros(</div>
+<div class="line"><span class="lineno">  233</span>        (self.steps_per_batch, self.num_envs, self.num_actions),</div>
+<div class="line"><span class="lineno">  234</span>        dtype=torch.bool).to(device)</div>
+<div class="line"><span class="lineno">  235</span>    self.obs = torch.zeros((self.steps_per_batch, self.num_envs) +</div>
+<div class="line"><span class="lineno">  236</span>                           self.input_shape).to(device)</div>
+<div class="line"><span class="lineno">  237</span>    self.actions = torch.zeros((self.steps_per_batch, self.num_envs)).to(device)</div>
+<div class="line"><span class="lineno">  238</span>    self.logprobs = torch.zeros(</div>
+<div class="line"><span class="lineno">  239</span>        (self.steps_per_batch, self.num_envs)).to(device)</div>
+<div class="line"><span class="lineno">  240</span>    self.rewards = torch.zeros((self.steps_per_batch, self.num_envs)).to(device)</div>
+<div class="line"><span class="lineno">  241</span>    self.dones = torch.zeros((self.steps_per_batch, self.num_envs)).to(device)</div>
+<div class="line"><span class="lineno">  242</span>    self.values = torch.zeros((self.steps_per_batch, self.num_envs)).to(device)</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>    <span class="comment"># Initialize counters</span></div>
+<div class="line"><span class="lineno">  245</span>    self.cur_batch_idx = 0</div>
+<div class="line"><span class="lineno">  246</span>    self.total_steps_done = 0</div>
+<div class="line"><span class="lineno">  247</span>    self.updates_done = 0</div>
+<div class="line"><span class="lineno">  248</span>    self.start_time = time.time()</div>
+<div class="line"><span class="lineno">  249</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="affd3e6b217dcf0496395753fc8740e45" name="affd3e6b217dcf0496395753fc8740e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd3e6b217dcf0496395753fc8740e45">&#9670;&#160;</a></span>anneal_learning_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.anneal_learning_rate </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>update</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_total_updates</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00445">445</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  445</span>  <span class="keyword">def </span>anneal_learning_rate(self, update, num_total_updates):</div>
+<div class="line"><span class="lineno">  446</span>    <span class="comment"># Annealing the rate</span></div>
+<div class="line"><span class="lineno">  447</span>    frac = 1.0 - (update / num_total_updates)</div>
+<div class="line"><span class="lineno">  448</span>    <span class="keywordflow">if</span> frac &lt;= 0:</div>
+<div class="line"><span class="lineno">  449</span>      <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&quot;Annealing learning rate to &lt;= 0&quot;</span>)</div>
+<div class="line"><span class="lineno">  450</span>    lrnow = frac * self.learning_rate</div>
+<div class="line"><span class="lineno">  451</span>    self.optimizer.param_groups[0][<span class="stringliteral">&quot;lr&quot;</span>] = lrnow</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4011fd9f9802ab662682aac5558079f0" name="a4011fd9f9802ab662682aac5558079f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4011fd9f9802ab662682aac5558079f0">&#9670;&#160;</a></span>get_action_and_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.get_action_and_value </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>legal_actions_mask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>action</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00253">253</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  253</span>  <span class="keyword">def </span>get_action_and_value(self, x, legal_actions_mask=None, action=None):</div>
+<div class="line"><span class="lineno">  254</span>    <span class="keywordflow">return</span> self.network.get_action_and_value(x, legal_actions_mask, action)</div>
+<div class="line"><span class="lineno">  255</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8b56fdcaecdfe4dde17a4e5b72455c24" name="a8b56fdcaecdfe4dde17a4e5b72455c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b56fdcaecdfe4dde17a4e5b72455c24">&#9670;&#160;</a></span>get_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.get_value </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00250">250</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  250</span>  <span class="keyword">def </span>get_value(self, x):</div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">return</span> self.network.get_value(x)</div>
+<div class="line"><span class="lineno">  252</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaa4e8f32bf33f09c1f0be204d2926600" name="aaa4e8f32bf33f09c1f0be204d2926600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4e8f32bf33f09c1f0be204d2926600">&#9670;&#160;</a></span>learn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.learn </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>time_step</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00308">308</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  308</span>  <span class="keyword">def </span>learn(self, time_step):</div>
+<div class="line"><span class="lineno">  309</span>    next_obs = torch.Tensor(</div>
+<div class="line"><span class="lineno">  310</span>        np.array([</div>
+<div class="line"><span class="lineno">  311</span>            np.reshape(ts.observations[<span class="stringliteral">&quot;info_state&quot;</span>][self.player_id],</div>
+<div class="line"><span class="lineno">  312</span>                       self.input_shape) <span class="keywordflow">for</span> ts <span class="keywordflow">in</span> time_step</div>
+<div class="line"><span class="lineno">  313</span>        ])).to(self.device)</div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>    <span class="comment"># bootstrap value if not done</span></div>
+<div class="line"><span class="lineno">  316</span>    <span class="keyword">with</span> torch.no_grad():</div>
+<div class="line"><span class="lineno">  317</span>      next_value = self.get_value(next_obs).reshape(1, -1)</div>
+<div class="line"><span class="lineno">  318</span>      <span class="keywordflow">if</span> self.gae:</div>
+<div class="line"><span class="lineno">  319</span>        advantages = torch.zeros_like(self.rewards).to(self.device)</div>
+<div class="line"><span class="lineno">  320</span>        lastgaelam = 0</div>
+<div class="line"><span class="lineno">  321</span>        <span class="keywordflow">for</span> t <span class="keywordflow">in</span> reversed(range(self.steps_per_batch)):</div>
+<div class="line"><span class="lineno">  322</span>          nextvalues = next_value <span class="keywordflow">if</span> t == self.steps_per_batch - 1 <span class="keywordflow">else</span> self.values[</div>
+<div class="line"><span class="lineno">  323</span>              t + 1]</div>
+<div class="line"><span class="lineno">  324</span>          nextnonterminal = 1.0 - self.dones[t]</div>
+<div class="line"><span class="lineno">  325</span>          delta = self.rewards[</div>
+<div class="line"><span class="lineno">  326</span>              t] + self.gamma * nextvalues * nextnonterminal - self.values[t]</div>
+<div class="line"><span class="lineno">  327</span>          advantages[</div>
+<div class="line"><span class="lineno">  328</span>              t] = lastgaelam = delta + self.gamma * self.gae_lambda * nextnonterminal * lastgaelam</div>
+<div class="line"><span class="lineno">  329</span>        returns = advantages + self.values</div>
+<div class="line"><span class="lineno">  330</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  331</span>        returns = torch.zeros_like(self.rewards).to(self.device)</div>
+<div class="line"><span class="lineno">  332</span>        <span class="keywordflow">for</span> t <span class="keywordflow">in</span> reversed(range(self.steps_per_batch)):</div>
+<div class="line"><span class="lineno">  333</span>          next_return = next_value <span class="keywordflow">if</span> t == self.steps_per_batch - 1 <span class="keywordflow">else</span> returns[</div>
+<div class="line"><span class="lineno">  334</span>              t + 1]</div>
+<div class="line"><span class="lineno">  335</span>          nextnonterminal = 1.0 - self.dones[t]</div>
+<div class="line"><span class="lineno">  336</span>          returns[</div>
+<div class="line"><span class="lineno">  337</span>              t] = self.rewards[t] + self.gamma * nextnonterminal * next_return</div>
+<div class="line"><span class="lineno">  338</span>        advantages = returns - self.values</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>    <span class="comment"># flatten the batch</span></div>
+<div class="line"><span class="lineno">  341</span>    b_legal_actions_mask = self.legal_actions_mask.reshape(</div>
+<div class="line"><span class="lineno">  342</span>        (-1, self.num_actions))</div>
+<div class="line"><span class="lineno">  343</span>    b_obs = self.obs.reshape((-1,) + self.input_shape)</div>
+<div class="line"><span class="lineno">  344</span>    b_logprobs = self.logprobs.reshape(-1)</div>
+<div class="line"><span class="lineno">  345</span>    b_actions = self.actions.reshape(-1)</div>
+<div class="line"><span class="lineno">  346</span>    b_advantages = advantages.reshape(-1)</div>
+<div class="line"><span class="lineno">  347</span>    b_returns = returns.reshape(-1)</div>
+<div class="line"><span class="lineno">  348</span>    b_values = self.values.reshape(-1)</div>
+<div class="line"><span class="lineno">  349</span> </div>
+<div class="line"><span class="lineno">  350</span>    <span class="comment"># Optimizing the policy and value network</span></div>
+<div class="line"><span class="lineno">  351</span>    b_inds = np.arange(self.batch_size)</div>
+<div class="line"><span class="lineno">  352</span>    clipfracs = []</div>
+<div class="line"><span class="lineno">  353</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(self.update_epochs):</div>
+<div class="line"><span class="lineno">  354</span>      np.random.shuffle(b_inds)</div>
+<div class="line"><span class="lineno">  355</span>      <span class="keywordflow">for</span> start <span class="keywordflow">in</span> range(0, self.batch_size, self.minibatch_size):</div>
+<div class="line"><span class="lineno">  356</span>        end = start + self.minibatch_size</div>
+<div class="line"><span class="lineno">  357</span>        mb_inds = b_inds[start:end]</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>        _, newlogprob, entropy, newvalue, _ = self.get_action_and_value(</div>
+<div class="line"><span class="lineno">  360</span>            b_obs[mb_inds],</div>
+<div class="line"><span class="lineno">  361</span>            legal_actions_mask=b_legal_actions_mask[mb_inds],</div>
+<div class="line"><span class="lineno">  362</span>            action=b_actions.long()[mb_inds])</div>
+<div class="line"><span class="lineno">  363</span>        logratio = newlogprob - b_logprobs[mb_inds]</div>
+<div class="line"><span class="lineno">  364</span>        ratio = logratio.exp()</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>        <span class="keyword">with</span> torch.no_grad():</div>
+<div class="line"><span class="lineno">  367</span>          <span class="comment"># calculate approx_kl http://joschu.net/blog/kl-approx.html</span></div>
+<div class="line"><span class="lineno">  368</span>          old_approx_kl = (-logratio).mean()</div>
+<div class="line"><span class="lineno">  369</span>          approx_kl = ((ratio - 1) - logratio).mean()</div>
+<div class="line"><span class="lineno">  370</span>          clipfracs += [</div>
+<div class="line"><span class="lineno">  371</span>              ((ratio - 1.0).abs() &gt; self.clip_coef).float().mean().item()</div>
+<div class="line"><span class="lineno">  372</span>          ]</div>
+<div class="line"><span class="lineno">  373</span> </div>
+<div class="line"><span class="lineno">  374</span>        mb_advantages = b_advantages[mb_inds]</div>
+<div class="line"><span class="lineno">  375</span>        <span class="keywordflow">if</span> self.normalize_advantages:</div>
+<div class="line"><span class="lineno">  376</span>          mb_advantages = (mb_advantages - mb_advantages.mean()) / (</div>
+<div class="line"><span class="lineno">  377</span>              mb_advantages.std() + 1e-8)</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>        <span class="comment"># Policy loss</span></div>
+<div class="line"><span class="lineno">  380</span>        pg_loss1 = -mb_advantages * ratio</div>
+<div class="line"><span class="lineno">  381</span>        pg_loss2 = -mb_advantages * torch.clamp(ratio, 1 - self.clip_coef,</div>
+<div class="line"><span class="lineno">  382</span>                                                1 + self.clip_coef)</div>
+<div class="line"><span class="lineno">  383</span>        pg_loss = torch.max(pg_loss1, pg_loss2).mean()</div>
+<div class="line"><span class="lineno">  384</span> </div>
+<div class="line"><span class="lineno">  385</span>        <span class="comment"># Value loss</span></div>
+<div class="line"><span class="lineno">  386</span>        newvalue = newvalue.view(-1)</div>
+<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">if</span> self.clip_vloss:</div>
+<div class="line"><span class="lineno">  388</span>          v_loss_unclipped = (newvalue - b_returns[mb_inds])**2</div>
+<div class="line"><span class="lineno">  389</span>          v_clipped = b_values[mb_inds] + torch.clamp(</div>
+<div class="line"><span class="lineno">  390</span>              newvalue - b_values[mb_inds],</div>
+<div class="line"><span class="lineno">  391</span>              -self.clip_coef,</div>
+<div class="line"><span class="lineno">  392</span>              self.clip_coef,</div>
+<div class="line"><span class="lineno">  393</span>          )</div>
+<div class="line"><span class="lineno">  394</span>          v_loss_clipped = (v_clipped - b_returns[mb_inds])**2</div>
+<div class="line"><span class="lineno">  395</span>          v_loss_max = torch.max(v_loss_unclipped, v_loss_clipped)</div>
+<div class="line"><span class="lineno">  396</span>          v_loss = 0.5 * v_loss_max.mean()</div>
+<div class="line"><span class="lineno">  397</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  398</span>          v_loss = 0.5 * ((newvalue - b_returns[mb_inds])**2).mean()</div>
+<div class="line"><span class="lineno">  399</span> </div>
+<div class="line"><span class="lineno">  400</span>        entropy_loss = entropy.mean()</div>
+<div class="line"><span class="lineno">  401</span>        loss = pg_loss - self.entropy_coef * entropy_loss + v_loss * self.value_coef</div>
+<div class="line"><span class="lineno">  402</span> </div>
+<div class="line"><span class="lineno">  403</span>        self.optimizer.zero_grad()</div>
+<div class="line"><span class="lineno">  404</span>        loss.backward()</div>
+<div class="line"><span class="lineno">  405</span>        nn.utils.clip_grad_norm_(self.parameters(), self.max_grad_norm)</div>
+<div class="line"><span class="lineno">  406</span>        self.optimizer.step()</div>
+<div class="line"><span class="lineno">  407</span> </div>
+<div class="line"><span class="lineno">  408</span>      <span class="keywordflow">if</span> self.target_kl <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordflow">if</span> approx_kl &gt; self.target_kl:</div>
+<div class="line"><span class="lineno">  410</span>          <span class="keywordflow">break</span></div>
+<div class="line"><span class="lineno">  411</span> </div>
+<div class="line"><span class="lineno">  412</span>    y_pred, y_true = b_values.cpu().numpy(), b_returns.cpu().numpy()</div>
+<div class="line"><span class="lineno">  413</span>    var_y = np.var(y_true)</div>
+<div class="line"><span class="lineno">  414</span>    explained_var = np.nan <span class="keywordflow">if</span> var_y == 0 <span class="keywordflow">else</span> 1 - np.var(y_true -</div>
+<div class="line"><span class="lineno">  415</span>                                                         y_pred) / var_y</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>    <span class="comment"># TRY NOT TO MODIFY: record rewards for plotting purposes</span></div>
+<div class="line"><span class="lineno">  418</span>    <span class="keywordflow">if</span> self.writer <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">  419</span>      self.writer.add_scalar(<span class="stringliteral">&quot;charts/learning_rate&quot;</span>,</div>
+<div class="line"><span class="lineno">  420</span>                             self.optimizer.param_groups[0][<span class="stringliteral">&quot;lr&quot;</span>],</div>
+<div class="line"><span class="lineno">  421</span>                             self.total_steps_done)</div>
+<div class="line"><span class="lineno">  422</span>      self.writer.add_scalar(<span class="stringliteral">&quot;losses/value_loss&quot;</span>, v_loss.item(),</div>
+<div class="line"><span class="lineno">  423</span>                             self.total_steps_done)</div>
+<div class="line"><span class="lineno">  424</span>      self.writer.add_scalar(<span class="stringliteral">&quot;losses/policy_loss&quot;</span>, pg_loss.item(),</div>
+<div class="line"><span class="lineno">  425</span>                             self.total_steps_done)</div>
+<div class="line"><span class="lineno">  426</span>      self.writer.add_scalar(<span class="stringliteral">&quot;losses/entropy&quot;</span>, entropy_loss.item(),</div>
+<div class="line"><span class="lineno">  427</span>                             self.total_steps_done)</div>
+<div class="line"><span class="lineno">  428</span>      self.writer.add_scalar(<span class="stringliteral">&quot;losses/old_approx_kl&quot;</span>, old_approx_kl.item(),</div>
+<div class="line"><span class="lineno">  429</span>                             self.total_steps_done)</div>
+<div class="line"><span class="lineno">  430</span>      self.writer.add_scalar(<span class="stringliteral">&quot;losses/approx_kl&quot;</span>, approx_kl.item(),</div>
+<div class="line"><span class="lineno">  431</span>                             self.total_steps_done)</div>
+<div class="line"><span class="lineno">  432</span>      self.writer.add_scalar(<span class="stringliteral">&quot;losses/clipfrac&quot;</span>, np.mean(clipfracs),</div>
+<div class="line"><span class="lineno">  433</span>                             self.total_steps_done)</div>
+<div class="line"><span class="lineno">  434</span>      self.writer.add_scalar(<span class="stringliteral">&quot;losses/explained_variance&quot;</span>, explained_var,</div>
+<div class="line"><span class="lineno">  435</span>                             self.total_steps_done)</div>
+<div class="line"><span class="lineno">  436</span>      self.writer.add_scalar(</div>
+<div class="line"><span class="lineno">  437</span>          <span class="stringliteral">&quot;charts/SPS&quot;</span>,</div>
+<div class="line"><span class="lineno">  438</span>          int(self.total_steps_done / (time.time() - self.start_time)),</div>
+<div class="line"><span class="lineno">  439</span>          self.total_steps_done)</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>    <span class="comment"># Update counters</span></div>
+<div class="line"><span class="lineno">  442</span>    self.updates_done += 1</div>
+<div class="line"><span class="lineno">  443</span>    self.cur_batch_idx = 0</div>
+<div class="line"><span class="lineno">  444</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d4/ddf/algorithms_2dqn_8py_source.html#l00175">open_spiel.python.algorithms.dqn.DQN.step()</a>, <a class="el" href="../../d4/dc6/jax_2dqn_8py_source.html#l00157">open_spiel.python.jax.dqn.DQN.step()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00188">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.step()</a>, and <a class="el" href="../../d0/d8f/pytorch_2dqn_8py_source.html#l00191">open_spiel.python.pytorch.dqn.DQN.step()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d78/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_aaa4e8f32bf33f09c1f0be204d2926600_icgraph.png" border="0" usemap="#ad1/d78/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_aaa4e8f32bf33f09c1f0be204d2926600_icgraph" alt=""/></div>
+<map name="ad1/d78/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_aaa4e8f32bf33f09c1f0be204d2926600_icgraph" id="ad1/d78/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_aaa4e8f32bf33f09c1f0be204d2926600_icgraph">
+<area shape="rect" title=" " alt="" coords="1727,247,1930,288"/>
+<area shape="rect" href="../../d2/d7c/classopen__spiel_1_1python_1_1algorithms_1_1dqn_1_1_d_q_n.html#a592fe57789bc89d0254e78fbe8ea26f8" title=" " alt="" coords="922,243,1141,284"/>
+<area shape="poly" title=" " alt="" coords="1712,269,1142,266,1142,261,1712,264"/>
+<area shape="rect" href="../../d0/d18/classopen__spiel_1_1python_1_1jax_1_1dqn_1_1_d_q_n.html#a67759ef9eb4e632e5c114fefa053ee59" title=" " alt="" coords="943,308,1120,349"/>
+<area shape="poly" title=" " alt="" coords="1712,279,1120,324,1120,319,1712,273"/>
+<area shape="rect" href="../../d8/dea/classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1munchausen__deep__mirror__descent_1_1_munchausen_d_q_n.html#a0137c642593359bd9958eb5411f142c1" title=" " alt="" coords="884,178,1179,218"/>
+<area shape="poly" title=" " alt="" coords="1788,239,1738,208,1709,194,1679,183,1608,168,1534,158,1460,154,1387,154,1250,164,1137,180,1137,174,1250,158,1387,149,1460,149,1535,153,1608,162,1680,178,1711,189,1740,203,1791,235"/>
+<area shape="rect" href="../../df/d32/classopen__spiel_1_1python_1_1pytorch_1_1dqn_1_1_d_q_n.html#a7f6321089ea6427ea49ca61024f23714" title=" " alt="" coords="1477,192,1679,233"/>
+<area shape="poly" title=" " alt="" coords="1717,246,1674,236,1675,231,1718,240"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#a14d11483beff07f087b51f3a2dd71135" title=" " alt="" coords="606,163,792,219"/>
+<area shape="poly" title=" " alt="" coords="919,242,792,214,793,209,920,236"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#adb88039a6a02b4d0090a0abc5c3c5424" title=" " alt="" coords="606,308,792,349"/>
+<area shape="poly" title=" " alt="" coords="910,290,793,313,792,308,909,284"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a7a91195b9b42b8536e06098e836b02e4" title=" " alt="" coords="573,243,824,284"/>
+<area shape="poly" title=" " alt="" coords="906,266,825,266,825,261,906,261"/>
+<area shape="rect" href="../../d2/dfd/classnash__evolutionary__search_1_1_nash_c_m_a_e_s.html#a42b13c1091631c52988a6391fe34038a" title=" " alt="" coords="610,374,787,414"/>
+<area shape="poly" title=" " alt="" coords="909,287,886,299,871,314,863,330,854,347,838,363,814,375,788,384,786,379,812,371,835,358,850,343,858,327,866,310,883,294,906,282"/>
+<area shape="rect" href="../../d5/dd9/classnash__random__search_1_1_nash_random_search.html#a9b9967669c24ceba55dc8ce00565a71a" title=" " alt="" coords="584,99,813,140"/>
+<area shape="poly" title=" " alt="" coords="906,245,883,232,865,212,858,191,851,172,835,153,813,141,815,136,838,149,855,169,863,190,870,209,886,228,909,241"/>
+<area shape="rect" href="../../d1/d50/classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1bandit__regret_1_1_polynomial_weight_algorithm.html#a3b7ceacfd8a03895a691242d227c1ddd" title=" " alt="" coords="561,439,836,480"/>
+<area shape="poly" title=" " alt="" coords="909,283,886,299,873,313,866,329,863,361,859,395,852,412,838,428,820,441,817,436,835,424,847,409,854,393,858,361,861,327,869,311,883,295,906,279"/>
+<area shape="rect" href="../../d5/d11/classregret__minimizer_1_1_regret_minimizer.html#aa371edb5793c6a6cfbf51dc8597905dc" title=" " alt="" coords="566,49,831,75"/>
+<area shape="poly" title=" " alt="" coords="906,248,883,232,868,214,860,195,858,158,856,122,849,105,835,89,817,77,820,73,838,85,853,103,861,121,863,158,866,194,872,211,886,228,909,243"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a44f0c375b5ef20bb1267524788ab16da" title=" " alt="" coords="281,243,513,284"/>
+<area shape="poly" title=" " alt="" coords="557,266,514,266,514,261,557,261"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#ad1331eddb66a419f7336bc267b47d75e" title=" " alt="" coords="5,210,233,250"/>
+<area shape="poly" title=" " alt="" coords="265,250,233,246,233,241,265,245"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#a14e053b461dc025b01a41453bc278c7d" title=" " alt="" coords="5,275,233,316"/>
+<area shape="poly" title=" " alt="" coords="265,281,233,285,233,279,265,276"/>
+<area shape="poly" title=" " alt="" coords="927,317,883,297,866,281,858,265,850,249,835,233,791,212,794,207,838,229,854,245,862,262,871,278,886,293,929,312"/>
+<area shape="poly" title=" " alt="" coords="928,331,792,331,792,326,928,326"/>
+<area shape="poly" title=" " alt="" coords="928,311,805,287,806,282,929,306"/>
+<area shape="poly" title=" " alt="" coords="929,351,788,379,787,374,927,346"/>
+<area shape="poly" title=" " alt="" coords="928,322,904,312,883,297,868,279,860,261,858,223,855,187,848,170,835,153,812,138,815,134,838,149,853,167,860,186,863,223,865,259,872,276,886,293,906,307,930,317"/>
+<area shape="poly" title=" " alt="" coords="983,359,915,395,837,428,798,441,796,436,835,423,913,390,980,354"/>
+<area shape="poly" title=" " alt="" coords="927,323,903,313,882,297,863,271,856,244,855,217,858,190,861,164,861,138,853,113,834,89,819,77,822,73,838,85,858,111,866,138,867,164,863,191,860,217,861,243,868,269,886,293,906,308,929,318"/>
+<area shape="poly" title=" " alt="" coords="869,197,792,196,792,190,869,192"/>
+<area shape="poly" title=" " alt="" coords="896,228,886,233,871,248,863,264,854,281,838,297,793,318,791,313,835,293,850,278,858,262,866,245,883,229,893,223"/>
+<area shape="poly" title=" " alt="" coords="910,224,806,245,805,240,909,219"/>
+<area shape="poly" title=" " alt="" coords="891,229,886,233,873,248,866,263,863,296,859,329,852,346,838,363,815,378,788,388,786,383,812,373,835,359,847,344,854,328,858,295,861,262,869,245,882,229,888,225"/>
+<area shape="poly" title=" " alt="" coords="928,176,836,154,789,143,790,138,837,149,930,171"/>
+<area shape="poly" title=" " alt="" coords="890,230,886,233,869,256,862,280,861,304,863,328,865,353,864,378,856,403,838,428,822,441,819,436,834,424,852,401,859,377,860,353,858,329,855,304,856,279,864,254,882,229,886,226"/>
+<area shape="poly" title=" " alt="" coords="987,171,918,128,835,90,795,78,796,73,837,85,920,124,990,166"/>
+<area shape="poly" title=" " alt="" coords="1539,185,1488,151,1459,136,1428,124,1278,88,1215,78,1157,75,1098,78,1035,88,885,124,871,130,861,137,838,154,793,170,792,165,835,149,858,133,869,126,884,119,1034,82,1097,73,1157,70,1216,73,1279,82,1430,119,1461,131,1491,146,1542,180"/>
+<area shape="poly" title=" " alt="" coords="1523,242,1456,273,1371,308,1276,340,1179,363,1097,375,1032,376,884,363,792,350,793,345,885,358,1032,371,1096,369,1178,358,1275,335,1369,303,1454,268,1521,238"/>
+<area shape="poly" title=" " alt="" coords="1476,191,1429,183,1308,166,1152,149,1072,145,998,145,934,153,886,168,870,182,862,198,854,216,838,233,817,245,815,240,835,229,850,213,857,196,865,179,883,164,933,148,998,140,1073,139,1152,144,1309,161,1429,178,1476,186"/>
+<area shape="poly" title=" " alt="" coords="1556,247,1504,306,1469,335,1430,358,1347,389,1259,410,1170,423,1081,429,996,429,917,426,787,412,788,406,918,420,996,424,1081,424,1169,418,1258,405,1345,384,1428,353,1466,330,1500,302,1552,243"/>
+<area shape="poly" title=" " alt="" coords="1550,182,1498,128,1465,103,1428,84,1339,81,1158,80,885,82,789,101,788,96,884,77,1158,74,1339,76,1430,79,1468,99,1502,124,1554,178"/>
+<area shape="poly" title=" " alt="" coords="1565,248,1545,290,1516,337,1477,382,1455,401,1430,418,1353,452,1271,477,1187,492,1102,499,1020,501,942,497,810,483,810,478,942,492,1020,495,1102,494,1186,487,1270,471,1351,447,1428,413,1452,397,1474,378,1511,333,1540,287,1560,246"/>
+<area shape="poly" title=" " alt="" coords="1554,181,1532,151,1503,118,1468,87,1428,64,1337,34,1241,16,1144,9,1049,10,959,16,878,27,753,51,752,46,877,22,959,11,1049,4,1144,4,1242,11,1338,29,1430,59,1471,83,1506,114,1536,147,1558,178"/>
+<area shape="rect" href="../../df/d32/classopen__spiel_1_1python_1_1pytorch_1_1dqn_1_1_d_q_n.html#ab59ebafd7c85183708fbf5f6aa79bcb0" title=" " alt="" coords="1227,192,1429,233"/>
+<area shape="poly" title=" " alt="" coords="1461,224,1429,224,1429,219,1461,219"/>
+<area shape="poly" title=" " alt="" coords="1212,235,1142,247,1141,242,1211,230"/>
+<area shape="poly" title=" " alt="" coords="1250,242,1228,253,1214,265,1205,276,1195,287,1180,298,1151,310,1121,319,1120,314,1149,305,1177,293,1192,283,1201,272,1211,261,1225,249,1247,237"/>
+<area shape="poly" title=" " alt="" coords="1211,209,1179,208,1179,202,1211,204"/>
+<area shape="poly" title=" " alt="" coords="1444,201,1476,201,1476,206,1444,206"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a31b58990ee3a2adeb69ee7b5bd343ded" name="a31b58990ee3a2adeb69ee7b5bd343ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b58990ee3a2adeb69ee7b5bd343ded">&#9670;&#160;</a></span>post_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.post_step </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>reward</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>done</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00300">300</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>  <span class="keyword">def </span>post_step(self, reward, done):</div>
+<div class="line"><span class="lineno">  301</span>    self.rewards[self.cur_batch_idx] = torch.tensor(reward).to(</div>
+<div class="line"><span class="lineno">  302</span>        self.device).view(-1)</div>
+<div class="line"><span class="lineno">  303</span>    self.dones[self.cur_batch_idx] = torch.tensor(done).to(self.device).view(-1)</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>    self.total_steps_done += self.num_envs</div>
+<div class="line"><span class="lineno">  306</span>    self.cur_batch_idx += 1</div>
+<div class="line"><span class="lineno">  307</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7af75e55376d447f5f30e75bd947e242" name="a7af75e55376d447f5f30e75bd947e242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af75e55376d447f5f30e75bd947e242">&#9670;&#160;</a></span>step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.step </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>time_step</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>is_evaluation</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00256">256</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  256</span>  <span class="keyword">def </span>step(self, time_step, is_evaluation=False):</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">if</span> is_evaluation:</div>
+<div class="line"><span class="lineno">  258</span>      <span class="keyword">with</span> torch.no_grad():</div>
+<div class="line"><span class="lineno">  259</span>        legal_actions_mask = legal_actions_to_mask([</div>
+<div class="line"><span class="lineno">  260</span>            ts.observations[<span class="stringliteral">&quot;legal_actions&quot;</span>][self.player_id] <span class="keywordflow">for</span> ts <span class="keywordflow">in</span> time_step</div>
+<div class="line"><span class="lineno">  261</span>        ], self.num_actions).to(self.device)</div>
+<div class="line"><span class="lineno">  262</span>        obs = torch.Tensor(</div>
+<div class="line"><span class="lineno">  263</span>            np.array([</div>
+<div class="line"><span class="lineno">  264</span>                np.reshape(ts.observations[<span class="stringliteral">&quot;info_state&quot;</span>][self.player_id],</div>
+<div class="line"><span class="lineno">  265</span>                           self.input_shape) <span class="keywordflow">for</span> ts <span class="keywordflow">in</span> time_step</div>
+<div class="line"><span class="lineno">  266</span>            ])).to(self.device)</div>
+<div class="line"><span class="lineno">  267</span>        action, _, _, value, probs = self.get_action_and_value(</div>
+<div class="line"><span class="lineno">  268</span>            obs, legal_actions_mask=legal_actions_mask)</div>
+<div class="line"><span class="lineno">  269</span>        <span class="keywordflow">return</span> [</div>
+<div class="line"><span class="lineno">  270</span>            StepOutput(action=a.item(), probs=p)</div>
+<div class="line"><span class="lineno">  271</span>            <span class="keywordflow">for</span> (a, p) <span class="keywordflow">in</span> zip(action, probs)</div>
+<div class="line"><span class="lineno">  272</span>        ]</div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  274</span>      <span class="keyword">with</span> torch.no_grad():</div>
+<div class="line"><span class="lineno">  275</span>        <span class="comment"># act</span></div>
+<div class="line"><span class="lineno">  276</span>        obs = torch.Tensor(</div>
+<div class="line"><span class="lineno">  277</span>            np.array([</div>
+<div class="line"><span class="lineno">  278</span>                np.reshape(ts.observations[<span class="stringliteral">&quot;info_state&quot;</span>][self.player_id],</div>
+<div class="line"><span class="lineno">  279</span>                           self.input_shape) <span class="keywordflow">for</span> ts <span class="keywordflow">in</span> time_step</div>
+<div class="line"><span class="lineno">  280</span>            ])).to(self.device)</div>
+<div class="line"><span class="lineno">  281</span>        legal_actions_mask = legal_actions_to_mask([</div>
+<div class="line"><span class="lineno">  282</span>            ts.observations[<span class="stringliteral">&quot;legal_actions&quot;</span>][self.player_id] <span class="keywordflow">for</span> ts <span class="keywordflow">in</span> time_step</div>
+<div class="line"><span class="lineno">  283</span>        ], self.num_actions).to(self.device)</div>
+<div class="line"><span class="lineno">  284</span>        action, logprob, _, value, probs = self.get_action_and_value(</div>
+<div class="line"><span class="lineno">  285</span>            obs, legal_actions_mask=legal_actions_mask)</div>
+<div class="line"><span class="lineno">  286</span> </div>
+<div class="line"><span class="lineno">  287</span>        <span class="comment"># store</span></div>
+<div class="line"><span class="lineno">  288</span>        self.legal_actions_mask[self.cur_batch_idx] = legal_actions_mask</div>
+<div class="line"><span class="lineno">  289</span>        self.obs[self.cur_batch_idx] = obs</div>
+<div class="line"><span class="lineno">  290</span>        self.actions[self.cur_batch_idx] = action</div>
+<div class="line"><span class="lineno">  291</span>        self.logprobs[self.cur_batch_idx] = logprob</div>
+<div class="line"><span class="lineno">  292</span>        self.values[self.cur_batch_idx] = value.flatten()</div>
+<div class="line"><span class="lineno">  293</span> </div>
+<div class="line"><span class="lineno">  294</span>        agent_output = [</div>
+<div class="line"><span class="lineno">  295</span>            StepOutput(action=a.item(), probs=p)</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">for</span> (a, p) <span class="keywordflow">in</span> zip(action, probs)</div>
+<div class="line"><span class="lineno">  297</span>        ]</div>
+<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">return</span> agent_output</div>
+<div class="line"><span class="lineno">  299</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00359">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.evaluate_and_update_policy()</a>, <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00350">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.multiple_steps()</a>, <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00126">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.solve_yield()</a>, <a class="el" href="../../d4/d2e/nash__evolutionary__search_8py_source.html#l00094">nash_evolutionary_search.NashCMAES.step_for()</a>, <a class="el" href="../../df/dd1/nash__random__search_8py_source.html#l00100">nash_random_search.NashRandomSearch.step_for()</a>, <a class="el" href="../../d2/d0e/bandit__regret_8py_source.html#l00363">open_spiel.python.mfg.algorithms.bandit_regret.PolynomialWeightAlgorithm.step_for()</a>, and <a class="el" href="../../dd/ddd/regret__minimizer_8py_source.html#l00107">regret_minimizer.RegretMinimizer.step_for()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/d78/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_a7af75e55376d447f5f30e75bd947e242_icgraph.png" border="0" usemap="#ad1/d78/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_a7af75e55376d447f5f30e75bd947e242_icgraph" alt=""/></div>
+<map name="ad1/d78/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_a7af75e55376d447f5f30e75bd947e242_icgraph" id="ad1/d78/classopen__spiel_1_1python_1_1pytorch_1_1ppo_1_1_p_p_o_a7af75e55376d447f5f30e75bd947e242_icgraph">
+<area shape="rect" title=" " alt="" coords="884,216,1087,256"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#a14d11483beff07f087b51f3a2dd71135" title=" " alt="" coords="606,5,792,61"/>
+<area shape="poly" title=" " alt="" coords="960,204,908,138,873,104,835,75,791,55,794,50,838,71,877,100,912,135,964,201"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#adb88039a6a02b4d0090a0abc5c3c5424" title=" " alt="" coords="606,85,792,126"/>
+<area shape="poly" title=" " alt="" coords="945,208,894,173,835,141,791,126,793,121,837,136,897,168,948,204"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a7a91195b9b42b8536e06098e836b02e4" title=" " alt="" coords="573,150,824,191"/>
+<area shape="poly" title=" " alt="" coords="878,214,790,194,792,189,879,209"/>
+<area shape="rect" href="../../d2/dfd/classnash__evolutionary__search_1_1_nash_c_m_a_e_s.html#a42b13c1091631c52988a6391fe34038a" title=" " alt="" coords="610,216,787,256"/>
+<area shape="poly" title=" " alt="" coords="869,238,787,238,787,233,869,233"/>
+<area shape="rect" href="../../d5/dd9/classnash__random__search_1_1_nash_random_search.html#a9b9967669c24ceba55dc8ce00565a71a" title=" " alt="" coords="584,281,813,322"/>
+<area shape="poly" title=" " alt="" coords="879,263,792,283,790,278,878,258"/>
+<area shape="rect" href="../../d1/d50/classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1bandit__regret_1_1_polynomial_weight_algorithm.html#a3b7ceacfd8a03895a691242d227c1ddd" title=" " alt="" coords="561,346,836,387"/>
+<area shape="poly" title=" " alt="" coords="948,268,897,303,837,336,803,348,801,343,835,331,894,299,945,264"/>
+<area shape="rect" href="../../d5/d11/classregret__minimizer_1_1_regret_minimizer.html#aa371edb5793c6a6cfbf51dc8597905dc" title=" " alt="" coords="566,411,831,437"/>
+<area shape="poly" title=" " alt="" coords="965,271,913,338,878,373,838,401,810,413,808,408,835,396,874,368,909,335,961,268"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a44f0c375b5ef20bb1267524788ab16da" title=" " alt="" coords="281,150,513,191"/>
+<area shape="poly" title=" " alt="" coords="557,173,514,173,514,168,557,168"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#ad1331eddb66a419f7336bc267b47d75e" title=" " alt="" coords="5,117,233,158"/>
+<area shape="poly" title=" " alt="" coords="265,157,233,153,233,148,265,152"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#a14e053b461dc025b01a41453bc278c7d" title=" " alt="" coords="5,182,233,223"/>
+<area shape="poly" title=" " alt="" coords="265,188,233,192,233,187,265,183"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8a4fa2939d827c3facc50ead57431f82" name="a8a4fa2939d827c3facc50ead57431f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4fa2939d827c3facc50ead57431f82">&#9670;&#160;</a></span>actions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.actions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00237">237</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="ab24ad0b0c1a750d9ec74ac56347ac547" name="ab24ad0b0c1a750d9ec74ac56347ac547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24ad0b0c1a750d9ec74ac56347ac547">&#9670;&#160;</a></span>batch_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.batch_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00204">204</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/da2/models_8py_source.html#l00183">models.OptimizerModel.initialize_optimizer_model()</a>.</p>
+
+</div>
+</div>
+<a id="a41012f60a7b9faf83bdd96890abe542f" name="a41012f60a7b9faf83bdd96890abe542f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41012f60a7b9faf83bdd96890abe542f">&#9670;&#160;</a></span>clip_coef</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.clip_coef</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00215">215</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a5cc83f9e9bd69c01674eefbd805656ba" name="a5cc83f9e9bd69c01674eefbd805656ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc83f9e9bd69c01674eefbd805656ba">&#9670;&#160;</a></span>clip_vloss</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.clip_vloss</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00216">216</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a357c60e63fac5acfb00ead6d98fce6b8" name="a357c60e63fac5acfb00ead6d98fce6b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a357c60e63fac5acfb00ead6d98fce6b8">&#9670;&#160;</a></span>cur_batch_idx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.cur_batch_idx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00245">245</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="adbf356d29aa657556ffdd57eb8fd256b" name="adbf356d29aa657556ffdd57eb8fd256b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf356d29aa657556ffdd57eb8fd256b">&#9670;&#160;</a></span>device</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.device</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00199">199</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d11/mfg__proximal__policy__optimization_8py_source.html#l00111">open_spiel.python.mfg.algorithms.pytorch.mfg_proximal_policy_optimization.Policy.action_probabilities()</a>.</p>
+
+</div>
+</div>
+<a id="a0b8b5beab025f6967334a64013b2d7c2" name="a0b8b5beab025f6967334a64013b2d7c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8b5beab025f6967334a64013b2d7c2">&#9670;&#160;</a></span>dones</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.dones</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00241">241</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="ad904c7cd25d8465db8aead6180ae8043" name="ad904c7cd25d8465db8aead6180ae8043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad904c7cd25d8465db8aead6180ae8043">&#9670;&#160;</a></span>entropy_coef</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.entropy_coef</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00217">217</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="ae4d04aaf4960c1b3f7f28be641d1e9d4" name="ae4d04aaf4960c1b3f7f28be641d1e9d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d04aaf4960c1b3f7f28be641d1e9d4">&#9670;&#160;</a></span>gae</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.gae</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00211">211</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="af94c96d5e6fb6b9b8019988b074f42af" name="af94c96d5e6fb6b9b8019988b074f42af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94c96d5e6fb6b9b8019988b074f42af">&#9670;&#160;</a></span>gae_lambda</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.gae_lambda</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00213">213</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="ad343e12b6f8b6fd485214c568ff007fd" name="ad343e12b6f8b6fd485214c568ff007fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad343e12b6f8b6fd485214c568ff007fd">&#9670;&#160;</a></span>gamma</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.gamma</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00212">212</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dd6/algorithms_2discounted__cfr_8py_source.html#l00046">open_spiel.python.algorithms.discounted_cfr._DCFRSolver.__init__()</a>, and <a class="el" href="../../d1/dd6/algorithms_2discounted__cfr_8py_source.html#l00094">open_spiel.python.algorithms.discounted_cfr._DCFRSolver._compute_counterfactual_regret_for_player()</a>.</p>
+
+</div>
+</div>
+<a id="aca0dc46ae1bea2aa783f8296e66670cf" name="aca0dc46ae1bea2aa783f8296e66670cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0dc46ae1bea2aa783f8296e66670cf">&#9670;&#160;</a></span>input_shape</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.input_shape</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00195">195</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="aabe56f8af2eaa4caf2ffe1071e173afd" name="aabe56f8af2eaa4caf2ffe1071e173afd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabe56f8af2eaa4caf2ffe1071e173afd">&#9670;&#160;</a></span>learning_rate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.learning_rate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00208">208</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="aaa2358416814fc9fe05ebc9c0af93be3" name="aaa2358416814fc9fe05ebc9c0af93be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2358416814fc9fe05ebc9c0af93be3">&#9670;&#160;</a></span>legal_actions_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.legal_actions_mask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00232">232</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d64/policy_8py_source.html#l00341">open_spiel.python.policy.TabularPolicy.__copy__()</a>, <a class="el" href="../../d5/d64/policy_8py_source.html#l00234">open_spiel.python.policy.TabularPolicy.__init__()</a>, and <a class="el" href="../../d5/d64/policy_8py_source.html#l00372">open_spiel.python.policy.TabularPolicy.copy_with_noise()</a>.</p>
+
+</div>
+</div>
+<a id="a1aef952a80164979fd6ebf2801134515" name="a1aef952a80164979fd6ebf2801134515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aef952a80164979fd6ebf2801134515">&#9670;&#160;</a></span>logprobs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.logprobs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00238">238</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="ad5ed3104bb5e264411d65c704634d453" name="ad5ed3104bb5e264411d65c704634d453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ed3104bb5e264411d65c704634d453">&#9670;&#160;</a></span>max_grad_norm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.max_grad_norm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00219">219</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a75ff4b7b8e31833b4907421a1b20c1cb" name="a75ff4b7b8e31833b4907421a1b20c1cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75ff4b7b8e31833b4907421a1b20c1cb">&#9670;&#160;</a></span>minibatch_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.minibatch_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00206">206</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a0d7593735c2bb287516c4c8205e4bb8e" name="a0d7593735c2bb287516c4c8205e4bb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d7593735c2bb287516c4c8205e4bb8e">&#9670;&#160;</a></span>network</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.network</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00226">226</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/d45/games_2dynamic__routing_8py_source.html#l00122">open_spiel.python.games.dynamic_routing.DynamicRoutingGame.__init__()</a>, <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html#l00166">open_spiel.python.mfg.games.dynamic_routing.MeanFieldRoutingGame.__init__()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l01021">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities()</a>, <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html#l00214">open_spiel.python.mfg.games.dynamic_routing.MeanFieldRoutingGame.get_road_section_as_int()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l00734">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.init()</a>, <a class="el" href="../../d4/d12/mfg_2games_2dynamic__routing_8py_source.html#l00203">open_spiel.python.mfg.games.dynamic_routing.MeanFieldRoutingGame.make_py_observer()</a>, <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00025">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.setUp()</a>, <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00030">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.test_adjacency_list_init()</a>, <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00053">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.test_get_action_id_with_wrong_nodes()</a>, <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00048">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.test_get_action_id_without_connected_nodes()</a>, <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00073">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.test_get_road_section_with_action_id()</a>, <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00043">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.test_get_successors_with_wrong_node()</a>, <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00068">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.test_is_location_at_sink_noded_with_wrong_arg()</a>, <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00058">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.test_is_location_at_sink_noded_with_wrong_road_section()</a>, and <a class="el" href="../../d5/d31/dynamic__routing__utils__test_8py_source.html#l00063">open_spiel.python.games.dynamic_routing_utils_test.NetworkTest.test_is_location_at_sink_noded_with_wrong_road_section_2()</a>.</p>
+
+</div>
+</div>
+<a id="a4b5f7dd88ff5162f013963f1f45d10bb" name="a4b5f7dd88ff5162f013963f1f45d10bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b5f7dd88ff5162f013963f1f45d10bb">&#9670;&#160;</a></span>normalize_advantages</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.normalize_advantages</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00214">214</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a2a6cb9159a706da0f01366cc4c420dee" name="a2a6cb9159a706da0f01366cc4c420dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6cb9159a706da0f01366cc4c420dee">&#9670;&#160;</a></span>num_actions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.num_actions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00196">196</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d79/dynamic__routing__utils_8py_source.html#l00233">open_spiel.python.games.dynamic_routing_utils.Network.assert_valid_action()</a>, <a class="el" href="../../d3/da2/models_8py_source.html#l00183">models.OptimizerModel.initialize_optimizer_model()</a>, and <a class="el" href="../../d8/de8/regret__matching__agent_8py_source.html#l00049">regret_matching_agent.RegretMatchingAgent.regret_matching_policy()</a>.</p>
+
+</div>
+</div>
+<a id="a5a5e375b26add93961eae98f9682ce3d" name="a5a5e375b26add93961eae98f9682ce3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5e375b26add93961eae98f9682ce3d">&#9670;&#160;</a></span>num_envs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.num_envs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00202">202</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="ade22b0609308ee01deff8531165fa06b" name="ade22b0609308ee01deff8531165fa06b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade22b0609308ee01deff8531165fa06b">&#9670;&#160;</a></span>num_minibatches</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.num_minibatches</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00205">205</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="aa1f6ffe981d1addfd928565b97f493c9" name="aa1f6ffe981d1addfd928565b97f493c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f6ffe981d1addfd928565b97f493c9">&#9670;&#160;</a></span>num_players</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.num_players</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00197">197</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d85/gamut_8py_source.html#l00032">open_spiel.python.algorithms.adidas_utils.games.gamut.GAMUT.__init__()</a>, <a class="el" href="../../dc/dd6/pyspiel__tensor__game_8py_source.html#l00029">open_spiel.python.algorithms.adidas_utils.games.pyspiel_tensor_game.PyspielTensorGame.__init__()</a>, <a class="el" href="../../db/db9/nonsymmetric_2updates_8py_source.html#l00030">open_spiel.python.algorithms.adidas_utils.helpers.nonsymmetric.updates.Solver.__init__()</a>, <a class="el" href="../../d8/d4f/symmetric_2updates_8py_source.html#l00030">open_spiel.python.algorithms.adidas_utils.helpers.symmetric.updates.Solver.__init__()</a>, <a class="el" href="../../d9/d81/nonsymmetric_2ate_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate.Solver.__init__()</a>, <a class="el" href="../../dd/d54/nonsymmetric_2ate__anneal_8py_source.html#l00032">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_anneal.Solver.__init__()</a>, <a class="el" href="../../d3/d19/ate__poly_8py_source.html#l00032">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_poly.Solver.__init__()</a>, <a class="el" href="../../d8/d15/ate__regmatch_8py_source.html#l00029">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_regmatch.Solver.__init__()</a>, <a class="el" href="../../dd/d63/nonsymmetric_2qre_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.qre.Solver.__init__()</a>, <a class="el" href="../../de/d42/nonsymmetric_2qre__anneal_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.qre_anneal.Solver.__init__()</a>, <a class="el" href="../../de/d05/nonsymmetric_2regmatch_8py_source.html#l00026">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.regmatch.Solver.__init__()</a>, <a class="el" href="../../d8/d6e/symmetric_2ate_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ate.Solver.__init__()</a>, <a class="el" href="../../dd/d32/symmetric_2ate__anneal_8py_source.html#l00032">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ate_anneal.Solver.__init__()</a>, <a class="el" href="../../d9/db3/symmetric_2qre_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre.Solver.__init__()</a>, <a class="el" href="../../de/dc5/symmetric_2qre__anneal_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre_anneal.Solver.__init__()</a>, <a class="el" href="../../d6/d5f/qre__anneal__noaux_8py_source.html#l00031">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre_anneal_noaux.Solver.__init__()</a>, <a class="el" href="../../d6/d3c/symmetric_2regmatch_8py_source.html#l00026">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.regmatch.Solver.__init__()</a>, <a class="el" href="../../db/d35/liars__poker_8py_source.html#l00366">open_spiel.python.games.liars_poker.LiarsPokerObserver.__init__()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00296">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState.__init__()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00295">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState.__init__()</a>, <a class="el" href="../../d9/d12/big_8py_source.html#l00060">open_spiel.python.algorithms.adidas_utils.games.big.TensorGame.best_response()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00370">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState.chance_outcomes()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00366">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState.chance_outcomes()</a>, <a class="el" href="../../d9/d81/nonsymmetric_2ate_8py_source.html#l00077">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate.Solver.compute_gradients()</a>, <a class="el" href="../../dd/d54/nonsymmetric_2ate__anneal_8py_source.html#l00081">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_anneal.Solver.compute_gradients()</a>, <a class="el" href="../../d8/d15/ate__regmatch_8py_source.html#l00070">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_regmatch.Solver.compute_gradients()</a>, <a class="el" href="../../df/d5f/nonsymmetric_2ped_8py_source.html#l00035">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ped.Solver.compute_gradients()</a>, <a class="el" href="../../dc/d48/nonsymmetric_2pg_8py_source.html#l00035">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.pg.Solver.compute_gradients()</a>, <a class="el" href="../../dd/d63/nonsymmetric_2qre_8py_source.html#l00077">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.qre.Solver.compute_gradients()</a>, <a class="el" href="../../de/d42/nonsymmetric_2qre__anneal_8py_source.html#l00079">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.qre_anneal.Solver.compute_gradients()</a>, <a class="el" href="../../de/d05/nonsymmetric_2regmatch_8py_source.html#l00062">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.regmatch.Solver.compute_gradients()</a>, <a class="el" href="../../dc/d04/nonsymmetric_2sgd_8py_source.html#l00065">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.sgd.Solver.compute_gradients()</a>, <a class="el" href="../../d8/d6e/symmetric_2ate_8py_source.html#l00074">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ate.Solver.compute_gradients()</a>, <a class="el" href="../../dd/d32/symmetric_2ate__anneal_8py_source.html#l00078">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ate_anneal.Solver.compute_gradients()</a>, <a class="el" href="../../de/d18/symmetric_2ped_8py_source.html#l00035">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ped.Solver.compute_gradients()</a>, <a class="el" href="../../d9/db3/symmetric_2qre_8py_source.html#l00074">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre.Solver.compute_gradients()</a>, <a class="el" href="../../de/dc5/symmetric_2qre__anneal_8py_source.html#l00076">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre_anneal.Solver.compute_gradients()</a>, <a class="el" href="../../d6/d5f/qre__anneal__noaux_8py_source.html#l00069">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre_anneal_noaux.Solver.compute_gradients()</a>, <a class="el" href="../../d7/d20/symmetric_2sgd_8py_source.html#l00060">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.sgd.Solver.compute_gradients()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00461">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState.distribution_support()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00444">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState.distribution_support()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00477">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState.get_pos_proba()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00460">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState.get_pos_proba()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00219">open_spiel.python.rl_environment.Environment.get_time_step()</a>, <a class="el" href="../../d3/d19/ate__poly_8py_source.html#l00163">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_poly.Solver.gradients()</a>, <a class="el" href="../../db/db9/nonsymmetric_2updates_8py_source.html#l00047">open_spiel.python.algorithms.adidas_utils.helpers.nonsymmetric.updates.Solver.init_vars()</a>, <a class="el" href="../../d8/d4f/symmetric_2updates_8py_source.html#l00047">open_spiel.python.algorithms.adidas_utils.helpers.symmetric.updates.Solver.init_vars()</a>, <a class="el" href="../../d9/d81/nonsymmetric_2ate_8py_source.html#l00054">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate.Solver.init_vars()</a>, <a class="el" href="../../dd/d54/nonsymmetric_2ate__anneal_8py_source.html#l00057">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_anneal.Solver.init_vars()</a>, <a class="el" href="../../d3/d19/ate__poly_8py_source.html#l00056">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_poly.Solver.init_vars()</a>, <a class="el" href="../../d8/d15/ate__regmatch_8py_source.html#l00046">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.ate_regmatch.Solver.init_vars()</a>, <a class="el" href="../../dd/d63/nonsymmetric_2qre_8py_source.html#l00054">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.qre.Solver.init_vars()</a>, <a class="el" href="../../de/d42/nonsymmetric_2qre__anneal_8py_source.html#l00055">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.qre_anneal.Solver.init_vars()</a>, <a class="el" href="../../de/d05/nonsymmetric_2regmatch_8py_source.html#l00040">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.regmatch.Solver.init_vars()</a>, <a class="el" href="../../dc/d04/nonsymmetric_2sgd_8py_source.html#l00049">open_spiel.python.algorithms.adidas_utils.solvers.nonsymmetric.sgd.Solver.init_vars()</a>, <a class="el" href="../../d8/d6e/symmetric_2ate_8py_source.html#l00056">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ate.Solver.init_vars()</a>, <a class="el" href="../../dd/d32/symmetric_2ate__anneal_8py_source.html#l00059">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.ate_anneal.Solver.init_vars()</a>, <a class="el" href="../../d9/db3/symmetric_2qre_8py_source.html#l00056">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre.Solver.init_vars()</a>, <a class="el" href="../../de/dc5/symmetric_2qre__anneal_8py_source.html#l00057">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre_anneal.Solver.init_vars()</a>, <a class="el" href="../../d6/d5f/qre__anneal__noaux_8py_source.html#l00056">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.qre_anneal_noaux.Solver.init_vars()</a>, <a class="el" href="../../d6/d3c/symmetric_2regmatch_8py_source.html#l00040">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.regmatch.Solver.init_vars()</a>, <a class="el" href="../../d7/d20/symmetric_2sgd_8py_source.html#l00049">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.sgd.Solver.init_vars()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00152">open_spiel.python.coalitional_games.least_core_lagrangian.CoreSolver.loss_deficit()</a>, <a class="el" href="../../d1/d45/games_2dynamic__routing_8py_source.html#l00156">open_spiel.python.games.dynamic_routing.DynamicRoutingGame.make_py_observer()</a>, <a class="el" href="../../db/d35/liars__poker_8py_source.html#l00085">open_spiel.python.games.liars_poker.LiarsPoker.make_py_observer()</a>, <a class="el" href="../../d4/d52/iterated__matrix__game_8py_source.html#l00144">open_spiel.python.environments.iterated_matrix_game.IteratedMatrixGame.reset()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00324">open_spiel.python.rl_environment.Environment.reset()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00530">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState.rewards()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00512">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState.rewards()</a>, <a class="el" href="../../d1/d77/chat__game__psro__example_8py_source.html#l00285">open_spiel.python.examples.chat_game_psro_example.PSRO.run()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00534">open_spiel.python.coalitional_games.least_core_lagrangian.CoreLagrangian.solve()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00209">open_spiel.python.coalitional_games.least_core_lagrangian.CoreOptimization.solve()</a>, <a class="el" href="../../da/d73/least__core__lagrangian_8py_source.html#l00353">open_spiel.python.coalitional_games.least_core_lagrangian.CoreOptimizationLogits.solve()</a>, <a class="el" href="../../d4/d52/iterated__matrix__game_8py_source.html#l00089">open_spiel.python.environments.iterated_matrix_game.IteratedMatrixGame.step()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00499">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState.update_distribution()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00481">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState.update_distribution()</a>, and <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00422">open_spiel.python.rl_environment.Environment.use_observation()</a>.</p>
+
+</div>
+</div>
+<a id="af35c4319a7bbfff93e2e305c89a46c9c" name="af35c4319a7bbfff93e2e305c89a46c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35c4319a7bbfff93e2e305c89a46c9c">&#9670;&#160;</a></span>obs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.obs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00235">235</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a7bdccaccbf638d4187930e57d045d4dc" name="a7bdccaccbf638d4187930e57d045d4dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bdccaccbf638d4187930e57d045d4dc">&#9670;&#160;</a></span>optimizer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.optimizer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00228">228</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d27/rnad_8py_source.html#l00905">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l00929">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l00734">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.init()</a>, <a class="el" href="../../d5/d26/meta__learning_8py_source.html#l00339">meta_learning.MetaCFRRegretAgent.next_policy()</a>, <a class="el" href="../../d5/d26/meta__learning_8py_source.html#l00367">meta_learning.MetaCFRRegretAgent.optimize_infoset()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l00953">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step()</a>, and <a class="el" href="../../d5/d26/meta__learning_8py_source.html#l00390">meta_learning.MetaCFRRegretAgent.training_optimizer()</a>.</p>
+
+</div>
+</div>
+<a id="a55231a303c62fbc124227ff3b7c00a08" name="a55231a303c62fbc124227ff3b7c00a08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55231a303c62fbc124227ff3b7c00a08">&#9670;&#160;</a></span>player_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.player_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00198">198</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/ddf/algorithms_2dqn_8py_source.html#l00061">open_spiel.python.algorithms.dqn.DQN.__init__()</a>, <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00106">open_spiel.python.algorithms.eva.EVAAgent.__init__()</a>, <a class="el" href="../../d3/d8e/algorithms_2nfsp_8py_source.html#l00062">open_spiel.python.algorithms.nfsp.NFSP.__init__()</a>, <a class="el" href="../../d6/d97/noisy__policy_8py_source.html#l00039">open_spiel.python.algorithms.noisy_policy.NoisyPolicy.__init__()</a>, <a class="el" href="../../de/d2e/algorithms_2policy__gradient_8py_source.html#l00113">open_spiel.python.algorithms.policy_gradient.PolicyGradient.__init__()</a>, <a class="el" href="../../d4/dc6/jax_2dqn_8py_source.html#l00060">open_spiel.python.jax.dqn.DQN.__init__()</a>, <a class="el" href="../../d0/dfd/jax_2nfsp_8py_source.html#l00063">open_spiel.python.jax.nfsp.NFSP.__init__()</a>, <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00630">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.__init__()</a>, <a class="el" href="../../d8/ddd/jax_2policy__gradient_8py_source.html#l00203">open_spiel.python.jax.policy_gradient.PolicyGradient.__init__()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00087">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.__init__()</a>, <a class="el" href="../../d0/d8f/pytorch_2dqn_8py_source.html#l00133">open_spiel.python.pytorch.dqn.DQN.__init__()</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00100">open_spiel.python.pytorch.eva.EVAAgent.__init__()</a>, <a class="el" href="../../db/d99/pytorch_2policy__gradient_8py_source.html#l00138">open_spiel.python.pytorch.policy_gradient.PolicyGradient.__init__()</a>, <a class="el" href="../../d3/d8e/algorithms_2nfsp_8py_source.html#l00226">open_spiel.python.algorithms.nfsp.NFSP._add_transition()</a>, <a class="el" href="../../de/d2e/algorithms_2policy__gradient_8py_source.html#l00404">open_spiel.python.algorithms.policy_gradient.PolicyGradient._add_transition()</a>, <a class="el" href="../../d0/dfd/jax_2nfsp_8py_source.html#l00233">open_spiel.python.jax.nfsp.NFSP._add_transition()</a>, <a class="el" href="../../d8/ddd/jax_2policy__gradient_8py_source.html#l00398">open_spiel.python.jax.policy_gradient.PolicyGradient._add_transition()</a>, <a class="el" href="../../db/d99/pytorch_2policy__gradient_8py_source.html#l00382">open_spiel.python.pytorch.policy_gradient.PolicyGradient._add_transition()</a>, <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00209">open_spiel.python.algorithms.eva.EVAAgent._add_transition_replay()</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00194">open_spiel.python.pytorch.eva.EVAAgent._add_transition_replay()</a>, <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00987">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent._construct_episode_batches()</a>, <a class="el" href="../../d3/d8e/algorithms_2nfsp_8py_source.html#l00244">open_spiel.python.algorithms.nfsp.NFSP._learn()</a>, <a class="el" href="../../d0/dfd/jax_2nfsp_8py_source.html#l00266">open_spiel.python.jax.nfsp.NFSP._learn()</a>, <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00405">open_spiel.python.algorithms.eva.EVAAgent.action_probabilities()</a>, <a class="el" href="../../d6/d97/noisy__policy_8py_source.html#l00112">open_spiel.python.algorithms.noisy_policy.NoisyPolicy.action_probabilities()</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00378">open_spiel.python.pytorch.eva.EVAAgent.action_probabilities()</a>, <a class="el" href="../../d4/ddf/algorithms_2dqn_8py_source.html#l00223">open_spiel.python.algorithms.dqn.DQN.add_transition()</a>, <a class="el" href="../../d4/dc6/jax_2dqn_8py_source.html#l00208">open_spiel.python.jax.dqn.DQN.add_transition()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00247">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.add_transition()</a>, <a class="el" href="../../d0/d8f/pytorch_2dqn_8py_source.html#l00241">open_spiel.python.pytorch.dqn.DQN.add_transition()</a>, <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00768">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.get_policy()</a>, <a class="el" href="../../d4/ddf/algorithms_2dqn_8py_source.html#l00305">open_spiel.python.algorithms.dqn.DQN.learn()</a>, <a class="el" href="../../d4/ddf/algorithms_2dqn_8py_source.html#l00175">open_spiel.python.algorithms.dqn.DQN.step()</a>, <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00236">open_spiel.python.algorithms.eva.EVAAgent.step()</a>, <a class="el" href="../../d3/d8e/algorithms_2nfsp_8py_source.html#l00176">open_spiel.python.algorithms.nfsp.NFSP.step()</a>, <a class="el" href="../../de/d2e/algorithms_2policy__gradient_8py_source.html#l00297">open_spiel.python.algorithms.policy_gradient.PolicyGradient.step()</a>, <a class="el" href="../../d1/d9b/bluechip__bridge__uncontested__bidding_8py_source.html#l00219">open_spiel.python.bots.bluechip_bridge_uncontested_bidding.BlueChipBridgeBot.step()</a>, <a class="el" href="../../d4/dc6/jax_2dqn_8py_source.html#l00157">open_spiel.python.jax.dqn.DQN.step()</a>, <a class="el" href="../../d0/dfd/jax_2nfsp_8py_source.html#l00184">open_spiel.python.jax.nfsp.NFSP.step()</a>, <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00813">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.step()</a>, <a class="el" href="../../d8/ddd/jax_2policy__gradient_8py_source.html#l00342">open_spiel.python.jax.policy_gradient.PolicyGradient.step()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00188">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.step()</a>, <a class="el" href="../../d0/d8f/pytorch_2dqn_8py_source.html#l00191">open_spiel.python.pytorch.dqn.DQN.step()</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00220">open_spiel.python.pytorch.eva.EVAAgent.step()</a>, <a class="el" href="../../db/d99/pytorch_2policy__gradient_8py_source.html#l00280">open_spiel.python.pytorch.policy_gradient.PolicyGradient.step()</a>, and <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00743">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.update_params()</a>.</p>
+
+</div>
+</div>
+<a id="aa785bdbb395932c9a74a08784339cc53" name="aa785bdbb395932c9a74a08784339cc53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa785bdbb395932c9a74a08784339cc53">&#9670;&#160;</a></span>rewards</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.rewards</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00240">240</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00425">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState._apply_action()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00408">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState._apply_action()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00555">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState.returns()</a>, and <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00536">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState.returns()</a>.</p>
+
+</div>
+</div>
+<a id="a0830a72276731afc0f8c1e36ac0bea52" name="a0830a72276731afc0f8c1e36ac0bea52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0830a72276731afc0f8c1e36ac0bea52">&#9670;&#160;</a></span>start_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.start_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00248">248</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="aecc6d18c7595f118473682e34a5995bb" name="aecc6d18c7595f118473682e34a5995bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc6d18c7595f118473682e34a5995bb">&#9670;&#160;</a></span>steps_per_batch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.steps_per_batch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00203">203</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a29e0bc1237842a9b45a7c7704784417e" name="a29e0bc1237842a9b45a7c7704784417e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e0bc1237842a9b45a7c7704784417e">&#9670;&#160;</a></span>target_kl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.target_kl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00220">220</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="aeb8f364accf87e7a314db452f6f7ead9" name="aeb8f364accf87e7a314db452f6f7ead9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8f364accf87e7a314db452f6f7ead9">&#9670;&#160;</a></span>total_steps_done</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.total_steps_done</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00246">246</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a1330e751671e632b088b2a8c41a331bd" name="a1330e751671e632b088b2a8c41a331bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1330e751671e632b088b2a8c41a331bd">&#9670;&#160;</a></span>update_epochs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.update_epochs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00207">207</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="adc0ee3adcbcd502f0f9fbae63763abd5" name="adc0ee3adcbcd502f0f9fbae63763abd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0ee3adcbcd502f0f9fbae63763abd5">&#9670;&#160;</a></span>updates_done</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.updates_done</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00247">247</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="a23863071c47fb2a22f28eeb43eaf9690" name="a23863071c47fb2a22f28eeb43eaf9690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23863071c47fb2a22f28eeb43eaf9690">&#9670;&#160;</a></span>value_coef</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.value_coef</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00218">218</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="af5d3de9072956b8087dcfdd8d8e81143" name="af5d3de9072956b8087dcfdd8d8e81143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d3de9072956b8087dcfdd8d8e81143">&#9670;&#160;</a></span>values</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.values</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00242">242</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<a id="ace87ca8574b04fa5b8301b3770025974" name="ace87ca8574b04fa5b8301b3770025974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace87ca8574b04fa5b8301b3770025974">&#9670;&#160;</a></span>writer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.ppo.PPO.writer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d51/ppo_8py_source.html#l00223">223</a> of file <a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>open_spiel/python/pytorch/<a class="el" href="../../de/d51/ppo_8py_source.html">ppo.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

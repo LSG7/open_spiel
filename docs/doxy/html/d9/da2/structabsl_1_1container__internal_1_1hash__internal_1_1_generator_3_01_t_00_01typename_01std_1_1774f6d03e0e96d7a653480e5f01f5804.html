@@ -105,10 +105,47 @@ Collaboration diagram for absl::container_internal::hash_internal::Generator&lt;
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8844a7dd8b569256a4cef33bf2d3196c" id="r_a8844a7dd8b569256a4cef33bf2d3196c"><td class="memItemLeft" align="right" valign="top"><a id="a8844a7dd8b569256a4cef33bf2d3196c" name="a8844a7dd8b569256a4cef33bf2d3196c"></a>
-T&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> () const</td></tr>
+<tr class="memitem:a8844a7dd8b569256a4cef33bf2d3196c" id="r_a8844a7dd8b569256a4cef33bf2d3196c"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8844a7dd8b569256a4cef33bf2d3196c">operator()</a> () const</td></tr>
 <tr class="separator:a8844a7dd8b569256a4cef33bf2d3196c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+struct absl::container_internal::hash_internal::Generator&lt; T, typename std::enable_if&lt; std::is_integral&lt; T &gt;::value &gt;::type &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html#l00071">71</a> of file <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html">hash_generator_testing.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8844a7dd8b569256a4cef33bf2d3196c" name="a8844a7dd8b569256a4cef33bf2d3196c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8844a7dd8b569256a4cef33bf2d3196c">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="../../d6/de7/structabsl_1_1container__internal_1_1hash__internal_1_1_generator.html">absl::container_internal::hash_internal::Generator</a>&lt; T, typename std::enable_if&lt; std::is_integral&lt; T &gt;::value &gt;::type &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html#l00072">72</a> of file <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html">hash_generator_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                       {</div>
+<div class="line"><span class="lineno">   73</span>    std::uniform_int_distribution&lt;T&gt; dist;</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">return</span> dist(*GetSharedRng());</div>
+<div class="line"><span class="lineno">   75</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html">hash_generator_testing.h</a></li>
 </ul>

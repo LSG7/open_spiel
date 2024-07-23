@@ -105,18 +105,84 @@ Collaboration diagram for absl::container_internal::RawHashSetTestOnlyAccess:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5469a8acd2cf459fed9c356e9bd47a0f" id="r_a5469a8acd2cf459fed9c356e9bd47a0f"><td class="memTemplParams" colspan="2"><a id="a5469a8acd2cf459fed9c356e9bd47a0f" name="a5469a8acd2cf459fed9c356e9bd47a0f"></a>
-template&lt;typename C &gt; </td></tr>
-<tr class="memitem:a5469a8acd2cf459fed9c356e9bd47a0f"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetSlots</b> (const C &amp;c) -&gt; decltype(c.slots_)</td></tr>
+<tr class="memitem:a5469a8acd2cf459fed9c356e9bd47a0f" id="r_a5469a8acd2cf459fed9c356e9bd47a0f"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
+<tr class="memitem:a5469a8acd2cf459fed9c356e9bd47a0f"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5469a8acd2cf459fed9c356e9bd47a0f">GetSlots</a> (const C &amp;c) -&gt; decltype(c.slots_)</td></tr>
 <tr class="separator:a5469a8acd2cf459fed9c356e9bd47a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab56a0fbff2ffff91c1538b276e39d923" id="r_ab56a0fbff2ffff91c1538b276e39d923"><td class="memTemplParams" colspan="2"><a id="ab56a0fbff2ffff91c1538b276e39d923" name="ab56a0fbff2ffff91c1538b276e39d923"></a>
-template&lt;typename C &gt; </td></tr>
-<tr class="memitem:ab56a0fbff2ffff91c1538b276e39d923"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetSlots</b> (const C &amp;c) -&gt; decltype(c.slot_array())</td></tr>
+<tr class="memitem:ab56a0fbff2ffff91c1538b276e39d923" id="r_ab56a0fbff2ffff91c1538b276e39d923"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
+<tr class="memitem:ab56a0fbff2ffff91c1538b276e39d923"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab56a0fbff2ffff91c1538b276e39d923">GetSlots</a> (const C &amp;c) -&gt; decltype(c.slot_array())</td></tr>
 <tr class="separator:ab56a0fbff2ffff91c1538b276e39d923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/ddd/raw__hash__set__test_8cc_source.html#l00058">58</a> of file <a class="el" href="../../d7/ddd/raw__hash__set__test_8cc_source.html">raw_hash_set_test.cc</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab56a0fbff2ffff91c1538b276e39d923" name="ab56a0fbff2ffff91c1538b276e39d923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab56a0fbff2ffff91c1538b276e39d923">&#9670;&#160;</a></span>GetSlots() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto absl::container_internal::RawHashSetTestOnlyAccess::GetSlots </td>
+          <td>(</td>
+          <td class="paramtype">const C &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td> -&gt; decltype(c.slot_array()) </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/ddd/raw__hash__set__test_8cc_source.html#l00060">60</a> of file <a class="el" href="../../d7/ddd/raw__hash__set__test_8cc_source.html">raw_hash_set_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                               {</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> c.slot_array();</div>
+<div class="line"><span class="lineno">   62</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5469a8acd2cf459fed9c356e9bd47a0f" name="a5469a8acd2cf459fed9c356e9bd47a0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5469a8acd2cf459fed9c356e9bd47a0f">&#9670;&#160;</a></span>GetSlots() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename C &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto absl::container_internal::RawHashSetTestOnlyAccess::GetSlots </td>
+          <td>(</td>
+          <td class="paramtype">const C &amp;</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td> -&gt; decltype(c.slots_) </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d33/raw__hash__set__benchmark_8cc_source.html#l00035">35</a> of file <a class="el" href="../../dc/d33/raw__hash__set__benchmark_8cc_source.html">raw_hash_set_benchmark.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                         {</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">return</span> c.slots_;</div>
+<div class="line"><span class="lineno">   37</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>open_spiel/abseil-cpp/absl/container/internal/<b>raw_hash_set_benchmark.cc</b></li>
-<li>open_spiel/abseil-cpp/absl/container/internal/<b>raw_hash_set_test.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../dc/d33/raw__hash__set__benchmark_8cc_source.html">raw_hash_set_benchmark.cc</a></li>
+<li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../d7/ddd/raw__hash__set__test_8cc_source.html">raw_hash_set_test.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

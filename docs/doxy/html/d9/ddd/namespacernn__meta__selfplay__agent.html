@@ -110,8 +110,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a871dc919c5a61e7d552a5c56e8c68128" id="r_a871dc919c5a61e7d552a5c56e8c68128"><td class="memItemLeft" align="right" valign="top"><a id="a871dc919c5a61e7d552a5c56e8c68128" name="a871dc919c5a61e7d552a5c56e8c68128"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:a871dc919c5a61e7d552a5c56e8c68128" id="r_a871dc919c5a61e7d552a5c56e8c68128"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a871dc919c5a61e7d552a5c56e8c68128">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:a871dc919c5a61e7d552a5c56e8c68128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -152,7 +151,25 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Forward pass.</pre> <div class="dynheader">
+<pre class="fragment">Forward pass.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html#l00043">43</a> of file <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html">rnn_meta_selfplay_agent.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                   output_dim: int, batch_size: int) -&gt; hk.Transformed:</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>  <span class="stringliteral">&quot;&quot;&quot;Forward pass.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>  <span class="keyword">def </span>forward_fn(inputs):</div>
+<div class="line"><span class="lineno">   49</span>    rnn = _make_network(lstm_hidden_sizes, mlp_hidden_sizes, output_dim)</div>
+<div class="line"><span class="lineno">   50</span>    initial_state = rnn.initial_state(batch_size=batch_size)</div>
+<div class="line"><span class="lineno">   51</span>    outputs, _ = hk.dynamic_unroll(rnn, inputs, initial_state, time_major=<span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">return</span> outputs</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>  network = hk.transform(forward_fn)</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">return</span> network</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html#l00033">_make_network()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/ddd/namespacernn__meta__selfplay__agent_aa1933d50a4b256e302793bdd13c36392_cgraph.png" border="0" usemap="#ad9/ddd/namespacernn__meta__selfplay__agent_aa1933d50a4b256e302793bdd13c36392_cgraph" alt=""/></div>
@@ -196,7 +213,21 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">set up the network.</pre> <div class="dynheader">
+<pre class="fragment">set up the network.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html#l00031">31</a> of file <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html">rnn_meta_selfplay_agent.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                  output_dim: int) -&gt; hk.RNNCore:</div>
+<div class="line"><span class="lineno">   34</span>  <span class="stringliteral">&quot;&quot;&quot;set up the network.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>  layers = []</div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">for</span> k, hidden_size <span class="keywordflow">in</span> enumerate(lstm_hidden_sizes):</div>
+<div class="line"><span class="lineno">   38</span>    layers += [hk.LSTM(hidden_size, name=f<span class="stringliteral">&#39;lstm_layer_{k}&#39;</span>), jax.nn.relu]</div>
+<div class="line"><span class="lineno">   39</span>  layers += [hk.nets.MLP(mlp_hidden_sizes + [output_dim], name=<span class="stringliteral">&#39;mlp&#39;</span>)]</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordflow">return</span> RNNModel(layers)</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html#l00044">_make_forwards()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/ddd/namespacernn__meta__selfplay__agent_af68765a828166a2866d99bdac176b117_icgraph.png" border="0" usemap="#ad9/ddd/namespacernn__meta__selfplay__agent_af68765a828166a2866d99bdac176b117_icgraph" alt=""/></div>
@@ -243,6 +274,69 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Meta loss function.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html#l00058">58</a> of file <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html">rnn_meta_selfplay_agent.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span><span class="keyword">def </span>meta_loss(opt_params, net_apply, payoff, steps, rng):</div>
+<div class="line"><span class="lineno">   59</span>  <span class="stringliteral">&quot;&quot;&quot;Meta loss function.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>  regret_sum_x = np.zeros(shape=[FLAGS.batch_size, 1, FLAGS.num_actions])</div>
+<div class="line"><span class="lineno">   62</span>  regret_sum_y = np.zeros(shape=[FLAGS.batch_size, 1, FLAGS.num_actions])</div>
+<div class="line"><span class="lineno">   63</span>  total_loss = 0</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  <span class="preprocessor">@jax.jit</span></div>
+<div class="line"><span class="lineno">   66</span>  <span class="keyword">def </span>body_fun(s, total_loss):</div>
+<div class="line"><span class="lineno">   67</span>    nonlocal regret_sum_x</div>
+<div class="line"><span class="lineno">   68</span>    nonlocal regret_sum_y</div>
+<div class="line"><span class="lineno">   69</span>    x = net_apply(opt_params, rng, regret_sum_x / (s + 1))</div>
+<div class="line"><span class="lineno">   70</span>    y = net_apply(opt_params, rng, regret_sum_y / (s + 1))</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    strategy_x = jax.nn.softmax(x)</div>
+<div class="line"><span class="lineno">   73</span>    strategy_y = jnp.transpose(jax.nn.softmax(y), [0, 2, 1])</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    values_x = jnp.matmul(payoff, strategy_y)</div>
+<div class="line"><span class="lineno">   76</span>    values_y = -jnp.matmul(strategy_x, payoff)</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    value_x = jnp.matmul(jnp.matmul(strategy_x, payoff), strategy_y)</div>
+<div class="line"><span class="lineno">   79</span>    value_y = -value_x</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    curren_regret_x = values_x - value_x</div>
+<div class="line"><span class="lineno">   82</span>    curren_regret_y = values_y - value_y</div>
+<div class="line"><span class="lineno">   83</span>    curren_regret_x = jnp.transpose(curren_regret_x, [0, 2, 1])</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    regret_sum_x += curren_regret_x</div>
+<div class="line"><span class="lineno">   86</span>    regret_sum_y += curren_regret_y</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    current_loss = jnp.max(</div>
+<div class="line"><span class="lineno">   89</span>        jax.numpy.concatenate([curren_regret_x, curren_regret_y], axis=2),</div>
+<div class="line"><span class="lineno">   90</span>        axis=[1, 2])</div>
+<div class="line"><span class="lineno">   91</span>    total_loss += current_loss</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">return</span> total_loss</div>
+<div class="line"><span class="lineno">   93</span>  <span class="keyword">def </span>fori_loop(lower, steps, body_fun, total_loss):</div>
+<div class="line"><span class="lineno">   94</span>    val = total_loss</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(lower, steps):</div>
+<div class="line"><span class="lineno">   96</span>      val = body_fun(i, total_loss)</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> val</div>
+<div class="line"><span class="lineno">   98</span>  total_loss = fori_loop(0, steps, body_fun, total_loss)</div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">return</span> jnp.mean(total_loss)</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a871dc919c5a61e7d552a5c56e8c68128" name="a871dc919c5a61e7d552a5c56e8c68128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871dc919c5a61e7d552a5c56e8c68128">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rnn_meta_selfplay_agent.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html#l00028">28</a> of file <a class="el" href="../../d2/dd3/rnn__meta__selfplay__agent_8py_source.html">rnn_meta_selfplay_agent.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

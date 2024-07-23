@@ -133,15 +133,15 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac29bdb2828a0945a4c03f9c9451e71d0" id="r_ac29bdb2828a0945a4c03f9c9451e71d0"><td class="memItemLeft" align="right" valign="top"><a id="ac29bdb2828a0945a4c03f9c9451e71d0" name="ac29bdb2828a0945a4c03f9c9451e71d0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_agent</b></td></tr>
+<tr class="memitem:ac29bdb2828a0945a4c03f9c9451e71d0" id="r_ac29bdb2828a0945a4c03f9c9451e71d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac29bdb2828a0945a4c03f9c9451e71d0">_agent</a></td></tr>
 <tr class="separator:ac29bdb2828a0945a4c03f9c9451e71d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fe4c0ddb1b470cdf9c7cd37e1ea2868" id="r_a2fe4c0ddb1b470cdf9c7cd37e1ea2868"><td class="memItemLeft" align="right" valign="top"><a id="a2fe4c0ddb1b470cdf9c7cd37e1ea2868" name="a2fe4c0ddb1b470cdf9c7cd37e1ea2868"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_tau</b></td></tr>
+<tr class="memitem:a2fe4c0ddb1b470cdf9c7cd37e1ea2868" id="r_a2fe4c0ddb1b470cdf9c7cd37e1ea2868"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fe4c0ddb1b470cdf9c7cd37e1ea2868">_tau</a></td></tr>
 <tr class="separator:a2fe4c0ddb1b470cdf9c7cd37e1ea2868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Wraps a Munchausen DQN agent to use soft-max action selection.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Wraps a Munchausen DQN agent to use soft-max action selection.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00442">442</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7425cdc0a20942247acc8898c000c274" name="a7425cdc0a20942247acc8898c000c274"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7425cdc0a20942247acc8898c000c274">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -176,6 +176,14 @@ Args:
   **agent_specific_kwargs: optional extra args.
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d2/dfa/classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent.html#af17e2a06dc592b1d2bbe3d1ee40467b6">open_spiel.python.rl_agent.AbstractAgent</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00445">445</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  445</span>  <span class="keyword">def </span>__init__(self, agent: MunchausenDQN, tau: Optional[float] = <span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">  446</span>    self._agent = agent</div>
+<div class="line"><span class="lineno">  447</span>    self._tau = tau</div>
+<div class="line"><span class="lineno">  448</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00166">open_spiel.python.algorithms.eva.EVAAgent._agent</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00446">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN._agent</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00152">open_spiel.python.pytorch.eva.EVAAgent._agent</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00101">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN._tau</a>, and <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00447">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN._tau</a>.</p>
 
 </div>
 </div>
@@ -222,6 +230,17 @@ Returns:
   A `StepOutput` for the current `time_step`.
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d2/dfa/classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent.html#ab97b9d892ae3a1232f3adce55203efea">open_spiel.python.rl_agent.AbstractAgent</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00449">449</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  449</span>  <span class="keyword">def </span>step(self, time_step, is_evaluation=False):</div>
+<div class="line"><span class="lineno">  450</span>    <span class="keywordflow">return</span> self._agent.step(</div>
+<div class="line"><span class="lineno">  451</span>        time_step, is_evaluation=is_evaluation, use_softmax=<span class="keyword">True</span>, tau=self._tau)</div>
+<div class="line"><span class="lineno">  452</span> </div>
+<div class="line"><span class="lineno">  453</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00166">open_spiel.python.algorithms.eva.EVAAgent._agent</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00446">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN._agent</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00152">open_spiel.python.pytorch.eva.EVAAgent._agent</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00101">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN._tau</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00447">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN._tau</a>, and <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00449">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN.step()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00359">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.evaluate_and_update_policy()</a>, <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00350">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.multiple_steps()</a>, <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00126">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.solve_yield()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00449">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN.step()</a>, <a class="el" href="../../d4/d2e/nash__evolutionary__search_8py_source.html#l00094">nash_evolutionary_search.NashCMAES.step_for()</a>, <a class="el" href="../../df/dd1/nash__random__search_8py_source.html#l00100">nash_random_search.NashRandomSearch.step_for()</a>, <a class="el" href="../../d2/d0e/bandit__regret_8py_source.html#l00363">open_spiel.python.mfg.algorithms.bandit_regret.PolynomialWeightAlgorithm.step_for()</a>, and <a class="el" href="../../dd/ddd/regret__minimizer_8py_source.html#l00107">regret_minimizer.RegretMinimizer.step_for()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -263,8 +282,61 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac29bdb2828a0945a4c03f9c9451e71d0" name="ac29bdb2828a0945a4c03f9c9451e71d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29bdb2828a0945a4c03f9c9451e71d0">&#9670;&#160;</a></span>_agent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN._agent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00446">446</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00106">open_spiel.python.algorithms.eva.EVAAgent.__init__()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00445">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN.__init__()</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00100">open_spiel.python.pytorch.eva.EVAAgent.__init__()</a>, <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00322">open_spiel.python.algorithms.eva.EVAAgent._trajectory_centric_planning()</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00301">open_spiel.python.pytorch.eva.EVAAgent._trajectory_centric_planning()</a>, <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00236">open_spiel.python.algorithms.eva.EVAAgent.step()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00449">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN.step()</a>, and <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00220">open_spiel.python.pytorch.eva.EVAAgent.step()</a>.</p>
+
+</div>
+</div>
+<a id="a2fe4c0ddb1b470cdf9c7cd37e1ea2868" name="a2fe4c0ddb1b470cdf9c7cd37e1ea2868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe4c0ddb1b470cdf9c7cd37e1ea2868">&#9670;&#160;</a></span>_tau</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN._tau</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00447">447</a> of file <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00087">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.__init__()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00445">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN.__init__()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00277">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN._get_action_probs()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00285">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN._loss()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00188">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.MunchausenDQN.step()</a>, and <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00449">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.SoftMaxMunchausenDQN.step()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/<b>munchausen_deep_mirror_descent.py</b></li>
+<li>open_spiel/python/mfg/algorithms/<a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html">munchausen_deep_mirror_descent.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

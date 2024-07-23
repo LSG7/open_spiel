@@ -106,28 +106,217 @@ Collaboration diagram for absl::random_internal::Randen:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a318bcd69a42e5b53a343976966f52ca2" id="r_a318bcd69a42e5b53a343976966f52ca2"><td class="memItemLeft" align="right" valign="top"><a id="a318bcd69a42e5b53a343976966f52ca2" name="a318bcd69a42e5b53a343976966f52ca2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Generate</b> (void *state) const</td></tr>
+<tr class="memitem:a318bcd69a42e5b53a343976966f52ca2" id="r_a318bcd69a42e5b53a343976966f52ca2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a318bcd69a42e5b53a343976966f52ca2">Generate</a> (void *state) const</td></tr>
 <tr class="separator:a318bcd69a42e5b53a343976966f52ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bae91f8d258c81880ed239be6cdbe6d" id="r_a7bae91f8d258c81880ed239be6cdbe6d"><td class="memItemLeft" align="right" valign="top"><a id="a7bae91f8d258c81880ed239be6cdbe6d" name="a7bae91f8d258c81880ed239be6cdbe6d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Absorb</b> (const void *seed, void *state) const</td></tr>
+<tr class="memitem:a7bae91f8d258c81880ed239be6cdbe6d" id="r_a7bae91f8d258c81880ed239be6cdbe6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bae91f8d258c81880ed239be6cdbe6d">Absorb</a> (const void *seed, void *state) const</td></tr>
 <tr class="separator:a7bae91f8d258c81880ed239be6cdbe6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a286a6faad5afba048fc7debc60277606" id="r_a286a6faad5afba048fc7debc60277606"><td class="memItemLeft" align="right" valign="top"><a id="a286a6faad5afba048fc7debc60277606" name="a286a6faad5afba048fc7debc60277606"></a>
-static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kStateBytes</b> = RandenTraits::kStateBytes</td></tr>
+<tr class="memitem:a286a6faad5afba048fc7debc60277606" id="r_a286a6faad5afba048fc7debc60277606"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a286a6faad5afba048fc7debc60277606">kStateBytes</a> = RandenTraits::kStateBytes</td></tr>
 <tr class="separator:a286a6faad5afba048fc7debc60277606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ab31e8d741151cb7bdba5100ca661c" id="r_a21ab31e8d741151cb7bdba5100ca661c"><td class="memItemLeft" align="right" valign="top"><a id="a21ab31e8d741151cb7bdba5100ca661c" name="a21ab31e8d741151cb7bdba5100ca661c"></a>
-static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kCapacityBytes</b> = RandenTraits::kCapacityBytes</td></tr>
+<tr class="memitem:a21ab31e8d741151cb7bdba5100ca661c" id="r_a21ab31e8d741151cb7bdba5100ca661c"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21ab31e8d741151cb7bdba5100ca661c">kCapacityBytes</a> = RandenTraits::kCapacityBytes</td></tr>
 <tr class="separator:a21ab31e8d741151cb7bdba5100ca661c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af376b7c48183452986351a12c49ae405" id="r_af376b7c48183452986351a12c49ae405"><td class="memItemLeft" align="right" valign="top"><a id="af376b7c48183452986351a12c49ae405" name="af376b7c48183452986351a12c49ae405"></a>
-static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kSeedBytes</b> = RandenTraits::kSeedBytes</td></tr>
+<tr class="memitem:af376b7c48183452986351a12c49ae405" id="r_af376b7c48183452986351a12c49ae405"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af376b7c48183452986351a12c49ae405">kSeedBytes</a> = RandenTraits::kSeedBytes</td></tr>
 <tr class="separator:af376b7c48183452986351a12c49ae405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d1/d9c/randen_8h_source.html#l00034">34</a> of file <a class="el" href="../../d1/d9c/randen_8h_source.html">randen.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3d282f3be93e8b53b2f20f30ceaea91a" name="a3d282f3be93e8b53b2f20f30ceaea91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d282f3be93e8b53b2f20f30ceaea91a">&#9670;&#160;</a></span>Randen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::random_internal::Randen::Randen </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/db9/randen_8cc_source.html#l00081">81</a> of file <a class="el" href="../../d6/db9/randen_8cc_source.html">randen.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>               {</div>
+<div class="line"><span class="lineno">   82</span>  <span class="keyword">auto</span> tmp = GetRandenState();</div>
+<div class="line"><span class="lineno">   83</span>  keys_ = tmp.keys;</div>
+<div class="line"><span class="lineno">   84</span><span class="preprocessor">#if ABSL_RANDOM_INTERNAL_AES_DISPATCH</span></div>
+<div class="line"><span class="lineno">   85</span>  has_crypto_ = tmp.has_crypto;</div>
+<div class="line"><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   87</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7bae91f8d258c81880ed239be6cdbe6d" name="a7bae91f8d258c81880ed239be6cdbe6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bae91f8d258c81880ed239be6cdbe6d">&#9670;&#160;</a></span>Absorb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::random_internal::Randen::Absorb </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>seed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d9c/randen_8h_source.html#l00068">68</a> of file <a class="el" href="../../d1/d9c/randen_8h_source.html">randen.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                          {</div>
+<div class="line"><span class="lineno">   69</span><span class="preprocessor">#if ABSL_RANDOM_INTERNAL_AES_DISPATCH</span></div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment">// HW AES Dispatch.</span></div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">if</span> (has_crypto_) {</div>
+<div class="line"><span class="lineno">   72</span>      RandenHwAes::Absorb(seed, state);</div>
+<div class="line"><span class="lineno">   73</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   74</span>      RandenSlow::Absorb(seed, state);</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="line"><span class="lineno">   76</span><span class="preprocessor">#elif ABSL_HAVE_ACCELERATED_AES</span></div>
+<div class="line"><span class="lineno">   77</span>    <span class="comment">// HW AES is enabled.</span></div>
+<div class="line"><span class="lineno">   78</span>    RandenHwAes::Absorb(seed, state);</div>
+<div class="line"><span class="lineno">   79</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   80</span>    <span class="comment">// HW AES is disabled.</span></div>
+<div class="line"><span class="lineno">   81</span>    RandenSlow::Absorb(seed, state);</div>
+<div class="line"><span class="lineno">   82</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   83</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a318bcd69a42e5b53a343976966f52ca2" name="a318bcd69a42e5b53a343976966f52ca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a318bcd69a42e5b53a343976966f52ca2">&#9670;&#160;</a></span>Generate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::random_internal::Randen::Generate </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d9c/randen_8h_source.html#l00047">47</a> of file <a class="el" href="../../d1/d9c/randen_8h_source.html">randen.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                                          {</div>
+<div class="line"><span class="lineno">   48</span><span class="preprocessor">#if ABSL_RANDOM_INTERNAL_AES_DISPATCH</span></div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment">// HW AES Dispatch.</span></div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> (has_crypto_) {</div>
+<div class="line"><span class="lineno">   51</span>      RandenHwAes::Generate(keys_, state);</div>
+<div class="line"><span class="lineno">   52</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   53</span>      RandenSlow::Generate(keys_, state);</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="line"><span class="lineno">   55</span><span class="preprocessor">#elif ABSL_HAVE_ACCELERATED_AES</span></div>
+<div class="line"><span class="lineno">   56</span>    <span class="comment">// HW AES is enabled.</span></div>
+<div class="line"><span class="lineno">   57</span>    RandenHwAes::Generate(keys_, state);</div>
+<div class="line"><span class="lineno">   58</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   59</span>    <span class="comment">// HW AES is disabled.</span></div>
+<div class="line"><span class="lineno">   60</span>    RandenSlow::Generate(keys_, state);</div>
+<div class="line"><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   62</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a21ab31e8d741151cb7bdba5100ca661c" name="a21ab31e8d741151cb7bdba5100ca661c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21ab31e8d741151cb7bdba5100ca661c">&#9670;&#160;</a></span>kCapacityBytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t absl::random_internal::Randen::kCapacityBytes = RandenTraits::kCapacityBytes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d9c/randen_8h_source.html#l00037">37</a> of file <a class="el" href="../../d1/d9c/randen_8h_source.html">randen.h</a>.</p>
+
+</div>
+</div>
+<a id="af376b7c48183452986351a12c49ae405" name="af376b7c48183452986351a12c49ae405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af376b7c48183452986351a12c49ae405">&#9670;&#160;</a></span>kSeedBytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t absl::random_internal::Randen::kSeedBytes = RandenTraits::kSeedBytes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d9c/randen_8h_source.html#l00038">38</a> of file <a class="el" href="../../d1/d9c/randen_8h_source.html">randen.h</a>.</p>
+
+</div>
+</div>
+<a id="a286a6faad5afba048fc7debc60277606" name="a286a6faad5afba048fc7debc60277606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286a6faad5afba048fc7debc60277606">&#9670;&#160;</a></span>kStateBytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t absl::random_internal::Randen::kStateBytes = RandenTraits::kStateBytes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d9c/randen_8h_source.html#l00036">36</a> of file <a class="el" href="../../d1/d9c/randen_8h_source.html">randen.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/random/internal/<a class="el" href="../../d1/d9c/randen_8h_source.html">randen.h</a></li>
-<li>open_spiel/abseil-cpp/absl/random/internal/<b>randen.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/random/internal/<a class="el" href="../../d6/db9/randen_8cc_source.html">randen.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

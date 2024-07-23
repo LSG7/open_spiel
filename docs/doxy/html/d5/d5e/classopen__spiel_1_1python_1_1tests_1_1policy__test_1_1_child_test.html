@@ -124,7 +124,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e4a251a8e4d62e9056152ad2efe2c90" id="r_a6e4a251a8e4d62e9056152ad2efe2c90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e4a251a8e4d62e9056152ad2efe2c90">test_child_function_failure_behavior_for_sim_game</a> (self)</td></tr>
 <tr class="separator:a6e4a251a8e4d62e9056152ad2efe2c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00656">656</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab14f9f72c43489ef6001cc8106fd2e6e" name="ab14f9f72c43489ef6001cc8106fd2e6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab14f9f72c43489ef6001cc8106fd2e6e">&#9670;&#160;</a></span>test_child_function_expected_behavior_for_seq_game()</h2>
 
@@ -140,6 +143,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test expected behavior of child on sequential games.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00658">658</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  658</span>  <span class="keyword">def </span>test_child_function_expected_behavior_for_seq_game(self):</div>
+<div class="line"><span class="lineno">  659</span>    <span class="stringliteral">&quot;&quot;&quot;Test expected behavior of child on sequential games.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  660</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">  661</span>    initial_state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">  662</span>    action = 3</div>
+<div class="line"><span class="lineno">  663</span>    new_state = policy.child(initial_state, action)</div>
+<div class="line"><span class="lineno">  664</span>    self.assertNotEqual(new_state.history(), initial_state.history())</div>
+<div class="line"><span class="lineno">  665</span>    expected_new_state = initial_state.child(action)</div>
+<div class="line"><span class="lineno">  666</span>    self.assertNotEqual(new_state, expected_new_state)</div>
+<div class="line"><span class="lineno">  667</span>    self.assertEqual(new_state.history(), expected_new_state.history())</div>
+<div class="line"><span class="lineno">  668</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3e2960bf9bc2d4c696299846106240be" name="a3e2960bf9bc2d4c696299846106240be"></a>
@@ -157,6 +173,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test expected behavior of child on simultaneous games.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00669">669</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  669</span>  <span class="keyword">def </span>test_child_function_expected_behavior_for_sim_game(self):</div>
+<div class="line"><span class="lineno">  670</span>    <span class="stringliteral">&quot;&quot;&quot;Test expected behavior of child on simultaneous games.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  671</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_iterated_prisoners_dilemma&quot;</span>)</div>
+<div class="line"><span class="lineno">  672</span>    parameter_state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">  673</span>    actions = [1, 1]</div>
+<div class="line"><span class="lineno">  674</span>    new_state = policy.child(parameter_state, actions)</div>
+<div class="line"><span class="lineno">  675</span>    self.assertEqual(str(new_state), (<span class="stringliteral">&quot;p0:D p1:D&quot;</span>))</div>
+<div class="line"><span class="lineno">  676</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6e4a251a8e4d62e9056152ad2efe2c90" name="a6e4a251a8e4d62e9056152ad2efe2c90"></a>
@@ -174,10 +200,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test failure behavior of child on simultaneous games.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d5c/policy__test_8py_source.html#l00677">677</a> of file <a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  677</span>  <span class="keyword">def </span>test_child_function_failure_behavior_for_sim_game(self):</div>
+<div class="line"><span class="lineno">  678</span>    <span class="stringliteral">&quot;&quot;&quot;Test failure behavior of child on simultaneous games.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  679</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_iterated_prisoners_dilemma&quot;</span>)</div>
+<div class="line"><span class="lineno">  680</span>    parameter_state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">  681</span>    <span class="keyword">with</span> self.assertRaises(AssertionError):</div>
+<div class="line"><span class="lineno">  682</span>      policy.child(parameter_state, 0)</div>
+<div class="line"><span class="lineno">  683</span> </div>
+<div class="line"><span class="lineno">  684</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/tests/<b>policy_test.py</b></li>
+<li>open_spiel/python/tests/<a class="el" href="../../de/d5c/policy__test_8py_source.html">policy_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

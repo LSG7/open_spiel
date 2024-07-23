@@ -117,18 +117,113 @@ Collaboration diagram for open_spiel.python.algorithms.outcome_sampling_mccfr_te
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a677ee334e0cfad92491831d14ea1b477" id="r_a677ee334e0cfad92491831d14ea1b477"><td class="memItemLeft" align="right" valign="top"><a id="a677ee334e0cfad92491831d14ea1b477" name="a677ee334e0cfad92491831d14ea1b477"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_outcome_sampling_leduc_2p</b> (self)</td></tr>
+<tr class="memitem:a677ee334e0cfad92491831d14ea1b477" id="r_a677ee334e0cfad92491831d14ea1b477"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a677ee334e0cfad92491831d14ea1b477">test_outcome_sampling_leduc_2p</a> (self)</td></tr>
 <tr class="separator:a677ee334e0cfad92491831d14ea1b477"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaca166f4238ccc60f1de96e68434fdf2" id="r_aaca166f4238ccc60f1de96e68434fdf2"><td class="memItemLeft" align="right" valign="top"><a id="aaca166f4238ccc60f1de96e68434fdf2" name="aaca166f4238ccc60f1de96e68434fdf2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_outcome_sampling_kuhn_2p</b> (self)</td></tr>
+<tr class="memitem:aaca166f4238ccc60f1de96e68434fdf2" id="r_aaca166f4238ccc60f1de96e68434fdf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaca166f4238ccc60f1de96e68434fdf2">test_outcome_sampling_kuhn_2p</a> (self)</td></tr>
 <tr class="separator:aaca166f4238ccc60f1de96e68434fdf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a580bb47272c9050d676c2dc06d217939" id="r_a580bb47272c9050d676c2dc06d217939"><td class="memItemLeft" align="right" valign="top"><a id="a580bb47272c9050d676c2dc06d217939" name="a580bb47272c9050d676c2dc06d217939"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_outcome_sampling_kuhn_3p</b> (self)</td></tr>
+<tr class="memitem:a580bb47272c9050d676c2dc06d217939" id="r_a580bb47272c9050d676c2dc06d217939"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a580bb47272c9050d676c2dc06d217939">test_outcome_sampling_kuhn_3p</a> (self)</td></tr>
 <tr class="separator:a580bb47272c9050d676c2dc06d217939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html">outcome_sampling_mccfr_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aaca166f4238ccc60f1de96e68434fdf2" name="aaca166f4238ccc60f1de96e68434fdf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca166f4238ccc60f1de96e68434fdf2">&#9670;&#160;</a></span>test_outcome_sampling_kuhn_2p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.outcome_sampling_mccfr_test.OutcomeSamplingMCCFRTest.test_outcome_sampling_kuhn_2p </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html#l00045">45</a> of file <a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html">outcome_sampling_mccfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>  <span class="keyword">def </span>test_outcome_sampling_kuhn_2p(self):</div>
+<div class="line"><span class="lineno">   46</span>    np.random.seed(SEED)</div>
+<div class="line"><span class="lineno">   47</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   48</span>    os_solver = outcome_sampling_mccfr.OutcomeSamplingSolver(game)</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10000):</div>
+<div class="line"><span class="lineno">   50</span>      os_solver.iteration()</div>
+<div class="line"><span class="lineno">   51</span>    conv = exploitability.nash_conv(game, os_solver.average_policy())</div>
+<div class="line"><span class="lineno">   52</span>    print(<span class="stringliteral">&quot;Kuhn2P, conv = {}&quot;</span>.format(conv))</div>
+<div class="line"><span class="lineno">   53</span>    self.assertLess(conv, 0.17)</div>
+<div class="line"><span class="lineno">   54</span>    <span class="comment"># ensure that to_tabular() works on the returned policy</span></div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment"># and the tabular policy is equivalent</span></div>
+<div class="line"><span class="lineno">   56</span>    tabular_policy = os_solver.average_policy().to_tabular()</div>
+<div class="line"><span class="lineno">   57</span>    conv2 = exploitability.nash_conv(game, tabular_policy)</div>
+<div class="line"><span class="lineno">   58</span>    self.assertEqual(conv, conv2)</div>
+<div class="line"><span class="lineno">   59</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a580bb47272c9050d676c2dc06d217939" name="a580bb47272c9050d676c2dc06d217939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580bb47272c9050d676c2dc06d217939">&#9670;&#160;</a></span>test_outcome_sampling_kuhn_3p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.outcome_sampling_mccfr_test.OutcomeSamplingMCCFRTest.test_outcome_sampling_kuhn_3p </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html#l00060">60</a> of file <a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html">outcome_sampling_mccfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>  <span class="keyword">def </span>test_outcome_sampling_kuhn_3p(self):</div>
+<div class="line"><span class="lineno">   61</span>    np.random.seed(SEED)</div>
+<div class="line"><span class="lineno">   62</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>, {<span class="stringliteral">&quot;players&quot;</span>: 3})</div>
+<div class="line"><span class="lineno">   63</span>    os_solver = outcome_sampling_mccfr.OutcomeSamplingSolver(game)</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10000):</div>
+<div class="line"><span class="lineno">   65</span>      os_solver.iteration()</div>
+<div class="line"><span class="lineno">   66</span>    conv = exploitability.nash_conv(game, os_solver.average_policy())</div>
+<div class="line"><span class="lineno">   67</span>    print(<span class="stringliteral">&quot;Kuhn3P, conv = {}&quot;</span>.format(conv))</div>
+<div class="line"><span class="lineno">   68</span>    self.assertLess(conv, 0.22)</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a677ee334e0cfad92491831d14ea1b477" name="a677ee334e0cfad92491831d14ea1b477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677ee334e0cfad92491831d14ea1b477">&#9670;&#160;</a></span>test_outcome_sampling_leduc_2p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.outcome_sampling_mccfr_test.OutcomeSamplingMCCFRTest.test_outcome_sampling_leduc_2p </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html">outcome_sampling_mccfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>  <span class="keyword">def </span>test_outcome_sampling_leduc_2p(self):</div>
+<div class="line"><span class="lineno">   35</span>    np.random.seed(SEED)</div>
+<div class="line"><span class="lineno">   36</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;leduc_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   37</span>    os_solver = outcome_sampling_mccfr.OutcomeSamplingSolver(game)</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10000):</div>
+<div class="line"><span class="lineno">   39</span>      os_solver.iteration()</div>
+<div class="line"><span class="lineno">   40</span>    conv = exploitability.nash_conv(game, os_solver.average_policy())</div>
+<div class="line"><span class="lineno">   41</span>    print(<span class="stringliteral">&quot;Leduc2P, conv = {}&quot;</span>.format(conv))</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    self.assertLess(conv, 3.07)</div>
+<div class="line"><span class="lineno">   44</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>outcome_sampling_mccfr_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d9/d05/outcome__sampling__mccfr__test_8py_source.html">outcome_sampling_mccfr_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

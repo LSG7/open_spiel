@@ -108,17 +108,96 @@ Collaboration diagram for absl::types_internal::ExpectConsistency&lt; T, Prof &g
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a27c1403cb38109d0c24bca4076dfa67a" id="r_a27c1403cb38109d0c24bca4076dfa67a"><td class="memTemplParams" colspan="2"><a id="a27c1403cb38109d0c24bca4076dfa67a" name="a27c1403cb38109d0c24bca4076dfa67a"></a>
-template&lt;class Fun &gt; </td></tr>
-<tr class="memitem:a27c1403cb38109d0c24bca4076dfa67a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const Fun &amp;generator) const</td></tr>
+<tr class="memitem:a27c1403cb38109d0c24bca4076dfa67a" id="r_a27c1403cb38109d0c24bca4076dfa67a"><td class="memTemplParams" colspan="2">template&lt;class Fun &gt; </td></tr>
+<tr class="memitem:a27c1403cb38109d0c24bca4076dfa67a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a27c1403cb38109d0c24bca4076dfa67a">operator()</a> (const Fun &amp;generator) const</td></tr>
 <tr class="separator:a27c1403cb38109d0c24bca4076dfa67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a401fc40183dacefb503545f156f1c3f9" id="r_a401fc40183dacefb503545f156f1c3f9"><td class="memItemLeft" align="right" valign="top"><a id="a401fc40183dacefb503545f156f1c3f9" name="a401fc40183dacefb503545f156f1c3f9"></a>
-<a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>errors</b></td></tr>
+<tr class="memitem:a401fc40183dacefb503545f156f1c3f9" id="r_a401fc40183dacefb503545f156f1c3f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a401fc40183dacefb503545f156f1c3f9">errors</a></td></tr>
 <tr class="separator:a401fc40183dacefb503545f156f1c3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T, class Prof&gt;<br />
+struct absl::types_internal::ExpectConsistency&lt; T, Prof &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00504">504</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a27c1403cb38109d0c24bca4076dfa67a" name="a27c1403cb38109d0c24bca4076dfa67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c1403cb38109d0c24bca4076dfa67a">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Prof &gt; </div>
+<div class="memtemplate">
+template&lt;class Fun &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d8f/structabsl_1_1types__internal_1_1_expect_consistency.html">absl::types_internal::ExpectConsistency</a>&lt; T, Prof &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const Fun &amp;</td>          <td class="paramname"><span class="paramname"><em>generator</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00506">506</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  506</span>                                              {</div>
+<div class="line"><span class="lineno">  507</span>    If&lt;PropertiesOfT&lt;Prof&gt;::is_move_constructible&gt;::Invoke(</div>
+<div class="line"><span class="lineno">  508</span>        ExpectMoveConstructOneGenerator&lt;T, Prof&gt;{errors}, generator);</div>
+<div class="line"><span class="lineno">  509</span> </div>
+<div class="line"><span class="lineno">  510</span>    If&lt;PropertiesOfT&lt;Prof&gt;::is_copy_constructible&gt;::Invoke(</div>
+<div class="line"><span class="lineno">  511</span>        ExpectCopyConstructOneGenerator&lt;T, Prof&gt;{errors}, generator);</div>
+<div class="line"><span class="lineno">  512</span> </div>
+<div class="line"><span class="lineno">  513</span>    If&lt;PropertiesOfT&lt;Prof&gt;::is_default_constructible &amp;&amp;</div>
+<div class="line"><span class="lineno">  514</span>       PropertiesOfT&lt;Prof&gt;::is_move_assignable&gt;::</div>
+<div class="line"><span class="lineno">  515</span>        Invoke(ExpectDefaultConstructWithMoveAssign&lt;T, Prof&gt;{errors},</div>
+<div class="line"><span class="lineno">  516</span>               generator);</div>
+<div class="line"><span class="lineno">  517</span> </div>
+<div class="line"><span class="lineno">  518</span>    If&lt;PropertiesOfT&lt;Prof&gt;::is_default_constructible &amp;&amp;</div>
+<div class="line"><span class="lineno">  519</span>       PropertiesOfT&lt;Prof&gt;::is_copy_assignable&gt;::</div>
+<div class="line"><span class="lineno">  520</span>        Invoke(ExpectDefaultConstructWithCopyAssign&lt;T, Prof&gt;{errors},</div>
+<div class="line"><span class="lineno">  521</span>               generator);</div>
+<div class="line"><span class="lineno">  522</span> </div>
+<div class="line"><span class="lineno">  523</span>    If&lt;PropertiesOfT&lt;Prof&gt;::is_move_assignable&gt;::Invoke(</div>
+<div class="line"><span class="lineno">  524</span>        ExpectSelfMoveAssign&lt;T, Prof&gt;{errors}, generator);</div>
+<div class="line"><span class="lineno">  525</span> </div>
+<div class="line"><span class="lineno">  526</span>    If&lt;PropertiesOfT&lt;Prof&gt;::is_copy_assignable&gt;::Invoke(</div>
+<div class="line"><span class="lineno">  527</span>        ExpectSelfCopyAssign&lt;T, Prof&gt;{errors}, generator);</div>
+<div class="line"><span class="lineno">  528</span> </div>
+<div class="line"><span class="lineno">  529</span>    If&lt;PropertiesOfT&lt;Prof&gt;::is_swappable&gt;::Invoke(</div>
+<div class="line"><span class="lineno">  530</span>        ExpectSelfSwap&lt;T, Prof&gt;{errors}, generator);</div>
+<div class="line"><span class="lineno">  531</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a401fc40183dacefb503545f156f1c3f9" name="a401fc40183dacefb503545f156f1c3f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401fc40183dacefb503545f156f1c3f9">&#9670;&#160;</a></span>errors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class Prof &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/dfe/classabsl_1_1types__internal_1_1_conformance_errors.html">ConformanceErrors</a>* <a class="el" href="../../da/d8f/structabsl_1_1types__internal_1_1_expect_consistency.html">absl::types_internal::ExpectConsistency</a>&lt; T, Prof &gt;::errors</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/db1/conformance__testing_8h_source.html#l00533">533</a> of file <a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d1/db1/conformance__testing_8h_source.html">conformance_testing.h</a></li>
 </ul>

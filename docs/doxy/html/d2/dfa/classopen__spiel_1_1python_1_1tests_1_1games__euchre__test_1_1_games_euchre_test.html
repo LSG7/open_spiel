@@ -117,12 +117,93 @@ Collaboration diagram for open_spiel.python.tests.games_euchre_test.GamesEuchreT
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a58ae12b9b6a0d6b933f16cb8256c45b9" id="r_a58ae12b9b6a0d6b933f16cb8256c45b9"><td class="memItemLeft" align="right" valign="top"><a id="a58ae12b9b6a0d6b933f16cb8256c45b9" name="a58ae12b9b6a0d6b933f16cb8256c45b9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_bindings</b> (self)</td></tr>
+<tr class="memitem:a58ae12b9b6a0d6b933f16cb8256c45b9" id="r_a58ae12b9b6a0d6b933f16cb8256c45b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58ae12b9b6a0d6b933f16cb8256c45b9">test_bindings</a> (self)</td></tr>
 <tr class="separator:a58ae12b9b6a0d6b933f16cb8256c45b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/db8/games__euchre__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../d6/db8/games__euchre__test_8py_source.html">games_euchre_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a58ae12b9b6a0d6b933f16cb8256c45b9" name="a58ae12b9b6a0d6b933f16cb8256c45b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ae12b9b6a0d6b933f16cb8256c45b9">&#9670;&#160;</a></span>test_bindings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.games_euchre_test.GamesEuchreTest.test_bindings </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/db8/games__euchre__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../d6/db8/games__euchre__test_8py_source.html">games_euchre_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>  <span class="keyword">def </span>test_bindings(self):</div>
+<div class="line"><span class="lineno">   27</span>    self.assertEqual(euchre.JACK_RANK, 2)</div>
+<div class="line"><span class="lineno">   28</span>    self.assertEqual(euchre.NUM_SUITS, 4)</div>
+<div class="line"><span class="lineno">   29</span>    self.assertEqual(euchre.NUM_CARDS_PER_SUIT, 6)</div>
+<div class="line"><span class="lineno">   30</span>    self.assertEqual(euchre.NUM_CARDS, 24)</div>
+<div class="line"><span class="lineno">   31</span>    self.assertEqual(euchre.PASS_ACTION, 24)</div>
+<div class="line"><span class="lineno">   32</span>    self.assertEqual(euchre.CLUBS_TRUMP_ACTION, 25)</div>
+<div class="line"><span class="lineno">   33</span>    self.assertEqual(euchre.DIAMONDS_TRUMP_ACTION, 26)</div>
+<div class="line"><span class="lineno">   34</span>    self.assertEqual(euchre.HEARTS_TRUMP_ACTION, 27)</div>
+<div class="line"><span class="lineno">   35</span>    self.assertEqual(euchre.SPADES_TRUMP_ACTION, 28)</div>
+<div class="line"><span class="lineno">   36</span>    self.assertEqual(euchre.GO_ALONE_ACTION, 29)</div>
+<div class="line"><span class="lineno">   37</span>    self.assertEqual(euchre.PLAY_WITH_PARTNER_ACTION, 30)</div>
+<div class="line"><span class="lineno">   38</span>    self.assertEqual(euchre.MAX_BIDS, 8)</div>
+<div class="line"><span class="lineno">   39</span>    self.assertEqual(euchre.NUM_TRICKS, 5)</div>
+<div class="line"><span class="lineno">   40</span>    self.assertEqual(euchre.FULL_HAND_SIZE, 5)</div>
+<div class="line"><span class="lineno">   41</span>    game = pyspiel.load_game(<span class="stringliteral">&#39;euchre&#39;</span>)</div>
+<div class="line"><span class="lineno">   42</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   43</span>    self.assertEqual(state.num_cards_dealt(), 0)</div>
+<div class="line"><span class="lineno">   44</span>    self.assertEqual(state.num_cards_played(), 0)</div>
+<div class="line"><span class="lineno">   45</span>    self.assertEqual(state.num_passes(), 0)</div>
+<div class="line"><span class="lineno">   46</span>    self.assertEqual(state.upcard(), pyspiel.INVALID_ACTION)</div>
+<div class="line"><span class="lineno">   47</span>    self.assertEqual(state.discard(), pyspiel.INVALID_ACTION)</div>
+<div class="line"><span class="lineno">   48</span>    self.assertEqual(state.trump_suit(), pyspiel.INVALID_ACTION)</div>
+<div class="line"><span class="lineno">   49</span>    self.assertEqual(state.left_bower(), pyspiel.INVALID_ACTION)</div>
+<div class="line"><span class="lineno">   50</span>    self.assertEqual(state.right_bower(), pyspiel.INVALID_ACTION)</div>
+<div class="line"><span class="lineno">   51</span>    self.assertEqual(state.declarer(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   52</span>    self.assertEqual(state.declarer_partner(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   53</span>    self.assertEqual(state.first_defender(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   54</span>    self.assertEqual(state.second_defender(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   55</span>    self.assertIsNone(state.declarer_go_alone())</div>
+<div class="line"><span class="lineno">   56</span>    self.assertEqual(state.lone_defender(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   57</span>    self.assertEqual(state.active_players(), [<span class="keyword">True</span>, <span class="keyword">True</span>, <span class="keyword">True</span>, <span class="keyword">True</span>])</div>
+<div class="line"><span class="lineno">   58</span>    self.assertEqual(state.dealer(), pyspiel.INVALID_ACTION)</div>
+<div class="line"><span class="lineno">   59</span>    self.assertEqual(state.current_phase(), euchre.Phase.DEALER_SELECTION)</div>
+<div class="line"><span class="lineno">   60</span>    self.assertEqual(state.current_trick_index(), 0)</div>
+<div class="line"><span class="lineno">   61</span>    self.assertEqual(state.card_holder(), [<span class="keywordtype">None</span>] * 24)</div>
+<div class="line"><span class="lineno">   62</span>    self.assertEqual(euchre.card_rank(8), euchre.JACK_RANK)</div>
+<div class="line"><span class="lineno">   63</span>    self.assertEqual(euchre.card_rank(8, euchre.Suit.CLUBS), 100)</div>
+<div class="line"><span class="lineno">   64</span>    self.assertEqual(euchre.card_suit(8), euchre.Suit.CLUBS)</div>
+<div class="line"><span class="lineno">   65</span>    self.assertEqual(euchre.card_suit(8, euchre.Suit.SPADES),</div>
+<div class="line"><span class="lineno">   66</span>                     euchre.Suit.SPADES)</div>
+<div class="line"><span class="lineno">   67</span>    self.assertEqual(euchre.card_string(8), <span class="stringliteral">&#39;CJ&#39;</span>)</div>
+<div class="line"><span class="lineno">   68</span>    trick = state.tricks()[state.current_trick_index()]</div>
+<div class="line"><span class="lineno">   69</span>    self.assertEqual(trick.winning_card(), pyspiel.INVALID_ACTION)</div>
+<div class="line"><span class="lineno">   70</span>    self.assertEqual(trick.led_suit(), euchre.Suit.INVALID_SUIT)</div>
+<div class="line"><span class="lineno">   71</span>    self.assertEqual(trick.trump_suit(), euchre.Suit.INVALID_SUIT)</div>
+<div class="line"><span class="lineno">   72</span>    self.assertFalse(trick.trump_played())</div>
+<div class="line"><span class="lineno">   73</span>    self.assertEqual(trick.leader(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   74</span>    self.assertEqual(trick.winner(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   75</span>    self.assertEqual(trick.cards(), [pyspiel.INVALID_ACTION])</div>
+<div class="line"><span class="lineno">   76</span>    trick = state.current_trick()</div>
+<div class="line"><span class="lineno">   77</span>    self.assertEqual(trick.led_suit(), euchre.Suit.INVALID_SUIT)</div>
+<div class="line"><span class="lineno">   78</span>    self.assertEqual(trick.trump_suit(), euchre.Suit.INVALID_SUIT)</div>
+<div class="line"><span class="lineno">   79</span>    self.assertFalse(trick.trump_played())</div>
+<div class="line"><span class="lineno">   80</span>    self.assertEqual(trick.leader(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   81</span>    self.assertEqual(trick.winner(), pyspiel.PlayerId.INVALID)</div>
+<div class="line"><span class="lineno">   82</span>    self.assertEqual(trick.cards(), [pyspiel.INVALID_ACTION])</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/tests/<b>games_euchre_test.py</b></li>
+<li>open_spiel/python/tests/<a class="el" href="../../d6/db8/games__euchre__test_8py_source.html">games_euchre_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

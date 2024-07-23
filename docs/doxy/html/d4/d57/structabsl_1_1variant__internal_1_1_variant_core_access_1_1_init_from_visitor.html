@@ -106,23 +106,130 @@ Collaboration diagram for absl::variant_internal::VariantCoreAccess::InitFromVis
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab76f14985753ac981ef2ad27cf1088e6" id="r_ab76f14985753ac981ef2ad27cf1088e6"><td class="memTemplParams" colspan="2"><a id="ab76f14985753ac981ef2ad27cf1088e6" name="ab76f14985753ac981ef2ad27cf1088e6"></a>
-template&lt;std::size_t NewIndex&gt; </td></tr>
-<tr class="memitem:ab76f14985753ac981ef2ad27cf1088e6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (SizeT&lt; NewIndex &gt;) const</td></tr>
+<tr class="memitem:ab76f14985753ac981ef2ad27cf1088e6" id="r_ab76f14985753ac981ef2ad27cf1088e6"><td class="memTemplParams" colspan="2">template&lt;std::size_t NewIndex&gt; </td></tr>
+<tr class="memitem:ab76f14985753ac981ef2ad27cf1088e6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab76f14985753ac981ef2ad27cf1088e6">operator()</a> (SizeT&lt; NewIndex &gt;) const</td></tr>
 <tr class="separator:ab76f14985753ac981ef2ad27cf1088e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a672586b9cfa6115f5604382c7fa34ea9" id="r_a672586b9cfa6115f5604382c7fa34ea9"><td class="memItemLeft" align="right" valign="top"><a id="a672586b9cfa6115f5604382c7fa34ea9" name="a672586b9cfa6115f5604382c7fa34ea9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (SizeT&lt; absl::variant_npos &gt;) const</td></tr>
+<tr class="memitem:a672586b9cfa6115f5604382c7fa34ea9" id="r_a672586b9cfa6115f5604382c7fa34ea9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a672586b9cfa6115f5604382c7fa34ea9">operator()</a> (SizeT&lt; absl::variant_npos &gt;) const</td></tr>
 <tr class="separator:a672586b9cfa6115f5604382c7fa34ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab50f6b34417731a91547d88d082cf78d" id="r_ab50f6b34417731a91547d88d082cf78d"><td class="memItemLeft" align="right" valign="top"><a id="ab50f6b34417731a91547d88d082cf78d" name="ab50f6b34417731a91547d88d082cf78d"></a>
-LeftVariant *&#160;</td><td class="memItemRight" valign="bottom"><b>left</b></td></tr>
+<tr class="memitem:ab50f6b34417731a91547d88d082cf78d" id="r_ab50f6b34417731a91547d88d082cf78d"><td class="memItemLeft" align="right" valign="top">LeftVariant *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50f6b34417731a91547d88d082cf78d">left</a></td></tr>
 <tr class="separator:ab50f6b34417731a91547d88d082cf78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad31e44a0cf311eb565b856a11d1c3ea3" id="r_ad31e44a0cf311eb565b856a11d1c3ea3"><td class="memItemLeft" align="right" valign="top"><a id="ad31e44a0cf311eb565b856a11d1c3ea3" name="ad31e44a0cf311eb565b856a11d1c3ea3"></a>
-QualifiedRightVariant &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><b>right</b></td></tr>
+<tr class="memitem:ad31e44a0cf311eb565b856a11d1c3ea3" id="r_ad31e44a0cf311eb565b856a11d1c3ea3"><td class="memItemLeft" align="right" valign="top">QualifiedRightVariant &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad31e44a0cf311eb565b856a11d1c3ea3">right</a></td></tr>
 <tr class="separator:ad31e44a0cf311eb565b856a11d1c3ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class LeftVariant, class QualifiedRightVariant&gt;<br />
+struct absl::variant_internal::VariantCoreAccess::InitFromVisitor&lt; LeftVariant, QualifiedRightVariant &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00732">732</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a672586b9cfa6115f5604382c7fa34ea9" name="a672586b9cfa6115f5604382c7fa34ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672586b9cfa6115f5604382c7fa34ea9">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LeftVariant , class QualifiedRightVariant &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/d57/structabsl_1_1variant__internal_1_1_variant_core_access_1_1_init_from_visitor.html">absl::variant_internal::VariantCoreAccess::InitFromVisitor</a>&lt; LeftVariant, QualifiedRightVariant &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">SizeT&lt; absl::variant_npos &gt;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00741">741</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  741</span>                                                     {</div>
+<div class="line"><span class="lineno">  742</span>      <span class="comment">// This space intentionally left blank.</span></div>
+<div class="line"><span class="lineno">  743</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab76f14985753ac981ef2ad27cf1088e6" name="ab76f14985753ac981ef2ad27cf1088e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab76f14985753ac981ef2ad27cf1088e6">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LeftVariant , class QualifiedRightVariant &gt; </div>
+<div class="memtemplate">
+template&lt;std::size_t NewIndex&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/d57/structabsl_1_1variant__internal_1_1_variant_core_access_1_1_init_from_visitor.html">absl::variant_internal::VariantCoreAccess::InitFromVisitor</a>&lt; LeftVariant, QualifiedRightVariant &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">SizeT&lt; NewIndex &gt;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00734">734</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  734</span>                                             {</div>
+<div class="line"><span class="lineno">  735</span>      <span class="keyword">using </span>Alternative =</div>
+<div class="line"><span class="lineno">  736</span>          <span class="keyword">typename</span> variant_alternative&lt;NewIndex, LeftVariant&gt;::type;</div>
+<div class="line"><span class="lineno">  737</span>      ::new (<span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(&amp;left-&gt;state_)) Alternative(</div>
+<div class="line"><span class="lineno">  738</span>          Access&lt;NewIndex&gt;(std::forward&lt;QualifiedRightVariant&gt;(right)));</div>
+<div class="line"><span class="lineno">  739</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab50f6b34417731a91547d88d082cf78d" name="ab50f6b34417731a91547d88d082cf78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50f6b34417731a91547d88d082cf78d">&#9670;&#160;</a></span>left</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LeftVariant , class QualifiedRightVariant &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">LeftVariant* <a class="el" href="../../d4/d57/structabsl_1_1variant__internal_1_1_variant_core_access_1_1_init_from_visitor.html">absl::variant_internal::VariantCoreAccess::InitFromVisitor</a>&lt; LeftVariant, QualifiedRightVariant &gt;::left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00744">744</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+
+</div>
+</div>
+<a id="ad31e44a0cf311eb565b856a11d1c3ea3" name="ad31e44a0cf311eb565b856a11d1c3ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31e44a0cf311eb565b856a11d1c3ea3">&#9670;&#160;</a></span>right</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class LeftVariant , class QualifiedRightVariant &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">QualifiedRightVariant&amp;&amp; <a class="el" href="../../d4/d57/structabsl_1_1variant__internal_1_1_variant_core_access_1_1_init_from_visitor.html">absl::variant_internal::VariantCoreAccess::InitFromVisitor</a>&lt; LeftVariant, QualifiedRightVariant &gt;::right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00745">745</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a></li>
 </ul>

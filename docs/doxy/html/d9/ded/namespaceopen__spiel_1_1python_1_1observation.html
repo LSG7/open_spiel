@@ -110,8 +110,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7b6e02b3c1b454cd40e079500a33b4d1" id="r_a7b6e02b3c1b454cd40e079500a33b4d1"><td class="memItemLeft" align="right" valign="top"><a id="a7b6e02b3c1b454cd40e079500a33b4d1" name="a7b6e02b3c1b454cd40e079500a33b4d1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>INFO_STATE_OBS_TYPE</b> = pyspiel.IIGObservationType(perfect_recall=True)</td></tr>
+<tr class="memitem:a7b6e02b3c1b454cd40e079500a33b4d1" id="r_a7b6e02b3c1b454cd40e079500a33b4d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b6e02b3c1b454cd40e079500a33b4d1">INFO_STATE_OBS_TYPE</a> = pyspiel.IIGObservationType(perfect_recall=True)</td></tr>
 <tr class="separator:a7b6e02b3c1b454cd40e079500a33b4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -177,6 +176,42 @@ For usage examples, see `observation_test.py`.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns an _Observation instance if the imperfect_information_observation_type is supported, otherwise None.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d27/observation_8py_source.html#l00094">94</a> of file <a class="el" href="../../d5/d27/observation_8py_source.html">observation.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>):</div>
+<div class="line"><span class="lineno">   99</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an _Observation instance if the imperfect_information_observation_type is supported, otherwise None.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  100</span>  params = params <span class="keywordflow">or</span> {}</div>
+<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">if</span> hasattr(game, <span class="stringliteral">&#39;make_py_observer&#39;</span>):</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">return</span> game.make_py_observer(imperfect_information_observation_type, params)</div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> imperfect_information_observation_type <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">  105</span>      observer = game.make_observer(</div>
+<div class="line"><span class="lineno">  106</span>          imperfect_information_observation_type, params</div>
+<div class="line"><span class="lineno">  107</span>      )</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  109</span>      observer = game.make_observer(params)</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> observer <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">  111</span>      <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">return</span> _Observation(game, observer)</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7b6e02b3c1b454cd40e079500a33b4d1" name="a7b6e02b3c1b454cd40e079500a33b4d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6e02b3c1b454cd40e079500a33b4d1">&#9670;&#160;</a></span>INFO_STATE_OBS_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.observation.INFO_STATE_OBS_TYPE = pyspiel.IIGObservationType(perfect_recall=True)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d27/observation_8py_source.html#l00060">60</a> of file <a class="el" href="../../d5/d27/observation_8py_source.html">observation.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

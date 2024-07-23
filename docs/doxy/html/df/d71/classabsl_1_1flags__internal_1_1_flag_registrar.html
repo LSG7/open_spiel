@@ -105,16 +105,119 @@ Collaboration diagram for absl::flags_internal::FlagRegistrar&lt; T, do_register
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2269ea15b6972543130de6e723986252" id="r_a2269ea15b6972543130de6e723986252"><td class="memItemLeft" align="right" valign="top"><a id="a2269ea15b6972543130de6e723986252" name="a2269ea15b6972543130de6e723986252"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FlagRegistrar</b> (<a class="el" href="../../de/d8b/classabsl_1_1flags__internal_1_1_flag.html">Flag</a>&lt; T &gt; &amp;flag, const char *filename)</td></tr>
+<tr class="memitem:a2269ea15b6972543130de6e723986252" id="r_a2269ea15b6972543130de6e723986252"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2269ea15b6972543130de6e723986252">FlagRegistrar</a> (<a class="el" href="../../de/d8b/classabsl_1_1flags__internal_1_1_flag.html">Flag</a>&lt; T &gt; &amp;flag, const char *filename)</td></tr>
 <tr class="separator:a2269ea15b6972543130de6e723986252"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43941cc372c2a3b249908b1820ba226f" id="r_a43941cc372c2a3b249908b1820ba226f"><td class="memItemLeft" align="right" valign="top"><a id="a43941cc372c2a3b249908b1820ba226f" name="a43941cc372c2a3b249908b1820ba226f"></a>
-<a class="el" href="../../df/d71/classabsl_1_1flags__internal_1_1_flag_registrar.html">FlagRegistrar</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OnUpdate</b> (FlagCallbackFunc cb) &amp;&amp;</td></tr>
+<tr class="memitem:a43941cc372c2a3b249908b1820ba226f" id="r_a43941cc372c2a3b249908b1820ba226f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d71/classabsl_1_1flags__internal_1_1_flag_registrar.html">FlagRegistrar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43941cc372c2a3b249908b1820ba226f">OnUpdate</a> (FlagCallbackFunc cb) &amp;&amp;</td></tr>
 <tr class="separator:a43941cc372c2a3b249908b1820ba226f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af51a945196145125b985b3c63f9fab37" id="r_af51a945196145125b985b3c63f9fab37"><td class="memItemLeft" align="right" valign="top"><a id="af51a945196145125b985b3c63f9fab37" name="af51a945196145125b985b3c63f9fab37"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator FlagRegistrarEmpty</b> () const</td></tr>
+<tr class="memitem:af51a945196145125b985b3c63f9fab37" id="r_af51a945196145125b985b3c63f9fab37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af51a945196145125b985b3c63f9fab37">operator FlagRegistrarEmpty</a> () const</td></tr>
 <tr class="separator:af51a945196145125b985b3c63f9fab37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, bool do_register&gt;<br />
+class absl::flags_internal::FlagRegistrar&lt; T, do_register &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00775">775</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2269ea15b6972543130de6e723986252" name="a2269ea15b6972543130de6e723986252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2269ea15b6972543130de6e723986252">&#9670;&#160;</a></span>FlagRegistrar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , bool do_register&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d71/classabsl_1_1flags__internal_1_1_flag_registrar.html">absl::flags_internal::FlagRegistrar</a>&lt; T, do_register &gt;::FlagRegistrar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d8b/classabsl_1_1flags__internal_1_1_flag.html">Flag</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>flag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00777">777</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  777</span>                                                              : flag_(flag) {</div>
+<div class="line"><span class="lineno">  778</span>    <span class="keywordflow">if</span> (do_register)</div>
+<div class="line"><span class="lineno">  779</span>      flags_internal::RegisterCommandLineFlag(flag_.impl_, filename);</div>
+<div class="line"><span class="lineno">  780</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a43941cc372c2a3b249908b1820ba226f" name="a43941cc372c2a3b249908b1820ba226f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43941cc372c2a3b249908b1820ba226f">&#9670;&#160;</a></span>OnUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , bool do_register&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d71/classabsl_1_1flags__internal_1_1_flag_registrar.html">FlagRegistrar</a> <a class="el" href="../../df/d71/classabsl_1_1flags__internal_1_1_flag_registrar.html">absl::flags_internal::FlagRegistrar</a>&lt; T, do_register &gt;::OnUpdate </td>
+          <td>(</td>
+          <td class="paramtype">FlagCallbackFunc</td>          <td class="paramname"><span class="paramname"><em>cb</em></span></td><td>)</td>
+          <td> &amp;&amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00782">782</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  782</span>                                                 {</div>
+<div class="line"><span class="lineno">  783</span>    flag_.impl_.SetCallback(cb);</div>
+<div class="line"><span class="lineno">  784</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  785</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af51a945196145125b985b3c63f9fab37" name="af51a945196145125b985b3c63f9fab37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af51a945196145125b985b3c63f9fab37">&#9670;&#160;</a></span>operator FlagRegistrarEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , bool do_register&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d71/classabsl_1_1flags__internal_1_1_flag_registrar.html">absl::flags_internal::FlagRegistrar</a>&lt; T, do_register &gt;::operator <a class="el" href="../../d8/d6f/structabsl_1_1flags__internal_1_1_flag_registrar_empty.html">FlagRegistrarEmpty</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d17/internal_2flag_8h_source.html#l00790">790</a> of file <a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  790</span>{ <span class="keywordflow">return</span> {}; }  <span class="comment">// NOLINT</span></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/flags/internal/<a class="el" href="../../dc/d17/internal_2flag_8h_source.html">flag.h</a></li>
 </ul>

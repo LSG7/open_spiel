@@ -165,7 +165,34 @@ CFRBRSolver.
 
 Args:
   info_state_nodes: A dictionary {`info_state_str` -&gt; `_InfoStateNode`}.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00047">47</a> of file <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html">cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span><span class="keyword">def </span>_apply_regret_matching_plus_reset(info_state_nodes):</div>
+<div class="line"><span class="lineno">   48</span>  <span class="stringliteral">&quot;&quot;&quot;Resets negative cumulative regrets to 0.</span></div>
+<div class="line"><span class="lineno">   49</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   50</span><span class="stringliteral">  Regret Matching+ corresponds to the following cumulative regrets update:</span></div>
+<div class="line"><span class="lineno">   51</span><span class="stringliteral">  cumulative_regrets = max(cumulative_regrets + regrets, 0)</span></div>
+<div class="line"><span class="lineno">   52</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   53</span><span class="stringliteral">  This must be done at the level of the information set, and thus cannot be</span></div>
+<div class="line"><span class="lineno">   54</span><span class="stringliteral">  done during the tree traversal (which is done on histories). It is thus</span></div>
+<div class="line"><span class="lineno">   55</span><span class="stringliteral">  performed as an additional step.</span></div>
+<div class="line"><span class="lineno">   56</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   57</span><span class="stringliteral">  This function is a module level function to be reused by both CFRSolver and</span></div>
+<div class="line"><span class="lineno">   58</span><span class="stringliteral">  CFRBRSolver.</span></div>
+<div class="line"><span class="lineno">   59</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">    info_state_nodes: A dictionary {`info_state_str` -&gt; `_InfoStateNode`}.</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">for</span> info_state_node <span class="keywordflow">in</span> info_state_nodes.values():</div>
+<div class="line"><span class="lineno">   64</span>    action_to_cum_regret = info_state_node.cumulative_regret</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">for</span> action, cumulative_regret <span class="keywordflow">in</span> action_to_cum_regret.items():</div>
+<div class="line"><span class="lineno">   66</span>      <span class="keywordflow">if</span> cumulative_regret &lt; 0:</div>
+<div class="line"><span class="lineno">   67</span>        action_to_cum_regret[action] = 0</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00418">open_spiel.python.algorithms.cfr._CFRSolver.evaluate_and_update_policy()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/ddf/namespaceopen__spiel_1_1python_1_1algorithms_1_1cfr_a839a730a4e5a4c72c5d036930083d587_icgraph.png" border="0" usemap="#ade/ddf/namespaceopen__spiel_1_1python_1_1algorithms_1_1cfr_a839a730a4e5a4c72c5d036930083d587_icgraph" alt=""/></div>
@@ -212,7 +239,36 @@ Args:
 
 Returns:
   A dict of action -&gt; prob for all legal actions.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00349">349</a> of file <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html">cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  349</span><span class="keyword">def </span>_regret_matching(cumulative_regrets, legal_actions):</div>
+<div class="line"><span class="lineno">  350</span>  <span class="stringliteral">&quot;&quot;&quot;Returns an info state policy by applying regret-matching.</span></div>
+<div class="line"><span class="lineno">  351</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  352</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  353</span><span class="stringliteral">    cumulative_regrets: A {action: cumulative_regret} dictionary.</span></div>
+<div class="line"><span class="lineno">  354</span><span class="stringliteral">    legal_actions: the list of legal actions at this state.</span></div>
+<div class="line"><span class="lineno">  355</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  356</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  357</span><span class="stringliteral">    A dict of action -&gt; prob for all legal actions.</span></div>
+<div class="line"><span class="lineno">  358</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  359</span>  regrets = cumulative_regrets.values()</div>
+<div class="line"><span class="lineno">  360</span>  sum_positive_regrets = sum((regret <span class="keywordflow">for</span> regret <span class="keywordflow">in</span> regrets <span class="keywordflow">if</span> regret &gt; 0))</div>
+<div class="line"><span class="lineno">  361</span> </div>
+<div class="line"><span class="lineno">  362</span>  info_state_policy = {}</div>
+<div class="line"><span class="lineno">  363</span>  <span class="keywordflow">if</span> sum_positive_regrets &gt; 0:</div>
+<div class="line"><span class="lineno">  364</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> legal_actions:</div>
+<div class="line"><span class="lineno">  365</span>      positive_action_regret = max(0.0, cumulative_regrets[action])</div>
+<div class="line"><span class="lineno">  366</span>      info_state_policy[action] = (</div>
+<div class="line"><span class="lineno">  367</span>          positive_action_regret / sum_positive_regrets)</div>
+<div class="line"><span class="lineno">  368</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  369</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> legal_actions:</div>
+<div class="line"><span class="lineno">  370</span>      info_state_policy[action] = 1.0 / len(legal_actions)</div>
+<div class="line"><span class="lineno">  371</span>  <span class="keywordflow">return</span> info_state_policy</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00070">open_spiel.python.algorithms.cfr._update_current_policy()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/ddf/namespaceopen__spiel_1_1python_1_1algorithms_1_1cfr_a40de309b1638f9bfe90d98118e6fe12d_icgraph.png" border="0" usemap="#ade/ddf/namespaceopen__spiel_1_1python_1_1algorithms_1_1cfr_a40de309b1638f9bfe90d98118e6fe12d_icgraph" alt=""/></div>
@@ -261,7 +317,34 @@ CFRBRSolver.
 Args:
   average_policy: A `policy.TabularPolicy` to be updated in-place.
   info_state_nodes: A dictionary {`info_state_str` -&gt; `_InfoStateNode`}.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00089">89</a> of file <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html">cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span><span class="keyword">def </span>_update_average_policy(average_policy, info_state_nodes):</div>
+<div class="line"><span class="lineno">   90</span>  <span class="stringliteral">&quot;&quot;&quot;Updates in place `average_policy` to the average of all policies iterated.</span></div>
+<div class="line"><span class="lineno">   91</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   92</span><span class="stringliteral">  This function is a module level function to be reused by both CFRSolver and</span></div>
+<div class="line"><span class="lineno">   93</span><span class="stringliteral">  CFRBRSolver.</span></div>
+<div class="line"><span class="lineno">   94</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   95</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   96</span><span class="stringliteral">    average_policy: A `policy.TabularPolicy` to be updated in-place.</span></div>
+<div class="line"><span class="lineno">   97</span><span class="stringliteral">    info_state_nodes: A dictionary {`info_state_str` -&gt; `_InfoStateNode`}.</span></div>
+<div class="line"><span class="lineno">   98</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">for</span> info_state, info_state_node <span class="keywordflow">in</span> info_state_nodes.items():</div>
+<div class="line"><span class="lineno">  100</span>    info_state_policies_sum = info_state_node.cumulative_policy</div>
+<div class="line"><span class="lineno">  101</span>    state_policy = average_policy.policy_for_key(info_state)</div>
+<div class="line"><span class="lineno">  102</span>    probabilities_sum = sum(info_state_policies_sum.values())</div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">if</span> probabilities_sum == 0:</div>
+<div class="line"><span class="lineno">  104</span>      num_actions = len(info_state_node.legal_actions)</div>
+<div class="line"><span class="lineno">  105</span>      <span class="keywordflow">for</span> action <span class="keywordflow">in</span> info_state_node.legal_actions:</div>
+<div class="line"><span class="lineno">  106</span>        state_policy[action] = 1 / num_actions</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  108</span>      <span class="keywordflow">for</span> action, action_prob_sum <span class="keywordflow">in</span> info_state_policies_sum.items():</div>
+<div class="line"><span class="lineno">  109</span>        state_policy[action] = action_prob_sum / probabilities_sum</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00219">open_spiel.python.algorithms.cfr._CFRSolverBase.average_policy()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/ddf/namespaceopen__spiel_1_1python_1_1algorithms_1_1cfr_a8cc75cf0f11b35f18ae06c737b4feb7f_icgraph.png" border="0" usemap="#ade/ddf/namespaceopen__spiel_1_1python_1_1algorithms_1_1cfr_a8cc75cf0f11b35f18ae06c737b4feb7f_icgraph" alt=""/></div>
@@ -313,7 +396,32 @@ CFRBRSolver.
 Args:
   current_policy: A `policy.TabularPolicy` to be updated in-place.
   info_state_nodes: A dictionary {`info_state_str` -&gt; `_InfoStateNode`}.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00070">70</a> of file <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html">cfr.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span><span class="keyword">def </span>_update_current_policy(current_policy, info_state_nodes):</div>
+<div class="line"><span class="lineno">   71</span>  <span class="stringliteral">&quot;&quot;&quot;Updates in place `current_policy` from the cumulative regrets.</span></div>
+<div class="line"><span class="lineno">   72</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   73</span><span class="stringliteral">  This function is a module level function to be reused by both CFRSolver and</span></div>
+<div class="line"><span class="lineno">   74</span><span class="stringliteral">  CFRBRSolver.</span></div>
+<div class="line"><span class="lineno">   75</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   76</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   77</span><span class="stringliteral">    current_policy: A `policy.TabularPolicy` to be updated in-place.</span></div>
+<div class="line"><span class="lineno">   78</span><span class="stringliteral">    info_state_nodes: A dictionary {`info_state_str` -&gt; `_InfoStateNode`}.</span></div>
+<div class="line"><span class="lineno">   79</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">for</span> info_state, info_state_node <span class="keywordflow">in</span> info_state_nodes.items():</div>
+<div class="line"><span class="lineno">   81</span>    state_policy = current_policy.policy_for_key(info_state)</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">for</span> action, value <span class="keywordflow">in</span> _regret_matching(</div>
+<div class="line"><span class="lineno">   84</span>        info_state_node.cumulative_regret,</div>
+<div class="line"><span class="lineno">   85</span>        info_state_node.legal_actions).items():</div>
+<div class="line"><span class="lineno">   86</span>      state_policy[action] = value</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00349">open_spiel.python.algorithms.cfr._regret_matching()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00418">open_spiel.python.algorithms.cfr._CFRSolver.evaluate_and_update_policy()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/ddf/namespaceopen__spiel_1_1python_1_1algorithms_1_1cfr_ae97926842a3229ef58ba80f3c61baa4a_cgraph.png" border="0" usemap="#ade/ddf/namespaceopen__spiel_1_1python_1_1algorithms_1_1cfr_ae97926842a3229ef58ba80f3c61baa4a_cgraph" alt=""/></div>

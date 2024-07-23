@@ -106,40 +106,290 @@ Collaboration diagram for absl::container_internal::FlatHashSetPolicy&lt; T &gt;
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aeb746a3b843128ad78cfae6ebdfeba48" id="r_aeb746a3b843128ad78cfae6ebdfeba48"><td class="memItemLeft" align="right" valign="top"><a id="aeb746a3b843128ad78cfae6ebdfeba48" name="aeb746a3b843128ad78cfae6ebdfeba48"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>slot_type</b> = T</td></tr>
+<tr class="memitem:aeb746a3b843128ad78cfae6ebdfeba48" id="r_aeb746a3b843128ad78cfae6ebdfeba48"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb746a3b843128ad78cfae6ebdfeba48">slot_type</a> = T</td></tr>
 <tr class="separator:aeb746a3b843128ad78cfae6ebdfeba48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d0ae1e55d1f740ad1a963e31e9623c0" id="r_a1d0ae1e55d1f740ad1a963e31e9623c0"><td class="memItemLeft" align="right" valign="top"><a id="a1d0ae1e55d1f740ad1a963e31e9623c0" name="a1d0ae1e55d1f740ad1a963e31e9623c0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>key_type</b> = T</td></tr>
+<tr class="memitem:a1d0ae1e55d1f740ad1a963e31e9623c0" id="r_a1d0ae1e55d1f740ad1a963e31e9623c0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d0ae1e55d1f740ad1a963e31e9623c0">key_type</a> = T</td></tr>
 <tr class="separator:a1d0ae1e55d1f740ad1a963e31e9623c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98df93e60276d7840cd3b02becdd3296" id="r_a98df93e60276d7840cd3b02becdd3296"><td class="memItemLeft" align="right" valign="top"><a id="a98df93e60276d7840cd3b02becdd3296" name="a98df93e60276d7840cd3b02becdd3296"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>init_type</b> = T</td></tr>
+<tr class="memitem:a98df93e60276d7840cd3b02becdd3296" id="r_a98df93e60276d7840cd3b02becdd3296"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98df93e60276d7840cd3b02becdd3296">init_type</a> = T</td></tr>
 <tr class="separator:a98df93e60276d7840cd3b02becdd3296"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c66b25d68a6952dbfaea770406f856c" id="r_a3c66b25d68a6952dbfaea770406f856c"><td class="memItemLeft" align="right" valign="top"><a id="a3c66b25d68a6952dbfaea770406f856c" name="a3c66b25d68a6952dbfaea770406f856c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>constant_iterators</b> = std::true_type</td></tr>
+<tr class="memitem:a3c66b25d68a6952dbfaea770406f856c" id="r_a3c66b25d68a6952dbfaea770406f856c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c66b25d68a6952dbfaea770406f856c">constant_iterators</a> = std::true_type</td></tr>
 <tr class="separator:a3c66b25d68a6952dbfaea770406f856c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a89f1b04a8519d79d96b662b62c8ee19f" id="r_a89f1b04a8519d79d96b662b62c8ee19f"><td class="memTemplParams" colspan="2"><a id="a89f1b04a8519d79d96b662b62c8ee19f" name="a89f1b04a8519d79d96b662b62c8ee19f"></a>
-template&lt;class Allocator , class... Args&gt; </td></tr>
-<tr class="memitem:a89f1b04a8519d79d96b662b62c8ee19f"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>construct</b> (Allocator *alloc, slot_type *slot, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a89f1b04a8519d79d96b662b62c8ee19f" id="r_a89f1b04a8519d79d96b662b62c8ee19f"><td class="memTemplParams" colspan="2">template&lt;class Allocator , class... Args&gt; </td></tr>
+<tr class="memitem:a89f1b04a8519d79d96b662b62c8ee19f"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a89f1b04a8519d79d96b662b62c8ee19f">construct</a> (Allocator *alloc, slot_type *slot, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a89f1b04a8519d79d96b662b62c8ee19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d5826b6b388a43b87712d284e8c5ee3" id="r_a9d5826b6b388a43b87712d284e8c5ee3"><td class="memTemplParams" colspan="2"><a id="a9d5826b6b388a43b87712d284e8c5ee3" name="a9d5826b6b388a43b87712d284e8c5ee3"></a>
-template&lt;class Allocator &gt; </td></tr>
-<tr class="memitem:a9d5826b6b388a43b87712d284e8c5ee3"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>destroy</b> (Allocator *alloc, slot_type *slot)</td></tr>
+<tr class="memitem:a9d5826b6b388a43b87712d284e8c5ee3" id="r_a9d5826b6b388a43b87712d284e8c5ee3"><td class="memTemplParams" colspan="2">template&lt;class Allocator &gt; </td></tr>
+<tr class="memitem:a9d5826b6b388a43b87712d284e8c5ee3"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9d5826b6b388a43b87712d284e8c5ee3">destroy</a> (Allocator *alloc, slot_type *slot)</td></tr>
 <tr class="separator:a9d5826b6b388a43b87712d284e8c5ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4e93f923b69fb4c56f97e35f0a1e572" id="r_ad4e93f923b69fb4c56f97e35f0a1e572"><td class="memItemLeft" align="right" valign="top"><a id="ad4e93f923b69fb4c56f97e35f0a1e572" name="ad4e93f923b69fb4c56f97e35f0a1e572"></a>
-static T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>element</b> (slot_type *slot)</td></tr>
+<tr class="memitem:ad4e93f923b69fb4c56f97e35f0a1e572" id="r_ad4e93f923b69fb4c56f97e35f0a1e572"><td class="memItemLeft" align="right" valign="top">static T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4e93f923b69fb4c56f97e35f0a1e572">element</a> (slot_type *slot)</td></tr>
 <tr class="separator:ad4e93f923b69fb4c56f97e35f0a1e572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ddec326433e1e34529295ab531881ad" id="r_a3ddec326433e1e34529295ab531881ad"><td class="memTemplParams" colspan="2"><a id="a3ddec326433e1e34529295ab531881ad" name="a3ddec326433e1e34529295ab531881ad"></a>
-template&lt;class F , class... Args&gt; </td></tr>
-<tr class="memitem:a3ddec326433e1e34529295ab531881ad"><td class="memTemplItemLeft" align="right" valign="top">static decltype(absl::container_internal::DecomposeValue(std::declval&lt; F &gt;(), std::declval&lt; Args &gt;()...))&#160;</td><td class="memTemplItemRight" valign="bottom"><b>apply</b> (F &amp;&amp;f, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a3ddec326433e1e34529295ab531881ad" id="r_a3ddec326433e1e34529295ab531881ad"><td class="memTemplParams" colspan="2">template&lt;class F , class... Args&gt; </td></tr>
+<tr class="memitem:a3ddec326433e1e34529295ab531881ad"><td class="memTemplItemLeft" align="right" valign="top">static decltype(absl::container_internal::DecomposeValue(std::declval&lt; F &gt;(), std::declval&lt; Args &gt;()...))&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3ddec326433e1e34529295ab531881ad">apply</a> (F &amp;&amp;f, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a3ddec326433e1e34529295ab531881ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb90d5ff6f29d4886c76cfd165c04b58" id="r_abb90d5ff6f29d4886c76cfd165c04b58"><td class="memItemLeft" align="right" valign="top"><a id="abb90d5ff6f29d4886c76cfd165c04b58" name="abb90d5ff6f29d4886c76cfd165c04b58"></a>
-static size_t&#160;</td><td class="memItemRight" valign="bottom"><b>space_used</b> (const T *)</td></tr>
+<tr class="memitem:abb90d5ff6f29d4886c76cfd165c04b58" id="r_abb90d5ff6f29d4886c76cfd165c04b58"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb90d5ff6f29d4886c76cfd165c04b58">space_used</a> (const T *)</td></tr>
 <tr class="separator:abb90d5ff6f29d4886c76cfd165c04b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T&gt;<br />
+struct absl::container_internal::FlatHashSetPolicy&lt; T &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00460">460</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a3c66b25d68a6952dbfaea770406f856c" name="a3c66b25d68a6952dbfaea770406f856c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c66b25d68a6952dbfaea770406f856c">&#9670;&#160;</a></span>constant_iterators</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::constant_iterators = std::true_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00464">464</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="a98df93e60276d7840cd3b02becdd3296" name="a98df93e60276d7840cd3b02becdd3296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98df93e60276d7840cd3b02becdd3296">&#9670;&#160;</a></span>init_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::init_type = T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00463">463</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="a1d0ae1e55d1f740ad1a963e31e9623c0" name="a1d0ae1e55d1f740ad1a963e31e9623c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d0ae1e55d1f740ad1a963e31e9623c0">&#9670;&#160;</a></span>key_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::key_type = T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00462">462</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="aeb746a3b843128ad78cfae6ebdfeba48" name="aeb746a3b843128ad78cfae6ebdfeba48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb746a3b843128ad78cfae6ebdfeba48">&#9670;&#160;</a></span>slot_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::slot_type = T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00461">461</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3ddec326433e1e34529295ab531881ad" name="a3ddec326433e1e34529295ab531881ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ddec326433e1e34529295ab531881ad">&#9670;&#160;</a></span>apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class F , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static decltype(absl::container_internal::DecomposeValue( std::declval&lt; F &gt;(), std::declval&lt; Args &gt;()...)) <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::apply </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00482">482</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  482</span>                               {</div>
+<div class="line"><span class="lineno">  483</span>    <span class="keywordflow">return</span> absl::container_internal::DecomposeValue(</div>
+<div class="line"><span class="lineno">  484</span>        std::forward&lt;F&gt;(f), std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  485</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a89f1b04a8519d79d96b662b62c8ee19f" name="a89f1b04a8519d79d96b662b62c8ee19f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f1b04a8519d79d96b662b62c8ee19f">&#9670;&#160;</a></span>construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class Allocator , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::construct </td>
+          <td>(</td>
+          <td class="paramtype">Allocator *</td>          <td class="paramname"><span class="paramname"><em>alloc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">slot_type *</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00467">467</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  467</span>                                                                           {</div>
+<div class="line"><span class="lineno">  468</span>    absl::allocator_traits&lt;Allocator&gt;::construct(*alloc, slot,</div>
+<div class="line"><span class="lineno">  469</span>                                                 std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  470</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9d5826b6b388a43b87712d284e8c5ee3" name="a9d5826b6b388a43b87712d284e8c5ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5826b6b388a43b87712d284e8c5ee3">&#9670;&#160;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<div class="memtemplate">
+template&lt;class Allocator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::destroy </td>
+          <td>(</td>
+          <td class="paramtype">Allocator *</td>          <td class="paramname"><span class="paramname"><em>alloc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">slot_type *</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00473">473</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  473</span>                                                         {</div>
+<div class="line"><span class="lineno">  474</span>    absl::allocator_traits&lt;Allocator&gt;::destroy(*alloc, slot);</div>
+<div class="line"><span class="lineno">  475</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad4e93f923b69fb4c56f97e35f0a1e572" name="ad4e93f923b69fb4c56f97e35f0a1e572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e93f923b69fb4c56f97e35f0a1e572">&#9670;&#160;</a></span>element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T &amp; <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::element </td>
+          <td>(</td>
+          <td class="paramtype">slot_type *</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00477">477</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  477</span>{ <span class="keywordflow">return</span> *slot; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abb90d5ff6f29d4886c76cfd165c04b58" name="abb90d5ff6f29d4886c76cfd165c04b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb90d5ff6f29d4886c76cfd165c04b58">&#9670;&#160;</a></span>space_used()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static size_t <a class="el" href="../../d2/d7b/structabsl_1_1container__internal_1_1_flat_hash_set_policy.html">absl::container_internal::FlatHashSetPolicy</a>&lt; T &gt;::space_used </td>
+          <td>(</td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/db2/flat__hash__set_8h_source.html#l00487">487</a> of file <a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  487</span>{ <span class="keywordflow">return</span> 0; }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/<a class="el" href="../../de/db2/flat__hash__set_8h_source.html">flat_hash_set.h</a></li>
 </ul>

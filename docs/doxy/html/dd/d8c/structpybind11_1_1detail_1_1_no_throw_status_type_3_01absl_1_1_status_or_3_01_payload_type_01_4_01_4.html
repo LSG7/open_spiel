@@ -106,8 +106,7 @@ Collaboration diagram for pybind11::detail::NoThrowStatusType&lt; absl::StatusOr
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8edb85d7b4781b9e1da02cc04713bd2c" id="r_a8edb85d7b4781b9e1da02cc04713bd2c"><td class="memItemLeft" align="right" valign="top"><a id="a8edb85d7b4781b9e1da02cc04713bd2c" name="a8edb85d7b4781b9e1da02cc04713bd2c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>NoThrowAbslStatus</b> = type_caster_base&lt;<a class="el" href="../../d8/d07/classabsl_1_1_status.html">absl::Status</a>&gt;</td></tr>
+<tr class="memitem:a8edb85d7b4781b9e1da02cc04713bd2c" id="r_a8edb85d7b4781b9e1da02cc04713bd2c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8edb85d7b4781b9e1da02cc04713bd2c">NoThrowAbslStatus</a> = type_caster_base&lt;<a class="el" href="../../d8/d07/classabsl_1_1_status.html">absl::Status</a>&gt;</td></tr>
 <tr class="separator:a8edb85d7b4781b9e1da02cc04713bd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -115,6 +114,29 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a4e1b480f43b289cac04504707b5b6c6e" id="r_a4e1b480f43b289cac04504707b5b6c6e"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e1b480f43b289cac04504707b5b6c6e">name</a></td></tr>
 <tr class="separator:a4e1b480f43b289cac04504707b5b6c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename PayloadType&gt;<br />
+struct pybind11::detail::NoThrowStatusType&lt; absl::StatusOr&lt; PayloadType &gt; &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../da/d28/statusor__caster_8h_source.html#l00021">21</a> of file <a class="el" href="../../da/d28/statusor__caster_8h_source.html">statusor_caster.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a8edb85d7b4781b9e1da02cc04713bd2c" name="a8edb85d7b4781b9e1da02cc04713bd2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8edb85d7b4781b9e1da02cc04713bd2c">&#9670;&#160;</a></span>NoThrowAbslStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PayloadType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d3/d8e/structpybind11_1_1detail_1_1_no_throw_status_type.html">pybind11::detail::NoThrowStatusType</a>&lt; <a class="el" href="../../d4/da3/classabsl_1_1_status_or.html">absl::StatusOr</a>&lt; PayloadType &gt; &gt;::NoThrowAbslStatus = type_caster_base&lt;<a class="el" href="../../d8/d07/classabsl_1_1_status.html">absl::Status</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d28/statusor__caster_8h_source.html#l00022">22</a> of file <a class="el" href="../../da/d28/statusor__caster_8h_source.html">statusor_caster.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a4e1b480f43b289cac04504707b5b6c6e" name="a4e1b480f43b289cac04504707b5b6c6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e1b480f43b289cac04504707b5b6c6e">&#9670;&#160;</a></span>name</h2>
@@ -140,6 +162,8 @@ template&lt;typename PayloadType &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line">= _(<span class="stringliteral">&quot;Union[&quot;</span>) + NoThrowAbslStatus::name + _(<span class="stringliteral">&quot;, &quot;</span>) +</div>
 <div class="line">                               make_caster&lt;PayloadType&gt;::name + _(<span class="stringliteral">&quot;]&quot;</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../da/d28/statusor__caster_8h_source.html#l00023">23</a> of file <a class="el" href="../../da/d28/statusor__caster_8h_source.html">statusor_caster.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>

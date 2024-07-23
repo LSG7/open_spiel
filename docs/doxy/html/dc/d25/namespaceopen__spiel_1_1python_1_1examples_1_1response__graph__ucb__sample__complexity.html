@@ -97,18 +97,158 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aef8acf8b909f39631859198a21213651" id="r_aef8acf8b909f39631859198a21213651"><td class="memItemLeft" align="right" valign="top"><a id="aef8acf8b909f39631859198a21213651" name="aef8acf8b909f39631859198a21213651"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (argv)</td></tr>
+<tr class="memitem:aef8acf8b909f39631859198a21213651" id="r_aef8acf8b909f39631859198a21213651"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef8acf8b909f39631859198a21213651">main</a> (argv)</td></tr>
 <tr class="separator:aef8acf8b909f39631859198a21213651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9cd83a63f808d2d01f09f76ad1e565f7" id="r_a9cd83a63f808d2d01f09f76ad1e565f7"><td class="memItemLeft" align="right" valign="top"><a id="a9cd83a63f808d2d01f09f76ad1e565f7" name="a9cd83a63f808d2d01f09f76ad1e565f7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:a9cd83a63f808d2d01f09f76ad1e565f7" id="r_a9cd83a63f808d2d01f09f76ad1e565f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cd83a63f808d2d01f09f76ad1e565f7">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:a9cd83a63f808d2d01f09f76ad1e565f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Example computing ResponseGraphUCB sample complexity results.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">Example computing ResponseGraphUCB sample complexity results.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="aef8acf8b909f39631859198a21213651" name="aef8acf8b909f39631859198a21213651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8acf8b909f39631859198a21213651">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.response_graph_ucb_sample_complexity.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dff/response__graph__ucb__sample__complexity_8py_source.html#l00032">32</a> of file <a class="el" href="../../d2/dff/response__graph__ucb__sample__complexity_8py_source.html">response_graph_ucb_sample_complexity.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(argv):</div>
+<div class="line"><span class="lineno">   33</span>  <span class="keywordflow">if</span> len(argv) &gt; 1:</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">raise</span> app.UsageError(<span class="stringliteral">&#39;Too many command-line arguments.&#39;</span>)</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>  <span class="comment"># Parameters to run</span></div>
+<div class="line"><span class="lineno">   37</span>  deltas = [0.01, 0.025, 0.05, 0.1, 0.25, 0.5]</div>
+<div class="line"><span class="lineno">   38</span>  sampling_methods = [</div>
+<div class="line"><span class="lineno">   39</span>      <span class="stringliteral">&#39;uniform-exhaustive&#39;</span>, <span class="stringliteral">&#39;uniform&#39;</span>, <span class="stringliteral">&#39;valence-weighted&#39;</span>, <span class="stringliteral">&#39;count-weighted&#39;</span></div>
+<div class="line"><span class="lineno">   40</span>  ]</div>
+<div class="line"><span class="lineno">   41</span>  conf_methods = [</div>
+<div class="line"><span class="lineno">   42</span>      <span class="stringliteral">&#39;ucb-standard&#39;</span>, <span class="stringliteral">&#39;ucb-standard-relaxed&#39;</span>, <span class="stringliteral">&#39;clopper-pearson-ucb&#39;</span>,</div>
+<div class="line"><span class="lineno">   43</span>      <span class="stringliteral">&#39;clopper-pearson-ucb-relaxed&#39;</span></div>
+<div class="line"><span class="lineno">   44</span>  ]</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>  methods = list(itertools.product(sampling_methods, conf_methods))</div>
+<div class="line"><span class="lineno">   47</span>  mean_counts = {m: [[] <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(len(deltas))] <span class="keywordflow">for</span> m <span class="keywordflow">in</span> methods}</div>
+<div class="line"><span class="lineno">   48</span>  edge_errs = {m: [[] <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(len(deltas))] <span class="keywordflow">for</span> m <span class="keywordflow">in</span> methods}</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">if</span> FLAGS.game_name == <span class="stringliteral">&#39;bernoulli&#39;</span>:</div>
+<div class="line"><span class="lineno">   51</span>    max_total_interactions = 50000</div>
+<div class="line"><span class="lineno">   52</span>    repetitions = 20</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">elif</span> FLAGS.game_name == <span class="stringliteral">&#39;soccer&#39;</span>:</div>
+<div class="line"><span class="lineno">   54</span>    max_total_interactions = 100000</div>
+<div class="line"><span class="lineno">   55</span>    repetitions = 5</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">elif</span> FLAGS.game_name == <span class="stringliteral">&#39;kuhn_poker_3p&#39;</span>:</div>
+<div class="line"><span class="lineno">   57</span>    max_total_interactions = 100000</div>
+<div class="line"><span class="lineno">   58</span>    repetitions = 5</div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">raise</span> ValueError(</div>
+<div class="line"><span class="lineno">   61</span>        <span class="stringliteral">&#39;game_name must be &quot;bernoulli&quot;, &quot;soccer&quot;, or &quot;kuhn_poker_3p&quot;.&#39;</span>)</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">for</span> r <span class="keywordflow">in</span> range(repetitions):</div>
+<div class="line"><span class="lineno">   64</span>    print(<span class="stringliteral">&#39;Iteration {}&#39;</span>.format(r + 1))</div>
+<div class="line"><span class="lineno">   65</span>    G = utils.get_game_for_sampler(FLAGS.game_name)  <span class="comment"># pylint: disable=invalid-name</span></div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">for</span> m <span class="keywordflow">in</span> methods:</div>
+<div class="line"><span class="lineno">   68</span>      print(<span class="stringliteral">&#39;  Method: {}&#39;</span>.format(m))</div>
+<div class="line"><span class="lineno">   69</span>      <span class="keywordflow">for</span> ix, d <span class="keywordflow">in</span> enumerate(deltas):</div>
+<div class="line"><span class="lineno">   70</span>        print(<span class="stringliteral">&#39;    Delta: {}&#39;</span>.format(d))</div>
+<div class="line"><span class="lineno">   71</span>        r_ucb = response_graph_ucb.ResponseGraphUCB(</div>
+<div class="line"><span class="lineno">   72</span>            G,</div>
+<div class="line"><span class="lineno">   73</span>            exploration_strategy=m[0],</div>
+<div class="line"><span class="lineno">   74</span>            confidence_method=m[1],</div>
+<div class="line"><span class="lineno">   75</span>            delta=d,</div>
+<div class="line"><span class="lineno">   76</span>            ucb_eps=1e-1)</div>
+<div class="line"><span class="lineno">   77</span>        results = r_ucb.run(max_total_iterations=max_total_interactions)</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>        <span class="comment"># Updated</span></div>
+<div class="line"><span class="lineno">   80</span>        mean_counts[m][ix].append(results[<span class="stringliteral">&#39;interactions&#39;</span>])</div>
+<div class="line"><span class="lineno">   81</span>        real_graph = r_ucb.construct_real_graph()</div>
+<div class="line"><span class="lineno">   82</span>        edge_errs[m][ix].append(</div>
+<div class="line"><span class="lineno">   83</span>            utils.digraph_edge_hamming_dist(real_graph, results[<span class="stringliteral">&#39;graph&#39;</span>]))</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>  <span class="comment"># Plotting</span></div>
+<div class="line"><span class="lineno">   86</span>  _, axes = plt.subplots(1, 2, figsize=(10, 4))</div>
+<div class="line"><span class="lineno">   87</span>  max_mean_count = 0</div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">for</span> m <span class="keywordflow">in</span> methods:</div>
+<div class="line"><span class="lineno">   89</span>    utils.plot_timeseries(</div>
+<div class="line"><span class="lineno">   90</span>        axes,</div>
+<div class="line"><span class="lineno">   91</span>        id_ax=0,</div>
+<div class="line"><span class="lineno">   92</span>        data=np.asarray(mean_counts[m]).T,</div>
+<div class="line"><span class="lineno">   93</span>        xticks=deltas,</div>
+<div class="line"><span class="lineno">   94</span>        xlabel=<span class="stringliteral">r&#39;$\delta$&#39;</span>,</div>
+<div class="line"><span class="lineno">   95</span>        ylabel=<span class="stringliteral">&#39;Interactions required&#39;</span>,</div>
+<div class="line"><span class="lineno">   96</span>        label=utils.get_method_tuple_acronym(m),</div>
+<div class="line"><span class="lineno">   97</span>        logx=<span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">   98</span>        logy=<span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">   99</span>        linespecs=utils.get_method_tuple_linespecs(m))</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">if</span> np.max(mean_counts[m]) &gt; max_mean_count:</div>
+<div class="line"><span class="lineno">  101</span>      max_mean_count = np.max(mean_counts[m])</div>
+<div class="line"><span class="lineno">  102</span>  plt.xlim(left=np.min(deltas), right=np.max(deltas))</div>
+<div class="line"><span class="lineno">  103</span>  plt.ylim(top=max_mean_count * 1.05)</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>  max_error = 0</div>
+<div class="line"><span class="lineno">  106</span>  <span class="keywordflow">for</span> m <span class="keywordflow">in</span> methods:</div>
+<div class="line"><span class="lineno">  107</span>    utils.plot_timeseries(</div>
+<div class="line"><span class="lineno">  108</span>        axes,</div>
+<div class="line"><span class="lineno">  109</span>        id_ax=1,</div>
+<div class="line"><span class="lineno">  110</span>        data=np.asarray(edge_errs[m]).T,</div>
+<div class="line"><span class="lineno">  111</span>        xticks=deltas,</div>
+<div class="line"><span class="lineno">  112</span>        xlabel=<span class="stringliteral">r&#39;$\delta$&#39;</span>,</div>
+<div class="line"><span class="lineno">  113</span>        ylabel=<span class="stringliteral">&#39;Response graph errors&#39;</span>,</div>
+<div class="line"><span class="lineno">  114</span>        label=utils.get_method_tuple_acronym(m),</div>
+<div class="line"><span class="lineno">  115</span>        logx=<span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">  116</span>        logy=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  117</span>        linespecs=utils.get_method_tuple_linespecs(m))</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">if</span> np.max(edge_errs[m]) &gt; max_error:</div>
+<div class="line"><span class="lineno">  119</span>      max_error = np.max(edge_errs[m])</div>
+<div class="line"><span class="lineno">  120</span>  plt.xlim(left=np.min(deltas), right=np.max(deltas))</div>
+<div class="line"><span class="lineno">  121</span>  plt.ylim(bottom=0, top=max_error*1.05)</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>  <span class="comment"># Shared legend</span></div>
+<div class="line"><span class="lineno">  124</span>  plt.figure(figsize=(1, 6))</div>
+<div class="line"><span class="lineno">  125</span>  plt.figlegend(</div>
+<div class="line"><span class="lineno">  126</span>      *axes[0].get_legend_handles_labels(),</div>
+<div class="line"><span class="lineno">  127</span>      loc=<span class="stringliteral">&#39;center right&#39;</span>,</div>
+<div class="line"><span class="lineno">  128</span>      bbox_to_anchor=(0.8, 0.5),</div>
+<div class="line"><span class="lineno">  129</span>      bbox_transform=plt.gcf().transFigure,</div>
+<div class="line"><span class="lineno">  130</span>      ncol=1,</div>
+<div class="line"><span class="lineno">  131</span>      handlelength=1.7)</div>
+<div class="line"><span class="lineno">  132</span>  plt.tight_layout()</div>
+<div class="line"><span class="lineno">  133</span>  plt.show()</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a9cd83a63f808d2d01f09f76ad1e565f7" name="a9cd83a63f808d2d01f09f76ad1e565f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd83a63f808d2d01f09f76ad1e565f7">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.response_graph_ucb_sample_complexity.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dff/response__graph__ucb__sample__complexity_8py_source.html#l00027">27</a> of file <a class="el" href="../../d2/dff/response__graph__ucb__sample__complexity_8py_source.html">response_graph_ucb_sample_complexity.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

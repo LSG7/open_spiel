@@ -108,29 +108,153 @@ Collaboration diagram for absl::container_internal::map_value_compare&lt; origin
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c7d8a48bfd86b34662aa4b594b720a6" id="r_a1c7d8a48bfd86b34662aa4b594b720a6"><td class="memItemLeft" align="right" valign="top"><a id="a1c7d8a48bfd86b34662aa4b594b720a6" name="a1c7d8a48bfd86b34662aa4b594b720a6"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const value_type &amp;lhs, const value_type &amp;rhs) const -&gt; decltype(comp(lhs.first, rhs.first))</td></tr>
+<tr class="memitem:a1c7d8a48bfd86b34662aa4b594b720a6" id="r_a1c7d8a48bfd86b34662aa4b594b720a6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c7d8a48bfd86b34662aa4b594b720a6">operator()</a> (const value_type &amp;lhs, const value_type &amp;rhs) const -&gt; decltype(comp(lhs.first, rhs.first))</td></tr>
 <tr class="separator:a1c7d8a48bfd86b34662aa4b594b720a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac0d03fc7fb63e55f9f102c6a401c7343" id="r_ac0d03fc7fb63e55f9f102c6a401c7343"><td class="memItemLeft" align="right" valign="top"><a id="ac0d03fc7fb63e55f9f102c6a401c7343" name="ac0d03fc7fb63e55f9f102c6a401c7343"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>map_value_compare</b> (original_key_compare c)</td></tr>
+<tr class="memitem:ac0d03fc7fb63e55f9f102c6a401c7343" id="r_ac0d03fc7fb63e55f9f102c6a401c7343"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0d03fc7fb63e55f9f102c6a401c7343">map_value_compare</a> (original_key_compare c)</td></tr>
 <tr class="separator:ac0d03fc7fb63e55f9f102c6a401c7343"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a39d7b8882d8a1f6381ee9afc644f71e3" id="r_a39d7b8882d8a1f6381ee9afc644f71e3"><td class="memItemLeft" align="right" valign="top"><a id="a39d7b8882d8a1f6381ee9afc644f71e3" name="a39d7b8882d8a1f6381ee9afc644f71e3"></a>
-original_key_compare&#160;</td><td class="memItemRight" valign="bottom"><b>comp</b></td></tr>
+<tr class="memitem:a39d7b8882d8a1f6381ee9afc644f71e3" id="r_a39d7b8882d8a1f6381ee9afc644f71e3"><td class="memItemLeft" align="right" valign="top">original_key_compare&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39d7b8882d8a1f6381ee9afc644f71e3">comp</a></td></tr>
 <tr class="separator:a39d7b8882d8a1f6381ee9afc644f71e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a3890c9c76b2785f6397396f3a7420c12" id="r_a3890c9c76b2785f6397396f3a7420c12"><td class="memTemplParams" colspan="2"><a id="a3890c9c76b2785f6397396f3a7420c12" name="a3890c9c76b2785f6397396f3a7420c12"></a>
-template&lt;typename Params &gt; </td></tr>
-<tr class="memitem:a3890c9c76b2785f6397396f3a7420c12"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><b>btree</b></td></tr>
+<tr class="memitem:a3890c9c76b2785f6397396f3a7420c12" id="r_a3890c9c76b2785f6397396f3a7420c12"><td class="memTemplParams" colspan="2">template&lt;typename Params &gt; </td></tr>
+<tr class="memitem:a3890c9c76b2785f6397396f3a7420c12"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3890c9c76b2785f6397396f3a7420c12">btree</a></td></tr>
 <tr class="separator:a3890c9c76b2785f6397396f3a7420c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename original_key_compare, typename value_type&gt;<br />
+class absl::container_internal::map_value_compare&lt; original_key_compare, value_type &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00340">340</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac0d03fc7fb63e55f9f102c6a401c7343" name="ac0d03fc7fb63e55f9f102c6a401c7343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d03fc7fb63e55f9f102c6a401c7343">&#9670;&#160;</a></span>map_value_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename original_key_compare , typename value_type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/dac/classabsl_1_1container__internal_1_1map__value__compare.html">absl::container_internal::map_value_compare</a>&lt; original_key_compare, value_type &gt;::map_value_compare </td>
+          <td>(</td>
+          <td class="paramtype">original_key_compare</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00347">347</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  347</span>: comp(std::move(c)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1c7d8a48bfd86b34662aa4b594b720a6" name="a1c7d8a48bfd86b34662aa4b594b720a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7d8a48bfd86b34662aa4b594b720a6">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename original_key_compare , typename value_type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="../../d5/dac/classabsl_1_1container__internal_1_1map__value__compare.html">absl::container_internal::map_value_compare</a>&lt; original_key_compare, value_type &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const value_type &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const value_type &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) const -&gt; decltype(comp(lhs.first, rhs.first)) </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00352">352</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  353</span>                                              {</div>
+<div class="line"><span class="lineno">  354</span>    <span class="keywordflow">return</span> comp(lhs.first, rhs.first);</div>
+<div class="line"><span class="lineno">  355</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a3890c9c76b2785f6397396f3a7420c12" name="a3890c9c76b2785f6397396f3a7420c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3890c9c76b2785f6397396f3a7420c12">&#9670;&#160;</a></span>btree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename original_key_compare , typename value_type &gt; </div>
+<div class="memtemplate">
+template&lt;typename Params &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../d6/dec/classabsl_1_1container__internal_1_1btree.html">btree</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00342">342</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a39d7b8882d8a1f6381ee9afc644f71e3" name="a39d7b8882d8a1f6381ee9afc644f71e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d7b8882d8a1f6381ee9afc644f71e3">&#9670;&#160;</a></span>comp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename original_key_compare , typename value_type &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">original_key_compare <a class="el" href="../../d5/dac/classabsl_1_1container__internal_1_1map__value__compare.html">absl::container_internal::map_value_compare</a>&lt; original_key_compare, value_type &gt;::comp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00349">349</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a></li>
 </ul>

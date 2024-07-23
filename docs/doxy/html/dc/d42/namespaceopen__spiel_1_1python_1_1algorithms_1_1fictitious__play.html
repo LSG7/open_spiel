@@ -104,8 +104,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a421e9472ade6024e91b1ada12a1b6464" id="r_a421e9472ade6024e91b1ada12a1b6464"><td class="memItemLeft" align="right" valign="top"><a id="a421e9472ade6024e91b1ada12a1b6464" name="a421e9472ade6024e91b1ada12a1b6464"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_uniform_policy</b> (state)</td></tr>
+<tr class="memitem:a421e9472ade6024e91b1ada12a1b6464" id="r_a421e9472ade6024e91b1ada12a1b6464"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a421e9472ade6024e91b1ada12a1b6464">_uniform_policy</a> (state)</td></tr>
 <tr class="separator:a421e9472ade6024e91b1ada12a1b6464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7ca070fcb693181c425224f5e663009" id="r_ad7ca070fcb693181c425224f5e663009"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7ca070fcb693181c425224f5e663009">_callable_tabular_policy</a> (tabular_policy)</td></tr>
 <tr class="separator:ad7ca070fcb693181c425224f5e663009"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,7 +148,34 @@ Args:
 
 Returns:
   A function `state` -&gt; list of (action, prob)
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00034">34</a> of file <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span><span class="keyword">def </span>_callable_tabular_policy(tabular_policy):</div>
+<div class="line"><span class="lineno">   35</span>  <span class="stringliteral">&quot;&quot;&quot;Turns a tabular policy into a callable.</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   38</span><span class="stringliteral">    tabular_policy: A dictionary mapping information state key to a dictionary</span></div>
+<div class="line"><span class="lineno">   39</span><span class="stringliteral">      of action probabilities (action -&gt; prob).</span></div>
+<div class="line"><span class="lineno">   40</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   41</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   42</span><span class="stringliteral">    A function `state` -&gt; list of (action, prob)</span></div>
+<div class="line"><span class="lineno">   43</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>  <span class="keyword">def </span>wrap(state):</div>
+<div class="line"><span class="lineno">   46</span>    infostate_key = state.information_state_string(state.current_player())</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keyword">assert</span> infostate_key <span class="keywordflow">in</span> tabular_policy</div>
+<div class="line"><span class="lineno">   48</span>    ap_list = []</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> state.legal_actions():</div>
+<div class="line"><span class="lineno">   50</span>      <span class="keyword">assert</span> action <span class="keywordflow">in</span> tabular_policy[infostate_key]</div>
+<div class="line"><span class="lineno">   51</span>      ap_list.append((action, tabular_policy[infostate_key][action]))</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">return</span> ap_list</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">return</span> wrap</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00184">open_spiel.python.algorithms.fictitious_play.XFPSolver.update_average_policies()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d42/namespaceopen__spiel_1_1python_1_1algorithms_1_1fictitious__play_ad7ca070fcb693181c425224f5e663009_icgraph.png" border="0" usemap="#adc/d42/namespaceopen__spiel_1_1python_1_1algorithms_1_1fictitious__play_ad7ca070fcb693181c425224f5e663009_icgraph" alt=""/></div>
@@ -197,7 +223,33 @@ Args:
 
 Returns:
   A function `state` -&gt; list of (action, prob)
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00075">75</a> of file <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span><span class="keyword">def </span>_full_best_response_policy(br_infoset_dict):</div>
+<div class="line"><span class="lineno">   76</span>  <span class="stringliteral">&quot;&quot;&quot;Turns a dictionary of best response action selections into a full policy.</span></div>
+<div class="line"><span class="lineno">   77</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   78</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   79</span><span class="stringliteral">    br_infoset_dict: A dictionary mapping information state to a best response</span></div>
+<div class="line"><span class="lineno">   80</span><span class="stringliteral">      action.</span></div>
+<div class="line"><span class="lineno">   81</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   82</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   83</span><span class="stringliteral">    A function `state` -&gt; list of (action, prob)</span></div>
+<div class="line"><span class="lineno">   84</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>  <span class="keyword">def </span>wrap(state):</div>
+<div class="line"><span class="lineno">   87</span>    infostate_key = state.information_state_string(state.current_player())</div>
+<div class="line"><span class="lineno">   88</span>    br_action = br_infoset_dict[infostate_key]</div>
+<div class="line"><span class="lineno">   89</span>    ap_list = []</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> state.legal_actions():</div>
+<div class="line"><span class="lineno">   91</span>      ap_list.append((action, 1.0 <span class="keywordflow">if</span> action == br_action <span class="keywordflow">else</span> 0.0))</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">return</span> ap_list</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>  <span class="keywordflow">return</span> wrap</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00170">open_spiel.python.algorithms.fictitious_play.XFPSolver.compute_best_responses()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d42/namespaceopen__spiel_1_1python_1_1algorithms_1_1fictitious__play_abaddbcc65ada87fdbb56cfa6f6317104_icgraph.png" border="0" usemap="#adc/d42/namespaceopen__spiel_1_1python_1_1algorithms_1_1fictitious__play_abaddbcc65ada87fdbb56cfa6f6317104_icgraph" alt=""/></div>
@@ -247,7 +299,29 @@ Args:
 
 Returns:
   A dictionary of action -&gt; prob at this state.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00097">97</a> of file <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span><span class="keyword">def </span>_policy_dict_at_state(callable_policy, state):</div>
+<div class="line"><span class="lineno">   98</span>  <span class="stringliteral">&quot;&quot;&quot;Turns a policy function into a dictionary at a specific state.</span></div>
+<div class="line"><span class="lineno">   99</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  100</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  101</span><span class="stringliteral">    callable_policy: A function from `state` -&gt; lis of (action, prob),</span></div>
+<div class="line"><span class="lineno">  102</span><span class="stringliteral">    state: the specific state to extract the policy from.</span></div>
+<div class="line"><span class="lineno">  103</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  104</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  105</span><span class="stringliteral">    A dictionary of action -&gt; prob at this state.</span></div>
+<div class="line"><span class="lineno">  106</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>  infostate_policy_list = callable_policy(state)</div>
+<div class="line"><span class="lineno">  109</span>  infostate_policy = {}</div>
+<div class="line"><span class="lineno">  110</span>  <span class="keywordflow">for</span> ap <span class="keywordflow">in</span> infostate_policy_list:</div>
+<div class="line"><span class="lineno">  111</span>    infostate_policy[ap[0]] = ap[1]</div>
+<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">return</span> infostate_policy</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00197">open_spiel.python.algorithms.fictitious_play.XFPSolver._recursively_update_average_policies()</a>, and <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00242">open_spiel.python.algorithms.fictitious_play.XFPSolver.sample_episode()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d42/namespaceopen__spiel_1_1python_1_1algorithms_1_1fictitious__play_ac233da7b15be59fe8879aa46d4b05f0b_icgraph.png" border="0" usemap="#adc/d42/namespaceopen__spiel_1_1python_1_1algorithms_1_1fictitious__play_ac233da7b15be59fe8879aa46d4b05f0b_icgraph" alt=""/></div>
@@ -286,6 +360,38 @@ Here is the caller graph for this function:</div>
 </map>
 </div>
 
+</div>
+</div>
+<a id="a421e9472ade6024e91b1ada12a1b6464" name="a421e9472ade6024e91b1ada12a1b6464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421e9472ade6024e91b1ada12a1b6464">&#9670;&#160;</a></span>_uniform_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.fictitious_play._uniform_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00029">29</a> of file <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html">fictitious_play.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span><span class="keyword">def </span>_uniform_policy(state):</div>
+<div class="line"><span class="lineno">   30</span>  legal_actions = state.legal_actions()</div>
+<div class="line"><span class="lineno">   31</span>  <span class="keywordflow">return</span> [(action, 1.0 / len(legal_actions)) <span class="keywordflow">for</span> action <span class="keywordflow">in</span> legal_actions]</div>
+<div class="line"><span class="lineno">   32</span> </div>
+<div class="line"><span class="lineno">   33</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

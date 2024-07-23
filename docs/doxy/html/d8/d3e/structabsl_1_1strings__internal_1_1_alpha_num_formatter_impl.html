@@ -115,14 +115,86 @@ Collaboration diagram for absl::strings_internal::AlphaNumFormatterImpl:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad604266c93b70c41fc7f1c4f39db9aed" id="r_ad604266c93b70c41fc7f1c4f39db9aed"><td class="memTemplParams" colspan="2"><a id="ad604266c93b70c41fc7f1c4f39db9aed" name="ad604266c93b70c41fc7f1c4f39db9aed"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad604266c93b70c41fc7f1c4f39db9aed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (std::string *out, const T &amp;t) const</td></tr>
+<tr class="memitem:ad604266c93b70c41fc7f1c4f39db9aed" id="r_ad604266c93b70c41fc7f1c4f39db9aed"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad604266c93b70c41fc7f1c4f39db9aed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad604266c93b70c41fc7f1c4f39db9aed">operator()</a> (std::string *out, const T &amp;t) const</td></tr>
 <tr class="separator:ad604266c93b70c41fc7f1c4f39db9aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a833d3551588cff48b04803cfcdb592cb" id="r_a833d3551588cff48b04803cfcdb592cb"><td class="memItemLeft" align="right" valign="top"><a id="a833d3551588cff48b04803cfcdb592cb" name="a833d3551588cff48b04803cfcdb592cb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (std::string *out, const <a class="el" href="../../de/d5e/classabsl_1_1_alpha_num.html">AlphaNum</a> &amp;t) const</td></tr>
+<tr class="memitem:a833d3551588cff48b04803cfcdb592cb" id="r_a833d3551588cff48b04803cfcdb592cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a833d3551588cff48b04803cfcdb592cb">operator()</a> (std::string *out, const <a class="el" href="../../de/d5e/classabsl_1_1_alpha_num.html">AlphaNum</a> &amp;t) const</td></tr>
 <tr class="separator:a833d3551588cff48b04803cfcdb592cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/d0c/str__join__internal_8h_source.html#l00058">58</a> of file <a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a833d3551588cff48b04803cfcdb592cb" name="a833d3551588cff48b04803cfcdb592cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a833d3551588cff48b04803cfcdb592cb">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::strings_internal::AlphaNumFormatterImpl::operator() </td>
+          <td>(</td>
+          <td class="paramtype">std::string *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../de/d5e/classabsl_1_1_alpha_num.html">AlphaNum</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d0c/str__join__internal_8h_source.html#l00066">66</a> of file <a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                           {</div>
+<div class="line"><span class="lineno">   67</span>    StrAppend(out, t);</div>
+<div class="line"><span class="lineno">   68</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad604266c93b70c41fc7f1c4f39db9aed" name="ad604266c93b70c41fc7f1c4f39db9aed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad604266c93b70c41fc7f1c4f39db9aed">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::strings_internal::AlphaNumFormatterImpl::operator() </td>
+          <td>(</td>
+          <td class="paramtype">std::string *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d0c/str__join__internal_8h_source.html#l00062">62</a> of file <a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                    {</div>
+<div class="line"><span class="lineno">   63</span>    StrAppend(out, AlphaNum(t));</div>
+<div class="line"><span class="lineno">   64</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/internal/<a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a></li>
 </ul>

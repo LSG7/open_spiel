@@ -112,35 +112,314 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aa4a6963148cebfafb5053f32309f60b3" id="r_aa4a6963148cebfafb5053f32309f60b3"><td class="memItemLeft" align="right" valign="top"><a id="aa4a6963148cebfafb5053f32309f60b3" name="aa4a6963148cebfafb5053f32309f60b3"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>kCallMallocHook</b> = 0x0001
+<tr class="memitem:aa4a6963148cebfafb5053f32309f60b3" id="r_aa4a6963148cebfafb5053f32309f60b3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>kCallMallocHook</b> = 0x0001
 , <b>kAsyncSignalSafe</b> = 0x0002
  }</td></tr>
 <tr class="separator:aa4a6963148cebfafb5053f32309f60b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a828a7b358441c8536f7bb486c3b422eb" id="r_a828a7b358441c8536f7bb486c3b422eb"><td class="memItemLeft" align="right" valign="top"><a id="a828a7b358441c8536f7bb486c3b422eb" name="a828a7b358441c8536f7bb486c3b422eb"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>Alloc</b> (size_t request) ABSL_ATTRIBUTE_SECTION(malloc_hook)</td></tr>
+<tr class="memitem:a828a7b358441c8536f7bb486c3b422eb" id="r_a828a7b358441c8536f7bb486c3b422eb"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a828a7b358441c8536f7bb486c3b422eb">Alloc</a> (size_t request) ABSL_ATTRIBUTE_SECTION(malloc_hook)</td></tr>
 <tr class="separator:a828a7b358441c8536f7bb486c3b422eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76db89c0f91f9b36c64647b3a67ef1ca" id="r_a76db89c0f91f9b36c64647b3a67ef1ca"><td class="memItemLeft" align="right" valign="top"><a id="a76db89c0f91f9b36c64647b3a67ef1ca" name="a76db89c0f91f9b36c64647b3a67ef1ca"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>AllocWithArena</b> (size_t request, <a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *arena) ABSL_ATTRIBUTE_SECTION(malloc_hook)</td></tr>
+<tr class="memitem:a76db89c0f91f9b36c64647b3a67ef1ca" id="r_a76db89c0f91f9b36c64647b3a67ef1ca"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76db89c0f91f9b36c64647b3a67ef1ca">AllocWithArena</a> (size_t request, <a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *arena) ABSL_ATTRIBUTE_SECTION(malloc_hook)</td></tr>
 <tr class="separator:a76db89c0f91f9b36c64647b3a67ef1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac30893025fd9bf0bea5df8a9c566f9b8" id="r_ac30893025fd9bf0bea5df8a9c566f9b8"><td class="memItemLeft" align="right" valign="top"><a id="ac30893025fd9bf0bea5df8a9c566f9b8" name="ac30893025fd9bf0bea5df8a9c566f9b8"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Free</b> (void *s) ABSL_ATTRIBUTE_SECTION(malloc_hook)</td></tr>
+<tr class="memitem:ac30893025fd9bf0bea5df8a9c566f9b8" id="r_ac30893025fd9bf0bea5df8a9c566f9b8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac30893025fd9bf0bea5df8a9c566f9b8">Free</a> (void *s) ABSL_ATTRIBUTE_SECTION(malloc_hook)</td></tr>
 <tr class="separator:ac30893025fd9bf0bea5df8a9c566f9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d4a9602b6cb93211a8356a62e5130d1" id="r_a7d4a9602b6cb93211a8356a62e5130d1"><td class="memItemLeft" align="right" valign="top"><a id="a7d4a9602b6cb93211a8356a62e5130d1" name="a7d4a9602b6cb93211a8356a62e5130d1"></a>
-static <a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>NewArena</b> (uint32_t flags)</td></tr>
+<tr class="memitem:a7d4a9602b6cb93211a8356a62e5130d1" id="r_a7d4a9602b6cb93211a8356a62e5130d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d4a9602b6cb93211a8356a62e5130d1">NewArena</a> (uint32_t flags)</td></tr>
 <tr class="separator:a7d4a9602b6cb93211a8356a62e5130d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3b66bb104f1768922547ff87632897b" id="r_af3b66bb104f1768922547ff87632897b"><td class="memItemLeft" align="right" valign="top"><a id="af3b66bb104f1768922547ff87632897b" name="af3b66bb104f1768922547ff87632897b"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>DeleteArena</b> (<a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *arena)</td></tr>
+<tr class="memitem:af3b66bb104f1768922547ff87632897b" id="r_af3b66bb104f1768922547ff87632897b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3b66bb104f1768922547ff87632897b">DeleteArena</a> (<a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *arena)</td></tr>
 <tr class="separator:af3b66bb104f1768922547ff87632897b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a739c0221ee14ef8f60bdf40c7e3ba7cf" id="r_a739c0221ee14ef8f60bdf40c7e3ba7cf"><td class="memItemLeft" align="right" valign="top"><a id="a739c0221ee14ef8f60bdf40c7e3ba7cf" name="a739c0221ee14ef8f60bdf40c7e3ba7cf"></a>
-static <a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultArena</b> ()</td></tr>
+<tr class="memitem:a739c0221ee14ef8f60bdf40c7e3ba7cf" id="r_a739c0221ee14ef8f60bdf40c7e3ba7cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a739c0221ee14ef8f60bdf40c7e3ba7cf">DefaultArena</a> ()</td></tr>
 <tr class="separator:a739c0221ee14ef8f60bdf40c7e3ba7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/d0b/low__level__alloc_8h_source.html#l00061">61</a> of file <a class="el" href="../../df/d0b/low__level__alloc_8h_source.html">low_level_alloc.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="aa4a6963148cebfafb5053f32309f60b3" name="aa4a6963148cebfafb5053f32309f60b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a6963148cebfafb5053f32309f60b3">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d0b/low__level__alloc_8h_source.html#l00091">91</a> of file <a class="el" href="../../df/d0b/low__level__alloc_8h_source.html">low_level_alloc.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>       {</div>
+<div class="line"><span class="lineno">   92</span>    <span class="comment">// Report calls to Alloc() and Free() via the MallocHook interface.</span></div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment">// Set in the DefaultArena.</span></div>
+<div class="line"><span class="lineno">   94</span>    kCallMallocHook = 0x0001,</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span><span class="preprocessor">#ifndef ABSL_LOW_LEVEL_ALLOC_ASYNC_SIGNAL_SAFE_MISSING</span></div>
+<div class="line"><span class="lineno">   97</span>    <span class="comment">// Make calls to Alloc(), Free() be async-signal-safe. Not set in</span></div>
+<div class="line"><span class="lineno">   98</span>    <span class="comment">// DefaultArena(). Not supported on all platforms.</span></div>
+<div class="line"><span class="lineno">   99</span>    kAsyncSignalSafe = 0x0002,</div>
+<div class="line"><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  101</span>  };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a828a7b358441c8536f7bb486c3b422eb" name="a828a7b358441c8536f7bb486c3b422eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a828a7b358441c8536f7bb486c3b422eb">&#9670;&#160;</a></span>Alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * absl::base_internal::LowLevelAlloc::Alloc </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>request</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00605">605</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  605</span>                                         {</div>
+<div class="line"><span class="lineno">  606</span>  <span class="keywordtype">void</span> *result = DoAllocWithArena(request, DefaultArena());</div>
+<div class="line"><span class="lineno">  607</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  608</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a76db89c0f91f9b36c64647b3a67ef1ca" name="a76db89c0f91f9b36c64647b3a67ef1ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76db89c0f91f9b36c64647b3a67ef1ca">&#9670;&#160;</a></span>AllocWithArena()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * absl::base_internal::LowLevelAlloc::AllocWithArena </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>request</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *</td>          <td class="paramname"><span class="paramname"><em>arena</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00610">610</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  610</span>                                                                {</div>
+<div class="line"><span class="lineno">  611</span>  ABSL_RAW_CHECK(arena != <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;must pass a valid arena&quot;</span>);</div>
+<div class="line"><span class="lineno">  612</span>  <span class="keywordtype">void</span> *result = DoAllocWithArena(request, arena);</div>
+<div class="line"><span class="lineno">  613</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  614</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a739c0221ee14ef8f60bdf40c7e3ba7cf" name="a739c0221ee14ef8f60bdf40c7e3ba7cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a739c0221ee14ef8f60bdf40c7e3ba7cf">&#9670;&#160;</a></span>DefaultArena()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">LowLevelAlloc::Arena</a> * absl::base_internal::LowLevelAlloc::DefaultArena </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00270">270</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                {</div>
+<div class="line"><span class="lineno">  271</span>  base_internal::LowLevelCallOnce(&amp;create_globals_once, CreateGlobalArenas);</div>
+<div class="line"><span class="lineno">  272</span>  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>LowLevelAlloc::Arena*<span class="keyword">&gt;</span>(&amp;default_arena_storage);</div>
+<div class="line"><span class="lineno">  273</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af3b66bb104f1768922547ff87632897b" name="af3b66bb104f1768922547ff87632897b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3b66bb104f1768922547ff87632897b">&#9670;&#160;</a></span>DeleteArena()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool absl::base_internal::LowLevelAlloc::DeleteArena </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">Arena</a> *</td>          <td class="paramname"><span class="paramname"><em>arena</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00383">383</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  383</span>                                            {</div>
+<div class="line"><span class="lineno">  384</span>  ABSL_RAW_CHECK(</div>
+<div class="line"><span class="lineno">  385</span>      arena != <span class="keyword">nullptr</span> &amp;&amp; arena != DefaultArena() &amp;&amp; arena != UnhookedArena(),</div>
+<div class="line"><span class="lineno">  386</span>      <span class="stringliteral">&quot;may not delete default arena&quot;</span>);</div>
+<div class="line"><span class="lineno">  387</span>  ArenaLock section(arena);</div>
+<div class="line"><span class="lineno">  388</span>  <span class="keywordflow">if</span> (arena-&gt;allocation_count != 0) {</div>
+<div class="line"><span class="lineno">  389</span>    section.Leave();</div>
+<div class="line"><span class="lineno">  390</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  391</span>  }</div>
+<div class="line"><span class="lineno">  392</span>  <span class="keywordflow">while</span> (arena-&gt;freelist.next[0] != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  393</span>    AllocList *region = arena-&gt;freelist.next[0];</div>
+<div class="line"><span class="lineno">  394</span>    <span class="keywordtype">size_t</span> size = region-&gt;header.size;</div>
+<div class="line"><span class="lineno">  395</span>    arena-&gt;freelist.next[0] = region-&gt;next[0];</div>
+<div class="line"><span class="lineno">  396</span>    ABSL_RAW_CHECK(</div>
+<div class="line"><span class="lineno">  397</span>        region-&gt;header.magic == Magic(kMagicUnallocated, &amp;region-&gt;header),</div>
+<div class="line"><span class="lineno">  398</span>        <span class="stringliteral">&quot;bad magic number in DeleteArena()&quot;</span>);</div>
+<div class="line"><span class="lineno">  399</span>    ABSL_RAW_CHECK(region-&gt;header.arena == arena,</div>
+<div class="line"><span class="lineno">  400</span>                   <span class="stringliteral">&quot;bad arena pointer in DeleteArena()&quot;</span>);</div>
+<div class="line"><span class="lineno">  401</span>    ABSL_RAW_CHECK(size % arena-&gt;pagesize == 0,</div>
+<div class="line"><span class="lineno">  402</span>                   <span class="stringliteral">&quot;empty arena has non-page-aligned block size&quot;</span>);</div>
+<div class="line"><span class="lineno">  403</span>    ABSL_RAW_CHECK(<span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(region) % arena-&gt;pagesize == 0,</div>
+<div class="line"><span class="lineno">  404</span>                   <span class="stringliteral">&quot;empty arena has non-page-aligned block&quot;</span>);</div>
+<div class="line"><span class="lineno">  405</span>    <span class="keywordtype">int</span> munmap_result;</div>
+<div class="line"><span class="lineno">  406</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><span class="lineno">  407</span>    munmap_result = VirtualFree(region, 0, MEM_RELEASE);</div>
+<div class="line"><span class="lineno">  408</span>    ABSL_RAW_CHECK(munmap_result != 0,</div>
+<div class="line"><span class="lineno">  409</span>                   <span class="stringliteral">&quot;LowLevelAlloc::DeleteArena: VitualFree failed&quot;</span>);</div>
+<div class="line"><span class="lineno">  410</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  411</span><span class="preprocessor">#ifndef ABSL_LOW_LEVEL_ALLOC_ASYNC_SIGNAL_SAFE_MISSING</span></div>
+<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">if</span> ((arena-&gt;flags &amp; LowLevelAlloc::kAsyncSignalSafe) == 0) {</div>
+<div class="line"><span class="lineno">  413</span>      munmap_result = munmap(region, size);</div>
+<div class="line"><span class="lineno">  414</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  415</span>      munmap_result = base_internal::DirectMunmap(region, size);</div>
+<div class="line"><span class="lineno">  416</span>    }</div>
+<div class="line"><span class="lineno">  417</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  418</span>    munmap_result = munmap(region, size);</div>
+<div class="line"><span class="lineno">  419</span><span class="preprocessor">#endif  </span><span class="comment">// ABSL_LOW_LEVEL_ALLOC_ASYNC_SIGNAL_SAFE_MISSING</span></div>
+<div class="line"><span class="lineno">  420</span>    <span class="keywordflow">if</span> (munmap_result != 0) {</div>
+<div class="line"><span class="lineno">  421</span>      ABSL_RAW_LOG(FATAL, <span class="stringliteral">&quot;LowLevelAlloc::DeleteArena: munmap failed: %d&quot;</span>,</div>
+<div class="line"><span class="lineno">  422</span>                   errno);</div>
+<div class="line"><span class="lineno">  423</span>    }</div>
+<div class="line"><span class="lineno">  424</span><span class="preprocessor">#endif  </span><span class="comment">// _WIN32</span></div>
+<div class="line"><span class="lineno">  425</span>  }</div>
+<div class="line"><span class="lineno">  426</span>  section.Leave();</div>
+<div class="line"><span class="lineno">  427</span>  arena-&gt;~Arena();</div>
+<div class="line"><span class="lineno">  428</span>  Free(arena);</div>
+<div class="line"><span class="lineno">  429</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  430</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac30893025fd9bf0bea5df8a9c566f9b8" name="ac30893025fd9bf0bea5df8a9c566f9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30893025fd9bf0bea5df8a9c566f9b8">&#9670;&#160;</a></span>Free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::base_internal::LowLevelAlloc::Free </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00509">509</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  509</span>                                {</div>
+<div class="line"><span class="lineno">  510</span>  <span class="keywordflow">if</span> (v != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  511</span>    AllocList *f = <span class="keyword">reinterpret_cast&lt;</span>AllocList *<span class="keyword">&gt;</span>(</div>
+<div class="line"><span class="lineno">  512</span>                        <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(v) - <span class="keyword">sizeof</span> (f-&gt;header));</div>
+<div class="line"><span class="lineno">  513</span>    LowLevelAlloc::Arena *arena = f-&gt;header.arena;</div>
+<div class="line"><span class="lineno">  514</span>    ArenaLock section(arena);</div>
+<div class="line"><span class="lineno">  515</span>    AddToFreelist(v, arena);</div>
+<div class="line"><span class="lineno">  516</span>    ABSL_RAW_CHECK(arena-&gt;allocation_count &gt; 0, <span class="stringliteral">&quot;nothing in arena to free&quot;</span>);</div>
+<div class="line"><span class="lineno">  517</span>    arena-&gt;allocation_count--;</div>
+<div class="line"><span class="lineno">  518</span>    section.Leave();</div>
+<div class="line"><span class="lineno">  519</span>  }</div>
+<div class="line"><span class="lineno">  520</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7d4a9602b6cb93211a8356a62e5130d1" name="a7d4a9602b6cb93211a8356a62e5130d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d4a9602b6cb93211a8356a62e5130d1">&#9670;&#160;</a></span>NewArena()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d26/structabsl_1_1base__internal_1_1_low_level_alloc_1_1_arena.html">LowLevelAlloc::Arena</a> * absl::base_internal::LowLevelAlloc::NewArena </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>flags</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html#l00367">367</a> of file <a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  367</span>                                                          {</div>
+<div class="line"><span class="lineno">  368</span>  Arena *meta_data_arena = DefaultArena();</div>
+<div class="line"><span class="lineno">  369</span><span class="preprocessor">#ifndef ABSL_LOW_LEVEL_ALLOC_ASYNC_SIGNAL_SAFE_MISSING</span></div>
+<div class="line"><span class="lineno">  370</span>  <span class="keywordflow">if</span> ((flags &amp; LowLevelAlloc::kAsyncSignalSafe) != 0) {</div>
+<div class="line"><span class="lineno">  371</span>    meta_data_arena = UnhookedAsyncSigSafeArena();</div>
+<div class="line"><span class="lineno">  372</span>  } <span class="keywordflow">else</span>  <span class="comment">// NOLINT(readability/braces)</span></div>
+<div class="line"><span class="lineno">  373</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  374</span>      <span class="keywordflow">if</span> ((flags &amp; LowLevelAlloc::kCallMallocHook) == 0) {</div>
+<div class="line"><span class="lineno">  375</span>    meta_data_arena = UnhookedArena();</div>
+<div class="line"><span class="lineno">  376</span>  }</div>
+<div class="line"><span class="lineno">  377</span>  Arena *result =</div>
+<div class="line"><span class="lineno">  378</span>    <span class="keyword">new</span> (AllocWithArena(<span class="keyword">sizeof</span> (*result), meta_data_arena)) Arena(flags);</div>
+<div class="line"><span class="lineno">  379</span>  <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  380</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../df/d0b/low__level__alloc_8h_source.html">low_level_alloc.h</a></li>
-<li>open_spiel/abseil-cpp/absl/base/internal/<b>low_level_alloc.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../d5/d09/low__level__alloc_8cc_source.html">low_level_alloc.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

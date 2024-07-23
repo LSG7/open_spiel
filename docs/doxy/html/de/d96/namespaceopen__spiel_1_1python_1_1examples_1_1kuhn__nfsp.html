@@ -103,18 +103,101 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a305b6782554bae1fd0f7bbdcfbc86747" id="r_a305b6782554bae1fd0f7bbdcfbc86747"><td class="memItemLeft" align="right" valign="top"><a id="a305b6782554bae1fd0f7bbdcfbc86747" name="a305b6782554bae1fd0f7bbdcfbc86747"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (unused_argv)</td></tr>
+<tr class="memitem:a305b6782554bae1fd0f7bbdcfbc86747" id="r_a305b6782554bae1fd0f7bbdcfbc86747"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a305b6782554bae1fd0f7bbdcfbc86747">main</a> (unused_argv)</td></tr>
 <tr class="separator:a305b6782554bae1fd0f7bbdcfbc86747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aff61dea7455f9500ad482710d9f9872a" id="r_aff61dea7455f9500ad482710d9f9872a"><td class="memItemLeft" align="right" valign="top"><a id="aff61dea7455f9500ad482710d9f9872a" name="aff61dea7455f9500ad482710d9f9872a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:aff61dea7455f9500ad482710d9f9872a" id="r_aff61dea7455f9500ad482710d9f9872a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff61dea7455f9500ad482710d9f9872a">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:aff61dea7455f9500ad482710d9f9872a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">NFSP agents trained on Kuhn Poker.</pre> </div></div><!-- contents -->
+<div class="textblock"><pre class="fragment">NFSP agents trained on Kuhn Poker.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a305b6782554bae1fd0f7bbdcfbc86747" name="a305b6782554bae1fd0f7bbdcfbc86747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a305b6782554bae1fd0f7bbdcfbc86747">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.kuhn_nfsp.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>unused_argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dd6/kuhn__nfsp_8py_source.html#l00073">73</a> of file <a class="el" href="../../db/dd6/kuhn__nfsp_8py_source.html">kuhn_nfsp.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(unused_argv):</div>
+<div class="line"><span class="lineno">   74</span>  game = <span class="stringliteral">&quot;kuhn_poker&quot;</span></div>
+<div class="line"><span class="lineno">   75</span>  num_players = 2</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>  env_configs = {<span class="stringliteral">&quot;players&quot;</span>: num_players}</div>
+<div class="line"><span class="lineno">   78</span>  env = rl_environment.Environment(game, **env_configs)</div>
+<div class="line"><span class="lineno">   79</span>  info_state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">   80</span>  num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>  hidden_layers_sizes = [int(l) <span class="keywordflow">for</span> l <span class="keywordflow">in</span> FLAGS.hidden_layers_sizes]</div>
+<div class="line"><span class="lineno">   83</span>  kwargs = {</div>
+<div class="line"><span class="lineno">   84</span>      <span class="stringliteral">&quot;replay_buffer_capacity&quot;</span>: FLAGS.replay_buffer_capacity,</div>
+<div class="line"><span class="lineno">   85</span>      <span class="stringliteral">&quot;epsilon_decay_duration&quot;</span>: FLAGS.num_train_episodes,</div>
+<div class="line"><span class="lineno">   86</span>      <span class="stringliteral">&quot;epsilon_start&quot;</span>: 0.06,</div>
+<div class="line"><span class="lineno">   87</span>      <span class="stringliteral">&quot;epsilon_end&quot;</span>: 0.001,</div>
+<div class="line"><span class="lineno">   88</span>  }</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>  <span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</div>
+<div class="line"><span class="lineno">   91</span>    <span class="comment"># pylint: disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">   92</span>    agents = [</div>
+<div class="line"><span class="lineno">   93</span>        nfsp.NFSP(sess, idx, info_state_size, num_actions, hidden_layers_sizes,</div>
+<div class="line"><span class="lineno">   94</span>                  FLAGS.reservoir_buffer_capacity, FLAGS.anticipatory_param,</div>
+<div class="line"><span class="lineno">   95</span>                  **kwargs) <span class="keywordflow">for</span> idx <span class="keywordflow">in</span> range(num_players)</div>
+<div class="line"><span class="lineno">   96</span>    ]</div>
+<div class="line"><span class="lineno">   97</span>    expl_policies_avg = NFSPPolicies(env, agents, nfsp.MODE.average_policy)</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    sess.run(tf.global_variables_initializer())</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">for</span> ep <span class="keywordflow">in</span> range(FLAGS.num_train_episodes):</div>
+<div class="line"><span class="lineno">  101</span>      <span class="keywordflow">if</span> (ep + 1) % FLAGS.eval_every == 0:</div>
+<div class="line"><span class="lineno">  102</span>        losses = [agent.loss <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents]</div>
+<div class="line"><span class="lineno">  103</span>        logging.info(<span class="stringliteral">&quot;Losses: %s&quot;</span>, losses)</div>
+<div class="line"><span class="lineno">  104</span>        expl = exploitability.exploitability(env.game, expl_policies_avg)</div>
+<div class="line"><span class="lineno">  105</span>        logging.info(<span class="stringliteral">&quot;[%s] Exploitability AVG %s&quot;</span>, ep + 1, expl)</div>
+<div class="line"><span class="lineno">  106</span>        logging.info(<span class="stringliteral">&quot;_____________________________________________&quot;</span>)</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>      time_step = env.reset()</div>
+<div class="line"><span class="lineno">  109</span>      <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">  110</span>        player_id = time_step.observations[<span class="stringliteral">&quot;current_player&quot;</span>]</div>
+<div class="line"><span class="lineno">  111</span>        agent_output = agents[player_id].step(time_step)</div>
+<div class="line"><span class="lineno">  112</span>        action_list = [agent_output.action]</div>
+<div class="line"><span class="lineno">  113</span>        time_step = env.step(action_list)</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>      <span class="comment"># Episode is over, step all agents with final info state.</span></div>
+<div class="line"><span class="lineno">  116</span>      <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents:</div>
+<div class="line"><span class="lineno">  117</span>        agent.step(time_step)</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aff61dea7455f9500ad482710d9f9872a" name="aff61dea7455f9500ad482710d9f9872a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff61dea7455f9500ad482710d9f9872a">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.kuhn_nfsp.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dd6/kuhn__nfsp_8py_source.html#l00027">27</a> of file <a class="el" href="../../db/dd6/kuhn__nfsp_8py_source.html">kuhn_nfsp.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

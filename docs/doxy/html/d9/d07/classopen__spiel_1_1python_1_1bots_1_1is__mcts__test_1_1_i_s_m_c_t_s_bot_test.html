@@ -117,18 +117,113 @@ Collaboration diagram for open_spiel.python.bots.is_mcts_test.ISMCTSBotTest:</di
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a43298dcc7e7d450e9cddd15a57a3f08b" id="r_a43298dcc7e7d450e9cddd15a57a3f08b"><td class="memItemLeft" align="right" valign="top"><a id="a43298dcc7e7d450e9cddd15a57a3f08b" name="a43298dcc7e7d450e9cddd15a57a3f08b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ismcts_play_game</b> (self, game)</td></tr>
+<tr class="memitem:a43298dcc7e7d450e9cddd15a57a3f08b" id="r_a43298dcc7e7d450e9cddd15a57a3f08b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43298dcc7e7d450e9cddd15a57a3f08b">ismcts_play_game</a> (self, game)</td></tr>
 <tr class="separator:a43298dcc7e7d450e9cddd15a57a3f08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab50d4156893dbf7397d0dc90c9324f73" id="r_ab50d4156893dbf7397d0dc90c9324f73"><td class="memItemLeft" align="right" valign="top"><a id="ab50d4156893dbf7397d0dc90c9324f73" name="ab50d4156893dbf7397d0dc90c9324f73"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_basic_sim_kuhn</b> (self)</td></tr>
+<tr class="memitem:ab50d4156893dbf7397d0dc90c9324f73" id="r_ab50d4156893dbf7397d0dc90c9324f73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50d4156893dbf7397d0dc90c9324f73">test_basic_sim_kuhn</a> (self)</td></tr>
 <tr class="separator:ab50d4156893dbf7397d0dc90c9324f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92ccdcd1c10246e1bd584cf1ef78e30a" id="r_a92ccdcd1c10246e1bd584cf1ef78e30a"><td class="memItemLeft" align="right" valign="top"><a id="a92ccdcd1c10246e1bd584cf1ef78e30a" name="a92ccdcd1c10246e1bd584cf1ef78e30a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_basic_sim_leduc</b> (self)</td></tr>
+<tr class="memitem:a92ccdcd1c10246e1bd584cf1ef78e30a" id="r_a92ccdcd1c10246e1bd584cf1ef78e30a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92ccdcd1c10246e1bd584cf1ef78e30a">test_basic_sim_leduc</a> (self)</td></tr>
 <tr class="separator:a92ccdcd1c10246e1bd584cf1ef78e30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/de4/is__mcts__test_8py_source.html#l00029">29</a> of file <a class="el" href="../../d8/de4/is__mcts__test_8py_source.html">is_mcts_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a43298dcc7e7d450e9cddd15a57a3f08b" name="a43298dcc7e7d450e9cddd15a57a3f08b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43298dcc7e7d450e9cddd15a57a3f08b">&#9670;&#160;</a></span>ismcts_play_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.bots.is_mcts_test.ISMCTSBotTest.ismcts_play_game </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/de4/is__mcts__test_8py_source.html#l00031">31</a> of file <a class="el" href="../../d8/de4/is__mcts__test_8py_source.html">is_mcts_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>  <span class="keyword">def </span>ismcts_play_game(self, game):</div>
+<div class="line"><span class="lineno">   32</span>    evaluator = pyspiel.RandomRolloutEvaluator(1, SEED)</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">for</span> final_policy_type <span class="keywordflow">in</span> [</div>
+<div class="line"><span class="lineno">   34</span>        pyspiel.ISMCTSFinalPolicyType.NORMALIZED_VISIT_COUNT,</div>
+<div class="line"><span class="lineno">   35</span>        pyspiel.ISMCTSFinalPolicyType.MAX_VISIT_COUNT,</div>
+<div class="line"><span class="lineno">   36</span>        pyspiel.ISMCTSFinalPolicyType.MAX_VALUE</div>
+<div class="line"><span class="lineno">   37</span>    ]:</div>
+<div class="line"><span class="lineno">   38</span>      bot = pyspiel.ISMCTSBot(SEED, evaluator, 5.0, 1000, -1, final_policy_type,</div>
+<div class="line"><span class="lineno">   39</span>                              <span class="keyword">False</span>, <span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   40</span>      bots = [bot] * game.num_players()</div>
+<div class="line"><span class="lineno">   41</span>      evaluate_bots.evaluate_bots(game.new_initial_state(), bots, np.random)</div>
+<div class="line"><span class="lineno">   42</span>      bot = pyspiel.ISMCTSBot(SEED, evaluator, 5.0, 1000, 10, final_policy_type,</div>
+<div class="line"><span class="lineno">   43</span>                              <span class="keyword">False</span>, <span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   44</span>      bots = [bot] * game.num_players()</div>
+<div class="line"><span class="lineno">   45</span>      evaluate_bots.evaluate_bots(game.new_initial_state(), bots, np.random)</div>
+<div class="line"><span class="lineno">   46</span>      bot = pyspiel.ISMCTSBot(SEED, evaluator, 5.0, 1000, 10, final_policy_type,</div>
+<div class="line"><span class="lineno">   47</span>                              <span class="keyword">True</span>, <span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   48</span>      bots = [bot] * game.num_players()</div>
+<div class="line"><span class="lineno">   49</span>      evaluate_bots.evaluate_bots(game.new_initial_state(), bots, np.random)</div>
+<div class="line"><span class="lineno">   50</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab50d4156893dbf7397d0dc90c9324f73" name="ab50d4156893dbf7397d0dc90c9324f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50d4156893dbf7397d0dc90c9324f73">&#9670;&#160;</a></span>test_basic_sim_kuhn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.bots.is_mcts_test.ISMCTSBotTest.test_basic_sim_kuhn </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/de4/is__mcts__test_8py_source.html#l00051">51</a> of file <a class="el" href="../../d8/de4/is__mcts__test_8py_source.html">is_mcts_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>  <span class="keyword">def </span>test_basic_sim_kuhn(self):</div>
+<div class="line"><span class="lineno">   52</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   53</span>    self.ismcts_play_game(game)</div>
+<div class="line"><span class="lineno">   54</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker(players=3)&quot;</span>)</div>
+<div class="line"><span class="lineno">   55</span>    self.ismcts_play_game(game)</div>
+<div class="line"><span class="lineno">   56</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a92ccdcd1c10246e1bd584cf1ef78e30a" name="a92ccdcd1c10246e1bd584cf1ef78e30a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92ccdcd1c10246e1bd584cf1ef78e30a">&#9670;&#160;</a></span>test_basic_sim_leduc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.bots.is_mcts_test.ISMCTSBotTest.test_basic_sim_leduc </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/de4/is__mcts__test_8py_source.html#l00057">57</a> of file <a class="el" href="../../d8/de4/is__mcts__test_8py_source.html">is_mcts_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>  <span class="keyword">def </span>test_basic_sim_leduc(self):</div>
+<div class="line"><span class="lineno">   58</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;leduc_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   59</span>    self.ismcts_play_game(game)</div>
+<div class="line"><span class="lineno">   60</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;leduc_poker(players=3)&quot;</span>)</div>
+<div class="line"><span class="lineno">   61</span>    self.ismcts_play_game(game)</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/bots/<b>is_mcts_test.py</b></li>
+<li>open_spiel/python/bots/<a class="el" href="../../d8/de4/is__mcts__test_8py_source.html">is_mcts_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

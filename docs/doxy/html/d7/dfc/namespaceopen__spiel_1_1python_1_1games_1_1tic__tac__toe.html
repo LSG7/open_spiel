@@ -118,17 +118,13 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a323099ad7a1fb5511d26a8884222837d" id="r_a323099ad7a1fb5511d26a8884222837d"><td class="memItemLeft" align="right" valign="top"><a id="a323099ad7a1fb5511d26a8884222837d" name="a323099ad7a1fb5511d26a8884222837d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>_NUM_PLAYERS</b> = 2</td></tr>
+<tr class="memitem:a323099ad7a1fb5511d26a8884222837d" id="r_a323099ad7a1fb5511d26a8884222837d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a323099ad7a1fb5511d26a8884222837d">_NUM_PLAYERS</a> = 2</td></tr>
 <tr class="separator:a323099ad7a1fb5511d26a8884222837d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a765a19257a9b9cf96e3f5ae871b52bff" id="r_a765a19257a9b9cf96e3f5ae871b52bff"><td class="memItemLeft" align="right" valign="top"><a id="a765a19257a9b9cf96e3f5ae871b52bff" name="a765a19257a9b9cf96e3f5ae871b52bff"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>_NUM_ROWS</b> = 3</td></tr>
+<tr class="memitem:a765a19257a9b9cf96e3f5ae871b52bff" id="r_a765a19257a9b9cf96e3f5ae871b52bff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a765a19257a9b9cf96e3f5ae871b52bff">_NUM_ROWS</a> = 3</td></tr>
 <tr class="separator:a765a19257a9b9cf96e3f5ae871b52bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e507aed069aaf4eb493a32317b5b07" id="r_a66e507aed069aaf4eb493a32317b5b07"><td class="memItemLeft" align="right" valign="top"><a id="a66e507aed069aaf4eb493a32317b5b07" name="a66e507aed069aaf4eb493a32317b5b07"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>_NUM_COLS</b> = 3</td></tr>
+<tr class="memitem:a66e507aed069aaf4eb493a32317b5b07" id="r_a66e507aed069aaf4eb493a32317b5b07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66e507aed069aaf4eb493a32317b5b07">_NUM_COLS</a> = 3</td></tr>
 <tr class="separator:a66e507aed069aaf4eb493a32317b5b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac93a3428436b977660588692f6f47f8b" id="r_ac93a3428436b977660588692f6f47f8b"><td class="memItemLeft" align="right" valign="top"><a id="ac93a3428436b977660588692f6f47f8b" name="ac93a3428436b977660588692f6f47f8b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>_NUM_CELLS</b> = _NUM_ROWS * _NUM_COLS</td></tr>
+<tr class="memitem:ac93a3428436b977660588692f6f47f8b" id="r_ac93a3428436b977660588692f6f47f8b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac93a3428436b977660588692f6f47f8b">_NUM_CELLS</a> = _NUM_ROWS * _NUM_COLS</td></tr>
 <tr class="separator:ac93a3428436b977660588692f6f47f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13bdfd4153d971ee690942f4545e6e2e" id="r_a13bdfd4153d971ee690942f4545e6e2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13bdfd4153d971ee690942f4545e6e2e">_GAME_TYPE</a></td></tr>
 <tr class="separator:a13bdfd4153d971ee690942f4545e6e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,7 +167,18 @@ relies on processing and updating states as it goes, e.g., MCTS.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns a string representation of the board.</pre> <div class="dynheader">
+<pre class="fragment">Returns a string representation of the board.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00189">189</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span><span class="keyword">def </span>_board_to_string(board):</div>
+<div class="line"><span class="lineno">  190</span>  <span class="stringliteral">&quot;&quot;&quot;Returns a string representation of the board.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  191</span>  <span class="keywordflow">return</span> <span class="stringliteral">&quot;\n&quot;</span>.join(<span class="stringliteral">&quot;&quot;</span>.join(row) <span class="keywordflow">for</span> row <span class="keywordflow">in</span> board)</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span><span class="comment"># Register the game with the OpenSpiel library</span></div>
+<div class="line"><span class="lineno">  195</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00129">open_spiel.python.games.tic_tac_toe.TicTacToeState.__str__()</a>, and <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00160">open_spiel.python.games.tic_tac_toe.BoardObserver.string_from()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dfc/namespaceopen__spiel_1_1python_1_1games_1_1tic__tac__toe_ace0c7b2622ba8e2e229137f8d8cee673_icgraph.png" border="0" usemap="#ad7/dfc/namespaceopen__spiel_1_1python_1_1games_1_1tic__tac__toe_ace0c7b2622ba8e2e229137f8d8cee673_icgraph" alt=""/></div>
@@ -208,7 +215,16 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns (row, col) from an action id.</pre> <div class="dynheader">
+<pre class="fragment">Returns (row, col) from an action id.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00184">184</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span><span class="keyword">def </span>_coord(move):</div>
+<div class="line"><span class="lineno">  185</span>  <span class="stringliteral">&quot;&quot;&quot;Returns (row, col) from an action id.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  186</span>  <span class="keywordflow">return</span> (move // _NUM_COLS, move % _NUM_COLS)</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00116">open_spiel.python.games.tic_tac_toe.TicTacToeState._action_to_string()</a>, <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00105">open_spiel.python.games.tic_tac_toe.TicTacToeState._apply_action()</a>, and <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00101">open_spiel.python.games.tic_tac_toe.TicTacToeState._legal_actions()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dfc/namespaceopen__spiel_1_1python_1_1games_1_1tic__tac__toe_a9e65dd14fa1a5d392b09459ba6dc857c_icgraph.png" border="0" usemap="#ad7/dfc/namespaceopen__spiel_1_1python_1_1games_1_1tic__tac__toe_a9e65dd14fa1a5d392b09459ba6dc857c_icgraph" alt=""/></div>
@@ -327,7 +343,22 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Checks if a line exists, returns "x" or "o" if so, and None otherwise.</pre> <div class="dynheader">
+<pre class="fragment">Checks if a line exists, returns "x" or "o" if so, and None otherwise.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00175">175</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span><span class="keyword">def </span>_line_exists(board):</div>
+<div class="line"><span class="lineno">  176</span>  <span class="stringliteral">&quot;&quot;&quot;Checks if a line exists, returns &quot;x&quot; or &quot;o&quot; if so, and None otherwise.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  177</span>  <span class="keywordflow">return</span> (_line_value(board[0]) <span class="keywordflow">or</span> _line_value(board[1]) <span class="keywordflow">or</span></div>
+<div class="line"><span class="lineno">  178</span>          _line_value(board[2]) <span class="keywordflow">or</span> _line_value(board[:, 0]) <span class="keywordflow">or</span></div>
+<div class="line"><span class="lineno">  179</span>          _line_value(board[:, 1]) <span class="keywordflow">or</span> _line_value(board[:, 2]) <span class="keywordflow">or</span></div>
+<div class="line"><span class="lineno">  180</span>          _line_value(board.diagonal()) <span class="keywordflow">or</span></div>
+<div class="line"><span class="lineno">  181</span>          _line_value(np.fliplr(board).diagonal()))</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00169">open_spiel.python.games.tic_tac_toe._line_value()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00105">open_spiel.python.games.tic_tac_toe.TicTacToeState._apply_action()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dfc/namespaceopen__spiel_1_1python_1_1games_1_1tic__tac__toe_afcb5bee5fc1122f14448fbc6ac3ba914_cgraph.png" border="0" usemap="#ad7/dfc/namespaceopen__spiel_1_1python_1_1games_1_1tic__tac__toe_afcb5bee5fc1122f14448fbc6ac3ba914_cgraph" alt=""/></div>
@@ -372,7 +403,17 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Checks a possible line, returning the winning symbol if any.</pre> <div class="dynheader">
+<pre class="fragment">Checks a possible line, returning the winning symbol if any.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00169">169</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span><span class="keyword">def </span>_line_value(line):</div>
+<div class="line"><span class="lineno">  170</span>  <span class="stringliteral">&quot;&quot;&quot;Checks a possible line, returning the winning symbol if any.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  171</span>  <span class="keywordflow">if</span> all(line == <span class="stringliteral">&quot;x&quot;</span>) <span class="keywordflow">or</span> all(line == <span class="stringliteral">&quot;o&quot;</span>):</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">return</span> line[0]</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00175">open_spiel.python.games.tic_tac_toe._line_exists()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dfc/namespaceopen__spiel_1_1python_1_1games_1_1tic__tac__toe_afe32512c3d4928fb570c332600793726_icgraph.png" border="0" usemap="#ad7/dfc/namespaceopen__spiel_1_1python_1_1games_1_1tic__tac__toe_afe32512c3d4928fb570c332600793726_icgraph" alt=""/></div>
@@ -416,6 +457,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    7</span>    utility_sum=0.0,</div>
 <div class="line"><span class="lineno">    8</span>    max_game_length=_NUM_CELLS)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00054">54</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+
 </div>
 </div>
 <a id="a13bdfd4153d971ee690942f4545e6e2e" name="a13bdfd4153d971ee690942f4545e6e2e"></a>
@@ -453,6 +496,104 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   14</span>    provides_observation_tensor=<span class="keyword">True</span>,</div>
 <div class="line"><span class="lineno">   15</span>    parameter_specification={})</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00039">39</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+
+</div>
+</div>
+<a id="ac93a3428436b977660588692f6f47f8b" name="ac93a3428436b977660588692f6f47f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93a3428436b977660588692f6f47f8b">&#9670;&#160;</a></span>_NUM_CELLS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.games.tic_tac_toe._NUM_CELLS = _NUM_ROWS * _NUM_COLS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00038">38</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+
+</div>
+</div>
+<a id="a66e507aed069aaf4eb493a32317b5b07" name="a66e507aed069aaf4eb493a32317b5b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e507aed069aaf4eb493a32317b5b07">&#9670;&#160;</a></span>_NUM_COLS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.games.tic_tac_toe._NUM_COLS = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00037">37</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+
+</div>
+</div>
+<a id="a323099ad7a1fb5511d26a8884222837d" name="a323099ad7a1fb5511d26a8884222837d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a323099ad7a1fb5511d26a8884222837d">&#9670;&#160;</a></span>_NUM_PLAYERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.games.tic_tac_toe._NUM_PLAYERS = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00035">35</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+
+</div>
+</div>
+<a id="a765a19257a9b9cf96e3f5ae871b52bff" name="a765a19257a9b9cf96e3f5ae871b52bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765a19257a9b9cf96e3f5ae871b52bff">&#9670;&#160;</a></span>_NUM_ROWS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.games.tic_tac_toe._NUM_ROWS = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00036">36</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

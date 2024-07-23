@@ -117,12 +117,45 @@ Collaboration diagram for open_spiel::ContiguousAllocator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0962b935bae0fa8fdd7f2157719c0aba" id="r_a0962b935bae0fa8fdd7f2157719c0aba"><td class="memItemLeft" align="right" valign="top"><a id="a0962b935bae0fa8fdd7f2157719c0aba" name="a0962b935bae0fa8fdd7f2157719c0aba"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ContiguousAllocator</b> (<a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; float &gt; data)</td></tr>
+<tr class="memitem:a0962b935bae0fa8fdd7f2157719c0aba" id="r_a0962b935bae0fa8fdd7f2157719c0aba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0962b935bae0fa8fdd7f2157719c0aba">ContiguousAllocator</a> (<a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; float &gt; data)</td></tr>
 <tr class="separator:a0962b935bae0fa8fdd7f2157719c0aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5788d75dc02bdedd831fe1ffc77c849" id="r_ad5788d75dc02bdedd831fe1ffc77c849"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d52/classopen__spiel_1_1_span_tensor.html">SpanTensor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5788d75dc02bdedd831fe1ffc77c849">Get</a> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> name, const <a class="el" href="../../d9/d7e/classabsl_1_1_inlined_vector.html">absl::InlinedVector</a>&lt; int, 4 &gt; &amp;shape) override</td></tr>
 <tr class="separator:ad5788d75dc02bdedd831fe1ffc77c849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/dd0/observer_8h_source.html#l00174">174</a> of file <a class="el" href="../../d9/dd0/observer_8h_source.html">observer.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0962b935bae0fa8fdd7f2157719c0aba" name="a0962b935bae0fa8fdd7f2157719c0aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0962b935bae0fa8fdd7f2157719c0aba">&#9670;&#160;</a></span>ContiguousAllocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::ContiguousAllocator::ContiguousAllocator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d01/classabsl_1_1_span.html">absl::Span</a>&lt; float &gt;</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dd0/observer_8h_source.html#l00176">176</a> of file <a class="el" href="../../d9/dd0/observer_8h_source.html">observer.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>                                            : data_(data), offset_(0) {</div>
+<div class="line"><span class="lineno">  177</span>    absl::c_fill(data, 0);</div>
+<div class="line"><span class="lineno">  178</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad5788d75dc02bdedd831fe1ffc77c849" name="ad5788d75dc02bdedd831fe1ffc77c849"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad5788d75dc02bdedd831fe1ffc77c849">&#9670;&#160;</a></span>Get()</h2>
@@ -153,11 +186,20 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d1/d8c/classopen__spiel_1_1_allocator.html">open_spiel::Allocator</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../df/d22/observer_8cc_source.html#l00028">28</a> of file <a class="el" href="../../df/d22/observer_8cc_source.html">observer.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                                            {</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> size = absl::c_accumulate(shape, 1, std::multiplies&lt;int&gt;());</div>
+<div class="line"><span class="lineno">   31</span>  SPIEL_DCHECK_LE(offset_, data_.size());</div>
+<div class="line"><span class="lineno">   32</span>  <span class="keyword">auto</span> buffer = data_.subspan(offset_, size);</div>
+<div class="line"><span class="lineno">   33</span>  offset_ += size;</div>
+<div class="line"><span class="lineno">   34</span>  <span class="keywordflow">return</span> SpanTensor(SpanTensorInfo(name, shape), buffer);</div>
+<div class="line"><span class="lineno">   35</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/<a class="el" href="../../d9/dd0/observer_8h_source.html">observer.h</a></li>
-<li>open_spiel/<b>observer.cc</b></li>
+<li>open_spiel/<a class="el" href="../../df/d22/observer_8cc_source.html">observer.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -135,7 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adfe3d35afe741339ff6fc4b93daa8231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Abstract base class changing (decaying) values.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Abstract base class changing (decaying) values.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00020">20</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a760b8b5407894d0eacb389a3c67e2047" name="a760b8b5407894d0eacb389a3c67e2047"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a760b8b5407894d0eacb389a3c67e2047">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -153,6 +155,11 @@ Public Member Functions</h2></td></tr>
 <pre class="fragment">Initialize the value schedule.</pre> 
 <p>Reimplemented in <a class="el" href="../../d4/dae/classopen__spiel_1_1python_1_1algorithms_1_1wolf__phc_1_1_wo_l_f_schedule.html#a75948104f0123b6fd2dae343f5fa6aaf">open_spiel.python.algorithms.wolf_phc.WoLFSchedule</a>, <a class="el" href="../../d0/d04/classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule.html#acbd5550557738188892c84fd71cb18e1">open_spiel.python.rl_tools.ConstantSchedule</a>, and <a class="el" href="../../d3/dea/classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule.html#a9cf4e0ab89ff31977e160d95874a43e9">open_spiel.python.rl_tools.LinearSchedule</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00024">24</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>  <span class="keyword">def </span>__init__(self):</div>
+<div class="line"><span class="lineno">   25</span>    <span class="stringliteral">&quot;&quot;&quot;Initialize the value schedule.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   26</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -178,6 +185,19 @@ Returns:
   the value after the step.
 </pre> 
 <p>Reimplemented in <a class="el" href="../../d4/dae/classopen__spiel_1_1python_1_1algorithms_1_1wolf__phc_1_1_wo_l_f_schedule.html#abfec0fd86be9c14868088e9b17228eba">open_spiel.python.algorithms.wolf_phc.WoLFSchedule</a>, <a class="el" href="../../d0/d04/classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule.html#ae3def6ebe5d5fd9264047ff7fcb3ded6">open_spiel.python.rl_tools.ConstantSchedule</a>, and <a class="el" href="../../d3/dea/classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule.html#a27d0eccc6d039d9c86fb20da48729210">open_spiel.python.rl_tools.LinearSchedule</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00028">28</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>  <span class="keyword">def </span>step(self):</div>
+<div class="line"><span class="lineno">   29</span>    <span class="stringliteral">&quot;&quot;&quot;Apply a potential change in the value.</span></div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">    This method should be called every time the agent takes a training step.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral">      the value after the step.</span></div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   36</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00359">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.evaluate_and_update_policy()</a>, <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00350">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.multiple_steps()</a>, <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00126">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.solve_yield()</a>, <a class="el" href="../../d4/d2e/nash__evolutionary__search_8py_source.html#l00094">nash_evolutionary_search.NashCMAES.step_for()</a>, <a class="el" href="../../df/dd1/nash__random__search_8py_source.html#l00100">nash_random_search.NashRandomSearch.step_for()</a>, <a class="el" href="../../d2/d0e/bandit__regret_8py_source.html#l00363">open_spiel.python.mfg.algorithms.bandit_regret.PolynomialWeightAlgorithm.step_for()</a>, and <a class="el" href="../../dd/ddd/regret__minimizer_8py_source.html#l00107">regret_minimizer.RegretMinimizer.step_for()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -225,6 +245,14 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <pre class="fragment">Return the current value.</pre> 
 <p>Reimplemented in <a class="el" href="../../d4/dae/classopen__spiel_1_1python_1_1algorithms_1_1wolf__phc_1_1_wo_l_f_schedule.html#a42201f2fcc13cb4e5eeee1f0394ff183">open_spiel.python.algorithms.wolf_phc.WoLFSchedule</a>, <a class="el" href="../../d0/d04/classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule.html#a799eb792334575bc3db7403c38465828">open_spiel.python.rl_tools.ConstantSchedule</a>, and <a class="el" href="../../d3/dea/classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule.html#ae4dc703ddc927bbc42f7d00147bcb713">open_spiel.python.rl_tools.LinearSchedule</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d0d/rl__tools_8py_source.html#l00039">39</a> of file <a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>  <span class="keyword">def </span>value(self):</div>
+<div class="line"><span class="lineno">   40</span>    <span class="stringliteral">&quot;&quot;&quot;Return the current value.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00146">open_spiel.python.mfg.algorithms.utils.MixedDistribution.__call__()</a>, <a class="el" href="../../d0/d85/distribution_8py_source.html#l00075">open_spiel.python.mfg.distribution.Distribution.__call__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00069">open_spiel.python.mfg.value.ValueFunction.__call__()</a>, <a class="el" href="../../df/d3d/mirror__descent_8py_source.html#l00042">open_spiel.python.mfg.algorithms.mirror_descent.ProjectedPolicy.__init__()</a>, <a class="el" href="../../d1/d5d/munchausen__mirror__descent_8py_source.html#l00036">open_spiel.python.mfg.algorithms.munchausen_mirror_descent.ProjectedPolicyMunchausen.__init__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00103">open_spiel.python.mfg.value.ValueFunction.add_value()</a>, <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00185">open_spiel.python.algorithms.best_response.BestResponsePolicy.q_value()</a>, and <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00324">open_spiel.python.algorithms.best_response.CPPBestResponsePolicy.q_value()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -380,7 +408,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/<b>rl_tools.py</b></li>
+<li>open_spiel/python/<a class="el" href="../../db/d0d/rl__tools_8py_source.html">rl_tools.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

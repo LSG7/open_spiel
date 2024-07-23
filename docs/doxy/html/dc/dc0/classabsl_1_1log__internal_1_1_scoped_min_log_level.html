@@ -105,8 +105,7 @@ Collaboration diagram for absl::log_internal::ScopedMinLogLevel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:addc93b79949115349ba670e4983d826b" id="r_addc93b79949115349ba670e4983d826b"><td class="memItemLeft" align="right" valign="top"><a id="addc93b79949115349ba670e4983d826b" name="addc93b79949115349ba670e4983d826b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedMinLogLevel</b> (absl::LogSeverityAtLeast severity)</td></tr>
+<tr class="memitem:addc93b79949115349ba670e4983d826b" id="r_addc93b79949115349ba670e4983d826b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addc93b79949115349ba670e4983d826b">ScopedMinLogLevel</a> (absl::LogSeverityAtLeast severity)</td></tr>
 <tr class="separator:addc93b79949115349ba670e4983d826b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86c853e0220da033a0ae32bea6242bcc" id="r_a86c853e0220da033a0ae32bea6242bcc"><td class="memItemLeft" align="right" valign="top"><a id="a86c853e0220da033a0ae32bea6242bcc" name="a86c853e0220da033a0ae32bea6242bcc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ScopedMinLogLevel</b> (const <a class="el" href="../../dc/dc0/classabsl_1_1log__internal_1_1_scoped_min_log_level.html">ScopedMinLogLevel</a> &amp;)=delete</td></tr>
@@ -115,9 +114,65 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="../../dc/dc0/classabsl_1_1log__internal_1_1_scoped_min_log_level.html">ScopedMinLogLevel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../dc/dc0/classabsl_1_1log__internal_1_1_scoped_min_log_level.html">ScopedMinLogLevel</a> &amp;)=delete</td></tr>
 <tr class="separator:a3648bad9253318962c32e629d46ed012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/d87/globals_8h_source.html#l00058">58</a> of file <a class="el" href="../../d5/d87/globals_8h_source.html">globals.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="addc93b79949115349ba670e4983d826b" name="addc93b79949115349ba670e4983d826b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc93b79949115349ba670e4983d826b">&#9670;&#160;</a></span>ScopedMinLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::log_internal::ScopedMinLogLevel::ScopedMinLogLevel </td>
+          <td>(</td>
+          <td class="paramtype">absl::LogSeverityAtLeast</td>          <td class="paramname"><span class="paramname"><em>severity</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d68/globals_8cc_source.html#l00093">93</a> of file <a class="el" href="../../d5/d68/globals_8cc_source.html">globals.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>    : saved_severity_(absl::MinLogLevel()) {</div>
+<div class="line"><span class="lineno">   95</span>  absl::SetMinLogLevel(severity);</div>
+<div class="line"><span class="lineno">   96</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0e66abbc1de4b9ee2bb62bc97fde5a11" name="a0e66abbc1de4b9ee2bb62bc97fde5a11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e66abbc1de4b9ee2bb62bc97fde5a11">&#9670;&#160;</a></span>~ScopedMinLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::log_internal::ScopedMinLogLevel::~ScopedMinLogLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d68/globals_8cc_source.html#l00097">97</a> of file <a class="el" href="../../d5/d68/globals_8cc_source.html">globals.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>                                      {</div>
+<div class="line"><span class="lineno">   98</span>  absl::SetMinLogLevel(saved_severity_);</div>
+<div class="line"><span class="lineno">   99</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/log/<a class="el" href="../../d5/d87/globals_8h_source.html">globals.h</a></li>
-<li>open_spiel/abseil-cpp/absl/log/<b>globals.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/log/<a class="el" href="../../d5/d68/globals_8cc_source.html">globals.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

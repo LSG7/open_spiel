@@ -117,12 +117,47 @@ Collaboration diagram for open_spiel::algorithms::torch_dqn::RandomAgent:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad2d8ac744715c8ba69b97f1ea2cde1ec" id="r_ad2d8ac744715c8ba69b97f1ea2cde1ec"><td class="memItemLeft" align="right" valign="top"><a id="ad2d8ac744715c8ba69b97f1ea2cde1ec" name="ad2d8ac744715c8ba69b97f1ea2cde1ec"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RandomAgent</b> (Player player, int seed)</td></tr>
+<tr class="memitem:ad2d8ac744715c8ba69b97f1ea2cde1ec" id="r_ad2d8ac744715c8ba69b97f1ea2cde1ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2d8ac744715c8ba69b97f1ea2cde1ec">RandomAgent</a> (Player player, int seed)</td></tr>
 <tr class="separator:ad2d8ac744715c8ba69b97f1ea2cde1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a577be36850f2cc947196667026462450" id="r_a577be36850f2cc947196667026462450"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a577be36850f2cc947196667026462450">Step</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, bool is_evaluation=false) override</td></tr>
 <tr class="separator:a577be36850f2cc947196667026462450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d3/d26/dqn_8h_source.html#l00084">84</a> of file <a class="el" href="../../d3/d26/dqn_8h_source.html">dqn.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad2d8ac744715c8ba69b97f1ea2cde1ec" name="ad2d8ac744715c8ba69b97f1ea2cde1ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d8ac744715c8ba69b97f1ea2cde1ec">&#9670;&#160;</a></span>RandomAgent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::torch_dqn::RandomAgent::RandomAgent </td>
+          <td>(</td>
+          <td class="paramtype">Player</td>          <td class="paramname"><span class="paramname"><em>player</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>seed</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d26/dqn_8h_source.html#l00086">86</a> of file <a class="el" href="../../d3/d26/dqn_8h_source.html">dqn.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>: player_(player), rng_(seed) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a577be36850f2cc947196667026462450" name="a577be36850f2cc947196667026462450"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a577be36850f2cc947196667026462450">&#9670;&#160;</a></span>Step()</h2>
@@ -153,11 +188,21 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d2/d97/classopen__spiel_1_1algorithms_1_1torch__dqn_1_1_agent.html">open_spiel::algorithms::torch_dqn::Agent</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../de/d4e/dqn_8cc_source.html#l00038">38</a> of file <a class="el" href="../../de/d4e/dqn_8cc_source.html">dqn.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                               {</div>
+<div class="line"><span class="lineno">   39</span>  <span class="keywordflow">if</span> (state.IsTerminal()) {</div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">return</span> kInvalidAction;</div>
+<div class="line"><span class="lineno">   41</span>  }</div>
+<div class="line"><span class="lineno">   42</span>  std::vector&lt;Action&gt; legal_actions = state.LegalActions(player_);</div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordtype">int</span> aidx = absl::Uniform&lt;int&gt;(rng_, 0, legal_actions.size());</div>
+<div class="line"><span class="lineno">   44</span>  <span class="keywordflow">return</span> legal_actions[aidx];</div>
+<div class="line"><span class="lineno">   45</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/dqn_torch/<a class="el" href="../../d3/d26/dqn_8h_source.html">dqn.h</a></li>
-<li>open_spiel/algorithms/dqn_torch/<b>dqn.cc</b></li>
+<li>open_spiel/algorithms/dqn_torch/<a class="el" href="../../de/d4e/dqn_8cc_source.html">dqn.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

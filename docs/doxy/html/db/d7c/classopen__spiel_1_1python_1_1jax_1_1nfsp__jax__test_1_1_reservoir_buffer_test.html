@@ -117,18 +117,110 @@ Collaboration diagram for open_spiel.python.jax.nfsp_jax_test.ReservoirBufferTes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0e66e6b03545f119ef8bab0a458ca683" id="r_a0e66e6b03545f119ef8bab0a458ca683"><td class="memItemLeft" align="right" valign="top"><a id="a0e66e6b03545f119ef8bab0a458ca683" name="a0e66e6b03545f119ef8bab0a458ca683"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_reservoir_buffer_add</b> (self)</td></tr>
+<tr class="memitem:a0e66e6b03545f119ef8bab0a458ca683" id="r_a0e66e6b03545f119ef8bab0a458ca683"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e66e6b03545f119ef8bab0a458ca683">test_reservoir_buffer_add</a> (self)</td></tr>
 <tr class="separator:a0e66e6b03545f119ef8bab0a458ca683"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab075d097e408fa6e54f8f318aeb6e93a" id="r_ab075d097e408fa6e54f8f318aeb6e93a"><td class="memItemLeft" align="right" valign="top"><a id="ab075d097e408fa6e54f8f318aeb6e93a" name="ab075d097e408fa6e54f8f318aeb6e93a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_reservoir_buffer_max_capacity</b> (self)</td></tr>
+<tr class="memitem:ab075d097e408fa6e54f8f318aeb6e93a" id="r_ab075d097e408fa6e54f8f318aeb6e93a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab075d097e408fa6e54f8f318aeb6e93a">test_reservoir_buffer_max_capacity</a> (self)</td></tr>
 <tr class="separator:ab075d097e408fa6e54f8f318aeb6e93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c2dcaa4e2863bcad2287c60489243f4" id="r_a2c2dcaa4e2863bcad2287c60489243f4"><td class="memItemLeft" align="right" valign="top"><a id="a2c2dcaa4e2863bcad2287c60489243f4" name="a2c2dcaa4e2863bcad2287c60489243f4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_reservoir_buffer_sample</b> (self)</td></tr>
+<tr class="memitem:a2c2dcaa4e2863bcad2287c60489243f4" id="r_a2c2dcaa4e2863bcad2287c60489243f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c2dcaa4e2863bcad2287c60489243f4">test_reservoir_buffer_sample</a> (self)</td></tr>
 <tr class="separator:a2c2dcaa4e2863bcad2287c60489243f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html#l00050">50</a> of file <a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html">nfsp_jax_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0e66e6b03545f119ef8bab0a458ca683" name="a0e66e6b03545f119ef8bab0a458ca683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e66e6b03545f119ef8bab0a458ca683">&#9670;&#160;</a></span>test_reservoir_buffer_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.jax.nfsp_jax_test.ReservoirBufferTest.test_reservoir_buffer_add </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html#l00052">52</a> of file <a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html">nfsp_jax_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>  <span class="keyword">def </span>test_reservoir_buffer_add(self):</div>
+<div class="line"><span class="lineno">   53</span>    <span class="comment"># pylint: disable=g-generic-assert</span></div>
+<div class="line"><span class="lineno">   54</span>    reservoir_buffer = nfsp.ReservoirBuffer(reservoir_buffer_capacity=10)</div>
+<div class="line"><span class="lineno">   55</span>    self.assertEqual(len(reservoir_buffer), 0)</div>
+<div class="line"><span class="lineno">   56</span>    reservoir_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   57</span>    self.assertEqual(len(reservoir_buffer), 1)</div>
+<div class="line"><span class="lineno">   58</span>    reservoir_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   59</span>    self.assertEqual(len(reservoir_buffer), 2)</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    self.assertIn(<span class="stringliteral">&quot;entry1&quot;</span>, reservoir_buffer)</div>
+<div class="line"><span class="lineno">   62</span>    self.assertIn(<span class="stringliteral">&quot;entry2&quot;</span>, reservoir_buffer)</div>
+<div class="line"><span class="lineno">   63</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab075d097e408fa6e54f8f318aeb6e93a" name="ab075d097e408fa6e54f8f318aeb6e93a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab075d097e408fa6e54f8f318aeb6e93a">&#9670;&#160;</a></span>test_reservoir_buffer_max_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.jax.nfsp_jax_test.ReservoirBufferTest.test_reservoir_buffer_max_capacity </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html#l00064">64</a> of file <a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html">nfsp_jax_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>  <span class="keyword">def </span>test_reservoir_buffer_max_capacity(self):</div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment"># pylint: disable=g-generic-assert</span></div>
+<div class="line"><span class="lineno">   66</span>    reservoir_buffer = nfsp.ReservoirBuffer(reservoir_buffer_capacity=2)</div>
+<div class="line"><span class="lineno">   67</span>    reservoir_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   68</span>    reservoir_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   69</span>    reservoir_buffer.add(<span class="stringliteral">&quot;entry3&quot;</span>)</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    self.assertEqual(len(reservoir_buffer), 2)</div>
+<div class="line"><span class="lineno">   72</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2c2dcaa4e2863bcad2287c60489243f4" name="a2c2dcaa4e2863bcad2287c60489243f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2dcaa4e2863bcad2287c60489243f4">&#9670;&#160;</a></span>test_reservoir_buffer_sample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.jax.nfsp_jax_test.ReservoirBufferTest.test_reservoir_buffer_sample </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html#l00073">73</a> of file <a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html">nfsp_jax_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>  <span class="keyword">def </span>test_reservoir_buffer_sample(self):</div>
+<div class="line"><span class="lineno">   74</span>    replay_buffer = nfsp.ReservoirBuffer(reservoir_buffer_capacity=3)</div>
+<div class="line"><span class="lineno">   75</span>    replay_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   76</span>    replay_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   77</span>    replay_buffer.add(<span class="stringliteral">&quot;entry3&quot;</span>)</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    samples = replay_buffer.sample(3)</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    self.assertIn(<span class="stringliteral">&quot;entry1&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">   82</span>    self.assertIn(<span class="stringliteral">&quot;entry2&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">   83</span>    self.assertIn(<span class="stringliteral">&quot;entry3&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/jax/<b>nfsp_jax_test.py</b></li>
+<li>open_spiel/python/jax/<a class="el" href="../../db/d04/nfsp__jax__test_8py_source.html">nfsp_jax_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

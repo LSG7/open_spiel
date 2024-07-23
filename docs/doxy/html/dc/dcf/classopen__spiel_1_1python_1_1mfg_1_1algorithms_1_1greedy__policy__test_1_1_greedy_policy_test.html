@@ -120,7 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7da65f6a46b09c9f7cf21cd80d738ff1" id="r_a7da65f6a46b09c9f7cf21cd80d738ff1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7da65f6a46b09c9f7cf21cd80d738ff1">test_greedy</a> (self, name)</td></tr>
 <tr class="separator:a7da65f6a46b09c9f7cf21cd80d738ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/daf/greedy__policy__test_8py_source.html#l00030">30</a> of file <a class="el" href="../../d6/daf/greedy__policy__test_8py_source.html">greedy_policy_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7da65f6a46b09c9f7cf21cd80d738ff1" name="a7da65f6a46b09c9f7cf21cd80d738ff1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7da65f6a46b09c9f7cf21cd80d738ff1">&#9670;&#160;</a></span>test_greedy()</h2>
 
@@ -147,10 +150,36 @@ an optimal policy.
 Args:
   name: Name of the game.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/daf/greedy__policy__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d6/daf/greedy__policy__test_8py_source.html">greedy_policy_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>  <span class="keyword">def </span>test_greedy(self, name):</div>
+<div class="line"><span class="lineno">   35</span>    <span class="stringliteral">&quot;&quot;&quot;Check if the greedy policy works as expected.</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">    The test checks that a greedy policy with respect to an optimal value is</span></div>
+<div class="line"><span class="lineno">   38</span><span class="stringliteral">    an optimal policy.</span></div>
+<div class="line"><span class="lineno">   39</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   40</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">   41</span><span class="stringliteral">      name: Name of the game.</span></div>
+<div class="line"><span class="lineno">   42</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   43</span>    game = pyspiel.load_game(name)</div>
+<div class="line"><span class="lineno">   44</span>    uniform_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   45</span>    dist = distribution.DistributionPolicy(game, uniform_policy)</div>
+<div class="line"><span class="lineno">   46</span>    br_value = best_response_value.BestResponse(</div>
+<div class="line"><span class="lineno">   47</span>        game, dist, value.TabularValueFunction(game))</div>
+<div class="line"><span class="lineno">   48</span>    br_val = br_value(game.new_initial_state())</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    greedy_pi = greedy_policy.GreedyPolicy(game, <span class="keywordtype">None</span>, br_value)</div>
+<div class="line"><span class="lineno">   51</span>    greedy_pi = greedy_pi.to_tabular()</div>
+<div class="line"><span class="lineno">   52</span>    pybr_value = policy_value.PolicyValue(game, dist, greedy_pi,</div>
+<div class="line"><span class="lineno">   53</span>                                          value.TabularValueFunction(game))</div>
+<div class="line"><span class="lineno">   54</span>    pybr_val = pybr_value(game.new_initial_state())</div>
+<div class="line"><span class="lineno">   55</span>    self.assertAlmostEqual(br_val, pybr_val)</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/<b>greedy_policy_test.py</b></li>
+<li>open_spiel/python/mfg/algorithms/<a class="el" href="../../d6/daf/greedy__policy__test_8py_source.html">greedy_policy_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -105,11 +105,84 @@ Collaboration diagram for absl::container_internal::btree_access:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a8e16146a3f2ab2ba43ddd4e3c973a2b0" id="r_a8e16146a3f2ab2ba43ddd4e3c973a2b0"><td class="memTemplParams" colspan="2"><a id="a8e16146a3f2ab2ba43ddd4e3c973a2b0" name="a8e16146a3f2ab2ba43ddd4e3c973a2b0"></a>
-template&lt;typename BtreeContainer , typename Pred &gt; </td></tr>
-<tr class="memitem:a8e16146a3f2ab2ba43ddd4e3c973a2b0"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>erase_if</b> (BtreeContainer &amp;container, Pred pred) -&gt; typename BtreeContainer::size_type</td></tr>
+<tr class="memitem:a8e16146a3f2ab2ba43ddd4e3c973a2b0" id="r_a8e16146a3f2ab2ba43ddd4e3c973a2b0"><td class="memTemplParams" colspan="2">template&lt;typename BtreeContainer , typename Pred &gt; </td></tr>
+<tr class="memitem:a8e16146a3f2ab2ba43ddd4e3c973a2b0"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8e16146a3f2ab2ba43ddd4e3c973a2b0">erase_if</a> (BtreeContainer &amp;container, Pred pred) -&gt; typename BtreeContainer::size_type</td></tr>
 <tr class="separator:a8e16146a3f2ab2ba43ddd4e3c973a2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l02934">2934</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e16146a3f2ab2ba43ddd4e3c973a2b0" name="a8e16146a3f2ab2ba43ddd4e3c973a2b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e16146a3f2ab2ba43ddd4e3c973a2b0">&#9670;&#160;</a></span>erase_if()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BtreeContainer , typename Pred &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto absl::container_internal::btree_access::erase_if </td>
+          <td>(</td>
+          <td class="paramtype">BtreeContainer &amp;</td>          <td class="paramname"><span class="paramname"><em>container</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pred</td>          <td class="paramname"><span class="paramname"><em>pred</em></span>&#160;) -&gt; typename BtreeContainer::size_type </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l02936">2936</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2937</span>                                       {</div>
+<div class="line"><span class="lineno"> 2938</span>    <span class="keyword">const</span> <span class="keyword">auto</span> initial_size = container.size();</div>
+<div class="line"><span class="lineno"> 2939</span>    <span class="keyword">auto</span> &amp;tree = container.tree_;</div>
+<div class="line"><span class="lineno"> 2940</span>    <span class="keyword">auto</span> *alloc = tree.mutable_allocator();</div>
+<div class="line"><span class="lineno"> 2941</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = container.begin(); it != container.end();) {</div>
+<div class="line"><span class="lineno"> 2942</span>      <span class="keywordflow">if</span> (!pred(*it)) {</div>
+<div class="line"><span class="lineno"> 2943</span>        ++it;</div>
+<div class="line"><span class="lineno"> 2944</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2945</span>      }</div>
+<div class="line"><span class="lineno"> 2946</span>      <span class="keyword">auto</span> *node = it.node_;</div>
+<div class="line"><span class="lineno"> 2947</span>      <span class="keywordflow">if</span> (node-&gt;is_internal()) {</div>
+<div class="line"><span class="lineno"> 2948</span>        <span class="comment">// Handle internal nodes normally.</span></div>
+<div class="line"><span class="lineno"> 2949</span>        it = container.erase(it);</div>
+<div class="line"><span class="lineno"> 2950</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2951</span>      }</div>
+<div class="line"><span class="lineno"> 2952</span>      <span class="comment">// If this is a leaf node, then we do all the erases from this node</span></div>
+<div class="line"><span class="lineno"> 2953</span>      <span class="comment">// at once before doing rebalancing.</span></div>
+<div class="line"><span class="lineno"> 2954</span> </div>
+<div class="line"><span class="lineno"> 2955</span>      <span class="comment">// The current position to transfer slots to.</span></div>
+<div class="line"><span class="lineno"> 2956</span>      <span class="keywordtype">int</span> to_pos = it.position_;</div>
+<div class="line"><span class="lineno"> 2957</span>      node-&gt;value_destroy(it.position_, alloc);</div>
+<div class="line"><span class="lineno"> 2958</span>      <span class="keywordflow">while</span> (++it.position_ &lt; node-&gt;finish()) {</div>
+<div class="line"><span class="lineno"> 2959</span>        it.update_generation();</div>
+<div class="line"><span class="lineno"> 2960</span>        <span class="keywordflow">if</span> (pred(*it)) {</div>
+<div class="line"><span class="lineno"> 2961</span>          node-&gt;value_destroy(it.position_, alloc);</div>
+<div class="line"><span class="lineno"> 2962</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 2963</span>          node-&gt;transfer(node-&gt;slot(to_pos++), node-&gt;slot(it.position_), alloc);</div>
+<div class="line"><span class="lineno"> 2964</span>        }</div>
+<div class="line"><span class="lineno"> 2965</span>      }</div>
+<div class="line"><span class="lineno"> 2966</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> num_deleted = node-&gt;finish() - to_pos;</div>
+<div class="line"><span class="lineno"> 2967</span>      tree.size_ -= num_deleted;</div>
+<div class="line"><span class="lineno"> 2968</span>      node-&gt;set_finish(to_pos);</div>
+<div class="line"><span class="lineno"> 2969</span>      it.position_ = to_pos;</div>
+<div class="line"><span class="lineno"> 2970</span>      it = tree.rebalance_after_delete(it);</div>
+<div class="line"><span class="lineno"> 2971</span>    }</div>
+<div class="line"><span class="lineno"> 2972</span>    <span class="keywordflow">return</span> initial_size - container.size();</div>
+<div class="line"><span class="lineno"> 2973</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a></li>
 </ul>

@@ -114,71 +114,666 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abb128be1de78b26d45ce6af94c3053c0" id="r_abb128be1de78b26d45ce6af94c3053c0"><td class="memItemLeft" align="right" valign="top"><a id="abb128be1de78b26d45ce6af94c3053c0" name="abb128be1de78b26d45ce6af94c3053c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>any</b> (const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;other)</td></tr>
+<tr class="memitem:abb128be1de78b26d45ce6af94c3053c0" id="r_abb128be1de78b26d45ce6af94c3053c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb128be1de78b26d45ce6af94c3053c0">any</a> (const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;other)</td></tr>
 <tr class="separator:abb128be1de78b26d45ce6af94c3053c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eca7597ecd8ec3be34a5e85fa9d0cb5" id="r_a5eca7597ecd8ec3be34a5e85fa9d0cb5"><td class="memItemLeft" align="right" valign="top"><a id="a5eca7597ecd8ec3be34a5e85fa9d0cb5" name="a5eca7597ecd8ec3be34a5e85fa9d0cb5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>any</b> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&amp;other) noexcept=default</td></tr>
 <tr class="separator:a5eca7597ecd8ec3be34a5e85fa9d0cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad508f5e4092bad0e79fa5976ad786743" id="r_ad508f5e4092bad0e79fa5976ad786743"><td class="memTemplParams" colspan="2"><a id="ad508f5e4092bad0e79fa5976ad786743" name="ad508f5e4092bad0e79fa5976ad786743"></a>
-template&lt;typename T , typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt;!<a class="el" href="../../d3/d56/structabsl_1_1disjunction.html">absl::disjunction</a>&lt; std::is_same&lt; <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a>, VT &gt;, <a class="el" href="../../d3/dec/structabsl_1_1any_1_1_is_in_place_type.html">IsInPlaceType</a>&lt; VT &gt;, <a class="el" href="../../dd/dce/structabsl_1_1negation.html">absl::negation</a>&lt; std::is_copy_constructible&lt; VT &gt; &gt; &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:ad508f5e4092bad0e79fa5976ad786743"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>any</b> (T &amp;&amp;value)</td></tr>
+<tr class="memitem:ad508f5e4092bad0e79fa5976ad786743" id="r_ad508f5e4092bad0e79fa5976ad786743"><td class="memTemplParams" colspan="2">template&lt;typename T , typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt;!<a class="el" href="../../d3/d56/structabsl_1_1disjunction.html">absl::disjunction</a>&lt; std::is_same&lt; <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a>, VT &gt;, <a class="el" href="../../d3/dec/structabsl_1_1any_1_1_is_in_place_type.html">IsInPlaceType</a>&lt; VT &gt;, <a class="el" href="../../dd/dce/structabsl_1_1negation.html">absl::negation</a>&lt; std::is_copy_constructible&lt; VT &gt; &gt; &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:ad508f5e4092bad0e79fa5976ad786743"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad508f5e4092bad0e79fa5976ad786743">any</a> (T &amp;&amp;value)</td></tr>
 <tr class="separator:ad508f5e4092bad0e79fa5976ad786743"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23650c8894b94cfe300274f5f8b5b487" id="r_a23650c8894b94cfe300274f5f8b5b487"><td class="memTemplParams" colspan="2"><a id="a23650c8894b94cfe300274f5f8b5b487" name="a23650c8894b94cfe300274f5f8b5b487"></a>
-template&lt;typename T , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_copy_constructible&lt; VT &gt;, std::is_constructible&lt; VT, Args... &gt; &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a23650c8894b94cfe300274f5f8b5b487"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>any</b> (in_place_type_t&lt; T &gt;, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a23650c8894b94cfe300274f5f8b5b487" id="r_a23650c8894b94cfe300274f5f8b5b487"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_copy_constructible&lt; VT &gt;, std::is_constructible&lt; VT, Args... &gt; &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a23650c8894b94cfe300274f5f8b5b487"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a23650c8894b94cfe300274f5f8b5b487">any</a> (in_place_type_t&lt; T &gt;, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a23650c8894b94cfe300274f5f8b5b487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88c653b39abedcb6d368bd3e1956dc91" id="r_a88c653b39abedcb6d368bd3e1956dc91"><td class="memTemplParams" colspan="2"><a id="a88c653b39abedcb6d368bd3e1956dc91" name="a88c653b39abedcb6d368bd3e1956dc91"></a>
-template&lt;typename T , typename U , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_copy_constructible&lt; VT &gt;, std::is_constructible&lt; VT, std::initializer_list&lt; U &gt; &amp;, Args... &gt; &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a88c653b39abedcb6d368bd3e1956dc91"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>any</b> (in_place_type_t&lt; T &gt;, std::initializer_list&lt; U &gt; ilist, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a88c653b39abedcb6d368bd3e1956dc91" id="r_a88c653b39abedcb6d368bd3e1956dc91"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_copy_constructible&lt; VT &gt;, std::is_constructible&lt; VT, std::initializer_list&lt; U &gt; &amp;, Args... &gt; &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a88c653b39abedcb6d368bd3e1956dc91"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a88c653b39abedcb6d368bd3e1956dc91">any</a> (in_place_type_t&lt; T &gt;, std::initializer_list&lt; U &gt; ilist, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a88c653b39abedcb6d368bd3e1956dc91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3b74f04e83fbcaacd1834240cb4132c" id="r_ae3b74f04e83fbcaacd1834240cb4132c"><td class="memItemLeft" align="right" valign="top"><a id="ae3b74f04e83fbcaacd1834240cb4132c" name="ae3b74f04e83fbcaacd1834240cb4132c"></a>
-<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;rhs)</td></tr>
+<tr class="memitem:ae3b74f04e83fbcaacd1834240cb4132c" id="r_ae3b74f04e83fbcaacd1834240cb4132c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3b74f04e83fbcaacd1834240cb4132c">operator=</a> (const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;rhs)</td></tr>
 <tr class="separator:ae3b74f04e83fbcaacd1834240cb4132c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d8323b1347b454442f496095978baa7" id="r_a9d8323b1347b454442f496095978baa7"><td class="memItemLeft" align="right" valign="top"><a id="a9d8323b1347b454442f496095978baa7" name="a9d8323b1347b454442f496095978baa7"></a>
-<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&amp;rhs) noexcept</td></tr>
+<tr class="memitem:a9d8323b1347b454442f496095978baa7" id="r_a9d8323b1347b454442f496095978baa7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d8323b1347b454442f496095978baa7">operator=</a> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&amp;rhs) noexcept</td></tr>
 <tr class="separator:a9d8323b1347b454442f496095978baa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4763d9a10c8ce68d2493c4f83fa2dd38" id="r_a4763d9a10c8ce68d2493c4f83fa2dd38"><td class="memTemplParams" colspan="2"><a id="a4763d9a10c8ce68d2493c4f83fa2dd38" name="a4763d9a10c8ce68d2493c4f83fa2dd38"></a>
-template&lt;typename T , typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; <a class="el" href="../../dd/dce/structabsl_1_1negation.html">absl::negation</a>&lt; std::is_same&lt; VT, <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &gt; &gt;, std::is_copy_constructible&lt; VT &gt; &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a4763d9a10c8ce68d2493c4f83fa2dd38"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator=</b> (T &amp;&amp;rhs)</td></tr>
+<tr class="memitem:a4763d9a10c8ce68d2493c4f83fa2dd38" id="r_a4763d9a10c8ce68d2493c4f83fa2dd38"><td class="memTemplParams" colspan="2">template&lt;typename T , typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; <a class="el" href="../../dd/dce/structabsl_1_1negation.html">absl::negation</a>&lt; std::is_same&lt; VT, <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &gt; &gt;, std::is_copy_constructible&lt; VT &gt; &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a4763d9a10c8ce68d2493c4f83fa2dd38"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4763d9a10c8ce68d2493c4f83fa2dd38">operator=</a> (T &amp;&amp;rhs)</td></tr>
 <tr class="separator:a4763d9a10c8ce68d2493c4f83fa2dd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59f422ec143f8dfdcb177821baaca956" id="r_a59f422ec143f8dfdcb177821baaca956"><td class="memTemplParams" colspan="2"><a id="a59f422ec143f8dfdcb177821baaca956" name="a59f422ec143f8dfdcb177821baaca956"></a>
-template&lt;typename T , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; std::is_copy_constructible&lt; VT &gt;::value &amp;&amp;std::is_constructible&lt; VT, Args... &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a59f422ec143f8dfdcb177821baaca956"><td class="memTemplItemLeft" align="right" valign="top">VT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace</b> (Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a59f422ec143f8dfdcb177821baaca956" id="r_a59f422ec143f8dfdcb177821baaca956"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; std::is_copy_constructible&lt; VT &gt;::value &amp;&amp;std::is_constructible&lt; VT, Args... &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a59f422ec143f8dfdcb177821baaca956"><td class="memTemplItemLeft" align="right" valign="top">VT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a59f422ec143f8dfdcb177821baaca956">emplace</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a59f422ec143f8dfdcb177821baaca956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a780211e8af080b9ce5c5a2359c5830" id="r_a2a780211e8af080b9ce5c5a2359c5830"><td class="memTemplParams" colspan="2"><a id="a2a780211e8af080b9ce5c5a2359c5830" name="a2a780211e8af080b9ce5c5a2359c5830"></a>
-template&lt;typename T , typename U , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; std::is_copy_constructible&lt; VT &gt;::value &amp;&amp;std::is_constructible&lt; VT, std::initializer_list&lt; U &gt; &amp;, Args... &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a2a780211e8af080b9ce5c5a2359c5830"><td class="memTemplItemLeft" align="right" valign="top">VT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>emplace</b> (std::initializer_list&lt; U &gt; ilist, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a2a780211e8af080b9ce5c5a2359c5830" id="r_a2a780211e8af080b9ce5c5a2359c5830"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; std::is_copy_constructible&lt; VT &gt;::value &amp;&amp;std::is_constructible&lt; VT, std::initializer_list&lt; U &gt; &amp;, Args... &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a2a780211e8af080b9ce5c5a2359c5830"><td class="memTemplItemLeft" align="right" valign="top">VT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2a780211e8af080b9ce5c5a2359c5830">emplace</a> (std::initializer_list&lt; U &gt; ilist, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a2a780211e8af080b9ce5c5a2359c5830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0db0b7b1d417778376dbca6f5604ae5" id="r_ac0db0b7b1d417778376dbca6f5604ae5"><td class="memItemLeft" align="right" valign="top"><a id="ac0db0b7b1d417778376dbca6f5604ae5" name="ac0db0b7b1d417778376dbca6f5604ae5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> () noexcept</td></tr>
+<tr class="memitem:ac0db0b7b1d417778376dbca6f5604ae5" id="r_ac0db0b7b1d417778376dbca6f5604ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0db0b7b1d417778376dbca6f5604ae5">reset</a> () noexcept</td></tr>
 <tr class="separator:ac0db0b7b1d417778376dbca6f5604ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae21b0fa650a4bd50afc0cabbb620df85" id="r_ae21b0fa650a4bd50afc0cabbb620df85"><td class="memItemLeft" align="right" valign="top"><a id="ae21b0fa650a4bd50afc0cabbb620df85" name="ae21b0fa650a4bd50afc0cabbb620df85"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;other) noexcept</td></tr>
+<tr class="memitem:ae21b0fa650a4bd50afc0cabbb620df85" id="r_ae21b0fa650a4bd50afc0cabbb620df85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae21b0fa650a4bd50afc0cabbb620df85">swap</a> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;other) noexcept</td></tr>
 <tr class="separator:ae21b0fa650a4bd50afc0cabbb620df85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6e94393fa4a85fcd7f997d1fbe6c33" id="r_a4f6e94393fa4a85fcd7f997d1fbe6c33"><td class="memItemLeft" align="right" valign="top"><a id="a4f6e94393fa4a85fcd7f997d1fbe6c33" name="a4f6e94393fa4a85fcd7f997d1fbe6c33"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_value</b> () const noexcept</td></tr>
+<tr class="memitem:a4f6e94393fa4a85fcd7f997d1fbe6c33" id="r_a4f6e94393fa4a85fcd7f997d1fbe6c33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f6e94393fa4a85fcd7f997d1fbe6c33">has_value</a> () const noexcept</td></tr>
 <tr class="separator:a4f6e94393fa4a85fcd7f997d1fbe6c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:aa730871084d32f25578febfd919eb3ee" id="r_aa730871084d32f25578febfd919eb3ee"><td class="memTemplParams" colspan="2"><a id="aa730871084d32f25578febfd919eb3ee" name="aa730871084d32f25578febfd919eb3ee"></a>
-template&lt;typename ValueType &gt; </td></tr>
-<tr class="memitem:aa730871084d32f25578febfd919eb3ee"><td class="memTemplItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><b>any_cast</b> (const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;operand)</td></tr>
+<tr class="memitem:aa730871084d32f25578febfd919eb3ee" id="r_aa730871084d32f25578febfd919eb3ee"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
+<tr class="memitem:aa730871084d32f25578febfd919eb3ee"><td class="memTemplItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa730871084d32f25578febfd919eb3ee">any_cast</a> (const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;operand)</td></tr>
 <tr class="separator:aa730871084d32f25578febfd919eb3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8b4c72d48568faf8735ec91f0ab8d9" id="r_a8b8b4c72d48568faf8735ec91f0ab8d9"><td class="memTemplParams" colspan="2"><a id="a8b8b4c72d48568faf8735ec91f0ab8d9" name="a8b8b4c72d48568faf8735ec91f0ab8d9"></a>
-template&lt;typename ValueType &gt; </td></tr>
-<tr class="memitem:a8b8b4c72d48568faf8735ec91f0ab8d9"><td class="memTemplItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><b>any_cast</b> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;operand)</td></tr>
+<tr class="memitem:a8b8b4c72d48568faf8735ec91f0ab8d9" id="r_a8b8b4c72d48568faf8735ec91f0ab8d9"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
+<tr class="memitem:a8b8b4c72d48568faf8735ec91f0ab8d9"><td class="memTemplItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8b8b4c72d48568faf8735ec91f0ab8d9">any_cast</a> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;operand)</td></tr>
 <tr class="separator:a8b8b4c72d48568faf8735ec91f0ab8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a12a474b75f533d714b89a620149627" id="r_a0a12a474b75f533d714b89a620149627"><td class="memTemplParams" colspan="2"><a id="a0a12a474b75f533d714b89a620149627" name="a0a12a474b75f533d714b89a620149627"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0a12a474b75f533d714b89a620149627"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>any_cast</b> (const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> *operand)</td></tr>
+<tr class="memitem:a0a12a474b75f533d714b89a620149627" id="r_a0a12a474b75f533d714b89a620149627"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0a12a474b75f533d714b89a620149627"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0a12a474b75f533d714b89a620149627">any_cast</a> (const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> *operand)</td></tr>
 <tr class="separator:a0a12a474b75f533d714b89a620149627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0008db4c124dcc8ceef940ccf61a40f8" id="r_a0008db4c124dcc8ceef940ccf61a40f8"><td class="memTemplParams" colspan="2"><a id="a0008db4c124dcc8ceef940ccf61a40f8" name="a0008db4c124dcc8ceef940ccf61a40f8"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0008db4c124dcc8ceef940ccf61a40f8"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>any_cast</b> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> *operand)</td></tr>
+<tr class="memitem:a0008db4c124dcc8ceef940ccf61a40f8" id="r_a0008db4c124dcc8ceef940ccf61a40f8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0008db4c124dcc8ceef940ccf61a40f8"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0008db4c124dcc8ceef940ccf61a40f8">any_cast</a> (<a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> *operand)</td></tr>
 <tr class="separator:a0008db4c124dcc8ceef940ccf61a40f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00189">189</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abb128be1de78b26d45ce6af94c3053c0" name="abb128be1de78b26d45ce6af94c3053c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb128be1de78b26d45ce6af94c3053c0">&#9670;&#160;</a></span>any() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::any::any </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00204">204</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>      : obj_(other.has_value() ? other.obj_-&gt;Clone()</div>
+<div class="line"><span class="lineno">  206</span>                               : std::unique_ptr&lt;ObjInterface&gt;()) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad508f5e4092bad0e79fa5976ad786743" name="ad508f5e4092bad0e79fa5976ad786743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad508f5e4092bad0e79fa5976ad786743">&#9670;&#160;</a></span>any() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt;!<a class="el" href="../../d3/d56/structabsl_1_1disjunction.html">absl::disjunction</a>&lt; std::is_same&lt; <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a>, VT &gt;, <a class="el" href="../../d3/dec/structabsl_1_1any_1_1_is_in_place_type.html">IsInPlaceType</a>&lt; VT &gt;, <a class="el" href="../../dd/dce/structabsl_1_1negation.html">absl::negation</a>&lt; std::is_copy_constructible&lt; VT &gt; &gt; &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::any::any </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00223">223</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  223</span>: obj_(<span class="keyword">new</span> Obj&lt;VT&gt;(in_place, std::forward&lt;T&gt;(value))) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a23650c8894b94cfe300274f5f8b5b487" name="a23650c8894b94cfe300274f5f8b5b487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23650c8894b94cfe300274f5f8b5b487">&#9670;&#160;</a></span>any() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_copy_constructible&lt; VT &gt;, std::is_constructible&lt; VT, Args... &gt; &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::any::any </td>
+          <td>(</td>
+          <td class="paramtype">in_place_type_t&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00231">231</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>      : obj_(<span class="keyword">new</span> Obj&lt;VT&gt;(in_place, std::forward&lt;Args&gt;(args)...)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a88c653b39abedcb6d368bd3e1956dc91" name="a88c653b39abedcb6d368bd3e1956dc91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c653b39abedcb6d368bd3e1956dc91">&#9670;&#160;</a></span>any() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; std::is_copy_constructible&lt; VT &gt;, std::is_constructible&lt; VT, std::initializer_list&lt; U &gt; &amp;, Args... &gt; &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::any::any </td>
+          <td>(</td>
+          <td class="paramtype">in_place_type_t&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::initializer_list&lt; U &gt;</td>          <td class="paramname"><span class="paramname"><em>ilist</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00244">244</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>      : obj_(<span class="keyword">new</span> Obj&lt;VT&gt;(in_place, ilist, std::forward&lt;Args&gt;(args)...)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a59f422ec143f8dfdcb177821baaca956" name="a59f422ec143f8dfdcb177821baaca956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f422ec143f8dfdcb177821baaca956">&#9670;&#160;</a></span>emplace() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; std::is_copy_constructible&lt; VT &gt;::value &amp;&amp;std::is_constructible&lt; VT, Args... &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VT &amp; absl::any::emplace </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00291">291</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  291</span>                              {</div>
+<div class="line"><span class="lineno">  292</span>    reset();  <span class="comment">// NOTE: reset() is required here even in the world of exceptions.</span></div>
+<div class="line"><span class="lineno">  293</span>    Obj&lt;VT&gt;* <span class="keyword">const</span> object_ptr =</div>
+<div class="line"><span class="lineno">  294</span>        <span class="keyword">new</span> Obj&lt;VT&gt;(in_place, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  295</span>    obj_ = std::unique_ptr&lt;ObjInterface&gt;(object_ptr);</div>
+<div class="line"><span class="lineno">  296</span>    <span class="keywordflow">return</span> object_ptr-&gt;value;</div>
+<div class="line"><span class="lineno">  297</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2a780211e8af080b9ce5c5a2359c5830" name="a2a780211e8af080b9ce5c5a2359c5830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a780211e8af080b9ce5c5a2359c5830">&#9670;&#160;</a></span>emplace() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U , typename... Args, typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; std::is_copy_constructible&lt; VT &gt;::value &amp;&amp;std::is_constructible&lt; VT, std::initializer_list&lt; U &gt; &amp;, Args... &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VT &amp; absl::any::emplace </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; U &gt;</td>          <td class="paramname"><span class="paramname"><em>ilist</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00315">315</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  315</span>                                                            {</div>
+<div class="line"><span class="lineno">  316</span>    reset();  <span class="comment">// NOTE: reset() is required here even in the world of exceptions.</span></div>
+<div class="line"><span class="lineno">  317</span>    Obj&lt;VT&gt;* <span class="keyword">const</span> object_ptr =</div>
+<div class="line"><span class="lineno">  318</span>        <span class="keyword">new</span> Obj&lt;VT&gt;(in_place, ilist, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  319</span>    obj_ = std::unique_ptr&lt;ObjInterface&gt;(object_ptr);</div>
+<div class="line"><span class="lineno">  320</span>    <span class="keywordflow">return</span> object_ptr-&gt;value;</div>
+<div class="line"><span class="lineno">  321</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4f6e94393fa4a85fcd7f997d1fbe6c33" name="a4f6e94393fa4a85fcd7f997d1fbe6c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6e94393fa4a85fcd7f997d1fbe6c33">&#9670;&#160;</a></span>has_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool absl::any::has_value </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00340">340</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  340</span>{ <span class="keywordflow">return</span> obj_ != <span class="keyword">nullptr</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9d8323b1347b454442f496095978baa7" name="a9d8323b1347b454442f496095978baa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d8323b1347b454442f496095978baa7">&#9670;&#160;</a></span>operator=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp; absl::any::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00259">259</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  259</span>                                     {</div>
+<div class="line"><span class="lineno">  260</span>    any(std::move(rhs)).swap(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  262</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae3b74f04e83fbcaacd1834240cb4132c" name="ae3b74f04e83fbcaacd1834240cb4132c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b74f04e83fbcaacd1834240cb4132c">&#9670;&#160;</a></span>operator=() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp; absl::any::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00252">252</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  252</span>                                 {</div>
+<div class="line"><span class="lineno">  253</span>    any(rhs).swap(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  254</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  255</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4763d9a10c8ce68d2493c4f83fa2dd38" name="a4763d9a10c8ce68d2493c4f83fa2dd38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4763d9a10c8ce68d2493c4f83fa2dd38">&#9670;&#160;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename VT  = absl::decay_t&lt;T&gt;, absl::enable_if_t&lt; <a class="el" href="../../dd/d65/structabsl_1_1conjunction.html">absl::conjunction</a>&lt; <a class="el" href="../../dd/dce/structabsl_1_1negation.html">absl::negation</a>&lt; std::is_same&lt; VT, <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &gt; &gt;, std::is_copy_constructible&lt; VT &gt; &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp; absl::any::operator= </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00269">269</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  269</span>                          {</div>
+<div class="line"><span class="lineno">  270</span>    any tmp(in_place_type_t&lt;VT&gt;(), std::forward&lt;T&gt;(rhs));</div>
+<div class="line"><span class="lineno">  271</span>    tmp.swap(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  272</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  273</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac0db0b7b1d417778376dbca6f5604ae5" name="ac0db0b7b1d417778376dbca6f5604ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0db0b7b1d417778376dbca6f5604ae5">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::any::reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00327">327</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  327</span>{ obj_ = <span class="keyword">nullptr</span>; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/d95/pytorch_2deep__cfr_8py_source.html#l00051">open_spiel.python.pytorch.deep_cfr.SonnetLinear::__init__()</a>, <a class="el" href="../../dc/d9b/catch_8py_source.html#l00073">open_spiel.python.environments.catch.Environment::step()</a>, <a class="el" href="../../d5/dcd/cliff__walking_8py_source.html#l00083">open_spiel.python.environments.cliff_walking.Environment::step()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00282">open_spiel.python.rl_environment.Environment::step()</a>, and <a class="el" href="../../db/d33/vector__env_8py_source.html#l00040">open_spiel.python.vector_env.SyncVectorEnv::step()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/d03/classabsl_1_1any_ac0db0b7b1d417778376dbca6f5604ae5_icgraph.png" border="0" usemap="#ad5/d03/classabsl_1_1any_ac0db0b7b1d417778376dbca6f5604ae5_icgraph" alt=""/></div>
+<map name="ad5/d03/classabsl_1_1any_ac0db0b7b1d417778376dbca6f5604ae5_icgraph" id="ad5/d03/classabsl_1_1any_ac0db0b7b1d417778376dbca6f5604ae5_icgraph">
+<area shape="rect" title=" " alt="" coords="1181,192,1292,217"/>
+<area shape="rect" href="../../d9/dc5/classopen__spiel_1_1python_1_1pytorch_1_1deep__cfr_1_1_sonnet_linear.html#a5c6e09a32490d6d59b9c1f211f90f1c7" title=" " alt="" coords="906,29,1111,70"/>
+<area shape="poly" title=" " alt="" coords="1218,180,1182,131,1158,106,1131,85,1107,73,1110,68,1134,81,1162,102,1186,128,1222,177"/>
+<area shape="rect" href="../../d5/d08/classopen__spiel_1_1python_1_1environments_1_1catch_1_1_environment.html#a0ea0e15b44babdc65961c77735cae93c" title=" " alt="" coords="884,184,1133,225"/>
+<area shape="poly" title=" " alt="" coords="1165,207,1133,207,1133,202,1165,202"/>
+<area shape="rect" href="../../da/dcf/classopen__spiel_1_1python_1_1environments_1_1cliff__walking_1_1_environment.html#a969773867a588c279abfeba77b915014" title=" " alt="" coords="892,249,1125,290"/>
+<area shape="poly" title=" " alt="" coords="1180,225,1133,239,1089,251,1088,246,1132,234,1178,220"/>
+<area shape="rect" href="../../d1/d1d/classopen__spiel_1_1python_1_1rl__environment_1_1_environment.html#a58dee24a7616d6a5648d5bcd55d84a20" title=" " alt="" coords="906,315,1111,355"/>
+<area shape="poly" title=" " alt="" coords="1217,231,1181,269,1134,304,1107,317,1104,312,1131,299,1178,265,1213,227"/>
+<area shape="rect" href="../../d3/d19/classopen__spiel_1_1python_1_1vector__env_1_1_sync_vector_env.html#a1221d0c9f00fd5a71970d90fd4efaa53" title=" " alt="" coords="924,119,1093,159"/>
+<area shape="poly" title=" " alt="" coords="1178,189,1132,175,1088,162,1089,157,1133,170,1180,184"/>
+<area shape="poly" title=" " alt="" coords="1046,16,1032,10,1008,8,987,10,974,15,969,21,971,28,966,29,963,19,970,10,986,5,1009,3,1033,5,1048,11"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#a14d11483beff07f087b51f3a2dd71135" title=" " alt="" coords="606,400,792,456"/>
+<area shape="poly" title=" " alt="" coords="891,236,886,239,872,257,865,275,863,313,861,351,853,371,838,390,817,406,794,417,791,412,815,401,834,386,848,368,855,350,857,313,860,274,867,255,882,236,887,232"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#adb88039a6a02b4d0090a0abc5c3c5424" title=" " alt="" coords="606,24,792,65"/>
+<area shape="poly" title=" " alt="" coords="890,178,883,173,871,161,864,149,858,125,852,101,845,90,835,80,814,67,791,58,793,53,817,62,838,76,850,87,857,99,863,123,869,147,875,158,886,169,893,174"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a7a91195b9b42b8536e06098e836b02e4" title=" " alt="" coords="573,89,824,130"/>
+<area shape="poly" title=" " alt="" coords="904,181,883,173,859,159,835,145,799,133,801,128,837,141,862,155,885,169,906,176"/>
+<area shape="rect" href="../../d2/dfd/classnash__evolutionary__search_1_1_nash_c_m_a_e_s.html#a42b13c1091631c52988a6391fe34038a" title=" " alt="" coords="610,155,787,195"/>
+<area shape="poly" title=" " alt="" coords="869,194,787,186,788,181,869,188"/>
+<area shape="rect" href="../../d5/dd9/classnash__random__search_1_1_nash_random_search.html#a9b9967669c24ceba55dc8ce00565a71a" title=" " alt="" coords="584,220,813,261"/>
+<area shape="poly" title=" " alt="" coords="870,223,814,230,813,224,869,218"/>
+<area shape="rect" href="../../d1/d50/classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1bandit__regret_1_1_polynomial_weight_algorithm.html#a3b7ceacfd8a03895a691242d227c1ddd" title=" " alt="" coords="561,285,836,326"/>
+<area shape="poly" title=" " alt="" coords="902,233,886,240,862,257,838,275,805,287,803,282,835,270,859,253,883,235,900,228"/>
+<area shape="rect" href="../../d5/d11/classregret__minimizer_1_1_regret_minimizer.html#aa371edb5793c6a6cfbf51dc8597905dc" title=" " alt="" coords="566,350,831,376"/>
+<area shape="poly" title=" " alt="" coords="892,235,886,240,875,251,869,263,863,289,858,315,850,328,838,340,818,352,815,347,835,336,846,324,853,313,858,288,864,261,871,248,883,236,889,231"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a44f0c375b5ef20bb1267524788ab16da" title=" " alt="" coords="281,89,513,130"/>
+<area shape="poly" title=" " alt="" coords="557,112,514,112,514,107,557,107"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#ad1331eddb66a419f7336bc267b47d75e" title=" " alt="" coords="5,56,233,97"/>
+<area shape="poly" title=" " alt="" coords="265,96,233,93,233,87,265,91"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#a14e053b461dc025b01a41453bc278c7d" title=" " alt="" coords="5,121,233,162"/>
+<area shape="poly" title=" " alt="" coords="265,128,233,131,233,126,265,122"/>
+<area shape="poly" title=" " alt="" coords="893,300,886,305,869,325,863,346,856,369,838,390,817,404,793,414,791,409,814,399,835,386,851,366,858,345,865,323,883,301,890,296"/>
+<area shape="poly" title=" " alt="" coords="887,242,882,238,867,218,859,198,858,157,856,117,849,98,834,80,815,65,791,56,793,51,817,61,838,76,854,96,862,116,863,157,865,196,872,216,886,235,890,238"/>
+<area shape="poly" title=" " alt="" coords="890,244,883,238,871,227,864,214,858,190,852,167,845,156,835,145,815,133,818,128,838,141,850,152,857,165,863,189,869,212,875,223,886,234,893,239"/>
+<area shape="poly" title=" " alt="" coords="904,247,883,239,859,225,835,211,787,195,788,190,837,206,862,220,885,234,906,242"/>
+<area shape="poly" title=" " alt="" coords="876,260,813,254,814,249,877,255"/>
+<area shape="poly" title=" " alt="" coords="877,288,837,292,836,287,876,282"/>
+<area shape="poly" title=" " alt="" coords="902,298,886,305,862,323,852,332,837,340,801,352,800,347,835,335,849,327,859,319,883,301,900,293"/>
+<area shape="poly" title=" " alt="" coords="927,363,837,391,793,404,792,399,836,386,926,358"/>
+<area shape="poly" title=" " alt="" coords="891,311,882,303,863,275,855,246,854,217,858,189,862,161,861,133,853,106,834,80,815,65,791,55,793,50,817,60,838,76,858,104,867,133,867,161,863,190,860,218,860,245,867,273,886,300,895,307"/>
+<area shape="poly" title=" " alt="" coords="891,311,882,304,867,283,859,263,858,222,856,182,849,164,834,145,818,132,821,128,838,141,854,161,862,181,863,222,865,262,872,281,886,300,895,307"/>
+<area shape="poly" title=" " alt="" coords="891,310,883,304,871,292,864,280,858,256,852,232,845,221,835,210,812,197,786,187,788,182,814,192,838,206,850,218,857,230,863,254,869,278,875,289,886,300,894,305"/>
+<area shape="poly" title=" " alt="" coords="904,312,883,304,859,290,835,276,799,264,801,259,837,271,862,285,885,299,906,307"/>
+<area shape="poly" title=" " alt="" coords="890,326,836,321,837,316,890,321"/>
+<area shape="poly" title=" " alt="" coords="890,348,832,354,831,348,890,343"/>
+<area shape="poly" title=" " alt="" coords="911,157,886,174,868,200,860,226,860,253,863,280,866,307,865,335,857,362,838,390,817,407,793,418,791,413,815,402,834,387,852,360,860,334,860,307,857,280,854,253,855,226,863,198,882,170,908,152"/>
+<area shape="poly" title=" " alt="" coords="938,115,836,80,791,68,792,63,837,75,940,110"/>
+<area shape="poly" title=" " alt="" coords="908,132,824,124,825,119,909,127"/>
+<area shape="poly" title=" " alt="" coords="908,153,787,167,787,162,908,148"/>
+<area shape="poly" title=" " alt="" coords="910,165,886,175,862,192,838,209,805,222,803,217,835,205,859,188,883,170,908,160"/>
+<area shape="poly" title=" " alt="" coords="911,159,886,174,875,186,869,198,863,223,857,249,850,262,838,274,819,287,816,282,835,270,846,259,852,247,858,222,864,196,871,183,883,170,909,154"/>
+<area shape="poly" title=" " alt="" coords="911,157,886,174,871,194,864,214,864,256,863,298,855,319,838,340,821,352,818,347,835,336,850,317,857,297,858,256,859,213,867,191,882,170,908,153"/>
+<area shape="poly" title=" " alt="" coords="1046,106,1032,100,1008,97,987,99,974,104,969,110,971,117,966,119,963,109,970,100,986,94,1009,92,1033,94,1048,101"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae21b0fa650a4bd50afc0cabbb620df85" name="ae21b0fa650a4bd50afc0cabbb620df85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21b0fa650a4bd50afc0cabbb620df85">&#9670;&#160;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::any::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00332">332</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  332</span>{ obj_.swap(other.obj_); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a8b8b4c72d48568faf8735ec91f0ab8d9" name="a8b8b4c72d48568faf8735ec91f0ab8d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8b4c72d48568faf8735ec91f0ab8d9">&#9670;&#160;</a></span>any_cast <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ValueType any_cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>operand</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00468">468</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  468</span>                                 {  <span class="comment">// NOLINT(runtime/references)</span></div>
+<div class="line"><span class="lineno">  469</span>  <span class="keyword">using </span>U = <span class="keyword">typename</span> std::remove_cv&lt;</div>
+<div class="line"><span class="lineno">  470</span>      <span class="keyword">typename</span> std::remove_reference&lt;ValueType&gt;::type&gt;::type;</div>
+<div class="line"><span class="lineno">  471</span>  <span class="keyword">static_assert</span>(std::is_constructible&lt;ValueType, U&amp;&gt;::value,</div>
+<div class="line"><span class="lineno">  472</span>                <span class="stringliteral">&quot;Invalid ValueType&quot;</span>);</div>
+<div class="line"><span class="lineno">  473</span>  <span class="keyword">auto</span>* result = (any_cast&lt;U&gt;)(&amp;operand);</div>
+<div class="line"><span class="lineno">  474</span>  <span class="keywordflow">if</span> (result == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  475</span>    any_internal::ThrowBadAnyCast();</div>
+<div class="line"><span class="lineno">  476</span>  }</div>
+<div class="line"><span class="lineno">  477</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>ValueType<span class="keyword">&gt;</span>(*result);</div>
+<div class="line"><span class="lineno">  478</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0008db4c124dcc8ceef940ccf61a40f8" name="a0008db4c124dcc8ceef940ccf61a40f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0008db4c124dcc8ceef940ccf61a40f8">&#9670;&#160;</a></span>any_cast <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T * any_cast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> *</td>          <td class="paramname"><span class="paramname"><em>operand</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00503">503</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  503</span>                                   {</div>
+<div class="line"><span class="lineno">  504</span>  <span class="keyword">using </span>U =</div>
+<div class="line"><span class="lineno">  505</span>      <span class="keyword">typename</span> std::remove_cv&lt;typename std::remove_reference&lt;T&gt;::type&gt;::type;</div>
+<div class="line"><span class="lineno">  506</span>  <span class="keywordflow">return</span> operand &amp;&amp; operand-&gt;GetObjTypeId() == any::IdForType&lt;U&gt;()</div>
+<div class="line"><span class="lineno">  507</span>             ? std::addressof(</div>
+<div class="line"><span class="lineno">  508</span>                   <span class="keyword">static_cast&lt;</span>any::Obj&lt;U&gt;*<span class="keyword">&gt;</span>(operand-&gt;obj_.get())-&gt;value)</div>
+<div class="line"><span class="lineno">  509</span>             : nullptr;</div>
+<div class="line"><span class="lineno">  510</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa730871084d32f25578febfd919eb3ee" name="aa730871084d32f25578febfd919eb3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa730871084d32f25578febfd919eb3ee">&#9670;&#160;</a></span>any_cast <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ValueType any_cast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>operand</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00454">454</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  454</span>                                       {</div>
+<div class="line"><span class="lineno">  455</span>  <span class="keyword">using </span>U = <span class="keyword">typename</span> std::remove_cv&lt;</div>
+<div class="line"><span class="lineno">  456</span>      <span class="keyword">typename</span> std::remove_reference&lt;ValueType&gt;::type&gt;::type;</div>
+<div class="line"><span class="lineno">  457</span>  <span class="keyword">static_assert</span>(std::is_constructible&lt;ValueType, const U&amp;&gt;::value,</div>
+<div class="line"><span class="lineno">  458</span>                <span class="stringliteral">&quot;Invalid ValueType&quot;</span>);</div>
+<div class="line"><span class="lineno">  459</span>  <span class="keyword">auto</span>* <span class="keyword">const</span> result = (any_cast&lt;U&gt;)(&amp;operand);</div>
+<div class="line"><span class="lineno">  460</span>  <span class="keywordflow">if</span> (result == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  461</span>    any_internal::ThrowBadAnyCast();</div>
+<div class="line"><span class="lineno">  462</span>  }</div>
+<div class="line"><span class="lineno">  463</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>ValueType<span class="keyword">&gt;</span>(*result);</div>
+<div class="line"><span class="lineno">  464</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0a12a474b75f533d714b89a620149627" name="a0a12a474b75f533d714b89a620149627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a12a474b75f533d714b89a620149627">&#9670;&#160;</a></span>any_cast <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T * any_cast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/d03/classabsl_1_1any.html">any</a> *</td>          <td class="paramname"><span class="paramname"><em>operand</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d8d/any_8h_source.html#l00492">492</a> of file <a class="el" href="../../df/d8d/any_8h_source.html">any.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  492</span>                                               {</div>
+<div class="line"><span class="lineno">  493</span>  <span class="keyword">using </span>U =</div>
+<div class="line"><span class="lineno">  494</span>      <span class="keyword">typename</span> std::remove_cv&lt;typename std::remove_reference&lt;T&gt;::type&gt;::type;</div>
+<div class="line"><span class="lineno">  495</span>  <span class="keywordflow">return</span> operand &amp;&amp; operand-&gt;GetObjTypeId() == any::IdForType&lt;U&gt;()</div>
+<div class="line"><span class="lineno">  496</span>             ? std::addressof(</div>
+<div class="line"><span class="lineno">  497</span>                   <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>any::Obj&lt;U&gt;*<span class="keyword">&gt;</span>(operand-&gt;obj_.get())-&gt;value)</div>
+<div class="line"><span class="lineno">  498</span>             : nullptr;</div>
+<div class="line"><span class="lineno">  499</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/<a class="el" href="../../df/d8d/any_8h_source.html">any.h</a></li>
 </ul>

@@ -105,10 +105,50 @@ Collaboration diagram for absl::strings_internal::AppendUninitializedTraits&lt; 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af2b1fd48ceed7c8e023f5cb70a3e2b08" id="r_af2b1fd48ceed7c8e023f5cb70a3e2b08"><td class="memItemLeft" align="right" valign="top"><a id="af2b1fd48ceed7c8e023f5cb70a3e2b08" name="af2b1fd48ceed7c8e023f5cb70a3e2b08"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>Append</b> (string_type *s, size_t n)</td></tr>
+<tr class="memitem:af2b1fd48ceed7c8e023f5cb70a3e2b08" id="r_af2b1fd48ceed7c8e023f5cb70a3e2b08"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2b1fd48ceed7c8e023f5cb70a3e2b08">Append</a> (string_type *s, size_t n)</td></tr>
 <tr class="separator:af2b1fd48ceed7c8e023f5cb70a3e2b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename string_type, typename = void&gt;<br />
+struct absl::strings_internal::AppendUninitializedTraits&lt; string_type, typename &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html#l00086">86</a> of file <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html">resize_uninitialized.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af2b1fd48ceed7c8e023f5cb70a3e2b08" name="af2b1fd48ceed7c8e023f5cb70a3e2b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b1fd48ceed7c8e023f5cb70a3e2b08">&#9670;&#160;</a></span>Append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename string_type , typename  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../d1/d12/structabsl_1_1strings__internal_1_1_append_uninitialized_traits.html">absl::strings_internal::AppendUninitializedTraits</a>&lt; string_type, typename &gt;::Append </td>
+          <td>(</td>
+          <td class="paramtype">string_type *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html#l00087">87</a> of file <a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html">resize_uninitialized.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                                               {</div>
+<div class="line"><span class="lineno">   88</span>    s-&gt;append(n, <span class="keyword">typename</span> string_type::value_type());</div>
+<div class="line"><span class="lineno">   89</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/internal/<a class="el" href="../../d0/db2/resize__uninitialized_8h_source.html">resize_uninitialized.h</a></li>
 </ul>

@@ -107,12 +107,49 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac7245db3015e28532b793f7f72e49aeb" id="r_ac7245db3015e28532b793f7f72e49aeb"><td class="memItemLeft" align="right" valign="top"><a id="ac7245db3015e28532b793f7f72e49aeb" name="ac7245db3015e28532b793f7f72e49aeb"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const T &amp;value)</td></tr>
+<tr class="memitem:ac7245db3015e28532b793f7f72e49aeb" id="r_ac7245db3015e28532b793f7f72e49aeb"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7245db3015e28532b793f7f72e49aeb">operator()</a> (const T &amp;value)</td></tr>
 <tr class="separator:ac7245db3015e28532b793f7f72e49aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct TypeErasedAbslHash&lt; T &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html#l00064">64</a> of file <a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html">hash_benchmark.cc</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac7245db3015e28532b793f7f72e49aeb" name="ac7245db3015e28532b793f7f72e49aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7245db3015e28532b793f7f72e49aeb">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="../../d9/ddf/struct_type_erased_absl_hash.html">TypeErasedAbslHash</a>&lt; T &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html#l00077">77</a> of file <a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html">hash_benchmark.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>                                    {</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="../../dd/d0f/structabsl_1_1hash__internal_1_1_hash.html">absl::Hash&lt;Wrapper&gt;</a>{}(Wrapper(value));</div>
+<div class="line"><span class="lineno">   79</span>  }</div>
+<div class="ttc" id="astructabsl_1_1hash__internal_1_1_hash_html"><div class="ttname"><a href="../../dd/d0f/structabsl_1_1hash__internal_1_1_hash.html">absl::hash_internal::Hash</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/d28/internal_2hash_8h_source.html#l01235">hash.h:1236</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/hash/<b>hash_benchmark.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/hash/<a class="el" href="../../db/d1b/hash__benchmark_8cc_source.html">hash_benchmark.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

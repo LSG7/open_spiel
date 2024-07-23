@@ -107,55 +107,372 @@ Collaboration diagram for absl::Cord::ChunkIterator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a5134d4d2541c83be3c794055086eb863" id="r_a5134d4d2541c83be3c794055086eb863"><td class="memItemLeft" align="right" valign="top"><a id="a5134d4d2541c83be3c794055086eb863" name="a5134d4d2541c83be3c794055086eb863"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator_category</b> = std::input_iterator_tag</td></tr>
+<tr class="memitem:a5134d4d2541c83be3c794055086eb863" id="r_a5134d4d2541c83be3c794055086eb863"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5134d4d2541c83be3c794055086eb863">iterator_category</a> = std::input_iterator_tag</td></tr>
 <tr class="separator:a5134d4d2541c83be3c794055086eb863"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac104683ac8b6113295b93f9d2add47cb" id="r_ac104683ac8b6113295b93f9d2add47cb"><td class="memItemLeft" align="right" valign="top"><a id="ac104683ac8b6113295b93f9d2add47cb" name="ac104683ac8b6113295b93f9d2add47cb"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td></tr>
+<tr class="memitem:ac104683ac8b6113295b93f9d2add47cb" id="r_ac104683ac8b6113295b93f9d2add47cb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac104683ac8b6113295b93f9d2add47cb">value_type</a> = <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td></tr>
 <tr class="separator:ac104683ac8b6113295b93f9d2add47cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dcb46a35d5d8e3e89946f694a78ee4c" id="r_a4dcb46a35d5d8e3e89946f694a78ee4c"><td class="memItemLeft" align="right" valign="top"><a id="a4dcb46a35d5d8e3e89946f694a78ee4c" name="a4dcb46a35d5d8e3e89946f694a78ee4c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b> = ptrdiff_t</td></tr>
+<tr class="memitem:a4dcb46a35d5d8e3e89946f694a78ee4c" id="r_a4dcb46a35d5d8e3e89946f694a78ee4c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dcb46a35d5d8e3e89946f694a78ee4c">difference_type</a> = ptrdiff_t</td></tr>
 <tr class="separator:a4dcb46a35d5d8e3e89946f694a78ee4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aeb153f33dfe71dde2a8e555a355276" id="r_a3aeb153f33dfe71dde2a8e555a355276"><td class="memItemLeft" align="right" valign="top"><a id="a3aeb153f33dfe71dde2a8e555a355276" name="a3aeb153f33dfe71dde2a8e555a355276"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = const <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">value_type</a>*</td></tr>
+<tr class="memitem:a3aeb153f33dfe71dde2a8e555a355276" id="r_a3aeb153f33dfe71dde2a8e555a355276"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aeb153f33dfe71dde2a8e555a355276">pointer</a> = const <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">value_type</a>*</td></tr>
 <tr class="separator:a3aeb153f33dfe71dde2a8e555a355276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bf7d6b493931ba2ebc9c0053a6652b5" id="r_a5bf7d6b493931ba2ebc9c0053a6652b5"><td class="memItemLeft" align="right" valign="top"><a id="a5bf7d6b493931ba2ebc9c0053a6652b5" name="a5bf7d6b493931ba2ebc9c0053a6652b5"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">value_type</a></td></tr>
+<tr class="memitem:a5bf7d6b493931ba2ebc9c0053a6652b5" id="r_a5bf7d6b493931ba2ebc9c0053a6652b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bf7d6b493931ba2ebc9c0053a6652b5">reference</a> = <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">value_type</a></td></tr>
 <tr class="separator:a5bf7d6b493931ba2ebc9c0053a6652b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a55f05ed0cea8493cf2658e414903b0bd" id="r_a55f05ed0cea8493cf2658e414903b0bd"><td class="memItemLeft" align="right" valign="top"><a id="a55f05ed0cea8493cf2658e414903b0bd" name="a55f05ed0cea8493cf2658e414903b0bd"></a>
-<a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> ()</td></tr>
+<tr class="memitem:a55f05ed0cea8493cf2658e414903b0bd" id="r_a55f05ed0cea8493cf2658e414903b0bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55f05ed0cea8493cf2658e414903b0bd">operator++</a> ()</td></tr>
 <tr class="separator:a55f05ed0cea8493cf2658e414903b0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64bce5dde228435b1630e978d63f5424" id="r_a64bce5dde228435b1630e978d63f5424"><td class="memItemLeft" align="right" valign="top"><a id="a64bce5dde228435b1630e978d63f5424" name="a64bce5dde228435b1630e978d63f5424"></a>
-<a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> (int)</td></tr>
+<tr class="memitem:a64bce5dde228435b1630e978d63f5424" id="r_a64bce5dde228435b1630e978d63f5424"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64bce5dde228435b1630e978d63f5424">operator++</a> (int)</td></tr>
 <tr class="separator:a64bce5dde228435b1630e978d63f5424"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58e6f3b4ccdd0b18dcfee94b56036ef0" id="r_a58e6f3b4ccdd0b18dcfee94b56036ef0"><td class="memItemLeft" align="right" valign="top"><a id="a58e6f3b4ccdd0b18dcfee94b56036ef0" name="a58e6f3b4ccdd0b18dcfee94b56036ef0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a> &amp;other) const</td></tr>
+<tr class="memitem:a58e6f3b4ccdd0b18dcfee94b56036ef0" id="r_a58e6f3b4ccdd0b18dcfee94b56036ef0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58e6f3b4ccdd0b18dcfee94b56036ef0">operator==</a> (const <a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a> &amp;other) const</td></tr>
 <tr class="separator:a58e6f3b4ccdd0b18dcfee94b56036ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90cb3fa173b97f3e3753a17aae420643" id="r_a90cb3fa173b97f3e3753a17aae420643"><td class="memItemLeft" align="right" valign="top"><a id="a90cb3fa173b97f3e3753a17aae420643" name="a90cb3fa173b97f3e3753a17aae420643"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a> &amp;other) const</td></tr>
+<tr class="memitem:a90cb3fa173b97f3e3753a17aae420643" id="r_a90cb3fa173b97f3e3753a17aae420643"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90cb3fa173b97f3e3753a17aae420643">operator!=</a> (const <a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a> &amp;other) const</td></tr>
 <tr class="separator:a90cb3fa173b97f3e3753a17aae420643"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30a4af470df931f22df949db04370138" id="r_a30a4af470df931f22df949db04370138"><td class="memItemLeft" align="right" valign="top"><a id="a30a4af470df931f22df949db04370138" name="a30a4af470df931f22df949db04370138"></a>
-<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
+<tr class="memitem:a30a4af470df931f22df949db04370138" id="r_a30a4af470df931f22df949db04370138"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30a4af470df931f22df949db04370138">operator*</a> () const</td></tr>
 <tr class="separator:a30a4af470df931f22df949db04370138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9df639b70f991a7693705a041fadd3b0" id="r_a9df639b70f991a7693705a041fadd3b0"><td class="memItemLeft" align="right" valign="top"><a id="a9df639b70f991a7693705a041fadd3b0" name="a9df639b70f991a7693705a041fadd3b0"></a>
-<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () const</td></tr>
+<tr class="memitem:a9df639b70f991a7693705a041fadd3b0" id="r_a9df639b70f991a7693705a041fadd3b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9df639b70f991a7693705a041fadd3b0">operator-&gt;</a> () const</td></tr>
 <tr class="separator:a9df639b70f991a7693705a041fadd3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ae83d3a15d765a088ed8c5795b2596fb8" id="r_ae83d3a15d765a088ed8c5795b2596fb8"><td class="memItemLeft" align="right" valign="top"><a id="ae83d3a15d765a088ed8c5795b2596fb8" name="ae83d3a15d765a088ed8c5795b2596fb8"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>Cord</b></td></tr>
+<tr class="memitem:ae83d3a15d765a088ed8c5795b2596fb8" id="r_ae83d3a15d765a088ed8c5795b2596fb8"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae83d3a15d765a088ed8c5795b2596fb8">Cord</a></td></tr>
 <tr class="separator:ae83d3a15d765a088ed8c5795b2596fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1995bdcf482c63a71cb4b40a6272b173" id="r_a1995bdcf482c63a71cb4b40a6272b173"><td class="memItemLeft" align="right" valign="top"><a id="a1995bdcf482c63a71cb4b40a6272b173" name="a1995bdcf482c63a71cb4b40a6272b173"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>CharIterator</b></td></tr>
+<tr class="memitem:a1995bdcf482c63a71cb4b40a6272b173" id="r_a1995bdcf482c63a71cb4b40a6272b173"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1995bdcf482c63a71cb4b40a6272b173">CharIterator</a></td></tr>
 <tr class="separator:a1995bdcf482c63a71cb4b40a6272b173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l00425">425</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a4dcb46a35d5d8e3e89946f694a78ee4c" name="a4dcb46a35d5d8e3e89946f694a78ee4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dcb46a35d5d8e3e89946f694a78ee4c">&#9670;&#160;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using absl::Cord::ChunkIterator::difference_type = ptrdiff_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l00429">429</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+
+</div>
+</div>
+<a id="a5134d4d2541c83be3c794055086eb863" name="a5134d4d2541c83be3c794055086eb863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5134d4d2541c83be3c794055086eb863">&#9670;&#160;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using absl::Cord::ChunkIterator::iterator_category = std::input_iterator_tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l00427">427</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+
+</div>
+</div>
+<a id="a3aeb153f33dfe71dde2a8e555a355276" name="a3aeb153f33dfe71dde2a8e555a355276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aeb153f33dfe71dde2a8e555a355276">&#9670;&#160;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::Cord::ChunkIterator::pointer</a> = const <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">value_type</a>*</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l00430">430</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+
+</div>
+</div>
+<a id="a5bf7d6b493931ba2ebc9c0053a6652b5" name="a5bf7d6b493931ba2ebc9c0053a6652b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf7d6b493931ba2ebc9c0053a6652b5">&#9670;&#160;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::Cord::ChunkIterator::reference</a> = <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">value_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l00431">431</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+
+</div>
+</div>
+<a id="ac104683ac8b6113295b93f9d2add47cb" name="ac104683ac8b6113295b93f9d2add47cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac104683ac8b6113295b93f9d2add47cb">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::Cord::ChunkIterator::value_type</a> = <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l00428">428</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a90cb3fa173b97f3e3753a17aae420643" name="a90cb3fa173b97f3e3753a17aae420643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90cb3fa173b97f3e3753a17aae420643">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool absl::Cord::ChunkIterator::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l01453">1453</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1453</span>                                                                          {</div>
+<div class="line"><span class="lineno"> 1454</span>  <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == other);</div>
+<div class="line"><span class="lineno"> 1455</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a30a4af470df931f22df949db04370138" name="a30a4af470df931f22df949db04370138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a4af470df931f22df949db04370138">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">Cord::ChunkIterator::reference</a> absl::Cord::ChunkIterator::operator* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l01457">1457</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1457</span>                                                                     {</div>
+<div class="line"><span class="lineno"> 1458</span>  ABSL_HARDENING_ASSERT(bytes_remaining_ != 0);</div>
+<div class="line"><span class="lineno"> 1459</span>  <span class="keywordflow">return</span> current_chunk_;</div>
+<div class="line"><span class="lineno"> 1460</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a55f05ed0cea8493cf2658e414903b0bd" name="a55f05ed0cea8493cf2658e414903b0bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55f05ed0cea8493cf2658e414903b0bd">&#9670;&#160;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">Cord::ChunkIterator</a> &amp; absl::Cord::ChunkIterator::operator++ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l01427">1427</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1427</span>                                                        {</div>
+<div class="line"><span class="lineno"> 1428</span>  ABSL_HARDENING_ASSERT(bytes_remaining_ &gt; 0 &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1429</span>                        <span class="stringliteral">&quot;Attempted to iterate past `end()`&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1430</span>  assert(bytes_remaining_ &gt;= current_chunk_.size());</div>
+<div class="line"><span class="lineno"> 1431</span>  bytes_remaining_ -= current_chunk_.size();</div>
+<div class="line"><span class="lineno"> 1432</span>  <span class="keywordflow">if</span> (bytes_remaining_ &gt; 0) {</div>
+<div class="line"><span class="lineno"> 1433</span>    <span class="keywordflow">if</span> (btree_reader_) {</div>
+<div class="line"><span class="lineno"> 1434</span>      <span class="keywordflow">return</span> AdvanceBtree();</div>
+<div class="line"><span class="lineno"> 1435</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno"> 1436</span>      assert(!current_chunk_.empty());  <span class="comment">// Called on invalid iterator.</span></div>
+<div class="line"><span class="lineno"> 1437</span>    }</div>
+<div class="line"><span class="lineno"> 1438</span>    current_chunk_ = {};</div>
+<div class="line"><span class="lineno"> 1439</span>  }</div>
+<div class="line"><span class="lineno"> 1440</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 1441</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a64bce5dde228435b1630e978d63f5424" name="a64bce5dde228435b1630e978d63f5424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bce5dde228435b1630e978d63f5424">&#9670;&#160;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">Cord::ChunkIterator</a> absl::Cord::ChunkIterator::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l01443">1443</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1443</span>                                                          {</div>
+<div class="line"><span class="lineno"> 1444</span>  ChunkIterator tmp(*<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno"> 1445</span>  operator++();</div>
+<div class="line"><span class="lineno"> 1446</span>  <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><span class="lineno"> 1447</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9df639b70f991a7693705a041fadd3b0" name="a9df639b70f991a7693705a041fadd3b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df639b70f991a7693705a041fadd3b0">&#9670;&#160;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">Cord::ChunkIterator::pointer</a> absl::Cord::ChunkIterator::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l01462">1462</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1462</span>                                                                    {</div>
+<div class="line"><span class="lineno"> 1463</span>  ABSL_HARDENING_ASSERT(bytes_remaining_ != 0);</div>
+<div class="line"><span class="lineno"> 1464</span>  <span class="keywordflow">return</span> &amp;current_chunk_;</div>
+<div class="line"><span class="lineno"> 1465</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a58e6f3b4ccdd0b18dcfee94b56036ef0" name="a58e6f3b4ccdd0b18dcfee94b56036ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e6f3b4ccdd0b18dcfee94b56036ef0">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool absl::Cord::ChunkIterator::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/def/classabsl_1_1_cord_1_1_chunk_iterator.html">ChunkIterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l01449">1449</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1449</span>                                                                          {</div>
+<div class="line"><span class="lineno"> 1450</span>  <span class="keywordflow">return</span> bytes_remaining_ == other.bytes_remaining_;</div>
+<div class="line"><span class="lineno"> 1451</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a1995bdcf482c63a71cb4b40a6272b173" name="a1995bdcf482c63a71cb4b40a6272b173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1995bdcf482c63a71cb4b40a6272b173">&#9670;&#160;</a></span>CharIterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../d1/de1/classabsl_1_1_cord_1_1_char_iterator.html">CharIterator</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l00443">443</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+
+</div>
+</div>
+<a id="ae83d3a15d765a088ed8c5795b2596fb8" name="ae83d3a15d765a088ed8c5795b2596fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83d3a15d765a088ed8c5795b2596fb8">&#9670;&#160;</a></span>Cord</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../d9/de8/classabsl_1_1_cord.html">Cord</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d30/cord_8h_source.html#l00442">442</a> of file <a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/<a class="el" href="../../d6/d30/cord_8h_source.html">cord.h</a></li>
-<li>open_spiel/abseil-cpp/absl/strings/<b>cord.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/strings/<a class="el" href="../../d0/d44/cord_8cc_source.html">cord.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -105,16 +105,89 @@ Collaboration diagram for absl::log_internal::LogEveryNSecState:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a028f46a99353ca90b1af33ab3210d0b3" id="r_a028f46a99353ca90b1af33ab3210d0b3"><td class="memItemLeft" align="right" valign="top"><a id="a028f46a99353ca90b1af33ab3210d0b3" name="a028f46a99353ca90b1af33ab3210d0b3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShouldLog</b> (double seconds)</td></tr>
+<tr class="memitem:a028f46a99353ca90b1af33ab3210d0b3" id="r_a028f46a99353ca90b1af33ab3210d0b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a028f46a99353ca90b1af33ab3210d0b3">ShouldLog</a> (double seconds)</td></tr>
 <tr class="separator:a028f46a99353ca90b1af33ab3210d0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a86c83653f17367c4ffb07a34888bb5" id="r_a9a86c83653f17367c4ffb07a34888bb5"><td class="memItemLeft" align="right" valign="top"><a id="a9a86c83653f17367c4ffb07a34888bb5" name="a9a86c83653f17367c4ffb07a34888bb5"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>counter</b> ()</td></tr>
+<tr class="memitem:a9a86c83653f17367c4ffb07a34888bb5" id="r_a9a86c83653f17367c4ffb07a34888bb5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a86c83653f17367c4ffb07a34888bb5">counter</a> ()</td></tr>
 <tr class="separator:a9a86c83653f17367c4ffb07a34888bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/d1b/conditions_8h_source.html#l00203">203</a> of file <a class="el" href="../../d6/d1b/conditions_8h_source.html">conditions.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9a86c83653f17367c4ffb07a34888bb5" name="a9a86c83653f17367c4ffb07a34888bb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a86c83653f17367c4ffb07a34888bb5">&#9670;&#160;</a></span>counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t absl::log_internal::LogEveryNSecState::counter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d1b/conditions_8h_source.html#l00206">206</a> of file <a class="el" href="../../d6/d1b/conditions_8h_source.html">conditions.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  206</span>{ <span class="keywordflow">return</span> counter_.load(std::memory_order_relaxed); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a028f46a99353ca90b1af33ab3210d0b3" name="a028f46a99353ca90b1af33ab3210d0b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028f46a99353ca90b1af33ab3210d0b3">&#9670;&#160;</a></span>ShouldLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool absl::log_internal::LogEveryNSecState::ShouldLog </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>seconds</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d21/conditions_8cc_source.html#l00057">57</a> of file <a class="el" href="../../df/d21/conditions_8cc_source.html">conditions.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                {</div>
+<div class="line"><span class="lineno">   58</span>  <span class="keyword">using </span><a class="code hl_class" href="../../d4/dee/classabsl_1_1base__internal_1_1_cycle_clock.html">absl::base_internal::CycleClock</a>;</div>
+<div class="line"><span class="lineno">   59</span>  LossyIncrement(&amp;counter_);</div>
+<div class="line"><span class="lineno">   60</span>  <span class="keyword">const</span> int64_t now_cycles = CycleClock::Now();</div>
+<div class="line"><span class="lineno">   61</span>  int64_t next_cycles = next_log_time_cycles_.load(std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   62</span><span class="preprocessor">#if defined(__myriad2__)</span></div>
+<div class="line"><span class="lineno">   63</span>  <span class="comment">// myriad2 does not have 8-byte compare and exchange.  Use a racy version that</span></div>
+<div class="line"><span class="lineno">   64</span>  <span class="comment">// is &quot;good enough&quot; but will over-log in the face of concurrent logging.</span></div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">if</span> (now_cycles &gt; next_cycles) {</div>
+<div class="line"><span class="lineno">   66</span>    next_log_time_cycles_.store(now_cycles + seconds * CycleClock::Frequency(),</div>
+<div class="line"><span class="lineno">   67</span>                                std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   69</span>  }</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   71</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">do</span> {</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span> (now_cycles &lt;= next_cycles) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   74</span>  } <span class="keywordflow">while</span> (!next_log_time_cycles_.compare_exchange_weak(</div>
+<div class="line"><span class="lineno">   75</span>      next_cycles, now_cycles + seconds * CycleClock::Frequency(),</div>
+<div class="line"><span class="lineno">   76</span>      std::memory_order_relaxed, std::memory_order_relaxed));</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   79</span>}</div>
+<div class="ttc" id="aclassabsl_1_1base__internal_1_1_cycle_clock_html"><div class="ttname"><a href="../../d4/dee/classabsl_1_1base__internal_1_1_cycle_clock.html">absl::base_internal::CycleClock</a></div><div class="ttdef"><b>Definition</b> <a href="../../dd/da9/cycleclock_8h_source.html#l00062">cycleclock.h:62</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/log/internal/<a class="el" href="../../d6/d1b/conditions_8h_source.html">conditions.h</a></li>
-<li>open_spiel/abseil-cpp/absl/log/internal/<b>conditions.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/log/internal/<a class="el" href="../../df/d21/conditions_8cc_source.html">conditions.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -117,16 +117,95 @@ Collaboration diagram for open_spiel::algorithms::torch_dqn::SimpleLinearImpl:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8c81c942714e191b85384e0445ea4880" id="r_a8c81c942714e191b85384e0445ea4880"><td class="memItemLeft" align="right" valign="top"><a id="a8c81c942714e191b85384e0445ea4880" name="a8c81c942714e191b85384e0445ea4880"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SimpleLinearImpl</b> (int input_size, int output_size, bool activate_relu=true)</td></tr>
+<tr class="memitem:a8c81c942714e191b85384e0445ea4880" id="r_a8c81c942714e191b85384e0445ea4880"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c81c942714e191b85384e0445ea4880">SimpleLinearImpl</a> (int input_size, int output_size, bool activate_relu=true)</td></tr>
 <tr class="separator:a8c81c942714e191b85384e0445ea4880"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bd2995f63ce8b604651a03ee21cbac8" id="r_a7bd2995f63ce8b604651a03ee21cbac8"><td class="memItemLeft" align="right" valign="top"><a id="a7bd2995f63ce8b604651a03ee21cbac8" name="a7bd2995f63ce8b604651a03ee21cbac8"></a>
-torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b> (torch::Tensor x)</td></tr>
+<tr class="memitem:a7bd2995f63ce8b604651a03ee21cbac8" id="r_a7bd2995f63ce8b604651a03ee21cbac8"><td class="memItemLeft" align="right" valign="top">torch::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bd2995f63ce8b604651a03ee21cbac8">forward</a> (torch::Tensor x)</td></tr>
 <tr class="separator:a7bd2995f63ce8b604651a03ee21cbac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/db9/simple__nets_8h_source.html#l00032">32</a> of file <a class="el" href="../../d7/db9/simple__nets_8h_source.html">simple_nets.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8c81c942714e191b85384e0445ea4880" name="a8c81c942714e191b85384e0445ea4880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c81c942714e191b85384e0445ea4880">&#9670;&#160;</a></span>SimpleLinearImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::torch_dqn::SimpleLinearImpl::SimpleLinearImpl </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>input_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>output_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>activate_relu</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/simple__nets_8cc_source.html#l00029">29</a> of file <a class="el" href="../../d5/d31/simple__nets_8cc_source.html">simple_nets.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>    : simple_linear_(torch::nn::LinearOptions(<span class="comment">/*in_features*/</span> input_size,</div>
+<div class="line"><span class="lineno">   32</span>                                              <span class="comment">/*out_features*/</span> output_size)),</div>
+<div class="line"><span class="lineno">   33</span>      activate_relu_(activate_relu) {</div>
+<div class="line"><span class="lineno">   34</span>  <span class="keywordtype">double</span> stddev = 1.0 / std::sqrt(input_size);</div>
+<div class="line"><span class="lineno">   35</span>  <span class="keywordtype">double</span> lower = -2.0 * stddev;</div>
+<div class="line"><span class="lineno">   36</span>  <span class="keywordtype">double</span> upper = 2.0 * stddev;</div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; named_parameter : simple_linear_-&gt;named_parameters()) {</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span> (named_parameter.key().find(<span class="stringliteral">&quot;weight&quot;</span>) != std::string::npos) {</div>
+<div class="line"><span class="lineno">   39</span>      torch::Tensor uniform_param = torch::nn::init::uniform_(</div>
+<div class="line"><span class="lineno">   40</span>          named_parameter.value()).to(torch::kFloat64);</div>
+<div class="line"><span class="lineno">   41</span>      <span class="keywordtype">double</span> clip_lower = 0.5 * (1.0 + std::erf(lower / kSqrt2));</div>
+<div class="line"><span class="lineno">   42</span>      <span class="keywordtype">double</span> clip_upper = 0.5 * (1.0 + std::erf(upper / kSqrt2));</div>
+<div class="line"><span class="lineno">   43</span>      torch::Tensor new_param = kSqrt2 * torch::erfinv(</div>
+<div class="line"><span class="lineno">   44</span>          2.0 * ((clip_upper - clip_lower) * uniform_param + clip_lower) - 1.0);</div>
+<div class="line"><span class="lineno">   45</span>      named_parameter.value().data() = new_param;</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span> (named_parameter.key().find(<span class="stringliteral">&quot;bias&quot;</span>) != std::string::npos) {</div>
+<div class="line"><span class="lineno">   48</span>      named_parameter.value().data() = torch::zeros({output_size});</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span>  }</div>
+<div class="line"><span class="lineno">   51</span>  register_module(<span class="stringliteral">&quot;simple_linear_&quot;</span>, simple_linear_);</div>
+<div class="line"><span class="lineno">   52</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7bd2995f63ce8b604651a03ee21cbac8" name="a7bd2995f63ce8b604651a03ee21cbac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bd2995f63ce8b604651a03ee21cbac8">&#9670;&#160;</a></span>forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">torch::Tensor open_spiel::algorithms::torch_dqn::SimpleLinearImpl::forward </td>
+          <td>(</td>
+          <td class="paramtype">torch::Tensor</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/simple__nets_8cc_source.html#l00054">54</a> of file <a class="el" href="../../d5/d31/simple__nets_8cc_source.html">simple_nets.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                   {</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">if</span> (activate_relu_) {</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> torch::relu(simple_linear_-&gt;forward(x));</div>
+<div class="line"><span class="lineno">   57</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> simple_linear_-&gt;forward(x);;</div>
+<div class="line"><span class="lineno">   59</span>  }</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/dqn_torch/<a class="el" href="../../d7/db9/simple__nets_8h_source.html">simple_nets.h</a></li>
-<li>open_spiel/algorithms/dqn_torch/<b>simple_nets.cc</b></li>
+<li>open_spiel/algorithms/dqn_torch/<a class="el" href="../../d5/d31/simple__nets_8cc_source.html">simple_nets.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

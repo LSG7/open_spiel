@@ -105,13 +105,98 @@ Collaboration diagram for open_spiel::algorithms::TrajectoryRecorder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a185acb93e69daba9094e861f3449b79d" id="r_a185acb93e69daba9094e861f3449b79d"><td class="memItemLeft" align="right" valign="top"><a id="a185acb93e69daba9094e861f3449b79d" name="a185acb93e69daba9094e861f3449b79d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TrajectoryRecorder</b> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;game, const std::unordered_map&lt; std::string, int &gt; &amp;state_to_index, int seed)</td></tr>
+<tr class="memitem:a185acb93e69daba9094e861f3449b79d" id="r_a185acb93e69daba9094e861f3449b79d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a185acb93e69daba9094e861f3449b79d">TrajectoryRecorder</a> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;game, const std::unordered_map&lt; std::string, int &gt; &amp;state_to_index, int seed)</td></tr>
 <tr class="separator:a185acb93e69daba9094e861f3449b79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a595461c086e7c607034ece8d30d4d863" id="r_a595461c086e7c607034ece8d30d4d863"><td class="memItemLeft" align="right" valign="top"><a id="a595461c086e7c607034ece8d30d4d863" name="a595461c086e7c607034ece8d30d4d863"></a>
-<a class="el" href="../../d0/d4f/structopen__spiel_1_1algorithms_1_1_batched_trajectory.html">BatchedTrajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RecordBatch</b> (const std::vector&lt; <a class="el" href="../../da/dad/classopen__spiel_1_1_tabular_policy.html">TabularPolicy</a> &gt; &amp;policies, int batch_size, int max_unroll_length)</td></tr>
+<tr class="memitem:a595461c086e7c607034ece8d30d4d863" id="r_a595461c086e7c607034ece8d30d4d863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d4f/structopen__spiel_1_1algorithms_1_1_batched_trajectory.html">BatchedTrajectory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a595461c086e7c607034ece8d30d4d863">RecordBatch</a> (const std::vector&lt; <a class="el" href="../../da/dad/classopen__spiel_1_1_tabular_policy.html">TabularPolicy</a> &gt; &amp;policies, int batch_size, int max_unroll_length)</td></tr>
 <tr class="separator:a595461c086e7c607034ece8d30d4d863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/trajectories_8h_source.html#l00115">115</a> of file <a class="el" href="../../d9/dc3/trajectories_8h_source.html">trajectories.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a185acb93e69daba9094e861f3449b79d" name="a185acb93e69daba9094e861f3449b79d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185acb93e69daba9094e861f3449b79d">&#9670;&#160;</a></span>TrajectoryRecorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::TrajectoryRecorder::TrajectoryRecorder </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>state_to_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>seed</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/trajectories_8h_source.html#l00117">117</a> of file <a class="el" href="../../d9/dc3/trajectories_8h_source.html">trajectories.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>      : game_(game.shared_from_this()),</div>
+<div class="line"><span class="lineno">  121</span>        state_to_index_(state_to_index),</div>
+<div class="line"><span class="lineno">  122</span>        rng_(std::mt19937(seed)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a595461c086e7c607034ece8d30d4d863" name="a595461c086e7c607034ece8d30d4d863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595461c086e7c607034ece8d30d4d863">&#9670;&#160;</a></span>RecordBatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d4f/structopen__spiel_1_1algorithms_1_1_batched_trajectory.html">BatchedTrajectory</a> open_spiel::algorithms::TrajectoryRecorder::RecordBatch </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../da/dad/classopen__spiel_1_1_tabular_policy.html">TabularPolicy</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>policies</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>batch_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max_unroll_length</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dc3/trajectories_8h_source.html#l00124">124</a> of file <a class="el" href="../../d9/dc3/trajectories_8h_source.html">trajectories.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>                                                                       {</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> include_full_observations = state_to_index_.empty();</div>
+<div class="line"><span class="lineno">  127</span>    std::unique_ptr&lt;State&gt; root = game_-&gt;NewInitialState();</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">return</span> RecordBatchedTrajectory(*game_, policies, *root, state_to_index_,</div>
+<div class="line"><span class="lineno">  129</span>                                   batch_size, include_full_observations, &amp;rng_,</div>
+<div class="line"><span class="lineno">  130</span>                                   max_unroll_length);</div>
+<div class="line"><span class="lineno">  131</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/algorithms/<a class="el" href="../../d9/dc3/trajectories_8h_source.html">trajectories.h</a></li>
 </ul>

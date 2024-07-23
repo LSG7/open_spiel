@@ -118,15 +118,14 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0ab54091f5bd9e57af457fa69567a826" id="r_a0ab54091f5bd9e57af457fa69567a826"><td class="memItemLeft" align="right" valign="top"><a id="a0ab54091f5bd9e57af457fa69567a826" name="a0ab54091f5bd9e57af457fa69567a826"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CheckpointStep</b> { <b>kMostRecentCheckpointStep</b> = -1
+<tr class="memitem:a0ab54091f5bd9e57af457fa69567a826" id="r_a0ab54091f5bd9e57af457fa69567a826"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>CheckpointStep</b> { <b>kMostRecentCheckpointStep</b> = -1
 , <b>kInvalidCheckpointStep</b> = -2
  }</td></tr>
 <tr class="separator:a0ab54091f5bd9e57af457fa69567a826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afaea61dd12a9cabd4cc51b9f04d9edb7" id="r_afaea61dd12a9cabd4cc51b9f04d9edb7"><td class="memItemLeft" align="right" valign="top"><a id="afaea61dd12a9cabd4cc51b9f04d9edb7" name="afaea61dd12a9cabd4cc51b9f04d9edb7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VPNetModel</b> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;game, const std::string &amp;path, const std::string &amp;file_name, const std::string &amp;device=&quot;/cpu:0&quot;)</td></tr>
+<tr class="memitem:afaea61dd12a9cabd4cc51b9f04d9edb7" id="r_afaea61dd12a9cabd4cc51b9f04d9edb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaea61dd12a9cabd4cc51b9f04d9edb7">VPNetModel</a> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;game, const std::string &amp;path, const std::string &amp;file_name, const std::string &amp;device=&quot;/cpu:0&quot;)</td></tr>
 <tr class="separator:afaea61dd12a9cabd4cc51b9f04d9edb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab59b78be5907df2d8c76374613cfd569" id="r_ab59b78be5907df2d8c76374613cfd569"><td class="memItemLeft" align="right" valign="top"><a id="ab59b78be5907df2d8c76374613cfd569" name="ab59b78be5907df2d8c76374613cfd569"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VPNetModel</b> (<a class="el" href="../../d6/d05/classopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model.html">VPNetModel</a> &amp;&amp;other)=default</td></tr>
@@ -140,28 +139,346 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a00960565d3574b9fbdc44080a033dfeb" id="r_a00960565d3574b9fbdc44080a033dfeb"><td class="memItemLeft" align="right" valign="top"><a id="a00960565d3574b9fbdc44080a033dfeb" name="a00960565d3574b9fbdc44080a033dfeb"></a>
 <a class="el" href="../../d6/d05/classopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model.html">VPNetModel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d6/d05/classopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model.html">VPNetModel</a> &amp;)=delete</td></tr>
 <tr class="separator:a00960565d3574b9fbdc44080a033dfeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1fa86991e72958bd409a575dc71f06c" id="r_af1fa86991e72958bd409a575dc71f06c"><td class="memItemLeft" align="right" valign="top"><a id="af1fa86991e72958bd409a575dc71f06c" name="af1fa86991e72958bd409a575dc71f06c"></a>
-std::vector&lt; <a class="el" href="../../d9/d33/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_inference_outputs.html">InferenceOutputs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Inference</b> (const std::vector&lt; <a class="el" href="../../d5/d7d/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_inference_inputs.html">InferenceInputs</a> &gt; &amp;inputs)</td></tr>
+<tr class="memitem:af1fa86991e72958bd409a575dc71f06c" id="r_af1fa86991e72958bd409a575dc71f06c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/d33/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_inference_outputs.html">InferenceOutputs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1fa86991e72958bd409a575dc71f06c">Inference</a> (const std::vector&lt; <a class="el" href="../../d5/d7d/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_inference_inputs.html">InferenceInputs</a> &gt; &amp;inputs)</td></tr>
 <tr class="separator:af1fa86991e72958bd409a575dc71f06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd6b3933712da41eacac728cc0e5973" id="r_a3cd6b3933712da41eacac728cc0e5973"><td class="memItemLeft" align="right" valign="top"><a id="a3cd6b3933712da41eacac728cc0e5973" name="a3cd6b3933712da41eacac728cc0e5973"></a>
-<a class="el" href="../../da/df0/classopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_loss_info.html">LossInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Learn</b> (const std::vector&lt; <a class="el" href="../../d8/d01/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_train_inputs.html">TrainInputs</a> &gt; &amp;inputs)</td></tr>
+<tr class="memitem:a3cd6b3933712da41eacac728cc0e5973" id="r_a3cd6b3933712da41eacac728cc0e5973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/df0/classopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_loss_info.html">LossInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cd6b3933712da41eacac728cc0e5973">Learn</a> (const std::vector&lt; <a class="el" href="../../d8/d01/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_train_inputs.html">TrainInputs</a> &gt; &amp;inputs)</td></tr>
 <tr class="separator:a3cd6b3933712da41eacac728cc0e5973"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65dc38ee167b98a43c831f55141915f7" id="r_a65dc38ee167b98a43c831f55141915f7"><td class="memItemLeft" align="right" valign="top"><a id="a65dc38ee167b98a43c831f55141915f7" name="a65dc38ee167b98a43c831f55141915f7"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>SaveCheckpoint</b> (int step)</td></tr>
+<tr class="memitem:a65dc38ee167b98a43c831f55141915f7" id="r_a65dc38ee167b98a43c831f55141915f7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65dc38ee167b98a43c831f55141915f7">SaveCheckpoint</a> (int step)</td></tr>
 <tr class="separator:a65dc38ee167b98a43c831f55141915f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07f597ead45df9b15172e1f0701447ae" id="r_a07f597ead45df9b15172e1f0701447ae"><td class="memItemLeft" align="right" valign="top"><a id="a07f597ead45df9b15172e1f0701447ae" name="a07f597ead45df9b15172e1f0701447ae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadCheckpoint</b> (int step)</td></tr>
+<tr class="memitem:a07f597ead45df9b15172e1f0701447ae" id="r_a07f597ead45df9b15172e1f0701447ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07f597ead45df9b15172e1f0701447ae">LoadCheckpoint</a> (int step)</td></tr>
 <tr class="separator:a07f597ead45df9b15172e1f0701447ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad75d97a4c6e9c717da004425a7f200b4" id="r_ad75d97a4c6e9c717da004425a7f200b4"><td class="memItemLeft" align="right" valign="top"><a id="ad75d97a4c6e9c717da004425a7f200b4" name="ad75d97a4c6e9c717da004425a7f200b4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadCheckpoint</b> (const std::string &amp;path)</td></tr>
+<tr class="memitem:ad75d97a4c6e9c717da004425a7f200b4" id="r_ad75d97a4c6e9c717da004425a7f200b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad75d97a4c6e9c717da004425a7f200b4">LoadCheckpoint</a> (const std::string &amp;path)</td></tr>
 <tr class="separator:ad75d97a4c6e9c717da004425a7f200b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74299f306339bc1d548e40a00117ec95" id="r_a74299f306339bc1d548e40a00117ec95"><td class="memItemLeft" align="right" valign="top"><a id="a74299f306339bc1d548e40a00117ec95" name="a74299f306339bc1d548e40a00117ec95"></a>
-const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Device</b> () const</td></tr>
+<tr class="memitem:a74299f306339bc1d548e40a00117ec95" id="r_a74299f306339bc1d548e40a00117ec95"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74299f306339bc1d548e40a00117ec95">Device</a> () const</td></tr>
 <tr class="separator:a74299f306339bc1d548e40a00117ec95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/dff/vpnet_8h_source.html#l00038">38</a> of file <a class="el" href="../../d6/dff/vpnet_8h_source.html">vpnet.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a0ab54091f5bd9e57af457fa69567a826" name="a0ab54091f5bd9e57af457fa69567a826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab54091f5bd9e57af457fa69567a826">&#9670;&#160;</a></span>CheckpointStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum open_spiel::algorithms::torch_az::VPNetModel::CheckpointStep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dff/vpnet_8h_source.html#l00101">101</a> of file <a class="el" href="../../d6/dff/vpnet_8h_source.html">vpnet.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>                      {</div>
+<div class="line"><span class="lineno">  102</span>    kMostRecentCheckpointStep = -1,</div>
+<div class="line"><span class="lineno">  103</span>    kInvalidCheckpointStep = -2</div>
+<div class="line"><span class="lineno">  104</span>  };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afaea61dd12a9cabd4cc51b9f04d9edb7" name="afaea61dd12a9cabd4cc51b9f04d9edb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaea61dd12a9cabd4cc51b9f04d9edb7">&#9670;&#160;</a></span>VPNetModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::algorithms::torch_az::VPNetModel::VPNetModel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>device</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;/cpu:0&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de9/vpnet_8cc_source.html#l00111">111</a> of file <a class="el" href="../../d0/de9/vpnet_8cc_source.html">vpnet.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>    : device_(device), path_(path),</div>
+<div class="line"><span class="lineno">  114</span>      flat_input_size_(game.ObservationTensorSize()),</div>
+<div class="line"><span class="lineno">  115</span>      num_actions_(game.NumDistinctActions()),</div>
+<div class="line"><span class="lineno">  116</span>      model_config_(LoadModelConfig(path, file_name)),</div>
+<div class="line"><span class="lineno">  117</span>      torch_device_(TorchDeviceName(device)),</div>
+<div class="line"><span class="lineno">  118</span>      model_(model_config_, TorchDeviceName(device)),</div>
+<div class="line"><span class="lineno">  119</span>      model_optimizer_(model_-&gt;parameters(),</div>
+<div class="line"><span class="lineno">  120</span>                       torch::optim::AdamOptions(model_config_.learning_rate)) {</div>
+<div class="line"><span class="lineno">  121</span>  <span class="comment">// Some assumptions that we can remove eventually. The value net returns</span></div>
+<div class="line"><span class="lineno">  122</span>  <span class="comment">// a single value in terms of player 0 and the game is assumed to be zero-sum,</span></div>
+<div class="line"><span class="lineno">  123</span>  <span class="comment">// so player 1 can just be -value.</span></div>
+<div class="line"><span class="lineno">  124</span>  SPIEL_CHECK_EQ(game.NumPlayers(), 2);</div>
+<div class="line"><span class="lineno">  125</span>  SPIEL_CHECK_EQ(game.GetType().utility, GameType::Utility::kZeroSum);</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>  <span class="comment">// Put this model on the specified device.</span></div>
+<div class="line"><span class="lineno">  128</span>  model_-&gt;to(torch_device_);</div>
+<div class="line"><span class="lineno">  129</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a74299f306339bc1d548e40a00117ec95" name="a74299f306339bc1d548e40a00117ec95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74299f306339bc1d548e40a00117ec95">&#9670;&#160;</a></span>Device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string open_spiel::algorithms::torch_az::VPNetModel::Device </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dff/vpnet_8h_source.html#l00127">127</a> of file <a class="el" href="../../d6/dff/vpnet_8h_source.html">vpnet.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>{ <span class="keywordflow">return</span> device_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1fa86991e72958bd409a575dc71f06c" name="af1fa86991e72958bd409a575dc71f06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1fa86991e72958bd409a575dc71f06c">&#9670;&#160;</a></span>Inference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d9/d33/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_inference_outputs.html">VPNetModel::InferenceOutputs</a> &gt; open_spiel::algorithms::torch_az::VPNetModel::Inference </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d5/d7d/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_inference_inputs.html">InferenceInputs</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>inputs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de9/vpnet_8cc_source.html#l00151">151</a> of file <a class="el" href="../../d0/de9/vpnet_8cc_source.html">vpnet.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>                                              {</div>
+<div class="line"><span class="lineno">  153</span>  <span class="keywordtype">int</span> inference_batch_size = inputs.size();</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>  <span class="comment">// Torch tensors by default use a dense, row-aligned memory layout.</span></div>
+<div class="line"><span class="lineno">  156</span>  <span class="comment">//   - Their default data type is a 32-bit float</span></div>
+<div class="line"><span class="lineno">  157</span>  <span class="comment">//   - Use the byte data type for boolean</span></div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>  torch::Tensor torch_inf_inputs =</div>
+<div class="line"><span class="lineno">  160</span>      torch::empty({inference_batch_size, flat_input_size_}, torch_device_);</div>
+<div class="line"><span class="lineno">  161</span>  torch::Tensor torch_inf_legal_mask = torch::full(</div>
+<div class="line"><span class="lineno">  162</span>      {inference_batch_size, num_actions_}, <span class="keyword">false</span>,</div>
+<div class="line"><span class="lineno">  163</span>      torch::TensorOptions().dtype(torch::kByte).device(torch_device_));</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> batch = 0; <a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a> &lt; inference_batch_size; ++<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>) {</div>
+<div class="line"><span class="lineno">  166</span>    <span class="comment">// Copy legal mask(s) to a Torch tensor.</span></div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">for</span> (Action action : inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].legal_actions) {</div>
+<div class="line"><span class="lineno">  168</span>      torch_inf_legal_mask[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>][action] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  169</span>    }</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>    <span class="comment">// Copy the observation(s) to a Torch tensor.</span></div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].observations.size(); ++i) {</div>
+<div class="line"><span class="lineno">  173</span>      torch_inf_inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>][i] = inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].observations[i];</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="line"><span class="lineno">  175</span>  }</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>  <span class="comment">// Run the inference.</span></div>
+<div class="line"><span class="lineno">  178</span>  model_-&gt;eval();</div>
+<div class="line"><span class="lineno">  179</span>  std::vector&lt;torch::Tensor&gt; torch_outputs =</div>
+<div class="line"><span class="lineno">  180</span>      model_(torch_inf_inputs, torch_inf_legal_mask);</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>  torch::Tensor value_batch = torch_outputs[0];</div>
+<div class="line"><span class="lineno">  183</span>  torch::Tensor policy_batch = torch_outputs[1];</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>  <span class="comment">// Copy the Torch tensor output to the appropriate structure.</span></div>
+<div class="line"><span class="lineno">  186</span>  std::vector&lt;InferenceOutputs&gt; output;</div>
+<div class="line"><span class="lineno">  187</span>  output.reserve(inference_batch_size);</div>
+<div class="line"><span class="lineno">  188</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> batch = 0; <a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a> &lt; inference_batch_size; ++<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>) {</div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordtype">double</span> value = value_batch[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].item&lt;<span class="keywordtype">double</span>&gt;();</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>    ActionsAndProbs state_policy;</div>
+<div class="line"><span class="lineno">  192</span>    state_policy.reserve(inputs[batch].legal_actions.size());</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">for</span> (Action action : inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].legal_actions) {</div>
+<div class="line"><span class="lineno">  194</span>      state_policy.push_back(</div>
+<div class="line"><span class="lineno">  195</span>          {action, policy_batch[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>][action].item&lt;<span class="keywordtype">float</span>&gt;()});</div>
+<div class="line"><span class="lineno">  196</span>    }</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>    output.push_back({value, state_policy});</div>
+<div class="line"><span class="lineno">  199</span>  }</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>  <span class="keywordflow">return</span> output;</div>
+<div class="line"><span class="lineno">  202</span>}</div>
+<div class="ttc" id="anamespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning_html_a0e68aa70a03ce1994f0c9e1683f1bbd5"><div class="ttname"><a href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">open_spiel.python.examples.bridge_supervised_learning.batch</a></div><div class="ttdeci">batch(dataset, int batch_size)</div><div class="ttdef"><b>Definition</b> <a href="../../d8/dcf/bridge__supervised__learning_8py_source.html#l00084">bridge_supervised_learning.py:84</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3cd6b3933712da41eacac728cc0e5973" name="a3cd6b3933712da41eacac728cc0e5973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd6b3933712da41eacac728cc0e5973">&#9670;&#160;</a></span>Learn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/df0/classopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_loss_info.html">VPNetModel::LossInfo</a> open_spiel::algorithms::torch_az::VPNetModel::Learn </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d8/d01/structopen__spiel_1_1algorithms_1_1torch__az_1_1_v_p_net_model_1_1_train_inputs.html">TrainInputs</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>inputs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de9/vpnet_8cc_source.html#l00204">204</a> of file <a class="el" href="../../d0/de9/vpnet_8cc_source.html">vpnet.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>                                                                         {</div>
+<div class="line"><span class="lineno">  205</span>  <span class="keywordtype">int</span> training_batch_size = inputs.size();</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>  <span class="comment">// Torch tensors by default use a dense, row-aligned memory layout.</span></div>
+<div class="line"><span class="lineno">  208</span>  <span class="comment">//   - Their default data type is a 32-bit float</span></div>
+<div class="line"><span class="lineno">  209</span>  <span class="comment">//   - Use the byte data type for boolean</span></div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>  torch::Tensor torch_train_inputs =</div>
+<div class="line"><span class="lineno">  212</span>      torch::empty({training_batch_size, flat_input_size_}, torch_device_);</div>
+<div class="line"><span class="lineno">  213</span>  torch::Tensor torch_train_legal_mask = torch::full(</div>
+<div class="line"><span class="lineno">  214</span>      {training_batch_size, num_actions_}, <span class="keyword">false</span>,</div>
+<div class="line"><span class="lineno">  215</span>      torch::TensorOptions().dtype(torch::kByte).device(torch_device_));</div>
+<div class="line"><span class="lineno">  216</span>  torch::Tensor torch_policy_targets =</div>
+<div class="line"><span class="lineno">  217</span>      torch::zeros({training_batch_size, num_actions_}, torch_device_);</div>
+<div class="line"><span class="lineno">  218</span>  torch::Tensor torch_value_targets =</div>
+<div class="line"><span class="lineno">  219</span>      torch::empty({training_batch_size, 1}, torch_device_);</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> batch = 0; <a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a> &lt; training_batch_size; ++<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>) {</div>
+<div class="line"><span class="lineno">  222</span>    <span class="comment">// Copy the legal mask(s) to a Torch tensor.</span></div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">for</span> (Action action : inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].legal_actions) {</div>
+<div class="line"><span class="lineno">  224</span>      torch_train_legal_mask[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>][action] = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  225</span>    }</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>    <span class="comment">// Copy the observation(s) to a Torch tensor.</span></div>
+<div class="line"><span class="lineno">  228</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].observations.size(); ++i) {</div>
+<div class="line"><span class="lineno">  229</span>      torch_train_inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>][i] = inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].observations[i];</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+<div class="line"><span class="lineno">  231</span> </div>
+<div class="line"><span class="lineno">  232</span>    <span class="comment">// Copy the policy target(s) to a Torch tensor.</span></div>
+<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [action, probability] : inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].policy) {</div>
+<div class="line"><span class="lineno">  234</span>      torch_policy_targets[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>][action] = probability;</div>
+<div class="line"><span class="lineno">  235</span>    }</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>    <span class="comment">// Copy the value target(s) to a Torch tensor.</span></div>
+<div class="line"><span class="lineno">  238</span>    torch_value_targets[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>][0] = inputs[<a class="code hl_function" href="../../da/d6e/namespaceopen__spiel_1_1python_1_1examples_1_1bridge__supervised__learning.html#a0e68aa70a03ce1994f0c9e1683f1bbd5">batch</a>].value;</div>
+<div class="line"><span class="lineno">  239</span>  }</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>  <span class="comment">// Run a training step and get the losses.</span></div>
+<div class="line"><span class="lineno">  242</span>  model_-&gt;train();</div>
+<div class="line"><span class="lineno">  243</span>  model_-&gt;zero_grad();</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>  std::vector&lt;torch::Tensor&gt; torch_outputs =</div>
+<div class="line"><span class="lineno">  246</span>      model_-&gt;losses(torch_train_inputs, torch_train_legal_mask,</div>
+<div class="line"><span class="lineno">  247</span>                     torch_policy_targets, torch_value_targets);</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>  torch::Tensor total_loss =</div>
+<div class="line"><span class="lineno">  250</span>      torch_outputs[0] + torch_outputs[1] + torch_outputs[2];</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>  total_loss.backward();</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>  model_optimizer_.step();</div>
+<div class="line"><span class="lineno">  255</span> </div>
+<div class="line"><span class="lineno">  256</span>  <span class="keywordflow">return</span> LossInfo(torch_outputs[0].item&lt;float&gt;(),</div>
+<div class="line"><span class="lineno">  257</span>                  torch_outputs[1].item&lt;float&gt;(),</div>
+<div class="line"><span class="lineno">  258</span>                  torch_outputs[2].item&lt;float&gt;());</div>
+<div class="line"><span class="lineno">  259</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad75d97a4c6e9c717da004425a7f200b4" name="ad75d97a4c6e9c717da004425a7f200b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75d97a4c6e9c717da004425a7f200b4">&#9670;&#160;</a></span>LoadCheckpoint() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::algorithms::torch_az::VPNetModel::LoadCheckpoint </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de9/vpnet_8cc_source.html#l00145">145</a> of file <a class="el" href="../../d0/de9/vpnet_8cc_source.html">vpnet.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                     {</div>
+<div class="line"><span class="lineno">  146</span>  torch::load(model_, absl::StrCat(path, <span class="stringliteral">&quot;.pt&quot;</span>), torch_device_);</div>
+<div class="line"><span class="lineno">  147</span>  torch::load(model_optimizer_, absl::StrCat(path, <span class="stringliteral">&quot;-optimizer.pt&quot;</span>),</div>
+<div class="line"><span class="lineno">  148</span>              torch_device_);</div>
+<div class="line"><span class="lineno">  149</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a07f597ead45df9b15172e1f0701447ae" name="a07f597ead45df9b15172e1f0701447ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f597ead45df9b15172e1f0701447ae">&#9670;&#160;</a></span>LoadCheckpoint() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void open_spiel::algorithms::torch_az::VPNetModel::LoadCheckpoint </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>step</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de9/vpnet_8cc_source.html#l00140">140</a> of file <a class="el" href="../../d0/de9/vpnet_8cc_source.html">vpnet.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>                                        {</div>
+<div class="line"><span class="lineno">  141</span>  <span class="comment">// Load checkpoint from the path given at its initialization.</span></div>
+<div class="line"><span class="lineno">  142</span>  LoadCheckpoint(absl::StrCat(path_, <span class="stringliteral">&quot;/checkpoint-&quot;</span>, step));</div>
+<div class="line"><span class="lineno">  143</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a65dc38ee167b98a43c831f55141915f7" name="a65dc38ee167b98a43c831f55141915f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65dc38ee167b98a43c831f55141915f7">&#9670;&#160;</a></span>SaveCheckpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string open_spiel::algorithms::torch_az::VPNetModel::SaveCheckpoint </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>step</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/de9/vpnet_8cc_source.html#l00131">131</a> of file <a class="el" href="../../d0/de9/vpnet_8cc_source.html">vpnet.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                             {</div>
+<div class="line"><span class="lineno">  132</span>  std::string full_path = absl::StrCat(path_, <span class="stringliteral">&quot;/checkpoint-&quot;</span>, step);</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>  torch::save(model_, absl::StrCat(full_path, <span class="stringliteral">&quot;.pt&quot;</span>));</div>
+<div class="line"><span class="lineno">  135</span>  torch::save(model_optimizer_, absl::StrCat(full_path, <span class="stringliteral">&quot;-optimizer.pt&quot;</span>));</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">return</span> full_path;</div>
+<div class="line"><span class="lineno">  138</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/algorithms/alpha_zero_torch/<a class="el" href="../../d6/dff/vpnet_8h_source.html">vpnet.h</a></li>
-<li>open_spiel/algorithms/alpha_zero_torch/<b>vpnet.cc</b></li>
+<li>open_spiel/algorithms/alpha_zero_torch/<a class="el" href="../../d0/de9/vpnet_8cc_source.html">vpnet.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

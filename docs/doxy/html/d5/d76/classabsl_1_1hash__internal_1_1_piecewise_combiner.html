@@ -111,19 +111,175 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab61d6bfa586b3312358287f9f666b640" id="r_ab61d6bfa586b3312358287f9f666b640"><td class="memItemLeft" align="right" valign="top"><a id="ab61d6bfa586b3312358287f9f666b640" name="ab61d6bfa586b3312358287f9f666b640"></a>
 <a class="el" href="../../d5/d76/classabsl_1_1hash__internal_1_1_piecewise_combiner.html">PiecewiseCombiner</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d5/d76/classabsl_1_1hash__internal_1_1_piecewise_combiner.html">PiecewiseCombiner</a> &amp;)=delete</td></tr>
 <tr class="separator:ab61d6bfa586b3312358287f9f666b640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a306232c35b86fd9b724d614b8a0229b9" id="r_a306232c35b86fd9b724d614b8a0229b9"><td class="memTemplParams" colspan="2"><a id="a306232c35b86fd9b724d614b8a0229b9" name="a306232c35b86fd9b724d614b8a0229b9"></a>
-template&lt;typename H &gt; </td></tr>
-<tr class="memitem:a306232c35b86fd9b724d614b8a0229b9"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><b>add_buffer</b> (H state, const unsigned char *data, size_t size)</td></tr>
+<tr class="memitem:a306232c35b86fd9b724d614b8a0229b9" id="r_a306232c35b86fd9b724d614b8a0229b9"><td class="memTemplParams" colspan="2">template&lt;typename H &gt; </td></tr>
+<tr class="memitem:a306232c35b86fd9b724d614b8a0229b9"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a306232c35b86fd9b724d614b8a0229b9">add_buffer</a> (H state, const unsigned char *data, size_t size)</td></tr>
 <tr class="separator:a306232c35b86fd9b724d614b8a0229b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7f829dbc19e07289f26fbe8620789fd" id="r_ae7f829dbc19e07289f26fbe8620789fd"><td class="memTemplParams" colspan="2"><a id="ae7f829dbc19e07289f26fbe8620789fd" name="ae7f829dbc19e07289f26fbe8620789fd"></a>
-template&lt;typename H &gt; </td></tr>
-<tr class="memitem:ae7f829dbc19e07289f26fbe8620789fd"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><b>add_buffer</b> (H state, const char *data, size_t size)</td></tr>
+<tr class="memitem:ae7f829dbc19e07289f26fbe8620789fd" id="r_ae7f829dbc19e07289f26fbe8620789fd"><td class="memTemplParams" colspan="2">template&lt;typename H &gt; </td></tr>
+<tr class="memitem:ae7f829dbc19e07289f26fbe8620789fd"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae7f829dbc19e07289f26fbe8620789fd">add_buffer</a> (H state, const char *data, size_t size)</td></tr>
 <tr class="separator:ae7f829dbc19e07289f26fbe8620789fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a952130c9fd3ec3c926513335784133a1" id="r_a952130c9fd3ec3c926513335784133a1"><td class="memTemplParams" colspan="2"><a id="a952130c9fd3ec3c926513335784133a1" name="a952130c9fd3ec3c926513335784133a1"></a>
-template&lt;typename H &gt; </td></tr>
-<tr class="memitem:a952130c9fd3ec3c926513335784133a1"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><b>finalize</b> (H state)</td></tr>
+<tr class="memitem:a952130c9fd3ec3c926513335784133a1" id="r_a952130c9fd3ec3c926513335784133a1"><td class="memTemplParams" colspan="2">template&lt;typename H &gt; </td></tr>
+<tr class="memitem:a952130c9fd3ec3c926513335784133a1"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a952130c9fd3ec3c926513335784133a1">finalize</a> (H state)</td></tr>
 <tr class="separator:a952130c9fd3ec3c926513335784133a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00090">90</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afcec152c6fe94df0c7a956d189dc51c9" name="afcec152c6fe94df0c7a956d189dc51c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcec152c6fe94df0c7a956d189dc51c9">&#9670;&#160;</a></span>PiecewiseCombiner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::hash_internal::PiecewiseCombiner::PiecewiseCombiner </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00092">92</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>: position_(0) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae7f829dbc19e07289f26fbe8620789fd" name="ae7f829dbc19e07289f26fbe8620789fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f829dbc19e07289f26fbe8620789fd">&#9670;&#160;</a></span>add_buffer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">H absl::hash_internal::PiecewiseCombiner::add_buffer </td>
+          <td>(</td>
+          <td class="paramtype">H</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00103">103</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                       {</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> add_buffer(std::move(state),</div>
+<div class="line"><span class="lineno">  105</span>                      <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(data), size);</div>
+<div class="line"><span class="lineno">  106</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a306232c35b86fd9b724d614b8a0229b9" name="a306232c35b86fd9b724d614b8a0229b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306232c35b86fd9b724d614b8a0229b9">&#9670;&#160;</a></span>add_buffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">H absl::hash_internal::PiecewiseCombiner::add_buffer </td>
+          <td>(</td>
+          <td class="paramtype">H</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l01263">1263</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1264</span>                                             {</div>
+<div class="line"><span class="lineno"> 1265</span>  <span class="keywordflow">if</span> (position_ + size &lt; PiecewiseChunkSize()) {</div>
+<div class="line"><span class="lineno"> 1266</span>    <span class="comment">// This partial chunk does not fill our existing buffer</span></div>
+<div class="line"><span class="lineno"> 1267</span>    memcpy(buf_ + position_, data, size);</div>
+<div class="line"><span class="lineno"> 1268</span>    position_ += size;</div>
+<div class="line"><span class="lineno"> 1269</span>    <span class="keywordflow">return</span> state;</div>
+<div class="line"><span class="lineno"> 1270</span>  }</div>
+<div class="line"><span class="lineno"> 1271</span> </div>
+<div class="line"><span class="lineno"> 1272</span>  <span class="comment">// If the buffer is partially filled we need to complete the buffer</span></div>
+<div class="line"><span class="lineno"> 1273</span>  <span class="comment">// and hash it.</span></div>
+<div class="line"><span class="lineno"> 1274</span>  <span class="keywordflow">if</span> (position_ != 0) {</div>
+<div class="line"><span class="lineno"> 1275</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> bytes_needed = PiecewiseChunkSize() - position_;</div>
+<div class="line"><span class="lineno"> 1276</span>    memcpy(buf_ + position_, data, bytes_needed);</div>
+<div class="line"><span class="lineno"> 1277</span>    state = H::combine_contiguous(std::move(state), buf_, PiecewiseChunkSize());</div>
+<div class="line"><span class="lineno"> 1278</span>    data += bytes_needed;</div>
+<div class="line"><span class="lineno"> 1279</span>    size -= bytes_needed;</div>
+<div class="line"><span class="lineno"> 1280</span>  }</div>
+<div class="line"><span class="lineno"> 1281</span> </div>
+<div class="line"><span class="lineno"> 1282</span>  <span class="comment">// Hash whatever chunks we can without copying</span></div>
+<div class="line"><span class="lineno"> 1283</span>  <span class="keywordflow">while</span> (size &gt;= PiecewiseChunkSize()) {</div>
+<div class="line"><span class="lineno"> 1284</span>    state = H::combine_contiguous(std::move(state), data, PiecewiseChunkSize());</div>
+<div class="line"><span class="lineno"> 1285</span>    data += PiecewiseChunkSize();</div>
+<div class="line"><span class="lineno"> 1286</span>    size -= PiecewiseChunkSize();</div>
+<div class="line"><span class="lineno"> 1287</span>  }</div>
+<div class="line"><span class="lineno"> 1288</span>  <span class="comment">// Fill the buffer with the remainder</span></div>
+<div class="line"><span class="lineno"> 1289</span>  memcpy(buf_, data, size);</div>
+<div class="line"><span class="lineno"> 1290</span>  position_ = size;</div>
+<div class="line"><span class="lineno"> 1291</span>  <span class="keywordflow">return</span> state;</div>
+<div class="line"><span class="lineno"> 1292</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a952130c9fd3ec3c926513335784133a1" name="a952130c9fd3ec3c926513335784133a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952130c9fd3ec3c926513335784133a1">&#9670;&#160;</a></span>finalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">H absl::hash_internal::PiecewiseCombiner::finalize </td>
+          <td>(</td>
+          <td class="paramtype">H</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l01296">1296</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1296</span>                                     {</div>
+<div class="line"><span class="lineno"> 1297</span>  <span class="comment">// Hash the remainder left in the buffer, which may be empty</span></div>
+<div class="line"><span class="lineno"> 1298</span>  <span class="keywordflow">return</span> H::combine_contiguous(std::move(state), buf_, position_);</div>
+<div class="line"><span class="lineno"> 1299</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/hash/internal/<a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a></li>
 </ul>

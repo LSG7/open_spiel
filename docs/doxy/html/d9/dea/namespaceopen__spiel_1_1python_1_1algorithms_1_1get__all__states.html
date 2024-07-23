@@ -168,7 +168,71 @@ on the mean field distribution.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Extract non-chance states for a subgame into the all_states dict.</pre> <div class="dynheader">
+<pre class="fragment">Extract non-chance states for a subgame into the all_states dict.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/ddc/algorithms_2get__all__states_8py_source.html#l00027">27</a> of file <a class="el" href="../../de/ddc/algorithms_2get__all__states_8py_source.html">get_all_states.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                         stop_if_encountered):</div>
+<div class="line"><span class="lineno">   31</span>  <span class="stringliteral">&quot;&quot;&quot;Extract non-chance states for a subgame into the all_states dict.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   32</span>  <span class="keywordflow">if</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">if</span> include_terminals:</div>
+<div class="line"><span class="lineno">   34</span>      <span class="comment"># Include if not already present and then terminate recursion.</span></div>
+<div class="line"><span class="lineno">   35</span>      state_str = to_string(state)</div>
+<div class="line"><span class="lineno">   36</span>      <span class="keywordflow">if</span> state_str <span class="keywordflow">not</span> <span class="keywordflow">in</span> all_states:</div>
+<div class="line"><span class="lineno">   37</span>        all_states[state_str] = state.clone()</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span></div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordflow">if</span> depth &gt; depth_limit &gt;= 0:</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">return</span></div>
+<div class="line"><span class="lineno">   42</span>  is_mean_field = state.current_player() == pyspiel.PlayerId.MEAN_FIELD</div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">if</span> (state.is_chance_node() <span class="keywordflow">and</span></div>
+<div class="line"><span class="lineno">   44</span>      include_chance_states) <span class="keywordflow">or</span> (is_mean_field <span class="keywordflow">and</span></div>
+<div class="line"><span class="lineno">   45</span>                                 include_mean_field_states) <span class="keywordflow">or</span> <span class="keywordflow">not</span> (</div>
+<div class="line"><span class="lineno">   46</span>                                     state.is_chance_node() <span class="keywordflow">or</span> is_mean_field):</div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment"># Add only if not already present</span></div>
+<div class="line"><span class="lineno">   48</span>    state_str = to_string(state)</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span> state_str <span class="keywordflow">not</span> <span class="keywordflow">in</span> all_states:</div>
+<div class="line"><span class="lineno">   50</span>      all_states[state_str] = state.clone()</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   52</span>      <span class="comment"># We already saw this one. Stop the recursion if the flag is set</span></div>
+<div class="line"><span class="lineno">   53</span>      <span class="keywordflow">if</span> stop_if_encountered:</div>
+<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">return</span></div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">if</span> is_mean_field:</div>
+<div class="line"><span class="lineno">   57</span>    support = state.distribution_support()</div>
+<div class="line"><span class="lineno">   58</span>    state_for_search = state.clone()</div>
+<div class="line"><span class="lineno">   59</span>    support_length = len(support)</div>
+<div class="line"><span class="lineno">   60</span>    <span class="comment"># update with a dummy distribution</span></div>
+<div class="line"><span class="lineno">   61</span>    state_for_search.update_distribution(</div>
+<div class="line"><span class="lineno">   62</span>        [1.0 / support_length <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(support_length)])</div>
+<div class="line"><span class="lineno">   63</span>    _get_subgames_states(state_for_search, all_states, depth_limit, depth + 1,</div>
+<div class="line"><span class="lineno">   64</span>                         include_terminals, include_chance_states,</div>
+<div class="line"><span class="lineno">   65</span>                         include_mean_field_states, to_string,</div>
+<div class="line"><span class="lineno">   66</span>                         stop_if_encountered)</div>
+<div class="line"><span class="lineno">   67</span>  <span class="keywordflow">elif</span> state.is_simultaneous_node():</div>
+<div class="line"><span class="lineno">   68</span>    joint_legal_actions = [</div>
+<div class="line"><span class="lineno">   69</span>        state.legal_actions(player)</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">for</span> player <span class="keywordflow">in</span> range(state.get_game().num_players())</div>
+<div class="line"><span class="lineno">   71</span>    ]</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">for</span> joint_actions <span class="keywordflow">in</span> itertools.product(*joint_legal_actions):</div>
+<div class="line"><span class="lineno">   73</span>      state_for_search = state.clone()</div>
+<div class="line"><span class="lineno">   74</span>      state_for_search.apply_actions(list(joint_actions))</div>
+<div class="line"><span class="lineno">   75</span>      _get_subgames_states(state_for_search, all_states, depth_limit, depth + 1,</div>
+<div class="line"><span class="lineno">   76</span>                           include_terminals, include_chance_states,</div>
+<div class="line"><span class="lineno">   77</span>                           include_mean_field_states, to_string,</div>
+<div class="line"><span class="lineno">   78</span>                           stop_if_encountered)</div>
+<div class="line"><span class="lineno">   79</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> state.legal_actions():</div>
+<div class="line"><span class="lineno">   81</span>      state_for_search = state.child(action)</div>
+<div class="line"><span class="lineno">   82</span>      _get_subgames_states(state_for_search, all_states, depth_limit, depth + 1,</div>
+<div class="line"><span class="lineno">   83</span>                           include_terminals, include_chance_states,</div>
+<div class="line"><span class="lineno">   84</span>                           include_mean_field_states, to_string,</div>
+<div class="line"><span class="lineno">   85</span>                           stop_if_encountered)</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/ddc/algorithms_2get__all__states_8py_source.html#l00030">open_spiel.python.algorithms.get_all_states._get_subgames_states()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/ddc/algorithms_2get__all__states_8py_source.html#l00030">open_spiel.python.algorithms.get_all_states._get_subgames_states()</a>, and <a class="el" href="../../de/ddc/algorithms_2get__all__states_8py_source.html#l00094">open_spiel.python.algorithms.get_all_states.get_all_states()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/dea/namespaceopen__spiel_1_1python_1_1algorithms_1_1get__all__states_ab71ac5af654c47ace6c6bf3f30761563_cgraph.png" border="0" usemap="#ad9/dea/namespaceopen__spiel_1_1python_1_1algorithms_1_1get__all__states_ab71ac5af654c47ace6c6bf3f30761563_cgraph" alt=""/></div>
@@ -261,7 +325,60 @@ Arguments:
 Returns:
   A `dict` with `to_string(state)` keys and `pyspiel.State` values containing
   all states encountered traversing the game tree up to the specified depth.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/ddc/algorithms_2get__all__states_8py_source.html#l00088">88</a> of file <a class="el" href="../../de/ddc/algorithms_2get__all__states_8py_source.html">get_all_states.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>                   stop_if_encountered=<span class="keyword">True</span>):</div>
+<div class="line"><span class="lineno">   95</span>  <span class="stringliteral">&quot;&quot;&quot;Gets all states in the game, indexed by their string representation.</span></div>
+<div class="line"><span class="lineno">   96</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   97</span><span class="stringliteral">  For small games only! Useful for methods that solve the  games explicitly,</span></div>
+<div class="line"><span class="lineno">   98</span><span class="stringliteral">  i.e. value iteration. Use this default implementation with caution as it does</span></div>
+<div class="line"><span class="lineno">   99</span><span class="stringliteral">  a recursive tree walk of the game and could easily fill up memory for larger</span></div>
+<div class="line"><span class="lineno">  100</span><span class="stringliteral">  games or games with long horizons.</span></div>
+<div class="line"><span class="lineno">  101</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  102</span><span class="stringliteral">  Currently only works for sequential games.</span></div>
+<div class="line"><span class="lineno">  103</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  104</span><span class="stringliteral">  Arguments:</span></div>
+<div class="line"><span class="lineno">  105</span><span class="stringliteral">    game: The game to analyze, as returned by `load_game`.</span></div>
+<div class="line"><span class="lineno">  106</span><span class="stringliteral">    depth_limit: How deeply to analyze the game tree. Negative means no limit, 0</span></div>
+<div class="line"><span class="lineno">  107</span><span class="stringliteral">      means root-only, etc.</span></div>
+<div class="line"><span class="lineno">  108</span><span class="stringliteral">    include_terminals: If True, include terminal states.</span></div>
+<div class="line"><span class="lineno">  109</span><span class="stringliteral">    include_chance_states: If True, include chance node states.</span></div>
+<div class="line"><span class="lineno">  110</span><span class="stringliteral">    include_mean_field_states: If True, include mean field node states.</span></div>
+<div class="line"><span class="lineno">  111</span><span class="stringliteral">    to_string: The serialization function. We expect this to be</span></div>
+<div class="line"><span class="lineno">  112</span><span class="stringliteral">      `lambda s: s.history_str()` as this enforces perfect recall, but for</span></div>
+<div class="line"><span class="lineno">  113</span><span class="stringliteral">        historical reasons, using `str` is also supported, but the goal is to</span></div>
+<div class="line"><span class="lineno">  114</span><span class="stringliteral">        remove this argument.</span></div>
+<div class="line"><span class="lineno">  115</span><span class="stringliteral">    stop_if_encountered: if this is set, do not keep recursively adding states</span></div>
+<div class="line"><span class="lineno">  116</span><span class="stringliteral">      if this state is already in the list. This allows support for games that</span></div>
+<div class="line"><span class="lineno">  117</span><span class="stringliteral">      have cycles.</span></div>
+<div class="line"><span class="lineno">  118</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  119</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  120</span><span class="stringliteral">    A `dict` with `to_string(state)` keys and `pyspiel.State` values containing</span></div>
+<div class="line"><span class="lineno">  121</span><span class="stringliteral">    all states encountered traversing the game tree up to the specified depth.</span></div>
+<div class="line"><span class="lineno">  122</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  123</span>  root_states = game.new_initial_states()</div>
+<div class="line"><span class="lineno">  124</span>  all_states = dict()</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>  <span class="keywordflow">for</span> root <span class="keywordflow">in</span> root_states:</div>
+<div class="line"><span class="lineno">  127</span>    <span class="comment"># Then, do a recursive tree walk to fill up the map.</span></div>
+<div class="line"><span class="lineno">  128</span>    _get_subgames_states(</div>
+<div class="line"><span class="lineno">  129</span>        state=root,</div>
+<div class="line"><span class="lineno">  130</span>        all_states=all_states,</div>
+<div class="line"><span class="lineno">  131</span>        depth_limit=depth_limit,</div>
+<div class="line"><span class="lineno">  132</span>        depth=0,</div>
+<div class="line"><span class="lineno">  133</span>        include_terminals=include_terminals,</div>
+<div class="line"><span class="lineno">  134</span>        include_chance_states=include_chance_states,</div>
+<div class="line"><span class="lineno">  135</span>        include_mean_field_states=include_mean_field_states,</div>
+<div class="line"><span class="lineno">  136</span>        to_string=to_string,</div>
+<div class="line"><span class="lineno">  137</span>        stop_if_encountered=stop_if_encountered)</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">if</span> <span class="keywordflow">not</span> all_states:</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&quot;GetSubgameStates returned 0 states!&quot;</span>)</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>  <span class="keywordflow">return</span> all_states</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../de/ddc/algorithms_2get__all__states_8py_source.html#l00030">open_spiel.python.algorithms.get_all_states._get_subgames_states()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/dea/namespaceopen__spiel_1_1python_1_1algorithms_1_1get__all__states_ad5d5059b9ee0ef071c39ee8078159e31_cgraph.png" border="0" usemap="#ad9/dea/namespaceopen__spiel_1_1python_1_1algorithms_1_1get__all__states_ad5d5059b9ee0ef071c39ee8078159e31_cgraph" alt=""/></div>

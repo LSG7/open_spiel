@@ -120,7 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c191136fc75c22890c53d48abff8504" id="r_a4c191136fc75c22890c53d48abff8504"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c191136fc75c22890c53d48abff8504">test_fp</a> (self, name)</td></tr>
 <tr class="separator:a4c191136fc75c22890c53d48abff8504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/d5d/mirror__descent__test_8py_source.html#l00027">27</a> of file <a class="el" href="../../d8/d5d/mirror__descent__test_8py_source.html">mirror_descent_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4c191136fc75c22890c53d48abff8504" name="a4c191136fc75c22890c53d48abff8504"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c191136fc75c22890c53d48abff8504">&#9670;&#160;</a></span>test_fp()</h2>
 
@@ -140,10 +143,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks if mirror descent works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d8/d5d/mirror__descent__test_8py_source.html#l00031">31</a> of file <a class="el" href="../../d8/d5d/mirror__descent__test_8py_source.html">mirror_descent_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>  <span class="keyword">def </span>test_fp(self, name):</div>
+<div class="line"><span class="lineno">   32</span>    <span class="stringliteral">&quot;&quot;&quot;Checks if mirror descent works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   33</span>    game = pyspiel.load_game(name)</div>
+<div class="line"><span class="lineno">   34</span>    md = mirror_descent.MirrorDescent(game, value.TabularValueFunction(game))</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">   36</span>      md.iteration()</div>
+<div class="line"><span class="lineno">   37</span>    md_policy = md.get_policy()</div>
+<div class="line"><span class="lineno">   38</span>    nash_conv_md = nash_conv.NashConv(game, md_policy)</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    self.assertAlmostEqual(nash_conv_md.nash_conv(), 2.2730324915546056)</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/<b>mirror_descent_test.py</b></li>
+<li>open_spiel/python/mfg/algorithms/<a class="el" href="../../d8/d5d/mirror__descent__test_8py_source.html">mirror_descent_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

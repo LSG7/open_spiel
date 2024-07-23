@@ -117,12 +117,87 @@ Collaboration diagram for open_spiel.python.utils.lru_cache_test.LruCacheTest:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1970667d680f038f82f7177b99ac7274" id="r_a1970667d680f038f82f7177b99ac7274"><td class="memItemLeft" align="right" valign="top"><a id="a1970667d680f038f82f7177b99ac7274" name="a1970667d680f038f82f7177b99ac7274"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_lru_cache</b> (self)</td></tr>
+<tr class="memitem:a1970667d680f038f82f7177b99ac7274" id="r_a1970667d680f038f82f7177b99ac7274"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1970667d680f038f82f7177b99ac7274">test_lru_cache</a> (self)</td></tr>
 <tr class="separator:a1970667d680f038f82f7177b99ac7274"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/d00/lru__cache__test_8py_source.html#l00022">22</a> of file <a class="el" href="../../d8/d00/lru__cache__test_8py_source.html">lru_cache_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1970667d680f038f82f7177b99ac7274" name="a1970667d680f038f82f7177b99ac7274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1970667d680f038f82f7177b99ac7274">&#9670;&#160;</a></span>test_lru_cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.utils.lru_cache_test.LruCacheTest.test_lru_cache </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d00/lru__cache__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../d8/d00/lru__cache__test_8py_source.html">lru_cache_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>  <span class="keyword">def </span>test_lru_cache(self):</div>
+<div class="line"><span class="lineno">   25</span>    cache = lru_cache.LRUCache(4)</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>    self.assertEmpty(cache)</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>    info = cache.info()</div>
+<div class="line"><span class="lineno">   30</span>    self.assertEqual(info.hits, 0)</div>
+<div class="line"><span class="lineno">   31</span>    self.assertEqual(info.misses, 0)</div>
+<div class="line"><span class="lineno">   32</span>    self.assertEqual(info.size, 0)</div>
+<div class="line"><span class="lineno">   33</span>    self.assertEqual(info.max_size, 4)</div>
+<div class="line"><span class="lineno">   34</span>    self.assertEqual(info.usage, 0)</div>
+<div class="line"><span class="lineno">   35</span>    self.assertEqual(info.hit_rate, 0)</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>    self.assertIsNone(cache.get(1))</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    cache.set(13, <span class="stringliteral">&quot;13&quot;</span>)</div>
+<div class="line"><span class="lineno">   40</span>    self.assertLen(cache, 1)</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    self.assertIsNone(cache.get(1))</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>    self.assertEqual(cache.get(13), <span class="stringliteral">&quot;13&quot;</span>)</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    cache.set(14, <span class="stringliteral">&quot;14&quot;</span>)</div>
+<div class="line"><span class="lineno">   47</span>    cache.set(15, <span class="stringliteral">&quot;15&quot;</span>)</div>
+<div class="line"><span class="lineno">   48</span>    cache.set(16, <span class="stringliteral">&quot;16&quot;</span>)</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    self.assertLen(cache, 4)</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    cache.set(17, <span class="stringliteral">&quot;17&quot;</span>)</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    self.assertLen(cache, 4)</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>    self.assertIsNone(cache.get(13))  <span class="comment"># evicted</span></div>
+<div class="line"><span class="lineno">   57</span>    self.assertTrue(cache.get(14))</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    self.assertLen(cache, 4)</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    cache.set(18, <span class="stringliteral">&quot;18&quot;</span>)</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    self.assertIsNone(cache.get(15))  <span class="comment"># evicted</span></div>
+<div class="line"><span class="lineno">   64</span>    self.assertTrue(cache.get(14))  <span class="comment"># older but more recently used</span></div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>    info = cache.info()</div>
+<div class="line"><span class="lineno">   67</span>    self.assertEqual(info.usage, 1)</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    cache.clear()</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    self.assertIsNone(cache.get(18))  <span class="comment"># evicted</span></div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    self.assertEqual(cache.make(19, <span class="keyword">lambda</span>: <span class="stringliteral">&quot;19&quot;</span>), <span class="stringliteral">&quot;19&quot;</span>)</div>
+<div class="line"><span class="lineno">   74</span>    self.assertEqual(cache.get(19), <span class="stringliteral">&quot;19&quot;</span>)</div>
+<div class="line"><span class="lineno">   75</span>    self.assertEqual(cache.make(19, <span class="keyword">lambda</span>: <span class="stringliteral">&quot;20&quot;</span>), <span class="stringliteral">&quot;19&quot;</span>)</div>
+<div class="line"><span class="lineno">   76</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/utils/<b>lru_cache_test.py</b></li>
+<li>open_spiel/python/utils/<a class="el" href="../../d8/d00/lru__cache__test_8py_source.html">lru_cache_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

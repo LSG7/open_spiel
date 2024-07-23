@@ -118,23 +118,50 @@ Collaboration diagram for open_spiel.python.algorithms.tabular_multiagent_qlearn
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a111bf4369aff9c0767c45212c3c9a710" id="r_a111bf4369aff9c0767c45212c3c9a710"><td class="memItemLeft" align="right" valign="top"><a id="a111bf4369aff9c0767c45212c3c9a710" name="a111bf4369aff9c0767c45212c3c9a710"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, is_first_leader=True)</td></tr>
+<tr class="memitem:a111bf4369aff9c0767c45212c3c9a710" id="r_a111bf4369aff9c0767c45212c3c9a710"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a111bf4369aff9c0767c45212c3c9a710">__init__</a> (self, is_first_leader=True)</td></tr>
 <tr class="separator:a111bf4369aff9c0767c45212c3c9a710"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb3cd9223178a8b74d30ce708f032aac" id="r_acb3cd9223178a8b74d30ce708f032aac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb3cd9223178a8b74d30ce708f032aac">__call__</a> (self, payoffs_array)</td></tr>
 <tr class="separator:acb3cd9223178a8b74d30ce708f032aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a11316638364898907f35a5c243dcde76" id="r_a11316638364898907f35a5c243dcde76"><td class="memItemLeft" align="right" valign="top"><a id="a11316638364898907f35a5c243dcde76" name="a11316638364898907f35a5c243dcde76"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_is_first_leader</b></td></tr>
+<tr class="memitem:a11316638364898907f35a5c243dcde76" id="r_a11316638364898907f35a5c243dcde76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11316638364898907f35a5c243dcde76">_is_first_leader</a></td></tr>
 <tr class="separator:a11316638364898907f35a5c243dcde76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">A joint action solver solving for Stackelverg equilibrium.
 
 Uses python.algorithms.stackelberg_lp.py.
-</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html#l00131">131</a> of file <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html">tabular_multiagent_qlearner.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a111bf4369aff9c0767c45212c3c9a710" name="a111bf4369aff9c0767c45212c3c9a710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111bf4369aff9c0767c45212c3c9a710">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.tabular_multiagent_qlearner.StackelbergEqSolver.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>is_first_leader</em></span><span class="paramdefsep"> = </span><span class="paramdefval">True</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html#l00137">137</a> of file <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html">tabular_multiagent_qlearner.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>  <span class="keyword">def </span>__init__(self, is_first_leader=True):</div>
+<div class="line"><span class="lineno">  138</span>    self._is_first_leader = is_first_leader</div>
+<div class="line"><span class="lineno">  139</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="acb3cd9223178a8b74d30ce708f032aac" name="acb3cd9223178a8b74d30ce708f032aac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb3cd9223178a8b74d30ce708f032aac">&#9670;&#160;</a></span>__call__()</h2>
 
@@ -164,10 +191,64 @@ Returns:
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d4/d92/classopen__spiel_1_1python_1_1algorithms_1_1tabular__multiagent__qlearner_1_1_joint_action_solver.html#a0b0eb00b32b5fff8db3ef3398fefad85">open_spiel.python.algorithms.tabular_multiagent_qlearner.JointActionSolver</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html#l00140">140</a> of file <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html">tabular_multiagent_qlearner.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>  <span class="keyword">def </span>__call__(self, payoffs_array):</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keyword">assert</span> len(payoffs_array) == 2</div>
+<div class="line"><span class="lineno">  142</span>    game = pyspiel.create_matrix_game(payoffs_array[0], payoffs_array[1])</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">try</span>:</div>
+<div class="line"><span class="lineno">  144</span>      player0_strategy, player1_strategy, player0_value, player1_value = solve_stackelberg(</div>
+<div class="line"><span class="lineno">  145</span>          game, self._is_first_leader)</div>
+<div class="line"><span class="lineno">  146</span>      <span class="keywordflow">return</span> [player0_strategy,</div>
+<div class="line"><span class="lineno">  147</span>              player1_strategy], [player0_value, player1_value]</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">except</span>:  <span class="comment"># pylint: disable=bare-except</span></div>
+<div class="line"><span class="lineno">  149</span>      <span class="comment"># if the game matrix is degenerated and cannot solve for an SSE,</span></div>
+<div class="line"><span class="lineno">  150</span>      <span class="comment"># return uniform strategy</span></div>
+<div class="line"><span class="lineno">  151</span>      num_player0_strategies, num_player1_strategies = payoffs_array[0].shape</div>
+<div class="line"><span class="lineno">  152</span>      player0_strategy, player1_strategy = np.ones(</div>
+<div class="line"><span class="lineno">  153</span>          num_player0_strategies) / num_player0_strategies, np.ones(</div>
+<div class="line"><span class="lineno">  154</span>              num_player1_strategies) / num_player1_strategies</div>
+<div class="line"><span class="lineno">  155</span>      player0_value, player1_value = player0_strategy.reshape(1, -1).dot(</div>
+<div class="line"><span class="lineno">  156</span>          payoffs_array[0]).dot(player1_strategy.reshape(</div>
+<div class="line"><span class="lineno">  157</span>              -1, 1)), player0_strategy.reshape(1, -1).dot(</div>
+<div class="line"><span class="lineno">  158</span>                  payoffs_array[1]).dot(player1_strategy.reshape(-1, 1))</div>
+<div class="line"><span class="lineno">  159</span>      <span class="keywordflow">return</span> [player0_strategy,</div>
+<div class="line"><span class="lineno">  160</span>              player1_strategy], [player0_value, player1_value]</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html#l00138">open_spiel.python.algorithms.tabular_multiagent_qlearner.StackelbergEqSolver._is_first_leader</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a11316638364898907f35a5c243dcde76" name="a11316638364898907f35a5c243dcde76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11316638364898907f35a5c243dcde76">&#9670;&#160;</a></span>_is_first_leader</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.tabular_multiagent_qlearner.StackelbergEqSolver._is_first_leader</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html#l00138">138</a> of file <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html">tabular_multiagent_qlearner.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html#l00140">open_spiel.python.algorithms.tabular_multiagent_qlearner.StackelbergEqSolver.__call__()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>tabular_multiagent_qlearner.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d8/d79/tabular__multiagent__qlearner_8py_source.html">tabular_multiagent_qlearner.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

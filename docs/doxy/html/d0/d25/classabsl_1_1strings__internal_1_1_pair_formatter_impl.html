@@ -105,18 +105,140 @@ Collaboration diagram for absl::strings_internal::PairFormatterImpl&lt; F1, F2 &
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aab84dff2a6c4ef17c1f198b6bc80b1b3" id="r_aab84dff2a6c4ef17c1f198b6bc80b1b3"><td class="memItemLeft" align="right" valign="top"><a id="aab84dff2a6c4ef17c1f198b6bc80b1b3" name="aab84dff2a6c4ef17c1f198b6bc80b1b3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PairFormatterImpl</b> (F1 f1, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> sep, F2 f2)</td></tr>
+<tr class="memitem:aab84dff2a6c4ef17c1f198b6bc80b1b3" id="r_aab84dff2a6c4ef17c1f198b6bc80b1b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab84dff2a6c4ef17c1f198b6bc80b1b3">PairFormatterImpl</a> (F1 f1, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> sep, F2 f2)</td></tr>
 <tr class="separator:aab84dff2a6c4ef17c1f198b6bc80b1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a386d2b8cec009941cb8c3096d25f113c" id="r_a386d2b8cec009941cb8c3096d25f113c"><td class="memTemplParams" colspan="2"><a id="a386d2b8cec009941cb8c3096d25f113c" name="a386d2b8cec009941cb8c3096d25f113c"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a386d2b8cec009941cb8c3096d25f113c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (std::string *out, const T &amp;p)</td></tr>
+<tr class="memitem:a386d2b8cec009941cb8c3096d25f113c" id="r_a386d2b8cec009941cb8c3096d25f113c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a386d2b8cec009941cb8c3096d25f113c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a386d2b8cec009941cb8c3096d25f113c">operator()</a> (std::string *out, const T &amp;p)</td></tr>
 <tr class="separator:a386d2b8cec009941cb8c3096d25f113c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4376d6347640d0d10ff428ec7f765a2" id="r_aa4376d6347640d0d10ff428ec7f765a2"><td class="memTemplParams" colspan="2"><a id="aa4376d6347640d0d10ff428ec7f765a2" name="aa4376d6347640d0d10ff428ec7f765a2"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa4376d6347640d0d10ff428ec7f765a2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (std::string *out, const T &amp;p) const</td></tr>
+<tr class="memitem:aa4376d6347640d0d10ff428ec7f765a2" id="r_aa4376d6347640d0d10ff428ec7f765a2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa4376d6347640d0d10ff428ec7f765a2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa4376d6347640d0d10ff428ec7f765a2">operator()</a> (std::string *out, const T &amp;p) const</td></tr>
 <tr class="separator:aa4376d6347640d0d10ff428ec7f765a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename F1, typename F2&gt;<br />
+class absl::strings_internal::PairFormatterImpl&lt; F1, F2 &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d0c/str__join__internal_8h_source.html#l00102">102</a> of file <a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aab84dff2a6c4ef17c1f198b6bc80b1b3" name="aab84dff2a6c4ef17c1f198b6bc80b1b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab84dff2a6c4ef17c1f198b6bc80b1b3">&#9670;&#160;</a></span>PairFormatterImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F1 , typename F2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/d25/classabsl_1_1strings__internal_1_1_pair_formatter_impl.html">absl::strings_internal::PairFormatterImpl</a>&lt; F1, F2 &gt;::PairFormatterImpl </td>
+          <td>(</td>
+          <td class="paramtype">F1</td>          <td class="paramname"><span class="paramname"><em>f1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>sep</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F2</td>          <td class="paramname"><span class="paramname"><em>f2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d0c/str__join__internal_8h_source.html#l00104">104</a> of file <a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>      : f1_(std::move(f1)), sep_(sep), f2_(std::move(f2)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a386d2b8cec009941cb8c3096d25f113c" name="a386d2b8cec009941cb8c3096d25f113c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386d2b8cec009941cb8c3096d25f113c">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F1 , typename F2 &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d25/classabsl_1_1strings__internal_1_1_pair_formatter_impl.html">absl::strings_internal::PairFormatterImpl</a>&lt; F1, F2 &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">std::string *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d0c/str__join__internal_8h_source.html#l00108">108</a> of file <a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                                              {</div>
+<div class="line"><span class="lineno">  109</span>    f1_(out, p.first);</div>
+<div class="line"><span class="lineno">  110</span>    out-&gt;append(sep_);</div>
+<div class="line"><span class="lineno">  111</span>    f2_(out, p.second);</div>
+<div class="line"><span class="lineno">  112</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa4376d6347640d0d10ff428ec7f765a2" name="aa4376d6347640d0d10ff428ec7f765a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4376d6347640d0d10ff428ec7f765a2">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F1 , typename F2 &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d25/classabsl_1_1strings__internal_1_1_pair_formatter_impl.html">absl::strings_internal::PairFormatterImpl</a>&lt; F1, F2 &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">std::string *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d0c/str__join__internal_8h_source.html#l00115">115</a> of file <a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                    {</div>
+<div class="line"><span class="lineno">  116</span>    f1_(out, p.first);</div>
+<div class="line"><span class="lineno">  117</span>    out-&gt;append(sep_);</div>
+<div class="line"><span class="lineno">  118</span>    f2_(out, p.second);</div>
+<div class="line"><span class="lineno">  119</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/internal/<a class="el" href="../../de/d0c/str__join__internal_8h_source.html">str_join_internal.h</a></li>
 </ul>

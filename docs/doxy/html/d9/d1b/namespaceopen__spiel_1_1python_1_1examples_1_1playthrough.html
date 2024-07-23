@@ -97,14 +97,12 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a19d7ea60ef20c8a0102f4132c5d08561" id="r_a19d7ea60ef20c8a0102f4132c5d08561"><td class="memItemLeft" align="right" valign="top"><a id="a19d7ea60ef20c8a0102f4132c5d08561" name="a19d7ea60ef20c8a0102f4132c5d08561"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (unused_argv)</td></tr>
+<tr class="memitem:a19d7ea60ef20c8a0102f4132c5d08561" id="r_a19d7ea60ef20c8a0102f4132c5d08561"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19d7ea60ef20c8a0102f4132c5d08561">main</a> (unused_argv)</td></tr>
 <tr class="separator:a19d7ea60ef20c8a0102f4132c5d08561"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ad3e82fb8f050adced81c187cd34ab781" id="r_ad3e82fb8f050adced81c187cd34ab781"><td class="memItemLeft" align="right" valign="top"><a id="ad3e82fb8f050adced81c187cd34ab781" name="ad3e82fb8f050adced81c187cd34ab781"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:ad3e82fb8f050adced81c187cd34ab781" id="r_ad3e82fb8f050adced81c187cd34ab781"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3e82fb8f050adced81c187cd34ab781">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:ad3e82fb8f050adced81c187cd34ab781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -117,7 +115,64 @@ Example usage:
 ```
 playthrough --game kuhn_poker --params players=3
 ```
-</pre> </div></div><!-- contents -->
+</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a19d7ea60ef20c8a0102f4132c5d08561" name="a19d7ea60ef20c8a0102f4132c5d08561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19d7ea60ef20c8a0102f4132c5d08561">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.playthrough.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>unused_argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d2c/playthrough_8py_source.html#l00052">52</a> of file <a class="el" href="../../dc/d2c/playthrough_8py_source.html">playthrough.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(unused_argv):</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">if</span> FLAGS.update_path:</div>
+<div class="line"><span class="lineno">   54</span>    generate_playthrough.update_path(FLAGS.update_path, FLAGS.shard,</div>
+<div class="line"><span class="lineno">   55</span>                                     FLAGS.num_shards)</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> FLAGS.game:</div>
+<div class="line"><span class="lineno">   58</span>      <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&quot;Must specify game&quot;</span>)</div>
+<div class="line"><span class="lineno">   59</span>    actions = FLAGS.actions</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">if</span> actions <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">   61</span>      actions = [int(x) <span class="keywordflow">for</span> x <span class="keywordflow">in</span> actions]</div>
+<div class="line"><span class="lineno">   62</span>    text = generate_playthrough.playthrough(</div>
+<div class="line"><span class="lineno">   63</span>        FLAGS.game, actions, alsologtostdout=FLAGS.alsologtostdout)</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span> FLAGS.output_file:</div>
+<div class="line"><span class="lineno">   65</span>      <span class="keyword">with</span> open(FLAGS.output_file, <span class="stringliteral">&quot;w&quot;</span>) <span class="keyword">as</span> f:</div>
+<div class="line"><span class="lineno">   66</span>        f.write(text)</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   68</span>      logging.info(text)</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ad3e82fb8f050adced81c187cd34ab781" name="ad3e82fb8f050adced81c187cd34ab781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e82fb8f050adced81c187cd34ab781">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.playthrough.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d2c/playthrough_8py_source.html#l00033">33</a> of file <a class="el" href="../../dc/d2c/playthrough_8py_source.html">playthrough.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

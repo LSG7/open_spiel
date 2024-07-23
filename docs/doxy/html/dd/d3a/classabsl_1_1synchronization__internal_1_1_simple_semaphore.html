@@ -105,15 +105,111 @@ Collaboration diagram for absl::synchronization_internal::SimpleSemaphore:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8978cdb11a0de899a4fb5cc83ac2b613" id="r_a8978cdb11a0de899a4fb5cc83ac2b613"><td class="memItemLeft" align="right" valign="top"><a id="a8978cdb11a0de899a4fb5cc83ac2b613" name="a8978cdb11a0de899a4fb5cc83ac2b613"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Wait</b> ()</td></tr>
+<tr class="memitem:a8978cdb11a0de899a4fb5cc83ac2b613" id="r_a8978cdb11a0de899a4fb5cc83ac2b613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8978cdb11a0de899a4fb5cc83ac2b613">Wait</a> ()</td></tr>
 <tr class="separator:a8978cdb11a0de899a4fb5cc83ac2b613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a162477180a43aea955adbdf590afedba" id="r_a162477180a43aea955adbdf590afedba"><td class="memItemLeft" align="right" valign="top"><a id="a162477180a43aea955adbdf590afedba" name="a162477180a43aea955adbdf590afedba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Post</b> ()</td></tr>
+<tr class="memitem:a162477180a43aea955adbdf590afedba" id="r_a162477180a43aea955adbdf590afedba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a162477180a43aea955adbdf590afedba">Post</a> ()</td></tr>
 <tr class="separator:a162477180a43aea955adbdf590afedba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html#l00040">40</a> of file <a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html">per_thread_sem_test.cc</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="acb3f3ec7b29bdaba6e3f6f6ee3327ee4" name="acb3f3ec7b29bdaba6e3f6f6ee3327ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3f3ec7b29bdaba6e3f6f6ee3327ee4">&#9670;&#160;</a></span>SimpleSemaphore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::synchronization_internal::SimpleSemaphore::SimpleSemaphore </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html#l00042">42</a> of file <a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html">per_thread_sem_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>: count_(0) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a162477180a43aea955adbdf590afedba" name="a162477180a43aea955adbdf590afedba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a162477180a43aea955adbdf590afedba">&#9670;&#160;</a></span>Post()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::synchronization_internal::SimpleSemaphore::Post </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html#l00060">60</a> of file <a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html">per_thread_sem_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>              {</div>
+<div class="line"><span class="lineno">   61</span>    std::lock_guard&lt;std::mutex&gt; lock(mu_);</div>
+<div class="line"><span class="lineno">   62</span>    ++count_;</div>
+<div class="line"><span class="lineno">   63</span>    cv_.notify_one();</div>
+<div class="line"><span class="lineno">   64</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8978cdb11a0de899a4fb5cc83ac2b613" name="a8978cdb11a0de899a4fb5cc83ac2b613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8978cdb11a0de899a4fb5cc83ac2b613">&#9670;&#160;</a></span>Wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::synchronization_internal::SimpleSemaphore::Wait </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html#l00049">49</a> of file <a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html">per_thread_sem_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>              {</div>
+<div class="line"><span class="lineno">   50</span>    std::unique_lock&lt;std::mutex&gt; lock(mu_);</div>
+<div class="line"><span class="lineno">   51</span>    cv_.wait(lock, [<span class="keyword">this</span>]() { <span class="keywordflow">return</span> count_ &gt; 0; });</div>
+<div class="line"><span class="lineno">   52</span>    --count_;</div>
+<div class="line"><span class="lineno">   53</span>    cv_.notify_one();</div>
+<div class="line"><span class="lineno">   54</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/synchronization/internal/<b>per_thread_sem_test.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/synchronization/internal/<a class="el" href="../../d3/dc3/per__thread__sem__test_8cc_source.html">per_thread_sem_test.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

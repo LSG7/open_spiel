@@ -98,8 +98,7 @@ $(function(){ initResizable(false); });
 Functions</h2></td></tr>
 <tr class="memitem:a1064fd2bfd43ffc261a85101b244694a" id="r_a1064fd2bfd43ffc261a85101b244694a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1064fd2bfd43ffc261a85101b244694a">_transitions</a> (state, policies)</td></tr>
 <tr class="separator:a1064fd2bfd43ffc261a85101b244694a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a692a8ae0065356e637b23671aff956cd" id="r_a692a8ae0065356e637b23671aff956cd"><td class="memItemLeft" align="right" valign="top"><a id="a692a8ae0065356e637b23671aff956cd" name="a692a8ae0065356e637b23671aff956cd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_tuples_from_policy</b> (policy_vector)</td></tr>
+<tr class="memitem:a692a8ae0065356e637b23671aff956cd" id="r_a692a8ae0065356e637b23671aff956cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a692a8ae0065356e637b23671aff956cd">_tuples_from_policy</a> (policy_vector)</td></tr>
 <tr class="separator:a692a8ae0065356e637b23671aff956cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -131,6 +130,50 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns a list of (action, prob) pairs from the specified state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d50/action__value__vs__best__response_8py_source.html#l00026">26</a> of file <a class="el" href="../../de/d50/action__value__vs__best__response_8py_source.html">action_value_vs_best_response.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span><span class="keyword">def </span>_transitions(state, policies):</div>
+<div class="line"><span class="lineno">   27</span>  <span class="stringliteral">&quot;&quot;&quot;Returns a list of (action, prob) pairs from the specified state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordflow">if</span> state.is_chance_node():</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">return</span> state.chance_outcomes()</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   31</span>    pl = state.current_player()</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">return</span> list(policies[pl].action_probabilities(state).items())</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a692a8ae0065356e637b23671aff956cd" name="a692a8ae0065356e637b23671aff956cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692a8ae0065356e637b23671aff956cd">&#9670;&#160;</a></span>_tuples_from_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.action_value_vs_best_response._tuples_from_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>policy_vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d50/action__value__vs__best__response_8py_source.html#l00035">35</a> of file <a class="el" href="../../de/d50/action__value__vs__best__response_8py_source.html">action_value_vs_best_response.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span><span class="keyword">def </span>_tuples_from_policy(policy_vector):</div>
+<div class="line"><span class="lineno">   36</span>  <span class="keywordflow">return</span> [</div>
+<div class="line"><span class="lineno">   37</span>      (action, probability) <span class="keywordflow">for</span> action, probability <span class="keywordflow">in</span> enumerate(policy_vector)</div>
+<div class="line"><span class="lineno">   38</span>  ]</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

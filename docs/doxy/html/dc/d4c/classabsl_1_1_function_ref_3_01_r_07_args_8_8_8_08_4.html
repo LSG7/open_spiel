@@ -105,13 +105,11 @@ Collaboration diagram for absl::FunctionRef&lt; R(Args...)&gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7545327ccd557a9bb1aa11a91b6a2cb7" id="r_a7545327ccd557a9bb1aa11a91b6a2cb7"><td class="memTemplParams" colspan="2"><a id="a7545327ccd557a9bb1aa11a91b6a2cb7" name="a7545327ccd557a9bb1aa11a91b6a2cb7"></a>
-template&lt;typename F , typename  = EnableIfCompatible&lt;const F&amp;&gt;&gt; </td></tr>
-<tr class="memitem:a7545327ccd557a9bb1aa11a91b6a2cb7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>FunctionRef</b> (const F &amp;f ABSL_ATTRIBUTE_LIFETIME_BOUND)</td></tr>
+<tr class="memitem:a7545327ccd557a9bb1aa11a91b6a2cb7" id="r_a7545327ccd557a9bb1aa11a91b6a2cb7"><td class="memTemplParams" colspan="2">template&lt;typename F , typename  = EnableIfCompatible&lt;const F&amp;&gt;&gt; </td></tr>
+<tr class="memitem:a7545327ccd557a9bb1aa11a91b6a2cb7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7545327ccd557a9bb1aa11a91b6a2cb7">FunctionRef</a> (const F &amp;f ABSL_ATTRIBUTE_LIFETIME_BOUND)</td></tr>
 <tr class="separator:a7545327ccd557a9bb1aa11a91b6a2cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95a95542b914620d256654d0d0386f00" id="r_a95a95542b914620d256654d0d0386f00"><td class="memTemplParams" colspan="2"><a id="a95a95542b914620d256654d0d0386f00" name="a95a95542b914620d256654d0d0386f00"></a>
-template&lt;typename F , typename  = EnableIfCompatible&lt;F*&gt;, absl::functional_internal::EnableIf&lt; <a class="el" href="../../d7/dc5/structabsl_1_1is__function.html">absl::is_function</a>&lt; F &gt;::value &gt;  = 0&gt; </td></tr>
-<tr class="memitem:a95a95542b914620d256654d0d0386f00"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>FunctionRef</b> (F *f)</td></tr>
+<tr class="memitem:a95a95542b914620d256654d0d0386f00" id="r_a95a95542b914620d256654d0d0386f00"><td class="memTemplParams" colspan="2">template&lt;typename F , typename  = EnableIfCompatible&lt;F*&gt;, absl::functional_internal::EnableIf&lt; <a class="el" href="../../d7/dc5/structabsl_1_1is__function.html">absl::is_function</a>&lt; F &gt;::value &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a95a95542b914620d256654d0d0386f00"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a95a95542b914620d256654d0d0386f00">FunctionRef</a> (F *f)</td></tr>
 <tr class="separator:a95a95542b914620d256654d0d0386f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac821e2795c8328442a2d6783cdf99905" id="r_ac821e2795c8328442a2d6783cdf99905"><td class="memItemLeft" align="right" valign="top"><a id="ac821e2795c8328442a2d6783cdf99905" name="ac821e2795c8328442a2d6783cdf99905"></a>
 <a class="el" href="../../dc/d6e/classabsl_1_1_function_ref.html">FunctionRef</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../dc/d6e/classabsl_1_1_function_ref.html">FunctionRef</a> &amp;rhs)=delete</td></tr>
@@ -119,10 +117,117 @@ template&lt;typename F , typename  = EnableIfCompatible&lt;F*&gt;, absl::functio
 <tr class="memitem:a8f2fa1771e01ede34c315981ee5bf846" id="r_a8f2fa1771e01ede34c315981ee5bf846"><td class="memItemLeft" align="right" valign="top"><a id="a8f2fa1771e01ede34c315981ee5bf846" name="a8f2fa1771e01ede34c315981ee5bf846"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FunctionRef</b> (const <a class="el" href="../../dc/d6e/classabsl_1_1_function_ref.html">FunctionRef</a> &amp;rhs)=default</td></tr>
 <tr class="separator:a8f2fa1771e01ede34c315981ee5bf846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a069ddba473b52df64436bce032dc354b" id="r_a069ddba473b52df64436bce032dc354b"><td class="memItemLeft" align="right" valign="top"><a id="a069ddba473b52df64436bce032dc354b" name="a069ddba473b52df64436bce032dc354b"></a>
-R&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (Args... args) const</td></tr>
+<tr class="memitem:a069ddba473b52df64436bce032dc354b" id="r_a069ddba473b52df64436bce032dc354b"><td class="memItemLeft" align="right" valign="top">R&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a069ddba473b52df64436bce032dc354b">operator()</a> (Args... args) const</td></tr>
 <tr class="separator:a069ddba473b52df64436bce032dc354b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename R, typename... Args&gt;<br />
+class absl::FunctionRef&lt; R(Args...)&gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/de2/function__ref_8h_source.html#l00090">90</a> of file <a class="el" href="../../dd/de2/function__ref_8h_source.html">function_ref.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7545327ccd557a9bb1aa11a91b6a2cb7" name="a7545327ccd557a9bb1aa11a91b6a2cb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7545327ccd557a9bb1aa11a91b6a2cb7">&#9670;&#160;</a></span>FunctionRef() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename F , typename  = EnableIfCompatible&lt;const F&amp;&gt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d6e/classabsl_1_1_function_ref.html">absl::FunctionRef</a>&lt; R(Args...)&gt;::FunctionRef </td>
+          <td>(</td>
+          <td class="paramtype">const F &amp;f</td>          <td class="paramname"><span class="paramname"><em>ABSL_ATTRIBUTE_LIFETIME_BOUND</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de2/function__ref_8h_source.html#l00104">104</a> of file <a class="el" href="../../dd/de2/function__ref_8h_source.html">function_ref.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>      : invoker_(&amp;absl::functional_internal::InvokeObject&lt;F, R, Args...&gt;) {</div>
+<div class="line"><span class="lineno">  106</span>    absl::functional_internal::AssertNonNull(f);</div>
+<div class="line"><span class="lineno">  107</span>    ptr_.obj = &amp;f;</div>
+<div class="line"><span class="lineno">  108</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a95a95542b914620d256654d0d0386f00" name="a95a95542b914620d256654d0d0386f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a95542b914620d256654d0d0386f00">&#9670;&#160;</a></span>FunctionRef() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename F , typename  = EnableIfCompatible&lt;F*&gt;, absl::functional_internal::EnableIf&lt; <a class="el" href="../../d7/dc5/structabsl_1_1is__function.html">absl::is_function</a>&lt; F &gt;::value &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d6e/classabsl_1_1_function_ref.html">absl::FunctionRef</a>&lt; R(Args...)&gt;::FunctionRef </td>
+          <td>(</td>
+          <td class="paramtype">F *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de2/function__ref_8h_source.html#l00119">119</a> of file <a class="el" href="../../dd/de2/function__ref_8h_source.html">function_ref.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>      : invoker_(&amp;absl::functional_internal::InvokeFunction&lt;F*, R, Args...&gt;) {</div>
+<div class="line"><span class="lineno">  121</span>    assert(f != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  122</span>    ptr_.fun = <span class="keyword">reinterpret_cast&lt;</span>decltype(ptr_.fun)<span class="keyword">&gt;</span>(f);</div>
+<div class="line"><span class="lineno">  123</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a069ddba473b52df64436bce032dc354b" name="a069ddba473b52df64436bce032dc354b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069ddba473b52df64436bce032dc354b">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename R , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">R <a class="el" href="../../dc/d6e/classabsl_1_1_function_ref.html">absl::FunctionRef</a>&lt; R(Args...)&gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">Args...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de2/function__ref_8h_source.html#l00131">131</a> of file <a class="el" href="../../dd/de2/function__ref_8h_source.html">function_ref.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                   {</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">return</span> invoker_(ptr_, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  133</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/functional/<a class="el" href="../../dd/de2/function__ref_8h_source.html">function_ref.h</a></li>
 </ul>

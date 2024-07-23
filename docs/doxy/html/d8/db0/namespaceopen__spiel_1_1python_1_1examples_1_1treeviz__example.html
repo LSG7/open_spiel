@@ -99,14 +99,12 @@ $(function(){ initResizable(false); });
 Functions</h2></td></tr>
 <tr class="memitem:a69547156ea98f1fe96e981f352af0a1e" id="r_a69547156ea98f1fe96e981f352af0a1e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69547156ea98f1fe96e981f352af0a1e">_zero_sum_node_decorator</a> (state)</td></tr>
 <tr class="separator:a69547156ea98f1fe96e981f352af0a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4ded81cc174445ca782804204f5bca1" id="r_ac4ded81cc174445ca782804204f5bca1"><td class="memItemLeft" align="right" valign="top"><a id="ac4ded81cc174445ca782804204f5bca1" name="ac4ded81cc174445ca782804204f5bca1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (argv)</td></tr>
+<tr class="memitem:ac4ded81cc174445ca782804204f5bca1" id="r_ac4ded81cc174445ca782804204f5bca1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4ded81cc174445ca782804204f5bca1">main</a> (argv)</td></tr>
 <tr class="separator:ac4ded81cc174445ca782804204f5bca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4b4ef32760b8b81da3971e3e19ee04fe" id="r_a4b4ef32760b8b81da3971e3e19ee04fe"><td class="memItemLeft" align="right" valign="top"><a id="a4b4ef32760b8b81da3971e3e19ee04fe" name="a4b4ef32760b8b81da3971e3e19ee04fe"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:a4b4ef32760b8b81da3971e3e19ee04fe" id="r_a4b4ef32760b8b81da3971e3e19ee04fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b4ef32760b8b81da3971e3e19ee04fe">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:a4b4ef32760b8b81da3971e3e19ee04fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -134,6 +132,95 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <pre class="fragment">Custom node decorator that only shows the return of the first player.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../db/d94/treeviz__example_8py_source.html#l00038">38</a> of file <a class="el" href="../../db/d94/treeviz__example_8py_source.html">treeviz_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span><span class="keyword">def </span>_zero_sum_node_decorator(state):</div>
+<div class="line"><span class="lineno">   39</span>  <span class="stringliteral">&quot;&quot;&quot;Custom node decorator that only shows the return of the first player.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   40</span>  attrs = treeviz.default_node_decorator(state)  <span class="comment"># get default attributes</span></div>
+<div class="line"><span class="lineno">   41</span>  <span class="keywordflow">if</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   42</span>    attrs[<span class="stringliteral">&quot;label&quot;</span>] = str(int(state.returns()[0]))</div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">return</span> attrs</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac4ded81cc174445ca782804204f5bca1" name="ac4ded81cc174445ca782804204f5bca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ded81cc174445ca782804204f5bca1">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.treeviz_example.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d94/treeviz__example_8py_source.html#l00046">46</a> of file <a class="el" href="../../db/d94/treeviz__example_8py_source.html">treeviz_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(argv):</div>
+<div class="line"><span class="lineno">   47</span>  del argv</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>  game = pyspiel.load_game(FLAGS.game)</div>
+<div class="line"><span class="lineno">   50</span>  game_type = game.get_type()</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">if</span> game_type.dynamics == pyspiel.GameType.Dynamics.SIMULTANEOUS:</div>
+<div class="line"><span class="lineno">   53</span>    logging.warn(<span class="stringliteral">&quot;%s is not turn-based. Trying to reload game as turn-based.&quot;</span>,</div>
+<div class="line"><span class="lineno">   54</span>                 FLAGS.game)</div>
+<div class="line"><span class="lineno">   55</span>    game = pyspiel.load_game_as_turn_based(FLAGS.game)</div>
+<div class="line"><span class="lineno">   56</span>    game_type = game.get_type()</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">if</span> game_type.dynamics != pyspiel.GameType.Dynamics.SEQUENTIAL:</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&quot;Game must be sequential, not {}&quot;</span>.format(</div>
+<div class="line"><span class="lineno">   60</span>        game_type.dynamics))</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">if</span> (game_type.utility == pyspiel.GameType.Utility.ZERO_SUM <span class="keywordflow">and</span></div>
+<div class="line"><span class="lineno">   63</span>      game.num_players() == 2):</div>
+<div class="line"><span class="lineno">   64</span>    logging.info(<span class="stringliteral">&quot;Game is zero-sum: only showing first-player&#39;s returns.&quot;</span>)</div>
+<div class="line"><span class="lineno">   65</span>    gametree = treeviz.GameTree(</div>
+<div class="line"><span class="lineno">   66</span>        game,</div>
+<div class="line"><span class="lineno">   67</span>        node_decorator=_zero_sum_node_decorator,</div>
+<div class="line"><span class="lineno">   68</span>        group_infosets=FLAGS.group_infosets,</div>
+<div class="line"><span class="lineno">   69</span>        group_terminal=FLAGS.group_terminal,</div>
+<div class="line"><span class="lineno">   70</span>        group_pubsets=FLAGS.group_pubsets,</div>
+<div class="line"><span class="lineno">   71</span>        target_pubset=FLAGS.target_pubset)</div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   73</span>    <span class="comment"># use default decorators</span></div>
+<div class="line"><span class="lineno">   74</span>    gametree = treeviz.GameTree(</div>
+<div class="line"><span class="lineno">   75</span>        game,</div>
+<div class="line"><span class="lineno">   76</span>        group_infosets=FLAGS.group_infosets,</div>
+<div class="line"><span class="lineno">   77</span>        group_terminal=FLAGS.group_terminal,</div>
+<div class="line"><span class="lineno">   78</span>        group_pubsets=FLAGS.group_pubsets,</div>
+<div class="line"><span class="lineno">   79</span>        target_pubset=FLAGS.target_pubset)</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">if</span> FLAGS.verbose:</div>
+<div class="line"><span class="lineno">   82</span>    logging.info(<span class="stringliteral">&quot;Game tree:\n%s&quot;</span>, gametree.to_string())</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>  gametree.draw(FLAGS.out, prog=FLAGS.prog)</div>
+<div class="line"><span class="lineno">   85</span>  logging.info(<span class="stringliteral">&quot;Game tree saved to file: %s&quot;</span>, FLAGS.out)</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a4b4ef32760b8b81da3971e3e19ee04fe" name="a4b4ef32760b8b81da3971e3e19ee04fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b4ef32760b8b81da3971e3e19ee04fe">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.treeviz_example.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d94/treeviz__example_8py_source.html#l00024">24</a> of file <a class="el" href="../../db/d94/treeviz__example_8py_source.html">treeviz_example.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

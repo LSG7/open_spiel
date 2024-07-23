@@ -117,8 +117,7 @@ Collaboration diagram for open_spiel.python.egt.visualization_test.Visualization
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5096b51decf453b66f69cf591242d23a" id="r_a5096b51decf453b66f69cf591242d23a"><td class="memItemLeft" align="right" valign="top"><a id="a5096b51decf453b66f69cf591242d23a" name="a5096b51decf453b66f69cf591242d23a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_meshgrid</b> (self)</td></tr>
+<tr class="memitem:a5096b51decf453b66f69cf591242d23a" id="r_a5096b51decf453b66f69cf591242d23a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5096b51decf453b66f69cf591242d23a">test_meshgrid</a> (self)</td></tr>
 <tr class="separator:a5096b51decf453b66f69cf591242d23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ce3634aa14809cfbf33b7be5e2e5466" id="r_a0ce3634aa14809cfbf33b7be5e2e5466"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ce3634aa14809cfbf33b7be5e2e5466">test_quiver2x2</a> (self)</td></tr>
 <tr class="separator:a0ce3634aa14809cfbf33b7be5e2e5466"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,7 +128,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88548e3d00d7d835becae339633390ad" id="r_a88548e3d00d7d835becae339633390ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88548e3d00d7d835becae339633390ad">test_streamplot3x3</a> (self)</td></tr>
 <tr class="separator:a88548e3d00d7d835becae339633390ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00060">60</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5096b51decf453b66f69cf591242d23a" name="a5096b51decf453b66f69cf591242d23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5096b51decf453b66f69cf591242d23a">&#9670;&#160;</a></span>test_meshgrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.egt.visualization_test.VisualizationTest.test_meshgrid </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00062">62</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>  <span class="keyword">def </span>test_meshgrid(self):</div>
+<div class="line"><span class="lineno">   63</span>    n = 10</div>
+<div class="line"><span class="lineno">   64</span>    payoff_tensor = np.ones(shape=(2, 2, 2))</div>
+<div class="line"><span class="lineno">   65</span>    identity = <span class="keyword">lambda</span> x, f: x</div>
+<div class="line"><span class="lineno">   66</span>    allzero = <span class="keyword">lambda</span> x, f: np.zeros(x.shape)</div>
+<div class="line"><span class="lineno">   67</span>    dyn = dynamics.MultiPopulationDynamics(payoff_tensor, (identity, allzero))</div>
+<div class="line"><span class="lineno">   68</span>    x, y, u, v = visualization._eval_dynamics_2x2_grid(dyn, n)</div>
+<div class="line"><span class="lineno">   69</span>    np.testing.assert_allclose(x, u)</div>
+<div class="line"><span class="lineno">   70</span>    np.testing.assert_allclose(v, np.zeros(shape=(n, n)))</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>    dyn = dynamics.MultiPopulationDynamics(payoff_tensor, (allzero, identity))</div>
+<div class="line"><span class="lineno">   73</span>    x, y, u, v = visualization._eval_dynamics_2x2_grid(dyn, n)</div>
+<div class="line"><span class="lineno">   74</span>    np.testing.assert_allclose(u, np.zeros(shape=(n, n)))</div>
+<div class="line"><span class="lineno">   75</span>    np.testing.assert_allclose(y, v)</div>
+<div class="line"><span class="lineno">   76</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a0ce3634aa14809cfbf33b7be5e2e5466" name="a0ce3634aa14809cfbf33b7be5e2e5466"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ce3634aa14809cfbf33b7be5e2e5466">&#9670;&#160;</a></span>test_quiver2x2()</h2>
 
@@ -144,7 +180,19 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Test 2x2 quiver plot.</pre> <div class="dynheader">
+<pre class="fragment">Test 2x2 quiver plot.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00077">77</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>  <span class="keyword">def </span>test_quiver2x2(self):</div>
+<div class="line"><span class="lineno">   78</span>    <span class="stringliteral">&quot;&quot;&quot;Test 2x2 quiver plot.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   79</span>    dyn = _build_dynamics2x2()</div>
+<div class="line"><span class="lineno">   80</span>    fig = Figure(figsize=(4, 4))</div>
+<div class="line"><span class="lineno">   81</span>    ax = fig.add_subplot(111, projection=<span class="stringliteral">&quot;2x2&quot;</span>)</div>
+<div class="line"><span class="lineno">   82</span>    res = ax.quiver(dyn)</div>
+<div class="line"><span class="lineno">   83</span>    self.assertIsInstance(res, Quiver)</div>
+<div class="line"><span class="lineno">   84</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00041">open_spiel.python.egt.visualization_test._build_dynamics2x2()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/dde/classopen__spiel_1_1python_1_1egt_1_1visualization__test_1_1_visualization_test_a0ce3634aa14809cfbf33b7be5e2e5466_cgraph.png" border="0" usemap="#adf/dde/classopen__spiel_1_1python_1_1egt_1_1visualization__test_1_1_visualization_test_a0ce3634aa14809cfbf33b7be5e2e5466_cgraph" alt=""/></div>
@@ -171,7 +219,19 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Test 3x3 quiver plot.</pre> <div class="dynheader">
+<pre class="fragment">Test 3x3 quiver plot.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00093">93</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>  <span class="keyword">def </span>test_quiver3x3(self):</div>
+<div class="line"><span class="lineno">   94</span>    <span class="stringliteral">&quot;&quot;&quot;Test 3x3 quiver plot.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   95</span>    dyn = _build_dynamics3x3()</div>
+<div class="line"><span class="lineno">   96</span>    fig = Figure(figsize=(4, 4))</div>
+<div class="line"><span class="lineno">   97</span>    ax = fig.add_subplot(111, projection=<span class="stringliteral">&quot;3x3&quot;</span>)</div>
+<div class="line"><span class="lineno">   98</span>    res = ax.quiver(dyn)</div>
+<div class="line"><span class="lineno">   99</span>    self.assertIsInstance(res, Quiver)</div>
+<div class="line"><span class="lineno">  100</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00048">open_spiel.python.egt.visualization_test._build_dynamics3x3()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/dde/classopen__spiel_1_1python_1_1egt_1_1visualization__test_1_1_visualization_test_a2bac8e7b0e6bb4a44e0e7e01b8ad67a1_cgraph.png" border="0" usemap="#adf/dde/classopen__spiel_1_1python_1_1egt_1_1visualization__test_1_1_visualization_test_a2bac8e7b0e6bb4a44e0e7e01b8ad67a1_cgraph" alt=""/></div>
@@ -198,7 +258,19 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Test 2x2 quiver plot.</pre> <div class="dynheader">
+<pre class="fragment">Test 2x2 quiver plot.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00085">85</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>  <span class="keyword">def </span>test_streamplot2x2(self):</div>
+<div class="line"><span class="lineno">   86</span>    <span class="stringliteral">&quot;&quot;&quot;Test 2x2 quiver plot.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   87</span>    dyn = _build_dynamics2x2()</div>
+<div class="line"><span class="lineno">   88</span>    fig = Figure(figsize=(4, 4))</div>
+<div class="line"><span class="lineno">   89</span>    ax = fig.add_subplot(111, projection=<span class="stringliteral">&quot;2x2&quot;</span>)</div>
+<div class="line"><span class="lineno">   90</span>    res = ax.streamplot(dyn)</div>
+<div class="line"><span class="lineno">   91</span>    self.assertIsInstance(res, StreamplotSet)</div>
+<div class="line"><span class="lineno">   92</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00041">open_spiel.python.egt.visualization_test._build_dynamics2x2()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/dde/classopen__spiel_1_1python_1_1egt_1_1visualization__test_1_1_visualization_test_a26d02728281a2328a89e66e0fad8edb0_cgraph.png" border="0" usemap="#adf/dde/classopen__spiel_1_1python_1_1egt_1_1visualization__test_1_1_visualization_test_a26d02728281a2328a89e66e0fad8edb0_cgraph" alt=""/></div>
@@ -225,7 +297,20 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Test 3x3 quiver plot.</pre> <div class="dynheader">
+<pre class="fragment">Test 3x3 quiver plot.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00101">101</a> of file <a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>  <span class="keyword">def </span>test_streamplot3x3(self):</div>
+<div class="line"><span class="lineno">  102</span>    <span class="stringliteral">&quot;&quot;&quot;Test 3x3 quiver plot.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  103</span>    dyn = _build_dynamics3x3()</div>
+<div class="line"><span class="lineno">  104</span>    fig = Figure(figsize=(4, 4))</div>
+<div class="line"><span class="lineno">  105</span>    ax = fig.add_subplot(111, projection=<span class="stringliteral">&quot;3x3&quot;</span>)</div>
+<div class="line"><span class="lineno">  106</span>    res = ax.streamplot(dyn)</div>
+<div class="line"><span class="lineno">  107</span>    self.assertIsInstance(res, visualization.SimplexStreamMask)</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d31/visualization__test_8py_source.html#l00048">open_spiel.python.egt.visualization_test._build_dynamics3x3()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/dde/classopen__spiel_1_1python_1_1egt_1_1visualization__test_1_1_visualization_test_a88548e3d00d7d835becae339633390ad_cgraph.png" border="0" usemap="#adf/dde/classopen__spiel_1_1python_1_1egt_1_1visualization__test_1_1_visualization_test_a88548e3d00d7d835becae339633390ad_cgraph" alt=""/></div>
@@ -239,7 +324,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/egt/<b>visualization_test.py</b></li>
+<li>open_spiel/python/egt/<a class="el" href="../../d5/d31/visualization__test_8py_source.html">visualization_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

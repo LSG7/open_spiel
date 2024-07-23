@@ -118,25 +118,154 @@ Collaboration diagram for rnn_model.RNNModel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab4047c04c6a8c182702784b22f363ec9" id="r_ab4047c04c6a8c182702784b22f363ec9"><td class="memItemLeft" align="right" valign="top"><a id="ab4047c04c6a8c182702784b22f363ec9" name="ab4047c04c6a8c182702784b22f363ec9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, List[Union[hk.Module, Callable[[jnp.ndarray], jnp.ndarray]]] layers, Optional[str] name='RNN')</td></tr>
+<tr class="memitem:ab4047c04c6a8c182702784b22f363ec9" id="r_ab4047c04c6a8c182702784b22f363ec9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4047c04c6a8c182702784b22f363ec9">__init__</a> (self, List[Union[hk.Module, Callable[[jnp.ndarray], jnp.ndarray]]] layers, Optional[str] name='RNN')</td></tr>
 <tr class="separator:ab4047c04c6a8c182702784b22f363ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea65998e775523e116d78c05e86f00c1" id="r_aea65998e775523e116d78c05e86f00c1"><td class="memItemLeft" align="right" valign="top"><a id="aea65998e775523e116d78c05e86f00c1" name="aea65998e775523e116d78c05e86f00c1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__call__</b> (self, inputs, prev_state)</td></tr>
+<tr class="memitem:aea65998e775523e116d78c05e86f00c1" id="r_aea65998e775523e116d78c05e86f00c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea65998e775523e116d78c05e86f00c1">__call__</a> (self, inputs, prev_state)</td></tr>
 <tr class="separator:aea65998e775523e116d78c05e86f00c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d4d209caa3800411fff066a830d3e93" id="r_a9d4d209caa3800411fff066a830d3e93"><td class="memItemLeft" align="right" valign="top"><a id="a9d4d209caa3800411fff066a830d3e93" name="a9d4d209caa3800411fff066a830d3e93"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>initial_state</b> (self, Optional[int] batch_size)</td></tr>
+<tr class="memitem:a9d4d209caa3800411fff066a830d3e93" id="r_a9d4d209caa3800411fff066a830d3e93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d4d209caa3800411fff066a830d3e93">initial_state</a> (self, Optional[int] batch_size)</td></tr>
 <tr class="separator:a9d4d209caa3800411fff066a830d3e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a1043baeba8aa61e849f10c468442420b" id="r_a1043baeba8aa61e849f10c468442420b"><td class="memItemLeft" align="right" valign="top"><a id="a1043baeba8aa61e849f10c468442420b" name="a1043baeba8aa61e849f10c468442420b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_layers</b></td></tr>
+<tr class="memitem:a1043baeba8aa61e849f10c468442420b" id="r_a1043baeba8aa61e849f10c468442420b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1043baeba8aa61e849f10c468442420b">_layers</a></td></tr>
 <tr class="separator:a1043baeba8aa61e849f10c468442420b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">RNN model.</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/examples/meta_cfr/matrix_games/<b>rnn_model.py</b></li>
+<div class="textblock"><pre class="fragment">RNN model.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d1/dc2/rnn__model_8py_source.html#l00023">23</a> of file <a class="el" href="../../d1/dc2/rnn__model_8py_source.html">rnn_model.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab4047c04c6a8c182702784b22f363ec9" name="ab4047c04c6a8c182702784b22f363ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4047c04c6a8c182702784b22f363ec9">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rnn_model.RNNModel.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List[Union[hk.Module, Callable[[jnp.ndarray],
+                                                      jnp.ndarray]]]</td>          <td class="paramname"><span class="paramname"><em>layers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Optional[str] </td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'RNN'</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc2/rnn__model_8py_source.html#l00026">26</a> of file <a class="el" href="../../d1/dc2/rnn__model_8py_source.html">rnn_model.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>               name: Optional[str] = <span class="stringliteral">&#39;RNN&#39;</span>):</div>
+<div class="line"><span class="lineno">   30</span>    super().__init__(name=name)</div>
+<div class="line"><span class="lineno">   31</span>    self._layers = layers</div>
+<div class="line"><span class="lineno">   32</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aea65998e775523e116d78c05e86f00c1" name="aea65998e775523e116d78c05e86f00c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea65998e775523e116d78c05e86f00c1">&#9670;&#160;</a></span>__call__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rnn_model.RNNModel.__call__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>inputs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>prev_state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc2/rnn__model_8py_source.html#l00033">33</a> of file <a class="el" href="../../d1/dc2/rnn__model_8py_source.html">rnn_model.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>  <span class="keyword">def </span>__call__(self, inputs, prev_state):</div>
+<div class="line"><span class="lineno">   34</span>    x = inputs</div>
+<div class="line"><span class="lineno">   35</span>    curr_state = [<span class="keywordtype">None</span>] * len(prev_state)</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">for</span> k, layer <span class="keywordflow">in</span> enumerate(self._layers):</div>
+<div class="line"><span class="lineno">   37</span>      <span class="keywordflow">if</span> isinstance(layer, hk.RNNCore):</div>
+<div class="line"><span class="lineno">   38</span>        x, curr_state[k] = layer(x, prev_state[k])</div>
+<div class="line"><span class="lineno">   39</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   40</span>        x = layer(x)</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">return</span> x, tuple(curr_state)</div>
+<div class="line"><span class="lineno">   42</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9d4d209caa3800411fff066a830d3e93" name="a9d4d209caa3800411fff066a830d3e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4d209caa3800411fff066a830d3e93">&#9670;&#160;</a></span>initial_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rnn_model.RNNModel.initial_state </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Optional[int]</td>          <td class="paramname"><span class="paramname"><em>batch_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc2/rnn__model_8py_source.html#l00043">43</a> of file <a class="el" href="../../d1/dc2/rnn__model_8py_source.html">rnn_model.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>  <span class="keyword">def </span>initial_state(self, batch_size: Optional[int]):</div>
+<div class="line"><span class="lineno">   44</span>    layerwise_init_state = []</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">for</span> layer <span class="keywordflow">in</span> self._layers:</div>
+<div class="line"><span class="lineno">   46</span>      <span class="keywordflow">if</span> isinstance(layer, hk.RNNCore):</div>
+<div class="line"><span class="lineno">   47</span>        layerwise_init_state.append(layer.initial_state(batch_size))</div>
+<div class="line"><span class="lineno">   48</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   49</span>        layerwise_init_state.append(<span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> tuple(layerwise_init_state)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1043baeba8aa61e849f10c468442420b" name="a1043baeba8aa61e849f10c468442420b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1043baeba8aa61e849f10c468442420b">&#9670;&#160;</a></span>_layers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rnn_model.RNNModel._layers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc2/rnn__model_8py_source.html#l00031">31</a> of file <a class="el" href="../../d1/dc2/rnn__model_8py_source.html">rnn_model.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d95/pytorch_2deep__cfr_8py_source.html#l00106">open_spiel.python.pytorch.deep_cfr.MLP.__init__()</a>, <a class="el" href="../../d0/d8f/pytorch_2dqn_8py_source.html#l00079">open_spiel.python.pytorch.dqn.MLP.__init__()</a>, <a class="el" href="../../db/d99/pytorch_2policy__gradient_8py_source.html#l00095">open_spiel.python.pytorch.policy_gradient.MLPTorso.__init__()</a>, <a class="el" href="../../d2/d9e/simple__nets_8py_source.html#l00090">open_spiel.python.simple_nets.MLP.__init__()</a>, and <a class="el" href="../../d2/d9e/simple__nets_8py_source.html#l00065">open_spiel.python.simple_nets.Sequential.__init__()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>open_spiel/python/examples/meta_cfr/matrix_games/<a class="el" href="../../d1/dc2/rnn__model_8py_source.html">rnn_model.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

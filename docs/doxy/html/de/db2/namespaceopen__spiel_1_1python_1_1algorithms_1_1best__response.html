@@ -140,6 +140,26 @@ TODO(author2): Also include computation using the more efficient C++
 </table>
 </div><div class="memdoc">
 <pre class="fragment">Memoize a single-arg instance method using an on-object cache.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00036">36</a> of file <a class="el" href="../../d8/d7a/best__response_8py_source.html">best_response.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span><span class="keyword">def </span>_memoize_method(key_fn=lambda x: x):</div>
+<div class="line"><span class="lineno">   37</span>  <span class="stringliteral">&quot;&quot;&quot;Memoize a single-arg instance method using an on-object cache.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>  <span class="keyword">def </span>memoizer(method):</div>
+<div class="line"><span class="lineno">   40</span>    cache_name = <span class="stringliteral">&quot;cache_&quot;</span> + method.__name__</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    <span class="keyword">def </span>wrap(self, arg):</div>
+<div class="line"><span class="lineno">   43</span>      key = key_fn(arg)</div>
+<div class="line"><span class="lineno">   44</span>      cache = vars(self).setdefault(cache_name, {})</div>
+<div class="line"><span class="lineno">   45</span>      <span class="keywordflow">if</span> key <span class="keywordflow">not</span> <span class="keywordflow">in</span> cache:</div>
+<div class="line"><span class="lineno">   46</span>        cache[key] = method(self, arg)</div>
+<div class="line"><span class="lineno">   47</span>      <span class="keywordflow">return</span> cache[key]</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> wrap</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>  <span class="keywordflow">return</span> memoizer</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af4d2b38d3dc074da8d4aba56ed7b15cb" name="af4d2b38d3dc074da8d4aba56ed7b15cb"></a>
@@ -178,7 +198,42 @@ Args:
   state_to_information_state: A dict mapping state.history_str() to
     state.information_state for every state in the game. Cached for improved
     performance.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00054">54</a> of file <a class="el" href="../../d8/d7a/best__response_8py_source.html">best_response.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>                                           state_to_information_state=<span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">   57</span>  <span class="stringliteral">&quot;&quot;&quot;Returns all_states and/or state_to_information_state for the game.</span></div>
+<div class="line"><span class="lineno">   58</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   59</span><span class="stringliteral">  To recompute everything, pass in None for both all_states and</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral">  state_to_information_state. Otherwise, this function will use the passed in</span></div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  values to reconstruct either of them.</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">    game: The open_spiel game.</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">    all_states: The result of calling get_all_states.get_all_states. Cached for</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">      improved performance.</span></div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral">    state_to_information_state: A dict mapping state.history_str() to</span></div>
+<div class="line"><span class="lineno">   68</span><span class="stringliteral">      state.information_state for every state in the game. Cached for improved</span></div>
+<div class="line"><span class="lineno">   69</span><span class="stringliteral">      performance.</span></div>
+<div class="line"><span class="lineno">   70</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordflow">if</span> all_states <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">   72</span>    all_states = get_all_states.get_all_states(</div>
+<div class="line"><span class="lineno">   73</span>        game,</div>
+<div class="line"><span class="lineno">   74</span>        depth_limit=-1,</div>
+<div class="line"><span class="lineno">   75</span>        include_terminals=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">   76</span>        include_chance_states=<span class="keyword">False</span>)</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>  <span class="keywordflow">if</span> state_to_information_state <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">   79</span>    state_to_information_state = {</div>
+<div class="line"><span class="lineno">   80</span>        state: all_states[state].information_state_string()</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">for</span> state <span class="keywordflow">in</span> all_states</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>  <span class="keywordflow">return</span> all_states, state_to_information_state</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00248">open_spiel.python.algorithms.best_response.CPPBestResponsePolicy.__init__()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/db2/namespaceopen__spiel_1_1python_1_1algorithms_1_1best__response_af4d2b38d3dc074da8d4aba56ed7b15cb_icgraph.png" border="0" usemap="#ade/db2/namespaceopen__spiel_1_1python_1_1algorithms_1_1best__response_af4d2b38d3dc074da8d4aba56ed7b15cb_icgraph" alt=""/></div>

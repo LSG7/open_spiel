@@ -117,13 +117,51 @@ Collaboration diagram for open_spiel.python.algorithms.alpha_zero.model.TrainInp
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad51b89f1c4f72ce8d16a4bc5ab4f64f7" id="r_ad51b89f1c4f72ce8d16a4bc5ab4f64f7"><td class="memItemLeft" align="right" valign="top"><a id="ad51b89f1c4f72ce8d16a4bc5ab4f64f7" name="ad51b89f1c4f72ce8d16a4bc5ab4f64f7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>stack</b> (train_inputs)</td></tr>
+<tr class="memitem:ad51b89f1c4f72ce8d16a4bc5ab4f64f7" id="r_ad51b89f1c4f72ce8d16a4bc5ab4f64f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad51b89f1c4f72ce8d16a4bc5ab4f64f7">stack</a> (train_inputs)</td></tr>
 <tr class="separator:ad51b89f1c4f72ce8d16a4bc5ab4f64f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Inputs for training the Model.</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/alpha_zero/<b>model.py</b></li>
+<div class="textblock"><pre class="fragment">Inputs for training the Model.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d4/d0e/model_8py_source.html#l00076">76</a> of file <a class="el" href="../../d4/d0e/model_8py_source.html">model.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad51b89f1c4f72ce8d16a4bc5ab4f64f7" name="ad51b89f1c4f72ce8d16a4bc5ab4f64f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad51b89f1c4f72ce8d16a4bc5ab4f64f7">&#9670;&#160;</a></span>stack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.model.TrainInput.stack </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>train_inputs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d0e/model_8py_source.html#l00081">81</a> of file <a class="el" href="../../d4/d0e/model_8py_source.html">model.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>  <span class="keyword">def </span>stack(train_inputs):</div>
+<div class="line"><span class="lineno">   82</span>    observation, legals_mask, policy, value = zip(*train_inputs)</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">return</span> TrainInput(</div>
+<div class="line"><span class="lineno">   84</span>        np.array(observation, dtype=np.float32),</div>
+<div class="line"><span class="lineno">   85</span>        np.array(legals_mask, dtype=bool),</div>
+<div class="line"><span class="lineno">   86</span>        np.array(policy),</div>
+<div class="line"><span class="lineno">   87</span>        np.expand_dims(value, 1))</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>open_spiel/python/algorithms/alpha_zero/<a class="el" href="../../d4/d0e/model_8py_source.html">model.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

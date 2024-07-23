@@ -105,10 +105,46 @@ Collaboration diagram for absl::flags_internal::RetiredFlag&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad6011ee0edcab6847891eafc1a6c9446" id="r_ad6011ee0edcab6847891eafc1a6c9446"><td class="memItemLeft" align="right" valign="top"><a id="ad6011ee0edcab6847891eafc1a6c9446" name="ad6011ee0edcab6847891eafc1a6c9446"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Retire</b> (const char *flag_name)</td></tr>
+<tr class="memitem:ad6011ee0edcab6847891eafc1a6c9446" id="r_ad6011ee0edcab6847891eafc1a6c9446"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6011ee0edcab6847891eafc1a6c9446">Retire</a> (const char *flag_name)</td></tr>
 <tr class="separator:ad6011ee0edcab6847891eafc1a6c9446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class absl::flags_internal::RetiredFlag&lt; T &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../dc/d27/registry_8h_source.html#l00083">83</a> of file <a class="el" href="../../dc/d27/registry_8h_source.html">registry.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad6011ee0edcab6847891eafc1a6c9446" name="ad6011ee0edcab6847891eafc1a6c9446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6011ee0edcab6847891eafc1a6c9446">&#9670;&#160;</a></span>Retire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/de1/classabsl_1_1flags__internal_1_1_retired_flag.html">absl::flags_internal::RetiredFlag</a>&lt; T &gt;::Retire </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>flag_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d27/registry_8h_source.html#l00085">85</a> of file <a class="el" href="../../dc/d27/registry_8h_source.html">registry.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                     {</div>
+<div class="line"><span class="lineno">   86</span>    flags_internal::Retire(flag_name, base_internal::FastTypeId&lt;T&gt;(), buf_);</div>
+<div class="line"><span class="lineno">   87</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/flags/internal/<a class="el" href="../../dc/d27/registry_8h_source.html">registry.h</a></li>
 </ul>

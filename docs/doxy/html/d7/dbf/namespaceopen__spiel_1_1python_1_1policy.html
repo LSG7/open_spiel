@@ -164,6 +164,18 @@ some use cases.
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns a child state, handling the simultaneous node case.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00043">43</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span><span class="keyword">def </span>child(state, action):</div>
+<div class="line"><span class="lineno">   44</span>  <span class="stringliteral">&quot;&quot;&quot;Returns a child state, handling the simultaneous node case.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">if</span> isinstance(action, Iterable):</div>
+<div class="line"><span class="lineno">   46</span>    child_state = state.clone()</div>
+<div class="line"><span class="lineno">   47</span>    child_state.apply_actions(action)</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">return</span> child_state</div>
+<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> state.child(action)</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af790d4355be9443cf04c9a1a206149cd" name="af790d4355be9443cf04c9a1a206149cd"></a>
@@ -180,7 +192,33 @@ some use cases.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns the states of the game for a tabular policy.</pre> <div class="dynheader">
+<pre class="fragment">Returns the states of the game for a tabular policy.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00453">453</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  453</span><span class="keyword">def </span>get_tabular_policy_states(game):</div>
+<div class="line"><span class="lineno">  454</span>  <span class="stringliteral">&quot;&quot;&quot;Returns the states of the game for a tabular policy.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  455</span>  <span class="keywordflow">if</span> game.get_type().dynamics == pyspiel.GameType.Dynamics.MEAN_FIELD:</div>
+<div class="line"><span class="lineno">  456</span>    <span class="comment"># TODO(author18): We use s.observation_string(DEFAULT_MFG_PLAYER) here as the</span></div>
+<div class="line"><span class="lineno">  457</span>    <span class="comment"># number of history is exponential on the depth of the MFG. What we really</span></div>
+<div class="line"><span class="lineno">  458</span>    <span class="comment"># need is a representation of the state. For many player Mean Field games,</span></div>
+<div class="line"><span class="lineno">  459</span>    <span class="comment"># the state will be (x0, x1, x2, ..., xn) and the observation_string(0) will</span></div>
+<div class="line"><span class="lineno">  460</span>    <span class="comment"># output the string of x0. In that case we would need something like</span></div>
+<div class="line"><span class="lineno">  461</span>    <span class="comment"># str([observation_string(i) for i in range(num_player)])</span></div>
+<div class="line"><span class="lineno">  462</span>    to_string = <span class="keyword">lambda</span> s: s.observation_string(pyspiel.PlayerId.</div>
+<div class="line"><span class="lineno">  463</span>                                               DEFAULT_PLAYER_ID)</div>
+<div class="line"><span class="lineno">  464</span>  <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  465</span>    to_string = <span class="keyword">lambda</span> s: s.history_str()</div>
+<div class="line"><span class="lineno">  466</span>  <span class="keywordflow">return</span> get_all_states.get_all_states(</div>
+<div class="line"><span class="lineno">  467</span>      game,</div>
+<div class="line"><span class="lineno">  468</span>      depth_limit=-1,</div>
+<div class="line"><span class="lineno">  469</span>      include_terminals=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  470</span>      include_chance_states=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  471</span>      include_mean_field_states=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  472</span>      to_string=to_string)</div>
+<div class="line"><span class="lineno">  473</span> </div>
+<div class="line"><span class="lineno">  474</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d5/d64/policy_8py_source.html#l00158">open_spiel.python.policy.Policy.to_tabular()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy_af790d4355be9443cf04c9a1a206149cd_icgraph.png" border="0" usemap="#ad7/dbf/namespaceopen__spiel_1_1python_1_1policy_af790d4355be9443cf04c9a1a206149cd_icgraph" alt=""/></div>
@@ -222,7 +260,32 @@ Yields:
   (action, probability) pairs. An action is a tuple of individual
     actions for each player of the game. The probability is a single joint
     probability (product of all the individual probabilities).
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00076">76</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span><span class="keyword">def </span>joint_action_probabilities(state, policy):</div>
+<div class="line"><span class="lineno">   77</span>  <span class="stringliteral">&quot;&quot;&quot;Yields action, probability pairs for a joint policy in simultaneous state.</span></div>
+<div class="line"><span class="lineno">   78</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   79</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   80</span><span class="stringliteral">    state: a game state at a simultaneous decision node.</span></div>
+<div class="line"><span class="lineno">   81</span><span class="stringliteral">    policy: policy that gives the probability distribution over the legal</span></div>
+<div class="line"><span class="lineno">   82</span><span class="stringliteral">      actions for each players.</span></div>
+<div class="line"><span class="lineno">   83</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   84</span><span class="stringliteral">  Yields:</span></div>
+<div class="line"><span class="lineno">   85</span><span class="stringliteral">    (action, probability) pairs. An action is a tuple of individual</span></div>
+<div class="line"><span class="lineno">   86</span><span class="stringliteral">      actions for each player of the game. The probability is a single joint</span></div>
+<div class="line"><span class="lineno">   87</span><span class="stringliteral">      probability (product of all the individual probabilities).</span></div>
+<div class="line"><span class="lineno">   88</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   89</span>  actions_per_player, probs_per_player = joint_action_probabilities_aux(</div>
+<div class="line"><span class="lineno">   90</span>      state, policy)</div>
+<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">for</span> actions, probs <span class="keywordflow">in</span> zip(</div>
+<div class="line"><span class="lineno">   92</span>      itertools.product(*actions_per_player),</div>
+<div class="line"><span class="lineno">   93</span>      itertools.product(*probs_per_player)):</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">yield</span> actions, np.prod(probs)</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d64/policy_8py_source.html#l00053">open_spiel.python.policy.joint_action_probabilities_aux()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy_af1f959571dc79a9d3b346c66a116f0a6_cgraph.png" border="0" usemap="#ad7/dbf/namespaceopen__spiel_1_1python_1_1policy_af1f959571dc79a9d3b346c66a116f0a6_cgraph" alt=""/></div>
@@ -264,7 +327,34 @@ Returns:
   actions_per_player: list of list of actions for each player
   probs_per_player: list of list of probabilities do the corresponding action
    in actions_per_player for each player.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00053">53</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span><span class="keyword">def </span>joint_action_probabilities_aux(state, policy):</div>
+<div class="line"><span class="lineno">   54</span>  <span class="stringliteral">&quot;&quot;&quot;Auxiliary function for joint_action_probabilities.</span></div>
+<div class="line"><span class="lineno">   55</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   56</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   57</span><span class="stringliteral">    state: a game state at a simultaneous decision node.</span></div>
+<div class="line"><span class="lineno">   58</span><span class="stringliteral">    policy: policy that gives the probability distribution over the legal</span></div>
+<div class="line"><span class="lineno">   59</span><span class="stringliteral">      actions for each players.</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">    actions_per_player: list of list of actions for each player</span></div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">    probs_per_player: list of list of probabilities do the corresponding action</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">     in actions_per_player for each player.</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   66</span>  <span class="keyword">assert</span> state.is_simultaneous_node()</div>
+<div class="line"><span class="lineno">   67</span>  action_probs_per_player = [</div>
+<div class="line"><span class="lineno">   68</span>      policy.action_probabilities(state, player)</div>
+<div class="line"><span class="lineno">   69</span>      <span class="keywordflow">for</span> player <span class="keywordflow">in</span> range(state.get_game().num_players())</div>
+<div class="line"><span class="lineno">   70</span>  ]</div>
+<div class="line"><span class="lineno">   71</span>  actions_per_player = [pi.keys() <span class="keywordflow">for</span> pi <span class="keywordflow">in</span> action_probs_per_player]</div>
+<div class="line"><span class="lineno">   72</span>  probs_per_player = [pi.values() <span class="keywordflow">for</span> pi <span class="keywordflow">in</span> action_probs_per_player]</div>
+<div class="line"><span class="lineno">   73</span>  <span class="keywordflow">return</span> actions_per_player, probs_per_player</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d5/d64/policy_8py_source.html#l00076">open_spiel.python.policy.joint_action_probabilities()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy_a8afb3c75599f70588315528bbd7722f8_icgraph.png" border="0" usemap="#ad7/dbf/namespaceopen__spiel_1_1python_1_1policy_a8afb3c75599f70588315528bbd7722f8_icgraph" alt=""/></div>
@@ -307,6 +397,34 @@ Returns:
   merged_policy: A TabularPolicy with each player i's policy taken from the
     ith joint_policy.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00555">555</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  555</span><span class="keyword">def </span>merge_tabular_policies(tabular_policies, game):</div>
+<div class="line"><span class="lineno">  556</span>  <span class="stringliteral">&quot;&quot;&quot;Merges n_player policies into single joint policy.</span></div>
+<div class="line"><span class="lineno">  557</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  558</span><span class="stringliteral">  Missing states are filled with a valid uniform policy.</span></div>
+<div class="line"><span class="lineno">  559</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  560</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  561</span><span class="stringliteral">    tabular_policies: List of python TabularPolicy (one for each player).</span></div>
+<div class="line"><span class="lineno">  562</span><span class="stringliteral">    game: The game corresponding to the resulting TabularPolicy.</span></div>
+<div class="line"><span class="lineno">  563</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  564</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  565</span><span class="stringliteral">    merged_policy: A TabularPolicy with each player i&#39;s policy taken from the</span></div>
+<div class="line"><span class="lineno">  566</span><span class="stringliteral">      ith joint_policy.</span></div>
+<div class="line"><span class="lineno">  567</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  568</span>  <span class="keywordflow">if</span> len(tabular_policies) != game.num_players():</div>
+<div class="line"><span class="lineno">  569</span>    <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&quot;len(tabular_policies) != num_players: %d != %d&quot;</span> %</div>
+<div class="line"><span class="lineno">  570</span>                     (len(tabular_policies), game.num_players()))</div>
+<div class="line"><span class="lineno">  571</span>  merged_policy = TabularPolicy(game)</div>
+<div class="line"><span class="lineno">  572</span>  <span class="keywordflow">for</span> p, p_states <span class="keywordflow">in</span> enumerate(merged_policy.states_per_player):</div>
+<div class="line"><span class="lineno">  573</span>    <span class="keywordflow">for</span> p_state <span class="keywordflow">in</span> p_states:</div>
+<div class="line"><span class="lineno">  574</span>      to_index = merged_policy.state_lookup[p_state]</div>
+<div class="line"><span class="lineno">  575</span>      <span class="comment"># Only copy if the state exists, otherwise fall back onto uniform.</span></div>
+<div class="line"><span class="lineno">  576</span>      <span class="keywordflow">if</span> p_state <span class="keywordflow">in</span> tabular_policies[p].state_lookup:</div>
+<div class="line"><span class="lineno">  577</span>        from_index = tabular_policies[p].state_lookup[p_state]</div>
+<div class="line"><span class="lineno">  578</span>        merged_policy.action_probability_array[to_index] = (</div>
+<div class="line"><span class="lineno">  579</span>            tabular_policies[p].action_probability_array[from_index])</div>
+<div class="line"><span class="lineno">  580</span>  <span class="keywordflow">return</span> merged_policy</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab94aca1416f617f17950d02053a38a5b" name="ab94aca1416f617f17950d02053a38a5b"></a>
@@ -345,6 +463,34 @@ Args:
 Returns:
   python_policy
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00502">502</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  502</span><span class="keyword">def </span>pyspiel_policy_to_python_policy(game, pyspiel_tabular_policy, players=None):</div>
+<div class="line"><span class="lineno">  503</span>  <span class="stringliteral">&quot;&quot;&quot;Converts a pyspiel.TabularPolicy to a TabularPolicy.</span></div>
+<div class="line"><span class="lineno">  504</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  505</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  506</span><span class="stringliteral">    game: The OpenSpiel game.</span></div>
+<div class="line"><span class="lineno">  507</span><span class="stringliteral">    pyspiel_tabular_policy: Pyspiel tabular policy to copy from.</span></div>
+<div class="line"><span class="lineno">  508</span><span class="stringliteral">    players: List of integer player ids to copy policy from. For example,</span></div>
+<div class="line"><span class="lineno">  509</span><span class="stringliteral">      `players=[0]` will only copy player 0&#39;s policy over into the python policy</span></div>
+<div class="line"><span class="lineno">  510</span><span class="stringliteral">      (the other player&#39;s policies will be undefined). Default value of `None`</span></div>
+<div class="line"><span class="lineno">  511</span><span class="stringliteral">      will copy all players&#39; policies.</span></div>
+<div class="line"><span class="lineno">  512</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  513</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  514</span><span class="stringliteral">    python_policy</span></div>
+<div class="line"><span class="lineno">  515</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  516</span>  policy = TabularPolicy(game, players=players)</div>
+<div class="line"><span class="lineno">  517</span>  <span class="keywordflow">for</span> item <span class="keywordflow">in</span> pyspiel_tabular_policy.policy_table().items():</div>
+<div class="line"><span class="lineno">  518</span>    info_state_str, actions_probs = item</div>
+<div class="line"><span class="lineno">  519</span>    <span class="comment"># If requested, only populate a policy for particular players.</span></div>
+<div class="line"><span class="lineno">  520</span>    <span class="keywordflow">if</span> players <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">and</span> info_state_str <span class="keywordflow">not</span> <span class="keywordflow">in</span> policy.state_lookup:</div>
+<div class="line"><span class="lineno">  521</span>      <span class="keywordflow">continue</span></div>
+<div class="line"><span class="lineno">  522</span>    state_policy = policy.policy_for_key(info_state_str)</div>
+<div class="line"><span class="lineno">  523</span>    <span class="keywordflow">for</span> action, prob <span class="keywordflow">in</span> actions_probs:</div>
+<div class="line"><span class="lineno">  524</span>      state_policy[action] = prob</div>
+<div class="line"><span class="lineno">  525</span>  <span class="keywordflow">return</span> policy</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3b489234e6aaac89abffa8a7088fd542" name="a3b489234e6aaac89abffa8a7088fd542"></a>
@@ -368,7 +514,23 @@ Args:
 
 Returns:
   a list of pyspiel.TabularPolicy.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00543">543</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  543</span><span class="keyword">def </span>python_policies_to_pyspiel_policies(policies):</div>
+<div class="line"><span class="lineno">  544</span>  <span class="stringliteral">&quot;&quot;&quot;Same conversion as above (list version).</span></div>
+<div class="line"><span class="lineno">  545</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  546</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  547</span><span class="stringliteral">    policies: a list of python.TabularPolicy</span></div>
+<div class="line"><span class="lineno">  548</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  549</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  550</span><span class="stringliteral">    a list of pyspiel.TabularPolicy.</span></div>
+<div class="line"><span class="lineno">  551</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  552</span>  <span class="keywordflow">return</span> [python_policy_to_pyspiel_policy(p) <span class="keywordflow">for</span> p <span class="keywordflow">in</span> policies]</div>
+<div class="line"><span class="lineno">  553</span> </div>
+<div class="line"><span class="lineno">  554</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d64/policy_8py_source.html#l00528">open_spiel.python.policy.python_policy_to_pyspiel_policy()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy_a3b489234e6aaac89abffa8a7088fd542_cgraph.png" border="0" usemap="#ad7/dbf/namespaceopen__spiel_1_1python_1_1policy_a3b489234e6aaac89abffa8a7088fd542_cgraph" alt=""/></div>
@@ -395,7 +557,26 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Converts a TabularPolicy to a pyspiel.TabularPolicy.</pre> <div class="dynheader">
+<pre class="fragment">Converts a TabularPolicy to a pyspiel.TabularPolicy.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00528">528</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  528</span><span class="keyword">def </span>python_policy_to_pyspiel_policy(python_tabular_policy):</div>
+<div class="line"><span class="lineno">  529</span>  <span class="stringliteral">&quot;&quot;&quot;Converts a TabularPolicy to a pyspiel.TabularPolicy.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  530</span>  infostates_to_probabilities = dict()</div>
+<div class="line"><span class="lineno">  531</span>  <span class="keywordflow">for</span> infostate, index <span class="keywordflow">in</span> python_tabular_policy.state_lookup.items():</div>
+<div class="line"><span class="lineno">  532</span>    probs = python_tabular_policy.action_probability_array[index]</div>
+<div class="line"><span class="lineno">  533</span>    legals = python_tabular_policy.legal_actions_mask[index]</div>
+<div class="line"><span class="lineno">  534</span> </div>
+<div class="line"><span class="lineno">  535</span>    action_probs = []</div>
+<div class="line"><span class="lineno">  536</span>    <span class="keywordflow">for</span> action, (prob, is_legal) <span class="keywordflow">in</span> enumerate(zip(probs, legals)):</div>
+<div class="line"><span class="lineno">  537</span>      <span class="keywordflow">if</span> is_legal == 1:</div>
+<div class="line"><span class="lineno">  538</span>        action_probs.append((action, prob))</div>
+<div class="line"><span class="lineno">  539</span>    infostates_to_probabilities[infostate] = action_probs</div>
+<div class="line"><span class="lineno">  540</span>  <span class="keywordflow">return</span> pyspiel.TabularPolicy(infostates_to_probabilities)</div>
+<div class="line"><span class="lineno">  541</span> </div>
+<div class="line"><span class="lineno">  542</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d5/d64/policy_8py_source.html#l00543">open_spiel.python.policy.python_policies_to_pyspiel_policies()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dbf/namespaceopen__spiel_1_1python_1_1policy_abf19f1c6de40f4f3bc77be68fafdb396_icgraph.png" border="0" usemap="#ad7/dbf/namespaceopen__spiel_1_1python_1_1policy_abf19f1c6de40f4f3bc77be68fafdb396_icgraph" alt=""/></div>
@@ -446,6 +627,35 @@ Args:
 Returns:
   A TabularPolicy that materializes the callable policy.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d64/policy_8py_source.html#l00475">475</a> of file <a class="el" href="../../d5/d64/policy_8py_source.html">policy.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  475</span><span class="keyword">def </span>tabular_policy_from_callable(game, callable_policy, players=None):</div>
+<div class="line"><span class="lineno">  476</span>  <span class="stringliteral">&quot;&quot;&quot;Converts a legacy callable policy into a TabularPolicy.</span></div>
+<div class="line"><span class="lineno">  477</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  478</span><span class="stringliteral">  Recommendation - instead of using this to convert your policy for evaluation</span></div>
+<div class="line"><span class="lineno">  479</span><span class="stringliteral">  purposes, work directly with a `TabularPolicy` if possible.</span></div>
+<div class="line"><span class="lineno">  480</span><span class="stringliteral">  Second choice - work with a `Policy` class and call `to_tabular` as needed.</span></div>
+<div class="line"><span class="lineno">  481</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  482</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  483</span><span class="stringliteral">    game: The game for which we want a TabularPolicy.</span></div>
+<div class="line"><span class="lineno">  484</span><span class="stringliteral">    callable_policy: A callable: state -&gt; action probabilities dict or list.</span></div>
+<div class="line"><span class="lineno">  485</span><span class="stringliteral">    players: List of players this policy applies to. If `None`, applies to all</span></div>
+<div class="line"><span class="lineno">  486</span><span class="stringliteral">      players.</span></div>
+<div class="line"><span class="lineno">  487</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  488</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  489</span><span class="stringliteral">    A TabularPolicy that materializes the callable policy.</span></div>
+<div class="line"><span class="lineno">  490</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  491</span>  tabular_policy = TabularPolicy(game, players)</div>
+<div class="line"><span class="lineno">  492</span>  <span class="keywordflow">for</span> state_index, state <span class="keywordflow">in</span> enumerate(tabular_policy.states):</div>
+<div class="line"><span class="lineno">  493</span>    action_probabilities = dict(callable_policy(state))</div>
+<div class="line"><span class="lineno">  494</span>    infostate_policy = [</div>
+<div class="line"><span class="lineno">  495</span>        action_probabilities.get(action, 0.)</div>
+<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">for</span> action <span class="keywordflow">in</span> range(game.num_distinct_actions())</div>
+<div class="line"><span class="lineno">  497</span>    ]</div>
+<div class="line"><span class="lineno">  498</span>    tabular_policy.action_probability_array[state_index, :] = infostate_policy</div>
+<div class="line"><span class="lineno">  499</span>  <span class="keywordflow">return</span> tabular_policy</div>
+<div class="line"><span class="lineno">  500</span> </div>
+<div class="line"><span class="lineno">  501</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

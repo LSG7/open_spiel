@@ -107,52 +107,388 @@ Collaboration diagram for absl::container_internal::raw_hash_set&lt; Policy, Has
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a58ca91c930a1898cda78bdabe54df007" id="r_a58ca91c930a1898cda78bdabe54df007"><td class="memItemLeft" align="right" valign="top"><a id="a58ca91c930a1898cda78bdabe54df007" name="a58ca91c930a1898cda78bdabe54df007"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator_category</b> = typename iterator::iterator_category</td></tr>
+<tr class="memitem:a58ca91c930a1898cda78bdabe54df007" id="r_a58ca91c930a1898cda78bdabe54df007"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58ca91c930a1898cda78bdabe54df007">iterator_category</a> = typename iterator::iterator_category</td></tr>
 <tr class="separator:a58ca91c930a1898cda78bdabe54df007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdec3bf20b207b3e4141f91ea6b259b9" id="r_abdec3bf20b207b3e4141f91ea6b259b9"><td class="memItemLeft" align="right" valign="top"><a id="abdec3bf20b207b3e4141f91ea6b259b9" name="abdec3bf20b207b3e4141f91ea6b259b9"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = typename raw_hash_set::value_type</td></tr>
+<tr class="memitem:abdec3bf20b207b3e4141f91ea6b259b9" id="r_abdec3bf20b207b3e4141f91ea6b259b9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdec3bf20b207b3e4141f91ea6b259b9">value_type</a> = typename raw_hash_set::value_type</td></tr>
 <tr class="separator:abdec3bf20b207b3e4141f91ea6b259b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5c368f88d661e5c9ff6f0e520c3ecce" id="r_aa5c368f88d661e5c9ff6f0e520c3ecce"><td class="memItemLeft" align="right" valign="top"><a id="aa5c368f88d661e5c9ff6f0e520c3ecce" name="aa5c368f88d661e5c9ff6f0e520c3ecce"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = typename raw_hash_set::const_reference</td></tr>
+<tr class="memitem:aa5c368f88d661e5c9ff6f0e520c3ecce" id="r_aa5c368f88d661e5c9ff6f0e520c3ecce"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5c368f88d661e5c9ff6f0e520c3ecce">reference</a> = typename raw_hash_set::const_reference</td></tr>
 <tr class="separator:aa5c368f88d661e5c9ff6f0e520c3ecce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a200dc9a81d79454c7dab9bd1f6570381" id="r_a200dc9a81d79454c7dab9bd1f6570381"><td class="memItemLeft" align="right" valign="top"><a id="a200dc9a81d79454c7dab9bd1f6570381" name="a200dc9a81d79454c7dab9bd1f6570381"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b> = typename raw_hash_set::const_pointer</td></tr>
+<tr class="memitem:a200dc9a81d79454c7dab9bd1f6570381" id="r_a200dc9a81d79454c7dab9bd1f6570381"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a200dc9a81d79454c7dab9bd1f6570381">pointer</a> = typename raw_hash_set::const_pointer</td></tr>
 <tr class="separator:a200dc9a81d79454c7dab9bd1f6570381"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1695a0d96542b91c4e1cda88bb8ad534" id="r_a1695a0d96542b91c4e1cda88bb8ad534"><td class="memItemLeft" align="right" valign="top"><a id="a1695a0d96542b91c4e1cda88bb8ad534" name="a1695a0d96542b91c4e1cda88bb8ad534"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b> = typename raw_hash_set::difference_type</td></tr>
+<tr class="memitem:a1695a0d96542b91c4e1cda88bb8ad534" id="r_a1695a0d96542b91c4e1cda88bb8ad534"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1695a0d96542b91c4e1cda88bb8ad534">difference_type</a> = typename raw_hash_set::difference_type</td></tr>
 <tr class="separator:a1695a0d96542b91c4e1cda88bb8ad534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a24b3928b99ba16c78a566cb6676b7204" id="r_a24b3928b99ba16c78a566cb6676b7204"><td class="memItemLeft" align="right" valign="top"><a id="a24b3928b99ba16c78a566cb6676b7204" name="a24b3928b99ba16c78a566cb6676b7204"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> (<a class="el" href="../../d3/d84/classabsl_1_1container__internal_1_1raw__hash__set_1_1iterator.html">iterator</a> i)</td></tr>
+<tr class="memitem:a24b3928b99ba16c78a566cb6676b7204" id="r_a24b3928b99ba16c78a566cb6676b7204"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24b3928b99ba16c78a566cb6676b7204">const_iterator</a> (<a class="el" href="../../d3/d84/classabsl_1_1container__internal_1_1raw__hash__set_1_1iterator.html">iterator</a> i)</td></tr>
 <tr class="separator:a24b3928b99ba16c78a566cb6676b7204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae62ae46137d7535c8e39cf72d152d6b1" id="r_ae62ae46137d7535c8e39cf72d152d6b1"><td class="memItemLeft" align="right" valign="top"><a id="ae62ae46137d7535c8e39cf72d152d6b1" name="ae62ae46137d7535c8e39cf72d152d6b1"></a>
-reference&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> () const</td></tr>
+<tr class="memitem:ae62ae46137d7535c8e39cf72d152d6b1" id="r_ae62ae46137d7535c8e39cf72d152d6b1"><td class="memItemLeft" align="right" valign="top">reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae62ae46137d7535c8e39cf72d152d6b1">operator*</a> () const</td></tr>
 <tr class="separator:ae62ae46137d7535c8e39cf72d152d6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad055e03c560dc20da3bf4fcb270d8235" id="r_ad055e03c560dc20da3bf4fcb270d8235"><td class="memItemLeft" align="right" valign="top"><a id="ad055e03c560dc20da3bf4fcb270d8235" name="ad055e03c560dc20da3bf4fcb270d8235"></a>
-pointer&#160;</td><td class="memItemRight" valign="bottom"><b>operator-&gt;</b> () const</td></tr>
+<tr class="memitem:ad055e03c560dc20da3bf4fcb270d8235" id="r_ad055e03c560dc20da3bf4fcb270d8235"><td class="memItemLeft" align="right" valign="top">pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad055e03c560dc20da3bf4fcb270d8235">operator-&gt;</a> () const</td></tr>
 <tr class="separator:ad055e03c560dc20da3bf4fcb270d8235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42e87904f7f625236e4b016378542062" id="r_a42e87904f7f625236e4b016378542062"><td class="memItemLeft" align="right" valign="top"><a id="a42e87904f7f625236e4b016378542062" name="a42e87904f7f625236e4b016378542062"></a>
-<a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> ()</td></tr>
+<tr class="memitem:a42e87904f7f625236e4b016378542062" id="r_a42e87904f7f625236e4b016378542062"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42e87904f7f625236e4b016378542062">operator++</a> ()</td></tr>
 <tr class="separator:a42e87904f7f625236e4b016378542062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf3220788cec58bdb6b9588b4f9224fc" id="r_adf3220788cec58bdb6b9588b4f9224fc"><td class="memItemLeft" align="right" valign="top"><a id="adf3220788cec58bdb6b9588b4f9224fc" name="adf3220788cec58bdb6b9588b4f9224fc"></a>
-<a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> (int)</td></tr>
+<tr class="memitem:adf3220788cec58bdb6b9588b4f9224fc" id="r_adf3220788cec58bdb6b9588b4f9224fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf3220788cec58bdb6b9588b4f9224fc">operator++</a> (int)</td></tr>
 <tr class="separator:adf3220788cec58bdb6b9588b4f9224fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a85db321033cc20fdf85bdfbfe8fc923f" id="r_a85db321033cc20fdf85bdfbfe8fc923f"><td class="memItemLeft" align="right" valign="top"><a id="a85db321033cc20fdf85bdfbfe8fc923f" name="a85db321033cc20fdf85bdfbfe8fc923f"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>raw_hash_set</b></td></tr>
+<tr class="memitem:a85db321033cc20fdf85bdfbfe8fc923f" id="r_a85db321033cc20fdf85bdfbfe8fc923f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85db321033cc20fdf85bdfbfe8fc923f">raw_hash_set</a></td></tr>
 <tr class="separator:a85db321033cc20fdf85bdfbfe8fc923f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0ac7de651351823aece097eb3be1cfb" id="r_ab0ac7de651351823aece097eb3be1cfb"><td class="memItemLeft" align="right" valign="top"><a id="ab0ac7de651351823aece097eb3be1cfb" name="ab0ac7de651351823aece097eb3be1cfb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;a, const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;b)</td></tr>
+<tr class="memitem:ab0ac7de651351823aece097eb3be1cfb" id="r_ab0ac7de651351823aece097eb3be1cfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0ac7de651351823aece097eb3be1cfb">operator==</a> (const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;a, const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;b)</td></tr>
 <tr class="separator:ab0ac7de651351823aece097eb3be1cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fbca5b71055f2b793ae1607239b13a0" id="r_a5fbca5b71055f2b793ae1607239b13a0"><td class="memItemLeft" align="right" valign="top"><a id="a5fbca5b71055f2b793ae1607239b13a0" name="a5fbca5b71055f2b793ae1607239b13a0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;a, const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;b)</td></tr>
+<tr class="memitem:a5fbca5b71055f2b793ae1607239b13a0" id="r_a5fbca5b71055f2b793ae1607239b13a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fbca5b71055f2b793ae1607239b13a0">operator!=</a> (const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;a, const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;b)</td></tr>
 <tr class="separator:a5fbca5b71055f2b793ae1607239b13a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class Policy, class Hash, class Eq, class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a>&gt;<br />
+class absl::container_internal::raw_hash_set&lt; Policy, Hash, Eq, Alloc &gt;::const_iterator</div>
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01495">1495</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a1695a0d96542b91c4e1cda88bb8ad534" name="a1695a0d96542b91c4e1cda88bb8ad534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1695a0d96542b91c4e1cda88bb8ad534">&#9670;&#160;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::difference_type = typename raw_hash_set::difference_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01503">1503</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="a58ca91c930a1898cda78bdabe54df007" name="a58ca91c930a1898cda78bdabe54df007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ca91c930a1898cda78bdabe54df007">&#9670;&#160;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::iterator_category = typename iterator::iterator_category</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01499">1499</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="a200dc9a81d79454c7dab9bd1f6570381" name="a200dc9a81d79454c7dab9bd1f6570381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a200dc9a81d79454c7dab9bd1f6570381">&#9670;&#160;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::pointer = typename raw_hash_set::const_pointer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01502">1502</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="aa5c368f88d661e5c9ff6f0e520c3ecce" name="aa5c368f88d661e5c9ff6f0e520c3ecce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c368f88d661e5c9ff6f0e520c3ecce">&#9670;&#160;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::reference = typename raw_hash_set::const_reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01501">1501</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
+<a id="abdec3bf20b207b3e4141f91ea6b259b9" name="abdec3bf20b207b3e4141f91ea6b259b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdec3bf20b207b3e4141f91ea6b259b9">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::value_type = typename raw_hash_set::value_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01500">1500</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a24b3928b99ba16c78a566cb6676b7204" name="a24b3928b99ba16c78a566cb6676b7204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b3928b99ba16c78a566cb6676b7204">&#9670;&#160;</a></span>const_iterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::const_iterator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d3/d84/classabsl_1_1container__internal_1_1raw__hash__set_1_1iterator.html">iterator</a></td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01507">1507</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1507</span>: inner_(std::move(i)) {}  <span class="comment">// NOLINT</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae62ae46137d7535c8e39cf72d152d6b1" name="ae62ae46137d7535c8e39cf72d152d6b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62ae46137d7535c8e39cf72d152d6b1">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">reference <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::operator* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01509">1509</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1509</span>{ <span class="keywordflow">return</span> *inner_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a42e87904f7f625236e4b016378542062" name="a42e87904f7f625236e4b016378542062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e87904f7f625236e4b016378542062">&#9670;&#160;</a></span>operator++() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp; <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::operator++ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01512">1512</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1512</span>                                 {</div>
+<div class="line"><span class="lineno"> 1513</span>      ++inner_;</div>
+<div class="line"><span class="lineno"> 1514</span>      <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno"> 1515</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adf3220788cec58bdb6b9588b4f9224fc" name="adf3220788cec58bdb6b9588b4f9224fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3220788cec58bdb6b9588b4f9224fc">&#9670;&#160;</a></span>operator++() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::operator++ </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01516">1516</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1516</span>{ <span class="keywordflow">return</span> inner_++; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad055e03c560dc20da3bf4fcb270d8235" name="ad055e03c560dc20da3bf4fcb270d8235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad055e03c560dc20da3bf4fcb270d8235">&#9670;&#160;</a></span>operator-&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pointer <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">absl::container_internal::raw_hash_set</a>&lt; Policy, Hash, Eq, <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt;::const_iterator::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01510">1510</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1510</span>{ <span class="keywordflow">return</span> inner_.operator-&gt;(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a5fbca5b71055f2b793ae1607239b13a0" name="a5fbca5b71055f2b793ae1607239b13a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fbca5b71055f2b793ae1607239b13a0">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01521">1521</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1521</span>                                                                             {</div>
+<div class="line"><span class="lineno"> 1522</span>      <span class="keywordflow">return</span> !(a == b);</div>
+<div class="line"><span class="lineno"> 1523</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab0ac7de651351823aece097eb3be1cfb" name="ab0ac7de651351823aece097eb3be1cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ac7de651351823aece097eb3be1cfb">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d83/classabsl_1_1container__internal_1_1raw__hash__set_1_1const__iterator.html">const_iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01518">1518</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1518</span>                                                                             {</div>
+<div class="line"><span class="lineno"> 1519</span>      <span class="keywordflow">return</span> a.inner_ == b.inner_;</div>
+<div class="line"><span class="lineno"> 1520</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a85db321033cc20fdf85bdfbfe8fc923f" name="a85db321033cc20fdf85bdfbfe8fc923f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85db321033cc20fdf85bdfbfe8fc923f">&#9670;&#160;</a></span>raw_hash_set</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class Hash , class Eq , class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../d5/d9c/classabsl_1_1container__internal_1_1raw__hash__set.html">raw_hash_set</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html#l01496">1496</a> of file <a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../db/dfa/raw__hash__set_8h_source.html">raw_hash_set.h</a></li>
 </ul>

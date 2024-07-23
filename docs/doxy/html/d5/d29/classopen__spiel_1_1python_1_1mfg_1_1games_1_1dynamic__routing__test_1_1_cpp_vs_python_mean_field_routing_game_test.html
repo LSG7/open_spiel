@@ -120,7 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3373db77d5ba10f3207da32ad527569" id="r_ab3373db77d5ba10f3207da32ad527569"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3373db77d5ba10f3207da32ad527569">test_braess_paradox_game</a> (self, game_name)</td></tr>
 <tr class="separator:ab3373db77d5ba10f3207da32ad527569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html#l00240">240</a> of file <a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html">dynamic_routing_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab3373db77d5ba10f3207da32ad527569" name="ab3373db77d5ba10f3207da32ad527569"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3373db77d5ba10f3207da32ad527569">&#9670;&#160;</a></span>test_braess_paradox_game()</h2>
 
@@ -140,10 +143,31 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test that Braess paradox can be reproduced with the mean field game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html#l00247">247</a> of file <a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html">dynamic_routing_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>  <span class="keyword">def </span>test_braess_paradox_game(self, game_name):</div>
+<div class="line"><span class="lineno">  248</span>    <span class="stringliteral">&quot;&quot;&quot;Test that Braess paradox can be reproduced with the mean field game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  249</span>    mfg_game = pyspiel.load_game(game_name)</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>    ne_policy = NashEquilibriumBraess(mfg_game, 1)</div>
+<div class="line"><span class="lineno">  252</span>    self.assertEqual(</div>
+<div class="line"><span class="lineno">  253</span>        -policy_value.PolicyValue(</div>
+<div class="line"><span class="lineno">  254</span>            mfg_game, distribution.DistributionPolicy(mfg_game, ne_policy),</div>
+<div class="line"><span class="lineno">  255</span>            ne_policy).value(mfg_game.new_initial_state()), 3.75)</div>
+<div class="line"><span class="lineno">  256</span>    self.assertEqual(nash_conv.NashConv(mfg_game, ne_policy).nash_conv(), 0.0)</div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>    so_policy = SocialOptimumBraess(mfg_game, 1)</div>
+<div class="line"><span class="lineno">  259</span>    self.assertEqual(</div>
+<div class="line"><span class="lineno">  260</span>        -policy_value.PolicyValue(</div>
+<div class="line"><span class="lineno">  261</span>            mfg_game, distribution.DistributionPolicy(mfg_game, so_policy),</div>
+<div class="line"><span class="lineno">  262</span>            so_policy).value(mfg_game.new_initial_state()), 3.5)</div>
+<div class="line"><span class="lineno">  263</span>    self.assertEqual(nash_conv.NashConv(mfg_game, so_policy).nash_conv(), 0.75)</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/games/<b>dynamic_routing_test.py</b></li>
+<li>open_spiel/python/mfg/games/<a class="el" href="../../d7/d97/mfg_2games_2dynamic__routing__test_8py_source.html">dynamic_routing_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

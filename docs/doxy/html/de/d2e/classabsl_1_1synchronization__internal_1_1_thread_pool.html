@@ -105,8 +105,7 @@ Collaboration diagram for absl::synchronization_internal::ThreadPool:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ffb71c5697bc8d15f2152d6a4ead326" id="r_a9ffb71c5697bc8d15f2152d6a4ead326"><td class="memItemLeft" align="right" valign="top"><a id="a9ffb71c5697bc8d15f2152d6a4ead326" name="a9ffb71c5697bc8d15f2152d6a4ead326"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ThreadPool</b> (int num_threads)</td></tr>
+<tr class="memitem:a9ffb71c5697bc8d15f2152d6a4ead326" id="r_a9ffb71c5697bc8d15f2152d6a4ead326"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ffb71c5697bc8d15f2152d6a4ead326">ThreadPool</a> (int num_threads)</td></tr>
 <tr class="separator:a9ffb71c5697bc8d15f2152d6a4ead326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b2944d809ffbb26a7239f121ce4c04d" id="r_a4b2944d809ffbb26a7239f121ce4c04d"><td class="memItemLeft" align="right" valign="top"><a id="a4b2944d809ffbb26a7239f121ce4c04d" name="a4b2944d809ffbb26a7239f121ce4c04d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ThreadPool</b> (const <a class="el" href="../../de/d2e/classabsl_1_1synchronization__internal_1_1_thread_pool.html">ThreadPool</a> &amp;)=delete</td></tr>
@@ -114,10 +113,118 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a47a135089a2b4fec849379ebd847e85d" id="r_a47a135089a2b4fec849379ebd847e85d"><td class="memItemLeft" align="right" valign="top"><a id="a47a135089a2b4fec849379ebd847e85d" name="a47a135089a2b4fec849379ebd847e85d"></a>
 <a class="el" href="../../de/d2e/classabsl_1_1synchronization__internal_1_1_thread_pool.html">ThreadPool</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../de/d2e/classabsl_1_1synchronization__internal_1_1_thread_pool.html">ThreadPool</a> &amp;)=delete</td></tr>
 <tr class="separator:a47a135089a2b4fec849379ebd847e85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac774db049f2cfa70e13bbd8679687167" id="r_ac774db049f2cfa70e13bbd8679687167"><td class="memItemLeft" align="right" valign="top"><a id="ac774db049f2cfa70e13bbd8679687167" name="ac774db049f2cfa70e13bbd8679687167"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Schedule</b> (<a class="el" href="../../dc/db6/classabsl_1_1_any_invocable.html">absl::AnyInvocable</a>&lt; void()&gt; func)</td></tr>
+<tr class="memitem:ac774db049f2cfa70e13bbd8679687167" id="r_ac774db049f2cfa70e13bbd8679687167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac774db049f2cfa70e13bbd8679687167">Schedule</a> (<a class="el" href="../../dc/db6/classabsl_1_1_any_invocable.html">absl::AnyInvocable</a>&lt; void()&gt; func)</td></tr>
 <tr class="separator:ac774db049f2cfa70e13bbd8679687167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d3/dec/thread__pool_8h_source.html#l00035">35</a> of file <a class="el" href="../../d3/dec/thread__pool_8h_source.html">thread_pool.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9ffb71c5697bc8d15f2152d6a4ead326" name="a9ffb71c5697bc8d15f2152d6a4ead326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ffb71c5697bc8d15f2152d6a4ead326">&#9670;&#160;</a></span>ThreadPool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::synchronization_internal::ThreadPool::ThreadPool </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_threads</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/dec/thread__pool_8h_source.html#l00037">37</a> of file <a class="el" href="../../d3/dec/thread__pool_8h_source.html">thread_pool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                                       {</div>
+<div class="line"><span class="lineno">   38</span>    threads_.reserve(num_threads);</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_threads; ++i) {</div>
+<div class="line"><span class="lineno">   40</span>      threads_.push_back(std::thread(&amp;ThreadPool::WorkLoop, <span class="keyword">this</span>));</div>
+<div class="line"><span class="lineno">   41</span>    }</div>
+<div class="line"><span class="lineno">   42</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a390dab9b4dbe11946a16a41d71ffd8cb" name="a390dab9b4dbe11946a16a41d71ffd8cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a390dab9b4dbe11946a16a41d71ffd8cb">&#9670;&#160;</a></span>~ThreadPool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::synchronization_internal::ThreadPool::~ThreadPool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/dec/thread__pool_8h_source.html#l00047">47</a> of file <a class="el" href="../../d3/dec/thread__pool_8h_source.html">thread_pool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>                {</div>
+<div class="line"><span class="lineno">   48</span>    {</div>
+<div class="line"><span class="lineno">   49</span>      <a class="code hl_class" href="../../d4/d4f/classabsl_1_1_mutex_lock.html">absl::MutexLock</a> l(&amp;mu_);</div>
+<div class="line"><span class="lineno">   50</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; threads_.size(); i++) {</div>
+<div class="line"><span class="lineno">   51</span>        queue_.push(<span class="keyword">nullptr</span>);  <span class="comment">// Shutdown signal.</span></div>
+<div class="line"><span class="lineno">   52</span>      }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;t : threads_) {</div>
+<div class="line"><span class="lineno">   55</span>      t.join();</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span>  }</div>
+<div class="ttc" id="aclassabsl_1_1_mutex_lock_html"><div class="ttname"><a href="../../d4/d4f/classabsl_1_1_mutex_lock.html">absl::MutexLock</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/df8/mutex_8h_source.html#l00527">mutex.h:527</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac774db049f2cfa70e13bbd8679687167" name="ac774db049f2cfa70e13bbd8679687167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac774db049f2cfa70e13bbd8679687167">&#9670;&#160;</a></span>Schedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::synchronization_internal::ThreadPool::Schedule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/db6/classabsl_1_1_any_invocable.html">absl::AnyInvocable</a>&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/dec/thread__pool_8h_source.html#l00060">60</a> of file <a class="el" href="../../d3/dec/thread__pool_8h_source.html">thread_pool.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                                               {</div>
+<div class="line"><span class="lineno">   61</span>    assert(func != <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">   62</span>    <a class="code hl_class" href="../../d4/d4f/classabsl_1_1_mutex_lock.html">absl::MutexLock</a> l(&amp;mu_);</div>
+<div class="line"><span class="lineno">   63</span>    queue_.push(std::move(func));</div>
+<div class="line"><span class="lineno">   64</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/synchronization/internal/<a class="el" href="../../d3/dec/thread__pool_8h_source.html">thread_pool.h</a></li>
 </ul>

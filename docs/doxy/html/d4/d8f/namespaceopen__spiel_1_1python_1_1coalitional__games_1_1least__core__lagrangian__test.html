@@ -108,8 +108,7 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af9680b57b462bf7c954ce6de7aa48270" id="r_af9680b57b462bf7c954ce6de7aa48270"><td class="memItemLeft" align="right" valign="top"><a id="af9680b57b462bf7c954ce6de7aa48270" name="af9680b57b462bf7c954ce6de7aa48270"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>SEED</b> = 817346817</td></tr>
+<tr class="memitem:af9680b57b462bf7c954ce6de7aa48270" id="r_af9680b57b462bf7c954ce6de7aa48270"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9680b57b462bf7c954ce6de7aa48270">SEED</a> = 817346817</td></tr>
 <tr class="separator:af9680b57b462bf7c954ce6de7aa48270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -129,6 +128,47 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>SEED</b> = 817346817</
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Get configuration for botched trades experiment.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html#l00028">28</a> of file <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html">least_core_lagrangian_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span><span class="keyword">def </span>get_alg_config():</div>
+<div class="line"><span class="lineno">   29</span>  <span class="stringliteral">&quot;&quot;&quot;Get configuration for botched trades experiment.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   30</span>  alg_config = configdict.ConfigDict()</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>  alg_config.init = configdict.ConfigDict()</div>
+<div class="line"><span class="lineno">   33</span>  alg_config.init.lr_primal = 1e-2</div>
+<div class="line"><span class="lineno">   34</span>  alg_config.init.lr_dual = 1e-2</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>  alg_config.solve = configdict.ConfigDict()</div>
+<div class="line"><span class="lineno">   37</span>  alg_config.solve.batch_size = 2**3</div>
+<div class="line"><span class="lineno">   38</span>  alg_config.solve.mu_init = 1000</div>
+<div class="line"><span class="lineno">   39</span>  alg_config.solve.gamma = 1e-8</div>
+<div class="line"><span class="lineno">   40</span>  alg_config.solve.n_iter = 110_000</div>
+<div class="line"><span class="lineno">   41</span>  alg_config.solve.seed = 0</div>
+<div class="line"><span class="lineno">   42</span>  alg_config.solve.save_every = 10_000</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>  alg_config.eval = configdict.ConfigDict()</div>
+<div class="line"><span class="lineno">   45</span>  alg_config.eval.evaluation_iterations = 2**3</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  <span class="keywordflow">return</span> alg_config</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="af9680b57b462bf7c954ce6de7aa48270" name="af9680b57b462bf7c954ce6de7aa48270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9680b57b462bf7c954ce6de7aa48270">&#9670;&#160;</a></span>SEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_spiel.python.coalitional_games.least_core_lagrangian_test.SEED = 817346817</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html#l00025">25</a> of file <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html">least_core_lagrangian_test.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

@@ -117,12 +117,71 @@ Collaboration diagram for open_spiel.python.algorithms.cfr_test.ModuleLevelFunct
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9993de690d23200dd6534d3c1ab98b75" id="r_a9993de690d23200dd6534d3c1ab98b75"><td class="memItemLeft" align="right" valign="top"><a id="a9993de690d23200dd6534d3c1ab98b75" name="a9993de690d23200dd6534d3c1ab98b75"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test__update_current_policy</b> (self)</td></tr>
+<tr class="memitem:a9993de690d23200dd6534d3c1ab98b75" id="r_a9993de690d23200dd6534d3c1ab98b75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9993de690d23200dd6534d3c1ab98b75">test__update_current_policy</a> (self)</td></tr>
 <tr class="separator:a9993de690d23200dd6534d3c1ab98b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html#l00036">36</a> of file <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html">cfr_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9993de690d23200dd6534d3c1ab98b75" name="a9993de690d23200dd6534d3c1ab98b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9993de690d23200dd6534d3c1ab98b75">&#9670;&#160;</a></span>test__update_current_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.cfr_test.ModuleLevelFunctionTest.test__update_current_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html#l00038">38</a> of file <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html">cfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>  <span class="keyword">def </span>test__update_current_policy(self):</div>
+<div class="line"><span class="lineno">   39</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   40</span>    tabular_policy = policy.TabularPolicy(game)</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    cumulative_regrets = np.arange(0, 12 * 2).reshape((12, 2))</div>
+<div class="line"><span class="lineno">   43</span>    expected_policy = cumulative_regrets / np.sum(</div>
+<div class="line"><span class="lineno">   44</span>        cumulative_regrets, axis=-1, keepdims=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   45</span>    nodes_indices = {</div>
+<div class="line"><span class="lineno">   46</span>        <span class="stringliteral">u&quot;0&quot;</span>: 0,</div>
+<div class="line"><span class="lineno">   47</span>        <span class="stringliteral">u&quot;0pb&quot;</span>: 1,</div>
+<div class="line"><span class="lineno">   48</span>        <span class="stringliteral">u&quot;1&quot;</span>: 2,</div>
+<div class="line"><span class="lineno">   49</span>        <span class="stringliteral">u&quot;1pb&quot;</span>: 3,</div>
+<div class="line"><span class="lineno">   50</span>        <span class="stringliteral">u&quot;2&quot;</span>: 4,</div>
+<div class="line"><span class="lineno">   51</span>        <span class="stringliteral">u&quot;2pb&quot;</span>: 5,</div>
+<div class="line"><span class="lineno">   52</span>        <span class="stringliteral">u&quot;1p&quot;</span>: 6,</div>
+<div class="line"><span class="lineno">   53</span>        <span class="stringliteral">u&quot;1b&quot;</span>: 7,</div>
+<div class="line"><span class="lineno">   54</span>        <span class="stringliteral">u&quot;2p&quot;</span>: 8,</div>
+<div class="line"><span class="lineno">   55</span>        <span class="stringliteral">u&quot;2b&quot;</span>: 9,</div>
+<div class="line"><span class="lineno">   56</span>        <span class="stringliteral">u&quot;0p&quot;</span>: 10,</div>
+<div class="line"><span class="lineno">   57</span>        <span class="stringliteral">u&quot;0b&quot;</span>: 11,</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="line"><span class="lineno">   59</span>    <span class="comment"># pylint: disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">   60</span>    info_state_nodes = {</div>
+<div class="line"><span class="lineno">   61</span>        key: cfr._InfoStateNode(</div>
+<div class="line"><span class="lineno">   62</span>            legal_actions=[0, 1],</div>
+<div class="line"><span class="lineno">   63</span>            index_in_tabular_policy=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   64</span>            cumulative_regret=dict(enumerate(cumulative_regrets[index])),</div>
+<div class="line"><span class="lineno">   65</span>            cumulative_policy=<span class="keywordtype">None</span>) <span class="keywordflow">for</span> key, index <span class="keywordflow">in</span> nodes_indices.items()</div>
+<div class="line"><span class="lineno">   66</span>    }</div>
+<div class="line"><span class="lineno">   67</span>    <span class="comment"># pylint: enable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    cfr._update_current_policy(tabular_policy, info_state_nodes)</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    np.testing.assert_array_equal(expected_policy,</div>
+<div class="line"><span class="lineno">   72</span>                                  tabular_policy.action_probability_array)</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>cfr_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html">cfr_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

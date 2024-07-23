@@ -105,18 +105,142 @@ Collaboration diagram for absl::ThreadSafeCounter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d404dd0f6b453a1157eeabe7aed3a00" id="r_a5d404dd0f6b453a1157eeabe7aed3a00"><td class="memItemLeft" align="right" valign="top"><a id="a5d404dd0f6b453a1157eeabe7aed3a00" name="a5d404dd0f6b453a1157eeabe7aed3a00"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Increment</b> ()</td></tr>
+<tr class="memitem:a5d404dd0f6b453a1157eeabe7aed3a00" id="r_a5d404dd0f6b453a1157eeabe7aed3a00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d404dd0f6b453a1157eeabe7aed3a00">Increment</a> ()</td></tr>
 <tr class="separator:a5d404dd0f6b453a1157eeabe7aed3a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a9509336b199bbadf844a0070e1bc12" id="r_a6a9509336b199bbadf844a0070e1bc12"><td class="memItemLeft" align="right" valign="top"><a id="a6a9509336b199bbadf844a0070e1bc12" name="a6a9509336b199bbadf844a0070e1bc12"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Get</b> () const</td></tr>
+<tr class="memitem:a6a9509336b199bbadf844a0070e1bc12" id="r_a6a9509336b199bbadf844a0070e1bc12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a9509336b199bbadf844a0070e1bc12">Get</a> () const</td></tr>
 <tr class="separator:a6a9509336b199bbadf844a0070e1bc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adafd0c44bedeb19c42929782761f7621" id="r_adafd0c44bedeb19c42929782761f7621"><td class="memItemLeft" align="right" valign="top"><a id="adafd0c44bedeb19c42929782761f7621" name="adafd0c44bedeb19c42929782761f7621"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>WaitUntilGreaterOrEqual</b> (int n)</td></tr>
+<tr class="memitem:adafd0c44bedeb19c42929782761f7621" id="r_adafd0c44bedeb19c42929782761f7621"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adafd0c44bedeb19c42929782761f7621">WaitUntilGreaterOrEqual</a> (int n)</td></tr>
 <tr class="separator:adafd0c44bedeb19c42929782761f7621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d4/d5a/notification__test_8cc_source.html#l00027">27</a> of file <a class="el" href="../../d4/d5a/notification__test_8cc_source.html">notification_test.cc</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4508b77b5c0d2a45740ad8eef472bf3a" name="a4508b77b5c0d2a45740ad8eef472bf3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4508b77b5c0d2a45740ad8eef472bf3a">&#9670;&#160;</a></span>ThreadSafeCounter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::ThreadSafeCounter::ThreadSafeCounter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d5a/notification__test_8cc_source.html#l00029">29</a> of file <a class="el" href="../../d4/d5a/notification__test_8cc_source.html">notification_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>: count_(0) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6a9509336b199bbadf844a0070e1bc12" name="a6a9509336b199bbadf844a0070e1bc12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9509336b199bbadf844a0070e1bc12">&#9670;&#160;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int absl::ThreadSafeCounter::Get </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d5a/notification__test_8cc_source.html#l00036">36</a> of file <a class="el" href="../../d4/d5a/notification__test_8cc_source.html">notification_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                  {</div>
+<div class="line"><span class="lineno">   37</span>    MutexLock lock(&amp;mutex_);</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> count_;</div>
+<div class="line"><span class="lineno">   39</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5d404dd0f6b453a1157eeabe7aed3a00" name="a5d404dd0f6b453a1157eeabe7aed3a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d404dd0f6b453a1157eeabe7aed3a00">&#9670;&#160;</a></span>Increment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::ThreadSafeCounter::Increment </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d5a/notification__test_8cc_source.html#l00031">31</a> of file <a class="el" href="../../d4/d5a/notification__test_8cc_source.html">notification_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                   {</div>
+<div class="line"><span class="lineno">   32</span>    MutexLock lock(&amp;mutex_);</div>
+<div class="line"><span class="lineno">   33</span>    ++count_;</div>
+<div class="line"><span class="lineno">   34</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adafd0c44bedeb19c42929782761f7621" name="adafd0c44bedeb19c42929782761f7621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adafd0c44bedeb19c42929782761f7621">&#9670;&#160;</a></span>WaitUntilGreaterOrEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::ThreadSafeCounter::WaitUntilGreaterOrEqual </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>n</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d5a/notification__test_8cc_source.html#l00041">41</a> of file <a class="el" href="../../d4/d5a/notification__test_8cc_source.html">notification_test.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                                      {</div>
+<div class="line"><span class="lineno">   42</span>    MutexLock lock(&amp;mutex_);</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keyword">auto</span> cond = [<span class="keyword">this</span>, n]() { <span class="keywordflow">return</span> count_ &gt;= n; };</div>
+<div class="line"><span class="lineno">   44</span>    mutex_.Await(Condition(&amp;cond));</div>
+<div class="line"><span class="lineno">   45</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/synchronization/<b>notification_test.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/synchronization/<a class="el" href="../../d4/d5a/notification__test_8cc_source.html">notification_test.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -105,10 +105,98 @@ Collaboration diagram for absl::base_internal::ErrnoSaver:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adabbc17845f44a9e12fb5cf3d0880b07" id="r_adabbc17845f44a9e12fb5cf3d0880b07"><td class="memItemLeft" align="right" valign="top"><a id="adabbc17845f44a9e12fb5cf3d0880b07" name="adabbc17845f44a9e12fb5cf3d0880b07"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> () const</td></tr>
+<tr class="memitem:adabbc17845f44a9e12fb5cf3d0880b07" id="r_adabbc17845f44a9e12fb5cf3d0880b07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adabbc17845f44a9e12fb5cf3d0880b07">operator()</a> () const</td></tr>
 <tr class="separator:adabbc17845f44a9e12fb5cf3d0880b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/dc8/errno__saver_8h_source.html#l00029">29</a> of file <a class="el" href="../../d6/dc8/errno__saver_8h_source.html">errno_saver.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5236d612d3df58642d9354ab41122eb1" name="a5236d612d3df58642d9354ab41122eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5236d612d3df58642d9354ab41122eb1">&#9670;&#160;</a></span>ErrnoSaver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::base_internal::ErrnoSaver::ErrnoSaver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dc8/errno__saver_8h_source.html#l00031">31</a> of file <a class="el" href="../../d6/dc8/errno__saver_8h_source.html">errno_saver.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>: saved_errno_(errno) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3de951bc7fc177ae79e02e57f416537" name="ac3de951bc7fc177ae79e02e57f416537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3de951bc7fc177ae79e02e57f416537">&#9670;&#160;</a></span>~ErrnoSaver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::base_internal::ErrnoSaver::~ErrnoSaver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dc8/errno__saver_8h_source.html#l00032">32</a> of file <a class="el" href="../../d6/dc8/errno__saver_8h_source.html">errno_saver.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>{ errno = saved_errno_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="adabbc17845f44a9e12fb5cf3d0880b07" name="adabbc17845f44a9e12fb5cf3d0880b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabbc17845f44a9e12fb5cf3d0880b07">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int absl::base_internal::ErrnoSaver::operator() </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dc8/errno__saver_8h_source.html#l00033">33</a> of file <a class="el" href="../../d6/dc8/errno__saver_8h_source.html">errno_saver.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{ <span class="keywordflow">return</span> saved_errno_; }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../d6/dc8/errno__saver_8h_source.html">errno_saver.h</a></li>
 </ul>

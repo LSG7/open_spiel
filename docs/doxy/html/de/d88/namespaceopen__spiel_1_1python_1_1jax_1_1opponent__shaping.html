@@ -180,7 +180,77 @@ Returns:
     An update function that takes the current train state together with a
     transition batch and returns the new train state and a dictionary of
     metrics.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00113">113</a> of file <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html">opponent_shaping.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>) -&gt; UpdateFn:</div>
+<div class="line"><span class="lineno">  120</span>  <span class="stringliteral">&quot;&quot;&quot;Returns the update function for the critic parameters.</span></div>
+<div class="line"><span class="lineno">  121</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  122</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  123</span><span class="stringliteral">      agent_id: The id of the agent that will be updated.</span></div>
+<div class="line"><span class="lineno">  124</span><span class="stringliteral">      critic_network: A transformed haiku function.</span></div>
+<div class="line"><span class="lineno">  125</span><span class="stringliteral">      optimizer: Optimizer update function.</span></div>
+<div class="line"><span class="lineno">  126</span><span class="stringliteral">      num_minibatches: the number of minibatches.</span></div>
+<div class="line"><span class="lineno">  127</span><span class="stringliteral">      gamma: the discount factor.</span></div>
+<div class="line"><span class="lineno">  128</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  129</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  130</span><span class="stringliteral">      An update function that takes the current train state together with a</span></div>
+<div class="line"><span class="lineno">  131</span><span class="stringliteral">      transition batch and returns the new train state and a dictionary of</span></div>
+<div class="line"><span class="lineno">  132</span><span class="stringliteral">      metrics.</span></div>
+<div class="line"><span class="lineno">  133</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>  <span class="keyword">def </span>loss_fn(params, batch: TransitionBatch):</div>
+<div class="line"><span class="lineno">  136</span>    info_states, rewards = batch.info_state[agent_id], batch.reward[agent_id]</div>
+<div class="line"><span class="lineno">  137</span>    discounts = jnp.ones_like(rewards) * gamma</div>
+<div class="line"><span class="lineno">  138</span>    values = critic_network.apply(params, info_states).squeeze()</div>
+<div class="line"><span class="lineno">  139</span>    v_t = values[:, :-1].reshape(-1)</div>
+<div class="line"><span class="lineno">  140</span>    v_tp1 = values[:, 1:].reshape(-1)</div>
+<div class="line"><span class="lineno">  141</span>    r_t = rewards[:, :-1].reshape(-1)</div>
+<div class="line"><span class="lineno">  142</span>    d_t = discounts[:, 1:].reshape(-1)</div>
+<div class="line"><span class="lineno">  143</span>    td_error = jax.lax.stop_gradient(r_t + d_t * v_tp1) - v_t</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">return</span> jnp.mean(td_error**2)</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>  <span class="keyword">def </span>update(train_state: TrainState, batch: TransitionBatch):</div>
+<div class="line"><span class="lineno">  147</span>    <span class="stringliteral">&quot;&quot;&quot;The critic update function.</span></div>
+<div class="line"><span class="lineno">  148</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  149</span><span class="stringliteral">    Updates the critic parameters of the train state with the given</span></div>
+<div class="line"><span class="lineno">  150</span><span class="stringliteral">    transition batch.</span></div>
+<div class="line"><span class="lineno">  151</span><span class="stringliteral">    </span></div>
+<div class="line"><span class="lineno">  152</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  153</span><span class="stringliteral">        train_state: The current train state.</span></div>
+<div class="line"><span class="lineno">  154</span><span class="stringliteral">        batch: A transition batch.</span></div>
+<div class="line"><span class="lineno">  155</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  156</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  157</span><span class="stringliteral">        The updated train state with the new critic params and a dictionary</span></div>
+<div class="line"><span class="lineno">  158</span><span class="stringliteral">        with the critic loss</span></div>
+<div class="line"><span class="lineno">  159</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  160</span>    losses = []</div>
+<div class="line"><span class="lineno">  161</span>    critic_params = train_state.critic_params[agent_id]</div>
+<div class="line"><span class="lineno">  162</span>    opt_state = train_state.critic_opt_states[agent_id]</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">for</span> mini_batch <span class="keywordflow">in</span> get_minibatches(batch, num_minibatches):</div>
+<div class="line"><span class="lineno">  164</span>      loss, grads = jax.value_and_grad(loss_fn)(critic_params, mini_batch)</div>
+<div class="line"><span class="lineno">  165</span>      updates, opt_state = optimizer(grads, opt_state)</div>
+<div class="line"><span class="lineno">  166</span>      critic_params = optax.apply_updates(critic_params, updates)</div>
+<div class="line"><span class="lineno">  167</span>      losses.append(loss)</div>
+<div class="line"><span class="lineno">  168</span>    train_state = deepcopy(train_state)</div>
+<div class="line"><span class="lineno">  169</span>    state = TrainState(</div>
+<div class="line"><span class="lineno">  170</span>        policy_params=train_state.policy_params,</div>
+<div class="line"><span class="lineno">  171</span>        policy_opt_states=train_state.policy_opt_states,</div>
+<div class="line"><span class="lineno">  172</span>        critic_params={**train_state.critic_params, agent_id: critic_params},</div>
+<div class="line"><span class="lineno">  173</span>        critic_opt_states={</div>
+<div class="line"><span class="lineno">  174</span>            **train_state.critic_opt_states,</div>
+<div class="line"><span class="lineno">  175</span>            agent_id: opt_state,</div>
+<div class="line"><span class="lineno">  176</span>        },</div>
+<div class="line"><span class="lineno">  177</span>    )</div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">return</span> state, {<span class="stringliteral">&#39;loss&#39;</span>: jnp.mean(jnp.array(losses))}</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>  <span class="keywordflow">return</span> update</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00089">open_spiel.python.jax.opponent_shaping.get_minibatches()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00630">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.__init__()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_a615294831f399d2d2ba5a5033dfbbd09_cgraph.png" border="0" usemap="#ade/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_a615294831f399d2d2ba5a5033dfbbd09_cgraph" alt=""/></div>
@@ -256,7 +326,174 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Get the DiCE update function.</pre> <div class="dynheader">
+<pre class="fragment">Get the DiCE update function.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00183">183</a> of file <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html">opponent_shaping.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>):</div>
+<div class="line"><span class="lineno">  194</span>  <span class="stringliteral">&quot;&quot;&quot;Get the DiCE update function.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  195</span>  <span class="keyword">def </span>magic_box(x):</div>
+<div class="line"><span class="lineno">  196</span>    <span class="keywordflow">return</span> jnp.exp(x - jax.lax.stop_gradient(x))</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>  <span class="preprocessor">@jax.jit</span></div>
+<div class="line"><span class="lineno">  199</span>  <span class="preprocessor">@partial(jax.vmap, in_axes=(None, 0, 0)</span>)</div>
+<div class="line"><span class="lineno">  200</span>  <span class="keyword">def </span>get_action(params, s, rng_key):</div>
+<div class="line"><span class="lineno">  201</span>    pi = policy_network.apply(params, s)</div>
+<div class="line"><span class="lineno">  202</span>    action = pi.sample(seed=rng_key)</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">return</span> action</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>  <span class="keyword">def </span>rollout(params, other_params):</div>
+<div class="line"><span class="lineno">  206</span>    states, rewards, actions = [], [], []</div>
+<div class="line"><span class="lineno">  207</span>    step = env.reset()</div>
+<div class="line"><span class="lineno">  208</span>    batch_size = (</div>
+<div class="line"><span class="lineno">  209</span>        step.observations[<span class="stringliteral">&#39;batch_size&#39;</span>]</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> <span class="stringliteral">&#39;batch_size&#39;</span> <span class="keywordflow">in</span> step.observations</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">else</span> 1</div>
+<div class="line"><span class="lineno">  212</span>    )</div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">while</span> <span class="keywordflow">not</span> step.last():</div>
+<div class="line"><span class="lineno">  214</span>      obs = step.observations</div>
+<div class="line"><span class="lineno">  215</span>      s_1, s_2 = jnp.array(obs[<span class="stringliteral">&#39;info_state&#39;</span>][0]), jnp.array(</div>
+<div class="line"><span class="lineno">  216</span>          obs[<span class="stringliteral">&#39;info_state&#39;</span>][1]</div>
+<div class="line"><span class="lineno">  217</span>      )</div>
+<div class="line"><span class="lineno">  218</span>      <span class="keywordflow">if</span> batch_size == 1:</div>
+<div class="line"><span class="lineno">  219</span>        s_1, s_2 = s_1[<span class="keywordtype">None</span>, :], s_2[<span class="keywordtype">None</span>, :]</div>
+<div class="line"><span class="lineno">  220</span>      a_1 = get_action(params, s_1, jax.random.split(next(rng), num=batch_size))</div>
+<div class="line"><span class="lineno">  221</span>      a_2 = get_action(</div>
+<div class="line"><span class="lineno">  222</span>          other_params, s_2, jax.random.split(next(rng), num=batch_size)</div>
+<div class="line"><span class="lineno">  223</span>      )</div>
+<div class="line"><span class="lineno">  224</span>      a = jnp.stack([a_1, a_2], axis=1)</div>
+<div class="line"><span class="lineno">  225</span>      step = env.step(a.squeeze())</div>
+<div class="line"><span class="lineno">  226</span>      r_1, r_2 = jnp.array(step.rewards[0]), jnp.array(step.rewards[1])</div>
+<div class="line"><span class="lineno">  227</span>      <span class="keywordflow">if</span> batch_size == 1:</div>
+<div class="line"><span class="lineno">  228</span>        r_1, r_2 = r_1[<span class="keywordtype">None</span>], r_2[<span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">  229</span>      actions.append(a.T)</div>
+<div class="line"><span class="lineno">  230</span>      states.append(jnp.stack([s_1, s_2], axis=0))</div>
+<div class="line"><span class="lineno">  231</span>      rewards.append(jnp.stack([r_1, r_2], axis=0))</div>
+<div class="line"><span class="lineno">  232</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><span class="lineno">  233</span>        <span class="stringliteral">&#39;states&#39;</span>: jnp.stack(states, axis=2),</div>
+<div class="line"><span class="lineno">  234</span>        <span class="stringliteral">&#39;rewards&#39;</span>: jnp.stack(rewards, axis=2),</div>
+<div class="line"><span class="lineno">  235</span>        <span class="stringliteral">&#39;actions&#39;</span>: jnp.stack(actions, axis=2),</div>
+<div class="line"><span class="lineno">  236</span>    }</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>  <span class="keyword">def </span>dice_correction(train_state: TrainState):</div>
+<div class="line"><span class="lineno">  239</span>    <span class="stringliteral">&quot;&quot;&quot;Computes the dice update for the given train state.</span></div>
+<div class="line"><span class="lineno">  240</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  241</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  242</span><span class="stringliteral">        train_state: The current train state.</span></div>
+<div class="line"><span class="lineno">  243</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  244</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  245</span><span class="stringliteral">        The updated train state with the new policy params and metrics dict.</span></div>
+<div class="line"><span class="lineno">  246</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>    <span class="preprocessor">@jax.jit</span></div>
+<div class="line"><span class="lineno">  249</span>    <span class="keyword">def </span>dice_objective(params, other_params, states, actions, rewards, values):</div>
+<div class="line"><span class="lineno">  250</span>      self_logprobs = vmap(</div>
+<div class="line"><span class="lineno">  251</span>          vmap(<span class="keyword">lambda</span> s, a: policy_network.apply(params, s).log_prob(a))</div>
+<div class="line"><span class="lineno">  252</span>      )(states[0], actions[0])</div>
+<div class="line"><span class="lineno">  253</span>      other_logprobs = vmap(</div>
+<div class="line"><span class="lineno">  254</span>          vmap(<span class="keyword">lambda</span> s, a: policy_network.apply(other_params, s).log_prob(a))</div>
+<div class="line"><span class="lineno">  255</span>      )(states[1], actions[1])</div>
+<div class="line"><span class="lineno">  256</span>      <span class="comment"># apply discount:</span></div>
+<div class="line"><span class="lineno">  257</span>      cum_discount = jnp.cumprod(gamma * jnp.ones_like(rewards), axis=1) / gamma</div>
+<div class="line"><span class="lineno">  258</span>      discounted_rewards = rewards * cum_discount</div>
+<div class="line"><span class="lineno">  259</span>      discounted_values = values.squeeze() * cum_discount</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>      <span class="comment"># stochastics nodes involved in rewards dependencies:</span></div>
+<div class="line"><span class="lineno">  262</span>      dependencies = jnp.cumsum(self_logprobs + other_logprobs, axis=1)</div>
+<div class="line"><span class="lineno">  263</span>      <span class="comment"># logprob of each stochastic nodes:</span></div>
+<div class="line"><span class="lineno">  264</span>      stochastic_nodes = self_logprobs + other_logprobs</div>
+<div class="line"><span class="lineno">  265</span>      <span class="comment"># dice objective:</span></div>
+<div class="line"><span class="lineno">  266</span>      dice_objective = jnp.mean(</div>
+<div class="line"><span class="lineno">  267</span>          jnp.sum(magic_box(dependencies) * discounted_rewards, axis=1)</div>
+<div class="line"><span class="lineno">  268</span>      )</div>
+<div class="line"><span class="lineno">  269</span>      baseline_term = jnp.mean(</div>
+<div class="line"><span class="lineno">  270</span>          jnp.sum((1 - magic_box(stochastic_nodes)) * discounted_values, axis=1)</div>
+<div class="line"><span class="lineno">  271</span>      )</div>
+<div class="line"><span class="lineno">  272</span>      dice_objective = dice_objective + baseline_term</div>
+<div class="line"><span class="lineno">  273</span>      <span class="keywordflow">return</span> -dice_objective  <span class="comment"># want to minimize -objective</span></div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>    <span class="keyword">def </span>outer_update(params, opp_params, agent_id, opp_id):</div>
+<div class="line"><span class="lineno">  276</span>      other_theta = opp_params</div>
+<div class="line"><span class="lineno">  277</span>      <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(n_lookaheads):</div>
+<div class="line"><span class="lineno">  278</span>        trajectories = rollout(other_theta, params)</div>
+<div class="line"><span class="lineno">  279</span>        other_grad = jax.grad(dice_objective)(</div>
+<div class="line"><span class="lineno">  280</span>            other_theta,</div>
+<div class="line"><span class="lineno">  281</span>            other_params=params,</div>
+<div class="line"><span class="lineno">  282</span>            states=trajectories[<span class="stringliteral">&#39;states&#39;</span>],</div>
+<div class="line"><span class="lineno">  283</span>            actions=trajectories[<span class="stringliteral">&#39;actions&#39;</span>],</div>
+<div class="line"><span class="lineno">  284</span>            rewards=trajectories[<span class="stringliteral">&#39;rewards&#39;</span>][0],</div>
+<div class="line"><span class="lineno">  285</span>            values=critic_network.apply(</div>
+<div class="line"><span class="lineno">  286</span>                train_state.critic_params[opp_id], trajectories[<span class="stringliteral">&#39;states&#39;</span>][0]</div>
+<div class="line"><span class="lineno">  287</span>            ),</div>
+<div class="line"><span class="lineno">  288</span>        )</div>
+<div class="line"><span class="lineno">  289</span>        <span class="comment"># Update the other player&#39;s policy:</span></div>
+<div class="line"><span class="lineno">  290</span>        other_theta = jax.tree_util.tree_map(</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keyword">lambda</span> param, grad: param - opp_pi_lr * grad,</div>
+<div class="line"><span class="lineno">  292</span>            other_theta,</div>
+<div class="line"><span class="lineno">  293</span>            other_grad,</div>
+<div class="line"><span class="lineno">  294</span>        )</div>
+<div class="line"><span class="lineno">  295</span> </div>
+<div class="line"><span class="lineno">  296</span>      trajectories = rollout(params, other_theta)</div>
+<div class="line"><span class="lineno">  297</span>      values = critic_network.apply(</div>
+<div class="line"><span class="lineno">  298</span>          train_state.critic_params[agent_id], trajectories[<span class="stringliteral">&#39;states&#39;</span>][0]</div>
+<div class="line"><span class="lineno">  299</span>      )</div>
+<div class="line"><span class="lineno">  300</span>      loss = dice_objective(</div>
+<div class="line"><span class="lineno">  301</span>          params=params,</div>
+<div class="line"><span class="lineno">  302</span>          other_params=other_theta,</div>
+<div class="line"><span class="lineno">  303</span>          states=trajectories[<span class="stringliteral">&#39;states&#39;</span>],</div>
+<div class="line"><span class="lineno">  304</span>          actions=trajectories[<span class="stringliteral">&#39;actions&#39;</span>],</div>
+<div class="line"><span class="lineno">  305</span>          rewards=trajectories[<span class="stringliteral">&#39;rewards&#39;</span>][0],</div>
+<div class="line"><span class="lineno">  306</span>          values=values,</div>
+<div class="line"><span class="lineno">  307</span>      )</div>
+<div class="line"><span class="lineno">  308</span>      <span class="keywordflow">return</span> loss, {<span class="stringliteral">&#39;loss&#39;</span>: loss}</div>
+<div class="line"><span class="lineno">  309</span> </div>
+<div class="line"><span class="lineno">  310</span>    opp = 1 - agent_id</div>
+<div class="line"><span class="lineno">  311</span>    grads, metrics = grad(outer_update, has_aux=<span class="keyword">True</span>)(</div>
+<div class="line"><span class="lineno">  312</span>        train_state.policy_params[agent_id],</div>
+<div class="line"><span class="lineno">  313</span>        opp_params=train_state.policy_params[opp],</div>
+<div class="line"><span class="lineno">  314</span>        agent_id=agent_id,</div>
+<div class="line"><span class="lineno">  315</span>        opp_id=opp,</div>
+<div class="line"><span class="lineno">  316</span>    )</div>
+<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">return</span> grads, metrics</div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>  <span class="keyword">def </span>update(</div>
+<div class="line"><span class="lineno">  320</span>      train_state: TrainState, batch: TransitionBatch</div>
+<div class="line"><span class="lineno">  321</span>  ) -&gt; typing.Tuple[TrainState, typing.Dict]:</div>
+<div class="line"><span class="lineno">  322</span>    <span class="stringliteral">&quot;&quot;&quot;Updates the policy parameters in train_state.</span></div>
+<div class="line"><span class="lineno">  323</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  324</span><span class="stringliteral">    If lola_weight &gt; 0, the correction term according to Foerster et al. will be</span></div>
+<div class="line"><span class="lineno">  325</span><span class="stringliteral">    applied.</span></div>
+<div class="line"><span class="lineno">  326</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  327</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  328</span><span class="stringliteral">        train_state: the agent&#39;s train state.</span></div>
+<div class="line"><span class="lineno">  329</span><span class="stringliteral">        batch: a transition batch</span></div>
+<div class="line"><span class="lineno">  330</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  331</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  332</span><span class="stringliteral">        A tuple (new_train_state, metrics)</span></div>
+<div class="line"><span class="lineno">  333</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  334</span>    del batch</div>
+<div class="line"><span class="lineno">  335</span>    grads, metrics = dice_correction(train_state)</div>
+<div class="line"><span class="lineno">  336</span>    updates, opt_state = optimizer(</div>
+<div class="line"><span class="lineno">  337</span>        grads, train_state.policy_opt_states[agent_id]</div>
+<div class="line"><span class="lineno">  338</span>    )</div>
+<div class="line"><span class="lineno">  339</span>    policy_params = optax.apply_updates(</div>
+<div class="line"><span class="lineno">  340</span>        train_state.policy_params[agent_id], updates</div>
+<div class="line"><span class="lineno">  341</span>    )</div>
+<div class="line"><span class="lineno">  342</span>    train_state = TrainState(</div>
+<div class="line"><span class="lineno">  343</span>        policy_params={**train_state.policy_params, agent_id: policy_params},</div>
+<div class="line"><span class="lineno">  344</span>        policy_opt_states={</div>
+<div class="line"><span class="lineno">  345</span>            **train_state.policy_opt_states,</div>
+<div class="line"><span class="lineno">  346</span>            agent_id: opt_state,</div>
+<div class="line"><span class="lineno">  347</span>        },</div>
+<div class="line"><span class="lineno">  348</span>        critic_params=deepcopy(train_state.critic_params),</div>
+<div class="line"><span class="lineno">  349</span>        critic_opt_states=deepcopy(train_state.critic_opt_states),</div>
+<div class="line"><span class="lineno">  350</span>    )</div>
+<div class="line"><span class="lineno">  351</span>    <span class="keywordflow">return</span> train_state, metrics</div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>  <span class="keywordflow">return</span> update</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00630">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.__init__()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_aa33ea5b99e70cdc97bb5ae2634fcb53e_icgraph.png" border="0" usemap="#ade/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_aa33ea5b99e70cdc97bb5ae2634fcb53e_icgraph" alt=""/></div>
@@ -322,7 +559,200 @@ Args:
 
 Returns:
     A UpdateFn function that updates the policy parameters.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00356">356</a> of file <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html">opponent_shaping.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  363</span>) -&gt; UpdateFn:</div>
+<div class="line"><span class="lineno">  364</span>  <span class="stringliteral">&quot;&quot;&quot;Get the LOLA update function.</span></div>
+<div class="line"><span class="lineno">  365</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  366</span><span class="stringliteral">  Returns a function that updates the policy parameters using the LOLA</span></div>
+<div class="line"><span class="lineno">  367</span><span class="stringliteral">  correction formula.</span></div>
+<div class="line"><span class="lineno">  368</span><span class="stringliteral">  </span></div>
+<div class="line"><span class="lineno">  369</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  370</span><span class="stringliteral">      agent_id: the agent&#39;s id</span></div>
+<div class="line"><span class="lineno">  371</span><span class="stringliteral">      policy_network: A haiku transformed policy network.</span></div>
+<div class="line"><span class="lineno">  372</span><span class="stringliteral">      optimizer: An optax optimizer.</span></div>
+<div class="line"><span class="lineno">  373</span><span class="stringliteral">      pi_lr: Policy learning rate.</span></div>
+<div class="line"><span class="lineno">  374</span><span class="stringliteral">      gamma: Discount factor.</span></div>
+<div class="line"><span class="lineno">  375</span><span class="stringliteral">      lola_weight: The LOLA correction weight to scale the correction term.</span></div>
+<div class="line"><span class="lineno">  376</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  377</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  378</span><span class="stringliteral">      A UpdateFn function that updates the policy parameters.</span></div>
+<div class="line"><span class="lineno">  379</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>  <span class="keyword">def </span>flat_params(</div>
+<div class="line"><span class="lineno">  382</span>      params,</div>
+<div class="line"><span class="lineno">  383</span>  ) -&gt; typing.Tuple[</div>
+<div class="line"><span class="lineno">  384</span>      typing.Dict[str, jnp.ndarray], typing.Dict[typing.Any, typing.Callable]</div>
+<div class="line"><span class="lineno">  385</span>  ]:</div>
+<div class="line"><span class="lineno">  386</span>    <span class="stringliteral">&quot;&quot;&quot;Flattens the policy parameters.</span></div>
+<div class="line"><span class="lineno">  387</span><span class="stringliteral">    </span></div>
+<div class="line"><span class="lineno">  388</span><span class="stringliteral">    Flattens the parameters of the policy network into a single vector and</span></div>
+<div class="line"><span class="lineno">  389</span><span class="stringliteral">    returns the unravel function.</span></div>
+<div class="line"><span class="lineno">  390</span><span class="stringliteral">    </span></div>
+<div class="line"><span class="lineno">  391</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  392</span><span class="stringliteral">        params: The policy parameters.</span></div>
+<div class="line"><span class="lineno">  393</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  394</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  395</span><span class="stringliteral">        A tuple (flat_params, unravel_fn)</span></div>
+<div class="line"><span class="lineno">  396</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  397</span>    flat_param_dict = {</div>
+<div class="line"><span class="lineno">  398</span>        agent_id: jax.flatten_util.ravel_pytree(p)</div>
+<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">for</span> agent_id, p <span class="keywordflow">in</span> params.items()</div>
+<div class="line"><span class="lineno">  400</span>    }</div>
+<div class="line"><span class="lineno">  401</span> </div>
+<div class="line"><span class="lineno">  402</span>    params = dict((k, flat_param_dict[k][0]) <span class="keywordflow">for</span> k <span class="keywordflow">in</span> flat_param_dict)</div>
+<div class="line"><span class="lineno">  403</span>    unravel_fns = dict((k, flat_param_dict[k][1]) <span class="keywordflow">for</span> k <span class="keywordflow">in</span> flat_param_dict)</div>
+<div class="line"><span class="lineno">  404</span>    <span class="keywordflow">return</span> params, unravel_fns</div>
+<div class="line"><span class="lineno">  405</span> </div>
+<div class="line"><span class="lineno">  406</span>  <span class="keyword">def </span>lola_correction(</div>
+<div class="line"><span class="lineno">  407</span>      train_state: TrainState, batch: TransitionBatch</div>
+<div class="line"><span class="lineno">  408</span>  ) -&gt; hk.Params:</div>
+<div class="line"><span class="lineno">  409</span>    <span class="stringliteral">&quot;&quot;&quot;Computes the LOLA correction term.</span></div>
+<div class="line"><span class="lineno">  410</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  411</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  412</span><span class="stringliteral">        train_state: The agent&#39;s current train state.</span></div>
+<div class="line"><span class="lineno">  413</span><span class="stringliteral">        batch: A transition batch.</span></div>
+<div class="line"><span class="lineno">  414</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  415</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  416</span><span class="stringliteral">        The LOLA correction term.</span></div>
+<div class="line"><span class="lineno">  417</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  418</span>    a_t, o_t, r_t, values = (</div>
+<div class="line"><span class="lineno">  419</span>        batch.action,</div>
+<div class="line"><span class="lineno">  420</span>        batch.info_state,</div>
+<div class="line"><span class="lineno">  421</span>        batch.reward,</div>
+<div class="line"><span class="lineno">  422</span>        batch.values,</div>
+<div class="line"><span class="lineno">  423</span>    )</div>
+<div class="line"><span class="lineno">  424</span>    params, unravel_fns = flat_params(train_state.policy_params)</div>
+<div class="line"><span class="lineno">  425</span> </div>
+<div class="line"><span class="lineno">  426</span>    compute_returns = partial(rlax.lambda_returns, lambda_=0.0)</div>
+<div class="line"><span class="lineno">  427</span>    g_t = vmap(vmap(compute_returns))(</div>
+<div class="line"><span class="lineno">  428</span>        r_t=r_t, v_t=values, discount_t=jnp.full_like(r_t, gamma)</div>
+<div class="line"><span class="lineno">  429</span>    )</div>
+<div class="line"><span class="lineno">  430</span>    g_t = (g_t - g_t.mean()) / (g_t.std() + 1e-8)</div>
+<div class="line"><span class="lineno">  431</span> </div>
+<div class="line"><span class="lineno">  432</span>    <span class="keyword">def </span>log_pi(params, i, a_t, o_t):</div>
+<div class="line"><span class="lineno">  433</span>      <span class="keywordflow">return</span> policy_network.apply(unravel_fns[i](params), o_t).log_prob(a_t)</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>    opp_id = 1 - agent_id</div>
+<div class="line"><span class="lineno">  436</span> </div>
+<div class="line"><span class="lineno">  437</span>    <span class="keyword">def </span>cross_term(a_t, o_t, r_t):</div>
+<div class="line"><span class="lineno">  438</span>      <span class="stringliteral">&quot;&quot;&quot;Computes the second order correction term of the LOLA update.</span></div>
+<div class="line"><span class="lineno">  439</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  440</span><span class="stringliteral">      Args:</span></div>
+<div class="line"><span class="lineno">  441</span><span class="stringliteral">          a_t: actions of both players</span></div>
+<div class="line"><span class="lineno">  442</span><span class="stringliteral">          o_t: observations of both players</span></div>
+<div class="line"><span class="lineno">  443</span><span class="stringliteral">          r_t: rewards of both players</span></div>
+<div class="line"><span class="lineno">  444</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  445</span><span class="stringliteral">      Returns:</span></div>
+<div class="line"><span class="lineno">  446</span><span class="stringliteral">          The second order correction term.</span></div>
+<div class="line"><span class="lineno">  447</span><span class="stringliteral">      &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  448</span>      grad_log_pi = vmap(jax.value_and_grad(log_pi), in_axes=(<span class="keywordtype">None</span>, <span class="keywordtype">None</span>, 0, 0))</div>
+<div class="line"><span class="lineno">  449</span>      log_probs, grads = grad_log_pi(</div>
+<div class="line"><span class="lineno">  450</span>          params[agent_id], agent_id, a_t[agent_id], o_t[agent_id]</div>
+<div class="line"><span class="lineno">  451</span>      )</div>
+<div class="line"><span class="lineno">  452</span>      opp_logrpobs, opp_grads = grad_log_pi(</div>
+<div class="line"><span class="lineno">  453</span>          params[opp_id], opp_id, a_t[opp_id], o_t[opp_id]</div>
+<div class="line"><span class="lineno">  454</span>      )</div>
+<div class="line"><span class="lineno">  455</span>      grads = grads.cumsum(axis=0)</div>
+<div class="line"><span class="lineno">  456</span>      opp_grads = opp_grads.cumsum(axis=0)</div>
+<div class="line"><span class="lineno">  457</span>      log_probs = log_probs.cumsum(axis=0)</div>
+<div class="line"><span class="lineno">  458</span>      opp_logrpobs = opp_logrpobs.cumsum(axis=0)</div>
+<div class="line"><span class="lineno">  459</span>      cross_term = 0.0</div>
+<div class="line"><span class="lineno">  460</span>      <span class="keywordflow">for</span> t <span class="keywordflow">in</span> range(0, len(a_t[agent_id])):</div>
+<div class="line"><span class="lineno">  461</span>        discounted_reward = r_t[opp_id, t] * jnp.power(gamma, t)</div>
+<div class="line"><span class="lineno">  462</span>        cross_term += (</div>
+<div class="line"><span class="lineno">  463</span>            discounted_reward</div>
+<div class="line"><span class="lineno">  464</span>            * jnp.outer(grads[t], opp_grads[t])</div>
+<div class="line"><span class="lineno">  465</span>            * jnp.exp(log_probs[t] + opp_logrpobs[t])</div>
+<div class="line"><span class="lineno">  466</span>        )</div>
+<div class="line"><span class="lineno">  467</span>      <span class="keywordflow">return</span> cross_term  <span class="comment"># * jnp.exp(log_probs.sum() + opp_logrpobs.sum())</span></div>
+<div class="line"><span class="lineno">  468</span> </div>
+<div class="line"><span class="lineno">  469</span>    <span class="keyword">def </span>policy_gradient(a_t, o_t, g_t):</div>
+<div class="line"><span class="lineno">  470</span>      grad_log_pi = vmap(grad(log_pi), in_axes=(<span class="keywordtype">None</span>, <span class="keywordtype">None</span>, 0, 0))</div>
+<div class="line"><span class="lineno">  471</span>      opp_grads = grad_log_pi(params[opp_id], opp_id, a_t[opp_id], o_t[opp_id])</div>
+<div class="line"><span class="lineno">  472</span>      pg = g_t[agent_id] @ opp_grads</div>
+<div class="line"><span class="lineno">  473</span>      <span class="keywordflow">return</span> pg</div>
+<div class="line"><span class="lineno">  474</span> </div>
+<div class="line"><span class="lineno">  475</span>    cross = vmap(cross_term, in_axes=(1, 1, 1))(a_t, o_t, r_t).mean(axis=0)</div>
+<div class="line"><span class="lineno">  476</span>    pg = vmap(policy_gradient, in_axes=(1, 1, 1))(a_t, o_t, g_t).mean(axis=0)</div>
+<div class="line"><span class="lineno">  477</span>    correction = -pi_lr * (pg @ cross)</div>
+<div class="line"><span class="lineno">  478</span>    <span class="keywordflow">return</span> unravel_fns[agent_id](correction)</div>
+<div class="line"><span class="lineno">  479</span> </div>
+<div class="line"><span class="lineno">  480</span>  <span class="keyword">def </span>policy_loss(params, agent_id, batch):</div>
+<div class="line"><span class="lineno">  481</span>    <span class="stringliteral">&quot;&quot;&quot;Computes the policy gradient loss.</span></div>
+<div class="line"><span class="lineno">  482</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  483</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  484</span><span class="stringliteral">        params: The policy parameters.</span></div>
+<div class="line"><span class="lineno">  485</span><span class="stringliteral">        agent_id: The agent&#39;s id.</span></div>
+<div class="line"><span class="lineno">  486</span><span class="stringliteral">        batch: A transition batch.</span></div>
+<div class="line"><span class="lineno">  487</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  488</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  489</span><span class="stringliteral">        The policy gradient loss.</span></div>
+<div class="line"><span class="lineno">  490</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  491</span>    a_t, o_t, r_t, values = (</div>
+<div class="line"><span class="lineno">  492</span>        batch.action[agent_id],</div>
+<div class="line"><span class="lineno">  493</span>        batch.info_state[agent_id],</div>
+<div class="line"><span class="lineno">  494</span>        batch.reward[agent_id],</div>
+<div class="line"><span class="lineno">  495</span>        batch.values[agent_id],</div>
+<div class="line"><span class="lineno">  496</span>    )</div>
+<div class="line"><span class="lineno">  497</span>    logits_t = vmap(vmap(<span class="keyword">lambda</span> s: policy_network.apply(params, s).logits))(o_t)</div>
+<div class="line"><span class="lineno">  498</span>    discount = jnp.full(r_t.shape, gamma)</div>
+<div class="line"><span class="lineno">  499</span>    returns = vmap(rlax.lambda_returns)(</div>
+<div class="line"><span class="lineno">  500</span>        r_t=r_t,</div>
+<div class="line"><span class="lineno">  501</span>        v_t=values,</div>
+<div class="line"><span class="lineno">  502</span>        discount_t=discount,</div>
+<div class="line"><span class="lineno">  503</span>        lambda_=jnp.ones_like(discount),</div>
+<div class="line"><span class="lineno">  504</span>    )</div>
+<div class="line"><span class="lineno">  505</span>    adv_t = returns - values</div>
+<div class="line"><span class="lineno">  506</span>    loss = vmap(rlax.policy_gradient_loss)(</div>
+<div class="line"><span class="lineno">  507</span>        logits_t=logits_t, a_t=a_t, adv_t=adv_t, w_t=jnp.ones_like(adv_t)</div>
+<div class="line"><span class="lineno">  508</span>    )</div>
+<div class="line"><span class="lineno">  509</span>    <span class="keywordflow">return</span> loss.mean()</div>
+<div class="line"><span class="lineno">  510</span> </div>
+<div class="line"><span class="lineno">  511</span>  <span class="keyword">def </span>update(</div>
+<div class="line"><span class="lineno">  512</span>      train_state: TrainState, batch: TransitionBatch</div>
+<div class="line"><span class="lineno">  513</span>  ) -&gt; typing.Tuple[TrainState, typing.Dict]:</div>
+<div class="line"><span class="lineno">  514</span>    <span class="stringliteral">&quot;&quot;&quot;Updates the policy parameters in train_state.</span></div>
+<div class="line"><span class="lineno">  515</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  516</span><span class="stringliteral">    If lola_weight &gt; 0, the correction term by Foerster et al. will be applied.</span></div>
+<div class="line"><span class="lineno">  517</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  518</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">  519</span><span class="stringliteral">        train_state: the agent&#39;s train state.</span></div>
+<div class="line"><span class="lineno">  520</span><span class="stringliteral">        batch: a transition batch</span></div>
+<div class="line"><span class="lineno">  521</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  522</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">  523</span><span class="stringliteral">        A tuple (new_train_state, metrics)</span></div>
+<div class="line"><span class="lineno">  524</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  525</span>    loss, policy_grads = jax.value_and_grad(policy_loss)(</div>
+<div class="line"><span class="lineno">  526</span>        train_state.policy_params[agent_id], agent_id, batch</div>
+<div class="line"><span class="lineno">  527</span>    )</div>
+<div class="line"><span class="lineno">  528</span>    correction = lola_correction(train_state, batch)</div>
+<div class="line"><span class="lineno">  529</span>    policy_grads = jax.tree_util.tree_map(</div>
+<div class="line"><span class="lineno">  530</span>        <span class="keyword">lambda</span> grad, corr: grad - lola_weight * corr, policy_grads, correction</div>
+<div class="line"><span class="lineno">  531</span>    )</div>
+<div class="line"><span class="lineno">  532</span>    updates, opt_state = optimizer(</div>
+<div class="line"><span class="lineno">  533</span>        policy_grads, train_state.policy_opt_states[agent_id]</div>
+<div class="line"><span class="lineno">  534</span>    )</div>
+<div class="line"><span class="lineno">  535</span>    policy_params = optax.apply_updates(</div>
+<div class="line"><span class="lineno">  536</span>        train_state.policy_params[agent_id], updates</div>
+<div class="line"><span class="lineno">  537</span>    )</div>
+<div class="line"><span class="lineno">  538</span>    train_state = TrainState(</div>
+<div class="line"><span class="lineno">  539</span>        policy_params={**train_state.policy_params, agent_id: policy_params},</div>
+<div class="line"><span class="lineno">  540</span>        policy_opt_states={</div>
+<div class="line"><span class="lineno">  541</span>            **train_state.policy_opt_states,</div>
+<div class="line"><span class="lineno">  542</span>            agent_id: opt_state,</div>
+<div class="line"><span class="lineno">  543</span>        },</div>
+<div class="line"><span class="lineno">  544</span>        critic_params=deepcopy(train_state.critic_params),</div>
+<div class="line"><span class="lineno">  545</span>        critic_opt_states=deepcopy(train_state.critic_opt_states),</div>
+<div class="line"><span class="lineno">  546</span>    )</div>
+<div class="line"><span class="lineno">  547</span>    <span class="keywordflow">return</span> train_state, {<span class="stringliteral">&#39;loss&#39;</span>: loss}</div>
+<div class="line"><span class="lineno">  548</span> </div>
+<div class="line"><span class="lineno">  549</span>  <span class="keywordflow">return</span> update</div>
+<div class="line"><span class="lineno">  550</span> </div>
+<div class="line"><span class="lineno">  551</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00630">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.__init__()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_a66b1f8b60735ab94eb6f92b9e1548870_icgraph.png" border="0" usemap="#ade/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_a66b1f8b60735ab94eb6f92b9e1548870_icgraph" alt=""/></div>
@@ -362,7 +792,35 @@ Args:
 
 Yields:
     An iterator over minibatches of the given batch.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00087">87</a> of file <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html">opponent_shaping.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>) -&gt; typing.Iterator[TransitionBatch]:</div>
+<div class="line"><span class="lineno">   90</span>  <span class="stringliteral">&quot;&quot;&quot;Yields an iterator over minibatches of the given batch.</span></div>
+<div class="line"><span class="lineno">   91</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   92</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   93</span><span class="stringliteral">      batch: A transition batch.</span></div>
+<div class="line"><span class="lineno">   94</span><span class="stringliteral">      num_minibatches: The number of minibatches to return.</span></div>
+<div class="line"><span class="lineno">   95</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   96</span><span class="stringliteral">  Yields:</span></div>
+<div class="line"><span class="lineno">   97</span><span class="stringliteral">      An iterator over minibatches of the given batch.</span></div>
+<div class="line"><span class="lineno">   98</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>  <span class="keyword">def </span>get_minibatch(x, start, end):</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> x[:, start:end] <span class="keywordflow">if</span> len(x.shape) &gt; 2 <span class="keywordflow">else</span> x</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(num_minibatches):</div>
+<div class="line"><span class="lineno">  104</span>    start, end = i * (batch.reward.shape[1] // num_minibatches), (i + 1) * (</div>
+<div class="line"><span class="lineno">  105</span>        batch.reward.shape[1] // num_minibatches</div>
+<div class="line"><span class="lineno">  106</span>    )</div>
+<div class="line"><span class="lineno">  107</span>    mini_batch = jax.tree_util.tree_map(</div>
+<div class="line"><span class="lineno">  108</span>        partial(get_minibatch, start=start, end=end), batch</div>
+<div class="line"><span class="lineno">  109</span>    )</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">yield</span> mini_batch</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00119">open_spiel.python.jax.opponent_shaping.get_critic_update_fn()</a>, and <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00557">open_spiel.python.jax.opponent_shaping.get_opponent_update_fn()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_a74f72ad13bbb59b3e33f4844ef855de0_icgraph.png" border="0" usemap="#ade/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_a74f72ad13bbb59b3e33f4844ef855de0_icgraph" alt=""/></div>
@@ -408,7 +866,54 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Get the opponent update function.</pre> <div class="dynheader">
+<pre class="fragment">Get the opponent update function.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00552">552</a> of file <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html">opponent_shaping.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  557</span>) -&gt; UpdateFn:</div>
+<div class="line"><span class="lineno">  558</span>  <span class="stringliteral">&quot;&quot;&quot;Get the opponent update function.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  559</span>  <span class="keyword">def </span>loss_fn(params, batch: TransitionBatch):</div>
+<div class="line"><span class="lineno">  560</span>    <span class="keyword">def </span>loss(p, states, actions):</div>
+<div class="line"><span class="lineno">  561</span>      log_prob = policy_network.apply(p, states).log_prob(actions)</div>
+<div class="line"><span class="lineno">  562</span>      <span class="keywordflow">return</span> log_prob</div>
+<div class="line"><span class="lineno">  563</span> </div>
+<div class="line"><span class="lineno">  564</span>    log_probs = vmap(vmap(loss, in_axes=(<span class="keywordtype">None</span>, 0, 0)), in_axes=(<span class="keywordtype">None</span>, 0, 0))(</div>
+<div class="line"><span class="lineno">  565</span>        params, batch.info_state[agent_id], batch.action[agent_id]</div>
+<div class="line"><span class="lineno">  566</span>    )</div>
+<div class="line"><span class="lineno">  567</span>    <span class="keywordflow">return</span> -log_probs.sum(axis=-1).mean()</div>
+<div class="line"><span class="lineno">  568</span> </div>
+<div class="line"><span class="lineno">  569</span>  <span class="keyword">def </span>update(</div>
+<div class="line"><span class="lineno">  570</span>      train_state: TrainState, batch: TransitionBatch</div>
+<div class="line"><span class="lineno">  571</span>  ) -&gt; typing.Tuple[TrainState, typing.Dict]:</div>
+<div class="line"><span class="lineno">  572</span>    policy_params = train_state.policy_params[agent_id]</div>
+<div class="line"><span class="lineno">  573</span>    opt_state = train_state.policy_opt_states[agent_id]</div>
+<div class="line"><span class="lineno">  574</span>    loss = 0</div>
+<div class="line"><span class="lineno">  575</span>    <span class="keywordflow">for</span> mini_batch <span class="keywordflow">in</span> get_minibatches(batch, num_minibatches):</div>
+<div class="line"><span class="lineno">  576</span>      loss, policy_grads = jax.value_and_grad(loss_fn)(</div>
+<div class="line"><span class="lineno">  577</span>          policy_params, mini_batch</div>
+<div class="line"><span class="lineno">  578</span>      )</div>
+<div class="line"><span class="lineno">  579</span>      updates, opt_state = optimizer(policy_grads, opt_state)</div>
+<div class="line"><span class="lineno">  580</span>      policy_params = optax.apply_updates(</div>
+<div class="line"><span class="lineno">  581</span>          train_state.policy_params[agent_id], updates</div>
+<div class="line"><span class="lineno">  582</span>      )</div>
+<div class="line"><span class="lineno">  583</span> </div>
+<div class="line"><span class="lineno">  584</span>    train_state = TrainState(</div>
+<div class="line"><span class="lineno">  585</span>        policy_params={**train_state.policy_params, agent_id: policy_params},</div>
+<div class="line"><span class="lineno">  586</span>        policy_opt_states={</div>
+<div class="line"><span class="lineno">  587</span>            **train_state.policy_opt_states,</div>
+<div class="line"><span class="lineno">  588</span>            agent_id: opt_state,</div>
+<div class="line"><span class="lineno">  589</span>        },</div>
+<div class="line"><span class="lineno">  590</span>        critic_params=deepcopy(train_state.critic_params),</div>
+<div class="line"><span class="lineno">  591</span>        critic_opt_states=deepcopy(train_state.critic_opt_states),</div>
+<div class="line"><span class="lineno">  592</span>    )</div>
+<div class="line"><span class="lineno">  593</span>    <span class="keywordflow">return</span> train_state, {<span class="stringliteral">&#39;loss&#39;</span>: loss}</div>
+<div class="line"><span class="lineno">  594</span> </div>
+<div class="line"><span class="lineno">  595</span>  <span class="keywordflow">return</span> update</div>
+<div class="line"><span class="lineno">  596</span> </div>
+<div class="line"><span class="lineno">  597</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00089">open_spiel.python.jax.opponent_shaping.get_minibatches()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00630">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.__init__()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_ad5d23d236094e5b8ad448d1da2add836_cgraph.png" border="0" usemap="#ade/d88/namespaceopen__spiel_1_1python_1_1jax_1_1opponent__shaping_ad5d23d236094e5b8ad448d1da2add836_cgraph" alt=""/></div>
@@ -447,6 +952,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    2</span>    [TrainState, TransitionBatch], typing.Tuple[TrainState, typing.Dict]</div>
 <div class="line"><span class="lineno">    3</span>]</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00082">82</a> of file <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html">opponent_shaping.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

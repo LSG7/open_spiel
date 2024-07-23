@@ -118,21 +118,180 @@ Collaboration diagram for gamut_test.GamutGeneratorTest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a74a072038b92fd522ac43533b9a4a8e8" id="r_a74a072038b92fd522ac43533b9a4a8e8"><td class="memItemLeft" align="right" valign="top"><a id="a74a072038b92fd522ac43533b9a4a8e8" name="a74a072038b92fd522ac43533b9a4a8e8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_generate_game</b> (self, game_str)</td></tr>
+<tr class="memitem:a74a072038b92fd522ac43533b9a4a8e8" id="r_a74a072038b92fd522ac43533b9a4a8e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74a072038b92fd522ac43533b9a4a8e8">test_generate_game</a> (self, game_str)</td></tr>
 <tr class="separator:a74a072038b92fd522ac43533b9a4a8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbeb623277d0cb3cc8a117d5f8de3f84" id="r_afbeb623277d0cb3cc8a117d5f8de3f84"><td class="memItemLeft" align="right" valign="top"><a id="afbeb623277d0cb3cc8a117d5f8de3f84" name="afbeb623277d0cb3cc8a117d5f8de3f84"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_gamut_api</b> (self)</td></tr>
+<tr class="memitem:afbeb623277d0cb3cc8a117d5f8de3f84" id="r_afbeb623277d0cb3cc8a117d5f8de3f84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbeb623277d0cb3cc8a117d5f8de3f84">test_gamut_api</a> (self)</td></tr>
 <tr class="separator:afbeb623277d0cb3cc8a117d5f8de3f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a391b2ec8e3fdef9efb741eb320fc39b7" id="r_a391b2ec8e3fdef9efb741eb320fc39b7"><td class="memItemLeft" align="right" valign="top"><a id="a391b2ec8e3fdef9efb741eb320fc39b7" name="a391b2ec8e3fdef9efb741eb320fc39b7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_gamut_generator</b> (self)</td></tr>
+<tr class="memitem:a391b2ec8e3fdef9efb741eb320fc39b7" id="r_a391b2ec8e3fdef9efb741eb320fc39b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391b2ec8e3fdef9efb741eb320fc39b7">_gamut_generator</a> (self)</td></tr>
 <tr class="separator:a391b2ec8e3fdef9efb741eb320fc39b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/d46/gamut__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../d8/d46/gamut__test_8py_source.html">gamut_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a391b2ec8e3fdef9efb741eb320fc39b7" name="a391b2ec8e3fdef9efb741eb320fc39b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a391b2ec8e3fdef9efb741eb320fc39b7">&#9670;&#160;</a></span>_gamut_generator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gamut_test.GamutGeneratorTest._gamut_generator </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d46/gamut__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../d8/d46/gamut__test_8py_source.html">gamut_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>  <span class="keyword">def </span>_gamut_generator(self):</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">return</span> pyspiel.GamutGenerator(</div>
+<div class="line"><span class="lineno">   28</span>        <span class="stringliteral">&quot;gamut.jar&quot;</span></div>
+<div class="line"><span class="lineno">   29</span>    )</div>
+<div class="line"><span class="lineno">   30</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afbeb623277d0cb3cc8a117d5f8de3f84" name="afbeb623277d0cb3cc8a117d5f8de3f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbeb623277d0cb3cc8a117d5f8de3f84">&#9670;&#160;</a></span>test_gamut_api()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gamut_test.GamutGeneratorTest.test_gamut_api </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d46/gamut__test_8py_source.html#l00052">52</a> of file <a class="el" href="../../d8/d46/gamut__test_8py_source.html">gamut_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>  <span class="keyword">def </span>test_gamut_api(self):</div>
+<div class="line"><span class="lineno">   53</span>    generator = self._gamut_generator()</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment"># See the documentation at http://gamut.stanford.edu/ for the commands</span></div>
+<div class="line"><span class="lineno">   56</span>    <span class="comment"># needed to generate the various different games.</span></div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    <span class="comment"># Using a string of arguments.</span></div>
+<div class="line"><span class="lineno">   59</span>    game = generator.generate_game(</div>
+<div class="line"><span class="lineno">   60</span>        <span class="stringliteral">&quot;-g RandomGame -players 4 -normalize -min_payoff 0 &quot;</span></div>
+<div class="line"><span class="lineno">   61</span>        + <span class="stringliteral">&quot;-max_payoff 150 -actions 2 4 5 7&quot;</span></div>
+<div class="line"><span class="lineno">   62</span>    )</div>
+<div class="line"><span class="lineno">   63</span>    self.assertIsNotNone(game)</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment"># Using a list of arguments.</span></div>
+<div class="line"><span class="lineno">   66</span>    game = generator.generate_game([</div>
+<div class="line"><span class="lineno">   67</span>        <span class="stringliteral">&quot;-g&quot;</span>,</div>
+<div class="line"><span class="lineno">   68</span>        <span class="stringliteral">&quot;RandomGame&quot;</span>,</div>
+<div class="line"><span class="lineno">   69</span>        <span class="stringliteral">&quot;-players&quot;</span>,</div>
+<div class="line"><span class="lineno">   70</span>        <span class="stringliteral">&quot;4&quot;</span>,</div>
+<div class="line"><span class="lineno">   71</span>        <span class="stringliteral">&quot;-normalize&quot;</span>,</div>
+<div class="line"><span class="lineno">   72</span>        <span class="stringliteral">&quot;-min_payoff&quot;</span>,</div>
+<div class="line"><span class="lineno">   73</span>        <span class="stringliteral">&quot;0&quot;</span>,</div>
+<div class="line"><span class="lineno">   74</span>        <span class="stringliteral">&quot;-max_payoff&quot;</span>,</div>
+<div class="line"><span class="lineno">   75</span>        <span class="stringliteral">&quot;150&quot;</span>,</div>
+<div class="line"><span class="lineno">   76</span>        <span class="stringliteral">&quot;-actions&quot;</span>,</div>
+<div class="line"><span class="lineno">   77</span>        <span class="stringliteral">&quot;2&quot;</span>,</div>
+<div class="line"><span class="lineno">   78</span>        <span class="stringliteral">&quot;4&quot;</span>,</div>
+<div class="line"><span class="lineno">   79</span>        <span class="stringliteral">&quot;5&quot;</span>,</div>
+<div class="line"><span class="lineno">   80</span>        <span class="stringliteral">&quot;7&quot;</span>,</div>
+<div class="line"><span class="lineno">   81</span>    ])</div>
+<div class="line"><span class="lineno">   82</span>    self.assertIsNotNone(game)</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    <span class="comment"># Using a list of arguments.</span></div>
+<div class="line"><span class="lineno">   85</span>    matrix_game = generator.generate_matrix_game([</div>
+<div class="line"><span class="lineno">   86</span>        <span class="stringliteral">&quot;-g&quot;</span>,</div>
+<div class="line"><span class="lineno">   87</span>        <span class="stringliteral">&quot;RandomGame&quot;</span>,</div>
+<div class="line"><span class="lineno">   88</span>        <span class="stringliteral">&quot;-players&quot;</span>,</div>
+<div class="line"><span class="lineno">   89</span>        <span class="stringliteral">&quot;2&quot;</span>,</div>
+<div class="line"><span class="lineno">   90</span>        <span class="stringliteral">&quot;-normalize&quot;</span>,</div>
+<div class="line"><span class="lineno">   91</span>        <span class="stringliteral">&quot;-min_payoff&quot;</span>,</div>
+<div class="line"><span class="lineno">   92</span>        <span class="stringliteral">&quot;0&quot;</span>,</div>
+<div class="line"><span class="lineno">   93</span>        <span class="stringliteral">&quot;-max_payoff&quot;</span>,</div>
+<div class="line"><span class="lineno">   94</span>        <span class="stringliteral">&quot;150&quot;</span>,</div>
+<div class="line"><span class="lineno">   95</span>        <span class="stringliteral">&quot;-actions&quot;</span>,</div>
+<div class="line"><span class="lineno">   96</span>        <span class="stringliteral">&quot;10&quot;</span>,</div>
+<div class="line"><span class="lineno">   97</span>        <span class="stringliteral">&quot;15&quot;</span>,</div>
+<div class="line"><span class="lineno">   98</span>    ])</div>
+<div class="line"><span class="lineno">   99</span>    self.assertIsNotNone(matrix_game)</div>
+<div class="line"><span class="lineno">  100</span>    print(matrix_game.new_initial_state())</div>
+<div class="line"><span class="lineno">  101</span>    payoff_matrix = game_payoffs_array(matrix_game)</div>
+<div class="line"><span class="lineno">  102</span>    print(payoff_matrix.shape)</div>
+<div class="line"><span class="lineno">  103</span>    print(payoff_matrix)</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    <span class="comment"># Using a list of arguments.</span></div>
+<div class="line"><span class="lineno">  106</span>    tensor_game = generator.generate_game([</div>
+<div class="line"><span class="lineno">  107</span>        <span class="stringliteral">&quot;-g&quot;</span>,</div>
+<div class="line"><span class="lineno">  108</span>        <span class="stringliteral">&quot;RandomGame&quot;</span>,</div>
+<div class="line"><span class="lineno">  109</span>        <span class="stringliteral">&quot;-players&quot;</span>,</div>
+<div class="line"><span class="lineno">  110</span>        <span class="stringliteral">&quot;4&quot;</span>,</div>
+<div class="line"><span class="lineno">  111</span>        <span class="stringliteral">&quot;-normalize&quot;</span>,</div>
+<div class="line"><span class="lineno">  112</span>        <span class="stringliteral">&quot;-min_payoff&quot;</span>,</div>
+<div class="line"><span class="lineno">  113</span>        <span class="stringliteral">&quot;0&quot;</span>,</div>
+<div class="line"><span class="lineno">  114</span>        <span class="stringliteral">&quot;-max_payoff&quot;</span>,</div>
+<div class="line"><span class="lineno">  115</span>        <span class="stringliteral">&quot;150&quot;</span>,</div>
+<div class="line"><span class="lineno">  116</span>        <span class="stringliteral">&quot;-actions&quot;</span>,</div>
+<div class="line"><span class="lineno">  117</span>        <span class="stringliteral">&quot;2&quot;</span>,</div>
+<div class="line"><span class="lineno">  118</span>        <span class="stringliteral">&quot;4&quot;</span>,</div>
+<div class="line"><span class="lineno">  119</span>        <span class="stringliteral">&quot;5&quot;</span>,</div>
+<div class="line"><span class="lineno">  120</span>        <span class="stringliteral">&quot;7&quot;</span>,</div>
+<div class="line"><span class="lineno">  121</span>    ])</div>
+<div class="line"><span class="lineno">  122</span>    self.assertIsNotNone(tensor_game)</div>
+<div class="line"><span class="lineno">  123</span>    payoff_tensor = game_payoffs_array(tensor_game)</div>
+<div class="line"><span class="lineno">  124</span>    print(payoff_tensor.shape)</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74a072038b92fd522ac43533b9a4a8e8" name="a74a072038b92fd522ac43533b9a4a8e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a072038b92fd522ac43533b9a4a8e8">&#9670;&#160;</a></span>test_generate_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gamut_test.GamutGeneratorTest.test_generate_game </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game_str</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d46/gamut__test_8py_source.html#l00043">43</a> of file <a class="el" href="../../d8/d46/gamut__test_8py_source.html">gamut_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>  <span class="keyword">def </span>test_generate_game(self, game_str):</div>
+<div class="line"><span class="lineno">   44</span>    generator = self._gamut_generator()</div>
+<div class="line"><span class="lineno">   45</span>    <span class="comment"># Using a string of arguments.</span></div>
+<div class="line"><span class="lineno">   46</span>    game = generator.generate_game(game_str)</div>
+<div class="line"><span class="lineno">   47</span>    self.assertIsNotNone(game)</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    payoff_tensor = game_payoffs_array(game)</div>
+<div class="line"><span class="lineno">   50</span>    self.assertEqual(payoff_tensor.shape, (2, 4, 4))</div>
+<div class="line"><span class="lineno">   51</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/games/gamut/<b>gamut_test.py</b></li>
+<li>open_spiel/games/gamut/<a class="el" href="../../d8/d46/gamut__test_8py_source.html">gamut_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

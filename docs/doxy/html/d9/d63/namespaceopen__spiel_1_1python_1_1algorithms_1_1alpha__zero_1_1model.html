@@ -107,22 +107,18 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a196c7e4de61c79ac041421d59155a8e3" id="r_a196c7e4de61c79ac041421d59155a8e3"><td class="memItemLeft" align="right" valign="top"><a id="a196c7e4de61c79ac041421d59155a8e3" name="a196c7e4de61c79ac041421d59155a8e3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>cascade</b> (x, fns)</td></tr>
+<tr class="memitem:a196c7e4de61c79ac041421d59155a8e3" id="r_a196c7e4de61c79ac041421d59155a8e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a196c7e4de61c79ac041421d59155a8e3">cascade</a> (x, fns)</td></tr>
 <tr class="separator:a196c7e4de61c79ac041421d59155a8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5af78c772c82d754be8b4c5a4174799" id="r_ab5af78c772c82d754be8b4c5a4174799"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5af78c772c82d754be8b4c5a4174799">batch_norm</a> (training, updates, name)</td></tr>
 <tr class="separator:ab5af78c772c82d754be8b4c5a4174799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68b45f2e59e47706846a21aefd90d484" id="r_a68b45f2e59e47706846a21aefd90d484"><td class="memItemLeft" align="right" valign="top"><a id="a68b45f2e59e47706846a21aefd90d484" name="a68b45f2e59e47706846a21aefd90d484"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>residual_layer</b> (inputs, num_filters, kernel_size, training, updates, name)</td></tr>
+<tr class="memitem:a68b45f2e59e47706846a21aefd90d484" id="r_a68b45f2e59e47706846a21aefd90d484"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68b45f2e59e47706846a21aefd90d484">residual_layer</a> (inputs, num_filters, kernel_size, training, updates, name)</td></tr>
 <tr class="separator:a68b45f2e59e47706846a21aefd90d484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ac4d1235a38b1fdbe7497908d900aa110" id="r_ac4d1235a38b1fdbe7497908d900aa110"><td class="memItemLeft" align="right" valign="top"><a id="ac4d1235a38b1fdbe7497908d900aa110" name="ac4d1235a38b1fdbe7497908d900aa110"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>tfkl</b> = tf.keras.layers</td></tr>
+<tr class="memitem:ac4d1235a38b1fdbe7497908d900aa110" id="r_ac4d1235a38b1fdbe7497908d900aa110"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4d1235a38b1fdbe7497908d900aa110">tfkl</a> = tf.keras.layers</td></tr>
 <tr class="separator:ac4d1235a38b1fdbe7497908d900aa110"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ebcfc88a0fe943a3d7bcde7892fd06a" id="r_a8ebcfc88a0fe943a3d7bcde7892fd06a"><td class="memItemLeft" align="right" valign="top"><a id="a8ebcfc88a0fe943a3d7bcde7892fd06a" name="a8ebcfc88a0fe943a3d7bcde7892fd06a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>conv_2d</b> = functools.partial(tfkl.Conv2D, padding=&quot;same&quot;)</td></tr>
+<tr class="memitem:a8ebcfc88a0fe943a3d7bcde7892fd06a" id="r_a8ebcfc88a0fe943a3d7bcde7892fd06a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ebcfc88a0fe943a3d7bcde7892fd06a">conv_2d</a> = functools.partial(tfkl.Conv2D, padding=&quot;same&quot;)</td></tr>
 <tr class="separator:a8ebcfc88a0fe943a3d7bcde7892fd06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -159,7 +155,34 @@ Args:
 
 Returns:
   A function to apply to the previous layer.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d4/d0e/model_8py_source.html#l00043">43</a> of file <a class="el" href="../../d4/d0e/model_8py_source.html">model.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span><span class="keyword">def </span>batch_norm(training, updates, name):</div>
+<div class="line"><span class="lineno">   44</span>  <span class="stringliteral">&quot;&quot;&quot;A batch norm layer.</span></div>
+<div class="line"><span class="lineno">   45</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   46</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   47</span><span class="stringliteral">    training: A placeholder of whether this is done in training or not.</span></div>
+<div class="line"><span class="lineno">   48</span><span class="stringliteral">    updates: A list to be extended with this layer&#39;s updates.</span></div>
+<div class="line"><span class="lineno">   49</span><span class="stringliteral">    name: Name of the layer.</span></div>
+<div class="line"><span class="lineno">   50</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   51</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   52</span><span class="stringliteral">    A function to apply to the previous layer.</span></div>
+<div class="line"><span class="lineno">   53</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   54</span>  bn = tfkl.BatchNormalization(name=name)</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keyword">def </span>batch_norm_layer(x):</div>
+<div class="line"><span class="lineno">   56</span>    <span class="comment"># This emits a warning that training is a placeholder instead of a concrete</span></div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment"># bool, but seems to work anyway.</span></div>
+<div class="line"><span class="lineno">   58</span>    applied = bn(x, training)</div>
+<div class="line"><span class="lineno">   59</span>    updates.extend(bn.updates)</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> applied</div>
+<div class="line"><span class="lineno">   61</span>  <span class="keywordflow">return</span> batch_norm_layer</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d4/d0e/model_8py_source.html#l00043">open_spiel.python.algorithms.alpha_zero.model.batch_norm()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d4/d0e/model_8py_source.html#l00221">open_spiel.python.algorithms.alpha_zero.model.Model._define_graph()</a>, and <a class="el" href="../../d4/d0e/model_8py_source.html#l00043">open_spiel.python.algorithms.alpha_zero.model.batch_norm()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d63/namespaceopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1model_ab5af78c772c82d754be8b4c5a4174799_cgraph.png" border="0" usemap="#ad9/d63/namespaceopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1model_ab5af78c772c82d754be8b4c5a4174799_cgraph" alt=""/></div>
@@ -181,6 +204,122 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="263,52,231,52,231,47,263,47"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a196c7e4de61c79ac041421d59155a8e3" name="a196c7e4de61c79ac041421d59155a8e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196c7e4de61c79ac041421d59155a8e3">&#9670;&#160;</a></span>cascade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.model.cascade </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fns</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d0e/model_8py_source.html#l00034">34</a> of file <a class="el" href="../../d4/d0e/model_8py_source.html">model.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span><span class="keyword">def </span>cascade(x, fns):</div>
+<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">for</span> fn <span class="keywordflow">in</span> fns:</div>
+<div class="line"><span class="lineno">   36</span>    x = fn(x)</div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">return</span> x</div>
+<div class="line"><span class="lineno">   38</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a68b45f2e59e47706846a21aefd90d484" name="a68b45f2e59e47706846a21aefd90d484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68b45f2e59e47706846a21aefd90d484">&#9670;&#160;</a></span>residual_layer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.model.residual_layer </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>inputs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>num_filters</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>kernel_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>training</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>updates</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d0e/model_8py_source.html#l00064">64</a> of file <a class="el" href="../../d4/d0e/model_8py_source.html">model.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span><span class="keyword">def </span>residual_layer(inputs, num_filters, kernel_size, training, updates, name):</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">return</span> cascade(inputs, [</div>
+<div class="line"><span class="lineno">   66</span>      conv_2d(num_filters, kernel_size, name=f<span class="stringliteral">&quot;{name}_res_conv1&quot;</span>),</div>
+<div class="line"><span class="lineno">   67</span>      batch_norm(training, updates, f<span class="stringliteral">&quot;{name}_res_batch_norm1&quot;</span>),</div>
+<div class="line"><span class="lineno">   68</span>      tfkl.Activation(<span class="stringliteral">&quot;relu&quot;</span>),</div>
+<div class="line"><span class="lineno">   69</span>      conv_2d(num_filters, kernel_size, name=f<span class="stringliteral">&quot;{name}_res_conv2&quot;</span>),</div>
+<div class="line"><span class="lineno">   70</span>      batch_norm(training, updates, f<span class="stringliteral">&quot;{name}_res_batch_norm2&quot;</span>),</div>
+<div class="line"><span class="lineno">   71</span>      <span class="keyword">lambda</span> x: tfkl.add([x, inputs]),</div>
+<div class="line"><span class="lineno">   72</span>      tfkl.Activation(<span class="stringliteral">&quot;relu&quot;</span>),</div>
+<div class="line"><span class="lineno">   73</span>  ])</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a8ebcfc88a0fe943a3d7bcde7892fd06a" name="a8ebcfc88a0fe943a3d7bcde7892fd06a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ebcfc88a0fe943a3d7bcde7892fd06a">&#9670;&#160;</a></span>conv_2d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.model.conv_2d = functools.partial(tfkl.Conv2D, padding=&quot;same&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d0e/model_8py_source.html#l00040">40</a> of file <a class="el" href="../../d4/d0e/model_8py_source.html">model.py</a>.</p>
+
+</div>
+</div>
+<a id="ac4d1235a38b1fdbe7497908d900aa110" name="ac4d1235a38b1fdbe7497908d900aa110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d1235a38b1fdbe7497908d900aa110">&#9670;&#160;</a></span>tfkl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.alpha_zero.model.tfkl = tf.keras.layers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d0e/model_8py_source.html#l00039">39</a> of file <a class="el" href="../../d4/d0e/model_8py_source.html">model.py</a>.</p>
 
 </div>
 </div>

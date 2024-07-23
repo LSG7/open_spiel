@@ -105,16 +105,14 @@ Classes</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a7adea82e0e8080b7f7c23e3f2254b4c0" id="r_a7adea82e0e8080b7f7c23e3f2254b4c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7adea82e0e8080b7f7c23e3f2254b4c0">_get_next_states</a> (state, next_states, to_string)</td></tr>
 <tr class="separator:a7adea82e0e8080b7f7c23e3f2254b4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a588bace54f98d5387e88c0e33eff8e3f" id="r_a588bace54f98d5387e88c0e33eff8e3f"><td class="memItemLeft" align="right" valign="top"><a id="a588bace54f98d5387e88c0e33eff8e3f" name="a588bace54f98d5387e88c0e33eff8e3f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_next_states</b> (states, to_string)</td></tr>
+<tr class="memitem:a588bace54f98d5387e88c0e33eff8e3f" id="r_a588bace54f98d5387e88c0e33eff8e3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a588bace54f98d5387e88c0e33eff8e3f">_next_states</a> (states, to_string)</td></tr>
 <tr class="separator:a588bace54f98d5387e88c0e33eff8e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad48073eddda52bc2e48388a06315cf5b" id="r_ad48073eddda52bc2e48388a06315cf5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad48073eddda52bc2e48388a06315cf5b">type_from_states</a> (states)</td></tr>
 <tr class="separator:ad48073eddda52bc2e48388a06315cf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2e9b308d11da62fb776b8b4b43d9d5aa" id="r_a2e9b308d11da62fb776b8b4b43d9d5aa"><td class="memItemLeft" align="right" valign="top"><a id="a2e9b308d11da62fb776b8b4b43d9d5aa" name="a2e9b308d11da62fb776b8b4b43d9d5aa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:a2e9b308d11da62fb776b8b4b43d9d5aa" id="r_a2e9b308d11da62fb776b8b4b43d9d5aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e9b308d11da62fb776b8b4b43d9d5aa">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:a2e9b308d11da62fb776b8b4b43d9d5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -162,7 +160,44 @@ These tests are not exhaustive and will be updated with time.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Extract non-chance states for a subgame into the all_states dict.</pre> <div class="dynheader">
+<pre class="fragment">Extract non-chance states for a subgame into the all_states dict.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/d16/mfg__test_8py_source.html#l00051">51</a> of file <a class="el" href="../../dc/d16/mfg__test_8py_source.html">mfg_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span><span class="keyword">def </span>_get_next_states(state, next_states, to_string):</div>
+<div class="line"><span class="lineno">   52</span>  <span class="stringliteral">&quot;&quot;&quot;Extract non-chance states for a subgame into the all_states dict.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   53</span>  is_mean_field = state.current_player() == pyspiel.PlayerId.MEAN_FIELD</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">if</span> state.is_chance_node():</div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment"># Add only if not already present</span></div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">for</span> action, _ <span class="keywordflow">in</span> state.chance_outcomes():</div>
+<div class="line"><span class="lineno">   58</span>      next_state = state.child(action)</div>
+<div class="line"><span class="lineno">   59</span>      state_str = to_string(next_state)</div>
+<div class="line"><span class="lineno">   60</span>      <span class="keywordflow">if</span> state_str <span class="keywordflow">not</span> <span class="keywordflow">in</span> next_states:</div>
+<div class="line"><span class="lineno">   61</span>        next_states[state_str] = next_state</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">if</span> is_mean_field:</div>
+<div class="line"><span class="lineno">   64</span>    support = state.distribution_support()</div>
+<div class="line"><span class="lineno">   65</span>    next_state = state.clone()</div>
+<div class="line"><span class="lineno">   66</span>    support_length = len(support)</div>
+<div class="line"><span class="lineno">   67</span>    <span class="comment"># update with a dummy distribution</span></div>
+<div class="line"><span class="lineno">   68</span>    next_state.update_distribution(</div>
+<div class="line"><span class="lineno">   69</span>        [1.0 / support_length <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(support_length)])</div>
+<div class="line"><span class="lineno">   70</span>    state_str = to_string(next_state)</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">if</span> state_str <span class="keywordflow">not</span> <span class="keywordflow">in</span> next_states:</div>
+<div class="line"><span class="lineno">   72</span>      next_states[state_str] = next_state</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>  <span class="keywordflow">if</span> int(state.current_player()) &gt;= 0:</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> state.legal_actions():</div>
+<div class="line"><span class="lineno">   76</span>      next_state = state.child(action)</div>
+<div class="line"><span class="lineno">   77</span>      state_str = to_string(next_state)</div>
+<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">if</span> state_str <span class="keywordflow">not</span> <span class="keywordflow">in</span> next_states:</div>
+<div class="line"><span class="lineno">   79</span>        next_states[state_str] = next_state</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/d16/mfg__test_8py_source.html#l00051">open_spiel.python.tests.mfg_implementation_test.mfg_test._get_next_states()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/d16/mfg__test_8py_source.html#l00051">open_spiel.python.tests.mfg_implementation_test.mfg_test._get_next_states()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/ddf/namespaceopen__spiel_1_1python_1_1tests_1_1mfg__implementation__test_1_1mfg__test_a7adea82e0e8080b7f7c23e3f2254b4c0_cgraph.png" border="0" usemap="#ad3/ddf/namespaceopen__spiel_1_1python_1_1tests_1_1mfg__implementation__test_1_1mfg__test_a7adea82e0e8080b7f7c23e3f2254b4c0_cgraph" alt=""/></div>
@@ -183,6 +218,44 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a588bace54f98d5387e88c0e33eff8e3f" name="a588bace54f98d5387e88c0e33eff8e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a588bace54f98d5387e88c0e33eff8e3f">&#9670;&#160;</a></span>_next_states()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.mfg_implementation_test.mfg_test._next_states </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>states</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>to_string</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d16/mfg__test_8py_source.html#l00082">82</a> of file <a class="el" href="../../dc/d16/mfg__test_8py_source.html">mfg_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span><span class="keyword">def </span>_next_states(states, to_string):</div>
+<div class="line"><span class="lineno">   83</span>  next_states = {}</div>
+<div class="line"><span class="lineno">   84</span>  <span class="keywordflow">for</span> state <span class="keywordflow">in</span> states:</div>
+<div class="line"><span class="lineno">   85</span>    _get_next_states(state, next_states, to_string)</div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">return</span> set(next_states.keys()), set(next_states.values())</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ad48073eddda52bc2e48388a06315cf5b" name="ad48073eddda52bc2e48388a06315cf5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad48073eddda52bc2e48388a06315cf5b">&#9670;&#160;</a></span>type_from_states()</h2>
 
@@ -197,7 +270,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Get node type of a list of states and assert they are the same.</pre> <div class="dynheader">
+<pre class="fragment">Get node type of a list of states and assert they are the same.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/d16/mfg__test_8py_source.html#l00089">89</a> of file <a class="el" href="../../dc/d16/mfg__test_8py_source.html">mfg_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span><span class="keyword">def </span>type_from_states(states):</div>
+<div class="line"><span class="lineno">   90</span>  <span class="stringliteral">&quot;&quot;&quot;Get node type of a list of states and assert they are the same.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   91</span>  types = [state.get_type() <span class="keywordflow">for</span> state <span class="keywordflow">in</span> states]</div>
+<div class="line"><span class="lineno">   92</span>  <span class="keyword">assert</span> len(set(types)) == 1</div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">return</span> types[0]</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/d16/mfg__test_8py_source.html#l00106">open_spiel.python.tests.mfg_implementation_test.mfg_test.FiniteHorizonTest.test_is_finite_horizon()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/ddf/namespaceopen__spiel_1_1python_1_1tests_1_1mfg__implementation__test_1_1mfg__test_ad48073eddda52bc2e48388a06315cf5b_icgraph.png" border="0" usemap="#ad3/ddf/namespaceopen__spiel_1_1python_1_1tests_1_1mfg__implementation__test_1_1mfg__test_ad48073eddda52bc2e48388a06315cf5b_icgraph" alt=""/></div>
@@ -207,6 +291,23 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="223,43,191,43,191,38,223,38"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a2e9b308d11da62fb776b8b4b43d9d5aa" name="a2e9b308d11da62fb776b8b4b43d9d5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9b308d11da62fb776b8b4b43d9d5aa">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.tests.mfg_implementation_test.mfg_test.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d16/mfg__test_8py_source.html#l00041">41</a> of file <a class="el" href="../../dc/d16/mfg__test_8py_source.html">mfg_test.py</a>.</p>
 
 </div>
 </div>

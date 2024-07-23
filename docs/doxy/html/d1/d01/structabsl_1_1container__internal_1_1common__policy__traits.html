@@ -116,42 +116,319 @@ Collaboration diagram for absl::container_internal::common_policy_traits&lt; Pol
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a90b25f4883502963eac564d8d843de6a" id="r_a90b25f4883502963eac564d8d843de6a"><td class="memItemLeft" align="right" valign="top"><a id="a90b25f4883502963eac564d8d843de6a" name="a90b25f4883502963eac564d8d843de6a"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>slot_type</b> = typename Policy::slot_type</td></tr>
+<tr class="memitem:a90b25f4883502963eac564d8d843de6a" id="r_a90b25f4883502963eac564d8d843de6a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90b25f4883502963eac564d8d843de6a">slot_type</a> = typename Policy::slot_type</td></tr>
 <tr class="separator:a90b25f4883502963eac564d8d843de6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b3bc183123617330a4e1d9c128639b0" id="r_a2b3bc183123617330a4e1d9c128639b0"><td class="memItemLeft" align="right" valign="top"><a id="a2b3bc183123617330a4e1d9c128639b0" name="a2b3bc183123617330a4e1d9c128639b0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = decltype(Policy::element(std::declval&lt;slot_type*&gt;()))</td></tr>
+<tr class="memitem:a2b3bc183123617330a4e1d9c128639b0" id="r_a2b3bc183123617330a4e1d9c128639b0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b3bc183123617330a4e1d9c128639b0">reference</a> = decltype(Policy::element(std::declval&lt;slot_type*&gt;()))</td></tr>
 <tr class="separator:a2b3bc183123617330a4e1d9c128639b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae4dcf30289d1d67c928c4c0aa2ff2df" id="r_aae4dcf30289d1d67c928c4c0aa2ff2df"><td class="memItemLeft" align="right" valign="top"><a id="aae4dcf30289d1d67c928c4c0aa2ff2df" name="aae4dcf30289d1d67c928c4c0aa2ff2df"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = typename std::remove_reference&lt;reference&gt;::type</td></tr>
+<tr class="memitem:aae4dcf30289d1d67c928c4c0aa2ff2df" id="r_aae4dcf30289d1d67c928c4c0aa2ff2df"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae4dcf30289d1d67c928c4c0aa2ff2df">value_type</a> = typename std::remove_reference&lt;reference&gt;::type</td></tr>
 <tr class="separator:aae4dcf30289d1d67c928c4c0aa2ff2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad1169aed20ef351f7aa5e5dbd0fca854" id="r_ad1169aed20ef351f7aa5e5dbd0fca854"><td class="memTemplParams" colspan="2"><a id="ad1169aed20ef351f7aa5e5dbd0fca854" name="ad1169aed20ef351f7aa5e5dbd0fca854"></a>
-template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> , class... Args&gt; </td></tr>
-<tr class="memitem:ad1169aed20ef351f7aa5e5dbd0fca854"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>construct</b> (<a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *alloc, slot_type *slot, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:ad1169aed20ef351f7aa5e5dbd0fca854" id="r_ad1169aed20ef351f7aa5e5dbd0fca854"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> , class... Args&gt; </td></tr>
+<tr class="memitem:ad1169aed20ef351f7aa5e5dbd0fca854"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad1169aed20ef351f7aa5e5dbd0fca854">construct</a> (<a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *alloc, slot_type *slot, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:ad1169aed20ef351f7aa5e5dbd0fca854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22c4dbc8e9f2b07ac03c0efca6500ddd" id="r_a22c4dbc8e9f2b07ac03c0efca6500ddd"><td class="memTemplParams" colspan="2"><a id="a22c4dbc8e9f2b07ac03c0efca6500ddd" name="a22c4dbc8e9f2b07ac03c0efca6500ddd"></a>
-template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </td></tr>
-<tr class="memitem:a22c4dbc8e9f2b07ac03c0efca6500ddd"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>destroy</b> (<a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *alloc, slot_type *slot)</td></tr>
+<tr class="memitem:a22c4dbc8e9f2b07ac03c0efca6500ddd" id="r_a22c4dbc8e9f2b07ac03c0efca6500ddd"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </td></tr>
+<tr class="memitem:a22c4dbc8e9f2b07ac03c0efca6500ddd"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a22c4dbc8e9f2b07ac03c0efca6500ddd">destroy</a> (<a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *alloc, slot_type *slot)</td></tr>
 <tr class="separator:a22c4dbc8e9f2b07ac03c0efca6500ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61d212fe8fab5e70a11738b58e4708eb" id="r_a61d212fe8fab5e70a11738b58e4708eb"><td class="memTemplParams" colspan="2"><a id="a61d212fe8fab5e70a11738b58e4708eb" name="a61d212fe8fab5e70a11738b58e4708eb"></a>
-template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </td></tr>
-<tr class="memitem:a61d212fe8fab5e70a11738b58e4708eb"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>transfer</b> (<a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *alloc, slot_type *new_slot, slot_type *old_slot)</td></tr>
+<tr class="memitem:a61d212fe8fab5e70a11738b58e4708eb" id="r_a61d212fe8fab5e70a11738b58e4708eb"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </td></tr>
+<tr class="memitem:a61d212fe8fab5e70a11738b58e4708eb"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a61d212fe8fab5e70a11738b58e4708eb">transfer</a> (<a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *alloc, slot_type *new_slot, slot_type *old_slot)</td></tr>
 <tr class="separator:a61d212fe8fab5e70a11738b58e4708eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadb9e52b5647d62d21e4836a89eb5934" id="r_aadb9e52b5647d62d21e4836a89eb5934"><td class="memTemplParams" colspan="2"><a id="aadb9e52b5647d62d21e4836a89eb5934" name="aadb9e52b5647d62d21e4836a89eb5934"></a>
-template&lt;class P  = Policy&gt; </td></tr>
-<tr class="memitem:aadb9e52b5647d62d21e4836a89eb5934"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>element</b> (absl::remove_const_t&lt; slot_type &gt; *slot) -&gt; decltype(P::element(slot))</td></tr>
+<tr class="memitem:aadb9e52b5647d62d21e4836a89eb5934" id="r_aadb9e52b5647d62d21e4836a89eb5934"><td class="memTemplParams" colspan="2">template&lt;class P  = Policy&gt; </td></tr>
+<tr class="memitem:aadb9e52b5647d62d21e4836a89eb5934"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aadb9e52b5647d62d21e4836a89eb5934">element</a> (absl::remove_const_t&lt; slot_type &gt; *slot) -&gt; decltype(P::element(slot))</td></tr>
 <tr class="separator:aadb9e52b5647d62d21e4836a89eb5934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa37cd8cb8beda737dcca721f8b164de3" id="r_aa37cd8cb8beda737dcca721f8b164de3"><td class="memTemplParams" colspan="2"><a id="aa37cd8cb8beda737dcca721f8b164de3" name="aa37cd8cb8beda737dcca721f8b164de3"></a>
-template&lt;class P  = Policy&gt; </td></tr>
-<tr class="memitem:aa37cd8cb8beda737dcca721f8b164de3"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>element</b> (const slot_type *slot) -&gt; decltype(P::element(slot))</td></tr>
+<tr class="memitem:aa37cd8cb8beda737dcca721f8b164de3" id="r_aa37cd8cb8beda737dcca721f8b164de3"><td class="memTemplParams" colspan="2">template&lt;class P  = Policy&gt; </td></tr>
+<tr class="memitem:aa37cd8cb8beda737dcca721f8b164de3"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa37cd8cb8beda737dcca721f8b164de3">element</a> (const slot_type *slot) -&gt; decltype(P::element(slot))</td></tr>
 <tr class="separator:aa37cd8cb8beda737dcca721f8b164de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b588390b3d4b94faf81615ba7d663b0" id="r_a4b588390b3d4b94faf81615ba7d663b0"><td class="memItemLeft" align="right" valign="top"><a id="a4b588390b3d4b94faf81615ba7d663b0" name="a4b588390b3d4b94faf81615ba7d663b0"></a>
-static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>transfer_uses_memcpy</b> ()</td></tr>
+<tr class="memitem:a4b588390b3d4b94faf81615ba7d663b0" id="r_a4b588390b3d4b94faf81615ba7d663b0"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b588390b3d4b94faf81615ba7d663b0">transfer_uses_memcpy</a> ()</td></tr>
 <tr class="separator:a4b588390b3d4b94faf81615ba7d663b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class Policy, class = void&gt;<br />
+struct absl::container_internal::common_policy_traits&lt; Policy, class &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00033">33</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a2b3bc183123617330a4e1d9c128639b0" name="a2b3bc183123617330a4e1d9c128639b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3bc183123617330a4e1d9c128639b0">&#9670;&#160;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::reference = decltype(Policy::element(std::declval&lt;slot_type*&gt;()))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00036">36</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+
+</div>
+</div>
+<a id="a90b25f4883502963eac564d8d843de6a" name="a90b25f4883502963eac564d8d843de6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b25f4883502963eac564d8d843de6a">&#9670;&#160;</a></span>slot_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::slot_type = typename Policy::slot_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00035">35</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+
+</div>
+</div>
+<a id="aae4dcf30289d1d67c928c4c0aa2ff2df" name="aae4dcf30289d1d67c928c4c0aa2ff2df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae4dcf30289d1d67c928c4c0aa2ff2df">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::value_type = typename std::remove_reference&lt;reference&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00037">37</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad1169aed20ef351f7aa5e5dbd0fca854" name="ad1169aed20ef351f7aa5e5dbd0fca854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1169aed20ef351f7aa5e5dbd0fca854">&#9670;&#160;</a></span>construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+<div class="memtemplate">
+template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> , class... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::construct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *</td>          <td class="paramname"><span class="paramname"><em>alloc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">slot_type *</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00042">42</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                                       {</div>
+<div class="line"><span class="lineno">   43</span>    Policy::construct(alloc, slot, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   44</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a22c4dbc8e9f2b07ac03c0efca6500ddd" name="a22c4dbc8e9f2b07ac03c0efca6500ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c4dbc8e9f2b07ac03c0efca6500ddd">&#9670;&#160;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+<div class="memtemplate">
+template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *</td>          <td class="paramname"><span class="paramname"><em>alloc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">slot_type *</td>          <td class="paramname"><span class="paramname"><em>slot</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00049">49</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                     {</div>
+<div class="line"><span class="lineno">   50</span>    Policy::destroy(alloc, slot);</div>
+<div class="line"><span class="lineno">   51</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aadb9e52b5647d62d21e4836a89eb5934" name="aadb9e52b5647d62d21e4836a89eb5934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadb9e52b5647d62d21e4836a89eb5934">&#9670;&#160;</a></span>element() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+<div class="memtemplate">
+template&lt;class P  = Policy&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::element </td>
+          <td>(</td>
+          <td class="paramtype">absl::remove_const_t&lt; slot_type &gt; *</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td> -&gt; decltype(P::element(slot)) </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00074">74</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                                  {</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">return</span> P::element(slot);</div>
+<div class="line"><span class="lineno">   77</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa37cd8cb8beda737dcca721f8b164de3" name="aa37cd8cb8beda737dcca721f8b164de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37cd8cb8beda737dcca721f8b164de3">&#9670;&#160;</a></span>element() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+<div class="memtemplate">
+template&lt;class P  = Policy&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::element </td>
+          <td>(</td>
+          <td class="paramtype">const slot_type *</td>          <td class="paramname"><span class="paramname"><em>slot</em></span></td><td>)</td>
+          <td> -&gt; decltype(P::element(slot)) </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00079">79</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                                                         {</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> P::element(slot);</div>
+<div class="line"><span class="lineno">   81</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a61d212fe8fab5e70a11738b58e4708eb" name="a61d212fe8fab5e70a11738b58e4708eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d212fe8fab5e70a11738b58e4708eb">&#9670;&#160;</a></span>transfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+<div class="memtemplate">
+template&lt;class <a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::transfer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/db2/structabsl_1_1container__internal_1_1_alloc.html">Alloc</a> *</td>          <td class="paramname"><span class="paramname"><em>alloc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">slot_type *</td>          <td class="paramname"><span class="paramname"><em>new_slot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">slot_type *</td>          <td class="paramname"><span class="paramname"><em>old_slot</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00065">65</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                                               {</div>
+<div class="line"><span class="lineno">   66</span>    transfer_impl(alloc, new_slot, old_slot, Rank0{});</div>
+<div class="line"><span class="lineno">   67</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4b588390b3d4b94faf81615ba7d663b0" name="a4b588390b3d4b94faf81615ba7d663b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b588390b3d4b94faf81615ba7d663b0">&#9670;&#160;</a></span>transfer_uses_memcpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Policy , class  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr bool <a class="el" href="../../d1/d01/structabsl_1_1container__internal_1_1common__policy__traits.html">absl::container_internal::common_policy_traits</a>&lt; Policy, class &gt;::transfer_uses_memcpy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d62/common__policy__traits_8h_source.html#l00083">83</a> of file <a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                               {</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> std::is_same&lt;<span class="keyword">decltype</span>(transfer_impl&lt;std::allocator&lt;char&gt;&gt;(</div>
+<div class="line"><span class="lineno">   85</span>                            <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, Rank0{})),</div>
+<div class="line"><span class="lineno">   86</span>                        std::true_type&gt;::value;</div>
+<div class="line"><span class="lineno">   87</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../de/d62/common__policy__traits_8h_source.html">common_policy_traits.h</a></li>
 </ul>

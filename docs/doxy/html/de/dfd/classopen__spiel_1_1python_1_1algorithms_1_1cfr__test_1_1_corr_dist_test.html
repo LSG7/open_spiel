@@ -117,14 +117,11 @@ Collaboration diagram for open_spiel.python.algorithms.cfr_test.CorrDistTest:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a627ee4434a5ed6d8a95ceee0addf7378" id="r_a627ee4434a5ed6d8a95ceee0addf7378"><td class="memItemLeft" align="right" valign="top"><a id="a627ee4434a5ed6d8a95ceee0addf7378" name="a627ee4434a5ed6d8a95ceee0addf7378"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_cce_dist_kuhn_3p_cpp</b> (self)</td></tr>
+<tr class="memitem:a627ee4434a5ed6d8a95ceee0addf7378" id="r_a627ee4434a5ed6d8a95ceee0addf7378"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a627ee4434a5ed6d8a95ceee0addf7378">test_cce_dist_kuhn_3p_cpp</a> (self)</td></tr>
 <tr class="separator:a627ee4434a5ed6d8a95ceee0addf7378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d73df1186ed4ddeb0f4f5ae47ae6a9d" id="r_a2d73df1186ed4ddeb0f4f5ae47ae6a9d"><td class="memItemLeft" align="right" valign="top"><a id="a2d73df1186ed4ddeb0f4f5ae47ae6a9d" name="a2d73df1186ed4ddeb0f4f5ae47ae6a9d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_cce_dist_kuhn_3p</b> (self)</td></tr>
+<tr class="memitem:a2d73df1186ed4ddeb0f4f5ae47ae6a9d" id="r_a2d73df1186ed4ddeb0f4f5ae47ae6a9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d73df1186ed4ddeb0f4f5ae47ae6a9d">test_cce_dist_kuhn_3p</a> (self)</td></tr>
 <tr class="separator:a2d73df1186ed4ddeb0f4f5ae47ae6a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d48414925a1958cde7c920ce0f916c5" id="r_a6d48414925a1958cde7c920ce0f916c5"><td class="memItemLeft" align="right" valign="top"><a id="a6d48414925a1958cde7c920ce0f916c5" name="a6d48414925a1958cde7c920ce0f916c5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_cce_dist_sheriff_cpp</b> (self)</td></tr>
+<tr class="memitem:a6d48414925a1958cde7c920ce0f916c5" id="r_a6d48414925a1958cde7c920ce0f916c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d48414925a1958cde7c920ce0f916c5">test_cce_dist_sheriff_cpp</a> (self)</td></tr>
 <tr class="separator:a6d48414925a1958cde7c920ce0f916c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -132,8 +129,114 @@ Public Member Functions</h2></td></tr>
 
 These functions are analogues to NashConv for various forms of correlated
 equilibria.
-</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>cfr_test.py</b></li>
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html#l00275">275</a> of file <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html">cfr_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2d73df1186ed4ddeb0f4f5ae47ae6a9d" name="a2d73df1186ed4ddeb0f4f5ae47ae6a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d73df1186ed4ddeb0f4f5ae47ae6a9d">&#9670;&#160;</a></span>test_cce_dist_kuhn_3p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.cfr_test.CorrDistTest.test_cce_dist_kuhn_3p </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html#l00295">295</a> of file <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html">cfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  295</span>  <span class="keyword">def </span>test_cce_dist_kuhn_3p(self):</div>
+<div class="line"><span class="lineno">  296</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker(players=3)&quot;</span>)</div>
+<div class="line"><span class="lineno">  297</span>    solver = cfr._CFRSolver(game,</div>
+<div class="line"><span class="lineno">  298</span>                            regret_matching_plus=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  299</span>                            linear_averaging=<span class="keyword">False</span>,</div>
+<div class="line"><span class="lineno">  300</span>                            alternating_updates=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">  301</span>    strategies = []</div>
+<div class="line"><span class="lineno">  302</span>    corr_dist_values = []</div>
+<div class="line"><span class="lineno">  303</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">  304</span>      solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">  305</span>      <span class="comment"># Convert the policy to a pyspiel.TabularPolicy, needed by the CorrDist</span></div>
+<div class="line"><span class="lineno">  306</span>      <span class="comment"># functions on the C++ side.</span></div>
+<div class="line"><span class="lineno">  307</span>      strategies.append(policy.python_policy_to_pyspiel_policy(</div>
+<div class="line"><span class="lineno">  308</span>          solver.current_policy()))</div>
+<div class="line"><span class="lineno">  309</span>      corr_dev = pyspiel.uniform_correlation_device(strategies)</div>
+<div class="line"><span class="lineno">  310</span>      cce_dist_info = pyspiel.cce_dist(game, corr_dev)</div>
+<div class="line"><span class="lineno">  311</span>      corr_dist_values.append(cce_dist_info.dist_value)</div>
+<div class="line"><span class="lineno">  312</span>    self.assertLess(corr_dist_values[-1], corr_dist_values[0])</div>
+<div class="line"><span class="lineno">  313</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a627ee4434a5ed6d8a95ceee0addf7378" name="a627ee4434a5ed6d8a95ceee0addf7378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627ee4434a5ed6d8a95ceee0addf7378">&#9670;&#160;</a></span>test_cce_dist_kuhn_3p_cpp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.cfr_test.CorrDistTest.test_cce_dist_kuhn_3p_cpp </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html#l00282">282</a> of file <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html">cfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  282</span>  <span class="keyword">def </span>test_cce_dist_kuhn_3p_cpp(self):</div>
+<div class="line"><span class="lineno">  283</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker(players=3)&quot;</span>)</div>
+<div class="line"><span class="lineno">  284</span>    solver = pyspiel.CFRSolver(game)  <span class="comment"># C++ solver</span></div>
+<div class="line"><span class="lineno">  285</span>    strategies = []</div>
+<div class="line"><span class="lineno">  286</span>    corr_dist_values = []</div>
+<div class="line"><span class="lineno">  287</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">  288</span>      solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">  289</span>      strategies.append(solver.tabular_current_policy())</div>
+<div class="line"><span class="lineno">  290</span>      corr_dev = pyspiel.uniform_correlation_device(strategies)</div>
+<div class="line"><span class="lineno">  291</span>      cce_dist_info = pyspiel.cce_dist(game, corr_dev)</div>
+<div class="line"><span class="lineno">  292</span>      corr_dist_values.append(cce_dist_info.dist_value)</div>
+<div class="line"><span class="lineno">  293</span>    self.assertLess(corr_dist_values[-1], corr_dist_values[0])</div>
+<div class="line"><span class="lineno">  294</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d48414925a1958cde7c920ce0f916c5" name="a6d48414925a1958cde7c920ce0f916c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d48414925a1958cde7c920ce0f916c5">&#9670;&#160;</a></span>test_cce_dist_sheriff_cpp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.cfr_test.CorrDistTest.test_cce_dist_sheriff_cpp </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html#l00314">314</a> of file <a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html">cfr_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  314</span>  <span class="keyword">def </span>test_cce_dist_sheriff_cpp(self):</div>
+<div class="line"><span class="lineno">  315</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;sheriff&quot;</span>)</div>
+<div class="line"><span class="lineno">  316</span>    solver = pyspiel.CFRSolver(game)  <span class="comment"># C++ solver</span></div>
+<div class="line"><span class="lineno">  317</span>    strategies = []</div>
+<div class="line"><span class="lineno">  318</span>    corr_dist_values = []</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(3):</div>
+<div class="line"><span class="lineno">  320</span>      solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">  321</span>      strategies.append(solver.tabular_current_policy())</div>
+<div class="line"><span class="lineno">  322</span>      corr_dev = pyspiel.uniform_correlation_device(strategies)</div>
+<div class="line"><span class="lineno">  323</span>      cce_dist_info = pyspiel.cce_dist(game, corr_dev)</div>
+<div class="line"><span class="lineno">  324</span>      corr_dist_values.append(cce_dist_info.dist_value)</div>
+<div class="line"><span class="lineno">  325</span>    self.assertLess(corr_dist_values[-1], corr_dist_values[0])</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>open_spiel/python/algorithms/<a class="el" href="../../da/d26/algorithms_2cfr__test_8py_source.html">cfr_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

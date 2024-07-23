@@ -136,7 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae4741e55d3840a3f61ed68cc3c836224 inherit pub_methods_classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Implements Schulze's method.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Implements Schulze's method.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/d1d/schulze_8py_source.html#l00024">24</a> of file <a class="el" href="../../dc/d1d/schulze_8py_source.html">schulze.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5ca1a8457074d7a87e080f4d67bf1f62" name="a5ca1a8457074d7a87e080f4d67bf1f62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ca1a8457074d7a87e080f4d67bf1f62">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -158,6 +160,11 @@ Args:
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#ae9c1b2370ac17ab398409dbd392bdfbf">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dc/d1d/schulze_8py_source.html#l00027">27</a> of file <a class="el" href="../../dc/d1d/schulze_8py_source.html">schulze.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>  <span class="keyword">def </span>__init__(self):</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">pass</span></div>
+<div class="line"><span class="lineno">   29</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -178,6 +185,11 @@ Args:
 <pre class="fragment">Returns the name of the voting method.</pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#a4654f9ab5cc59f4092949162d620ca0c">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dc/d1d/schulze_8py_source.html#l00030">30</a> of file <a class="el" href="../../dc/d1d/schulze_8py_source.html">schulze.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>  <span class="keyword">def </span>name(self) -&gt; str:</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;schulze&quot;</span></div>
+<div class="line"><span class="lineno">   32</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a172965c50b038154b3955927fd8ceb38" name="a172965c50b038154b3955927fd8ceb38"></a>
@@ -207,6 +219,56 @@ Returns:
     a RankOutcome object that can be queried for the results.
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#ad7674ed527518679d786984f7e2e45be">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d1d/schulze_8py_source.html#l00033">33</a> of file <a class="el" href="../../dc/d1d/schulze_8py_source.html">schulze.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>  <span class="keyword">def </span>run_election(self, profile: base.PreferenceProfile) -&gt; base.RankOutcome:</div>
+<div class="line"><span class="lineno">   34</span>    <span class="keyword">assert</span> self.is_valid_profile(profile)</div>
+<div class="line"><span class="lineno">   35</span>    alternatives = profile.alternatives</div>
+<div class="line"><span class="lineno">   36</span>    num_alternatives = profile.num_alternatives()</div>
+<div class="line"><span class="lineno">   37</span>    pref_mat = profile.pref_matrix()</div>
+<div class="line"><span class="lineno">   38</span>    strongest_paths = np.zeros(shape=(num_alternatives, num_alternatives),</div>
+<div class="line"><span class="lineno">   39</span>                               dtype=np.float32)</div>
+<div class="line"><span class="lineno">   40</span>    <span class="comment"># calculating the direct paths</span></div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(num_alternatives):</div>
+<div class="line"><span class="lineno">   42</span>      <span class="keywordflow">for</span> j <span class="keywordflow">in</span> range(num_alternatives):</div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordflow">if</span> i != j:</div>
+<div class="line"><span class="lineno">   44</span>          <span class="keywordflow">if</span> pref_mat[i, j] &gt; pref_mat[j, i]:</div>
+<div class="line"><span class="lineno">   45</span>            strongest_paths[i, j] = pref_mat[i, j]</div>
+<div class="line"><span class="lineno">   46</span>          <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   47</span>            strongest_paths[i, j] = 0</div>
+<div class="line"><span class="lineno">   48</span>    <span class="comment"># checking if any indirect paths are better</span></div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(num_alternatives):</div>
+<div class="line"><span class="lineno">   50</span>      <span class="keywordflow">for</span> j <span class="keywordflow">in</span> range(num_alternatives):</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">if</span> i != j <span class="keywordflow">and</span> strongest_paths[j, i] &gt; 0:</div>
+<div class="line"><span class="lineno">   52</span>          <span class="keywordflow">for</span> k <span class="keywordflow">in</span> range(num_alternatives):</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">if</span> i != k <span class="keywordflow">and</span> j != k:</div>
+<div class="line"><span class="lineno">   54</span>              <span class="comment"># if the path from j to k through i is better, replace</span></div>
+<div class="line"><span class="lineno">   55</span>              strongest_paths[j, k] = max(strongest_paths[j, k],</div>
+<div class="line"><span class="lineno">   56</span>                                          min(strongest_paths[j, i],</div>
+<div class="line"><span class="lineno">   57</span>                                              strongest_paths[i, k]))</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <span class="keyword">def </span>compare(x, y):</div>
+<div class="line"><span class="lineno">   60</span>      <span class="keywordflow">return</span> strongest_paths[x, y] - strongest_paths[y, x]</div>
+<div class="line"><span class="lineno">   61</span>    ranking_idx = np.arange(num_alternatives)</div>
+<div class="line"><span class="lineno">   62</span>    sorted_ranking_idx = sorted(ranking_idx, key=functools.cmp_to_key(compare),</div>
+<div class="line"><span class="lineno">   63</span>                                reverse=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   64</span>    <span class="comment"># Define the scores as the sum of preferences for everything it beats in</span></div>
+<div class="line"><span class="lineno">   65</span>    <span class="comment"># the order.</span></div>
+<div class="line"><span class="lineno">   66</span>    cumul_score = 0</div>
+<div class="line"><span class="lineno">   67</span>    <span class="comment"># start at the end and work backwards</span></div>
+<div class="line"><span class="lineno">   68</span>    ranking_alts = [alternatives[sorted_ranking_idx[-1]]]</div>
+<div class="line"><span class="lineno">   69</span>    scores = [0]</div>
+<div class="line"><span class="lineno">   70</span>    i = num_alternatives - 2</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">while</span> i &gt;= 0:</div>
+<div class="line"><span class="lineno">   72</span>      alt_idx_i = sorted_ranking_idx[i]</div>
+<div class="line"><span class="lineno">   73</span>      alt_idx_j = sorted_ranking_idx[i+1]</div>
+<div class="line"><span class="lineno">   74</span>      ranking_alts.insert(0, alternatives[alt_idx_i])</div>
+<div class="line"><span class="lineno">   75</span>      cumul_score += pref_mat[alt_idx_i, alt_idx_j]</div>
+<div class="line"><span class="lineno">   76</span>      scores.insert(0, cumul_score)</div>
+<div class="line"><span class="lineno">   77</span>      i -= 1</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">return</span> base.RankOutcome(rankings=ranking_alts, scores=scores)</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/de2/base_8py_source.html#l00483">open_spiel.python.voting.base.AbstractVotingMethod.is_valid_profile()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -221,7 +283,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/voting/<b>schulze.py</b></li>
+<li>open_spiel/python/voting/<a class="el" href="../../dc/d1d/schulze_8py_source.html">schulze.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

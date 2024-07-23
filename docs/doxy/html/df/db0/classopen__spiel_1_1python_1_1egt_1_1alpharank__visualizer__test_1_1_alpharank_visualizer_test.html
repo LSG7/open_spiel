@@ -117,12 +117,71 @@ Collaboration diagram for open_spiel.python.egt.alpharank_visualizer_test.Alphar
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aee5de534092ea7664226feed9fd8f9d6" id="r_aee5de534092ea7664226feed9fd8f9d6"><td class="memItemLeft" align="right" valign="top"><a id="aee5de534092ea7664226feed9fd8f9d6" name="aee5de534092ea7664226feed9fd8f9d6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_plot_pi_vs_alpha</b> (self, mock_plt)</td></tr>
+<tr class="memitem:aee5de534092ea7664226feed9fd8f9d6" id="r_aee5de534092ea7664226feed9fd8f9d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee5de534092ea7664226feed9fd8f9d6">test_plot_pi_vs_alpha</a> (self, mock_plt)</td></tr>
 <tr class="separator:aee5de534092ea7664226feed9fd8f9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dd/d86/alpharank__visualizer__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../dd/d86/alpharank__visualizer__test_8py_source.html">alpharank_visualizer_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aee5de534092ea7664226feed9fd8f9d6" name="aee5de534092ea7664226feed9fd8f9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5de534092ea7664226feed9fd8f9d6">&#9670;&#160;</a></span>test_plot_pi_vs_alpha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.egt.alpharank_visualizer_test.AlpharankVisualizerTest.test_plot_pi_vs_alpha </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mock_plt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d86/alpharank__visualizer__test_8py_source.html#l00035">35</a> of file <a class="el" href="../../dd/d86/alpharank__visualizer__test_8py_source.html">alpharank_visualizer_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>  <span class="keyword">def </span>test_plot_pi_vs_alpha(self, mock_plt):</div>
+<div class="line"><span class="lineno">   36</span>    <span class="comment"># Construct game</span></div>
+<div class="line"><span class="lineno">   37</span>    game = pyspiel.load_matrix_game(<span class="stringliteral">&quot;matrix_rps&quot;</span>)</div>
+<div class="line"><span class="lineno">   38</span>    payoff_tables = utils.game_payoffs_array(game)</div>
+<div class="line"><span class="lineno">   39</span>    _, payoff_tables = utils.is_symmetric_matrix_game(payoff_tables)</div>
+<div class="line"><span class="lineno">   40</span>    payoffs_are_hpt_format = utils.check_payoffs_are_hpt(payoff_tables)</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment"># Compute alpharank</span></div>
+<div class="line"><span class="lineno">   43</span>    alpha = 1e2</div>
+<div class="line"><span class="lineno">   44</span>    _, _, pi, num_profiles, num_strats_per_population = (</div>
+<div class="line"><span class="lineno">   45</span>        alpharank.compute(payoff_tables, alpha=alpha))</div>
+<div class="line"><span class="lineno">   46</span>    strat_labels = utils.get_strat_profile_labels(payoff_tables,</div>
+<div class="line"><span class="lineno">   47</span>                                                  payoffs_are_hpt_format)</div>
+<div class="line"><span class="lineno">   48</span>    num_populations = len(payoff_tables)</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    <span class="comment"># Construct synthetic pi-vs-alpha history</span></div>
+<div class="line"><span class="lineno">   51</span>    pi_list = np.empty((num_profiles, 0))</div>
+<div class="line"><span class="lineno">   52</span>    alpha_list = []</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(2):</div>
+<div class="line"><span class="lineno">   54</span>      pi_list = np.append(pi_list, np.reshape(pi, (-1, 1)), axis=1)</div>
+<div class="line"><span class="lineno">   55</span>      alpha_list.append(alpha)</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment"># Test plotting code (via pyplot mocking to prevent plot pop-up)</span></div>
+<div class="line"><span class="lineno">   58</span>    alpharank_visualizer.plot_pi_vs_alpha(</div>
+<div class="line"><span class="lineno">   59</span>        pi_list.T,</div>
+<div class="line"><span class="lineno">   60</span>        alpha_list,</div>
+<div class="line"><span class="lineno">   61</span>        num_populations,</div>
+<div class="line"><span class="lineno">   62</span>        num_strats_per_population,</div>
+<div class="line"><span class="lineno">   63</span>        strat_labels,</div>
+<div class="line"><span class="lineno">   64</span>        num_strats_to_label=0)</div>
+<div class="line"><span class="lineno">   65</span>    self.assertTrue(mock_plt.show.called)</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/egt/<b>alpharank_visualizer_test.py</b></li>
+<li>open_spiel/python/egt/<a class="el" href="../../dd/d86/alpharank__visualizer__test_8py_source.html">alpharank_visualizer_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

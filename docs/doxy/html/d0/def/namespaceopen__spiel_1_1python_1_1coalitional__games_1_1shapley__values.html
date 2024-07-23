@@ -134,6 +134,38 @@ Args:
 Returns:
   shapley_values: a numpy array of Shapley values per player.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/d68/shapley__values_8py_source.html#l00055">55</a> of file <a class="el" href="../../dc/d68/shapley__values_8py_source.html">shapley_values.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>) -&gt; np.ndarray:</div>
+<div class="line"><span class="lineno">   59</span>  <span class="stringliteral">&quot;&quot;&quot;Compute the Shapley values using Monte Carlo estimation.</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  Specifically, applies the implementation described in Section 2.3 of Mitchell</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">  et al. &quot;Sampling Permutations for Shapley Value Estimation&quot;.</span></div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">  https://people.math.sc.edu/cooper/shapley.pdf</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">    game: the game to compute Shapley values for.</span></div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral">    num_samples: number of permutations to sample</span></div>
+<div class="line"><span class="lineno">   68</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   69</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   70</span><span class="stringliteral">    shapley_values: a numpy array of Shapley values per player.</span></div>
+<div class="line"><span class="lineno">   71</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>  shapley_values_sum = np.zeros(game.num_players(), dtype=float)</div>
+<div class="line"><span class="lineno">   74</span>  coalition = np.zeros(game.num_players(), dtype=int)</div>
+<div class="line"><span class="lineno">   75</span>  empty_coalition_value = game.coalition_value(coalition)</div>
+<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(num_samples):</div>
+<div class="line"><span class="lineno">   77</span>    perm = np.random.permutation(game.num_players())</div>
+<div class="line"><span class="lineno">   78</span>    value_with = empty_coalition_value</div>
+<div class="line"><span class="lineno">   79</span>    coalition.fill(0)</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">for</span> idx <span class="keywordflow">in</span> range(game.num_players()):</div>
+<div class="line"><span class="lineno">   81</span>      value_without = value_with  <span class="comment"># re-use the one computed from the last iter</span></div>
+<div class="line"><span class="lineno">   82</span>      i = perm[idx]</div>
+<div class="line"><span class="lineno">   83</span>      coalition[i] = 1</div>
+<div class="line"><span class="lineno">   84</span>      value_with = game.coalition_value(coalition)</div>
+<div class="line"><span class="lineno">   85</span>      shapley_values_sum[i] += value_with - value_without</div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">return</span> shapley_values_sum / num_samples</div>
+<div class="line"><span class="lineno">   87</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ac4132b50a0d5a8b5eac27b7ebf318df3" name="ac4132b50a0d5a8b5eac27b7ebf318df3"></a>
@@ -161,6 +193,39 @@ Args:
 Returns:
   shapley_values: a numpy array of Shapley values per player.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/d68/shapley__values_8py_source.html#l00022">22</a> of file <a class="el" href="../../dc/d68/shapley__values_8py_source.html">shapley_values.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>) -&gt; np.ndarray:</div>
+<div class="line"><span class="lineno">   25</span>  <span class="stringliteral">&quot;&quot;&quot;Compute the Shapley values exactly.</span></div>
+<div class="line"><span class="lineno">   26</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   27</span><span class="stringliteral">  Uses Eq (2) of Mitchell et al. &quot;Sampling Permutations for Shapley Value</span></div>
+<div class="line"><span class="lineno">   28</span><span class="stringliteral">  Estimation&quot;. https://people.math.sc.edu/cooper/shapley.pdf</span></div>
+<div class="line"><span class="lineno">   29</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">    game: the game to compute Shapley values for.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral">    shapley_values: a numpy array of Shapley values per player.</span></div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>  shapley_values_sum = np.zeros(game.num_players(), dtype=float)</div>
+<div class="line"><span class="lineno">   38</span>  coalition = np.zeros(game.num_players(), dtype=int)</div>
+<div class="line"><span class="lineno">   39</span>  empty_coalition_value = game.coalition_value(coalition)</div>
+<div class="line"><span class="lineno">   40</span>  num_perms = 0</div>
+<div class="line"><span class="lineno">   41</span>  <span class="keywordflow">for</span> perm_tup <span class="keywordflow">in</span> itertools.permutations(range(game.num_players())):</div>
+<div class="line"><span class="lineno">   42</span>    perm = list(perm_tup)</div>
+<div class="line"><span class="lineno">   43</span>    value_with = empty_coalition_value</div>
+<div class="line"><span class="lineno">   44</span>    coalition.fill(0)</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">for</span> idx <span class="keywordflow">in</span> range(game.num_players()):</div>
+<div class="line"><span class="lineno">   46</span>      value_without = value_with  <span class="comment"># re-use the one computed from the last iter</span></div>
+<div class="line"><span class="lineno">   47</span>      i = perm[idx]</div>
+<div class="line"><span class="lineno">   48</span>      coalition[i] = 1</div>
+<div class="line"><span class="lineno">   49</span>      value_with = game.coalition_value(coalition)</div>
+<div class="line"><span class="lineno">   50</span>      shapley_values_sum[i] += value_with - value_without</div>
+<div class="line"><span class="lineno">   51</span>    num_perms += 1</div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">return</span> shapley_values_sum / num_perms</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

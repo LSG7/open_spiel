@@ -101,9 +101,9 @@ Inheritance diagram for absl::container_internal::HashtablezInfo:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/d02/structabsl_1_1container__internal_1_1_hashtablez_info__inherit__graph.png" border="0" usemap="#aabsl_1_1container__internal_1_1_hashtablez_info_inherit__map" alt="Inheritance graph"/></div>
 <map name="aabsl_1_1container__internal_1_1_hashtablez_info_inherit__map" id="aabsl_1_1container__internal_1_1_hashtablez_info_inherit__map">
-<area shape="rect" title=" " alt="" coords="19,173,169,613"/>
-<area shape="rect" href="../../d6/d5c/structabsl_1_1profiling__internal_1_1_sample.html" title=" " alt="" coords="5,5,183,125"/>
-<area shape="poly" title=" " alt="" coords="97,140,97,174,91,174,91,140"/>
+<area shape="rect" title=" " alt="" coords="19,153,169,593"/>
+<area shape="rect" href="../../d6/d5c/structabsl_1_1profiling__internal_1_1_sample.html" title=" " alt="" coords="5,5,183,105"/>
+<area shape="poly" title=" " alt="" coords="97,120,97,154,91,154,91,120"/>
 </map>
 </div>
 <div class="dynheader">
@@ -130,78 +130,352 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a5d52b756fbc155f39c843bca41dc19" id="r_a4a5d52b756fbc155f39c843bca41dc19"><td class="memItemLeft" align="right" valign="top"><a id="a4a5d52b756fbc155f39c843bca41dc19" name="a4a5d52b756fbc155f39c843bca41dc19"></a>
 <a class="el" href="../../d3/d7c/structabsl_1_1container__internal_1_1_hashtablez_info.html">HashtablezInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d3/d7c/structabsl_1_1container__internal_1_1_hashtablez_info.html">HashtablezInfo</a> &amp;)=delete</td></tr>
 <tr class="separator:a4a5d52b756fbc155f39c843bca41dc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aeffb48ef15680b9e1164948ac6f378" id="r_a7aeffb48ef15680b9e1164948ac6f378"><td class="memItemLeft" align="right" valign="top"><a id="a7aeffb48ef15680b9e1164948ac6f378" name="a7aeffb48ef15680b9e1164948ac6f378"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareForSampling</b> (int64_t stride, size_t inline_element_size_value) ABSL_EXCLUSIVE_LOCKS_REQUIRED(init_mu)</td></tr>
+<tr class="memitem:a7aeffb48ef15680b9e1164948ac6f378" id="r_a7aeffb48ef15680b9e1164948ac6f378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aeffb48ef15680b9e1164948ac6f378">PrepareForSampling</a> (int64_t stride, size_t inline_element_size_value) ABSL_EXCLUSIVE_LOCKS_REQUIRED(init_mu)</td></tr>
 <tr class="separator:a7aeffb48ef15680b9e1164948ac6f378"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_structabsl_1_1profiling__internal_1_1_sample"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_structabsl_1_1profiling__internal_1_1_sample')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/d5c/structabsl_1_1profiling__internal_1_1_sample.html">absl::profiling_internal::Sample&lt; HashtablezInfo &gt;</a></td></tr>
-<tr class="memitem:a69fcfabb421ccbbca74ab71a05bd94f7 inherit pub_methods_structabsl_1_1profiling__internal_1_1_sample" id="r_a69fcfabb421ccbbca74ab71a05bd94f7"><td class="memItemLeft" align="right" valign="top">
-HashtablezInfo *dead&#160;</td><td class="memItemRight" valign="bottom"><b>ABSL_GUARDED_BY</b> (init_mu)</td></tr>
-<tr class="separator:a69fcfabb421ccbbca74ab71a05bd94f7 inherit pub_methods_structabsl_1_1profiling__internal_1_1_sample"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a8e44db31e4980a5e6f1f66efcaadd556" id="r_a8e44db31e4980a5e6f1f66efcaadd556"><td class="memItemLeft" align="right" valign="top"><a id="a8e44db31e4980a5e6f1f66efcaadd556" name="a8e44db31e4980a5e6f1f66efcaadd556"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>capacity</b></td></tr>
+<tr class="memitem:a8e44db31e4980a5e6f1f66efcaadd556" id="r_a8e44db31e4980a5e6f1f66efcaadd556"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e44db31e4980a5e6f1f66efcaadd556">capacity</a></td></tr>
 <tr class="separator:a8e44db31e4980a5e6f1f66efcaadd556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbce18b4feee0889e6c9cefc9564e0b1" id="r_abbce18b4feee0889e6c9cefc9564e0b1"><td class="memItemLeft" align="right" valign="top"><a id="abbce18b4feee0889e6c9cefc9564e0b1" name="abbce18b4feee0889e6c9cefc9564e0b1"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="memitem:abbce18b4feee0889e6c9cefc9564e0b1" id="r_abbce18b4feee0889e6c9cefc9564e0b1"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbce18b4feee0889e6c9cefc9564e0b1">size</a></td></tr>
 <tr class="separator:abbce18b4feee0889e6c9cefc9564e0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac893dfbf4f27d8f5386bf3f9676ca755" id="r_ac893dfbf4f27d8f5386bf3f9676ca755"><td class="memItemLeft" align="right" valign="top"><a id="ac893dfbf4f27d8f5386bf3f9676ca755" name="ac893dfbf4f27d8f5386bf3f9676ca755"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>num_erases</b></td></tr>
+<tr class="memitem:ac893dfbf4f27d8f5386bf3f9676ca755" id="r_ac893dfbf4f27d8f5386bf3f9676ca755"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac893dfbf4f27d8f5386bf3f9676ca755">num_erases</a></td></tr>
 <tr class="separator:ac893dfbf4f27d8f5386bf3f9676ca755"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc0f390bb6bc454ef61c3bafc0d6632a" id="r_acc0f390bb6bc454ef61c3bafc0d6632a"><td class="memItemLeft" align="right" valign="top"><a id="acc0f390bb6bc454ef61c3bafc0d6632a" name="acc0f390bb6bc454ef61c3bafc0d6632a"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>num_rehashes</b></td></tr>
+<tr class="memitem:acc0f390bb6bc454ef61c3bafc0d6632a" id="r_acc0f390bb6bc454ef61c3bafc0d6632a"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc0f390bb6bc454ef61c3bafc0d6632a">num_rehashes</a></td></tr>
 <tr class="separator:acc0f390bb6bc454ef61c3bafc0d6632a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a758fa3f24ecbb89a1ee781c70b637980" id="r_a758fa3f24ecbb89a1ee781c70b637980"><td class="memItemLeft" align="right" valign="top"><a id="a758fa3f24ecbb89a1ee781c70b637980" name="a758fa3f24ecbb89a1ee781c70b637980"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>max_probe_length</b></td></tr>
+<tr class="memitem:a758fa3f24ecbb89a1ee781c70b637980" id="r_a758fa3f24ecbb89a1ee781c70b637980"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a758fa3f24ecbb89a1ee781c70b637980">max_probe_length</a></td></tr>
 <tr class="separator:a758fa3f24ecbb89a1ee781c70b637980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dbfd1205f5f01c27ec04688615d6fbd" id="r_a6dbfd1205f5f01c27ec04688615d6fbd"><td class="memItemLeft" align="right" valign="top"><a id="a6dbfd1205f5f01c27ec04688615d6fbd" name="a6dbfd1205f5f01c27ec04688615d6fbd"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>total_probe_length</b></td></tr>
+<tr class="memitem:a6dbfd1205f5f01c27ec04688615d6fbd" id="r_a6dbfd1205f5f01c27ec04688615d6fbd"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dbfd1205f5f01c27ec04688615d6fbd">total_probe_length</a></td></tr>
 <tr class="separator:a6dbfd1205f5f01c27ec04688615d6fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0201047cf6d4748dac0bea3231d207c7" id="r_a0201047cf6d4748dac0bea3231d207c7"><td class="memItemLeft" align="right" valign="top"><a id="a0201047cf6d4748dac0bea3231d207c7" name="a0201047cf6d4748dac0bea3231d207c7"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hashes_bitwise_or</b></td></tr>
+<tr class="memitem:a0201047cf6d4748dac0bea3231d207c7" id="r_a0201047cf6d4748dac0bea3231d207c7"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0201047cf6d4748dac0bea3231d207c7">hashes_bitwise_or</a></td></tr>
 <tr class="separator:a0201047cf6d4748dac0bea3231d207c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a68146b6e275e3d219763a4c2637982" id="r_a7a68146b6e275e3d219763a4c2637982"><td class="memItemLeft" align="right" valign="top"><a id="a7a68146b6e275e3d219763a4c2637982" name="a7a68146b6e275e3d219763a4c2637982"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hashes_bitwise_and</b></td></tr>
+<tr class="memitem:a7a68146b6e275e3d219763a4c2637982" id="r_a7a68146b6e275e3d219763a4c2637982"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a68146b6e275e3d219763a4c2637982">hashes_bitwise_and</a></td></tr>
 <tr class="separator:a7a68146b6e275e3d219763a4c2637982"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d29062525519871580e2bb2cd163953" id="r_a6d29062525519871580e2bb2cd163953"><td class="memItemLeft" align="right" valign="top"><a id="a6d29062525519871580e2bb2cd163953" name="a6d29062525519871580e2bb2cd163953"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hashes_bitwise_xor</b></td></tr>
+<tr class="memitem:a6d29062525519871580e2bb2cd163953" id="r_a6d29062525519871580e2bb2cd163953"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d29062525519871580e2bb2cd163953">hashes_bitwise_xor</a></td></tr>
 <tr class="separator:a6d29062525519871580e2bb2cd163953"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae03849dd6e44dab2f1931945847ff8c8" id="r_ae03849dd6e44dab2f1931945847ff8c8"><td class="memItemLeft" align="right" valign="top"><a id="ae03849dd6e44dab2f1931945847ff8c8" name="ae03849dd6e44dab2f1931945847ff8c8"></a>
-std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>max_reserve</b></td></tr>
+<tr class="memitem:ae03849dd6e44dab2f1931945847ff8c8" id="r_ae03849dd6e44dab2f1931945847ff8c8"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae03849dd6e44dab2f1931945847ff8c8">max_reserve</a></td></tr>
 <tr class="separator:ae03849dd6e44dab2f1931945847ff8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af99acae0d6a81e7f078945db5a01a006" id="r_af99acae0d6a81e7f078945db5a01a006"><td class="memItemLeft" align="right" valign="top"><a id="af99acae0d6a81e7f078945db5a01a006" name="af99acae0d6a81e7f078945db5a01a006"></a>
-<a class="el" href="../../d4/d02/classabsl_1_1_time.html">absl::Time</a>&#160;</td><td class="memItemRight" valign="bottom"><b>create_time</b></td></tr>
+<tr class="memitem:af99acae0d6a81e7f078945db5a01a006" id="r_af99acae0d6a81e7f078945db5a01a006"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d02/classabsl_1_1_time.html">absl::Time</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af99acae0d6a81e7f078945db5a01a006">create_time</a></td></tr>
 <tr class="separator:af99acae0d6a81e7f078945db5a01a006"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada71228b5d1f95962f49cb448c3a33e0" id="r_ada71228b5d1f95962f49cb448c3a33e0"><td class="memItemLeft" align="right" valign="top"><a id="ada71228b5d1f95962f49cb448c3a33e0" name="ada71228b5d1f95962f49cb448c3a33e0"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
+<tr class="memitem:ada71228b5d1f95962f49cb448c3a33e0" id="r_ada71228b5d1f95962f49cb448c3a33e0"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada71228b5d1f95962f49cb448c3a33e0">depth</a></td></tr>
 <tr class="separator:ada71228b5d1f95962f49cb448c3a33e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afad1dd000331844175b4473a25ec52e6" id="r_afad1dd000331844175b4473a25ec52e6"><td class="memItemLeft" align="right" valign="top"><a id="afad1dd000331844175b4473a25ec52e6" name="afad1dd000331844175b4473a25ec52e6"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>stack</b> [kMaxStackDepth]</td></tr>
+<tr class="memitem:afad1dd000331844175b4473a25ec52e6" id="r_afad1dd000331844175b4473a25ec52e6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afad1dd000331844175b4473a25ec52e6">stack</a> [kMaxStackDepth]</td></tr>
 <tr class="separator:afad1dd000331844175b4473a25ec52e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1fe92eddd55902c562465febec136d6" id="r_ae1fe92eddd55902c562465febec136d6"><td class="memItemLeft" align="right" valign="top"><a id="ae1fe92eddd55902c562465febec136d6" name="ae1fe92eddd55902c562465febec136d6"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>inline_element_size</b></td></tr>
+<tr class="memitem:ae1fe92eddd55902c562465febec136d6" id="r_ae1fe92eddd55902c562465febec136d6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1fe92eddd55902c562465febec136d6">inline_element_size</a></td></tr>
 <tr class="separator:ae1fe92eddd55902c562465febec136d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_structabsl_1_1profiling__internal_1_1_sample"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_structabsl_1_1profiling__internal_1_1_sample')"><img src="../../closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="../../d6/d5c/structabsl_1_1profiling__internal_1_1_sample.html">absl::profiling_internal::Sample&lt; HashtablezInfo &gt;</a></td></tr>
-<tr class="memitem:ae96d051477a60152f431f8178e664e19 inherit pub_attribs_structabsl_1_1profiling__internal_1_1_sample" id="r_ae96d051477a60152f431f8178e664e19"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">absl::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>init_mu</b></td></tr>
+<tr class="memitem:ae96d051477a60152f431f8178e664e19 inherit pub_attribs_structabsl_1_1profiling__internal_1_1_sample" id="r_ae96d051477a60152f431f8178e664e19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">absl::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5c/structabsl_1_1profiling__internal_1_1_sample.html#ae96d051477a60152f431f8178e664e19">init_mu</a></td></tr>
 <tr class="separator:ae96d051477a60152f431f8178e664e19 inherit pub_attribs_structabsl_1_1profiling__internal_1_1_sample"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39c9e4230d47cbb7640e1b648915f532 inherit pub_attribs_structabsl_1_1profiling__internal_1_1_sample" id="r_a39c9e4230d47cbb7640e1b648915f532"><td class="memItemLeft" align="right" valign="top">
-HashtablezInfo *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
+<tr class="memitem:a39c9e4230d47cbb7640e1b648915f532 inherit pub_attribs_structabsl_1_1profiling__internal_1_1_sample" id="r_a39c9e4230d47cbb7640e1b648915f532"><td class="memItemLeft" align="right" valign="top">HashtablezInfo *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5c/structabsl_1_1profiling__internal_1_1_sample.html#a39c9e4230d47cbb7640e1b648915f532">next</a></td></tr>
 <tr class="separator:a39c9e4230d47cbb7640e1b648915f532 inherit pub_attribs_structabsl_1_1profiling__internal_1_1_sample"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a837fdf46a919f3cf86cd502d8c68c87b inherit pub_attribs_structabsl_1_1profiling__internal_1_1_sample" id="r_a837fdf46a919f3cf86cd502d8c68c87b"><td class="memItemLeft" align="right" valign="top">
-int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>weight</b></td></tr>
-<tr class="separator:a837fdf46a919f3cf86cd502d8c68c87b inherit pub_attribs_structabsl_1_1profiling__internal_1_1_sample"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a6c30e3e6b17ba42f99d2d1c99df67242" id="r_a6c30e3e6b17ba42f99d2d1c99df67242"><td class="memItemLeft" align="right" valign="top"><a id="a6c30e3e6b17ba42f99d2d1c99df67242" name="a6c30e3e6b17ba42f99d2d1c99df67242"></a>
-static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>kMaxStackDepth</b> = 64</td></tr>
+<tr class="memitem:a6c30e3e6b17ba42f99d2d1c99df67242" id="r_a6c30e3e6b17ba42f99d2d1c99df67242"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c30e3e6b17ba42f99d2d1c99df67242">kMaxStackDepth</a> = 64</td></tr>
 <tr class="separator:a6c30e3e6b17ba42f99d2d1c99df67242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00061">61</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7aeffb48ef15680b9e1164948ac6f378" name="a7aeffb48ef15680b9e1164948ac6f378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aeffb48ef15680b9e1164948ac6f378">&#9670;&#160;</a></span>PrepareForSampling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void absl::container_internal::HashtablezInfo::PrepareForSampling </td>
+          <td>(</td>
+          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>stride</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inline_element_size_value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/dd9/hashtablez__sampler_8cc_source.html#l00072">72</a> of file <a class="el" href="../../d7/dd9/hashtablez__sampler_8cc_source.html">hashtablez_sampler.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   73</span>                                                                          {</div>
+<div class="line"><span class="lineno">   74</span>  capacity.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   75</span>  size.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   76</span>  num_erases.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   77</span>  num_rehashes.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   78</span>  max_probe_length.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   79</span>  total_probe_length.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   80</span>  hashes_bitwise_or.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   81</span>  hashes_bitwise_and.store(~<span class="keywordtype">size_t</span>{}, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   82</span>  hashes_bitwise_xor.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   83</span>  max_reserve.store(0, std::memory_order_relaxed);</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>  create_time = absl::Now();</div>
+<div class="line"><span class="lineno">   86</span>  weight = stride;</div>
+<div class="line"><span class="lineno">   87</span>  <span class="comment">// The inliner makes hardcoded skip_count difficult (especially when combined</span></div>
+<div class="line"><span class="lineno">   88</span>  <span class="comment">// with LTO).  We use the ability to exclude stacks by regex when encoding</span></div>
+<div class="line"><span class="lineno">   89</span>  <span class="comment">// instead.</span></div>
+<div class="line"><span class="lineno">   90</span>  depth = absl::GetStackTrace(stack, HashtablezInfo::kMaxStackDepth,</div>
+<div class="line"><span class="lineno">   91</span>                              <span class="comment">/* skip_count= */</span> 0);</div>
+<div class="line"><span class="lineno">   92</span>  inline_element_size = inline_element_size_value;</div>
+<div class="line"><span class="lineno">   93</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8e44db31e4980a5e6f1f66efcaadd556" name="a8e44db31e4980a5e6f1f66efcaadd556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e44db31e4980a5e6f1f66efcaadd556">&#9670;&#160;</a></span>capacity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::capacity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00075">75</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="af99acae0d6a81e7f078945db5a01a006" name="af99acae0d6a81e7f078945db5a01a006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99acae0d6a81e7f078945db5a01a006">&#9670;&#160;</a></span>create_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d02/classabsl_1_1_time.html">absl::Time</a> absl::container_internal::HashtablezInfo::create_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00092">92</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="ada71228b5d1f95962f49cb448c3a33e0" name="ada71228b5d1f95962f49cb448c3a33e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada71228b5d1f95962f49cb448c3a33e0">&#9670;&#160;</a></span>depth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t absl::container_internal::HashtablezInfo::depth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00093">93</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="a7a68146b6e275e3d219763a4c2637982" name="a7a68146b6e275e3d219763a4c2637982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a68146b6e275e3d219763a4c2637982">&#9670;&#160;</a></span>hashes_bitwise_and</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::hashes_bitwise_and</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00082">82</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="a0201047cf6d4748dac0bea3231d207c7" name="a0201047cf6d4748dac0bea3231d207c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0201047cf6d4748dac0bea3231d207c7">&#9670;&#160;</a></span>hashes_bitwise_or</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::hashes_bitwise_or</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00081">81</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="a6d29062525519871580e2bb2cd163953" name="a6d29062525519871580e2bb2cd163953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d29062525519871580e2bb2cd163953">&#9670;&#160;</a></span>hashes_bitwise_xor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::hashes_bitwise_xor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00083">83</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="ae1fe92eddd55902c562465febec136d6" name="ae1fe92eddd55902c562465febec136d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1fe92eddd55902c562465febec136d6">&#9670;&#160;</a></span>inline_element_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t absl::container_internal::HashtablezInfo::inline_element_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00095">95</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="a6c30e3e6b17ba42f99d2d1c99df67242" name="a6c30e3e6b17ba42f99d2d1c99df67242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c30e3e6b17ba42f99d2d1c99df67242">&#9670;&#160;</a></span>kMaxStackDepth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int absl::container_internal::HashtablezInfo::kMaxStackDepth = 64</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00091">91</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="a758fa3f24ecbb89a1ee781c70b637980" name="a758fa3f24ecbb89a1ee781c70b637980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a758fa3f24ecbb89a1ee781c70b637980">&#9670;&#160;</a></span>max_probe_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::max_probe_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00079">79</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="ae03849dd6e44dab2f1931945847ff8c8" name="ae03849dd6e44dab2f1931945847ff8c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae03849dd6e44dab2f1931945847ff8c8">&#9670;&#160;</a></span>max_reserve</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::max_reserve</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00084">84</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="ac893dfbf4f27d8f5386bf3f9676ca755" name="ac893dfbf4f27d8f5386bf3f9676ca755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac893dfbf4f27d8f5386bf3f9676ca755">&#9670;&#160;</a></span>num_erases</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::num_erases</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00077">77</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="acc0f390bb6bc454ef61c3bafc0d6632a" name="acc0f390bb6bc454ef61c3bafc0d6632a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0f390bb6bc454ef61c3bafc0d6632a">&#9670;&#160;</a></span>num_rehashes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::num_rehashes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00078">78</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="abbce18b4feee0889e6c9cefc9564e0b1" name="abbce18b4feee0889e6c9cefc9564e0b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbce18b4feee0889e6c9cefc9564e0b1">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00076">76</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00296">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState::__init__()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00569">open_spiel.python.mfg.games.crowd_avoidance.Observer::__init__()</a>, <a class="el" href="../../d6/d81/crowd__modelling_8py_source.html#l00105">open_spiel.python.mfg.games.crowd_modelling.MFGCrowdModellingState::__init__()</a>, <a class="el" href="../../d6/d81/crowd__modelling_8py_source.html#l00269">open_spiel.python.mfg.games.crowd_modelling.Observer::__init__()</a>, <a class="el" href="../../d1/d4d/linear__quadratic_8py_source.html#l00133">open_spiel.python.mfg.games.linear_quadratic.MFGLinearQuadraticState::__init__()</a>, <a class="el" href="../../d1/d4d/linear__quadratic_8py_source.html#l00378">open_spiel.python.mfg.games.linear_quadratic.Observer::__init__()</a>, <a class="el" href="../../dd/d6d/normal__form__game_8py_source.html#l00141">open_spiel.python.mfg.games.normal_form_game.MFGNormalFormState::__init__()</a>, <a class="el" href="../../dd/d6d/normal__form__game_8py_source.html#l00267">open_spiel.python.mfg.games.normal_form_game.Observer::__init__()</a>, <a class="el" href="../../db/dd4/periodic__aversion_8py_source.html#l00154">open_spiel.python.mfg.games.periodic_aversion.MFGPeriodicAversionState::__init__()</a>, <a class="el" href="../../db/dd4/periodic__aversion_8py_source.html#l00381">open_spiel.python.mfg.games.periodic_aversion.Observer::__init__()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00295">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState::__init__()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00550">open_spiel.python.mfg.games.predator_prey.Observer::__init__()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00425">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState::_apply_action()</a>, <a class="el" href="../../d6/d81/crowd__modelling_8py_source.html#l00163">open_spiel.python.mfg.games.crowd_modelling.MFGCrowdModellingState::_apply_action()</a>, <a class="el" href="../../d1/d4d/linear__quadratic_8py_source.html#l00198">open_spiel.python.mfg.games.linear_quadratic.MFGLinearQuadraticState::_apply_action()</a>, <a class="el" href="../../db/dd4/periodic__aversion_8py_source.html#l00221">open_spiel.python.mfg.games.periodic_aversion.MFGPeriodicAversionState::_apply_action()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00408">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState::_apply_action()</a>, <a class="el" href="../../d6/d81/crowd__modelling_8py_source.html#l00236">open_spiel.python.mfg.games.crowd_modelling.MFGCrowdModellingState::_rewards()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00370">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState::chance_outcomes()</a>, <a class="el" href="../../d1/d4d/linear__quadratic_8py_source.html#l00275">open_spiel.python.mfg.games.linear_quadratic.MFGLinearQuadraticState::distribution_average()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00461">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState::distribution_support()</a>, <a class="el" href="../../d6/d81/crowd__modelling_8py_source.html#l00201">open_spiel.python.mfg.games.crowd_modelling.MFGCrowdModellingState::distribution_support()</a>, <a class="el" href="../../d1/d4d/linear__quadratic_8py_source.html#l00268">open_spiel.python.mfg.games.linear_quadratic.MFGLinearQuadraticState::distribution_support()</a>, <a class="el" href="../../db/dd4/periodic__aversion_8py_source.html#l00279">open_spiel.python.mfg.games.periodic_aversion.MFGPeriodicAversionState::distribution_support()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00444">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState::distribution_support()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00477">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState::get_pos_proba()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00460">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState::get_pos_proba()</a>, <a class="el" href="../../db/dd4/periodic__aversion_8py_source.html#l00286">open_spiel.python.mfg.games.periodic_aversion.MFGPeriodicAversionState::get_state_proba()</a>, <a class="el" href="../../d4/d71/algorithms_2rcfr_8py_source.html#l00810">open_spiel.python.algorithms.rcfr.ReservoirBuffer::insert()</a>, <a class="el" href="../../d0/d00/pytorch_2rcfr_8py_source.html#l00794">open_spiel.python.pytorch.rcfr.ReservoirBuffer::insert()</a>, <a class="el" href="../../d4/d71/algorithms_2rcfr_8py_source.html#l00826">open_spiel.python.algorithms.rcfr.ReservoirBuffer::num_available_spaces()</a>, <a class="el" href="../../d0/d00/pytorch_2rcfr_8py_source.html#l00810">open_spiel.python.pytorch.rcfr.ReservoirBuffer::num_available_spaces()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00583">open_spiel.python.mfg.games.crowd_avoidance.Observer::set_from()</a>, <a class="el" href="../../d6/d81/crowd__modelling_8py_source.html#l00279">open_spiel.python.mfg.games.crowd_modelling.Observer::set_from()</a>, <a class="el" href="../../d1/d4d/linear__quadratic_8py_source.html#l00391">open_spiel.python.mfg.games.linear_quadratic.Observer::set_from()</a>, <a class="el" href="../../db/dd4/periodic__aversion_8py_source.html#l00391">open_spiel.python.mfg.games.periodic_aversion.Observer::set_from()</a>, <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00564">open_spiel.python.mfg.games.predator_prey.Observer::set_from()</a>, <a class="el" href="../../d8/da8/crowd__avoidance_8py_source.html#l00401">open_spiel.python.mfg.games.crowd_avoidance.MFGCrowdAvoidanceState::update_pos()</a>, and <a class="el" href="../../d9/dd4/predator__prey_8py_source.html#l00388">open_spiel.python.mfg.games.predator_prey.MFGPredatorPreyState::update_pos()</a>.</p>
+
+</div>
+</div>
+<a id="afad1dd000331844175b4473a25ec52e6" name="afad1dd000331844175b4473a25ec52e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad1dd000331844175b4473a25ec52e6">&#9670;&#160;</a></span>stack</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* absl::container_internal::HashtablezInfo::stack[kMaxStackDepth]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00094">94</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
+<a id="a6dbfd1205f5f01c27ec04688615d6fbd" name="a6dbfd1205f5f01c27ec04688615d6fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dbfd1205f5f01c27ec04688615d6fbd">&#9670;&#160;</a></span>total_probe_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;size_t&gt; absl::container_internal::HashtablezInfo::total_probe_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html#l00080">80</a> of file <a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../dc/ddd/hashtablez__sampler_8h_source.html">hashtablez_sampler.h</a></li>
-<li>open_spiel/abseil-cpp/absl/container/internal/<b>hashtablez_sampler.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../d7/dd9/hashtablez__sampler_8cc_source.html">hashtablez_sampler.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

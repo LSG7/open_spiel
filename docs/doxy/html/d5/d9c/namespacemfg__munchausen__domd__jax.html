@@ -93,14 +93,12 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af97d27b80d8e9fa66941814afcd2952b" id="r_af97d27b80d8e9fa66941814afcd2952b"><td class="memItemLeft" align="right" valign="top"><a id="af97d27b80d8e9fa66941814afcd2952b" name="af97d27b80d8e9fa66941814afcd2952b"></a>
-None&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (Sequence[str] argv)</td></tr>
+<tr class="memitem:af97d27b80d8e9fa66941814afcd2952b" id="r_af97d27b80d8e9fa66941814afcd2952b"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af97d27b80d8e9fa66941814afcd2952b">main</a> (Sequence[str] argv)</td></tr>
 <tr class="separator:af97d27b80d8e9fa66941814afcd2952b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aee6d85a675d12d0e44324b1da201b3ed" id="r_aee6d85a675d12d0e44324b1da201b3ed"><td class="memItemLeft" align="right" valign="top"><a id="aee6d85a675d12d0e44324b1da201b3ed" name="aee6d85a675d12d0e44324b1da201b3ed"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:aee6d85a675d12d0e44324b1da201b3ed" id="r_aee6d85a675d12d0e44324b1da201b3ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee6d85a675d12d0e44324b1da201b3ed">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:aee6d85a675d12d0e44324b1da201b3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad84ba00d9676204ec866e25ab997dda" id="r_aad84ba00d9676204ec866e25ab997dda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad84ba00d9676204ec866e25ab997dda">_ENV_SETTING</a></td></tr>
 <tr class="separator:aad84ba00d9676204ec866e25ab997dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,7 +134,133 @@ Variables</h2></td></tr>
 <tr class="separator:a944cbc782d199109987c9fec2dc52e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Run deep online mirror descent algorithm with Munchausen DQN agents.</pre> </div><h2 class="groupheader">Variable Documentation</h2>
+<div class="textblock"><pre class="fragment">Run deep online mirror descent algorithm with Munchausen DQN agents.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="af97d27b80d8e9fa66941814afcd2952b" name="af97d27b80d8e9fa66941814afcd2952b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97d27b80d8e9fa66941814afcd2952b">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> None mfg_munchausen_domd_jax.main </td>
+          <td>(</td>
+          <td class="paramtype">Sequence[str]</td>          <td class="paramname"><span class="paramname"><em>argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00124">124</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(argv: Sequence[str]) -&gt; <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">if</span> len(argv) &gt; 1:</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">raise</span> app.UsageError(<span class="stringliteral">&quot;Too many command-line arguments.&quot;</span>)</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  game = factory.create_game_with_setting(FLAGS.game_name, _ENV_SETTING.value)</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>  num_players = game.num_players()</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>  <span class="comment"># Create the environments with uniform initial policy.</span></div>
+<div class="line"><span class="lineno">  133</span>  uniform_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">  134</span>  uniform_dist = distribution.DistributionPolicy(game, uniform_policy)</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>  envs = [</div>
+<div class="line"><span class="lineno">  137</span>      rl_environment.Environment(  <span class="comment"># pylint: disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">  138</span>          game,</div>
+<div class="line"><span class="lineno">  139</span>          mfg_distribution=uniform_dist,</div>
+<div class="line"><span class="lineno">  140</span>          mfg_population=p,</div>
+<div class="line"><span class="lineno">  141</span>          observation_type=rl_environment.ObservationType.OBSERVATION,</div>
+<div class="line"><span class="lineno">  142</span>      )</div>
+<div class="line"><span class="lineno">  143</span>      <span class="keywordflow">for</span> p <span class="keywordflow">in</span> range(num_players)</div>
+<div class="line"><span class="lineno">  144</span>  ]</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>  env = envs[0]</div>
+<div class="line"><span class="lineno">  147</span>  info_state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">  148</span>  num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>  <span class="comment"># Create the agents.</span></div>
+<div class="line"><span class="lineno">  151</span>  kwargs = {</div>
+<div class="line"><span class="lineno">  152</span>      <span class="stringliteral">&quot;alpha&quot;</span>: FLAGS.alpha,</div>
+<div class="line"><span class="lineno">  153</span>      <span class="stringliteral">&quot;batch_size&quot;</span>: _BATCH_SIZE.value,</div>
+<div class="line"><span class="lineno">  154</span>      <span class="stringliteral">&quot;discount_factor&quot;</span>: _DISCOUNT_FACTOR.value,</div>
+<div class="line"><span class="lineno">  155</span>      <span class="stringliteral">&quot;epsilon_decay_duration&quot;</span>: _EPSILON_DECAY_DURATION.value,</div>
+<div class="line"><span class="lineno">  156</span>      <span class="stringliteral">&quot;epsilon_end&quot;</span>: FLAGS.epsilon_end,</div>
+<div class="line"><span class="lineno">  157</span>      <span class="stringliteral">&quot;epsilon_power&quot;</span>: FLAGS.epsilon_power,</div>
+<div class="line"><span class="lineno">  158</span>      <span class="stringliteral">&quot;epsilon_start&quot;</span>: FLAGS.epsilon_start,</div>
+<div class="line"><span class="lineno">  159</span>      <span class="stringliteral">&quot;gradient_clipping&quot;</span>: FLAGS.gradient_clipping,</div>
+<div class="line"><span class="lineno">  160</span>      <span class="stringliteral">&quot;hidden_layers_sizes&quot;</span>: [int(l) <span class="keywordflow">for</span> l <span class="keywordflow">in</span> _HIDDEN_LAYERS_SIZES.value],</div>
+<div class="line"><span class="lineno">  161</span>      <span class="stringliteral">&quot;huber_loss_parameter&quot;</span>: FLAGS.huber_loss_parameter,</div>
+<div class="line"><span class="lineno">  162</span>      <span class="stringliteral">&quot;learn_every&quot;</span>: _LEARN_EVERY.value,</div>
+<div class="line"><span class="lineno">  163</span>      <span class="stringliteral">&quot;learning_rate&quot;</span>: FLAGS.learning_rate,</div>
+<div class="line"><span class="lineno">  164</span>      <span class="stringliteral">&quot;loss&quot;</span>: FLAGS.loss,</div>
+<div class="line"><span class="lineno">  165</span>      <span class="stringliteral">&quot;min_buffer_size_to_learn&quot;</span>: _MIN_BUFFER_SIZE_TO_LEARN.value,</div>
+<div class="line"><span class="lineno">  166</span>      <span class="stringliteral">&quot;optimizer&quot;</span>: FLAGS.optimizer,</div>
+<div class="line"><span class="lineno">  167</span>      <span class="stringliteral">&quot;replay_buffer_capacity&quot;</span>: _REPLAY_BUFFER_CAPACITY.value,</div>
+<div class="line"><span class="lineno">  168</span>      <span class="stringliteral">&quot;reset_replay_buffer_on_update&quot;</span>: _RESET_REPLAY_BUFFER_ON_UPDATE.value,</div>
+<div class="line"><span class="lineno">  169</span>      <span class="stringliteral">&quot;seed&quot;</span>: FLAGS.seed,</div>
+<div class="line"><span class="lineno">  170</span>      <span class="stringliteral">&quot;tau&quot;</span>: FLAGS.tau,</div>
+<div class="line"><span class="lineno">  171</span>      <span class="stringliteral">&quot;update_target_network_every&quot;</span>: _UPDATE_TARGET_NETWORK_EVERY.value,</div>
+<div class="line"><span class="lineno">  172</span>      <span class="stringliteral">&quot;with_munchausen&quot;</span>: _WITH_MUNCHAUSEN.value,</div>
+<div class="line"><span class="lineno">  173</span>  }</div>
+<div class="line"><span class="lineno">  174</span>  agents = [</div>
+<div class="line"><span class="lineno">  175</span>      munchausen_deep_mirror_descent.MunchausenDQN(</div>
+<div class="line"><span class="lineno">  176</span>          p, info_state_size, num_actions, **kwargs</div>
+<div class="line"><span class="lineno">  177</span>      )</div>
+<div class="line"><span class="lineno">  178</span>      <span class="keywordflow">for</span> p <span class="keywordflow">in</span> range(num_players)</div>
+<div class="line"><span class="lineno">  179</span>  ]</div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span>  <span class="comment"># Metrics writer will also log the metrics to stderr.</span></div>
+<div class="line"><span class="lineno">  182</span>  just_logging = _LOGDIR.value <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">or</span> jax.host_id() &gt; 0</div>
+<div class="line"><span class="lineno">  183</span>  writer = metrics.create_default_writer(</div>
+<div class="line"><span class="lineno">  184</span>      logdir=_LOGDIR.value, just_logging=just_logging</div>
+<div class="line"><span class="lineno">  185</span>  )</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>  <span class="comment"># # Save the parameters.</span></div>
+<div class="line"><span class="lineno">  188</span>  writer.write_hparams(kwargs)</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>  <span class="keyword">def </span>logging_fn(it, episode, vals):</div>
+<div class="line"><span class="lineno">  191</span>    writer.write_scalars(it * num_episodes_per_iteration + episode, vals)</div>
+<div class="line"><span class="lineno">  192</span> </div>
+<div class="line"><span class="lineno">  193</span>  num_episodes_per_iteration = _NUM_EPISODES_PER_ITERATION.value</div>
+<div class="line"><span class="lineno">  194</span>  md = munchausen_deep_mirror_descent.DeepOnlineMirrorDescent(</div>
+<div class="line"><span class="lineno">  195</span>      game,</div>
+<div class="line"><span class="lineno">  196</span>      envs,</div>
+<div class="line"><span class="lineno">  197</span>      agents,</div>
+<div class="line"><span class="lineno">  198</span>      eval_every=_EVAL_EVERY.value,</div>
+<div class="line"><span class="lineno">  199</span>      num_episodes_per_iteration=num_episodes_per_iteration,</div>
+<div class="line"><span class="lineno">  200</span>      logging_fn=logging_fn,</div>
+<div class="line"><span class="lineno">  201</span>  )</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>  <span class="keyword">def </span>log_metrics(it):</div>
+<div class="line"><span class="lineno">  204</span>    <span class="stringliteral">&quot;&quot;&quot;Logs the training metrics for each iteration.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  205</span>    initial_states = game.new_initial_states()</div>
+<div class="line"><span class="lineno">  206</span>    pi_value = policy_value.PolicyValue(game, md.distribution, md.policy)</div>
+<div class="line"><span class="lineno">  207</span>    m = {</div>
+<div class="line"><span class="lineno">  208</span>        f<span class="stringliteral">&quot;best_response/{state}&quot;</span>: pi_value.eval_state(state)</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">for</span> state <span class="keywordflow">in</span> initial_states</div>
+<div class="line"><span class="lineno">  210</span>    }</div>
+<div class="line"><span class="lineno">  211</span>    nash_conv_md = nash_conv.NashConv(game, md.policy).nash_conv()</div>
+<div class="line"><span class="lineno">  212</span>    m[<span class="stringliteral">&quot;nash_conv_md&quot;</span>] = nash_conv_md</div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">if</span> _LOG_DISTRIBUTION.value <span class="keywordflow">and</span> _LOGDIR.value:</div>
+<div class="line"><span class="lineno">  214</span>      <span class="comment"># We log distribution directly to a Pickle file as it may be large for</span></div>
+<div class="line"><span class="lineno">  215</span>      <span class="comment"># logging as a metric.</span></div>
+<div class="line"><span class="lineno">  216</span>      filename = os.path.join(_LOGDIR.value, f<span class="stringliteral">&quot;distribution_{it}.pkl&quot;</span>)</div>
+<div class="line"><span class="lineno">  217</span>      utils.save_parametric_distribution(md.distribution, filename)</div>
+<div class="line"><span class="lineno">  218</span>    logging_fn(it, 0, m)</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>  log_metrics(0)</div>
+<div class="line"><span class="lineno">  221</span>  <span class="keywordflow">for</span> it <span class="keywordflow">in</span> range(1, FLAGS.num_iterations + 1):</div>
+<div class="line"><span class="lineno">  222</span>    md.iteration()</div>
+<div class="line"><span class="lineno">  223</span>    log_metrics(it)</div>
+<div class="line"><span class="lineno">  224</span> </div>
+<div class="line"><span class="lineno">  225</span>  <span class="comment"># Make sure all values were written.</span></div>
+<div class="line"><span class="lineno">  226</span>  writer.flush()</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
 <a id="aed4524db446f1f98222ac076efc63f37" name="aed4524db446f1f98222ac076efc63f37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed4524db446f1f98222ac076efc63f37">&#9670;&#160;</a></span>_BATCH_SIZE</h2>
 
@@ -160,6 +284,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;batch_size&quot;</span>, 128, <span class="stringliteral">&quot;Number of transitions to sample at each learning step.&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00043">43</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="ab4a5e7f65de04387dd4261fcb2744e2e" name="ab4a5e7f65de04387dd4261fcb2744e2e"></a>
@@ -185,6 +311,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;checkpoint_dir&quot;</span>, <span class="stringliteral">&quot;/tmp/dqn_test&quot;</span>, <span class="stringliteral">&quot;Directory to save/load the agent.&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00110">110</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="ab48eb43b9cb10cb2297f61a2420e0dc2" name="ab48eb43b9cb10cb2297f61a2420e0dc2"></a>
@@ -210,6 +338,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;discount_factor&quot;</span>, 1.0, <span class="stringliteral">&quot;Discount factor for future rewards.&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00063">63</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="aad84ba00d9676204ec866e25ab997dda" name="aad84ba00d9676204ec866e25ab997dda"></a>
@@ -237,6 +367,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;Name of the game settings. If None, the game name will be used.&quot;</span>,</div>
 <div class="line"><span class="lineno">    5</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00036">36</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="ab681a13cecd6744e020318e1ed18b146" name="ab681a13cecd6744e020318e1ed18b146"></a>
@@ -264,6 +396,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;Number of game steps over which epsilon is decayed.&quot;</span>,</div>
 <div class="line"><span class="lineno">    5</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00055">55</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="a019b34f28343ed00d558adfbd3de242a" name="a019b34f28343ed00d558adfbd3de242a"></a>
@@ -289,6 +423,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;eval_every&quot;</span>, 200, <span class="stringliteral">&quot;Episode frequency at which the agents are evaluated.&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00073">73</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="af79f6074e85fcc8ca3bfae9a76dac607" name="af79f6074e85fcc8ca3bfae9a76dac607"></a>
@@ -316,6 +452,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;Number of hidden units in the avg-net and Q-net.&quot;</span>,</div>
 <div class="line"><span class="lineno">    5</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00077">77</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="aa86841f52b87b7fde9b0292801fe2d22" name="aa86841f52b87b7fde9b0292801fe2d22"></a>
@@ -341,6 +479,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;learn_every&quot;</span>, 64, <span class="stringliteral">&quot;Number of steps between learning updates.&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00046">46</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="a944cbc782d199109987c9fec2dc52e32" name="a944cbc782d199109987c9fec2dc52e32"></a>
@@ -366,6 +506,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;log_distribution&quot;</span>, <span class="keyword">False</span>, <span class="stringliteral">&quot;Enables logging of the distribution.&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00119">119</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="ad64d3e8f257928028f48f696e677e24b" name="ad64d3e8f257928028f48f696e677e24b"></a>
@@ -394,6 +536,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    5</span>    <span class="stringliteral">&quot;be logged to stderr.&quot;</span>,</div>
 <div class="line"><span class="lineno">    6</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00113">113</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="acf5d3af19b3d35b4e6fddfb8b4b7489b" name="acf5d3af19b3d35b4e6fddfb8b4b7489b"></a>
@@ -421,6 +565,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;Number of samples in buffer before learning begins.&quot;</span>,</div>
 <div class="line"><span class="lineno">    5</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00091">91</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="a99fcb8a276332f9b544ab03084f8546e" name="a99fcb8a276332f9b544ab03084f8546e"></a>
@@ -448,6 +594,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;Number of training eepisodes for each iteration.&quot;</span>,</div>
 <div class="line"><span class="lineno">    5</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00049">49</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="a4a64cb9c86c7995033c5c7134bd59894" name="a4a64cb9c86c7995033c5c7134bd59894"></a>
@@ -473,6 +621,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;replay_buffer_capacity&quot;</span>, 40000, <span class="stringliteral">&quot;Size of the replay buffer.&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00088">88</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="a3cd1691e784143487a670ad658cc0c6f" name="a3cd1691e784143487a670ad658cc0c6f"></a>
@@ -500,6 +650,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;Reset the replay buffer when the softmax policy is updated.&quot;</span>,</div>
 <div class="line"><span class="lineno">    5</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00066">66</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="a2b88b559890be0adf51a73344a0260e1" name="a2b88b559890be0adf51a73344a0260e1"></a>
@@ -527,6 +679,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    4</span>    <span class="stringliteral">&quot;Number of steps between DQN target network updates.&quot;</span>,</div>
 <div class="line"><span class="lineno">    5</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00082">82</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 <a id="a1391c2d4b260bfc4df61e1484b8f09c2" name="a1391c2d4b260bfc4df61e1484b8f09c2"></a>
@@ -552,6 +706,24 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;with_munchausen&quot;</span>, <span class="keyword">True</span>, <span class="stringliteral">&quot;If true, target uses Munchausen penalty terms.&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00105">105</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
+</div>
+</div>
+<a id="aee6d85a675d12d0e44324b1da201b3ed" name="aee6d85a675d12d0e44324b1da201b3ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee6d85a675d12d0e44324b1da201b3ed">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mfg_munchausen_domd_jax.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html#l00033">33</a> of file <a class="el" href="../../d4/da3/mfg__munchausen__domd__jax_8py_source.html">mfg_munchausen_domd_jax.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

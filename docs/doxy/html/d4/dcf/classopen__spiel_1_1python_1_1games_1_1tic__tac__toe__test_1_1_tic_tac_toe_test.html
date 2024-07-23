@@ -134,7 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea39e13b3d4806dc3d36fe8ad0469134" id="r_aea39e13b3d4806dc3d36fe8ad0469134"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea39e13b3d4806dc3d36fe8ad0469134">test_consistent</a> (self)</td></tr>
 <tr class="separator:aea39e13b3d4806dc3d36fe8ad0469134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af2e9ae2899a54f81f070d61f30f6d95c" name="af2e9ae2899a54f81f070d61f30f6d95c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2e9ae2899a54f81f070d61f30f6d95c">&#9670;&#160;</a></span>test_can_create_game_and_state()</h2>
 
@@ -150,6 +153,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks we can create the game and a state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>  <span class="keyword">def </span>test_can_create_game_and_state(self):</div>
+<div class="line"><span class="lineno">   35</span>    <span class="stringliteral">&quot;&quot;&quot;Checks we can create the game and a state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   36</span>    game = tic_tac_toe.TicTacToeGame()</div>
+<div class="line"><span class="lineno">   37</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   38</span>    self.assertEqual(str(state), <span class="stringliteral">&quot;...\n...\n...&quot;</span>)</div>
+<div class="line"><span class="lineno">   39</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9907235ae235e3cd56a98f04cd0cd570" name="a9907235ae235e3cd56a98f04cd0cd570"></a>
@@ -167,6 +178,26 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Check we can clone states successfully.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00117">117</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  117</span>  <span class="keyword">def </span>test_cloned_state_matches_original_state(self):</div>
+<div class="line"><span class="lineno">  118</span>    <span class="stringliteral">&quot;&quot;&quot;Check we can clone states successfully.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  119</span>    game = tic_tac_toe.TicTacToeGame()</div>
+<div class="line"><span class="lineno">  120</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">  121</span>    state.apply_action(1)</div>
+<div class="line"><span class="lineno">  122</span>    state.apply_action(2)</div>
+<div class="line"><span class="lineno">  123</span>    clone = state.clone()</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    self.assertEqual(state.history(), clone.history())</div>
+<div class="line"><span class="lineno">  126</span>    self.assertEqual(state.num_players(), clone.num_players())</div>
+<div class="line"><span class="lineno">  127</span>    self.assertEqual(state.move_number(), clone.move_number())</div>
+<div class="line"><span class="lineno">  128</span>    self.assertEqual(state.num_distinct_actions(), clone.num_distinct_actions())</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    self.assertEqual(state._cur_player, clone._cur_player)</div>
+<div class="line"><span class="lineno">  131</span>    self.assertEqual(state._player0_score, clone._player0_score)</div>
+<div class="line"><span class="lineno">  132</span>    self.assertEqual(state._is_terminal, clone._is_terminal)</div>
+<div class="line"><span class="lineno">  133</span>    np.testing.assert_array_equal(state.board, clone.board)</div>
+<div class="line"><span class="lineno">  134</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aea39e13b3d4806dc3d36fe8ad0469134" name="aea39e13b3d4806dc3d36fe8ad0469134"></a>
@@ -184,6 +215,26 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks the Python and C++ game implementations are the same.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00135">135</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>  <span class="keyword">def </span>test_consistent(self):</div>
+<div class="line"><span class="lineno">  136</span>    <span class="stringliteral">&quot;&quot;&quot;Checks the Python and C++ game implementations are the same.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  137</span>    py_game = pyspiel.load_game(<span class="stringliteral">&quot;python_tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">  138</span>    cc_game = pyspiel.load_game(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">  139</span>    py_obs = make_observation(py_game)</div>
+<div class="line"><span class="lineno">  140</span>    cc_obs = make_observation(cc_game)</div>
+<div class="line"><span class="lineno">  141</span>    py_states = get_all_states(py_game, to_string=str)</div>
+<div class="line"><span class="lineno">  142</span>    cc_states = get_all_states(cc_game, to_string=str)</div>
+<div class="line"><span class="lineno">  143</span>    self.assertCountEqual(list(cc_states), list(py_states))</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">for</span> key, cc_state <span class="keywordflow">in</span> cc_states.items():</div>
+<div class="line"><span class="lineno">  145</span>      py_state = py_states[key]</div>
+<div class="line"><span class="lineno">  146</span>      np.testing.assert_array_equal(py_state.history(), cc_state.history())</div>
+<div class="line"><span class="lineno">  147</span>      np.testing.assert_array_equal(py_state.returns(), cc_state.returns())</div>
+<div class="line"><span class="lineno">  148</span>      py_obs.set_from(py_state, 0)</div>
+<div class="line"><span class="lineno">  149</span>      cc_obs.set_from(cc_state, 0)</div>
+<div class="line"><span class="lineno">  150</span>      np.testing.assert_array_equal(py_obs.tensor, cc_obs.tensor)</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ae8813bd01b2c5535061ff2335957d3b5" name="ae8813bd01b2c5535061ff2335957d3b5"></a>
@@ -201,6 +252,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Runs our standard game tests, checking API consistency.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00058">58</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>  <span class="keyword">def </span>test_game_from_cc(self):</div>
+<div class="line"><span class="lineno">   59</span>    <span class="stringliteral">&quot;&quot;&quot;Runs our standard game tests, checking API consistency.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   60</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">   61</span>    pyspiel.random_sim_test(game, num_sims=10, serialize=<span class="keyword">False</span>, verbose=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   62</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a54e1fa916afb40efc8b30939b63cd3dc" name="a54e1fa916afb40efc8b30939b63cd3dc"></a>
@@ -218,6 +276,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks observation tensor is the same from C++ and from Python.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00089">89</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>  <span class="keyword">def </span>test_observation_tensors_same(self):</div>
+<div class="line"><span class="lineno">   90</span>    <span class="stringliteral">&quot;&quot;&quot;Checks observation tensor is the same from C++ and from Python.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   91</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">   92</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">for</span> a <span class="keywordflow">in</span> [4, 5, 2, 3]:</div>
+<div class="line"><span class="lineno">   94</span>      state.apply_action(a)</div>
+<div class="line"><span class="lineno">   95</span>    py_obs = make_observation(game)</div>
+<div class="line"><span class="lineno">   96</span>    py_obs.set_from(state, state.current_player())</div>
+<div class="line"><span class="lineno">   97</span>    cc_obs = state.observation_tensor()</div>
+<div class="line"><span class="lineno">   98</span>    np.testing.assert_array_equal(py_obs.tensor, cc_obs)</div>
+<div class="line"><span class="lineno">   99</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad88d6c0a74c7b8f5b3c435569e70c549" name="ad88d6c0a74c7b8f5b3c435569e70c549"></a>
@@ -235,6 +306,25 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks pickling and unpickling of game and state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00100">100</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>  <span class="keyword">def </span>test_pickle(self):</div>
+<div class="line"><span class="lineno">  101</span>    <span class="stringliteral">&quot;&quot;&quot;Checks pickling and unpickling of game and state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  102</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;python_tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">  103</span>    pickled_game = pickle.dumps(game)</div>
+<div class="line"><span class="lineno">  104</span>    unpickled_game = pickle.loads(pickled_game)</div>
+<div class="line"><span class="lineno">  105</span>    self.assertEqual(str(game), str(unpickled_game))</div>
+<div class="line"><span class="lineno">  106</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">for</span> a <span class="keywordflow">in</span> [4, 2, 3, 7]:</div>
+<div class="line"><span class="lineno">  108</span>      state.apply_action(a)</div>
+<div class="line"><span class="lineno">  109</span>    ser_str = pyspiel.serialize_game_and_state(game, state)</div>
+<div class="line"><span class="lineno">  110</span>    new_game, new_state = pyspiel.deserialize_game_and_state(ser_str)</div>
+<div class="line"><span class="lineno">  111</span>    self.assertEqual(str(game), str(new_game))</div>
+<div class="line"><span class="lineno">  112</span>    self.assertEqual(str(state), str(new_state))</div>
+<div class="line"><span class="lineno">  113</span>    pickled_state = pickle.dumps(state)</div>
+<div class="line"><span class="lineno">  114</span>    unpickled_state = pickle.loads(pickled_state)</div>
+<div class="line"><span class="lineno">  115</span>    self.assertEqual(str(state), str(unpickled_state))</div>
+<div class="line"><span class="lineno">  116</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a8d89617630506cad20da445b0a2f6217" name="a8d89617630506cad20da445b0a2f6217"></a>
@@ -252,6 +342,34 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks the saved C++ and Python playthroughs are the same.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00063">63</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>  <span class="keyword">def </span>test_playthoughs_consistent(self):</div>
+<div class="line"><span class="lineno">   64</span>    <span class="stringliteral">&quot;&quot;&quot;Checks the saved C++ and Python playthroughs are the same.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   65</span>    test_srcdir = os.environ.get(<span class="stringliteral">&quot;TEST_SRCDIR&quot;</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><span class="lineno">   66</span>    path = os.path.join(test_srcdir, _DATA_DIR)</div>
+<div class="line"><span class="lineno">   67</span>    cc_playthrough = os.path.join(path, <span class="stringliteral">&quot;tic_tac_toe.txt&quot;</span>)</div>
+<div class="line"><span class="lineno">   68</span>    py_playthrough = os.path.join(path, <span class="stringliteral">&quot;python_tic_tac_toe.txt&quot;</span>)</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keyword">with</span> open(cc_playthrough, encoding=<span class="stringliteral">&quot;utf-8&quot;</span>) <span class="keyword">as</span> cc:</div>
+<div class="line"><span class="lineno">   70</span>      <span class="keyword">with</span> open(py_playthrough, encoding=<span class="stringliteral">&quot;utf-8&quot;</span>) <span class="keyword">as</span> py:</div>
+<div class="line"><span class="lineno">   71</span>        diffs = difflib.ndiff(list(cc), list(py))</div>
+<div class="line"><span class="lineno">   72</span>    diffs = {d <span class="keywordflow">for</span> d <span class="keywordflow">in</span> diffs <span class="keywordflow">if</span> d <span class="keywordflow">and</span> d[0] <span class="keywordflow">in</span> {<span class="stringliteral">&quot;+&quot;</span>, <span class="stringliteral">&quot;-&quot;</span>}}</div>
+<div class="line"><span class="lineno">   73</span>    self.assertEqual(</div>
+<div class="line"><span class="lineno">   74</span>        diffs, {</div>
+<div class="line"><span class="lineno">   75</span>            <span class="stringliteral">&quot;- game: tic_tac_toe\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   76</span>            <span class="stringliteral">&quot;+ game: python_tic_tac_toe\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   77</span>            <span class="stringliteral">&#39;- GameType.long_name = &quot;Tic Tac Toe&quot;\n&#39;</span>,</div>
+<div class="line"><span class="lineno">   78</span>            <span class="stringliteral">&#39;+ GameType.long_name = &quot;Python Tic-Tac-Toe&quot;\n&#39;</span>,</div>
+<div class="line"><span class="lineno">   79</span>            <span class="stringliteral">&#39;- GameType.short_name = &quot;tic_tac_toe&quot;\n&#39;</span>,</div>
+<div class="line"><span class="lineno">   80</span>            <span class="stringliteral">&#39;+ GameType.short_name = &quot;python_tic_tac_toe&quot;\n&#39;</span>,</div>
+<div class="line"><span class="lineno">   81</span>            <span class="stringliteral">&#39;- ToString() = &quot;tic_tac_toe()&quot;\n&#39;</span>,</div>
+<div class="line"><span class="lineno">   82</span>            <span class="stringliteral">&#39;+ ToString() = &quot;python_tic_tac_toe()&quot;\n&#39;</span>,</div>
+<div class="line"><span class="lineno">   83</span>            <span class="stringliteral">&quot;- CurrentPlayer() = -4\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   84</span>            <span class="stringliteral">&quot;+ CurrentPlayer() = PlayerId.TERMINAL\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   85</span>            <span class="stringliteral">&quot;- Returns() = [0, 0]\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   86</span>            <span class="stringliteral">&quot;+ Returns() = [0, -0]\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   87</span>        })</div>
+<div class="line"><span class="lineno">   88</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab91be811aff4a3a58ab06202aa7f5ddb" name="ab91be811aff4a3a58ab06202aa7f5ddb"></a>
@@ -269,10 +387,30 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Tests basic API functions.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html#l00040">40</a> of file <a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>  <span class="keyword">def </span>test_random_game(self):</div>
+<div class="line"><span class="lineno">   41</span>    <span class="stringliteral">&quot;&quot;&quot;Tests basic API functions.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   42</span>    <span class="comment"># This is here mostly to show the API by example.</span></div>
+<div class="line"><span class="lineno">   43</span>    <span class="comment"># More serious simulation tests are done in python/tests/games_sim_test.py</span></div>
+<div class="line"><span class="lineno">   44</span>    <span class="comment"># and in test_game_from_cc (below), both of which test the conformance to</span></div>
+<div class="line"><span class="lineno">   45</span>    <span class="comment"># the API thoroughly.</span></div>
+<div class="line"><span class="lineno">   46</span>    game = tic_tac_toe.TicTacToeGame()</div>
+<div class="line"><span class="lineno">   47</span>    state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">while</span> <span class="keywordflow">not</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   49</span>      print(state)</div>
+<div class="line"><span class="lineno">   50</span>      cur_player = state.current_player()</div>
+<div class="line"><span class="lineno">   51</span>      legal_actions = state.legal_actions()</div>
+<div class="line"><span class="lineno">   52</span>      action = np.random.choice(legal_actions)</div>
+<div class="line"><span class="lineno">   53</span>      print(<span class="stringliteral">&quot;Player {} chooses action {}&quot;</span>.format(cur_player, action))</div>
+<div class="line"><span class="lineno">   54</span>      state.apply_action(action)</div>
+<div class="line"><span class="lineno">   55</span>    print(state)</div>
+<div class="line"><span class="lineno">   56</span>    print(<span class="stringliteral">&quot;Returns: {}&quot;</span>.format(state.returns()))</div>
+<div class="line"><span class="lineno">   57</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>tic_tac_toe_test.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../d6/d6e/tic__tac__toe__test_8py_source.html">tic_tac_toe_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

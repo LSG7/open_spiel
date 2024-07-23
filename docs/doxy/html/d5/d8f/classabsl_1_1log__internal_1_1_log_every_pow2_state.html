@@ -105,16 +105,69 @@ Collaboration diagram for absl::log_internal::LogEveryPow2State:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a384cb1dc2b616d82315ef745a60281b6" id="r_a384cb1dc2b616d82315ef745a60281b6"><td class="memItemLeft" align="right" valign="top"><a id="a384cb1dc2b616d82315ef745a60281b6" name="a384cb1dc2b616d82315ef745a60281b6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>ShouldLog</b> ()</td></tr>
+<tr class="memitem:a384cb1dc2b616d82315ef745a60281b6" id="r_a384cb1dc2b616d82315ef745a60281b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a384cb1dc2b616d82315ef745a60281b6">ShouldLog</a> ()</td></tr>
 <tr class="separator:a384cb1dc2b616d82315ef745a60281b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100c7d760b9bd6c478809bfbd8906672" id="r_a100c7d760b9bd6c478809bfbd8906672"><td class="memItemLeft" align="right" valign="top"><a id="a100c7d760b9bd6c478809bfbd8906672" name="a100c7d760b9bd6c478809bfbd8906672"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>counter</b> ()</td></tr>
+<tr class="memitem:a100c7d760b9bd6c478809bfbd8906672" id="r_a100c7d760b9bd6c478809bfbd8906672"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a100c7d760b9bd6c478809bfbd8906672">counter</a> ()</td></tr>
 <tr class="separator:a100c7d760b9bd6c478809bfbd8906672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d6/d1b/conditions_8h_source.html#l00194">194</a> of file <a class="el" href="../../d6/d1b/conditions_8h_source.html">conditions.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a100c7d760b9bd6c478809bfbd8906672" name="a100c7d760b9bd6c478809bfbd8906672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100c7d760b9bd6c478809bfbd8906672">&#9670;&#160;</a></span>counter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t absl::log_internal::LogEveryPow2State::counter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d1b/conditions_8h_source.html#l00197">197</a> of file <a class="el" href="../../d6/d1b/conditions_8h_source.html">conditions.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  197</span>{ <span class="keywordflow">return</span> counter_.load(std::memory_order_relaxed); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a384cb1dc2b616d82315ef745a60281b6" name="a384cb1dc2b616d82315ef745a60281b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384cb1dc2b616d82315ef745a60281b6">&#9670;&#160;</a></span>ShouldLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool absl::log_internal::LogEveryPow2State::ShouldLog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d21/conditions_8cc_source.html#l00052">52</a> of file <a class="el" href="../../df/d21/conditions_8cc_source.html">conditions.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>                                  {</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keyword">const</span> uint32_t new_value = LossyIncrement(&amp;counter_) + 1;</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">return</span> (new_value &amp; (new_value - 1)) == 0;</div>
+<div class="line"><span class="lineno">   55</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/log/internal/<a class="el" href="../../d6/d1b/conditions_8h_source.html">conditions.h</a></li>
-<li>open_spiel/abseil-cpp/absl/log/internal/<b>conditions.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/log/internal/<a class="el" href="../../df/d21/conditions_8cc_source.html">conditions.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

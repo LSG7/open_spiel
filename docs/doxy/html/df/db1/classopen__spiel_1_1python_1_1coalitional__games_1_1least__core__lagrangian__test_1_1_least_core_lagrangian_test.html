@@ -118,19 +118,44 @@ Collaboration diagram for open_spiel.python.coalitional_games.least_core_lagrang
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5bb4a7199f569aa441708e421614c10" id="r_ac5bb4a7199f569aa441708e421614c10"><td class="memItemLeft" align="right" valign="top"><a id="ac5bb4a7199f569aa441708e421614c10" name="ac5bb4a7199f569aa441708e421614c10"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>setUp</b> (self)</td></tr>
+<tr class="memitem:ac5bb4a7199f569aa441708e421614c10" id="r_ac5bb4a7199f569aa441708e421614c10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5bb4a7199f569aa441708e421614c10">setUp</a> (self)</td></tr>
 <tr class="separator:ac5bb4a7199f569aa441708e421614c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addbf69777503e16ede42f3c8dd5f48ea" id="r_addbf69777503e16ede42f3c8dd5f48ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addbf69777503e16ede42f3c8dd5f48ea">test_ice_cream_example_full_lagrangian</a> (self)</td></tr>
 <tr class="separator:addbf69777503e16ede42f3c8dd5f48ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:acc2f1b9115c37e22979a16d8de307d4d" id="r_acc2f1b9115c37e22979a16d8de307d4d"><td class="memItemLeft" align="right" valign="top"><a id="acc2f1b9115c37e22979a16d8de307d4d" name="acc2f1b9115c37e22979a16d8de307d4d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>config</b></td></tr>
+<tr class="memitem:acc2f1b9115c37e22979a16d8de307d4d" id="r_acc2f1b9115c37e22979a16d8de307d4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc2f1b9115c37e22979a16d8de307d4d">config</a></td></tr>
 <tr class="separator:acc2f1b9115c37e22979a16d8de307d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html#l00050">50</a> of file <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html">least_core_lagrangian_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac5bb4a7199f569aa441708e421614c10" name="ac5bb4a7199f569aa441708e421614c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5bb4a7199f569aa441708e421614c10">&#9670;&#160;</a></span>setUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.coalitional_games.least_core_lagrangian_test.LeastCoreLagrangianTest.setUp </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html#l00052">52</a> of file <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html">least_core_lagrangian_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>  <span class="keyword">def </span>setUp(self):</div>
+<div class="line"><span class="lineno">   53</span>    super().setUp()</div>
+<div class="line"><span class="lineno">   54</span>    np.random.seed(SEED)</div>
+<div class="line"><span class="lineno">   55</span>    self.config = get_alg_config()</div>
+<div class="line"><span class="lineno">   56</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="addbf69777503e16ede42f3c8dd5f48ea" name="addbf69777503e16ede42f3c8dd5f48ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#addbf69777503e16ede42f3c8dd5f48ea">&#9670;&#160;</a></span>test_ice_cream_example_full_lagrangian()</h2>
 
@@ -146,10 +171,45 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Solve the least core Lagrangian.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html#l00057">57</a> of file <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html">least_core_lagrangian_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>  <span class="keyword">def </span>test_ice_cream_example_full_lagrangian(self):</div>
+<div class="line"><span class="lineno">   58</span>    <span class="stringliteral">&quot;&quot;&quot;Solve the least core Lagrangian.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   59</span>    game = basic_games.IceCreamGame()</div>
+<div class="line"><span class="lineno">   60</span>    least_core_value = least_core_lagrangian.compute_least_core_value(</div>
+<div class="line"><span class="lineno">   61</span>        game, self.config)</div>
+<div class="line"><span class="lineno">   62</span>    imputation = least_core_value.payoff</div>
+<div class="line"><span class="lineno">   63</span>    epsilon = least_core_value.lcv</div>
+<div class="line"><span class="lineno">   64</span>    self.assertAlmostEqual(imputation.sum(), 1000.0, places=3)</div>
+<div class="line"><span class="lineno">   65</span>    self.assertGreater(imputation.all(), -1e-10)</div>
+<div class="line"><span class="lineno">   66</span>    self.assertLess(epsilon, 1e-6)</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d27/rnad_8py_source.html#l00726">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.config</a>, <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html#l00055">open_spiel.python.coalitional_games.least_core_lagrangian_test.LeastCoreLagrangianTest.config</a>, <a class="el" href="../../d1/d77/chat__game__psro__example_8py_source.html#l00256">open_spiel.python.examples.chat_game_psro_example.PSRO.config</a>, and <a class="el" href="../../d0/dba/openspiel__api_8py_source.html#l00042">openspiel_api.WorldState.config</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="acc2f1b9115c37e22979a16d8de307d4d" name="acc2f1b9115c37e22979a16d8de307d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc2f1b9115c37e22979a16d8de307d4d">&#9670;&#160;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.coalitional_games.least_core_lagrangian_test.LeastCoreLagrangianTest.config</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html#l00055">55</a> of file <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html">least_core_lagrangian_test.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d5/d27/rnad_8py_source.html#l00905">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l00929">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l00977">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._next_rng_key()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l01021">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l00734">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.init()</a>, <a class="el" href="../../d1/d77/chat__game__psro__example_8py_source.html#l00285">open_spiel.python.examples.chat_game_psro_example.PSRO.run()</a>, and <a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html#l00057">open_spiel.python.coalitional_games.least_core_lagrangian_test.LeastCoreLagrangianTest.test_ice_cream_example_full_lagrangian()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/coalitional_games/<b>least_core_lagrangian_test.py</b></li>
+<li>open_spiel/python/coalitional_games/<a class="el" href="../../d9/d55/least__core__lagrangian__test_8py_source.html">least_core_lagrangian_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

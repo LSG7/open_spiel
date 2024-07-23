@@ -134,40 +134,391 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af1fb47734c2143ce6b18701eddab8970" id="r_af1fb47734c2143ce6b18701eddab8970"><td class="memItemLeft" align="right" valign="top"><a id="af1fb47734c2143ce6b18701eddab8970" name="af1fb47734c2143ce6b18701eddab8970"></a>
 virtual Action&#160;</td><td class="memItemRight" valign="bottom"><b>Step</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)=0</td></tr>
 <tr class="separator:af1fb47734c2143ce6b18701eddab8970"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4cb78465e95b5aef74141646e031221" id="r_ae4cb78465e95b5aef74141646e031221"><td class="memItemLeft" align="right" valign="top"><a id="ae4cb78465e95b5aef74141646e031221" name="ae4cb78465e95b5aef74141646e031221"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InformAction</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, Player player_id, Action action)</td></tr>
+<tr class="memitem:ae4cb78465e95b5aef74141646e031221" id="r_ae4cb78465e95b5aef74141646e031221"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4cb78465e95b5aef74141646e031221">InformAction</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, Player player_id, Action action)</td></tr>
 <tr class="separator:ae4cb78465e95b5aef74141646e031221"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab61924d468f42600b4aaa1b039f6ef8d" id="r_ab61924d468f42600b4aaa1b039f6ef8d"><td class="memItemLeft" align="right" valign="top"><a id="ab61924d468f42600b4aaa1b039f6ef8d" name="ab61924d468f42600b4aaa1b039f6ef8d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InformActions</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, const std::vector&lt; Action &gt; &amp;actions)</td></tr>
+<tr class="memitem:ab61924d468f42600b4aaa1b039f6ef8d" id="r_ab61924d468f42600b4aaa1b039f6ef8d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab61924d468f42600b4aaa1b039f6ef8d">InformActions</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, const std::vector&lt; Action &gt; &amp;actions)</td></tr>
 <tr class="separator:ab61924d468f42600b4aaa1b039f6ef8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc37816aa57da212ea7aa2e3f71d5e9c" id="r_acc37816aa57da212ea7aa2e3f71d5e9c"><td class="memItemLeft" align="right" valign="top"><a id="acc37816aa57da212ea7aa2e3f71d5e9c" name="acc37816aa57da212ea7aa2e3f71d5e9c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Restart</b> ()</td></tr>
+<tr class="memitem:acc37816aa57da212ea7aa2e3f71d5e9c" id="r_acc37816aa57da212ea7aa2e3f71d5e9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc37816aa57da212ea7aa2e3f71d5e9c">Restart</a> ()</td></tr>
 <tr class="separator:acc37816aa57da212ea7aa2e3f71d5e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aceae4d02f217fad76c55f74b1fb91d5e" id="r_aceae4d02f217fad76c55f74b1fb91d5e"><td class="memItemLeft" align="right" valign="top"><a id="aceae4d02f217fad76c55f74b1fb91d5e" name="aceae4d02f217fad76c55f74b1fb91d5e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>RestartAt</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
+<tr class="memitem:aceae4d02f217fad76c55f74b1fb91d5e" id="r_aceae4d02f217fad76c55f74b1fb91d5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aceae4d02f217fad76c55f74b1fb91d5e">RestartAt</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
 <tr class="separator:aceae4d02f217fad76c55f74b1fb91d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5d1cc3d483f0f79ff6bb7070717f275" id="r_ab5d1cc3d483f0f79ff6bb7070717f275"><td class="memItemLeft" align="right" valign="top"><a id="ab5d1cc3d483f0f79ff6bb7070717f275" name="ab5d1cc3d483f0f79ff6bb7070717f275"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProvidesForceAction</b> ()</td></tr>
+<tr class="memitem:ab5d1cc3d483f0f79ff6bb7070717f275" id="r_ab5d1cc3d483f0f79ff6bb7070717f275"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5d1cc3d483f0f79ff6bb7070717f275">ProvidesForceAction</a> ()</td></tr>
 <tr class="separator:ab5d1cc3d483f0f79ff6bb7070717f275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0022d99994e0dc09b97b2d2c387e63da" id="r_a0022d99994e0dc09b97b2d2c387e63da"><td class="memItemLeft" align="right" valign="top"><a id="a0022d99994e0dc09b97b2d2c387e63da" name="a0022d99994e0dc09b97b2d2c387e63da"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ForceAction</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, Action action)</td></tr>
+<tr class="memitem:a0022d99994e0dc09b97b2d2c387e63da" id="r_a0022d99994e0dc09b97b2d2c387e63da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0022d99994e0dc09b97b2d2c387e63da">ForceAction</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state, Action action)</td></tr>
 <tr class="separator:a0022d99994e0dc09b97b2d2c387e63da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6731c3c3b3819de2875646a3f5faf2c1" id="r_a6731c3c3b3819de2875646a3f5faf2c1"><td class="memItemLeft" align="right" valign="top"><a id="a6731c3c3b3819de2875646a3f5faf2c1" name="a6731c3c3b3819de2875646a3f5faf2c1"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>ProvidesPolicy</b> ()</td></tr>
+<tr class="memitem:a6731c3c3b3819de2875646a3f5faf2c1" id="r_a6731c3c3b3819de2875646a3f5faf2c1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6731c3c3b3819de2875646a3f5faf2c1">ProvidesPolicy</a> ()</td></tr>
 <tr class="separator:a6731c3c3b3819de2875646a3f5faf2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9a38a83389cc6f48dbec28ecd243519" id="r_ab9a38a83389cc6f48dbec28ecd243519"><td class="memItemLeft" align="right" valign="top"><a id="ab9a38a83389cc6f48dbec28ecd243519" name="ab9a38a83389cc6f48dbec28ecd243519"></a>
-virtual ActionsAndProbs&#160;</td><td class="memItemRight" valign="bottom"><b>GetPolicy</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
+<tr class="memitem:ab9a38a83389cc6f48dbec28ecd243519" id="r_ab9a38a83389cc6f48dbec28ecd243519"><td class="memItemLeft" align="right" valign="top">virtual ActionsAndProbs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9a38a83389cc6f48dbec28ecd243519">GetPolicy</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
 <tr class="separator:ab9a38a83389cc6f48dbec28ecd243519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae48130d7b9291f22e9d7460d88f2e87c" id="r_ae48130d7b9291f22e9d7460d88f2e87c"><td class="memItemLeft" align="right" valign="top"><a id="ae48130d7b9291f22e9d7460d88f2e87c" name="ae48130d7b9291f22e9d7460d88f2e87c"></a>
-virtual std::pair&lt; ActionsAndProbs, Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>StepWithPolicy</b> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
+<tr class="memitem:ae48130d7b9291f22e9d7460d88f2e87c" id="r_ae48130d7b9291f22e9d7460d88f2e87c"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; ActionsAndProbs, Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae48130d7b9291f22e9d7460d88f2e87c">StepWithPolicy</a> (const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;state)</td></tr>
 <tr class="separator:ae48130d7b9291f22e9d7460d88f2e87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a067065a5ccf5620847f42cad7582b5f6" id="r_a067065a5ccf5620847f42cad7582b5f6"><td class="memItemLeft" align="right" valign="top"><a id="a067065a5ccf5620847f42cad7582b5f6" name="a067065a5ccf5620847f42cad7582b5f6"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsClonable</b> () const</td></tr>
+<tr class="memitem:a067065a5ccf5620847f42cad7582b5f6" id="r_a067065a5ccf5620847f42cad7582b5f6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a067065a5ccf5620847f42cad7582b5f6">IsClonable</a> () const</td></tr>
 <tr class="separator:a067065a5ccf5620847f42cad7582b5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98f07d0444b04513d593fed7b6edc062" id="r_a98f07d0444b04513d593fed7b6edc062"><td class="memItemLeft" align="right" valign="top"><a id="a98f07d0444b04513d593fed7b6edc062" name="a98f07d0444b04513d593fed7b6edc062"></a>
-virtual std::unique_ptr&lt; <a class="el" href="../../d9/d0a/classopen__spiel_1_1_bot.html">Bot</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Clone</b> ()</td></tr>
+<tr class="memitem:a98f07d0444b04513d593fed7b6edc062" id="r_a98f07d0444b04513d593fed7b6edc062"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="../../d9/d0a/classopen__spiel_1_1_bot.html">Bot</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98f07d0444b04513d593fed7b6edc062">Clone</a> ()</td></tr>
 <tr class="separator:a98f07d0444b04513d593fed7b6edc062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00072">72</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a98f07d0444b04513d593fed7b6edc062" name="a98f07d0444b04513d593fed7b6edc062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f07d0444b04513d593fed7b6edc062">&#9670;&#160;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="../../d9/d0a/classopen__spiel_1_1_bot.html">Bot</a> &gt; open_spiel::Bot::Clone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00174">174</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>                                     {</div>
+<div class="line"><span class="lineno">  175</span>    SpielFatalError(<span class="stringliteral">&quot;Clone method not implemented.&quot;</span>);</div>
+<div class="line"><span class="lineno">  176</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0022d99994e0dc09b97b2d2c387e63da" name="a0022d99994e0dc09b97b2d2c387e63da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0022d99994e0dc09b97b2d2c387e63da">&#9670;&#160;</a></span>ForceAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void open_spiel::Bot::ForceAction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00123">123</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                              {</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span> (ProvidesForceAction()) {</div>
+<div class="line"><span class="lineno">  125</span>      SpielFatalError(</div>
+<div class="line"><span class="lineno">  126</span>          <span class="stringliteral">&quot;ForceAction not implemented but should because the bot is &quot;</span></div>
+<div class="line"><span class="lineno">  127</span>          <span class="stringliteral">&quot;registered as overridable.&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  129</span>      SpielFatalError(</div>
+<div class="line"><span class="lineno">  130</span>          <span class="stringliteral">&quot;ForceAction not implemented because the bot is not overridable&quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab9a38a83389cc6f48dbec28ecd243519" name="ab9a38a83389cc6f48dbec28ecd243519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9a38a83389cc6f48dbec28ecd243519">&#9670;&#160;</a></span>GetPolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ActionsAndProbs open_spiel::Bot::GetPolicy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00137">137</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  137</span>                                                        {</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">if</span> (ProvidesPolicy()) {</div>
+<div class="line"><span class="lineno">  139</span>      SpielFatalError(</div>
+<div class="line"><span class="lineno">  140</span>          <span class="stringliteral">&quot;GetPolicy not implemented but should because the bot is registered &quot;</span></div>
+<div class="line"><span class="lineno">  141</span>          <span class="stringliteral">&quot;as exposing its policy.&quot;</span>);</div>
+<div class="line"><span class="lineno">  142</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  143</span>      SpielFatalError(</div>
+<div class="line"><span class="lineno">  144</span>          <span class="stringliteral">&quot;GetPolicy not implemented because the bot is not exposing any &quot;</span></div>
+<div class="line"><span class="lineno">  145</span>          <span class="stringliteral">&quot;policy.&quot;</span>);</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="line"><span class="lineno">  147</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae4cb78465e95b5aef74141646e031221" name="ae4cb78465e95b5aef74141646e031221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cb78465e95b5aef74141646e031221">&#9670;&#160;</a></span>InformAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void open_spiel::Bot::InformAction </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Player</td>          <td class="paramname"><span class="paramname"><em>player_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Action</td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00102">102</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                           {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab61924d468f42600b4aaa1b039f6ef8d" name="ab61924d468f42600b4aaa1b039f6ef8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61924d468f42600b4aaa1b039f6ef8d">&#9670;&#160;</a></span>InformActions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void open_spiel::Bot::InformActions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; Action &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>actions</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00106">106</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>                                                               {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a067065a5ccf5620847f42cad7582b5f6" name="a067065a5ccf5620847f42cad7582b5f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a067065a5ccf5620847f42cad7582b5f6">&#9670;&#160;</a></span>IsClonable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool open_spiel::Bot::IsClonable </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00173">173</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  173</span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab5d1cc3d483f0f79ff6bb7070717f275" name="ab5d1cc3d483f0f79ff6bb7070717f275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5d1cc3d483f0f79ff6bb7070717f275">&#9670;&#160;</a></span>ProvidesForceAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool open_spiel::Bot::ProvidesForceAction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00120">120</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6731c3c3b3819de2875646a3f5faf2c1" name="a6731c3c3b3819de2875646a3f5faf2c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6731c3c3b3819de2875646a3f5faf2c1">&#9670;&#160;</a></span>ProvidesPolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool open_spiel::Bot::ProvidesPolicy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00136">136</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acc37816aa57da212ea7aa2e3f71d5e9c" name="acc37816aa57da212ea7aa2e3f71d5e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc37816aa57da212ea7aa2e3f71d5e9c">&#9670;&#160;</a></span>Restart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void open_spiel::Bot::Restart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00110">110</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aceae4d02f217fad76c55f74b1fb91d5e" name="aceae4d02f217fad76c55f74b1fb91d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceae4d02f217fad76c55f74b1fb91d5e">&#9670;&#160;</a></span>RestartAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void open_spiel::Bot::RestartAt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00113">113</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>                                             {</div>
+<div class="line"><span class="lineno">  114</span>    SpielFatalError(<span class="stringliteral">&quot;RestartAt(state) not implemented.&quot;</span>);</div>
+<div class="line"><span class="lineno">  115</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae48130d7b9291f22e9d7460d88f2e87c" name="ae48130d7b9291f22e9d7460d88f2e87c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48130d7b9291f22e9d7460d88f2e87c">&#9670;&#160;</a></span>StepWithPolicy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::pair&lt; ActionsAndProbs, Action &gt; open_spiel::Bot::StepWithPolicy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/df9/spiel__bots_8h_source.html#l00148">148</a> of file <a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                          {</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">if</span> (ProvidesPolicy()) {</div>
+<div class="line"><span class="lineno">  151</span>      SpielFatalError(</div>
+<div class="line"><span class="lineno">  152</span>          <span class="stringliteral">&quot;StepWithPolicy not implemented but should because the bot is &quot;</span></div>
+<div class="line"><span class="lineno">  153</span>          <span class="stringliteral">&quot;registered as exposing its policy.&quot;</span>);</div>
+<div class="line"><span class="lineno">  154</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  155</span>      SpielFatalError(</div>
+<div class="line"><span class="lineno">  156</span>          <span class="stringliteral">&quot;StepWithPolicy not implemented because the bot is not exposing any &quot;</span></div>
+<div class="line"><span class="lineno">  157</span>          <span class="stringliteral">&quot;policy.&quot;</span>);</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="line"><span class="lineno">  159</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/<a class="el" href="../../d7/df9/spiel__bots_8h_source.html">spiel_bots.h</a></li>
 </ul>

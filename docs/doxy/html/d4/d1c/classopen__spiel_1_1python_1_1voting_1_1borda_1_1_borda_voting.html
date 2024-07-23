@@ -136,7 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae4741e55d3840a3f61ed68cc3c836224 inherit pub_methods_classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Implements Borda's method of voting.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Implements Borda's method of voting.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d8/d77/borda_8py_source.html#l00023">23</a> of file <a class="el" href="../../d8/d77/borda_8py_source.html">borda.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a16e35a6cf0615b6bf0a389788bf2aadf" name="a16e35a6cf0615b6bf0a389788bf2aadf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16e35a6cf0615b6bf0a389788bf2aadf">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -158,6 +160,11 @@ Args:
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#ae9c1b2370ac17ab398409dbd392bdfbf">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d8/d77/borda_8py_source.html#l00026">26</a> of file <a class="el" href="../../d8/d77/borda_8py_source.html">borda.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>  <span class="keyword">def </span>__init__(self):</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">pass</span></div>
+<div class="line"><span class="lineno">   28</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -178,6 +185,11 @@ Args:
 <pre class="fragment">Returns the name of the voting method.</pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#a4654f9ab5cc59f4092949162d620ca0c">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../d8/d77/borda_8py_source.html#l00029">29</a> of file <a class="el" href="../../d8/d77/borda_8py_source.html">borda.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>  <span class="keyword">def </span>name(self) -&gt; str:</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;borda&quot;</span></div>
+<div class="line"><span class="lineno">   31</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a62cfe7fe130fac79fa6e34c5ccfa85e6" name="a62cfe7fe130fac79fa6e34c5ccfa85e6"></a>
@@ -207,6 +219,27 @@ Returns:
     a RankOutcome object that can be queried for the results.
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d2/d2a/classopen__spiel_1_1python_1_1voting_1_1base_1_1_abstract_voting_method.html#ad7674ed527518679d786984f7e2e45be">open_spiel.python.voting.base.AbstractVotingMethod</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d77/borda_8py_source.html#l00032">32</a> of file <a class="el" href="../../d8/d77/borda_8py_source.html">borda.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>  <span class="keyword">def </span>run_election(self, profile: base.PreferenceProfile) -&gt; base.RankOutcome:</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keyword">assert</span> self.is_valid_profile(profile)</div>
+<div class="line"><span class="lineno">   34</span>    scores = {}</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">for</span> alternative <span class="keywordflow">in</span> profile.alternatives:</div>
+<div class="line"><span class="lineno">   36</span>      scores[alternative] = 0</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">for</span> vote <span class="keywordflow">in</span> profile.votes:</div>
+<div class="line"><span class="lineno">   38</span>      <span class="comment"># Do we need a check here for the length of the vote?</span></div>
+<div class="line"><span class="lineno">   39</span>      points = len(vote.vote) - 1</div>
+<div class="line"><span class="lineno">   40</span>      <span class="keywordflow">for</span> alternative <span class="keywordflow">in</span> vote.vote:</div>
+<div class="line"><span class="lineno">   41</span>        scores[alternative] += (points * vote.weight)</div>
+<div class="line"><span class="lineno">   42</span>        points -= 1</div>
+<div class="line"><span class="lineno">   43</span>      <span class="keyword">assert</span> points == -1</div>
+<div class="line"><span class="lineno">   44</span>    sorted_scores = sorted(scores.items(), key=<span class="keyword">lambda</span> item: item[1],</div>
+<div class="line"><span class="lineno">   45</span>                           reverse=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   46</span>    outcome = base.RankOutcome()</div>
+<div class="line"><span class="lineno">   47</span>    outcome.unpack_from(sorted_scores)</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">return</span> outcome</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/de2/base_8py_source.html#l00483">open_spiel.python.voting.base.AbstractVotingMethod.is_valid_profile()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -221,7 +254,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/voting/<b>borda.py</b></li>
+<li>open_spiel/python/voting/<a class="el" href="../../d8/d77/borda_8py_source.html">borda.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

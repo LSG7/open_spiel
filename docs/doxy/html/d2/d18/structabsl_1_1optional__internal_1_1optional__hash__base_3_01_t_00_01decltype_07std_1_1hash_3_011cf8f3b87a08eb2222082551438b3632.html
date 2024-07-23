@@ -106,19 +106,95 @@ Collaboration diagram for absl::optional_internal::optional_hash_base&lt; T, dec
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a599b06f073650464ed7780cac0771404" id="r_a599b06f073650464ed7780cac0771404"><td class="memItemLeft" align="right" valign="top"><a id="a599b06f073650464ed7780cac0771404" name="a599b06f073650464ed7780cac0771404"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>argument_type</b> = <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt;T&gt;</td></tr>
+<tr class="memitem:a599b06f073650464ed7780cac0771404" id="r_a599b06f073650464ed7780cac0771404"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a599b06f073650464ed7780cac0771404">argument_type</a> = <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt;T&gt;</td></tr>
 <tr class="separator:a599b06f073650464ed7780cac0771404"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dab70df8ac97a05f051b57be6b45e3d" id="r_a8dab70df8ac97a05f051b57be6b45e3d"><td class="memItemLeft" align="right" valign="top"><a id="a8dab70df8ac97a05f051b57be6b45e3d" name="a8dab70df8ac97a05f051b57be6b45e3d"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = size_t</td></tr>
+<tr class="memitem:a8dab70df8ac97a05f051b57be6b45e3d" id="r_a8dab70df8ac97a05f051b57be6b45e3d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dab70df8ac97a05f051b57be6b45e3d">result_type</a> = size_t</td></tr>
 <tr class="separator:a8dab70df8ac97a05f051b57be6b45e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aff922632dd0372c8c04744a0c8b4cc71" id="r_aff922632dd0372c8c04744a0c8b4cc71"><td class="memItemLeft" align="right" valign="top"><a id="aff922632dd0372c8c04744a0c8b4cc71" name="aff922632dd0372c8c04744a0c8b4cc71"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; T &gt; &amp;opt) const</td></tr>
+<tr class="memitem:aff922632dd0372c8c04744a0c8b4cc71" id="r_aff922632dd0372c8c04744a0c8b4cc71"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff922632dd0372c8c04744a0c8b4cc71">operator()</a> (const <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; T &gt; &amp;opt) const</td></tr>
 <tr class="separator:aff922632dd0372c8c04744a0c8b4cc71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+struct absl::optional_internal::optional_hash_base&lt; T, decltype(std::hash&lt; absl::remove_const_t&lt; T &gt; &gt;()(std::declval&lt; absl::remove_const_t&lt; T &gt; &gt;()))&gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00384">384</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a599b06f073650464ed7780cac0771404" name="a599b06f073650464ed7780cac0771404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599b06f073650464ed7780cac0771404">&#9670;&#160;</a></span>argument_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d8f/structabsl_1_1optional__internal_1_1optional__hash__base.html">absl::optional_internal::optional_hash_base</a>&lt; T, decltype(std::hash&lt; absl::remove_const_t&lt; T &gt; &gt;()(std::declval&lt; absl::remove_const_t&lt; T &gt; &gt;()))&gt;::argument_type = <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00386">386</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+
+</div>
+</div>
+<a id="a8dab70df8ac97a05f051b57be6b45e3d" name="a8dab70df8ac97a05f051b57be6b45e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dab70df8ac97a05f051b57be6b45e3d">&#9670;&#160;</a></span>result_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d8f/structabsl_1_1optional__internal_1_1optional__hash__base.html">absl::optional_internal::optional_hash_base</a>&lt; T, decltype(std::hash&lt; absl::remove_const_t&lt; T &gt; &gt;()(std::declval&lt; absl::remove_const_t&lt; T &gt; &gt;()))&gt;::result_type = size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00387">387</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aff922632dd0372c8c04744a0c8b4cc71" name="aff922632dd0372c8c04744a0c8b4cc71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff922632dd0372c8c04744a0c8b4cc71">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="../../d2/d8f/structabsl_1_1optional__internal_1_1optional__hash__base.html">absl::optional_internal::optional_hash_base</a>&lt; T, decltype(std::hash&lt; absl::remove_const_t&lt; T &gt; &gt;()(std::declval&lt; absl::remove_const_t&lt; T &gt; &gt;()))&gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>opt</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/de9/internal_2optional_8h_source.html#l00388">388</a> of file <a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  388</span>                                                      {</div>
+<div class="line"><span class="lineno">  389</span>    absl::type_traits_internal::AssertHashEnabled&lt;absl::remove_const_t&lt;T&gt;&gt;();</div>
+<div class="line"><span class="lineno">  390</span>    <span class="keywordflow">if</span> (opt) {</div>
+<div class="line"><span class="lineno">  391</span>      <span class="keywordflow">return</span> std::hash&lt;absl::remove_const_t&lt;T&gt; &gt;()(*opt);</div>
+<div class="line"><span class="lineno">  392</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  393</span>      <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(0x297814aaad196e6dULL);</div>
+<div class="line"><span class="lineno">  394</span>    }</div>
+<div class="line"><span class="lineno">  395</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../dd/de9/internal_2optional_8h_source.html">optional.h</a></li>
 </ul>

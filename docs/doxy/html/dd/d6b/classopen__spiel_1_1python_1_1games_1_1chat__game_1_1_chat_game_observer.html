@@ -125,12 +125,13 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a6d8716e093225323aca68d029ed4ba1f" id="r_a6d8716e093225323aca68d029ed4ba1f"><td class="memItemLeft" align="right" valign="top"><a id="a6d8716e093225323aca68d029ed4ba1f" name="a6d8716e093225323aca68d029ed4ba1f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_str_to_info_state_built</b></td></tr>
+<tr class="memitem:a6d8716e093225323aca68d029ed4ba1f" id="r_a6d8716e093225323aca68d029ed4ba1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d8716e093225323aca68d029ed4ba1f">_str_to_info_state_built</a></td></tr>
 <tr class="separator:a6d8716e093225323aca68d029ed4ba1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Observer, conforming to the PyObserver interface (see observation.py).</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">Observer, conforming to the PyObserver interface (see observation.py).</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dcb/chat__game_8py_source.html#l00042">42</a> of file <a class="el" href="../../d6/dcb/chat__game_8py_source.html">chat_game.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad19b747f058a17b56da283e5037b1515" name="ad19b747f058a17b56da283e5037b1515"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad19b747f058a17b56da283e5037b1515">&#9670;&#160;</a></span>_build_str_to_info_state()</h2>
 
@@ -153,7 +154,18 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Initializes map from str to infostate. Returns True if successful.</pre> <div class="dynheader">
+<pre class="fragment">Initializes map from str to infostate. Returns True if successful.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dcb/chat__game_8py_source.html#l00045">45</a> of file <a class="el" href="../../d6/dcb/chat__game_8py_source.html">chat_game.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>  <span class="keyword">def </span>_build_str_to_info_state(self) -&gt; bool:</div>
+<div class="line"><span class="lineno">   46</span>    <span class="stringliteral">&quot;&quot;&quot;Initializes map from str to infostate. Returns True if successful.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment"># Build a string tokenizer here</span></div>
+<div class="line"><span class="lineno">   48</span>    <span class="comment"># --------------------------- #</span></div>
+<div class="line"><span class="lineno">   49</span>    <span class="comment"># Build a string tokenizer here</span></div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> <span class="keyword">True</span></div>
+<div class="line"><span class="lineno">   51</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../df/d6c/chat__game__base_8py_source.html#l00563">open_spiel.python.games.chat_games.chat_game_base.ChatGameObserverBase.__init__()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d6b/classopen__spiel_1_1python_1_1games_1_1chat__game_1_1_chat_game_observer_ad19b747f058a17b56da283e5037b1515_icgraph.png" border="0" usemap="#add/d6b/classopen__spiel_1_1python_1_1games_1_1chat__game_1_1_chat_game_observer_ad19b747f058a17b56da283e5037b1515_icgraph" alt=""/></div>
@@ -197,7 +209,24 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Returns a len-obs_size np.ndarray given an input string and obs_size.</pre> <div class="dynheader">
+<pre class="fragment">Returns a len-obs_size np.ndarray given an input string and obs_size.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d6/dcb/chat__game_8py_source.html#l00052">52</a> of file <a class="el" href="../../d6/dcb/chat__game_8py_source.html">chat_game.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>  <span class="keyword">def </span>_info_state(self, input_text: str, obs_size: int) -&gt; np.ndarray:</div>
+<div class="line"><span class="lineno">   53</span>    <span class="stringliteral">&quot;&quot;&quot;Returns a len-obs_size np.ndarray given an input string and obs_size.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> self._str_to_info_state_built:</div>
+<div class="line"><span class="lineno">   55</span>      <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&#39;String to info state mapping not built!&#39;</span>)</div>
+<div class="line"><span class="lineno">   56</span>    del input_text</div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment"># Vectorize a str (ideally lossless for info state) using a tokenizer here</span></div>
+<div class="line"><span class="lineno">   58</span>    <span class="comment"># ---------------------------------------------------------------------- #</span></div>
+<div class="line"><span class="lineno">   59</span>    <span class="comment"># Vectorize a str (ideally lossless for info state) using a tokenizer here</span></div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> np.zeros(obs_size, dtype=np.int32)</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d6/dcb/chat__game_8py_source.html#l00054">open_spiel.python.games.chat_game.ChatGameObserver._str_to_info_state_built</a>, and <a class="el" href="../../df/d6c/chat__game__base_8py_source.html#l00575">open_spiel.python.games.chat_games.chat_game_base.ChatGameObserverBase._str_to_info_state_built</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d6c/chat__game__base_8py_source.html#l00643">open_spiel.python.games.chat_games.chat_game_base.ChatGameObserverBase.set_from()</a>, and <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00220">open_spiel.python.pytorch.eva.EVAAgent.step()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d6b/classopen__spiel_1_1python_1_1games_1_1chat__game_1_1_chat_game_observer_ac161bd2869da2f15f509ed6c4cd85fd9_icgraph.png" border="0" usemap="#add/d6b/classopen__spiel_1_1python_1_1games_1_1chat__game_1_1_chat_game_observer_ac161bd2869da2f15f509ed6c4cd85fd9_icgraph" alt=""/></div>
@@ -233,8 +262,35 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6d8716e093225323aca68d029ed4ba1f" name="a6d8716e093225323aca68d029ed4ba1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d8716e093225323aca68d029ed4ba1f">&#9670;&#160;</a></span>_str_to_info_state_built</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.games.chat_game.ChatGameObserver._str_to_info_state_built</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d6/dcb/chat__game_8py_source.html#l00054">54</a> of file <a class="el" href="../../d6/dcb/chat__game_8py_source.html">chat_game.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d6c/chat__game__base_8py_source.html#l00563">open_spiel.python.games.chat_games.chat_game_base.ChatGameObserverBase.__init__()</a>, <a class="el" href="../../d6/dcb/chat__game_8py_source.html#l00052">open_spiel.python.games.chat_game.ChatGameObserver._info_state()</a>, and <a class="el" href="../../df/d6c/chat__game__base_8py_source.html#l00633">open_spiel.python.games.chat_games.chat_game_base.ChatGameObserverBase._info_state()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>chat_game.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../d6/dcb/chat__game_8py_source.html">chat_game.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

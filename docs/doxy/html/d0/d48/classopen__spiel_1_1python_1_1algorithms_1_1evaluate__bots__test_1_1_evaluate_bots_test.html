@@ -117,15 +117,77 @@ Collaboration diagram for open_spiel.python.algorithms.evaluate_bots_test.Evalua
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a810ba24731f014a6e34b00e8cf24037a" id="r_a810ba24731f014a6e34b00e8cf24037a"><td class="memItemLeft" align="right" valign="top"><a id="a810ba24731f014a6e34b00e8cf24037a" name="a810ba24731f014a6e34b00e8cf24037a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_cpp_vs_python</b> (self, bots)</td></tr>
+<tr class="memitem:a810ba24731f014a6e34b00e8cf24037a" id="r_a810ba24731f014a6e34b00e8cf24037a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a810ba24731f014a6e34b00e8cf24037a">test_cpp_vs_python</a> (self, bots)</td></tr>
 <tr class="separator:a810ba24731f014a6e34b00e8cf24037a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a423540c87a6b79209b3cd9d2e10e617d" id="r_a423540c87a6b79209b3cd9d2e10e617d"><td class="memItemLeft" align="right" valign="top"><a id="a423540c87a6b79209b3cd9d2e10e617d" name="a423540c87a6b79209b3cd9d2e10e617d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_random_vs_stateful</b> (self)</td></tr>
+<tr class="memitem:a423540c87a6b79209b3cd9d2e10e617d" id="r_a423540c87a6b79209b3cd9d2e10e617d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a423540c87a6b79209b3cd9d2e10e617d">test_random_vs_stateful</a> (self)</td></tr>
 <tr class="separator:a423540c87a6b79209b3cd9d2e10e617d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/d2a/evaluate__bots__test_8py_source.html#l00042">42</a> of file <a class="el" href="../../d8/d2a/evaluate__bots__test_8py_source.html">evaluate_bots_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a810ba24731f014a6e34b00e8cf24037a" name="a810ba24731f014a6e34b00e8cf24037a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810ba24731f014a6e34b00e8cf24037a">&#9670;&#160;</a></span>test_cpp_vs_python()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.evaluate_bots_test.EvaluateBotsTest.test_cpp_vs_python </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>bots</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2a/evaluate__bots__test_8py_source.html#l00048">48</a> of file <a class="el" href="../../d8/d2a/evaluate__bots__test_8py_source.html">evaluate_bots_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>  <span class="keyword">def </span>test_cpp_vs_python(self, bots):</div>
+<div class="line"><span class="lineno">   49</span>    results = np.array([</div>
+<div class="line"><span class="lineno">   50</span>        evaluate_bots.evaluate_bots(GAME.new_initial_state(), bots, np.random)</div>
+<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10000)</div>
+<div class="line"><span class="lineno">   52</span>    ])</div>
+<div class="line"><span class="lineno">   53</span>    average_results = np.mean(results, axis=0)</div>
+<div class="line"><span class="lineno">   54</span>    np.testing.assert_allclose(average_results, [0.125, -0.125], atol=0.1)</div>
+<div class="line"><span class="lineno">   55</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a423540c87a6b79209b3cd9d2e10e617d" name="a423540c87a6b79209b3cd9d2e10e617d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423540c87a6b79209b3cd9d2e10e617d">&#9670;&#160;</a></span>test_random_vs_stateful()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.evaluate_bots_test.EvaluateBotsTest.test_random_vs_stateful </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2a/evaluate__bots__test_8py_source.html#l00056">56</a> of file <a class="el" href="../../d8/d2a/evaluate__bots__test_8py_source.html">evaluate_bots_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>  <span class="keyword">def </span>test_random_vs_stateful(self):</div>
+<div class="line"><span class="lineno">   57</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;tic_tac_toe&quot;</span>)</div>
+<div class="line"><span class="lineno">   58</span>    bots = [</div>
+<div class="line"><span class="lineno">   59</span>        pyspiel.make_stateful_random_bot(game, 0, 1234),</div>
+<div class="line"><span class="lineno">   60</span>        uniform_random.UniformRandomBot(1, np.random.RandomState(4321))</div>
+<div class="line"><span class="lineno">   61</span>    ]</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(1000):</div>
+<div class="line"><span class="lineno">   63</span>      evaluate_bots.evaluate_bots(game.new_initial_state(), bots, np.random)</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>evaluate_bots_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d8/d2a/evaluate__bots__test_8py_source.html">evaluate_bots_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

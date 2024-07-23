@@ -117,15 +117,120 @@ Collaboration diagram for open_spiel.python.algorithms.sequence_form_utils_test.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a86c1b6f26d016216d570e0ce08246268" id="r_a86c1b6f26d016216d570e0ce08246268"><td class="memItemLeft" align="right" valign="top"><a id="a86c1b6f26d016216d570e0ce08246268" name="a86c1b6f26d016216d570e0ce08246268"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_sequence_to_policy</b> (self, game, cfr_iters)</td></tr>
+<tr class="memitem:a86c1b6f26d016216d570e0ce08246268" id="r_a86c1b6f26d016216d570e0ce08246268"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86c1b6f26d016216d570e0ce08246268">test_sequence_to_policy</a> (self, game, cfr_iters)</td></tr>
 <tr class="separator:a86c1b6f26d016216d570e0ce08246268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06e05a31784d57117a7f999cfa185660" id="r_a06e05a31784d57117a7f999cfa185660"><td class="memItemLeft" align="right" valign="top"><a id="a06e05a31784d57117a7f999cfa185660" name="a06e05a31784d57117a7f999cfa185660"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_sequence_payoff</b> (self, game, cfr_iters)</td></tr>
+<tr class="memitem:a06e05a31784d57117a7f999cfa185660" id="r_a06e05a31784d57117a7f999cfa185660"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06e05a31784d57117a7f999cfa185660">test_sequence_payoff</a> (self, game, cfr_iters)</td></tr>
 <tr class="separator:a06e05a31784d57117a7f999cfa185660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/dea/sequence__form__utils__test_8py_source.html#l00032">32</a> of file <a class="el" href="../../d9/dea/sequence__form__utils__test_8py_source.html">sequence_form_utils_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a06e05a31784d57117a7f999cfa185660" name="a06e05a31784d57117a7f999cfa185660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e05a31784d57117a7f999cfa185660">&#9670;&#160;</a></span>test_sequence_payoff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.sequence_form_utils_test.SequenceFormTest.test_sequence_payoff </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cfr_iters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dea/sequence__form__utils__test_8py_source.html#l00074">74</a> of file <a class="el" href="../../d9/dea/sequence__form__utils__test_8py_source.html">sequence_form_utils_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>  <span class="keyword">def </span>test_sequence_payoff(self, game, cfr_iters):</div>
+<div class="line"><span class="lineno">   75</span>    (_, infoset_actions_to_seq, _, _, payoff_mat,</div>
+<div class="line"><span class="lineno">   76</span>     _) = sequence_form_utils.construct_vars(game)</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    uniform_policies = policy.TabularPolicy(game)</div>
+<div class="line"><span class="lineno">   79</span>    uniform_value = policy_value(game.new_initial_state(),</div>
+<div class="line"><span class="lineno">   80</span>                                 [uniform_policies, uniform_policies])</div>
+<div class="line"><span class="lineno">   81</span>    sequences = sequence_form_utils.policy_to_sequence(game, uniform_policies,</div>
+<div class="line"><span class="lineno">   82</span>                                                       infoset_actions_to_seq)</div>
+<div class="line"><span class="lineno">   83</span>    np.testing.assert_allclose(</div>
+<div class="line"><span class="lineno">   84</span>        uniform_value[0],</div>
+<div class="line"><span class="lineno">   85</span>        -sequences[0].T @ payoff_mat @ sequences[1],</div>
+<div class="line"><span class="lineno">   86</span>        rtol=1e-10)</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment"># use cfr iterations to construct new policy</span></div>
+<div class="line"><span class="lineno">   89</span>    cfr_solver = cfr.CFRSolver(game)</div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(cfr_iters):</div>
+<div class="line"><span class="lineno">   91</span>      cfr_solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    policies = cfr_solver.average_policy()</div>
+<div class="line"><span class="lineno">   94</span>    cfr_value = policy_value(game.new_initial_state(), [policies, policies])</div>
+<div class="line"><span class="lineno">   95</span>    sequences = sequence_form_utils.policy_to_sequence(game, policies,</div>
+<div class="line"><span class="lineno">   96</span>                                                       infoset_actions_to_seq)</div>
+<div class="line"><span class="lineno">   97</span>    np.testing.assert_allclose(</div>
+<div class="line"><span class="lineno">   98</span>        cfr_value[0], -sequences[0].T @ payoff_mat @ sequences[1], rtol=1e-10)</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86c1b6f26d016216d570e0ce08246268" name="a86c1b6f26d016216d570e0ce08246268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c1b6f26d016216d570e0ce08246268">&#9670;&#160;</a></span>test_sequence_to_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.sequence_form_utils_test.SequenceFormTest.test_sequence_to_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cfr_iters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/dea/sequence__form__utils__test_8py_source.html#l00044">44</a> of file <a class="el" href="../../d9/dea/sequence__form__utils__test_8py_source.html">sequence_form_utils_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>  <span class="keyword">def </span>test_sequence_to_policy(self, game, cfr_iters):</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>    cfr_solver = cfr.CFRSolver(game)</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(cfr_iters):</div>
+<div class="line"><span class="lineno">   49</span>      cfr_solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    (_, infoset_actions_to_seq, infoset_action_maps, _, _,</div>
+<div class="line"><span class="lineno">   52</span>     _) = sequence_form_utils.construct_vars(game)</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    policies = cfr_solver.average_policy()</div>
+<div class="line"><span class="lineno">   55</span>    sequences = sequence_form_utils.policy_to_sequence(game, policies,</div>
+<div class="line"><span class="lineno">   56</span>                                                       infoset_actions_to_seq)</div>
+<div class="line"><span class="lineno">   57</span>    converted_policies = sequence_form_utils.sequence_to_policy(</div>
+<div class="line"><span class="lineno">   58</span>        sequences, game, infoset_actions_to_seq, infoset_action_maps)</div>
+<div class="line"><span class="lineno">   59</span>    np.testing.assert_allclose(</div>
+<div class="line"><span class="lineno">   60</span>        policies.action_probability_array,</div>
+<div class="line"><span class="lineno">   61</span>        converted_policies.action_probability_array,</div>
+<div class="line"><span class="lineno">   62</span>        rtol=1e-10)</div>
+<div class="line"><span class="lineno">   63</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>sequence_form_utils_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d9/dea/sequence__form__utils__test_8py_source.html">sequence_form_utils_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

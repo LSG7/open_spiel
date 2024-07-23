@@ -106,19 +106,83 @@ Collaboration diagram for open_spiel::chess_common::Offset:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a94b6d8359dfc0143fadd8bd921ebf85c" id="r_a94b6d8359dfc0143fadd8bd921ebf85c"><td class="memItemLeft" align="right" valign="top"><a id="a94b6d8359dfc0143fadd8bd921ebf85c" name="a94b6d8359dfc0143fadd8bd921ebf85c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../dc/d13/structopen__spiel_1_1chess__common_1_1_offset.html">Offset</a> &amp;other) const</td></tr>
+<tr class="memitem:a94b6d8359dfc0143fadd8bd921ebf85c" id="r_a94b6d8359dfc0143fadd8bd921ebf85c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94b6d8359dfc0143fadd8bd921ebf85c">operator==</a> (const <a class="el" href="../../dc/d13/structopen__spiel_1_1chess__common_1_1_offset.html">Offset</a> &amp;other) const</td></tr>
 <tr class="separator:a94b6d8359dfc0143fadd8bd921ebf85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a60b9aa03f8ee43d151e9c0683dc7ae85" id="r_a60b9aa03f8ee43d151e9c0683dc7ae85"><td class="memItemLeft" align="right" valign="top"><a id="a60b9aa03f8ee43d151e9c0683dc7ae85" name="a60b9aa03f8ee43d151e9c0683dc7ae85"></a>
-int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>x_offset</b></td></tr>
+<tr class="memitem:a60b9aa03f8ee43d151e9c0683dc7ae85" id="r_a60b9aa03f8ee43d151e9c0683dc7ae85"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60b9aa03f8ee43d151e9c0683dc7ae85">x_offset</a></td></tr>
 <tr class="separator:a60b9aa03f8ee43d151e9c0683dc7ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b9bedf6aae39f56d889784ac8bd78fb" id="r_a0b9bedf6aae39f56d889784ac8bd78fb"><td class="memItemLeft" align="right" valign="top"><a id="a0b9bedf6aae39f56d889784ac8bd78fb" name="a0b9bedf6aae39f56d889784ac8bd78fb"></a>
-int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>y_offset</b></td></tr>
+<tr class="memitem:a0b9bedf6aae39f56d889784ac8bd78fb" id="r_a0b9bedf6aae39f56d889784ac8bd78fb"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b9bedf6aae39f56d889784ac8bd78fb">y_offset</a></td></tr>
 <tr class="separator:a0b9bedf6aae39f56d889784ac8bd78fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/d06/chess__common_8h_source.html#l00028">28</a> of file <a class="el" href="../../dc/d06/chess__common_8h_source.html">chess_common.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a94b6d8359dfc0143fadd8bd921ebf85c" name="a94b6d8359dfc0143fadd8bd921ebf85c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b6d8359dfc0143fadd8bd921ebf85c">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool open_spiel::chess_common::Offset::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d13/structopen__spiel_1_1chess__common_1_1_offset.html">Offset</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d06/chess__common_8h_source.html#l00032">32</a> of file <a class="el" href="../../dc/d06/chess__common_8h_source.html">chess_common.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                                             {</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> x_offset == other.x_offset &amp;&amp; y_offset == other.y_offset;</div>
+<div class="line"><span class="lineno">   34</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a60b9aa03f8ee43d151e9c0683dc7ae85" name="a60b9aa03f8ee43d151e9c0683dc7ae85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b9aa03f8ee43d151e9c0683dc7ae85">&#9670;&#160;</a></span>x_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t open_spiel::chess_common::Offset::x_offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d06/chess__common_8h_source.html#l00029">29</a> of file <a class="el" href="../../dc/d06/chess__common_8h_source.html">chess_common.h</a>.</p>
+
+</div>
+</div>
+<a id="a0b9bedf6aae39f56d889784ac8bd78fb" name="a0b9bedf6aae39f56d889784ac8bd78fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b9bedf6aae39f56d889784ac8bd78fb">&#9670;&#160;</a></span>y_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t open_spiel::chess_common::Offset::y_offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d06/chess__common_8h_source.html#l00030">30</a> of file <a class="el" href="../../dc/d06/chess__common_8h_source.html">chess_common.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/games/chess/<a class="el" href="../../dc/d06/chess__common_8h_source.html">chess_common.h</a></li>
 </ul>

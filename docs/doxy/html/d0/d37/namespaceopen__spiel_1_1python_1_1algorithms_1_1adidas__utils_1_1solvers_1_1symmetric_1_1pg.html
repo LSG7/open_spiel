@@ -140,7 +140,32 @@ Returns:
   gradient of payoff w.r.t. (dist) as tuple
   unregularized exploitability (stochastic estimate)
   unregularized exploitability (stochastic estimate) *duplicate
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d1/d32/symmetric_2pg_8py_source.html#l00060">60</a> of file <a class="el" href="../../d1/d32/symmetric_2pg_8py_source.html">pg.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span><span class="keyword">def </span>gradients(dist, payoff_matrices, proj_grad=True):</div>
+<div class="line"><span class="lineno">   61</span>  <span class="stringliteral">&quot;&quot;&quot;Computes exploitablity gradient.</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">    dist: 1-d np.array, current estimate of nash distribution</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">    payoff_matrices: (&gt;=2 x A x A) np.array, payoffs for each joint action</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">    proj_grad: bool, if True, projects dist gradient onto simplex</span></div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   68</span><span class="stringliteral">    gradient of payoff w.r.t. (dist) as tuple</span></div>
+<div class="line"><span class="lineno">   69</span><span class="stringliteral">    unregularized exploitability (stochastic estimate)</span></div>
+<div class="line"><span class="lineno">   70</span><span class="stringliteral">    unregularized exploitability (stochastic estimate) *duplicate</span></div>
+<div class="line"><span class="lineno">   71</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   72</span>  nabla = payoff_matrices[0].dot(dist)</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>  unreg_exp = np.max(nabla) - nabla.dot(dist)</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>  grad_dist = -nabla</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">if</span> proj_grad:</div>
+<div class="line"><span class="lineno">   78</span>    grad_dist = simplex.project_grad(grad_dist)</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">return</span> (grad_dist,), unreg_exp, unreg_exp</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d1/d32/symmetric_2pg_8py_source.html#l00035">open_spiel.python.algorithms.adidas_utils.solvers.symmetric.pg.Solver.compute_gradients()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d37/namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1pg_ad1a548395761a5624047c1c59208fa31_icgraph.png" border="0" usemap="#ad0/d37/namespaceopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1solvers_1_1symmetric_1_1pg_ad1a548395761a5624047c1c59208fa31_icgraph" alt=""/></div>

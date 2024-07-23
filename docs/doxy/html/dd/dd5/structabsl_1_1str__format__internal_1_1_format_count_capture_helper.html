@@ -105,11 +105,62 @@ Collaboration diagram for absl::str_format_internal::FormatCountCaptureHelper:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae0c0d00c5d1d66c7d09a7f393d798726" id="r_ae0c0d00c5d1d66c7d09a7f393d798726"><td class="memTemplParams" colspan="2"><a id="ae0c0d00c5d1d66c7d09a7f393d798726" name="ae0c0d00c5d1d66c7d09a7f393d798726"></a>
-template&lt;class T  = int&gt; </td></tr>
-<tr class="memitem:ae0c0d00c5d1d66c7d09a7f393d798726"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d83/structabsl_1_1str__format__internal_1_1_arg_convert_result.html">ArgConvertResult</a>&lt; FormatConversionCharSetInternal::n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ConvertHelper</b> (const <a class="el" href="../../df/d7b/classabsl_1_1_format_count_capture.html">FormatCountCapture</a> &amp;v, <a class="el" href="../../db/df7/classabsl_1_1str__format__internal_1_1_format_conversion_spec_impl.html">FormatConversionSpecImpl</a> conv, <a class="el" href="../../dc/dc6/classabsl_1_1str__format__internal_1_1_format_sink_impl.html">FormatSinkImpl</a> *sink)</td></tr>
+<tr class="memitem:ae0c0d00c5d1d66c7d09a7f393d798726" id="r_ae0c0d00c5d1d66c7d09a7f393d798726"><td class="memTemplParams" colspan="2">template&lt;class T  = int&gt; </td></tr>
+<tr class="memitem:ae0c0d00c5d1d66c7d09a7f393d798726"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d83/structabsl_1_1str__format__internal_1_1_arg_convert_result.html">ArgConvertResult</a>&lt; FormatConversionCharSetInternal::n &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae0c0d00c5d1d66c7d09a7f393d798726">ConvertHelper</a> (const <a class="el" href="../../df/d7b/classabsl_1_1_format_count_capture.html">FormatCountCapture</a> &amp;v, <a class="el" href="../../db/df7/classabsl_1_1str__format__internal_1_1_format_conversion_spec_impl.html">FormatConversionSpecImpl</a> conv, <a class="el" href="../../dc/dc6/classabsl_1_1str__format__internal_1_1_format_sink_impl.html">FormatSinkImpl</a> *sink)</td></tr>
 <tr class="separator:ae0c0d00c5d1d66c7d09a7f393d798726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/d15/arg_8h_source.html#l00352">352</a> of file <a class="el" href="../../d5/d15/arg_8h_source.html">arg.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae0c0d00c5d1d66c7d09a7f393d798726" name="ae0c0d00c5d1d66c7d09a7f393d798726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c0d00c5d1d66c7d09a7f393d798726">&#9670;&#160;</a></span>ConvertHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T  = int&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d8/d83/structabsl_1_1str__format__internal_1_1_arg_convert_result.html">ArgConvertResult</a>&lt; FormatConversionCharSetInternal::n &gt; absl::str_format_internal::FormatCountCaptureHelper::ConvertHelper </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d7b/classabsl_1_1_format_count_capture.html">FormatCountCapture</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/df7/classabsl_1_1str__format__internal_1_1_format_conversion_spec_impl.html">FormatConversionSpecImpl</a></td>          <td class="paramname"><span class="paramname"><em>conv</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dc6/classabsl_1_1str__format__internal_1_1_format_sink_impl.html">FormatSinkImpl</a> *</td>          <td class="paramname"><span class="paramname"><em>sink</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d15/arg_8h_source.html#l00354">354</a> of file <a class="el" href="../../d5/d15/arg_8h_source.html">arg.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  356</span>                            {</div>
+<div class="line"><span class="lineno">  357</span>    <span class="keyword">const</span> absl::enable_if_t&lt;<span class="keyword">sizeof</span>(T) != 0, FormatCountCapture&gt;&amp; v2 = v;</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">if</span> (conv.conversion_char() !=</div>
+<div class="line"><span class="lineno">  360</span>        str_format_internal::FormatConversionCharInternal::n) {</div>
+<div class="line"><span class="lineno">  361</span>      <span class="keywordflow">return</span> {<span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno">  362</span>    }</div>
+<div class="line"><span class="lineno">  363</span>    *v2.p_ = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(sink-&gt;size());</div>
+<div class="line"><span class="lineno">  364</span>    <span class="keywordflow">return</span> {<span class="keyword">true</span>};</div>
+<div class="line"><span class="lineno">  365</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/internal/str_format/<a class="el" href="../../d5/d15/arg_8h_source.html">arg.h</a></li>
 </ul>

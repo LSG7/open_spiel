@@ -138,19 +138,19 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a9c2e20f87859ee4fc270b71b39f3f590" id="r_a9c2e20f87859ee4fc270b71b39f3f590"><td class="memItemLeft" align="right" valign="top"><a id="a9c2e20f87859ee4fc270b71b39f3f590" name="a9c2e20f87859ee4fc270b71b39f3f590"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_values</b></td></tr>
+<tr class="memitem:a9c2e20f87859ee4fc270b71b39f3f590" id="r_a9c2e20f87859ee4fc270b71b39f3f590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c2e20f87859ee4fc270b71b39f3f590">_values</a></td></tr>
 <tr class="separator:a9c2e20f87859ee4fc270b71b39f3f590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function')"><img src="../../closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="../../d0/da6/classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function.html">open_spiel.python.mfg.value.ValueFunction</a></td></tr>
-<tr class="memitem:a7f215e3171374cdaf43fed8dce6cafa4 inherit pub_attribs_classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function" id="r_a7f215e3171374cdaf43fed8dce6cafa4"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>game</b></td></tr>
+<tr class="memitem:a7f215e3171374cdaf43fed8dce6cafa4 inherit pub_attribs_classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function" id="r_a7f215e3171374cdaf43fed8dce6cafa4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da6/classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function.html#a7f215e3171374cdaf43fed8dce6cafa4">game</a></td></tr>
 <tr class="separator:a7f215e3171374cdaf43fed8dce6cafa4 inherit pub_attribs_classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Tabular value function backed by a dictionary.</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Tabular value function backed by a dictionary.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../df/d1f/value_8py_source.html#l00115">115</a> of file <a class="el" href="../../df/d1f/value_8py_source.html">value.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1aed4e40ca9f56021860b07334e419fb" name="a1aed4e40ca9f56021860b07334e419fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1aed4e40ca9f56021860b07334e419fb">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -175,6 +175,16 @@ Args:
   game: the game for which this value derives
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d0/da6/classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function.html#a240dd3dee44bf2e65caef9db25cbee40">open_spiel.python.mfg.value.ValueFunction</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d1f/value_8py_source.html#l00118">118</a> of file <a class="el" href="../../df/d1f/value_8py_source.html">value.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>  <span class="keyword">def </span>__init__(self, game):</div>
+<div class="line"><span class="lineno">  119</span>    super().__init__(game)</div>
+<div class="line"><span class="lineno">  120</span>    self._values = collections.defaultdict(float)</div>
+<div class="line"><span class="lineno">  121</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../df/d1f/value_8py_source.html#l00118">open_spiel.python.mfg.value.TabularValueFunction.__init__()</a>, <a class="el" href="../../d0/dd5/rl__response_8py_source.html#l00158">open_spiel.python.examples.rl_response.RollingAverage._values</a>, and <a class="el" href="../../df/d1f/value_8py_source.html#l00120">open_spiel.python.mfg.value.TabularValueFunction._values</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d1f/value_8py_source.html#l00118">open_spiel.python.mfg.value.TabularValueFunction.__init__()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -231,6 +241,12 @@ Returns:
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d0/da6/classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function.html#a2b96325ca778124de24e96c5fa89c470">open_spiel.python.mfg.value.ValueFunction</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../df/d1f/value_8py_source.html#l00128">128</a> of file <a class="el" href="../../df/d1f/value_8py_source.html">value.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>  <span class="keyword">def </span>has(self, state: ValueFunctionState, action=<span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">return</span> (state, action) <span class="keywordflow">in</span> self._values</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d0/dd5/rl__response_8py_source.html#l00158">open_spiel.python.examples.rl_response.RollingAverage._values</a>, and <a class="el" href="../../df/d1f/value_8py_source.html#l00120">open_spiel.python.mfg.value.TabularValueFunction._values</a>.</p>
+
 </div>
 </div>
 <a id="a958395688aad129f093ddcd867d257ef" name="a958395688aad129f093ddcd867d257ef"></a>
@@ -269,6 +285,15 @@ Args:
   action: may be None or a legal action
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d0/da6/classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function.html#a6b4032a5921fbdd0651c90d702b3580e">open_spiel.python.mfg.value.ValueFunction</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d1f/value_8py_source.html#l00125">125</a> of file <a class="el" href="../../df/d1f/value_8py_source.html">value.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  125</span>  <span class="keyword">def </span>set_value(self, state: ValueFunctionState, value: float, action=<span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">  126</span>    self._values[(state, action)] = value</div>
+<div class="line"><span class="lineno">  127</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d0/dd5/rl__response_8py_source.html#l00158">open_spiel.python.examples.rl_response.RollingAverage._values</a>, and <a class="el" href="../../df/d1f/value_8py_source.html#l00120">open_spiel.python.mfg.value.TabularValueFunction._values</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d1f/value_8py_source.html#l00103">open_spiel.python.mfg.value.ValueFunction.add_value()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -389,6 +414,15 @@ Returns:
   A value for the state (and eventuallu state action pair).
 </pre> 
 <p>Reimplemented from <a class="el" href="../../d0/da6/classopen__spiel_1_1python_1_1mfg_1_1value_1_1_value_function.html#a4b8c68b95394fb5a09ab8e03e1b62a2d">open_spiel.python.mfg.value.ValueFunction</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d1f/value_8py_source.html#l00122">122</a> of file <a class="el" href="../../df/d1f/value_8py_source.html">value.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>  <span class="keyword">def </span>value(self, state: ValueFunctionState, action=<span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> self._values[(state, action)]</div>
+<div class="line"><span class="lineno">  124</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d0/dd5/rl__response_8py_source.html#l00158">open_spiel.python.examples.rl_response.RollingAverage._values</a>, and <a class="el" href="../../df/d1f/value_8py_source.html#l00120">open_spiel.python.mfg.value.TabularValueFunction._values</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/db2/python_2mfg_2algorithms_2utils_8py_source.html#l00146">open_spiel.python.mfg.algorithms.utils.MixedDistribution.__call__()</a>, <a class="el" href="../../d0/d85/distribution_8py_source.html#l00075">open_spiel.python.mfg.distribution.Distribution.__call__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00069">open_spiel.python.mfg.value.ValueFunction.__call__()</a>, <a class="el" href="../../df/d3d/mirror__descent_8py_source.html#l00042">open_spiel.python.mfg.algorithms.mirror_descent.ProjectedPolicy.__init__()</a>, <a class="el" href="../../d1/d5d/munchausen__mirror__descent_8py_source.html#l00036">open_spiel.python.mfg.algorithms.munchausen_mirror_descent.ProjectedPolicyMunchausen.__init__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00103">open_spiel.python.mfg.value.ValueFunction.add_value()</a>, <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00185">open_spiel.python.algorithms.best_response.BestResponsePolicy.q_value()</a>, and <a class="el" href="../../d8/d7a/best__response_8py_source.html#l00324">open_spiel.python.algorithms.best_response.CPPBestResponsePolicy.q_value()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -543,8 +577,35 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9c2e20f87859ee4fc270b71b39f3f590" name="a9c2e20f87859ee4fc270b71b39f3f590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2e20f87859ee4fc270b71b39f3f590">&#9670;&#160;</a></span>_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.mfg.value.TabularValueFunction._values</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d1f/value_8py_source.html#l00120">120</a> of file <a class="el" href="../../df/d1f/value_8py_source.html">value.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../df/d1f/value_8py_source.html#l00118">open_spiel.python.mfg.value.TabularValueFunction.__init__()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00128">open_spiel.python.mfg.value.TabularValueFunction.has()</a>, <a class="el" href="../../df/d1f/value_8py_source.html#l00125">open_spiel.python.mfg.value.TabularValueFunction.set_value()</a>, and <a class="el" href="../../df/d1f/value_8py_source.html#l00122">open_spiel.python.mfg.value.TabularValueFunction.value()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/<b>value.py</b></li>
+<li>open_spiel/python/mfg/<a class="el" href="../../df/d1f/value_8py_source.html">value.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -121,21 +121,242 @@ Collaboration diagram for open_spiel.python.pytorch.policy_gradient_pytorch_test
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a09075133e82c406e40ddaf77c0086b79" id="r_a09075133e82c406e40ddaf77c0086b79"><td class="memItemLeft" align="right" valign="top"><a id="a09075133e82c406e40ddaf77c0086b79" name="a09075133e82c406e40ddaf77c0086b79"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_run_game</b> (self, loss_str, game_name)</td></tr>
+<tr class="memitem:a09075133e82c406e40ddaf77c0086b79" id="r_a09075133e82c406e40ddaf77c0086b79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09075133e82c406e40ddaf77c0086b79">test_run_game</a> (self, loss_str, game_name)</td></tr>
 <tr class="separator:a09075133e82c406e40ddaf77c0086b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb46f249595f99ea0447eeec010489d8" id="r_adb46f249595f99ea0447eeec010489d8"><td class="memItemLeft" align="right" valign="top"><a id="adb46f249595f99ea0447eeec010489d8" name="adb46f249595f99ea0447eeec010489d8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_neurd_kuhn</b> (self)</td></tr>
+<tr class="memitem:adb46f249595f99ea0447eeec010489d8" id="r_adb46f249595f99ea0447eeec010489d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb46f249595f99ea0447eeec010489d8">test_neurd_kuhn</a> (self)</td></tr>
 <tr class="separator:adb46f249595f99ea0447eeec010489d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b648ad471492ed5ed4a6f726d2eba96" id="r_a9b648ad471492ed5ed4a6f726d2eba96"><td class="memItemLeft" align="right" valign="top"><a id="a9b648ad471492ed5ed4a6f726d2eba96" name="a9b648ad471492ed5ed4a6f726d2eba96"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_run_hanabi</b> (self)</td></tr>
+<tr class="memitem:a9b648ad471492ed5ed4a6f726d2eba96" id="r_a9b648ad471492ed5ed4a6f726d2eba96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b648ad471492ed5ed4a6f726d2eba96">test_run_hanabi</a> (self)</td></tr>
 <tr class="separator:a9b648ad471492ed5ed4a6f726d2eba96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ddda1cd34283c618ed405c2be309708" id="r_a9ddda1cd34283c618ed405c2be309708"><td class="memItemLeft" align="right" valign="top"><a id="a9ddda1cd34283c618ed405c2be309708" name="a9ddda1cd34283c618ed405c2be309708"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_loss_modes</b> (self)</td></tr>
+<tr class="memitem:a9ddda1cd34283c618ed405c2be309708" id="r_a9ddda1cd34283c618ed405c2be309708"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ddda1cd34283c618ed405c2be309708">test_loss_modes</a> (self)</td></tr>
 <tr class="separator:a9ddda1cd34283c618ed405c2be309708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html">policy_gradient_pytorch_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ddda1cd34283c618ed405c2be309708" name="a9ddda1cd34283c618ed405c2be309708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ddda1cd34283c618ed405c2be309708">&#9670;&#160;</a></span>test_loss_modes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.policy_gradient_pytorch_test.PolicyGradientTest.test_loss_modes </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html#l00149">149</a> of file <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html">policy_gradient_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>  <span class="keyword">def </span>test_loss_modes(self):</div>
+<div class="line"><span class="lineno">  150</span>    loss_dict = {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="stringliteral">&quot;qpg&quot;</span>: rl_losses.BatchQPGLoss,</div>
+<div class="line"><span class="lineno">  152</span>        <span class="stringliteral">&quot;rpg&quot;</span>: rl_losses.BatchRPGLoss,</div>
+<div class="line"><span class="lineno">  153</span>        <span class="stringliteral">&quot;rm&quot;</span>: rl_losses.BatchRMLoss,</div>
+<div class="line"><span class="lineno">  154</span>        <span class="stringliteral">&quot;a2c&quot;</span>: rl_losses.BatchA2CLoss,</div>
+<div class="line"><span class="lineno">  155</span>        <span class="stringliteral">&quot;neurd&quot;</span>: rl_losses.BatchNeuRDLoss,</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">for</span> loss_str, loss_class <span class="keywordflow">in</span> loss_dict.items():</div>
+<div class="line"><span class="lineno">  159</span>      agent_by_str = policy_gradient.PolicyGradient(</div>
+<div class="line"><span class="lineno">  160</span>          player_id=0,</div>
+<div class="line"><span class="lineno">  161</span>          info_state_size=32,</div>
+<div class="line"><span class="lineno">  162</span>          num_actions=2,</div>
+<div class="line"><span class="lineno">  163</span>          loss_str=loss_str,</div>
+<div class="line"><span class="lineno">  164</span>          loss_class=<span class="keywordtype">None</span>)</div>
+<div class="line"><span class="lineno">  165</span>      agent_by_class = policy_gradient.PolicyGradient(</div>
+<div class="line"><span class="lineno">  166</span>          player_id=0,</div>
+<div class="line"><span class="lineno">  167</span>          info_state_size=32,</div>
+<div class="line"><span class="lineno">  168</span>          num_actions=2,</div>
+<div class="line"><span class="lineno">  169</span>          loss_str=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">  170</span>          loss_class=loss_class)</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>      self.assertEqual(agent_by_str._loss_class, agent_by_class._loss_class)</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adb46f249595f99ea0447eeec010489d8" name="adb46f249595f99ea0447eeec010489d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb46f249595f99ea0447eeec010489d8">&#9670;&#160;</a></span>test_neurd_kuhn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.policy_gradient_pytorch_test.PolicyGradientTest.test_neurd_kuhn </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html#l00070">70</a> of file <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html">policy_gradient_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>  <span class="keyword">def </span>test_neurd_kuhn(self):</div>
+<div class="line"><span class="lineno">   71</span>    env = rl_environment.Environment(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   72</span>    env.seed(SEED)</div>
+<div class="line"><span class="lineno">   73</span>    info_state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">   74</span>    num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    agents = [</div>
+<div class="line"><span class="lineno">   77</span>        policy_gradient.PolicyGradient(  <span class="comment"># pylint: disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">   78</span>            player_id=player_id,</div>
+<div class="line"><span class="lineno">   79</span>            info_state_size=info_state_size,</div>
+<div class="line"><span class="lineno">   80</span>            num_actions=num_actions,</div>
+<div class="line"><span class="lineno">   81</span>            loss_str=<span class="stringliteral">&quot;neurd&quot;</span>,</div>
+<div class="line"><span class="lineno">   82</span>            hidden_layers_sizes=[32],</div>
+<div class="line"><span class="lineno">   83</span>            batch_size=16,</div>
+<div class="line"><span class="lineno">   84</span>            entropy_cost=0.001,</div>
+<div class="line"><span class="lineno">   85</span>            critic_learning_rate=0.01,</div>
+<div class="line"><span class="lineno">   86</span>            pi_learning_rate=0.01,</div>
+<div class="line"><span class="lineno">   87</span>            num_critic_before_pi=4) <span class="keywordflow">for</span> player_id <span class="keywordflow">in</span> [0, 1]</div>
+<div class="line"><span class="lineno">   88</span>    ]</div>
+<div class="line"><span class="lineno">   89</span>    expl_policies_avg = kuhn_policy_gradient.PolicyGradientPolicies(env, agents)</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(100):</div>
+<div class="line"><span class="lineno">   92</span>      time_step = env.reset()</div>
+<div class="line"><span class="lineno">   93</span>      <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   94</span>        current_player = time_step.observations[<span class="stringliteral">&quot;current_player&quot;</span>]</div>
+<div class="line"><span class="lineno">   95</span>        current_agent = agents[current_player]</div>
+<div class="line"><span class="lineno">   96</span>        agent_output = current_agent.step(time_step)</div>
+<div class="line"><span class="lineno">   97</span>        time_step = env.step([agent_output.action])</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>      <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents:</div>
+<div class="line"><span class="lineno">  100</span>        agent.step(time_step)</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    expl = exploitability.exploitability(env.game, expl_policies_avg)</div>
+<div class="line"><span class="lineno">  103</span>    <span class="comment"># Check the exploitability is less than the target upper bound.</span></div>
+<div class="line"><span class="lineno">  104</span>    self.assertLess(expl, 0.7)</div>
+<div class="line"><span class="lineno">  105</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a09075133e82c406e40ddaf77c0086b79" name="a09075133e82c406e40ddaf77c0086b79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09075133e82c406e40ddaf77c0086b79">&#9670;&#160;</a></span>test_run_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.policy_gradient_pytorch_test.PolicyGradientTest.test_run_game </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>loss_str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html#l00039">39</a> of file <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html">policy_gradient_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>  <span class="keyword">def </span>test_run_game(self, loss_str, game_name):</div>
+<div class="line"><span class="lineno">   40</span>    env = rl_environment.Environment(game_name)</div>
+<div class="line"><span class="lineno">   41</span>    env.seed(SEED)</div>
+<div class="line"><span class="lineno">   42</span>    info_state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">   43</span>    num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    agents = [</div>
+<div class="line"><span class="lineno">   46</span>        policy_gradient.PolicyGradient(  <span class="comment"># pylint: disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">   47</span>            player_id=player_id,</div>
+<div class="line"><span class="lineno">   48</span>            info_state_size=info_state_size,</div>
+<div class="line"><span class="lineno">   49</span>            num_actions=num_actions,</div>
+<div class="line"><span class="lineno">   50</span>            loss_str=loss_str,</div>
+<div class="line"><span class="lineno">   51</span>            hidden_layers_sizes=[32, 32],</div>
+<div class="line"><span class="lineno">   52</span>            batch_size=16,</div>
+<div class="line"><span class="lineno">   53</span>            entropy_cost=0.001,</div>
+<div class="line"><span class="lineno">   54</span>            critic_learning_rate=0.01,</div>
+<div class="line"><span class="lineno">   55</span>            pi_learning_rate=0.01,</div>
+<div class="line"><span class="lineno">   56</span>            num_critic_before_pi=4) <span class="keywordflow">for</span> player_id <span class="keywordflow">in</span> [0, 1]</div>
+<div class="line"><span class="lineno">   57</span>    ]</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(2):</div>
+<div class="line"><span class="lineno">   60</span>      time_step = env.reset()</div>
+<div class="line"><span class="lineno">   61</span>      <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   62</span>        current_player = time_step.observations[<span class="stringliteral">&quot;current_player&quot;</span>]</div>
+<div class="line"><span class="lineno">   63</span>        current_agent = agents[current_player]</div>
+<div class="line"><span class="lineno">   64</span>        agent_output = current_agent.step(time_step)</div>
+<div class="line"><span class="lineno">   65</span>        time_step = env.step([agent_output.action])</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>      <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents:</div>
+<div class="line"><span class="lineno">   68</span>        agent.step(time_step)</div>
+<div class="line"><span class="lineno">   69</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9b648ad471492ed5ed4a6f726d2eba96" name="a9b648ad471492ed5ed4a6f726d2eba96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b648ad471492ed5ed4a6f726d2eba96">&#9670;&#160;</a></span>test_run_hanabi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.policy_gradient_pytorch_test.PolicyGradientTest.test_run_hanabi </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html#l00106">106</a> of file <a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html">policy_gradient_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>  <span class="keyword">def </span>test_run_hanabi(self):</div>
+<div class="line"><span class="lineno">  107</span>    <span class="comment"># Hanabi is an optional game, so check we have it before running the test.</span></div>
+<div class="line"><span class="lineno">  108</span>    game = <span class="stringliteral">&quot;hanabi&quot;</span></div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">if</span> game <span class="keywordflow">not</span> <span class="keywordflow">in</span> pyspiel.registered_names():</div>
+<div class="line"><span class="lineno">  110</span>      <span class="keywordflow">return</span></div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>    num_players = 3</div>
+<div class="line"><span class="lineno">  113</span>    env_configs = {</div>
+<div class="line"><span class="lineno">  114</span>        <span class="stringliteral">&quot;players&quot;</span>: num_players,</div>
+<div class="line"><span class="lineno">  115</span>        <span class="stringliteral">&quot;max_life_tokens&quot;</span>: 1,</div>
+<div class="line"><span class="lineno">  116</span>        <span class="stringliteral">&quot;colors&quot;</span>: 2,</div>
+<div class="line"><span class="lineno">  117</span>        <span class="stringliteral">&quot;ranks&quot;</span>: 3,</div>
+<div class="line"><span class="lineno">  118</span>        <span class="stringliteral">&quot;hand_size&quot;</span>: 2,</div>
+<div class="line"><span class="lineno">  119</span>        <span class="stringliteral">&quot;max_information_tokens&quot;</span>: 3,</div>
+<div class="line"><span class="lineno">  120</span>        <span class="stringliteral">&quot;discount&quot;</span>: 0.99</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="line"><span class="lineno">  122</span>    env = rl_environment.Environment(game, **env_configs)</div>
+<div class="line"><span class="lineno">  123</span>    env.seed(SEED)</div>
+<div class="line"><span class="lineno">  124</span>    info_state_size = env.observation_spec()[<span class="stringliteral">&quot;info_state&quot;</span>][0]</div>
+<div class="line"><span class="lineno">  125</span>    num_actions = env.action_spec()[<span class="stringliteral">&quot;num_actions&quot;</span>]</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>    agents = [</div>
+<div class="line"><span class="lineno">  128</span>        policy_gradient.PolicyGradient(  <span class="comment"># pylint: disable=g-complex-comprehension</span></div>
+<div class="line"><span class="lineno">  129</span>            player_id=player_id,</div>
+<div class="line"><span class="lineno">  130</span>            info_state_size=info_state_size,</div>
+<div class="line"><span class="lineno">  131</span>            num_actions=num_actions,</div>
+<div class="line"><span class="lineno">  132</span>            hidden_layers_sizes=[8, 8],</div>
+<div class="line"><span class="lineno">  133</span>            batch_size=16,</div>
+<div class="line"><span class="lineno">  134</span>            entropy_cost=0.001,</div>
+<div class="line"><span class="lineno">  135</span>            critic_learning_rate=0.001,</div>
+<div class="line"><span class="lineno">  136</span>            pi_learning_rate=0.001,</div>
+<div class="line"><span class="lineno">  137</span>            num_critic_before_pi=4) <span class="keywordflow">for</span> player_id <span class="keywordflow">in</span> range(num_players)</div>
+<div class="line"><span class="lineno">  138</span>    ]</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    time_step = env.reset()</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">  142</span>      current_player = time_step.observations[<span class="stringliteral">&quot;current_player&quot;</span>]</div>
+<div class="line"><span class="lineno">  143</span>      agent_output = [agent.step(time_step) <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents]</div>
+<div class="line"><span class="lineno">  144</span>      time_step = env.step([agent_output[current_player].action])</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">for</span> agent <span class="keywordflow">in</span> agents:</div>
+<div class="line"><span class="lineno">  147</span>      agent.step(time_step)</div>
+<div class="line"><span class="lineno">  148</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/pytorch/<b>policy_gradient_pytorch_test.py</b></li>
+<li>open_spiel/python/pytorch/<a class="el" href="../../d5/dc6/policy__gradient__pytorch__test_8py_source.html">policy_gradient_pytorch_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -118,121 +118,1408 @@ Collaboration diagram for open_spiel.python.algorithms.ismcts.ISMCTSBot:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0b6e871ef70d443630be0c0ca9274fff" id="r_a0b6e871ef70d443630be0c0ca9274fff"><td class="memItemLeft" align="right" valign="top"><a id="a0b6e871ef70d443630be0c0ca9274fff" name="a0b6e871ef70d443630be0c0ca9274fff"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, game, evaluator, uct_c, max_simulations, max_world_samples=UNLIMITED_NUM_WORLD_SAMPLES, random_state=None, final_policy_type=ISMCTSFinalPolicyType.MAX_VISIT_COUNT, use_observation_string=False, allow_inconsistent_action_sets=False, child_selection_policy=ChildSelectionPolicy.PUCT)</td></tr>
+<tr class="memitem:a0b6e871ef70d443630be0c0ca9274fff" id="r_a0b6e871ef70d443630be0c0ca9274fff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b6e871ef70d443630be0c0ca9274fff">__init__</a> (self, game, evaluator, uct_c, max_simulations, max_world_samples=UNLIMITED_NUM_WORLD_SAMPLES, random_state=None, final_policy_type=ISMCTSFinalPolicyType.MAX_VISIT_COUNT, use_observation_string=False, allow_inconsistent_action_sets=False, child_selection_policy=ChildSelectionPolicy.PUCT)</td></tr>
 <tr class="separator:a0b6e871ef70d443630be0c0ca9274fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24d3e92b70c9161c2d6580c85f972ed6" id="r_a24d3e92b70c9161c2d6580c85f972ed6"><td class="memItemLeft" align="right" valign="top"><a id="a24d3e92b70c9161c2d6580c85f972ed6" name="a24d3e92b70c9161c2d6580c85f972ed6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>random_number</b> (self)</td></tr>
+<tr class="memitem:a24d3e92b70c9161c2d6580c85f972ed6" id="r_a24d3e92b70c9161c2d6580c85f972ed6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24d3e92b70c9161c2d6580c85f972ed6">random_number</a> (self)</td></tr>
 <tr class="separator:a24d3e92b70c9161c2d6580c85f972ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebc4c2690cbd5350976c463c39794650" id="r_aebc4c2690cbd5350976c463c39794650"><td class="memItemLeft" align="right" valign="top"><a id="aebc4c2690cbd5350976c463c39794650" name="aebc4c2690cbd5350976c463c39794650"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> (self)</td></tr>
+<tr class="memitem:aebc4c2690cbd5350976c463c39794650" id="r_aebc4c2690cbd5350976c463c39794650"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebc4c2690cbd5350976c463c39794650">reset</a> (self)</td></tr>
 <tr class="separator:aebc4c2690cbd5350976c463c39794650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39cd103343728e427c57733637a9cbc8" id="r_a39cd103343728e427c57733637a9cbc8"><td class="memItemLeft" align="right" valign="top"><a id="a39cd103343728e427c57733637a9cbc8" name="a39cd103343728e427c57733637a9cbc8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>get_state_key</b> (self, state)</td></tr>
+<tr class="memitem:a39cd103343728e427c57733637a9cbc8" id="r_a39cd103343728e427c57733637a9cbc8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39cd103343728e427c57733637a9cbc8">get_state_key</a> (self, state)</td></tr>
 <tr class="separator:a39cd103343728e427c57733637a9cbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a034e9845c4b368946f9336a4a029b568" id="r_a034e9845c4b368946f9336a4a029b568"><td class="memItemLeft" align="right" valign="top"><a id="a034e9845c4b368946f9336a4a029b568" name="a034e9845c4b368946f9336a4a029b568"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>run_search</b> (self, state)</td></tr>
+<tr class="memitem:a034e9845c4b368946f9336a4a029b568" id="r_a034e9845c4b368946f9336a4a029b568"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a034e9845c4b368946f9336a4a029b568">run_search</a> (self, state)</td></tr>
 <tr class="separator:a034e9845c4b368946f9336a4a029b568"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae01dbe05f9d09dc445ae8d24b6e2e6f1" id="r_ae01dbe05f9d09dc445ae8d24b6e2e6f1"><td class="memItemLeft" align="right" valign="top"><a id="ae01dbe05f9d09dc445ae8d24b6e2e6f1" name="ae01dbe05f9d09dc445ae8d24b6e2e6f1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>step</b> (self, state)</td></tr>
+<tr class="memitem:ae01dbe05f9d09dc445ae8d24b6e2e6f1" id="r_ae01dbe05f9d09dc445ae8d24b6e2e6f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae01dbe05f9d09dc445ae8d24b6e2e6f1">step</a> (self, state)</td></tr>
 <tr class="separator:ae01dbe05f9d09dc445ae8d24b6e2e6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eae44c637529e3a1ebb0c429badac92" id="r_a1eae44c637529e3a1ebb0c429badac92"><td class="memItemLeft" align="right" valign="top"><a id="a1eae44c637529e3a1ebb0c429badac92" name="a1eae44c637529e3a1ebb0c429badac92"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>get_policy</b> (self, state)</td></tr>
+<tr class="memitem:a1eae44c637529e3a1ebb0c429badac92" id="r_a1eae44c637529e3a1ebb0c429badac92"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eae44c637529e3a1ebb0c429badac92">get_policy</a> (self, state)</td></tr>
 <tr class="separator:a1eae44c637529e3a1ebb0c429badac92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7d7d799250a40bb795d00008a607d82" id="r_ae7d7d799250a40bb795d00008a607d82"><td class="memItemLeft" align="right" valign="top"><a id="ae7d7d799250a40bb795d00008a607d82" name="ae7d7d799250a40bb795d00008a607d82"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>step_with_policy</b> (self, state)</td></tr>
+<tr class="memitem:ae7d7d799250a40bb795d00008a607d82" id="r_ae7d7d799250a40bb795d00008a607d82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7d7d799250a40bb795d00008a607d82">step_with_policy</a> (self, state)</td></tr>
 <tr class="separator:ae7d7d799250a40bb795d00008a607d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40d2415c0a5333cb886d1e1a710a3043" id="r_a40d2415c0a5333cb886d1e1a710a3043"><td class="memItemLeft" align="right" valign="top"><a id="a40d2415c0a5333cb886d1e1a710a3043" name="a40d2415c0a5333cb886d1e1a710a3043"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>get_final_policy</b> (self, state, node)</td></tr>
+<tr class="memitem:a40d2415c0a5333cb886d1e1a710a3043" id="r_a40d2415c0a5333cb886d1e1a710a3043"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40d2415c0a5333cb886d1e1a710a3043">get_final_policy</a> (self, state, node)</td></tr>
 <tr class="separator:a40d2415c0a5333cb886d1e1a710a3043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a125cd86ec5fa25bcf5e8505a8b53dbd0" id="r_a125cd86ec5fa25bcf5e8505a8b53dbd0"><td class="memItemLeft" align="right" valign="top"><a id="a125cd86ec5fa25bcf5e8505a8b53dbd0" name="a125cd86ec5fa25bcf5e8505a8b53dbd0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>sample_root_state</b> (self, state)</td></tr>
+<tr class="memitem:a125cd86ec5fa25bcf5e8505a8b53dbd0" id="r_a125cd86ec5fa25bcf5e8505a8b53dbd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a125cd86ec5fa25bcf5e8505a8b53dbd0">sample_root_state</a> (self, state)</td></tr>
 <tr class="separator:a125cd86ec5fa25bcf5e8505a8b53dbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a477e502be621bc65eb4a4bef80eec8ac" id="r_a477e502be621bc65eb4a4bef80eec8ac"><td class="memItemLeft" align="right" valign="top"><a id="a477e502be621bc65eb4a4bef80eec8ac" name="a477e502be621bc65eb4a4bef80eec8ac"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>resample_from_infostate</b> (self, state)</td></tr>
+<tr class="memitem:a477e502be621bc65eb4a4bef80eec8ac" id="r_a477e502be621bc65eb4a4bef80eec8ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a477e502be621bc65eb4a4bef80eec8ac">resample_from_infostate</a> (self, state)</td></tr>
 <tr class="separator:a477e502be621bc65eb4a4bef80eec8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a61aa4eeb054debdc5468b824146d14" id="r_a4a61aa4eeb054debdc5468b824146d14"><td class="memItemLeft" align="right" valign="top"><a id="a4a61aa4eeb054debdc5468b824146d14" name="a4a61aa4eeb054debdc5468b824146d14"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>create_new_node</b> (self, state)</td></tr>
+<tr class="memitem:a4a61aa4eeb054debdc5468b824146d14" id="r_a4a61aa4eeb054debdc5468b824146d14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a61aa4eeb054debdc5468b824146d14">create_new_node</a> (self, state)</td></tr>
 <tr class="separator:a4a61aa4eeb054debdc5468b824146d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3471cfb05eb79de9b0d608b6c2267f98" id="r_a3471cfb05eb79de9b0d608b6c2267f98"><td class="memItemLeft" align="right" valign="top"><a id="a3471cfb05eb79de9b0d608b6c2267f98" name="a3471cfb05eb79de9b0d608b6c2267f98"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>set_resampler</b> (self, cb)</td></tr>
+<tr class="memitem:a3471cfb05eb79de9b0d608b6c2267f98" id="r_a3471cfb05eb79de9b0d608b6c2267f98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3471cfb05eb79de9b0d608b6c2267f98">set_resampler</a> (self, cb)</td></tr>
 <tr class="separator:a3471cfb05eb79de9b0d608b6c2267f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53d5c70e53f7d38546a2340fadc7bf40" id="r_a53d5c70e53f7d38546a2340fadc7bf40"><td class="memItemLeft" align="right" valign="top"><a id="a53d5c70e53f7d38546a2340fadc7bf40" name="a53d5c70e53f7d38546a2340fadc7bf40"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>lookup_node</b> (self, state)</td></tr>
+<tr class="memitem:a53d5c70e53f7d38546a2340fadc7bf40" id="r_a53d5c70e53f7d38546a2340fadc7bf40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53d5c70e53f7d38546a2340fadc7bf40">lookup_node</a> (self, state)</td></tr>
 <tr class="separator:a53d5c70e53f7d38546a2340fadc7bf40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb0d3c9d84e2d6d9d55e80f2039d680e" id="r_aeb0d3c9d84e2d6d9d55e80f2039d680e"><td class="memItemLeft" align="right" valign="top"><a id="aeb0d3c9d84e2d6d9d55e80f2039d680e" name="aeb0d3c9d84e2d6d9d55e80f2039d680e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>lookup_or_create_node</b> (self, state)</td></tr>
+<tr class="memitem:aeb0d3c9d84e2d6d9d55e80f2039d680e" id="r_aeb0d3c9d84e2d6d9d55e80f2039d680e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb0d3c9d84e2d6d9d55e80f2039d680e">lookup_or_create_node</a> (self, state)</td></tr>
 <tr class="separator:aeb0d3c9d84e2d6d9d55e80f2039d680e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4e030fc8c27b607350537b1475d7256" id="r_ae4e030fc8c27b607350537b1475d7256"><td class="memItemLeft" align="right" valign="top"><a id="ae4e030fc8c27b607350537b1475d7256" name="ae4e030fc8c27b607350537b1475d7256"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>filter_illegals</b> (self, node, legal_actions)</td></tr>
+<tr class="memitem:ae4e030fc8c27b607350537b1475d7256" id="r_ae4e030fc8c27b607350537b1475d7256"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4e030fc8c27b607350537b1475d7256">filter_illegals</a> (self, node, legal_actions)</td></tr>
 <tr class="separator:ae4e030fc8c27b607350537b1475d7256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a32f7a3f11af9c6b86f0982c66832a1" id="r_a4a32f7a3f11af9c6b86f0982c66832a1"><td class="memItemLeft" align="right" valign="top"><a id="a4a32f7a3f11af9c6b86f0982c66832a1" name="a4a32f7a3f11af9c6b86f0982c66832a1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>expand_if_necessary</b> (self, node, action)</td></tr>
+<tr class="memitem:a4a32f7a3f11af9c6b86f0982c66832a1" id="r_a4a32f7a3f11af9c6b86f0982c66832a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a32f7a3f11af9c6b86f0982c66832a1">expand_if_necessary</a> (self, node, action)</td></tr>
 <tr class="separator:a4a32f7a3f11af9c6b86f0982c66832a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91c8997a331d49f04a89babe009c9f51" id="r_a91c8997a331d49f04a89babe009c9f51"><td class="memItemLeft" align="right" valign="top"><a id="a91c8997a331d49f04a89babe009c9f51" name="a91c8997a331d49f04a89babe009c9f51"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>select_action_tree_policy</b> (self, node, legal_actions)</td></tr>
+<tr class="memitem:a91c8997a331d49f04a89babe009c9f51" id="r_a91c8997a331d49f04a89babe009c9f51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91c8997a331d49f04a89babe009c9f51">select_action_tree_policy</a> (self, node, legal_actions)</td></tr>
 <tr class="separator:a91c8997a331d49f04a89babe009c9f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22cafcd6338d3b1bfffd32541407376b" id="r_a22cafcd6338d3b1bfffd32541407376b"><td class="memItemLeft" align="right" valign="top"><a id="a22cafcd6338d3b1bfffd32541407376b" name="a22cafcd6338d3b1bfffd32541407376b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>select_action</b> (self, node)</td></tr>
+<tr class="memitem:a22cafcd6338d3b1bfffd32541407376b" id="r_a22cafcd6338d3b1bfffd32541407376b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22cafcd6338d3b1bfffd32541407376b">select_action</a> (self, node)</td></tr>
 <tr class="separator:a22cafcd6338d3b1bfffd32541407376b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34d7877ee23860b7d840c9a975d3a838" id="r_a34d7877ee23860b7d840c9a975d3a838"><td class="memItemLeft" align="right" valign="top"><a id="a34d7877ee23860b7d840c9a975d3a838" name="a34d7877ee23860b7d840c9a975d3a838"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>check_expand</b> (self, node, legal_actions)</td></tr>
+<tr class="memitem:a34d7877ee23860b7d840c9a975d3a838" id="r_a34d7877ee23860b7d840c9a975d3a838"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34d7877ee23860b7d840c9a975d3a838">check_expand</a> (self, node, legal_actions)</td></tr>
 <tr class="separator:a34d7877ee23860b7d840c9a975d3a838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a484c6bf8d8db13a89455af5fb8e927b1" id="r_a484c6bf8d8db13a89455af5fb8e927b1"><td class="memItemLeft" align="right" valign="top"><a id="a484c6bf8d8db13a89455af5fb8e927b1" name="a484c6bf8d8db13a89455af5fb8e927b1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>run_simulation</b> (self, state)</td></tr>
+<tr class="memitem:a484c6bf8d8db13a89455af5fb8e927b1" id="r_a484c6bf8d8db13a89455af5fb8e927b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a484c6bf8d8db13a89455af5fb8e927b1">run_simulation</a> (self, state)</td></tr>
 <tr class="separator:a484c6bf8d8db13a89455af5fb8e927b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a1f7a56110aba6a4fe264ff3bf10ebdf5" id="r_a1f7a56110aba6a4fe264ff3bf10ebdf5"><td class="memItemLeft" align="right" valign="top"><a id="a1f7a56110aba6a4fe264ff3bf10ebdf5" name="a1f7a56110aba6a4fe264ff3bf10ebdf5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_game</b></td></tr>
+<tr class="memitem:a1f7a56110aba6a4fe264ff3bf10ebdf5" id="r_a1f7a56110aba6a4fe264ff3bf10ebdf5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f7a56110aba6a4fe264ff3bf10ebdf5">_game</a></td></tr>
 <tr class="separator:a1f7a56110aba6a4fe264ff3bf10ebdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fc4376956c2141b3f53769ab836e2cc" id="r_a1fc4376956c2141b3f53769ab836e2cc"><td class="memItemLeft" align="right" valign="top"><a id="a1fc4376956c2141b3f53769ab836e2cc" name="a1fc4376956c2141b3f53769ab836e2cc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_evaluator</b></td></tr>
+<tr class="memitem:a1fc4376956c2141b3f53769ab836e2cc" id="r_a1fc4376956c2141b3f53769ab836e2cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fc4376956c2141b3f53769ab836e2cc">_evaluator</a></td></tr>
 <tr class="separator:a1fc4376956c2141b3f53769ab836e2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad530b57b4419de595361e5911dcb09cf" id="r_ad530b57b4419de595361e5911dcb09cf"><td class="memItemLeft" align="right" valign="top"><a id="ad530b57b4419de595361e5911dcb09cf" name="ad530b57b4419de595361e5911dcb09cf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_uct_c</b></td></tr>
+<tr class="memitem:ad530b57b4419de595361e5911dcb09cf" id="r_ad530b57b4419de595361e5911dcb09cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad530b57b4419de595361e5911dcb09cf">_uct_c</a></td></tr>
 <tr class="separator:ad530b57b4419de595361e5911dcb09cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83a0b70b7f8aa18b21ce3b5ba7c2ebdd" id="r_a83a0b70b7f8aa18b21ce3b5ba7c2ebdd"><td class="memItemLeft" align="right" valign="top"><a id="a83a0b70b7f8aa18b21ce3b5ba7c2ebdd" name="a83a0b70b7f8aa18b21ce3b5ba7c2ebdd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_max_simulations</b></td></tr>
+<tr class="memitem:a83a0b70b7f8aa18b21ce3b5ba7c2ebdd" id="r_a83a0b70b7f8aa18b21ce3b5ba7c2ebdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83a0b70b7f8aa18b21ce3b5ba7c2ebdd">_max_simulations</a></td></tr>
 <tr class="separator:a83a0b70b7f8aa18b21ce3b5ba7c2ebdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf852b92ad668fc5b1ad331e26d56207" id="r_adf852b92ad668fc5b1ad331e26d56207"><td class="memItemLeft" align="right" valign="top"><a id="adf852b92ad668fc5b1ad331e26d56207" name="adf852b92ad668fc5b1ad331e26d56207"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_max_world_samples</b></td></tr>
+<tr class="memitem:adf852b92ad668fc5b1ad331e26d56207" id="r_adf852b92ad668fc5b1ad331e26d56207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf852b92ad668fc5b1ad331e26d56207">_max_world_samples</a></td></tr>
 <tr class="separator:adf852b92ad668fc5b1ad331e26d56207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe7c9ca228131d21a0dbd4b55147e983" id="r_afe7c9ca228131d21a0dbd4b55147e983"><td class="memItemLeft" align="right" valign="top"><a id="afe7c9ca228131d21a0dbd4b55147e983" name="afe7c9ca228131d21a0dbd4b55147e983"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_final_policy_type</b></td></tr>
+<tr class="memitem:afe7c9ca228131d21a0dbd4b55147e983" id="r_afe7c9ca228131d21a0dbd4b55147e983"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe7c9ca228131d21a0dbd4b55147e983">_final_policy_type</a></td></tr>
 <tr class="separator:afe7c9ca228131d21a0dbd4b55147e983"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5b391a74430f7a6c349d56f7a1605be" id="r_ae5b391a74430f7a6c349d56f7a1605be"><td class="memItemLeft" align="right" valign="top"><a id="ae5b391a74430f7a6c349d56f7a1605be" name="ae5b391a74430f7a6c349d56f7a1605be"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_use_observation_string</b></td></tr>
+<tr class="memitem:ae5b391a74430f7a6c349d56f7a1605be" id="r_ae5b391a74430f7a6c349d56f7a1605be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5b391a74430f7a6c349d56f7a1605be">_use_observation_string</a></td></tr>
 <tr class="separator:ae5b391a74430f7a6c349d56f7a1605be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43656d68f9c2d12e15cb3797440da079" id="r_a43656d68f9c2d12e15cb3797440da079"><td class="memItemLeft" align="right" valign="top"><a id="a43656d68f9c2d12e15cb3797440da079" name="a43656d68f9c2d12e15cb3797440da079"></a>
-# when this happens?&#160;</td><td class="memItemRight" valign="bottom"><b>_allow_inconsistent_action_sets</b></td></tr>
+<tr class="memitem:a43656d68f9c2d12e15cb3797440da079" id="r_a43656d68f9c2d12e15cb3797440da079"><td class="memItemLeft" align="right" valign="top"># when this happens?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43656d68f9c2d12e15cb3797440da079">_allow_inconsistent_action_sets</a></td></tr>
 <tr class="separator:a43656d68f9c2d12e15cb3797440da079"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68a09c659a4c85a429c2367ba62be7d4" id="r_a68a09c659a4c85a429c2367ba62be7d4"><td class="memItemLeft" align="right" valign="top"><a id="a68a09c659a4c85a429c2367ba62be7d4" name="a68a09c659a4c85a429c2367ba62be7d4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_nodes</b></td></tr>
+<tr class="memitem:a68a09c659a4c85a429c2367ba62be7d4" id="r_a68a09c659a4c85a429c2367ba62be7d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68a09c659a4c85a429c2367ba62be7d4">_nodes</a></td></tr>
 <tr class="separator:a68a09c659a4c85a429c2367ba62be7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc18b27013121dcfea0337ca67cf9d0" id="r_a6cc18b27013121dcfea0337ca67cf9d0"><td class="memItemLeft" align="right" valign="top"><a id="a6cc18b27013121dcfea0337ca67cf9d0" name="a6cc18b27013121dcfea0337ca67cf9d0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_node_pool</b></td></tr>
+<tr class="memitem:a6cc18b27013121dcfea0337ca67cf9d0" id="r_a6cc18b27013121dcfea0337ca67cf9d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cc18b27013121dcfea0337ca67cf9d0">_node_pool</a></td></tr>
 <tr class="separator:a6cc18b27013121dcfea0337ca67cf9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae278725dba04e59334d683b865e03cf8" id="r_ae278725dba04e59334d683b865e03cf8"><td class="memItemLeft" align="right" valign="top"><a id="ae278725dba04e59334d683b865e03cf8" name="ae278725dba04e59334d683b865e03cf8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_root_samples</b></td></tr>
+<tr class="memitem:ae278725dba04e59334d683b865e03cf8" id="r_ae278725dba04e59334d683b865e03cf8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae278725dba04e59334d683b865e03cf8">_root_samples</a></td></tr>
 <tr class="separator:ae278725dba04e59334d683b865e03cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bc8b3362f0d0f17575e7489e5ecff04" id="r_a6bc8b3362f0d0f17575e7489e5ecff04"><td class="memItemLeft" align="right" valign="top"><a id="a6bc8b3362f0d0f17575e7489e5ecff04" name="a6bc8b3362f0d0f17575e7489e5ecff04"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_random_state</b></td></tr>
+<tr class="memitem:a6bc8b3362f0d0f17575e7489e5ecff04" id="r_a6bc8b3362f0d0f17575e7489e5ecff04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bc8b3362f0d0f17575e7489e5ecff04">_random_state</a></td></tr>
 <tr class="separator:a6bc8b3362f0d0f17575e7489e5ecff04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd47e9e8b584344ec7cc42eda324ed7d" id="r_abd47e9e8b584344ec7cc42eda324ed7d"><td class="memItemLeft" align="right" valign="top"><a id="abd47e9e8b584344ec7cc42eda324ed7d" name="abd47e9e8b584344ec7cc42eda324ed7d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_child_selection_policy</b></td></tr>
+<tr class="memitem:abd47e9e8b584344ec7cc42eda324ed7d" id="r_abd47e9e8b584344ec7cc42eda324ed7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd47e9e8b584344ec7cc42eda324ed7d">_child_selection_policy</a></td></tr>
 <tr class="separator:abd47e9e8b584344ec7cc42eda324ed7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d08c038fa4e37cfd341e9f5a4e323fe" id="r_a9d08c038fa4e37cfd341e9f5a4e323fe"><td class="memItemLeft" align="right" valign="top"><a id="a9d08c038fa4e37cfd341e9f5a4e323fe" name="a9d08c038fa4e37cfd341e9f5a4e323fe"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_resampler_cb</b></td></tr>
+<tr class="memitem:a9d08c038fa4e37cfd341e9f5a4e323fe" id="r_a9d08c038fa4e37cfd341e9f5a4e323fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d08c038fa4e37cfd341e9f5a4e323fe">_resampler_cb</a></td></tr>
 <tr class="separator:a9d08c038fa4e37cfd341e9f5a4e323fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0db3e748a0dfd97e0d60757663a4316a" id="r_a0db3e748a0dfd97e0d60757663a4316a"><td class="memItemLeft" align="right" valign="top"><a id="a0db3e748a0dfd97e0d60757663a4316a" name="a0db3e748a0dfd97e0d60757663a4316a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_root_node</b></td></tr>
+<tr class="memitem:a0db3e748a0dfd97e0d60757663a4316a" id="r_a0db3e748a0dfd97e0d60757663a4316a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0db3e748a0dfd97e0d60757663a4316a">_root_node</a></td></tr>
 <tr class="separator:a0db3e748a0dfd97e0d60757663a4316a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Adapted from the C++ implementation.</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>ismcts.py</b></li>
+<div class="textblock"><pre class="fragment">Adapted from the C++ implementation.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00064">64</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0b6e871ef70d443630be0c0ca9274fff" name="a0b6e871ef70d443630be0c0ca9274fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b6e871ef70d443630be0c0ca9274fff">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>evaluator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>uct_c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max_simulations</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max_world_samples</em></span><span class="paramdefsep"> = </span><span class="paramdefval">UNLIMITED_NUM_WORLD_SAMPLES</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>random_state</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>final_policy_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval">ISMCTSFinalPolicyType.MAX_VISIT_COUNT</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>use_observation_string</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>allow_inconsistent_action_sets</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>child_selection_policy</em></span><span class="paramdefsep"> = </span><span class="paramdefval">ChildSelectionPolicy.PUCT</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00067">67</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>               child_selection_policy=ChildSelectionPolicy.PUCT):</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    pyspiel.Bot.__init__(self)</div>
+<div class="line"><span class="lineno">   80</span>    self._game = game</div>
+<div class="line"><span class="lineno">   81</span>    self._evaluator = evaluator</div>
+<div class="line"><span class="lineno">   82</span>    self._uct_c = uct_c</div>
+<div class="line"><span class="lineno">   83</span>    self._max_simulations = max_simulations</div>
+<div class="line"><span class="lineno">   84</span>    self._max_world_samples = max_world_samples</div>
+<div class="line"><span class="lineno">   85</span>    self._final_policy_type = final_policy_type</div>
+<div class="line"><span class="lineno">   86</span>    self._use_observation_string = use_observation_string</div>
+<div class="line"><span class="lineno">   87</span>    self._allow_inconsistent_action_sets = allow_inconsistent_action_sets</div>
+<div class="line"><span class="lineno">   88</span>    self._nodes = {}</div>
+<div class="line"><span class="lineno">   89</span>    self._node_pool = []</div>
+<div class="line"><span class="lineno">   90</span>    self._root_samples = []</div>
+<div class="line"><span class="lineno">   91</span>    self._random_state = random_state <span class="keywordflow">or</span> np.random.RandomState()</div>
+<div class="line"><span class="lineno">   92</span>    self._child_selection_policy = child_selection_policy</div>
+<div class="line"><span class="lineno">   93</span>    self._resampler_cb = <span class="keywordtype">None</span></div>
+<div class="line"><span class="lineno">   94</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a34d7877ee23860b7d840c9a975d3a838" name="a34d7877ee23860b7d840c9a975d3a838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d7877ee23860b7d840c9a975d3a838">&#9670;&#160;</a></span>check_expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.check_expand </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>legal_actions</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00287">287</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  287</span>  <span class="keyword">def </span>check_expand(self, node, legal_actions):</div>
+<div class="line"><span class="lineno">  288</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> self._allow_inconsistent_action_sets <span class="keywordflow">and</span> len(</div>
+<div class="line"><span class="lineno">  289</span>        node.child_info) == len(legal_actions):</div>
+<div class="line"><span class="lineno">  290</span>      <span class="keywordflow">return</span> pyspiel.INVALID_ACTION</div>
+<div class="line"><span class="lineno">  291</span>    legal_actions_copy = copy.deepcopy(legal_actions)</div>
+<div class="line"><span class="lineno">  292</span>    self._random_state.shuffle(legal_actions_copy)</div>
+<div class="line"><span class="lineno">  293</span>    <span class="keywordflow">for</span> action <span class="keywordflow">in</span> legal_actions_copy:</div>
+<div class="line"><span class="lineno">  294</span>      <span class="keywordflow">if</span> action <span class="keywordflow">not</span> <span class="keywordflow">in</span> node.child_info:</div>
+<div class="line"><span class="lineno">  295</span>        <span class="keywordflow">return</span> action</div>
+<div class="line"><span class="lineno">  296</span>    <span class="keywordflow">return</span> pyspiel.INVALID_ACTION</div>
+<div class="line"><span class="lineno">  297</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4a61aa4eeb054debdc5468b824146d14" name="a4a61aa4eeb054debdc5468b824146d14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a61aa4eeb054debdc5468b824146d14">&#9670;&#160;</a></span>create_new_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.create_new_node </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00214">214</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  214</span>  <span class="keyword">def </span>create_new_node(self, state):</div>
+<div class="line"><span class="lineno">  215</span>    infostate_key = self.get_state_key(state)</div>
+<div class="line"><span class="lineno">  216</span>    self._node_pool.append(ISMCTSNode())</div>
+<div class="line"><span class="lineno">  217</span>    node = self._node_pool[-1]</div>
+<div class="line"><span class="lineno">  218</span>    self._nodes[infostate_key] = node</div>
+<div class="line"><span class="lineno">  219</span>    node.total_visits = UNEXPANDED_VISIT_COUNT</div>
+<div class="line"><span class="lineno">  220</span>    <span class="keywordflow">return</span> node</div>
+<div class="line"><span class="lineno">  221</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4a32f7a3f11af9c6b86f0982c66832a1" name="a4a32f7a3f11af9c6b86f0982c66832a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a32f7a3f11af9c6b86f0982c66832a1">&#9670;&#160;</a></span>expand_if_necessary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.expand_if_necessary </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00244">244</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>  <span class="keyword">def </span>expand_if_necessary(self, node, action):</div>
+<div class="line"><span class="lineno">  245</span>    <span class="keywordflow">if</span> action <span class="keywordflow">not</span> <span class="keywordflow">in</span> node.child_info:</div>
+<div class="line"><span class="lineno">  246</span>      node.child_info[action] = ChildInfo(0.0, 0.0, node.prior_map[action])</div>
+<div class="line"><span class="lineno">  247</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae4e030fc8c27b607350537b1475d7256" name="ae4e030fc8c27b607350537b1475d7256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e030fc8c27b607350537b1475d7256">&#9670;&#160;</a></span>filter_illegals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.filter_illegals </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>legal_actions</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00236">236</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>  <span class="keyword">def </span>filter_illegals(self, node, legal_actions):</div>
+<div class="line"><span class="lineno">  237</span>    new_node = copy.deepcopy(node)</div>
+<div class="line"><span class="lineno">  238</span>    <span class="keywordflow">for</span> action, child <span class="keywordflow">in</span> node.child_info.items():</div>
+<div class="line"><span class="lineno">  239</span>      <span class="keywordflow">if</span> action <span class="keywordflow">not</span> <span class="keywordflow">in</span> legal_actions:</div>
+<div class="line"><span class="lineno">  240</span>        new_node.total_visits -= child.visits</div>
+<div class="line"><span class="lineno">  241</span>        del new_node.child_info[action]</div>
+<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">return</span> new_node</div>
+<div class="line"><span class="lineno">  243</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a40d2415c0a5333cb886d1e1a710a3043" name="a40d2415c0a5333cb886d1e1a710a3043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d2415c0a5333cb886d1e1a710a3043">&#9670;&#160;</a></span>get_final_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.get_final_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00154">154</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  154</span>  <span class="keyword">def </span>get_final_policy(self, state, node):</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keyword">assert</span> node</div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">if</span> self._final_policy_type == ISMCTSFinalPolicyType.NORMALIZED_VISITED_COUNT:</div>
+<div class="line"><span class="lineno">  157</span>      <span class="keyword">assert</span> node.total_visits &gt; 0</div>
+<div class="line"><span class="lineno">  158</span>      total_visits = node.total_visits</div>
+<div class="line"><span class="lineno">  159</span>      policy = [(action, child.visits / total_visits)</div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">for</span> action, child <span class="keywordflow">in</span> node.child_info.items()]</div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordflow">elif</span> self._final_policy_type == ISMCTSFinalPolicyType.MAX_VISIT_COUNT:</div>
+<div class="line"><span class="lineno">  162</span>      <span class="keyword">assert</span> node.total_visits &gt; 0</div>
+<div class="line"><span class="lineno">  163</span>      max_visits = -float(<span class="stringliteral">&#39;inf&#39;</span>)</div>
+<div class="line"><span class="lineno">  164</span>      count = 0</div>
+<div class="line"><span class="lineno">  165</span>      <span class="keywordflow">for</span> action, child <span class="keywordflow">in</span> node.child_info.items():</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> child.visits == max_visits:</div>
+<div class="line"><span class="lineno">  167</span>          count += 1</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">elif</span> child.visits &gt; max_visits:</div>
+<div class="line"><span class="lineno">  169</span>          max_visits = child.visits</div>
+<div class="line"><span class="lineno">  170</span>          count = 1</div>
+<div class="line"><span class="lineno">  171</span>      policy = [(action, 1. / count <span class="keywordflow">if</span> child.visits == max_visits <span class="keywordflow">else</span> 0.0)</div>
+<div class="line"><span class="lineno">  172</span>                <span class="keywordflow">for</span> action, child <span class="keywordflow">in</span> node.child_info.items()]</div>
+<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">elif</span> self._final_policy_type == ISMCTSFinalPolicyType.MAX_VALUE:</div>
+<div class="line"><span class="lineno">  174</span>      <span class="keyword">assert</span> node.total_visits &gt; 0</div>
+<div class="line"><span class="lineno">  175</span>      max_value = -float(<span class="stringliteral">&#39;inf&#39;</span>)</div>
+<div class="line"><span class="lineno">  176</span>      count = 0</div>
+<div class="line"><span class="lineno">  177</span>      <span class="keywordflow">for</span> action, child <span class="keywordflow">in</span> node.child_info.items():</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordflow">if</span> child.value() == max_value:</div>
+<div class="line"><span class="lineno">  179</span>          count += 1</div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">elif</span> child.value() &gt; max_value:</div>
+<div class="line"><span class="lineno">  181</span>          max_value = child.value()</div>
+<div class="line"><span class="lineno">  182</span>          count = 1</div>
+<div class="line"><span class="lineno">  183</span>      policy = [(action, 1. / count <span class="keywordflow">if</span> child.value() == max_value <span class="keywordflow">else</span> 0.0)</div>
+<div class="line"><span class="lineno">  184</span>                <span class="keywordflow">for</span> action, child <span class="keywordflow">in</span> node.child_info.items()]</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>    policy_size = len(policy)</div>
+<div class="line"><span class="lineno">  187</span>    legal_actions = state.legal_actions()</div>
+<div class="line"><span class="lineno">  188</span>    <span class="keywordflow">if</span> policy_size &lt; len(legal_actions):  <span class="comment"># do we really need this step?</span></div>
+<div class="line"><span class="lineno">  189</span>      <span class="keywordflow">for</span> action <span class="keywordflow">in</span> legal_actions:</div>
+<div class="line"><span class="lineno">  190</span>        <span class="keywordflow">if</span> action <span class="keywordflow">not</span> <span class="keywordflow">in</span> node.child_info:</div>
+<div class="line"><span class="lineno">  191</span>          policy.append((action, 0.0))</div>
+<div class="line"><span class="lineno">  192</span>    <span class="keywordflow">return</span> policy</div>
+<div class="line"><span class="lineno">  193</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1eae44c637529e3a1ebb0c429badac92" name="a1eae44c637529e3a1ebb0c429badac92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eae44c637529e3a1ebb0c429badac92">&#9670;&#160;</a></span>get_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.get_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00145">145</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>  <span class="keyword">def </span>get_policy(self, state):</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> self.run_search(state)</div>
+<div class="line"><span class="lineno">  147</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00630">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent.__init__()</a>, and <a class="el" href="../../dd/d07/opponent__shaping_8py_source.html#l00987">open_spiel.python.jax.opponent_shaping.OpponentShapingAgent._construct_episode_batches()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_a1eae44c637529e3a1ebb0c429badac92_icgraph.png" border="0" usemap="#ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_a1eae44c637529e3a1ebb0c429badac92_icgraph" alt=""/></div>
+<map name="ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_a1eae44c637529e3a1ebb0c429badac92_icgraph" id="ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_a1eae44c637529e3a1ebb0c429badac92_icgraph">
+<area shape="rect" title=" " alt="" coords="1753,180,1991,220"/>
+<area shape="rect" href="../../d3/d9f/classopen__spiel_1_1python_1_1jax_1_1opponent__shaping_1_1_opponent_shaping_agent.html#a688a991bdc9042322d47fc183d7a7ab8" title=" " alt="" coords="1442,144,1705,184"/>
+<area shape="poly" title=" " alt="" coords="1738,186,1706,182,1706,177,1738,181"/>
+<area shape="rect" href="../../d3/d9f/classopen__spiel_1_1python_1_1jax_1_1opponent__shaping_1_1_opponent_shaping_agent.html#a063f8a6cc351f7d3bcf74757fabb4669" title=" " alt="" coords="1464,208,1683,264"/>
+<area shape="poly" title=" " alt="" coords="1738,219,1684,225,1683,220,1737,213"/>
+<area shape="rect" href="../../d3/d9f/classopen__spiel_1_1python_1_1jax_1_1opponent__shaping_1_1_opponent_shaping_agent.html#aa0d78940728f70c85b0b8b2723ceb280" title=" " alt="" coords="1176,208,1394,264"/>
+<area shape="poly" title=" " alt="" coords="1449,238,1395,238,1395,233,1449,233"/>
+<area shape="rect" href="../../d3/d9f/classopen__spiel_1_1python_1_1jax_1_1opponent__shaping_1_1_opponent_shaping_agent.html#a49083992dc97516ca2e134c672e2520e" title=" " alt="" coords="884,216,1128,256"/>
+<area shape="poly" title=" " alt="" coords="1160,238,1128,238,1128,233,1160,233"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#a14d11483beff07f087b51f3a2dd71135" title=" " alt="" coords="606,5,792,61"/>
+<area shape="poly" title=" " alt="" coords="978,205,917,139,878,105,835,75,791,56,793,51,838,71,881,101,921,136,982,202"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#adb88039a6a02b4d0090a0abc5c3c5424" title=" " alt="" coords="606,85,792,126"/>
+<area shape="poly" title=" " alt="" coords="961,209,903,174,835,141,792,127,793,121,837,136,905,169,964,204"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a7a91195b9b42b8536e06098e836b02e4" title=" " alt="" coords="573,150,824,191"/>
+<area shape="poly" title=" " alt="" coords="891,214,797,194,798,189,893,209"/>
+<area shape="rect" href="../../d2/dfd/classnash__evolutionary__search_1_1_nash_c_m_a_e_s.html#a42b13c1091631c52988a6391fe34038a" title=" " alt="" coords="610,216,787,256"/>
+<area shape="poly" title=" " alt="" coords="869,238,787,238,787,233,869,233"/>
+<area shape="rect" href="../../d5/dd9/classnash__random__search_1_1_nash_random_search.html#a9b9967669c24ceba55dc8ce00565a71a" title=" " alt="" coords="584,281,813,322"/>
+<area shape="poly" title=" " alt="" coords="893,263,798,283,797,278,891,257"/>
+<area shape="rect" href="../../d1/d50/classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1bandit__regret_1_1_polynomial_weight_algorithm.html#a3b7ceacfd8a03895a691242d227c1ddd" title=" " alt="" coords="561,346,836,387"/>
+<area shape="poly" title=" " alt="" coords="964,267,905,303,837,336,801,348,799,343,835,331,903,298,961,263"/>
+<area shape="rect" href="../../d5/d11/classregret__minimizer_1_1_regret_minimizer.html#aa371edb5793c6a6cfbf51dc8597905dc" title=" " alt="" coords="566,411,831,437"/>
+<area shape="poly" title=" " alt="" coords="983,270,922,338,882,372,838,401,808,413,806,408,835,396,879,368,918,334,979,267"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a44f0c375b5ef20bb1267524788ab16da" title=" " alt="" coords="281,150,513,191"/>
+<area shape="poly" title=" " alt="" coords="557,173,514,173,514,168,557,168"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#ad1331eddb66a419f7336bc267b47d75e" title=" " alt="" coords="5,117,233,158"/>
+<area shape="poly" title=" " alt="" coords="265,157,233,153,233,148,265,152"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#a14e053b461dc025b01a41453bc278c7d" title=" " alt="" coords="5,182,233,223"/>
+<area shape="poly" title=" " alt="" coords="265,188,233,192,233,187,265,183"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a39cd103343728e427c57733637a9cbc8" name="a39cd103343728e427c57733637a9cbc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39cd103343728e427c57733637a9cbc8">&#9670;&#160;</a></span>get_state_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.get_state_key </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00103">103</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>  <span class="keyword">def </span>get_state_key(self, state):</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> self._use_observation_string:</div>
+<div class="line"><span class="lineno">  105</span>      <span class="keywordflow">return</span> state.current_player(), state.observation_string()</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  107</span>      <span class="keywordflow">return</span> state.current_player(), state.information_state_string()</div>
+<div class="line"><span class="lineno">  108</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a53d5c70e53f7d38546a2340fadc7bf40" name="a53d5c70e53f7d38546a2340fadc7bf40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d5c70e53f7d38546a2340fadc7bf40">&#9670;&#160;</a></span>lookup_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.lookup_node </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00225">225</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  225</span>  <span class="keyword">def </span>lookup_node(self, state):</div>
+<div class="line"><span class="lineno">  226</span>    <span class="keywordflow">if</span> self.get_state_key(state) <span class="keywordflow">in</span> self._nodes:</div>
+<div class="line"><span class="lineno">  227</span>      <span class="keywordflow">return</span> self._nodes[self.get_state_key(state)]</div>
+<div class="line"><span class="lineno">  228</span>    <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><span class="lineno">  229</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeb0d3c9d84e2d6d9d55e80f2039d680e" name="aeb0d3c9d84e2d6d9d55e80f2039d680e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb0d3c9d84e2d6d9d55e80f2039d680e">&#9670;&#160;</a></span>lookup_or_create_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.lookup_or_create_node </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00230">230</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>  <span class="keyword">def </span>lookup_or_create_node(self, state):</div>
+<div class="line"><span class="lineno">  231</span>    node = self.lookup_node(state)</div>
+<div class="line"><span class="lineno">  232</span>    <span class="keywordflow">if</span> node:</div>
+<div class="line"><span class="lineno">  233</span>      <span class="keywordflow">return</span> node</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">return</span> self.create_new_node(state)</div>
+<div class="line"><span class="lineno">  235</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a24d3e92b70c9161c2d6580c85f972ed6" name="a24d3e92b70c9161c2d6580c85f972ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24d3e92b70c9161c2d6580c85f972ed6">&#9670;&#160;</a></span>random_number()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.random_number </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00095">95</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>  <span class="keyword">def </span>random_number(self):</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> self._random_state.uniform()</div>
+<div class="line"><span class="lineno">   97</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a477e502be621bc65eb4a4bef80eec8ac" name="a477e502be621bc65eb4a4bef80eec8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a477e502be621bc65eb4a4bef80eec8ac">&#9670;&#160;</a></span>resample_from_infostate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.resample_from_infostate </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00207">207</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  207</span>  <span class="keyword">def </span>resample_from_infostate(self, state):</div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">if</span> self._resampler_cb:</div>
+<div class="line"><span class="lineno">  209</span>      <span class="keywordflow">return</span> self._resampler_cb(state, state.current_player())</div>
+<div class="line"><span class="lineno">  210</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  211</span>      <span class="keywordflow">return</span> state.resample_from_infostate(</div>
+<div class="line"><span class="lineno">  212</span>          state.current_player(), pyspiel.UniformProbabilitySampler(0., 1.))</div>
+<div class="line"><span class="lineno">  213</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aebc4c2690cbd5350976c463c39794650" name="aebc4c2690cbd5350976c463c39794650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc4c2690cbd5350976c463c39794650">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.reset </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00098">98</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>  <span class="keyword">def </span>reset(self):</div>
+<div class="line"><span class="lineno">   99</span>    self._nodes = {}</div>
+<div class="line"><span class="lineno">  100</span>    self._node_pool = []</div>
+<div class="line"><span class="lineno">  101</span>    self._root_samples = []</div>
+<div class="line"><span class="lineno">  102</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d7/d95/pytorch_2deep__cfr_8py_source.html#l00051">open_spiel.python.pytorch.deep_cfr.SonnetLinear.__init__()</a>, <a class="el" href="../../dc/d9b/catch_8py_source.html#l00073">open_spiel.python.environments.catch.Environment.step()</a>, <a class="el" href="../../d5/dcd/cliff__walking_8py_source.html#l00083">open_spiel.python.environments.cliff_walking.Environment.step()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00282">open_spiel.python.rl_environment.Environment.step()</a>, and <a class="el" href="../../db/d33/vector__env_8py_source.html#l00040">open_spiel.python.vector_env.SyncVectorEnv.step()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_aebc4c2690cbd5350976c463c39794650_icgraph.png" border="0" usemap="#ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_aebc4c2690cbd5350976c463c39794650_icgraph" alt=""/></div>
+<map name="ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_aebc4c2690cbd5350976c463c39794650_icgraph" id="ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_aebc4c2690cbd5350976c463c39794650_icgraph">
+<area shape="rect" title=" " alt="" coords="1181,184,1418,225"/>
+<area shape="rect" href="../../d9/dc5/classopen__spiel_1_1python_1_1pytorch_1_1deep__cfr_1_1_sonnet_linear.html#a5c6e09a32490d6d59b9c1f211f90f1c7" title=" " alt="" coords="906,29,1111,70"/>
+<area shape="poly" title=" " alt="" coords="1263,176,1204,129,1168,106,1132,85,1101,73,1103,68,1134,81,1171,101,1207,125,1266,172"/>
+<area shape="rect" href="../../d5/d08/classopen__spiel_1_1python_1_1environments_1_1catch_1_1_environment.html#a0ea0e15b44babdc65961c77735cae93c" title=" " alt="" coords="884,184,1133,225"/>
+<area shape="poly" title=" " alt="" coords="1165,207,1133,207,1133,202,1165,202"/>
+<area shape="rect" href="../../da/dcf/classopen__spiel_1_1python_1_1environments_1_1cliff__walking_1_1_environment.html#a969773867a588c279abfeba77b915014" title=" " alt="" coords="892,249,1125,290"/>
+<area shape="poly" title=" " alt="" coords="1192,231,1103,251,1102,246,1190,226"/>
+<area shape="rect" href="../../d1/d1d/classopen__spiel_1_1python_1_1rl__environment_1_1_environment.html#a58dee24a7616d6a5648d5bcd55d84a20" title=" " alt="" coords="906,315,1111,355"/>
+<area shape="poly" title=" " alt="" coords="1257,236,1200,271,1134,304,1099,317,1097,312,1132,299,1197,266,1254,231"/>
+<area shape="rect" href="../../d3/d19/classopen__spiel_1_1python_1_1vector__env_1_1_sync_vector_env.html#a1221d0c9f00fd5a71970d90fd4efaa53" title=" " alt="" coords="924,119,1093,159"/>
+<area shape="poly" title=" " alt="" coords="1190,183,1093,161,1094,155,1192,177"/>
+<area shape="poly" title=" " alt="" coords="1056,16,1039,10,1008,8,980,10,963,15,957,21,960,28,954,29,952,19,961,10,980,5,1009,3,1040,5,1058,11"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#a14d11483beff07f087b51f3a2dd71135" title=" " alt="" coords="606,400,792,456"/>
+<area shape="poly" title=" " alt="" coords="891,236,886,239,872,257,865,275,863,313,861,351,853,371,838,390,817,406,794,417,791,412,815,401,834,386,848,368,855,350,857,313,860,274,867,255,882,236,887,232"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#adb88039a6a02b4d0090a0abc5c3c5424" title=" " alt="" coords="606,24,792,65"/>
+<area shape="poly" title=" " alt="" coords="890,178,883,173,871,161,864,149,858,125,852,101,845,90,835,80,814,67,791,58,793,53,817,62,838,76,850,87,857,99,863,123,869,147,875,158,886,169,893,174"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a7a91195b9b42b8536e06098e836b02e4" title=" " alt="" coords="573,89,824,130"/>
+<area shape="poly" title=" " alt="" coords="904,181,883,173,859,159,835,145,799,133,801,128,837,141,862,155,885,169,906,176"/>
+<area shape="rect" href="../../d2/dfd/classnash__evolutionary__search_1_1_nash_c_m_a_e_s.html#a42b13c1091631c52988a6391fe34038a" title=" " alt="" coords="610,155,787,195"/>
+<area shape="poly" title=" " alt="" coords="869,194,787,186,788,181,869,188"/>
+<area shape="rect" href="../../d5/dd9/classnash__random__search_1_1_nash_random_search.html#a9b9967669c24ceba55dc8ce00565a71a" title=" " alt="" coords="584,220,813,261"/>
+<area shape="poly" title=" " alt="" coords="870,223,814,230,813,224,869,218"/>
+<area shape="rect" href="../../d1/d50/classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1bandit__regret_1_1_polynomial_weight_algorithm.html#a3b7ceacfd8a03895a691242d227c1ddd" title=" " alt="" coords="561,285,836,326"/>
+<area shape="poly" title=" " alt="" coords="902,233,886,240,862,257,838,275,805,287,803,282,835,270,859,253,883,235,900,228"/>
+<area shape="rect" href="../../d5/d11/classregret__minimizer_1_1_regret_minimizer.html#aa371edb5793c6a6cfbf51dc8597905dc" title=" " alt="" coords="566,350,831,376"/>
+<area shape="poly" title=" " alt="" coords="892,235,886,240,875,251,869,263,863,289,858,315,850,328,838,340,818,352,815,347,835,336,846,324,853,313,858,288,864,261,871,248,883,236,889,231"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a44f0c375b5ef20bb1267524788ab16da" title=" " alt="" coords="281,89,513,130"/>
+<area shape="poly" title=" " alt="" coords="557,112,514,112,514,107,557,107"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#ad1331eddb66a419f7336bc267b47d75e" title=" " alt="" coords="5,56,233,97"/>
+<area shape="poly" title=" " alt="" coords="265,96,233,93,233,87,265,91"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#a14e053b461dc025b01a41453bc278c7d" title=" " alt="" coords="5,121,233,162"/>
+<area shape="poly" title=" " alt="" coords="265,128,233,131,233,126,265,122"/>
+<area shape="poly" title=" " alt="" coords="893,300,886,305,869,325,863,346,856,369,838,390,817,404,793,414,791,409,814,399,835,386,851,366,858,345,865,323,883,301,890,296"/>
+<area shape="poly" title=" " alt="" coords="887,242,882,238,867,218,859,198,858,157,856,117,849,98,834,80,815,65,791,56,793,51,817,61,838,76,854,96,862,116,863,157,865,196,872,216,886,235,890,238"/>
+<area shape="poly" title=" " alt="" coords="890,244,883,238,871,227,864,214,858,190,852,167,845,156,835,145,815,133,818,128,838,141,850,152,857,165,863,189,869,212,875,223,886,234,893,239"/>
+<area shape="poly" title=" " alt="" coords="904,247,883,239,859,225,835,211,787,195,788,190,837,206,862,220,885,234,906,242"/>
+<area shape="poly" title=" " alt="" coords="876,260,813,254,814,249,877,255"/>
+<area shape="poly" title=" " alt="" coords="877,288,837,292,836,287,876,282"/>
+<area shape="poly" title=" " alt="" coords="902,298,886,305,862,323,852,332,837,340,801,352,800,347,835,335,849,327,859,319,883,301,900,293"/>
+<area shape="poly" title=" " alt="" coords="927,363,837,391,793,404,792,399,836,386,926,358"/>
+<area shape="poly" title=" " alt="" coords="891,311,882,303,863,275,855,246,854,217,858,189,862,161,861,133,853,106,834,80,815,65,791,55,793,50,817,60,838,76,858,104,867,133,867,161,863,190,860,218,860,245,867,273,886,300,895,307"/>
+<area shape="poly" title=" " alt="" coords="891,311,882,304,867,283,859,263,858,222,856,182,849,164,834,145,818,132,821,128,838,141,854,161,862,181,863,222,865,262,872,281,886,300,895,307"/>
+<area shape="poly" title=" " alt="" coords="891,310,883,304,871,292,864,280,858,256,852,232,845,221,835,210,812,197,786,187,788,182,814,192,838,206,850,218,857,230,863,254,869,278,875,289,886,300,894,305"/>
+<area shape="poly" title=" " alt="" coords="904,312,883,304,859,290,835,276,799,264,801,259,837,271,862,285,885,299,906,307"/>
+<area shape="poly" title=" " alt="" coords="890,326,836,321,837,316,890,321"/>
+<area shape="poly" title=" " alt="" coords="890,348,832,354,831,348,890,343"/>
+<area shape="poly" title=" " alt="" coords="911,157,886,174,868,200,860,226,860,253,863,280,866,307,865,335,857,362,838,390,817,407,793,418,791,413,815,402,834,387,852,360,860,334,860,307,857,280,854,253,855,226,863,198,882,170,908,152"/>
+<area shape="poly" title=" " alt="" coords="938,115,836,80,791,68,792,63,837,75,940,110"/>
+<area shape="poly" title=" " alt="" coords="908,132,824,124,825,119,909,127"/>
+<area shape="poly" title=" " alt="" coords="908,153,787,167,787,162,908,148"/>
+<area shape="poly" title=" " alt="" coords="910,165,886,175,862,192,838,209,805,222,803,217,835,205,859,188,883,170,908,160"/>
+<area shape="poly" title=" " alt="" coords="911,159,886,174,875,186,869,198,863,223,857,249,850,262,838,274,819,287,816,282,835,270,846,259,852,247,858,222,864,196,871,183,883,170,909,154"/>
+<area shape="poly" title=" " alt="" coords="911,157,886,174,871,194,864,214,864,256,863,298,855,319,838,340,821,352,818,347,835,336,850,317,857,297,858,256,859,213,867,191,882,170,908,153"/>
+<area shape="poly" title=" " alt="" coords="1056,106,1039,100,1008,97,980,99,963,104,957,110,960,117,954,119,952,109,961,99,980,94,1009,92,1040,94,1058,101"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a034e9845c4b368946f9336a4a029b568" name="a034e9845c4b368946f9336a4a029b568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034e9845c4b368946f9336a4a029b568">&#9670;&#160;</a></span>run_search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.run_search </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00109">109</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>  <span class="keyword">def </span>run_search(self, state):</div>
+<div class="line"><span class="lineno">  110</span>    self.reset()</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keyword">assert</span> state.get_game().get_type(</div>
+<div class="line"><span class="lineno">  112</span>    ).dynamics == pyspiel.GameType.Dynamics.SEQUENTIAL</div>
+<div class="line"><span class="lineno">  113</span>    <span class="keyword">assert</span> state.get_game().get_type(</div>
+<div class="line"><span class="lineno">  114</span>    ).information == pyspiel.GameType.Information.IMPERFECT_INFORMATION</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>    legal_actions = state.legal_actions()</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span> len(legal_actions) == 1:</div>
+<div class="line"><span class="lineno">  118</span>      <span class="keywordflow">return</span> [(legal_actions[0], 1.0)]</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>    self._root_node = self.create_new_node(state)</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    <span class="keyword">assert</span> self._root_node</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>    root_infostate_key = self.get_state_key(state)</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(self._max_simulations):</div>
+<div class="line"><span class="lineno">  127</span>      <span class="comment"># how to sample a pyspiel.state from another pyspiel.state?</span></div>
+<div class="line"><span class="lineno">  128</span>      sampled_root_state = self.sample_root_state(state)</div>
+<div class="line"><span class="lineno">  129</span>      <span class="keyword">assert</span> root_infostate_key == self.get_state_key(sampled_root_state)</div>
+<div class="line"><span class="lineno">  130</span>      <span class="keyword">assert</span> sampled_root_state</div>
+<div class="line"><span class="lineno">  131</span>      self.run_simulation(sampled_root_state)</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">if</span> self._allow_inconsistent_action_sets:  <span class="comment"># when this happens?</span></div>
+<div class="line"><span class="lineno">  134</span>      legal_actions = state.legal_actions()</div>
+<div class="line"><span class="lineno">  135</span>      temp_node = self.filter_illegals(self._root_node, legal_actions)</div>
+<div class="line"><span class="lineno">  136</span>      <span class="keyword">assert</span> temp_node.total_visits &gt; 0</div>
+<div class="line"><span class="lineno">  137</span>      <span class="keywordflow">return</span> self.get_final_policy(state, temp_node)</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  139</span>      <span class="keywordflow">return</span> self.get_final_policy(state, self._root_node)</div>
+<div class="line"><span class="lineno">  140</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a484c6bf8d8db13a89455af5fb8e927b1" name="a484c6bf8d8db13a89455af5fb8e927b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a484c6bf8d8db13a89455af5fb8e927b1">&#9670;&#160;</a></span>run_simulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.run_simulation </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00298">298</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>  <span class="keyword">def </span>run_simulation(self, state):</div>
+<div class="line"><span class="lineno">  299</span>    <span class="keywordflow">if</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">  300</span>      <span class="keywordflow">return</span> state.returns()</div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordflow">elif</span> state.is_chance_node():</div>
+<div class="line"><span class="lineno">  302</span>      action_list, prob_list = zip(*state.chance_outcomes())</div>
+<div class="line"><span class="lineno">  303</span>      chance_action = self._random_state.choice(action_list, p=prob_list)</div>
+<div class="line"><span class="lineno">  304</span>      state.apply_action(chance_action)</div>
+<div class="line"><span class="lineno">  305</span>      <span class="keywordflow">return</span> self.run_simulation(state)</div>
+<div class="line"><span class="lineno">  306</span>    legal_actions = state.legal_actions()</div>
+<div class="line"><span class="lineno">  307</span>    cur_player = state.current_player()</div>
+<div class="line"><span class="lineno">  308</span>    node = self.lookup_or_create_node(state)</div>
+<div class="line"><span class="lineno">  309</span> </div>
+<div class="line"><span class="lineno">  310</span>    <span class="keyword">assert</span> node</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>    <span class="keywordflow">if</span> node.total_visits == UNEXPANDED_VISIT_COUNT:</div>
+<div class="line"><span class="lineno">  313</span>      node.total_visits = 0</div>
+<div class="line"><span class="lineno">  314</span>      <span class="keywordflow">for</span> action, prob <span class="keywordflow">in</span> self._evaluator.prior(state):</div>
+<div class="line"><span class="lineno">  315</span>        node.prior_map[action] = prob</div>
+<div class="line"><span class="lineno">  316</span>      <span class="keywordflow">return</span> self._evaluator.evaluate(state)</div>
+<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  318</span>      chosen_action = self.check_expand(</div>
+<div class="line"><span class="lineno">  319</span>          node, legal_actions)  <span class="comment"># add one children at a time?</span></div>
+<div class="line"><span class="lineno">  320</span>      <span class="keywordflow">if</span> chosen_action != pyspiel.INVALID_ACTION:</div>
+<div class="line"><span class="lineno">  321</span>        <span class="comment"># check if all actions have been expanded, if not, select one?</span></div>
+<div class="line"><span class="lineno">  322</span>        <span class="comment"># if yes, ucb?</span></div>
+<div class="line"><span class="lineno">  323</span>        self.expand_if_necessary(node, chosen_action)</div>
+<div class="line"><span class="lineno">  324</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  325</span>        chosen_action = self.select_action_tree_policy(node, legal_actions)</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>      <span class="keyword">assert</span> chosen_action != pyspiel.INVALID_ACTION</div>
+<div class="line"><span class="lineno">  328</span> </div>
+<div class="line"><span class="lineno">  329</span>      node.total_visits += 1</div>
+<div class="line"><span class="lineno">  330</span>      node.child_info[chosen_action].visits += 1</div>
+<div class="line"><span class="lineno">  331</span>      state.apply_action(chosen_action)</div>
+<div class="line"><span class="lineno">  332</span>      returns = self.run_simulation(state)</div>
+<div class="line"><span class="lineno">  333</span>      node.child_info[chosen_action].return_sum += returns[cur_player]</div>
+<div class="line"><span class="lineno">  334</span>      <span class="keywordflow">return</span> returns</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a125cd86ec5fa25bcf5e8505a8b53dbd0" name="a125cd86ec5fa25bcf5e8505a8b53dbd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125cd86ec5fa25bcf5e8505a8b53dbd0">&#9670;&#160;</a></span>sample_root_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.sample_root_state </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00194">194</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>  <span class="keyword">def </span>sample_root_state(self, state):</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> self._max_world_samples == UNLIMITED_NUM_WORLD_SAMPLES:</div>
+<div class="line"><span class="lineno">  196</span>      <span class="keywordflow">return</span> self.resample_from_infostate(state)</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">elif</span> len(self._root_samples) &lt; self._max_world_samples:</div>
+<div class="line"><span class="lineno">  198</span>      self._root_samples.append(self.resample_from_infostate(state))</div>
+<div class="line"><span class="lineno">  199</span>      <span class="keywordflow">return</span> self._root_samples[-1].clone()</div>
+<div class="line"><span class="lineno">  200</span>    <span class="keywordflow">elif</span> len(self._root_samples) == self._max_world_samples:</div>
+<div class="line"><span class="lineno">  201</span>      idx = self._random_state.randint(len(self._root_samples))</div>
+<div class="line"><span class="lineno">  202</span>      <span class="keywordflow">return</span> self._root_samples[idx].clone()</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  204</span>      <span class="keywordflow">raise</span> pyspiel.SpielError(</div>
+<div class="line"><span class="lineno">  205</span>          <span class="stringliteral">&#39;Case not handled (badly set max_world_samples..?)&#39;</span>)</div>
+<div class="line"><span class="lineno">  206</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a22cafcd6338d3b1bfffd32541407376b" name="a22cafcd6338d3b1bfffd32541407376b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22cafcd6338d3b1bfffd32541407376b">&#9670;&#160;</a></span>select_action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.select_action </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>node</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00261">261</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  261</span>  <span class="keyword">def </span>select_action(self, node):</div>
+<div class="line"><span class="lineno">  262</span>    candidates = []</div>
+<div class="line"><span class="lineno">  263</span>    max_value = -float(<span class="stringliteral">&#39;inf&#39;</span>)</div>
+<div class="line"><span class="lineno">  264</span>    <span class="keywordflow">for</span> action, child <span class="keywordflow">in</span> node.child_info.items():</div>
+<div class="line"><span class="lineno">  265</span>      <span class="keyword">assert</span> child.visits &gt; 0</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>      action_value = child.value()</div>
+<div class="line"><span class="lineno">  268</span>      <span class="keywordflow">if</span> self._child_selection_policy == ChildSelectionPolicy.UCT:</div>
+<div class="line"><span class="lineno">  269</span>        action_value += (self._uct_c *</div>
+<div class="line"><span class="lineno">  270</span>                         np.sqrt(np.log(node.total_visits)/child.visits))</div>
+<div class="line"><span class="lineno">  271</span>      <span class="keywordflow">elif</span> self._child_selection_policy == ChildSelectionPolicy.PUCT:</div>
+<div class="line"><span class="lineno">  272</span>        action_value += (self._uct_c * child.prior *</div>
+<div class="line"><span class="lineno">  273</span>                         np.sqrt(node.total_visits)/(1 + child.visits))</div>
+<div class="line"><span class="lineno">  274</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">raise</span> pyspiel.SpielError(<span class="stringliteral">&#39;Child selection policy unrecognized.&#39;</span>)</div>
+<div class="line"><span class="lineno">  276</span>      <span class="keywordflow">if</span> action_value &gt; max_value + TIE_TOLERANCE:</div>
+<div class="line"><span class="lineno">  277</span>        candidates = [action]</div>
+<div class="line"><span class="lineno">  278</span>        max_value = action_value</div>
+<div class="line"><span class="lineno">  279</span>      <span class="keywordflow">elif</span> (action_value &gt; max_value - TIE_TOLERANCE <span class="keywordflow">and</span></div>
+<div class="line"><span class="lineno">  280</span>            action_value &lt; max_value + TIE_TOLERANCE):</div>
+<div class="line"><span class="lineno">  281</span>        candidates.append(action)</div>
+<div class="line"><span class="lineno">  282</span>        max_value = action_value</div>
+<div class="line"><span class="lineno">  283</span> </div>
+<div class="line"><span class="lineno">  284</span>    <span class="keyword">assert</span> len(candidates) &gt;= 1</div>
+<div class="line"><span class="lineno">  285</span>    <span class="keywordflow">return</span> candidates[self._random_state.randint(len(candidates))]</div>
+<div class="line"><span class="lineno">  286</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a91c8997a331d49f04a89babe009c9f51" name="a91c8997a331d49f04a89babe009c9f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c8997a331d49f04a89babe009c9f51">&#9670;&#160;</a></span>select_action_tree_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.select_action_tree_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>legal_actions</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00248">248</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>  <span class="keyword">def </span>select_action_tree_policy(self, node, legal_actions):</div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">if</span> self._allow_inconsistent_action_sets:</div>
+<div class="line"><span class="lineno">  250</span>      temp_node = self.filter_illegals(node, legal_actions)</div>
+<div class="line"><span class="lineno">  251</span>      <span class="keywordflow">if</span> temp_node.total_visits == 0:</div>
+<div class="line"><span class="lineno">  252</span>        action = legal_actions[self._random_state.randint(</div>
+<div class="line"><span class="lineno">  253</span>            len(legal_actions))]  <span class="comment"># prior?</span></div>
+<div class="line"><span class="lineno">  254</span>        self.expand_if_necessary(node, action)</div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">return</span> action</div>
+<div class="line"><span class="lineno">  256</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">return</span> self.select_action(temp_node)</div>
+<div class="line"><span class="lineno">  258</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">  259</span>      <span class="keywordflow">return</span> self.select_action(node)</div>
+<div class="line"><span class="lineno">  260</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3471cfb05eb79de9b0d608b6c2267f98" name="a3471cfb05eb79de9b0d608b6c2267f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3471cfb05eb79de9b0d608b6c2267f98">&#9670;&#160;</a></span>set_resampler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.set_resampler </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00222">222</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  222</span>  <span class="keyword">def </span>set_resampler(self, cb):</div>
+<div class="line"><span class="lineno">  223</span>    self._resampler_cb = cb</div>
+<div class="line"><span class="lineno">  224</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae01dbe05f9d09dc445ae8d24b6e2e6f1" name="ae01dbe05f9d09dc445ae8d24b6e2e6f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae01dbe05f9d09dc445ae8d24b6e2e6f1">&#9670;&#160;</a></span>step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.step </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00141">141</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>  <span class="keyword">def </span>step(self, state):</div>
+<div class="line"><span class="lineno">  142</span>    action_list, prob_list = zip(*self.run_search(state))</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">return</span> self._random_state.choice(action_list, p=prob_list)</div>
+<div class="line"><span class="lineno">  144</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00359">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.evaluate_and_update_policy()</a>, <a class="el" href="../../da/d71/jax__cfr_8py_source.html#l00350">open_spiel.python.jax.cfr.jax_cfr.JaxCFR.multiple_steps()</a>, <a class="el" href="../../d6/d11/double__oracle_8py_source.html#l00126">open_spiel.python.algorithms.double_oracle.DoubleOracleSolver.solve_yield()</a>, <a class="el" href="../../d4/d2e/nash__evolutionary__search_8py_source.html#l00094">nash_evolutionary_search.NashCMAES.step_for()</a>, <a class="el" href="../../df/dd1/nash__random__search_8py_source.html#l00100">nash_random_search.NashRandomSearch.step_for()</a>, <a class="el" href="../../d2/d0e/bandit__regret_8py_source.html#l00363">open_spiel.python.mfg.algorithms.bandit_regret.PolynomialWeightAlgorithm.step_for()</a>, and <a class="el" href="../../dd/ddd/regret__minimizer_8py_source.html#l00107">regret_minimizer.RegretMinimizer.step_for()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_ae01dbe05f9d09dc445ae8d24b6e2e6f1_icgraph.png" border="0" usemap="#ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_ae01dbe05f9d09dc445ae8d24b6e2e6f1_icgraph" alt=""/></div>
+<map name="ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_ae01dbe05f9d09dc445ae8d24b6e2e6f1_icgraph" id="ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_ae01dbe05f9d09dc445ae8d24b6e2e6f1_icgraph">
+<area shape="rect" title=" " alt="" coords="884,216,1122,256"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#a14d11483beff07f087b51f3a2dd71135" title=" " alt="" coords="606,5,792,61"/>
+<area shape="poly" title=" " alt="" coords="975,205,915,139,877,105,835,75,791,56,794,51,838,71,880,101,919,135,979,201"/>
+<area shape="rect" href="../../d9/dd5/classopen__spiel_1_1python_1_1jax_1_1cfr_1_1jax__cfr_1_1_jax_c_f_r.html#adb88039a6a02b4d0090a0abc5c3c5424" title=" " alt="" coords="606,85,792,126"/>
+<area shape="poly" title=" " alt="" coords="959,209,901,174,835,141,792,126,793,121,837,136,904,169,961,204"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a7a91195b9b42b8536e06098e836b02e4" title=" " alt="" coords="573,150,824,191"/>
+<area shape="poly" title=" " alt="" coords="890,214,796,194,797,189,891,209"/>
+<area shape="rect" href="../../d2/dfd/classnash__evolutionary__search_1_1_nash_c_m_a_e_s.html#a42b13c1091631c52988a6391fe34038a" title=" " alt="" coords="610,216,787,256"/>
+<area shape="poly" title=" " alt="" coords="869,238,787,238,787,233,869,233"/>
+<area shape="rect" href="../../d5/dd9/classnash__random__search_1_1_nash_random_search.html#a9b9967669c24ceba55dc8ce00565a71a" title=" " alt="" coords="584,281,813,322"/>
+<area shape="poly" title=" " alt="" coords="891,263,797,283,796,278,890,257"/>
+<area shape="rect" href="../../d1/d50/classopen__spiel_1_1python_1_1mfg_1_1algorithms_1_1bandit__regret_1_1_polynomial_weight_algorithm.html#a3b7ceacfd8a03895a691242d227c1ddd" title=" " alt="" coords="561,346,836,387"/>
+<area shape="poly" title=" " alt="" coords="961,267,904,303,837,336,801,348,800,343,835,331,901,298,959,263"/>
+<area shape="rect" href="../../d5/d11/classregret__minimizer_1_1_regret_minimizer.html#aa371edb5793c6a6cfbf51dc8597905dc" title=" " alt="" coords="566,411,831,437"/>
+<area shape="poly" title=" " alt="" coords="980,270,921,338,881,372,838,401,808,413,806,408,835,396,878,368,917,334,976,267"/>
+<area shape="rect" href="../../d7/d68/classopen__spiel_1_1python_1_1algorithms_1_1double__oracle_1_1_double_oracle_solver.html#a44f0c375b5ef20bb1267524788ab16da" title=" " alt="" coords="281,150,513,191"/>
+<area shape="poly" title=" " alt="" coords="557,173,514,173,514,168,557,168"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#ad1331eddb66a419f7336bc267b47d75e" title=" " alt="" coords="5,117,233,158"/>
+<area shape="poly" title=" " alt="" coords="265,157,233,153,233,148,265,152"/>
+<area shape="rect" href="../../d0/d7e/classopen__spiel_1_1python_1_1algorithms_1_1mcts_1_1_m_c_t_s_bot.html#a14e053b461dc025b01a41453bc278c7d" title=" " alt="" coords="5,182,233,223"/>
+<area shape="poly" title=" " alt="" coords="265,188,233,192,233,187,265,183"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae7d7d799250a40bb795d00008a607d82" name="ae7d7d799250a40bb795d00008a607d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d7d799250a40bb795d00008a607d82">&#9670;&#160;</a></span>step_with_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot.step_with_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00148">148</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>  <span class="keyword">def </span>step_with_policy(self, state):</div>
+<div class="line"><span class="lineno">  149</span>    policy = self.get_policy(state)</div>
+<div class="line"><span class="lineno">  150</span>    action_list, prob_list = zip(*policy)</div>
+<div class="line"><span class="lineno">  151</span>    sampled_action = self._random_state.choice(action_list, p=prob_list)</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">return</span> policy, sampled_action</div>
+<div class="line"><span class="lineno">  153</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d3/dd9/human_8py_source.html#l00043">open_spiel.python.bots.human.HumanBot.step_with_policy()</a>, and <a class="el" href="../../d6/d4c/uniform__random_8py_source.html#l00045">open_spiel.python.bots.uniform_random.UniformRandomBot.step_with_policy()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_ae7d7d799250a40bb795d00008a607d82_icgraph.png" border="0" usemap="#ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_ae7d7d799250a40bb795d00008a607d82_icgraph" alt=""/></div>
+<map name="ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_ae7d7d799250a40bb795d00008a607d82_icgraph" id="ad6/d2e/classopen__spiel_1_1python_1_1algorithms_1_1ismcts_1_1_i_s_m_c_t_s_bot_ae7d7d799250a40bb795d00008a607d82_icgraph">
+<area shape="rect" title=" " alt="" coords="523,66,760,107"/>
+<area shape="rect" href="../../d0/dc1/classopen__spiel_1_1python_1_1bots_1_1human_1_1_human_bot.html#a3123c2088d1fbff7351ffb5cdd5e3554" title=" " alt="" coords="273,37,475,78"/>
+<area shape="poly" title=" " alt="" coords="507,74,475,71,476,66,508,69"/>
+<area shape="rect" href="../../d5/dc0/classopen__spiel_1_1python_1_1bots_1_1uniform__random_1_1_uniform_random_bot.html#ac7f03e2bcf49e2d59d2b6fbf026de989" title=" " alt="" coords="5,29,225,85"/>
+<area shape="poly" title=" " alt="" coords="507,97,393,98,272,92,225,85,226,80,273,87,393,93,507,92"/>
+<area shape="poly" title=" " alt="" coords="416,24,400,18,374,15,349,17,334,22,328,28,331,35,325,37,323,27,331,18,348,12,374,10,402,13,418,19"/>
+<area shape="poly" title=" " alt="" coords="257,69,225,69,225,63,257,63"/>
+<area shape="poly" title=" " alt="" coords="240,46,272,46,272,51,240,51"/>
+<area shape="poly" title=" " alt="" coords="157,17,141,10,115,8,92,10,77,15,70,21,70,29,65,29,65,19,74,10,91,5,115,3,142,5,159,12"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a43656d68f9c2d12e15cb3797440da079" name="a43656d68f9c2d12e15cb3797440da079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43656d68f9c2d12e15cb3797440da079">&#9670;&#160;</a></span>_allow_inconsistent_action_sets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"># when this happens? open_spiel.python.algorithms.ismcts.ISMCTSBot._allow_inconsistent_action_sets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00087">87</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="abd47e9e8b584344ec7cc42eda324ed7d" name="abd47e9e8b584344ec7cc42eda324ed7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd47e9e8b584344ec7cc42eda324ed7d">&#9670;&#160;</a></span>_child_selection_policy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._child_selection_policy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00092">92</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="a1fc4376956c2141b3f53769ab836e2cc" name="a1fc4376956c2141b3f53769ab836e2cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc4376956c2141b3f53769ab836e2cc">&#9670;&#160;</a></span>_evaluator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._evaluator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00081">81</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="afe7c9ca228131d21a0dbd4b55147e983" name="afe7c9ca228131d21a0dbd4b55147e983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe7c9ca228131d21a0dbd4b55147e983">&#9670;&#160;</a></span>_final_policy_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._final_policy_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00085">85</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="a1f7a56110aba6a4fe264ff3bf10ebdf5" name="a1f7a56110aba6a4fe264ff3bf10ebdf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7a56110aba6a4fe264ff3bf10ebdf5">&#9670;&#160;</a></span>_game</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._game</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00080">80</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00131">open_spiel.python.algorithms.cfr._CFRSolverBase.__init__()</a>, <a class="el" href="../../d3/dc4/algorithms_2deep__cfr_8py_source.html#l00129">open_spiel.python.algorithms.deep_cfr.DeepCFRSolver.__init__()</a>, <a class="el" href="../../d9/d36/algorithms_2deep__cfr__tf2_8py_source.html#l00285">open_spiel.python.algorithms.deep_cfr_tf2.DeepCFRSolver.__init__()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00085">open_spiel.python.algorithms.efr._EFRSolverBase.__init__()</a>, <a class="el" href="../../dc/de1/algorithms_2eva_8py_source.html#l00106">open_spiel.python.algorithms.eva.EVAAgent.__init__()</a>, <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00123">open_spiel.python.algorithms.fictitious_play.XFPSolver.__init__()</a>, <a class="el" href="../../d8/dc4/algorithms_2mcts_8py_source.html#l00208">open_spiel.python.algorithms.mcts.MCTSBot.__init__()</a>, <a class="el" href="../../d1/d7c/algorithms_2neurd_8py_source.html#l00191">open_spiel.python.algorithms.neurd.CounterfactualNeurdSolver.__init__()</a>, <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00047">open_spiel.python.algorithms.policy_aggregator_joint._DictPolicy.__init__()</a>, <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00110">open_spiel.python.algorithms.psro_v2.abstract_meta_trainer.AbstractMetaTrainer.__init__()</a>, <a class="el" href="../../d5/dfc/psro__v2_8py_source.html#l00082">open_spiel.python.algorithms.psro_v2.psro_v2.PSROSolver.__init__()</a>, <a class="el" href="../../d4/d71/algorithms_2rcfr_8py_source.html#l00642">open_spiel.python.algorithms.rcfr._RcfrSolver.__init__()</a>, <a class="el" href="../../d6/d15/bluechip__bridge_8py_source.html#l00196">open_spiel.python.bots.bluechip_bridge.BlueChipBridgeBot.__init__()</a>, <a class="el" href="../../d1/d9b/bluechip__bridge__uncontested__bidding_8py_source.html#l00187">open_spiel.python.bots.bluechip_bridge_uncontested_bidding.BlueChipBridgeBot.__init__()</a>, <a class="el" href="../../dd/d9c/gtp_8py_source.html#l00038">open_spiel.python.bots.gtp.GTPBot.__init__()</a>, <a class="el" href="../../d0/d69/jax_2deep__cfr_8py_source.html#l00138">open_spiel.python.jax.deep_cfr.DeepCFRSolver.__init__()</a>, <a class="el" href="../../db/d67/average__network__fictitious__play_8py_source.html#l00259">open_spiel.python.mfg.algorithms.average_network_fictitious_play.AverageNetworkFictitiousPlay.__init__()</a>, <a class="el" href="../../d4/d98/mfg_2algorithms_2fictitious__play_8py_source.html#l00114">open_spiel.python.mfg.algorithms.fictitious_play.FictitiousPlay.__init__()</a>, <a class="el" href="../../db/d76/fixed__point_8py_source.html#l00038">open_spiel.python.mfg.algorithms.fixed_point.FixedPoint.__init__()</a>, <a class="el" href="../../df/d3d/mirror__descent_8py_source.html#l00082">open_spiel.python.mfg.algorithms.mirror_descent.MirrorDescent.__init__()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00464">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.DeepOnlineMirrorDescent.__init__()</a>, <a class="el" href="../../d8/d05/nash__conv_8py_source.html#l00031">open_spiel.python.mfg.algorithms.nash_conv.NashConv.__init__()</a>, <a class="el" href="../../d8/d11/mfg__proximal__policy__optimization_8py_source.html#l00042">open_spiel.python.mfg.algorithms.pytorch.mfg_proximal_policy_optimization.NashC.__init__()</a>, <a class="el" href="../../d7/d95/pytorch_2deep__cfr_8py_source.html#l00221">open_spiel.python.pytorch.deep_cfr.DeepCFRSolver.__init__()</a>, <a class="el" href="../../de/d05/pytorch_2eva_8py_source.html#l00100">open_spiel.python.pytorch.eva.EVAAgent.__init__()</a>, <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html#l00166">open_spiel.python.pytorch.neurd.CounterfactualNeurdSolver.__init__()</a>, <a class="el" href="../../d0/d00/pytorch_2rcfr_8py_source.html#l00634">open_spiel.python.pytorch.rcfr._RcfrSolver.__init__()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00152">open_spiel.python.rl_environment.Environment.__init__()</a>, <a class="el" href="../../dd/dc5/cfr__br_8py_source.html#l00095">open_spiel.python.algorithms.cfr_br.CFRBRSolver._compute_best_responses()</a>, <a class="el" href="../../d1/d7c/algorithms_2neurd_8py_source.html#l00248">open_spiel.python.algorithms.neurd.CounterfactualNeurdSolver._previous_player()</a>, <a class="el" href="../../d4/d71/algorithms_2rcfr_8py_source.html#l00725">open_spiel.python.algorithms.rcfr._RcfrSolver._previous_player()</a>, <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html#l00219">open_spiel.python.pytorch.neurd.CounterfactualNeurdSolver._previous_player()</a>, <a class="el" href="../../d0/d00/pytorch_2rcfr_8py_source.html#l00713">open_spiel.python.pytorch.rcfr._RcfrSolver._previous_player()</a>, <a class="el" href="../../d2/dc6/policy__aggregator_8py_source.html#l00181">open_spiel.python.algorithms.policy_aggregator.PolicyAggregator._rec_aggregate()</a>, <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00173">open_spiel.python.algorithms.policy_aggregator_joint.JointPolicyAggregator._rec_aggregate()</a>, <a class="el" href="../../d1/d7c/algorithms_2neurd_8py_source.html#l00211">open_spiel.python.algorithms.neurd.CounterfactualNeurdSolver._sequence_weights()</a>, <a class="el" href="../../d4/d71/algorithms_2rcfr_8py_source.html#l00665">open_spiel.python.algorithms.rcfr._RcfrSolver._sequence_weights()</a>, <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html#l00182">open_spiel.python.pytorch.neurd.CounterfactualNeurdSolver._sequence_weights()</a>, <a class="el" href="../../d0/d00/pytorch_2rcfr_8py_source.html#l00653">open_spiel.python.pytorch.rcfr._RcfrSolver._sequence_weights()</a>, <a class="el" href="../../d2/dc6/policy__aggregator_8py_source.html#l00147">open_spiel.python.algorithms.policy_aggregator.PolicyAggregator._sub_aggregate()</a>, <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00147">open_spiel.python.algorithms.policy_aggregator_joint.JointPolicyAggregator._sub_aggregate()</a>, <a class="el" href="../../db/d67/average__network__fictitious__play_8py_source.html#l00299">open_spiel.python.mfg.algorithms.average_network_fictitious_play.AverageNetworkFictitiousPlay._update_distribution()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00522">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.DeepOnlineMirrorDescent._update_policy_and_distribution()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l01021">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00404">open_spiel.python.rl_environment.Environment.action_spec()</a>, <a class="el" href="../../d2/dc6/policy__aggregator_8py_source.html#l00130">open_spiel.python.algorithms.policy_aggregator.PolicyAggregator.aggregate()</a>, <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00121">open_spiel.python.algorithms.policy_aggregator_joint.JointPolicyAggregator.aggregate()</a>, <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00161">open_spiel.python.algorithms.fictitious_play.XFPSolver.average_policy()</a>, <a class="el" href="../../d8/d79/mccfr_8py_source.html#l00104">open_spiel.python.algorithms.mccfr.MCCFRSolverBase.average_policy()</a>, <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00170">open_spiel.python.algorithms.fictitious_play.XFPSolver.compute_best_responses()</a>, <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00418">open_spiel.python.algorithms.cfr._CFRSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d1/dd6/algorithms_2discounted__cfr_8py_source.html#l00190">open_spiel.python.algorithms.discounted_cfr._DCFRSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00426">open_spiel.python.algorithms.efr._EFRSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d1/d7c/algorithms_2neurd_8py_source.html#l00256">open_spiel.python.algorithms.neurd.CounterfactualNeurdSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d4/d71/algorithms_2rcfr_8py_source.html#l00758">open_spiel.python.algorithms.rcfr.RcfrSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d4/d71/algorithms_2rcfr_8py_source.html#l00850">open_spiel.python.algorithms.rcfr.ReservoirRcfrSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html#l00227">open_spiel.python.pytorch.neurd.CounterfactualNeurdSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d0/d00/pytorch_2rcfr_8py_source.html#l00741">open_spiel.python.pytorch.rcfr.RcfrSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d0/d00/pytorch_2rcfr_8py_source.html#l00829">open_spiel.python.pytorch.rcfr.ReservoirRcfrSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d0/dba/openspiel__api_8py_source.html#l00051">openspiel_api.WorldState.get_distinct_actions()</a>, <a class="el" href="../../d6/ddf/polynomial__weights_8py_source.html#l00091">polynomial_weights.PolynomialWeightAlgorithm.get_nu()</a>, <a class="el" href="../../d1/da5/mfg_2algorithms_2regret_2regret__matching_8py_source.html#l00127">regret_matching.RegretMatching.get_nu()</a>, <a class="el" href="../../d1/dc2/boltzmann__policy__iteration_8py_source.html#l00029">open_spiel.python.mfg.algorithms.boltzmann_policy_iteration.BoltzmannPolicyIteration.get_projected_policy()</a>, <a class="el" href="../../df/d3d/mirror__descent_8py_source.html#l00150">open_spiel.python.mfg.algorithms.mirror_descent.MirrorDescent.get_projected_policy()</a>, <a class="el" href="../../d1/d5d/munchausen__mirror__descent_8py_source.html#l00082">open_spiel.python.mfg.algorithms.munchausen_mirror_descent.MunchausenMirrorDescent.get_projected_policy()</a>, <a class="el" href="../../d6/de5/munchausen__deep__mirror__descent_8py_source.html#l00530">open_spiel.python.mfg.algorithms.munchausen_deep_mirror_descent.DeepOnlineMirrorDescent.get_softmax_policy()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00219">open_spiel.python.rl_environment.Environment.get_time_step()</a>, <a class="el" href="../../d5/d27/rnad_8py_source.html#l00734">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.init()</a>, <a class="el" href="../../db/d9b/external__sampling__mccfr_8py_source.html#l00057">open_spiel.python.algorithms.external_sampling_mccfr.ExternalSamplingSolver.iteration()</a>, <a class="el" href="../../dc/d5d/outcome__sampling__mccfr_8py_source.html#l00037">open_spiel.python.algorithms.outcome_sampling_mccfr.OutcomeSamplingSolver.iteration()</a>, <a class="el" href="../../d4/d98/mfg_2algorithms_2fictitious__play_8py_source.html#l00145">open_spiel.python.mfg.algorithms.fictitious_play.FictitiousPlay.iteration()</a>, <a class="el" href="../../db/d76/fixed__point_8py_source.html#l00052">open_spiel.python.mfg.algorithms.fixed_point.FixedPoint.iteration()</a>, <a class="el" href="../../df/d3d/mirror__descent_8py_source.html#l00155">open_spiel.python.mfg.algorithms.mirror_descent.MirrorDescent.iteration()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00384">open_spiel.python.rl_environment.Environment.observation_spec()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00324">open_spiel.python.rl_environment.Environment.reset()</a>, <a class="el" href="../../d6/d15/bluechip__bridge_8py_source.html#l00225">open_spiel.python.bots.bluechip_bridge.BlueChipBridgeBot.restart()</a>, <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00277">open_spiel.python.algorithms.fictitious_play.XFPSolver.sample_episodes()</a>, <a class="el" href="../../d9/d94/abstract__meta__trainer_8py_source.html#l00208">open_spiel.python.algorithms.psro_v2.abstract_meta_trainer.AbstractMetaTrainer.sample_episodes()</a>, <a class="el" href="../../dd/d9c/gtp_8py_source.html#l00108">open_spiel.python.bots.gtp.GTPBot.step()</a>, <a class="el" href="../../d2/d0e/bandit__regret_8py_source.html#l00347">open_spiel.python.mfg.algorithms.bandit_regret.PolynomialWeightAlgorithm.step()</a>, <a class="el" href="../../de/d6e/mf__psro_8py_source.html#l00092">open_spiel.python.mfg.algorithms.mf_psro.MeanFieldPSRO.step()</a>, <a class="el" href="../../d5/dfc/psro__v2_8py_source.html#l00308">open_spiel.python.algorithms.psro_v2.psro_v2.PSROSolver.update_agents()</a>, <a class="el" href="../../d1/d41/algorithms_2fictitious__play_8py_source.html#l00184">open_spiel.python.algorithms.fictitious_play.XFPSolver.update_average_policies()</a>, <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00476">open_spiel.python.rl_environment.Environment.update_mfg_distribution()</a>, <a class="el" href="../../d2/d0e/bandit__regret_8py_source.html#l00223">open_spiel.python.mfg.algorithms.bandit_regret.RegretMinimizer.update_policy_mus()</a>, <a class="el" href="../../dd/ddd/regret__minimizer_8py_source.html#l00087">regret_minimizer.RegretMinimizer.update_policy_mus()</a>, and <a class="el" href="../../dd/d06/rl__environment_8py_source.html#l00422">open_spiel.python.rl_environment.Environment.use_observation()</a>.</p>
+
+</div>
+</div>
+<a id="a83a0b70b7f8aa18b21ce3b5ba7c2ebdd" name="a83a0b70b7f8aa18b21ce3b5ba7c2ebdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a0b70b7f8aa18b21ce3b5ba7c2ebdd">&#9670;&#160;</a></span>_max_simulations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._max_simulations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00083">83</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="adf852b92ad668fc5b1ad331e26d56207" name="adf852b92ad668fc5b1ad331e26d56207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf852b92ad668fc5b1ad331e26d56207">&#9670;&#160;</a></span>_max_world_samples</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._max_world_samples</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00084">84</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="a6cc18b27013121dcfea0337ca67cf9d0" name="a6cc18b27013121dcfea0337ca67cf9d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cc18b27013121dcfea0337ca67cf9d0">&#9670;&#160;</a></span>_node_pool</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._node_pool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00089">89</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="a68a09c659a4c85a429c2367ba62be7d4" name="a68a09c659a4c85a429c2367ba62be7d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a09c659a4c85a429c2367ba62be7d4">&#9670;&#160;</a></span>_nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._nodes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00088">88</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="a6bc8b3362f0d0f17575e7489e5ecff04" name="a6bc8b3362f0d0f17575e7489e5ecff04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc8b3362f0d0f17575e7489e5ecff04">&#9670;&#160;</a></span>_random_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._random_state</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00091">91</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d8/dc4/algorithms_2mcts_8py_source.html#l00208">open_spiel.python.algorithms.mcts.MCTSBot.__init__()</a>, <a class="el" href="../../d8/dc4/algorithms_2mcts_8py_source.html#l00292">open_spiel.python.algorithms.mcts.MCTSBot._apply_tree_policy()</a>, and <a class="el" href="../../d8/dc4/algorithms_2mcts_8py_source.html#l00054">open_spiel.python.algorithms.mcts.RandomRolloutEvaluator.evaluate()</a>.</p>
+
+</div>
+</div>
+<a id="a9d08c038fa4e37cfd341e9f5a4e323fe" name="a9d08c038fa4e37cfd341e9f5a4e323fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d08c038fa4e37cfd341e9f5a4e323fe">&#9670;&#160;</a></span>_resampler_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._resampler_cb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00093">93</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="a0db3e748a0dfd97e0d60757663a4316a" name="a0db3e748a0dfd97e0d60757663a4316a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db3e748a0dfd97e0d60757663a4316a">&#9670;&#160;</a></span>_root_node</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._root_node</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00120">120</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00131">open_spiel.python.algorithms.cfr._CFRSolverBase.__init__()</a>, <a class="el" href="../../d3/dc4/algorithms_2deep__cfr_8py_source.html#l00129">open_spiel.python.algorithms.deep_cfr.DeepCFRSolver.__init__()</a>, <a class="el" href="../../d9/d36/algorithms_2deep__cfr__tf2_8py_source.html#l00285">open_spiel.python.algorithms.deep_cfr_tf2.DeepCFRSolver.__init__()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00085">open_spiel.python.algorithms.efr._EFRSolverBase.__init__()</a>, <a class="el" href="../../d0/d69/jax_2deep__cfr_8py_source.html#l00138">open_spiel.python.jax.deep_cfr.DeepCFRSolver.__init__()</a>, <a class="el" href="../../d7/d95/pytorch_2deep__cfr_8py_source.html#l00221">open_spiel.python.pytorch.deep_cfr.DeepCFRSolver.__init__()</a>, <a class="el" href="../../d7/d05/algorithms_2cfr_8py_source.html#l00418">open_spiel.python.algorithms.cfr._CFRSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../dd/dc5/cfr__br_8py_source.html#l00108">open_spiel.python.algorithms.cfr_br.CFRBRSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d1/dd6/algorithms_2discounted__cfr_8py_source.html#l00190">open_spiel.python.algorithms.discounted_cfr._DCFRSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d6/dee/efr_8py_source.html#l00426">open_spiel.python.algorithms.efr._EFRSolver.evaluate_and_update_policy()</a>, <a class="el" href="../../d3/dc4/algorithms_2deep__cfr_8py_source.html#l00263">open_spiel.python.algorithms.deep_cfr.DeepCFRSolver.solve()</a>, <a class="el" href="../../d9/d36/algorithms_2deep__cfr__tf2_8py_source.html#l00433">open_spiel.python.algorithms.deep_cfr_tf2.DeepCFRSolver.solve()</a>, <a class="el" href="../../d0/d69/jax_2deep__cfr_8py_source.html#l00334">open_spiel.python.jax.deep_cfr.DeepCFRSolver.solve()</a>, and <a class="el" href="../../d7/d95/pytorch_2deep__cfr_8py_source.html#l00311">open_spiel.python.pytorch.deep_cfr.DeepCFRSolver.solve()</a>.</p>
+
+</div>
+</div>
+<a id="ae278725dba04e59334d683b865e03cf8" name="ae278725dba04e59334d683b865e03cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae278725dba04e59334d683b865e03cf8">&#9670;&#160;</a></span>_root_samples</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._root_samples</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00090">90</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="ad530b57b4419de595361e5911dcb09cf" name="ad530b57b4419de595361e5911dcb09cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad530b57b4419de595361e5911dcb09cf">&#9670;&#160;</a></span>_uct_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._uct_c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00082">82</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<a id="ae5b391a74430f7a6c349d56f7a1605be" name="ae5b391a74430f7a6c349d56f7a1605be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b391a74430f7a6c349d56f7a1605be">&#9670;&#160;</a></span>_use_observation_string</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.ismcts.ISMCTSBot._use_observation_string</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/daf/ismcts_8py_source.html#l00086">86</a> of file <a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>open_spiel/python/algorithms/<a class="el" href="../../df/daf/ismcts_8py_source.html">ismcts.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

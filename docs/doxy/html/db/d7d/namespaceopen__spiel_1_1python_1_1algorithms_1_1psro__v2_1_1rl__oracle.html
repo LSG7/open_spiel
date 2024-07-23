@@ -132,7 +132,22 @@ An Oracle for any RL algorithm following the OpenSpiel Policy API.
 
 Args:
   policies_per_player: List of list of number of policies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d2/d31/rl__oracle_8py_source.html#l00043">43</a> of file <a class="el" href="../../d2/d31/rl__oracle_8py_source.html">rl_oracle.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span><span class="keyword">def </span>freeze_all(policies_per_player):</div>
+<div class="line"><span class="lineno">   44</span>  <span class="stringliteral">&quot;&quot;&quot;Freezes all policies within policy_per_player.</span></div>
+<div class="line"><span class="lineno">   45</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   46</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   47</span><span class="stringliteral">    policies_per_player: List of list of number of policies.</span></div>
+<div class="line"><span class="lineno">   48</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">for</span> policies <span class="keywordflow">in</span> policies_per_player:</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">for</span> pol <span class="keywordflow">in</span> policies:</div>
+<div class="line"><span class="lineno">   51</span>      pol.freeze()</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d2/d31/rl__oracle_8py_source.html#l00244">open_spiel.python.algorithms.psro_v2.rl_oracle.RLOracle.__call__()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d7d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__oracle_ab8e80f3ab90cf24f25a43f2bf94e773c_icgraph.png" border="0" usemap="#adb/d7d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__oracle_ab8e80f3ab90cf24f25a43f2bf94e773c_icgraph" alt=""/></div>
@@ -169,7 +184,30 @@ Args:
 
 Returns:
   Randomly-sampled index.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d2/d31/rl__oracle_8py_source.html#l00054">54</a> of file <a class="el" href="../../d2/d31/rl__oracle_8py_source.html">rl_oracle.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span><span class="keyword">def </span>random_count_weighted_choice(count_weight):</div>
+<div class="line"><span class="lineno">   55</span>  <span class="stringliteral">&quot;&quot;&quot;Returns a randomly sampled index i with P ~ 1 / (count_weight[i] + 1).</span></div>
+<div class="line"><span class="lineno">   56</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   57</span><span class="stringliteral">  Allows random sampling to prioritize indexes that haven&#39;t been sampled as many</span></div>
+<div class="line"><span class="lineno">   58</span><span class="stringliteral">  times as others.</span></div>
+<div class="line"><span class="lineno">   59</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">    count_weight: A list of counts to sample an index from.</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">    Randomly-sampled index.</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   66</span>  indexes = list(range(len(count_weight)))</div>
+<div class="line"><span class="lineno">   67</span>  p = np.array([1 / (weight + 1) <span class="keywordflow">for</span> weight <span class="keywordflow">in</span> count_weight])</div>
+<div class="line"><span class="lineno">   68</span>  p /= np.sum(p)</div>
+<div class="line"><span class="lineno">   69</span>  chosen_index = np.random.choice(indexes, p=p)</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">return</span> chosen_index</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d2/d31/rl__oracle_8py_source.html#l00147">open_spiel.python.algorithms.psro_v2.rl_oracle.RLOracle.sample_policies_for_episode()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d7d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__oracle_a28198bb263b1731a02255c4a3ab76d78_icgraph.png" border="0" usemap="#adb/d7d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__oracle_a28198bb263b1731a02255c4a3ab76d78_icgraph" alt=""/></div>
@@ -212,7 +250,28 @@ Args:
 
 Returns:
   Updated count.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d2/d31/rl__oracle_8py_source.html#l00026">26</a> of file <a class="el" href="../../d2/d31/rl__oracle_8py_source.html">rl_oracle.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span><span class="keyword">def </span>update_episodes_per_oracles(episodes_per_oracle, played_policies_indexes):</div>
+<div class="line"><span class="lineno">   27</span>  <span class="stringliteral">&quot;&quot;&quot;Updates the current episode count per policy.</span></div>
+<div class="line"><span class="lineno">   28</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   29</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral">    episodes_per_oracle: List of list of number of episodes played per policy.</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">      One list per player.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">    played_policies_indexes: List with structure (player_index, policy_index) of</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">      played policies whose count needs updating.</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral">    Updated count.</span></div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   38</span>  <span class="keywordflow">for</span> player_index, policy_index <span class="keywordflow">in</span> played_policies_indexes:</div>
+<div class="line"><span class="lineno">   39</span>    episodes_per_oracle[player_index][policy_index] += 1</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordflow">return</span> episodes_per_oracle</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d2/d31/rl__oracle_8py_source.html#l00244">open_spiel.python.algorithms.psro_v2.rl_oracle.RLOracle.__call__()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d7d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__oracle_a14b91ac1c955aff6c80d06f78b6dc484_icgraph.png" border="0" usemap="#adb/d7d/namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__oracle_a14b91ac1c955aff6c80d06f78b6dc484_icgraph" alt=""/></div>

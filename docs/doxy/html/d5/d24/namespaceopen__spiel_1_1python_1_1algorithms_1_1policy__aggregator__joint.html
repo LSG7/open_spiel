@@ -154,7 +154,28 @@ Args:
 
 Returns:
   {action: prob} for `player` in `state` for all joint policies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00027">27</a> of file <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html">policy_aggregator_joint.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span><span class="keyword">def </span>_aggregate_at_state(joint_policies, state, player):</div>
+<div class="line"><span class="lineno">   28</span>  <span class="stringliteral">&quot;&quot;&quot;Returns {action: prob} for `player` in `state` for all joint policies.</span></div>
+<div class="line"><span class="lineno">   29</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">    joint_policies: List of joint policies.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">    state: Openspiel State</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">    player: Current Player</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral">    {action: prob} for `player` in `state` for all joint policies.</span></div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   38</span>  <span class="keywordflow">return</span> [</div>
+<div class="line"><span class="lineno">   39</span>      joint_policy[player].action_probabilities(state, player_id=player)</div>
+<div class="line"><span class="lineno">   40</span>      <span class="keywordflow">for</span> joint_policy <span class="keywordflow">in</span> joint_policies</div>
+<div class="line"><span class="lineno">   41</span>  ]</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d4/d98/policy__aggregator__joint_8py_source.html#l00173">open_spiel.python.algorithms.policy_aggregator_joint.JointPolicyAggregator._rec_aggregate()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d24/namespaceopen__spiel_1_1python_1_1algorithms_1_1policy__aggregator__joint_a6e09b5584e6706d4e2dd6a2db5220ee7_icgraph.png" border="0" usemap="#ad5/d24/namespaceopen__spiel_1_1python_1_1algorithms_1_1policy__aggregator__joint_a6e09b5584e6706d4e2dd6a2db5220ee7_icgraph" alt=""/></div>

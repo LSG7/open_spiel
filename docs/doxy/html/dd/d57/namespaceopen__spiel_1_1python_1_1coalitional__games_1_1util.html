@@ -131,6 +131,27 @@ Args:
 Returns:
   the value max_e s.t. p dot c + e &gt;= V(C) for all subsets C subseteq N.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d0/d5e/util_8py_source.html#l00022">22</a> of file <a class="el" href="../../d0/d5e/util_8py_source.html">util.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>) -&gt; float:</div>
+<div class="line"><span class="lineno">   26</span>  <span class="stringliteral">&quot;&quot;&quot;For a payoff vector p, get max_e s.t. p dot c + e &gt;= V(c).</span></div>
+<div class="line"><span class="lineno">   27</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   28</span><span class="stringliteral">  Warning! Enumerates all coalitions.</span></div>
+<div class="line"><span class="lineno">   29</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">    game: the game to enumerate.</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">    p: the payoff vector.</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">    the value max_e s.t. p dot c + e &gt;= V(C) for all subsets C subseteq N.</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   37</span>  epsilon = 0</div>
+<div class="line"><span class="lineno">   38</span>  <span class="keywordflow">for</span> c <span class="keywordflow">in</span> itertools.product([0, 1], repeat=game.get_num_players()):</div>
+<div class="line"><span class="lineno">   39</span>    coalition = np.asarray(c)</div>
+<div class="line"><span class="lineno">   40</span>    val_c = game.get_coalition_values(coalition)</div>
+<div class="line"><span class="lineno">   41</span>    payoffs_to_coalition = np.inner(p, coalition)</div>
+<div class="line"><span class="lineno">   42</span>    epsilon = max(epsilon, val_c - payoffs_to_coalition)</div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">return</span> epsilon</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

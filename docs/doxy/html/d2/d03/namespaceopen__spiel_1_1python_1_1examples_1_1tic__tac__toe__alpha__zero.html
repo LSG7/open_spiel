@@ -97,14 +97,12 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9fc0617a039ba0df084139b89020cf3f" id="r_a9fc0617a039ba0df084139b89020cf3f"><td class="memItemLeft" align="right" valign="top"><a id="a9fc0617a039ba0df084139b89020cf3f" name="a9fc0617a039ba0df084139b89020cf3f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (unused_argv)</td></tr>
+<tr class="memitem:a9fc0617a039ba0df084139b89020cf3f" id="r_a9fc0617a039ba0df084139b89020cf3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fc0617a039ba0df084139b89020cf3f">main</a> (unused_argv)</td></tr>
 <tr class="separator:a9fc0617a039ba0df084139b89020cf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0ef5d67b01c76942b55b5a648f641f80" id="r_a0ef5d67b01c76942b55b5a648f641f80"><td class="memItemLeft" align="right" valign="top"><a id="a0ef5d67b01c76942b55b5a648f641f80" name="a0ef5d67b01c76942b55b5a648f641f80"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FLAGS</b> = flags.FLAGS</td></tr>
+<tr class="memitem:a0ef5d67b01c76942b55b5a648f641f80" id="r_a0ef5d67b01c76942b55b5a648f641f80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ef5d67b01c76942b55b5a648f641f80">FLAGS</a> = flags.FLAGS</td></tr>
 <tr class="separator:a0ef5d67b01c76942b55b5a648f641f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -113,7 +111,79 @@ Variables</h2></td></tr>
 Take a look at the log-learner.txt in the output directory.
 
 If you want more control, check out `alpha_zero.py`.
-</pre> </div></div><!-- contents -->
+</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a9fc0617a039ba0df084139b89020cf3f" name="a9fc0617a039ba0df084139b89020cf3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc0617a039ba0df084139b89020cf3f">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.tic_tac_toe_alpha_zero.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>unused_argv</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/db7/tic__tac__toe__alpha__zero_8py_source.html#l00032">32</a> of file <a class="el" href="../../d5/db7/tic__tac__toe__alpha__zero_8py_source.html">tic_tac_toe_alpha_zero.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(unused_argv):</div>
+<div class="line"><span class="lineno">   33</span>  config = alpha_zero.Config(</div>
+<div class="line"><span class="lineno">   34</span>      game=<span class="stringliteral">&quot;tic_tac_toe&quot;</span>,</div>
+<div class="line"><span class="lineno">   35</span>      path=FLAGS.path,</div>
+<div class="line"><span class="lineno">   36</span>      learning_rate=0.01,</div>
+<div class="line"><span class="lineno">   37</span>      weight_decay=1e-4,</div>
+<div class="line"><span class="lineno">   38</span>      train_batch_size=128,</div>
+<div class="line"><span class="lineno">   39</span>      replay_buffer_size=2**14,</div>
+<div class="line"><span class="lineno">   40</span>      replay_buffer_reuse=4,</div>
+<div class="line"><span class="lineno">   41</span>      max_steps=25,</div>
+<div class="line"><span class="lineno">   42</span>      checkpoint_freq=25,</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>      actors=4,</div>
+<div class="line"><span class="lineno">   45</span>      evaluators=4,</div>
+<div class="line"><span class="lineno">   46</span>      uct_c=1,</div>
+<div class="line"><span class="lineno">   47</span>      max_simulations=20,</div>
+<div class="line"><span class="lineno">   48</span>      policy_alpha=0.25,</div>
+<div class="line"><span class="lineno">   49</span>      policy_epsilon=1,</div>
+<div class="line"><span class="lineno">   50</span>      temperature=1,</div>
+<div class="line"><span class="lineno">   51</span>      temperature_drop=4,</div>
+<div class="line"><span class="lineno">   52</span>      evaluation_window=50,</div>
+<div class="line"><span class="lineno">   53</span>      eval_levels=7,</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>      nn_model=<span class="stringliteral">&quot;resnet&quot;</span>,</div>
+<div class="line"><span class="lineno">   56</span>      nn_width=128,</div>
+<div class="line"><span class="lineno">   57</span>      nn_depth=2,</div>
+<div class="line"><span class="lineno">   58</span>      observation_shape=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   59</span>      output_size=<span class="keywordtype">None</span>,</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>      quiet=<span class="keyword">True</span>,</div>
+<div class="line"><span class="lineno">   62</span>  )</div>
+<div class="line"><span class="lineno">   63</span>  alpha_zero.alpha_zero(config)</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a0ef5d67b01c76942b55b5a648f641f80" name="a0ef5d67b01c76942b55b5a648f641f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef5d67b01c76942b55b5a648f641f80">&#9670;&#160;</a></span>FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.tic_tac_toe_alpha_zero.FLAGS = flags.FLAGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/db7/tic__tac__toe__alpha__zero_8py_source.html#l00029">29</a> of file <a class="el" href="../../d5/db7/tic__tac__toe__alpha__zero_8py_source.html">tic_tac_toe_alpha_zero.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0

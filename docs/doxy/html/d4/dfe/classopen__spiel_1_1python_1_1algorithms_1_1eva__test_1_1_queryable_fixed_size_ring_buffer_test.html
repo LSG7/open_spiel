@@ -117,18 +117,109 @@ Collaboration diagram for open_spiel.python.algorithms.eva_test.QueryableFixedSi
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a412c87e6fbaf14f3350806ec8d6fbfd0" id="r_a412c87e6fbaf14f3350806ec8d6fbfd0"><td class="memItemLeft" align="right" valign="top"><a id="a412c87e6fbaf14f3350806ec8d6fbfd0" name="a412c87e6fbaf14f3350806ec8d6fbfd0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_replay_buffer_add</b> (self)</td></tr>
+<tr class="memitem:a412c87e6fbaf14f3350806ec8d6fbfd0" id="r_a412c87e6fbaf14f3350806ec8d6fbfd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a412c87e6fbaf14f3350806ec8d6fbfd0">test_replay_buffer_add</a> (self)</td></tr>
 <tr class="separator:a412c87e6fbaf14f3350806ec8d6fbfd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48d17f92077e565f01413e34bc1dd517" id="r_a48d17f92077e565f01413e34bc1dd517"><td class="memItemLeft" align="right" valign="top"><a id="a48d17f92077e565f01413e34bc1dd517" name="a48d17f92077e565f01413e34bc1dd517"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_replay_buffer_max_capacity</b> (self)</td></tr>
+<tr class="memitem:a48d17f92077e565f01413e34bc1dd517" id="r_a48d17f92077e565f01413e34bc1dd517"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48d17f92077e565f01413e34bc1dd517">test_replay_buffer_max_capacity</a> (self)</td></tr>
 <tr class="separator:a48d17f92077e565f01413e34bc1dd517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25bcb3b1777fc410c9ad46dea7028b51" id="r_a25bcb3b1777fc410c9ad46dea7028b51"><td class="memItemLeft" align="right" valign="top"><a id="a25bcb3b1777fc410c9ad46dea7028b51" name="a25bcb3b1777fc410c9ad46dea7028b51"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_replay_buffer_sample</b> (self)</td></tr>
+<tr class="memitem:a25bcb3b1777fc410c9ad46dea7028b51" id="r_a25bcb3b1777fc410c9ad46dea7028b51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25bcb3b1777fc410c9ad46dea7028b51">test_replay_buffer_sample</a> (self)</td></tr>
 <tr class="separator:a25bcb3b1777fc410c9ad46dea7028b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__test_8py_source.html#l00067">67</a> of file <a class="el" href="../../dc/dd7/eva__test_8py_source.html">eva_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a412c87e6fbaf14f3350806ec8d6fbfd0" name="a412c87e6fbaf14f3350806ec8d6fbfd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412c87e6fbaf14f3350806ec8d6fbfd0">&#9670;&#160;</a></span>test_replay_buffer_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.eva_test.QueryableFixedSizeRingBufferTest.test_replay_buffer_add </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__test_8py_source.html#l00069">69</a> of file <a class="el" href="../../dc/dd7/eva__test_8py_source.html">eva_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>  <span class="keyword">def </span>test_replay_buffer_add(self):</div>
+<div class="line"><span class="lineno">   70</span>    replay_buffer = eva.QueryableFixedSizeRingBuffer(replay_buffer_capacity=10)</div>
+<div class="line"><span class="lineno">   71</span>    self.assertEmpty(replay_buffer)</div>
+<div class="line"><span class="lineno">   72</span>    replay_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   73</span>    self.assertLen(replay_buffer, 1)</div>
+<div class="line"><span class="lineno">   74</span>    replay_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   75</span>    self.assertLen(replay_buffer, 2)</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>    self.assertIn(<span class="stringliteral">&quot;entry1&quot;</span>, replay_buffer)</div>
+<div class="line"><span class="lineno">   78</span>    self.assertIn(<span class="stringliteral">&quot;entry2&quot;</span>, replay_buffer)</div>
+<div class="line"><span class="lineno">   79</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a48d17f92077e565f01413e34bc1dd517" name="a48d17f92077e565f01413e34bc1dd517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d17f92077e565f01413e34bc1dd517">&#9670;&#160;</a></span>test_replay_buffer_max_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.eva_test.QueryableFixedSizeRingBufferTest.test_replay_buffer_max_capacity </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__test_8py_source.html#l00080">80</a> of file <a class="el" href="../../dc/dd7/eva__test_8py_source.html">eva_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>  <span class="keyword">def </span>test_replay_buffer_max_capacity(self):</div>
+<div class="line"><span class="lineno">   81</span>    replay_buffer = eva.QueryableFixedSizeRingBuffer(replay_buffer_capacity=2)</div>
+<div class="line"><span class="lineno">   82</span>    replay_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   83</span>    replay_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   84</span>    replay_buffer.add(<span class="stringliteral">&quot;entry3&quot;</span>)</div>
+<div class="line"><span class="lineno">   85</span>    self.assertLen(replay_buffer, 2)</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    self.assertIn(<span class="stringliteral">&quot;entry2&quot;</span>, replay_buffer)</div>
+<div class="line"><span class="lineno">   88</span>    self.assertIn(<span class="stringliteral">&quot;entry3&quot;</span>, replay_buffer)</div>
+<div class="line"><span class="lineno">   89</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a25bcb3b1777fc410c9ad46dea7028b51" name="a25bcb3b1777fc410c9ad46dea7028b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25bcb3b1777fc410c9ad46dea7028b51">&#9670;&#160;</a></span>test_replay_buffer_sample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.eva_test.QueryableFixedSizeRingBufferTest.test_replay_buffer_sample </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__test_8py_source.html#l00090">90</a> of file <a class="el" href="../../dc/dd7/eva__test_8py_source.html">eva_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>  <span class="keyword">def </span>test_replay_buffer_sample(self):</div>
+<div class="line"><span class="lineno">   91</span>    replay_buffer = eva.QueryableFixedSizeRingBuffer(replay_buffer_capacity=3)</div>
+<div class="line"><span class="lineno">   92</span>    replay_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   93</span>    replay_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   94</span>    replay_buffer.add(<span class="stringliteral">&quot;entry3&quot;</span>)</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    samples = replay_buffer.sample(3)</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    self.assertIn(<span class="stringliteral">&quot;entry1&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">   99</span>    self.assertIn(<span class="stringliteral">&quot;entry2&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">  100</span>    self.assertIn(<span class="stringliteral">&quot;entry3&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">  101</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>eva_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../dc/dd7/eva__test_8py_source.html">eva_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

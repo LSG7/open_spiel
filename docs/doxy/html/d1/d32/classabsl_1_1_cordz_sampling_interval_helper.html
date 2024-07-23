@@ -105,10 +105,75 @@ Collaboration diagram for absl::CordzSamplingIntervalHelper:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0b8e4ec2837417fb977645174ed8e599" id="r_a0b8e4ec2837417fb977645174ed8e599"><td class="memItemLeft" align="right" valign="top"><a id="a0b8e4ec2837417fb977645174ed8e599" name="a0b8e4ec2837417fb977645174ed8e599"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CordzSamplingIntervalHelper</b> (int32_t interval)</td></tr>
+<tr class="memitem:a0b8e4ec2837417fb977645174ed8e599" id="r_a0b8e4ec2837417fb977645174ed8e599"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b8e4ec2837417fb977645174ed8e599">CordzSamplingIntervalHelper</a> (int32_t interval)</td></tr>
 <tr class="separator:a0b8e4ec2837417fb977645174ed8e599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/d2f/cordz__test__helpers_8h_source.html#l00103">103</a> of file <a class="el" href="../../d8/d2f/cordz__test__helpers_8h_source.html">cordz_test_helpers.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0b8e4ec2837417fb977645174ed8e599" name="a0b8e4ec2837417fb977645174ed8e599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8e4ec2837417fb977645174ed8e599">&#9670;&#160;</a></span>CordzSamplingIntervalHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::CordzSamplingIntervalHelper::CordzSamplingIntervalHelper </td>
+          <td>(</td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>interval</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2f/cordz__test__helpers_8h_source.html#l00105">105</a> of file <a class="el" href="../../d8/d2f/cordz__test__helpers_8h_source.html">cordz_test_helpers.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>      : orig_mean_interval_(absl::cord_internal::get_cordz_mean_interval()) {</div>
+<div class="line"><span class="lineno">  107</span>    absl::cord_internal::set_cordz_mean_interval(interval);</div>
+<div class="line"><span class="lineno">  108</span>    absl::cord_internal::cordz_set_next_sample_for_testing(interval);</div>
+<div class="line"><span class="lineno">  109</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a679f2ac67e442e9f01faa9ba965372bd" name="a679f2ac67e442e9f01faa9ba965372bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679f2ac67e442e9f01faa9ba965372bd">&#9670;&#160;</a></span>~CordzSamplingIntervalHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::CordzSamplingIntervalHelper::~CordzSamplingIntervalHelper </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d2f/cordz__test__helpers_8h_source.html#l00111">111</a> of file <a class="el" href="../../d8/d2f/cordz__test__helpers_8h_source.html">cordz_test_helpers.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                 {</div>
+<div class="line"><span class="lineno">  112</span>    absl::cord_internal::set_cordz_mean_interval(orig_mean_interval_);</div>
+<div class="line"><span class="lineno">  113</span>    absl::cord_internal::cordz_set_next_sample_for_testing(orig_mean_interval_);</div>
+<div class="line"><span class="lineno">  114</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/strings/<a class="el" href="../../d8/d2f/cordz__test__helpers_8h_source.html">cordz_test_helpers.h</a></li>
 </ul>

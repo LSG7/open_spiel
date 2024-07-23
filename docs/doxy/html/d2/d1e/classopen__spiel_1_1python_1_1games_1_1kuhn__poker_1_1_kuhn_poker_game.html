@@ -117,8 +117,7 @@ Collaboration diagram for open_spiel.python.games.kuhn_poker.KuhnPokerGame:</div
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae6f71d873fdac7bd2fa2c3266ccbfbe2" id="r_ae6f71d873fdac7bd2fa2c3266ccbfbe2"><td class="memItemLeft" align="right" valign="top"><a id="ae6f71d873fdac7bd2fa2c3266ccbfbe2" name="ae6f71d873fdac7bd2fa2c3266ccbfbe2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, params=None)</td></tr>
+<tr class="memitem:ae6f71d873fdac7bd2fa2c3266ccbfbe2" id="r_ae6f71d873fdac7bd2fa2c3266ccbfbe2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6f71d873fdac7bd2fa2c3266ccbfbe2">__init__</a> (self, params=None)</td></tr>
 <tr class="separator:ae6f71d873fdac7bd2fa2c3266ccbfbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78321a7defbb3b2922c77d046dbf1f3d" id="r_a78321a7defbb3b2922c77d046dbf1f3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78321a7defbb3b2922c77d046dbf1f3d">new_initial_state</a> (self)</td></tr>
 <tr class="separator:a78321a7defbb3b2922c77d046dbf1f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,7 +125,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa80527e9fcd735a18cebaee61f213bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A Python version of Kuhn poker.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">A Python version of Kuhn poker.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html#l00069">69</a> of file <a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html">kuhn_poker.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae6f71d873fdac7bd2fa2c3266ccbfbe2" name="ae6f71d873fdac7bd2fa2c3266ccbfbe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f71d873fdac7bd2fa2c3266ccbfbe2">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.games.kuhn_poker.KuhnPokerGame.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html#l00072">72</a> of file <a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html">kuhn_poker.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>  <span class="keyword">def </span>__init__(self, params=None):</div>
+<div class="line"><span class="lineno">   73</span>    super().__init__(_GAME_TYPE, _GAME_INFO, params <span class="keywordflow">or</span> dict())</div>
+<div class="line"><span class="lineno">   74</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa80527e9fcd735a18cebaee61f213bfa" name="aa80527e9fcd735a18cebaee61f213bfa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa80527e9fcd735a18cebaee61f213bfa">&#9670;&#160;</a></span>make_py_observer()</h2>
 
@@ -151,6 +179,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns an object used for observing game state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html#l00079">79</a> of file <a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html">kuhn_poker.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>  <span class="keyword">def </span>make_py_observer(self, iig_obs_type=None, params=None):</div>
+<div class="line"><span class="lineno">   80</span>    <span class="stringliteral">&quot;&quot;&quot;Returns an object used for observing game state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">return</span> KuhnPokerObserver(</div>
+<div class="line"><span class="lineno">   82</span>        iig_obs_type <span class="keywordflow">or</span> pyspiel.IIGObservationType(perfect_recall=<span class="keyword">False</span>),</div>
+<div class="line"><span class="lineno">   83</span>        params)</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a78321a7defbb3b2922c77d046dbf1f3d" name="a78321a7defbb3b2922c77d046dbf1f3d"></a>
@@ -168,10 +205,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns a state corresponding to the start of a game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html#l00075">75</a> of file <a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html">kuhn_poker.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>  <span class="keyword">def </span>new_initial_state(self):</div>
+<div class="line"><span class="lineno">   76</span>    <span class="stringliteral">&quot;&quot;&quot;Returns a state corresponding to the start of a game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> KuhnPokerState(self)</div>
+<div class="line"><span class="lineno">   78</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>kuhn_poker.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../d7/d9f/kuhn__poker_8py_source.html">kuhn_poker.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

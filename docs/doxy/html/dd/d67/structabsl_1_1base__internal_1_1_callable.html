@@ -105,11 +105,50 @@ Collaboration diagram for absl::base_internal::Callable:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad2f3ef5f1d8be5fbec0d13fd177178a3" id="r_ad2f3ef5f1d8be5fbec0d13fd177178a3"><td class="memTemplParams" colspan="2"><a id="ad2f3ef5f1d8be5fbec0d13fd177178a3" name="ad2f3ef5f1d8be5fbec0d13fd177178a3"></a>
-template&lt;typename F , typename... Args&gt; </td></tr>
-<tr class="memitem:ad2f3ef5f1d8be5fbec0d13fd177178a3"><td class="memTemplItemLeft" align="right" valign="top">static decltype(std::declval&lt; F &gt;()(std::declval&lt; Args &gt;()...))&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Invoke</b> (F &amp;&amp;f, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:ad2f3ef5f1d8be5fbec0d13fd177178a3" id="r_ad2f3ef5f1d8be5fbec0d13fd177178a3"><td class="memTemplParams" colspan="2">template&lt;typename F , typename... Args&gt; </td></tr>
+<tr class="memitem:ad2f3ef5f1d8be5fbec0d13fd177178a3"><td class="memTemplItemLeft" align="right" valign="top">static decltype(std::declval&lt; F &gt;()(std::declval&lt; Args &gt;()...))&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad2f3ef5f1d8be5fbec0d13fd177178a3">Invoke</a> (F &amp;&amp;f, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:ad2f3ef5f1d8be5fbec0d13fd177178a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/dc0/invoke_8h_source.html#l00179">179</a> of file <a class="el" href="../../d0/dc0/invoke_8h_source.html">invoke.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad2f3ef5f1d8be5fbec0d13fd177178a3" name="ad2f3ef5f1d8be5fbec0d13fd177178a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2f3ef5f1d8be5fbec0d13fd177178a3">&#9670;&#160;</a></span>Invoke()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static decltype(std::declval&lt; F &gt;()(std::declval&lt; Args &gt;()...)) absl::base_internal::Callable::Invoke </td>
+          <td>(</td>
+          <td class="paramtype">F &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dc0/invoke_8h_source.html#l00183">183</a> of file <a class="el" href="../../d0/dc0/invoke_8h_source.html">invoke.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>                             {</div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">return</span> std::forward&lt;F&gt;(f)(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  186</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/base/internal/<a class="el" href="../../d0/dc0/invoke_8h_source.html">invoke.h</a></li>
 </ul>

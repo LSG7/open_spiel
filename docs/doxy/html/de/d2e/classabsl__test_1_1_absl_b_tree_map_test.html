@@ -117,15 +117,65 @@ Collaboration diagram for absl_test.AbslBTreeMapTest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1b0bcc22a2ee7ae0d6a11427a0718f12" id="r_a1b0bcc22a2ee7ae0d6a11427a0718f12"><td class="memItemLeft" align="right" valign="top"><a id="a1b0bcc22a2ee7ae0d6a11427a0718f12" name="a1b0bcc22a2ee7ae0d6a11427a0718f12"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_return_map</b> (self)</td></tr>
+<tr class="memitem:a1b0bcc22a2ee7ae0d6a11427a0718f12" id="r_a1b0bcc22a2ee7ae0d6a11427a0718f12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b0bcc22a2ee7ae0d6a11427a0718f12">test_return_map</a> (self)</td></tr>
 <tr class="separator:a1b0bcc22a2ee7ae0d6a11427a0718f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cb88a6b1431c6801d0cf84aba5281ce" id="r_a1cb88a6b1431c6801d0cf84aba5281ce"><td class="memItemLeft" align="right" valign="top"><a id="a1cb88a6b1431c6801d0cf84aba5281ce" name="a1cb88a6b1431c6801d0cf84aba5281ce"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_pass_map</b> (self)</td></tr>
+<tr class="memitem:a1cb88a6b1431c6801d0cf84aba5281ce" id="r_a1cb88a6b1431c6801d0cf84aba5281ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cb88a6b1431c6801d0cf84aba5281ce">test_pass_map</a> (self)</td></tr>
 <tr class="separator:a1cb88a6b1431c6801d0cf84aba5281ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/absl__test_8py_source.html#l00401">401</a> of file <a class="el" href="../../d7/d5f/absl__test_8py_source.html">absl_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1cb88a6b1431c6801d0cf84aba5281ce" name="a1cb88a6b1431c6801d0cf84aba5281ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb88a6b1431c6801d0cf84aba5281ce">&#9670;&#160;</a></span>test_pass_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl_test.AbslBTreeMapTest.test_pass_map </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/absl__test_8py_source.html#l00408">408</a> of file <a class="el" href="../../d7/d5f/absl__test_8py_source.html">absl_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  408</span>  <span class="keyword">def </span>test_pass_map(self):</div>
+<div class="line"><span class="lineno">  409</span>    expected = [(10, 20), (30, 40)]</div>
+<div class="line"><span class="lineno">  410</span>    self.assertTrue(absl_example.check_btree_map(dict(expected), expected))</div>
+<div class="line"><span class="lineno">  411</span> </div>
+<div class="line"><span class="lineno">  412</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1b0bcc22a2ee7ae0d6a11427a0718f12" name="a1b0bcc22a2ee7ae0d6a11427a0718f12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0bcc22a2ee7ae0d6a11427a0718f12">&#9670;&#160;</a></span>test_return_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl_test.AbslBTreeMapTest.test_return_map </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d5f/absl__test_8py_source.html#l00403">403</a> of file <a class="el" href="../../d7/d5f/absl__test_8py_source.html">absl_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  403</span>  <span class="keyword">def </span>test_return_map(self):</div>
+<div class="line"><span class="lineno">  404</span>    keys_and_values = [(1, 2), (3, 4), (5, 6)]</div>
+<div class="line"><span class="lineno">  405</span>    expected = dict(keys_and_values)</div>
+<div class="line"><span class="lineno">  406</span>    self.assertEqual(expected, absl_example.make_btree_map(keys_and_values))</div>
+<div class="line"><span class="lineno">  407</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/pybind11_abseil/pybind11_abseil/tests/<b>absl_test.py</b></li>
+<li>open_spiel/pybind11_abseil/pybind11_abseil/tests/<a class="el" href="../../d7/d5f/absl__test_8py_source.html">absl_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

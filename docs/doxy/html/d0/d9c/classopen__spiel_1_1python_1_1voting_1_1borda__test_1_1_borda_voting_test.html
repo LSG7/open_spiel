@@ -117,15 +117,83 @@ Collaboration diagram for open_spiel.python.voting.borda_test.BordaVotingTest:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a14f5ac002b206c67d914f0d49f5dac16" id="r_a14f5ac002b206c67d914f0d49f5dac16"><td class="memItemLeft" align="right" valign="top"><a id="a14f5ac002b206c67d914f0d49f5dac16" name="a14f5ac002b206c67d914f0d49f5dac16"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_borda_setup</b> (self)</td></tr>
+<tr class="memitem:a14f5ac002b206c67d914f0d49f5dac16" id="r_a14f5ac002b206c67d914f0d49f5dac16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14f5ac002b206c67d914f0d49f5dac16">test_borda_setup</a> (self)</td></tr>
 <tr class="separator:a14f5ac002b206c67d914f0d49f5dac16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c220c0d07cd9a7977017e317e0832bd" id="r_a1c220c0d07cd9a7977017e317e0832bd"><td class="memItemLeft" align="right" valign="top"><a id="a1c220c0d07cd9a7977017e317e0832bd" name="a1c220c0d07cd9a7977017e317e0832bd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_borda_basic_run</b> (self, votes, ranking, scores)</td></tr>
+<tr class="memitem:a1c220c0d07cd9a7977017e317e0832bd" id="r_a1c220c0d07cd9a7977017e317e0832bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c220c0d07cd9a7977017e317e0832bd">test_borda_basic_run</a> (self, votes, ranking, scores)</td></tr>
 <tr class="separator:a1c220c0d07cd9a7977017e317e0832bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d8/d40/borda__test_8py_source.html#l00024">24</a> of file <a class="el" href="../../d8/d40/borda__test_8py_source.html">borda_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1c220c0d07cd9a7977017e317e0832bd" name="a1c220c0d07cd9a7977017e317e0832bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c220c0d07cd9a7977017e317e0832bd">&#9670;&#160;</a></span>test_borda_basic_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.voting.borda_test.BordaVotingTest.test_borda_basic_run </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>votes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ranking</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>scores</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d40/borda__test_8py_source.html#l00043">43</a> of file <a class="el" href="../../d8/d40/borda__test_8py_source.html">borda_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>  <span class="keyword">def </span>test_borda_basic_run(self, votes, ranking, scores):</div>
+<div class="line"><span class="lineno">   44</span>    profile = base.PreferenceProfile(votes=votes)</div>
+<div class="line"><span class="lineno">   45</span>    method = borda.BordaVoting()</div>
+<div class="line"><span class="lineno">   46</span>    outcome = method.run_election(profile)</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keyword">with</span> self.subTest(<span class="stringliteral">&quot;ranking correct&quot;</span>):</div>
+<div class="line"><span class="lineno">   48</span>      self.assertListEqual(outcome.ranking, ranking)</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keyword">with</span> self.subTest(<span class="stringliteral">&quot;scores correct&quot;</span>):</div>
+<div class="line"><span class="lineno">   50</span>      self.assertListEqual(outcome.scores, scores)</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a14f5ac002b206c67d914f0d49f5dac16" name="a14f5ac002b206c67d914f0d49f5dac16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f5ac002b206c67d914f0d49f5dac16">&#9670;&#160;</a></span>test_borda_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.voting.borda_test.BordaVotingTest.test_borda_setup </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d40/borda__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../d8/d40/borda__test_8py_source.html">borda_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>  <span class="keyword">def </span>test_borda_setup(self):</div>
+<div class="line"><span class="lineno">   27</span>    method = borda.BordaVoting()</div>
+<div class="line"><span class="lineno">   28</span>    self.assertEqual(method.name(), <span class="stringliteral">&quot;borda&quot;</span>)</div>
+<div class="line"><span class="lineno">   29</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/voting/<b>borda_test.py</b></li>
+<li>open_spiel/python/voting/<a class="el" href="../../d8/d40/borda__test_8py_source.html">borda_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

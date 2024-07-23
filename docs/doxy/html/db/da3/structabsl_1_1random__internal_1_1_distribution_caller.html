@@ -117,26 +117,44 @@ Public Types</h2></td></tr>
 <tr class="memitem:a135cff7379b37ef83807bc1a036f1d41" id="r_a135cff7379b37ef83807bc1a036f1d41"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a135cff7379b37ef83807bc1a036f1d41"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a135cff7379b37ef83807bc1a036f1d41">invoke_mock_t</a></td></tr>
 <tr class="separator:a135cff7379b37ef83807bc1a036f1d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a0993cad49aaae4d2469af7ccb1374" id="r_a96a0993cad49aaae4d2469af7ccb1374"><td class="memItemLeft" align="right" valign="top"><a id="a96a0993cad49aaae4d2469af7ccb1374" name="a96a0993cad49aaae4d2469af7ccb1374"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>HasInvokeMock</b> = typename <a class="el" href="../../dd/d17/structabsl_1_1random__internal_1_1_distribution_caller_1_1detector.html">detector</a>&lt;invoke_mock_t, void, URBG&gt;::type</td></tr>
+<tr class="memitem:a96a0993cad49aaae4d2469af7ccb1374" id="r_a96a0993cad49aaae4d2469af7ccb1374"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a0993cad49aaae4d2469af7ccb1374">HasInvokeMock</a> = typename <a class="el" href="../../dd/d17/structabsl_1_1random__internal_1_1_distribution_caller_1_1detector.html">detector</a>&lt;invoke_mock_t, void, URBG&gt;::type</td></tr>
 <tr class="separator:a96a0993cad49aaae4d2469af7ccb1374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a853fd0c76f93b96e758ce72ce683c9d9" id="r_a853fd0c76f93b96e758ce72ce683c9d9"><td class="memTemplParams" colspan="2"><a id="a853fd0c76f93b96e758ce72ce683c9d9" name="a853fd0c76f93b96e758ce72ce683c9d9"></a>
-template&lt;typename DistrT , typename... Args&gt; </td></tr>
-<tr class="memitem:a853fd0c76f93b96e758ce72ce683c9d9"><td class="memTemplItemLeft" align="right" valign="top">static DistrT::result_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Impl</b> (std::false_type, URBG *urbg, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a853fd0c76f93b96e758ce72ce683c9d9" id="r_a853fd0c76f93b96e758ce72ce683c9d9"><td class="memTemplParams" colspan="2">template&lt;typename DistrT , typename... Args&gt; </td></tr>
+<tr class="memitem:a853fd0c76f93b96e758ce72ce683c9d9"><td class="memTemplItemLeft" align="right" valign="top">static DistrT::result_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a853fd0c76f93b96e758ce72ce683c9d9">Impl</a> (std::false_type, URBG *urbg, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a853fd0c76f93b96e758ce72ce683c9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fce8aa2ae912cee272bb30ba153ad34" id="r_a0fce8aa2ae912cee272bb30ba153ad34"><td class="memTemplParams" colspan="2"><a id="a0fce8aa2ae912cee272bb30ba153ad34" name="a0fce8aa2ae912cee272bb30ba153ad34"></a>
-template&lt;typename DistrT , typename... Args&gt; </td></tr>
-<tr class="memitem:a0fce8aa2ae912cee272bb30ba153ad34"><td class="memTemplItemLeft" align="right" valign="top">static DistrT::result_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Impl</b> (std::true_type, URBG *urbg, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a0fce8aa2ae912cee272bb30ba153ad34" id="r_a0fce8aa2ae912cee272bb30ba153ad34"><td class="memTemplParams" colspan="2">template&lt;typename DistrT , typename... Args&gt; </td></tr>
+<tr class="memitem:a0fce8aa2ae912cee272bb30ba153ad34"><td class="memTemplItemLeft" align="right" valign="top">static DistrT::result_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0fce8aa2ae912cee272bb30ba153ad34">Impl</a> (std::true_type, URBG *urbg, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a0fce8aa2ae912cee272bb30ba153ad34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d53895128cc9953e1c9645526ab0bde" id="r_a0d53895128cc9953e1c9645526ab0bde"><td class="memTemplParams" colspan="2"><a id="a0d53895128cc9953e1c9645526ab0bde" name="a0d53895128cc9953e1c9645526ab0bde"></a>
-template&lt;typename DistrT , typename... Args&gt; </td></tr>
-<tr class="memitem:a0d53895128cc9953e1c9645526ab0bde"><td class="memTemplItemLeft" align="right" valign="top">static DistrT::result_type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Call</b> (URBG *urbg, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:a0d53895128cc9953e1c9645526ab0bde" id="r_a0d53895128cc9953e1c9645526ab0bde"><td class="memTemplParams" colspan="2">template&lt;typename DistrT , typename... Args&gt; </td></tr>
+<tr class="memitem:a0d53895128cc9953e1c9645526ab0bde"><td class="memTemplItemLeft" align="right" valign="top">static DistrT::result_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0d53895128cc9953e1c9645526ab0bde">Call</a> (URBG *urbg, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a0d53895128cc9953e1c9645526ab0bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename&gt;<br />
+struct absl::random_internal::DistributionCaller&lt; typename &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/dcd/mocking__bit__gen_8h_source.html#l00057">57</a> of file <a class="el" href="../../d3/dcd/mocking__bit__gen_8h_source.html">mocking_bit_gen.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a96a0993cad49aaae4d2469af7ccb1374" name="a96a0993cad49aaae4d2469af7ccb1374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a0993cad49aaae4d2469af7ccb1374">&#9670;&#160;</a></span>HasInvokeMock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../db/da3/structabsl_1_1random__internal_1_1_distribution_caller.html">absl::random_internal::DistributionCaller</a>&lt; typename &gt;::HasInvokeMock = typename <a class="el" href="../../dd/d17/structabsl_1_1random__internal_1_1_distribution_caller_1_1detector.html">detector</a>&lt;invoke_mock_t, void, URBG&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d87/distribution__caller_8h_source.html#l00054">54</a> of file <a class="el" href="../../dd/d87/distribution__caller_8h_source.html">distribution_caller.h</a>.</p>
+
+</div>
+</div>
 <a id="a135cff7379b37ef83807bc1a036f1d41" name="a135cff7379b37ef83807bc1a036f1d41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a135cff7379b37ef83807bc1a036f1d41">&#9670;&#160;</a></span>invoke_mock_t</h2>
 
@@ -155,6 +173,146 @@ template&lt;class T &gt; </div>
 <b>Initial value:</b><div class="fragment"><div class="line"> <span class="keyword">decltype</span>(std::declval&lt;T*&gt;()-&gt;InvokeMock(</div>
 <div class="line">      std::declval&lt;::absl::base_internal::FastTypeIdType&gt;(),</div>
 <div class="line">      std::declval&lt;void*&gt;(), std::declval&lt;void*&gt;()))</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dd/d87/distribution__caller_8h_source.html#l00050">50</a> of file <a class="el" href="../../dd/d87/distribution__caller_8h_source.html">distribution_caller.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0d53895128cc9953e1c9645526ab0bde" name="a0d53895128cc9953e1c9645526ab0bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d53895128cc9953e1c9645526ab0bde">&#9670;&#160;</a></span>Call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename &gt; </div>
+<div class="memtemplate">
+template&lt;typename DistrT , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static DistrT::result_type <a class="el" href="../../db/da3/structabsl_1_1random__internal_1_1_distribution_caller.html">absl::random_internal::DistributionCaller</a>&lt; typename &gt;::Call </td>
+          <td>(</td>
+          <td class="paramtype">URBG *</td>          <td class="paramname"><span class="paramname"><em>urbg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d87/distribution__caller_8h_source.html#l00085">85</a> of file <a class="el" href="../../dd/d87/distribution__caller_8h_source.html">distribution_caller.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                                                     {</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">return</span> Impl&lt;DistrT, Args...&gt;(HasInvokeMock{}, urbg,</div>
+<div class="line"><span class="lineno">   87</span>                                 std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   88</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a853fd0c76f93b96e758ce72ce683c9d9" name="a853fd0c76f93b96e758ce72ce683c9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a853fd0c76f93b96e758ce72ce683c9d9">&#9670;&#160;</a></span>Impl() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename &gt; </div>
+<div class="memtemplate">
+template&lt;typename DistrT , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static DistrT::result_type <a class="el" href="../../db/da3/structabsl_1_1random__internal_1_1_distribution_caller.html">absl::random_internal::DistributionCaller</a>&lt; typename &gt;::Impl </td>
+          <td>(</td>
+          <td class="paramtype">std::false_type</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">URBG *</td>          <td class="paramname"><span class="paramname"><em>urbg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d87/distribution__caller_8h_source.html#l00058">58</a> of file <a class="el" href="../../dd/d87/distribution__caller_8h_source.html">distribution_caller.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                           {</div>
+<div class="line"><span class="lineno">   60</span>    DistrT dist(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> dist(*urbg);</div>
+<div class="line"><span class="lineno">   62</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0fce8aa2ae912cee272bb30ba153ad34" name="a0fce8aa2ae912cee272bb30ba153ad34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fce8aa2ae912cee272bb30ba153ad34">&#9670;&#160;</a></span>Impl() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename &gt; </div>
+<div class="memtemplate">
+template&lt;typename DistrT , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static DistrT::result_type <a class="el" href="../../db/da3/structabsl_1_1random__internal_1_1_distribution_caller.html">absl::random_internal::DistributionCaller</a>&lt; typename &gt;::Impl </td>
+          <td>(</td>
+          <td class="paramtype">std::true_type</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">URBG *</td>          <td class="paramname"><span class="paramname"><em>urbg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d87/distribution__caller_8h_source.html#l00067">67</a> of file <a class="el" href="../../dd/d87/distribution__caller_8h_source.html">distribution_caller.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                           {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keyword">using </span>ResultT = <span class="keyword">typename</span> DistrT::result_type;</div>
+<div class="line"><span class="lineno">   70</span>    <span class="keyword">using </span>ArgTupleT = std::tuple&lt;absl::decay_t&lt;Args&gt;...&gt;;</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keyword">using </span>KeyT = ResultT(DistrT, ArgTupleT);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    ArgTupleT arg_tuple(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   74</span>    ResultT result;</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (!urbg-&gt;InvokeMock(::absl::base_internal::FastTypeId&lt;KeyT&gt;(), &amp;arg_tuple,</div>
+<div class="line"><span class="lineno">   76</span>                          &amp;result)) {</div>
+<div class="line"><span class="lineno">   77</span>      <span class="keyword">auto</span> dist = absl::make_from_tuple&lt;DistrT&gt;(arg_tuple);</div>
+<div class="line"><span class="lineno">   78</span>      result = dist(*urbg);</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   81</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>

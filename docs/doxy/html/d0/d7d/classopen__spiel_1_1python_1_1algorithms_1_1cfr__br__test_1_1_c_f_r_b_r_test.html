@@ -121,18 +121,145 @@ Collaboration diagram for open_spiel.python.algorithms.cfr_br_test.CFRBRTest:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a25ecc507fa165e4811513fffec4816db" id="r_a25ecc507fa165e4811513fffec4816db"><td class="memItemLeft" align="right" valign="top"><a id="a25ecc507fa165e4811513fffec4816db" name="a25ecc507fa165e4811513fffec4816db"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_policy_zero_is_uniform</b> (self, linear_averaging, regret_matching_plus)</td></tr>
+<tr class="memitem:a25ecc507fa165e4811513fffec4816db" id="r_a25ecc507fa165e4811513fffec4816db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25ecc507fa165e4811513fffec4816db">test_policy_zero_is_uniform</a> (self, linear_averaging, regret_matching_plus)</td></tr>
 <tr class="separator:a25ecc507fa165e4811513fffec4816db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50d5f2c2a095f9338685d96fcd2ddcf6" id="r_a50d5f2c2a095f9338685d96fcd2ddcf6"><td class="memItemLeft" align="right" valign="top"><a id="a50d5f2c2a095f9338685d96fcd2ddcf6" name="a50d5f2c2a095f9338685d96fcd2ddcf6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_policy_and_average_policy</b> (self)</td></tr>
+<tr class="memitem:a50d5f2c2a095f9338685d96fcd2ddcf6" id="r_a50d5f2c2a095f9338685d96fcd2ddcf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50d5f2c2a095f9338685d96fcd2ddcf6">test_policy_and_average_policy</a> (self)</td></tr>
 <tr class="separator:a50d5f2c2a095f9338685d96fcd2ddcf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a176d0546f7fb7450239e05cc1b2ad462" id="r_a176d0546f7fb7450239e05cc1b2ad462"><td class="memItemLeft" align="right" valign="top"><a id="a176d0546f7fb7450239e05cc1b2ad462" name="a176d0546f7fb7450239e05cc1b2ad462"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_cpp_and_python_cfr_br</b> (self, game, solver_cls, expected_exploitability)</td></tr>
+<tr class="memitem:a176d0546f7fb7450239e05cc1b2ad462" id="r_a176d0546f7fb7450239e05cc1b2ad462"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a176d0546f7fb7450239e05cc1b2ad462">test_cpp_and_python_cfr_br</a> (self, game, solver_cls, expected_exploitability)</td></tr>
 <tr class="separator:a176d0546f7fb7450239e05cc1b2ad462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d2/d61/cfr__br__test_8py_source.html#l00044">44</a> of file <a class="el" href="../../d2/d61/cfr__br__test_8py_source.html">cfr_br_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a176d0546f7fb7450239e05cc1b2ad462" name="a176d0546f7fb7450239e05cc1b2ad462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a176d0546f7fb7450239e05cc1b2ad462">&#9670;&#160;</a></span>test_cpp_and_python_cfr_br()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.cfr_br_test.CFRBRTest.test_cpp_and_python_cfr_br </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>solver_cls</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expected_exploitability</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d61/cfr__br__test_8py_source.html#l00083">83</a> of file <a class="el" href="../../d2/d61/cfr__br__test_8py_source.html">cfr_br_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                 expected_exploitability):</div>
+<div class="line"><span class="lineno">   85</span>    solver = solver_cls(game)</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">for</span> step <span class="keywordflow">in</span> range(5):</div>
+<div class="line"><span class="lineno">   87</span>      solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>      <span class="comment"># We do not compare the policy directly as we do not have an easy way to</span></div>
+<div class="line"><span class="lineno">   90</span>      <span class="comment"># convert one to the other, so we use the exploitability as a proxy.</span></div>
+<div class="line"><span class="lineno">   91</span>      avg_policy = solver.average_policy()</div>
+<div class="line"><span class="lineno">   92</span>      <span class="keywordflow">if</span> solver_cls == pyspiel.CFRBRSolver:</div>
+<div class="line"><span class="lineno">   93</span>        exploitability_ = pyspiel.nash_conv(game, avg_policy)</div>
+<div class="line"><span class="lineno">   94</span>      <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   95</span>        exploitability_ = exploitability.nash_conv(game, avg_policy)</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>      self.assertAlmostEqual(</div>
+<div class="line"><span class="lineno">   98</span>          expected_exploitability[step], exploitability_, places=10</div>
+<div class="line"><span class="lineno">   99</span>      )</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a50d5f2c2a095f9338685d96fcd2ddcf6" name="a50d5f2c2a095f9338685d96fcd2ddcf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d5f2c2a095f9338685d96fcd2ddcf6">&#9670;&#160;</a></span>test_policy_and_average_policy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.cfr_br_test.CFRBRTest.test_policy_and_average_policy </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d61/cfr__br__test_8py_source.html#l00062">62</a> of file <a class="el" href="../../d2/d61/cfr__br__test_8py_source.html">cfr_br_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>  <span class="keyword">def </span>test_policy_and_average_policy(self):</div>
+<div class="line"><span class="lineno">   63</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;kuhn_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   64</span>    cfrbr_solver = cfr_br.CFRBRSolver(game)</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(300):</div>
+<div class="line"><span class="lineno">   66</span>      cfrbr_solver.evaluate_and_update_policy()</div>
+<div class="line"><span class="lineno">   67</span>    average_policy = cfrbr_solver.average_policy()</div>
+<div class="line"><span class="lineno">   68</span>    average_policy_values = expected_game_score.policy_value(</div>
+<div class="line"><span class="lineno">   69</span>        game.new_initial_state(), [average_policy] * 2)</div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment"># 1/18 is the Nash value. See https://en.wikipedia.org/wiki/Kuhn_poker</span></div>
+<div class="line"><span class="lineno">   71</span>    np.testing.assert_allclose(</div>
+<div class="line"><span class="lineno">   72</span>        average_policy_values, [-1 / 18, 1 / 18], atol=1e-3)</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    cfrbr_solver.current_policy()</div>
+<div class="line"><span class="lineno">   75</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a25ecc507fa165e4811513fffec4816db" name="a25ecc507fa165e4811513fffec4816db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ecc507fa165e4811513fffec4816db">&#9670;&#160;</a></span>test_policy_zero_is_uniform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.cfr_br_test.CFRBRTest.test_policy_zero_is_uniform </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>linear_averaging</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>regret_matching_plus</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d61/cfr__br__test_8py_source.html#l00048">48</a> of file <a class="el" href="../../d2/d61/cfr__br__test_8py_source.html">cfr_br_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>  <span class="keyword">def </span>test_policy_zero_is_uniform(self, linear_averaging, regret_matching_plus):</div>
+<div class="line"><span class="lineno">   49</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;leduc_poker&quot;</span>)</div>
+<div class="line"><span class="lineno">   50</span>    cfr_solver = cfr_br.CFRBRSolver(</div>
+<div class="line"><span class="lineno">   51</span>        game,</div>
+<div class="line"><span class="lineno">   52</span>        regret_matching_plus=regret_matching_plus,</div>
+<div class="line"><span class="lineno">   53</span>        linear_averaging=linear_averaging)</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    np.testing.assert_array_equal(</div>
+<div class="line"><span class="lineno">   56</span>        _LEDUC_UNIFORM_POLICY.action_probability_array,</div>
+<div class="line"><span class="lineno">   57</span>        cfr_solver.current_policy().action_probability_array)</div>
+<div class="line"><span class="lineno">   58</span>    np.testing.assert_array_equal(</div>
+<div class="line"><span class="lineno">   59</span>        _LEDUC_UNIFORM_POLICY.action_probability_array,</div>
+<div class="line"><span class="lineno">   60</span>        cfr_solver.average_policy().action_probability_array)</div>
+<div class="line"><span class="lineno">   61</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>cfr_br_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d2/d61/cfr__br__test_8py_source.html">cfr_br_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

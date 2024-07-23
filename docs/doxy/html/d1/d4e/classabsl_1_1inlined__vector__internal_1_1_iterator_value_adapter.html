@@ -105,16 +105,119 @@ Collaboration diagram for absl::inlined_vector_internal::IteratorValueAdapter&lt
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aadc7c18a779b4e562bb1109fd2c84616" id="r_aadc7c18a779b4e562bb1109fd2c84616"><td class="memItemLeft" align="right" valign="top"><a id="aadc7c18a779b4e562bb1109fd2c84616" name="aadc7c18a779b4e562bb1109fd2c84616"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>IteratorValueAdapter</b> (const Iterator &amp;it)</td></tr>
+<tr class="memitem:aadc7c18a779b4e562bb1109fd2c84616" id="r_aadc7c18a779b4e562bb1109fd2c84616"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadc7c18a779b4e562bb1109fd2c84616">IteratorValueAdapter</a> (const Iterator &amp;it)</td></tr>
 <tr class="separator:aadc7c18a779b4e562bb1109fd2c84616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e7aad95ccda6b5085a5ccbbbfaf3a0e" id="r_a3e7aad95ccda6b5085a5ccbbbfaf3a0e"><td class="memItemLeft" align="right" valign="top"><a id="a3e7aad95ccda6b5085a5ccbbbfaf3a0e" name="a3e7aad95ccda6b5085a5ccbbbfaf3a0e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ConstructNext</b> (A &amp;allocator, Pointer&lt; A &gt; construct_at)</td></tr>
+<tr class="memitem:a3e7aad95ccda6b5085a5ccbbbfaf3a0e" id="r_a3e7aad95ccda6b5085a5ccbbbfaf3a0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e7aad95ccda6b5085a5ccbbbfaf3a0e">ConstructNext</a> (A &amp;allocator, Pointer&lt; A &gt; construct_at)</td></tr>
 <tr class="separator:a3e7aad95ccda6b5085a5ccbbbfaf3a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadcb9a29b7c144baac25777341423ca3" id="r_aadcb9a29b7c144baac25777341423ca3"><td class="memItemLeft" align="right" valign="top"><a id="aadcb9a29b7c144baac25777341423ca3" name="aadcb9a29b7c144baac25777341423ca3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AssignNext</b> (Pointer&lt; A &gt; assign_at)</td></tr>
+<tr class="memitem:aadcb9a29b7c144baac25777341423ca3" id="r_aadcb9a29b7c144baac25777341423ca3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadcb9a29b7c144baac25777341423ca3">AssignNext</a> (Pointer&lt; A &gt; assign_at)</td></tr>
 <tr class="separator:aadcb9a29b7c144baac25777341423ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename A, typename Iterator&gt;<br />
+class absl::inlined_vector_internal::IteratorValueAdapter&lt; A, Iterator &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00176">176</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aadc7c18a779b4e562bb1109fd2c84616" name="aadc7c18a779b4e562bb1109fd2c84616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc7c18a779b4e562bb1109fd2c84616">&#9670;&#160;</a></span>IteratorValueAdapter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A , typename Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d4e/classabsl_1_1inlined__vector__internal_1_1_iterator_value_adapter.html">absl::inlined_vector_internal::IteratorValueAdapter</a>&lt; A, Iterator &gt;::IteratorValueAdapter </td>
+          <td>(</td>
+          <td class="paramtype">const Iterator &amp;</td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00178">178</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>: it_(it) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aadcb9a29b7c144baac25777341423ca3" name="aadcb9a29b7c144baac25777341423ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadcb9a29b7c144baac25777341423ca3">&#9670;&#160;</a></span>AssignNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A , typename Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d1/d4e/classabsl_1_1inlined__vector__internal_1_1_iterator_value_adapter.html">absl::inlined_vector_internal::IteratorValueAdapter</a>&lt; A, Iterator &gt;::AssignNext </td>
+          <td>(</td>
+          <td class="paramtype">Pointer&lt; A &gt;</td>          <td class="paramname"><span class="paramname"><em>assign_at</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00185">185</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>                                        {</div>
+<div class="line"><span class="lineno">  186</span>    *assign_at = *it_;</div>
+<div class="line"><span class="lineno">  187</span>    ++it_;</div>
+<div class="line"><span class="lineno">  188</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3e7aad95ccda6b5085a5ccbbbfaf3a0e" name="a3e7aad95ccda6b5085a5ccbbbfaf3a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7aad95ccda6b5085a5ccbbbfaf3a0e">&#9670;&#160;</a></span>ConstructNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename A , typename Iterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d1/d4e/classabsl_1_1inlined__vector__internal_1_1_iterator_value_adapter.html">absl::inlined_vector_internal::IteratorValueAdapter</a>&lt; A, Iterator &gt;::ConstructNext </td>
+          <td>(</td>
+          <td class="paramtype">A &amp;</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Pointer&lt; A &gt;</td>          <td class="paramname"><span class="paramname"><em>construct_at</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html#l00180">180</a> of file <a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  180</span>                                                            {</div>
+<div class="line"><span class="lineno">  181</span>    AllocatorTraits&lt;A&gt;::construct(allocator, construct_at, *it_);</div>
+<div class="line"><span class="lineno">  182</span>    ++it_;</div>
+<div class="line"><span class="lineno">  183</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../de/d1d/internal_2inlined__vector_8h_source.html">inlined_vector.h</a></li>
 </ul>

@@ -106,32 +106,232 @@ Collaboration diagram for absl::hash_internal::HashStateBase&lt; H &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a91c20fb13e8cae52636a15ce5a488e4a" id="r_a91c20fb13e8cae52636a15ce5a488e4a"><td class="memItemLeft" align="right" valign="top"><a id="a91c20fb13e8cae52636a15ce5a488e4a" name="a91c20fb13e8cae52636a15ce5a488e4a"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>AbslInternalPiecewiseCombiner</b> = <a class="el" href="../../d5/d76/classabsl_1_1hash__internal_1_1_piecewise_combiner.html">PiecewiseCombiner</a></td></tr>
+<tr class="memitem:a91c20fb13e8cae52636a15ce5a488e4a" id="r_a91c20fb13e8cae52636a15ce5a488e4a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91c20fb13e8cae52636a15ce5a488e4a">AbslInternalPiecewiseCombiner</a> = <a class="el" href="../../d5/d76/classabsl_1_1hash__internal_1_1_piecewise_combiner.html">PiecewiseCombiner</a></td></tr>
 <tr class="separator:a91c20fb13e8cae52636a15ce5a488e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a292e54e716b19aa7a9acb40f0630f14a" id="r_a292e54e716b19aa7a9acb40f0630f14a"><td class="memTemplParams" colspan="2"><a id="a292e54e716b19aa7a9acb40f0630f14a" name="a292e54e716b19aa7a9acb40f0630f14a"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a292e54e716b19aa7a9acb40f0630f14a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><b>is_hashable</b> = <a class="el" href="../../da/d74/structabsl_1_1hash__internal_1_1is__hashable.html">absl::hash_internal::is_hashable</a>&lt;T&gt;</td></tr>
+<tr class="memitem:a292e54e716b19aa7a9acb40f0630f14a" id="r_a292e54e716b19aa7a9acb40f0630f14a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a292e54e716b19aa7a9acb40f0630f14a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a292e54e716b19aa7a9acb40f0630f14a">is_hashable</a> = <a class="el" href="../../da/d74/structabsl_1_1hash__internal_1_1is__hashable.html">absl::hash_internal::is_hashable</a>&lt;T&gt;</td></tr>
 <tr class="separator:a292e54e716b19aa7a9acb40f0630f14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0b3cf44f5207cabce3a51c1c379b97a6" id="r_a0b3cf44f5207cabce3a51c1c379b97a6"><td class="memTemplParams" colspan="2"><a id="a0b3cf44f5207cabce3a51c1c379b97a6" name="a0b3cf44f5207cabce3a51c1c379b97a6"></a>
-template&lt;typename T , typename... Ts&gt; </td></tr>
-<tr class="memitem:a0b3cf44f5207cabce3a51c1c379b97a6"><td class="memTemplItemLeft" align="right" valign="top">static H&#160;</td><td class="memTemplItemRight" valign="bottom"><b>combine</b> (H state, const T &amp;value, const Ts &amp;... values)</td></tr>
+<tr class="memitem:a0b3cf44f5207cabce3a51c1c379b97a6" id="r_a0b3cf44f5207cabce3a51c1c379b97a6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Ts&gt; </td></tr>
+<tr class="memitem:a0b3cf44f5207cabce3a51c1c379b97a6"><td class="memTemplItemLeft" align="right" valign="top">static H&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0b3cf44f5207cabce3a51c1c379b97a6">combine</a> (H state, const T &amp;value, const Ts &amp;... values)</td></tr>
 <tr class="separator:a0b3cf44f5207cabce3a51c1c379b97a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad854e6618dbcdc8369ddc4f49ac8d7e8" id="r_ad854e6618dbcdc8369ddc4f49ac8d7e8"><td class="memItemLeft" align="right" valign="top"><a id="ad854e6618dbcdc8369ddc4f49ac8d7e8" name="ad854e6618dbcdc8369ddc4f49ac8d7e8"></a>
-static H&#160;</td><td class="memItemRight" valign="bottom"><b>combine</b> (H state)</td></tr>
+<tr class="memitem:ad854e6618dbcdc8369ddc4f49ac8d7e8" id="r_ad854e6618dbcdc8369ddc4f49ac8d7e8"><td class="memItemLeft" align="right" valign="top">static H&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad854e6618dbcdc8369ddc4f49ac8d7e8">combine</a> (H state)</td></tr>
 <tr class="separator:ad854e6618dbcdc8369ddc4f49ac8d7e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c55fa4ea9b503f5790f801f77b6a1ff" id="r_a1c55fa4ea9b503f5790f801f77b6a1ff"><td class="memTemplParams" colspan="2"><a id="a1c55fa4ea9b503f5790f801f77b6a1ff" name="a1c55fa4ea9b503f5790f801f77b6a1ff"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1c55fa4ea9b503f5790f801f77b6a1ff"><td class="memTemplItemLeft" align="right" valign="top">static H&#160;</td><td class="memTemplItemRight" valign="bottom"><b>combine_contiguous</b> (H state, const T *data, size_t size)</td></tr>
+<tr class="memitem:a1c55fa4ea9b503f5790f801f77b6a1ff" id="r_a1c55fa4ea9b503f5790f801f77b6a1ff"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1c55fa4ea9b503f5790f801f77b6a1ff"><td class="memTemplItemLeft" align="right" valign="top">static H&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1c55fa4ea9b503f5790f801f77b6a1ff">combine_contiguous</a> (H state, const T *data, size_t size)</td></tr>
 <tr class="separator:a1c55fa4ea9b503f5790f801f77b6a1ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae96a5851c835a9f53e52ab1f59c5945" id="r_aae96a5851c835a9f53e52ab1f59c5945"><td class="memTemplParams" colspan="2"><a id="aae96a5851c835a9f53e52ab1f59c5945" name="aae96a5851c835a9f53e52ab1f59c5945"></a>
-template&lt;typename I &gt; </td></tr>
-<tr class="memitem:aae96a5851c835a9f53e52ab1f59c5945"><td class="memTemplItemLeft" align="right" valign="top">static H&#160;</td><td class="memTemplItemRight" valign="bottom"><b>combine_unordered</b> (H state, I begin, I end)</td></tr>
+<tr class="memitem:aae96a5851c835a9f53e52ab1f59c5945" id="r_aae96a5851c835a9f53e52ab1f59c5945"><td class="memTemplParams" colspan="2">template&lt;typename I &gt; </td></tr>
+<tr class="memitem:aae96a5851c835a9f53e52ab1f59c5945"><td class="memTemplItemLeft" align="right" valign="top">static H&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aae96a5851c835a9f53e52ab1f59c5945">combine_unordered</a> (H state, I begin, I end)</td></tr>
 <tr class="separator:aae96a5851c835a9f53e52ab1f59c5945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename H&gt;<br />
+class absl::hash_internal::HashStateBase&lt; H &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00199">199</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a91c20fb13e8cae52636a15ce5a488e4a" name="a91c20fb13e8cae52636a15ce5a488e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c20fb13e8cae52636a15ce5a488e4a">&#9670;&#160;</a></span>AbslInternalPiecewiseCombiner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d3/d33/classabsl_1_1hash__internal_1_1_hash_state_base.html">absl::hash_internal::HashStateBase</a>&lt; H &gt;::AbslInternalPiecewiseCombiner = <a class="el" href="../../d5/d76/classabsl_1_1hash__internal_1_1_piecewise_combiner.html">PiecewiseCombiner</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00240">240</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+
+</div>
+</div>
+<a id="a292e54e716b19aa7a9acb40f0630f14a" name="a292e54e716b19aa7a9acb40f0630f14a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292e54e716b19aa7a9acb40f0630f14a">&#9670;&#160;</a></span>is_hashable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d3/d33/classabsl_1_1hash__internal_1_1_hash_state_base.html">absl::hash_internal::HashStateBase</a>&lt; H &gt;::is_hashable = <a class="el" href="../../da/d74/structabsl_1_1hash__internal_1_1is__hashable.html">absl::hash_internal::is_hashable</a>&lt;T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00243">243</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad854e6618dbcdc8369ddc4f49ac8d7e8" name="ad854e6618dbcdc8369ddc4f49ac8d7e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad854e6618dbcdc8369ddc4f49ac8d7e8">&#9670;&#160;</a></span>combine() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static H <a class="el" href="../../d3/d33/classabsl_1_1hash__internal_1_1_hash_state_base.html">absl::hash_internal::HashStateBase</a>&lt; H &gt;::combine </td>
+          <td>(</td>
+          <td class="paramtype">H</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00220">220</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  220</span>{ <span class="keywordflow">return</span> state; }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0b3cf44f5207cabce3a51c1c379b97a6" name="a0b3cf44f5207cabce3a51c1c379b97a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3cf44f5207cabce3a51c1c379b97a6">&#9670;&#160;</a></span>combine() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+<div class="memtemplate">
+template&lt;typename T , typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">H <a class="el" href="../../d3/d33/classabsl_1_1hash__internal_1_1_hash_state_base.html">absl::hash_internal::HashStateBase</a>&lt; H &gt;::combine </td>
+          <td>(</td>
+          <td class="paramtype">H</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Ts &amp;...</td>          <td class="paramname"><span class="paramname"><em>values</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l01240">1240</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1240</span>                                                                        {</div>
+<div class="line"><span class="lineno"> 1241</span>  <span class="keywordflow">return</span> H::combine(hash_internal::HashSelect::template Apply&lt;T&gt;::Invoke(</div>
+<div class="line"><span class="lineno"> 1242</span>                        std::move(state), value),</div>
+<div class="line"><span class="lineno"> 1243</span>                    values...);</div>
+<div class="line"><span class="lineno"> 1244</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1c55fa4ea9b503f5790f801f77b6a1ff" name="a1c55fa4ea9b503f5790f801f77b6a1ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c55fa4ea9b503f5790f801f77b6a1ff">&#9670;&#160;</a></span>combine_contiguous()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">H <a class="el" href="../../d3/d33/classabsl_1_1hash__internal_1_1_hash_state_base.html">absl::hash_internal::HashStateBase</a>&lt; H &gt;::combine_contiguous </td>
+          <td>(</td>
+          <td class="paramtype">H</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l01249">1249</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1249</span>                                                                          {</div>
+<div class="line"><span class="lineno"> 1250</span>  <span class="keywordflow">return</span> hash_internal::hash_range_or_bytes(std::move(state), data, size);</div>
+<div class="line"><span class="lineno"> 1251</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aae96a5851c835a9f53e52ab1f59c5945" name="aae96a5851c835a9f53e52ab1f59c5945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae96a5851c835a9f53e52ab1f59c5945">&#9670;&#160;</a></span>combine_unordered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+<div class="memtemplate">
+template&lt;typename I &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">H <a class="el" href="../../d3/d33/classabsl_1_1hash__internal_1_1_hash_state_base.html">absl::hash_internal::HashStateBase</a>&lt; H &gt;::combine_unordered </td>
+          <td>(</td>
+          <td class="paramtype">H</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">I</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">I</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l01256">1256</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1256</span>                                                             {</div>
+<div class="line"><span class="lineno"> 1257</span>  <span class="keywordflow">return</span> H::RunCombineUnordered(std::move(state),</div>
+<div class="line"><span class="lineno"> 1258</span>                                CombineUnorderedCallback&lt;I&gt;{begin, end});</div>
+<div class="line"><span class="lineno"> 1259</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/hash/internal/<a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a></li>
 </ul>

@@ -105,15 +105,85 @@ Collaboration diagram for absl::ABSL_NAMESPACE_BEGIN::LiteralPolicy:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa631fac9dd4b9b21ef37a79051d7766f" id="r_aa631fac9dd4b9b21ef37a79051d7766f"><td class="memItemLeft" align="right" valign="top"><a id="aa631fac9dd4b9b21ef37a79051d7766f" name="aa631fac9dd4b9b21ef37a79051d7766f"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Find</b> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> text, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> delimiter, size_t <a class="el" href="../../db/d98/structpos.html">pos</a>)</td></tr>
+<tr class="memitem:aa631fac9dd4b9b21ef37a79051d7766f" id="r_aa631fac9dd4b9b21ef37a79051d7766f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa631fac9dd4b9b21ef37a79051d7766f">Find</a> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> text, <a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> delimiter, size_t <a class="el" href="../../db/d98/structpos.html">pos</a>)</td></tr>
 <tr class="separator:aa631fac9dd4b9b21ef37a79051d7766f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4de7841a1fcaf370b1422a887ad8d0e" id="r_ab4de7841a1fcaf370b1422a887ad8d0e"><td class="memItemLeft" align="right" valign="top"><a id="ab4de7841a1fcaf370b1422a887ad8d0e" name="ab4de7841a1fcaf370b1422a887ad8d0e"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Length</b> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> delimiter)</td></tr>
+<tr class="memitem:ab4de7841a1fcaf370b1422a887ad8d0e" id="r_ab4de7841a1fcaf370b1422a887ad8d0e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4de7841a1fcaf370b1422a887ad8d0e">Length</a> (<a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a> delimiter)</td></tr>
 <tr class="separator:ab4de7841a1fcaf370b1422a887ad8d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d3/d58/str__split_8cc_source.html#l00062">62</a> of file <a class="el" href="../../d3/d58/str__split_8cc_source.html">str_split.cc</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa631fac9dd4b9b21ef37a79051d7766f" name="aa631fac9dd4b9b21ef37a79051d7766f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa631fac9dd4b9b21ef37a79051d7766f">&#9670;&#160;</a></span>Find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t absl::ABSL_NAMESPACE_BEGIN::LiteralPolicy::Find </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>delimiter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d58/str__split_8cc_source.html#l00063">63</a> of file <a class="el" href="../../d3/d58/str__split_8cc_source.html">str_split.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                                                                           {</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">return</span> text.find(delimiter, <a class="code hl_struct" href="../../db/d98/structpos.html">pos</a>);</div>
+<div class="line"><span class="lineno">   65</span>  }</div>
+<div class="ttc" id="astructpos_html"><div class="ttname"><a href="../../db/d98/structpos.html">pos</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d5f/dds_8h_source.html#l00101">dds.h:102</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab4de7841a1fcaf370b1422a887ad8d0e" name="ab4de7841a1fcaf370b1422a887ad8d0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4de7841a1fcaf370b1422a887ad8d0e">&#9670;&#160;</a></span>Length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t absl::ABSL_NAMESPACE_BEGIN::LiteralPolicy::Length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d64/classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>delimiter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d58/str__split_8cc_source.html#l00066">66</a> of file <a class="el" href="../../d3/d58/str__split_8cc_source.html">str_split.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>{ <span class="keywordflow">return</span> delimiter.length(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/strings/<b>str_split.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/strings/<a class="el" href="../../d3/d58/str__split_8cc_source.html">str_split.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

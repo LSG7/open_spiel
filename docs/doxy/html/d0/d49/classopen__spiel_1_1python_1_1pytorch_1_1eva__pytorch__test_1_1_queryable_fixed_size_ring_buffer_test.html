@@ -117,18 +117,109 @@ Collaboration diagram for open_spiel.python.pytorch.eva_pytorch_test.QueryableFi
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a56774060360c0f6e36a256130e4c92dd" id="r_a56774060360c0f6e36a256130e4c92dd"><td class="memItemLeft" align="right" valign="top"><a id="a56774060360c0f6e36a256130e4c92dd" name="a56774060360c0f6e36a256130e4c92dd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_replay_buffer_add</b> (self)</td></tr>
+<tr class="memitem:a56774060360c0f6e36a256130e4c92dd" id="r_a56774060360c0f6e36a256130e4c92dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56774060360c0f6e36a256130e4c92dd">test_replay_buffer_add</a> (self)</td></tr>
 <tr class="separator:a56774060360c0f6e36a256130e4c92dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1b51fefab9abec726a0432a9292ce03" id="r_af1b51fefab9abec726a0432a9292ce03"><td class="memItemLeft" align="right" valign="top"><a id="af1b51fefab9abec726a0432a9292ce03" name="af1b51fefab9abec726a0432a9292ce03"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_replay_buffer_max_capacity</b> (self)</td></tr>
+<tr class="memitem:af1b51fefab9abec726a0432a9292ce03" id="r_af1b51fefab9abec726a0432a9292ce03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1b51fefab9abec726a0432a9292ce03">test_replay_buffer_max_capacity</a> (self)</td></tr>
 <tr class="separator:af1b51fefab9abec726a0432a9292ce03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aba18e77c8523c001ca7f322675beee" id="r_a9aba18e77c8523c001ca7f322675beee"><td class="memItemLeft" align="right" valign="top"><a id="a9aba18e77c8523c001ca7f322675beee" name="a9aba18e77c8523c001ca7f322675beee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_replay_buffer_sample</b> (self)</td></tr>
+<tr class="memitem:a9aba18e77c8523c001ca7f322675beee" id="r_a9aba18e77c8523c001ca7f322675beee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9aba18e77c8523c001ca7f322675beee">test_replay_buffer_sample</a> (self)</td></tr>
 <tr class="separator:a9aba18e77c8523c001ca7f322675beee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html#l00065">65</a> of file <a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html">eva_pytorch_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a56774060360c0f6e36a256130e4c92dd" name="a56774060360c0f6e36a256130e4c92dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56774060360c0f6e36a256130e4c92dd">&#9670;&#160;</a></span>test_replay_buffer_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.eva_pytorch_test.QueryableFixedSizeRingBufferTest.test_replay_buffer_add </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html#l00067">67</a> of file <a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html">eva_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>  <span class="keyword">def </span>test_replay_buffer_add(self):</div>
+<div class="line"><span class="lineno">   68</span>    replay_buffer = eva.QueryableFixedSizeRingBuffer(replay_buffer_capacity=10)</div>
+<div class="line"><span class="lineno">   69</span>    self.assertEmpty(replay_buffer)</div>
+<div class="line"><span class="lineno">   70</span>    replay_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   71</span>    self.assertLen(replay_buffer, 1)</div>
+<div class="line"><span class="lineno">   72</span>    replay_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   73</span>    self.assertLen(replay_buffer, 2)</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>    self.assertIn(<span class="stringliteral">&quot;entry1&quot;</span>, replay_buffer)</div>
+<div class="line"><span class="lineno">   76</span>    self.assertIn(<span class="stringliteral">&quot;entry2&quot;</span>, replay_buffer)</div>
+<div class="line"><span class="lineno">   77</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1b51fefab9abec726a0432a9292ce03" name="af1b51fefab9abec726a0432a9292ce03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b51fefab9abec726a0432a9292ce03">&#9670;&#160;</a></span>test_replay_buffer_max_capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.eva_pytorch_test.QueryableFixedSizeRingBufferTest.test_replay_buffer_max_capacity </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html#l00078">78</a> of file <a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html">eva_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>  <span class="keyword">def </span>test_replay_buffer_max_capacity(self):</div>
+<div class="line"><span class="lineno">   79</span>    replay_buffer = eva.QueryableFixedSizeRingBuffer(replay_buffer_capacity=2)</div>
+<div class="line"><span class="lineno">   80</span>    replay_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   81</span>    replay_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   82</span>    replay_buffer.add(<span class="stringliteral">&quot;entry3&quot;</span>)</div>
+<div class="line"><span class="lineno">   83</span>    self.assertLen(replay_buffer, 2)</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    self.assertIn(<span class="stringliteral">&quot;entry2&quot;</span>, replay_buffer)</div>
+<div class="line"><span class="lineno">   86</span>    self.assertIn(<span class="stringliteral">&quot;entry3&quot;</span>, replay_buffer)</div>
+<div class="line"><span class="lineno">   87</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9aba18e77c8523c001ca7f322675beee" name="a9aba18e77c8523c001ca7f322675beee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aba18e77c8523c001ca7f322675beee">&#9670;&#160;</a></span>test_replay_buffer_sample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.pytorch.eva_pytorch_test.QueryableFixedSizeRingBufferTest.test_replay_buffer_sample </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html#l00088">88</a> of file <a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html">eva_pytorch_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>  <span class="keyword">def </span>test_replay_buffer_sample(self):</div>
+<div class="line"><span class="lineno">   89</span>    replay_buffer = eva.QueryableFixedSizeRingBuffer(replay_buffer_capacity=3)</div>
+<div class="line"><span class="lineno">   90</span>    replay_buffer.add(<span class="stringliteral">&quot;entry1&quot;</span>)</div>
+<div class="line"><span class="lineno">   91</span>    replay_buffer.add(<span class="stringliteral">&quot;entry2&quot;</span>)</div>
+<div class="line"><span class="lineno">   92</span>    replay_buffer.add(<span class="stringliteral">&quot;entry3&quot;</span>)</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    samples = replay_buffer.sample(3)</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    self.assertIn(<span class="stringliteral">&quot;entry1&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">   97</span>    self.assertIn(<span class="stringliteral">&quot;entry2&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">   98</span>    self.assertIn(<span class="stringliteral">&quot;entry3&quot;</span>, samples)</div>
+<div class="line"><span class="lineno">   99</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/pytorch/<b>eva_pytorch_test.py</b></li>
+<li>open_spiel/python/pytorch/<a class="el" href="../../dc/dd7/eva__pytorch__test_8py_source.html">eva_pytorch_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

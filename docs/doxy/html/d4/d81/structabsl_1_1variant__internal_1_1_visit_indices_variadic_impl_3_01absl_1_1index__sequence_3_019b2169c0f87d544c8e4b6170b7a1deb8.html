@@ -111,11 +111,56 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a10f80be5c779cbf28633aa8ae1a9ac10" id="r_a10f80be5c779cbf28633aa8ae1a9ac10"><td class="memTemplParams" colspan="2"><a id="a10f80be5c779cbf28633aa8ae1a9ac10" name="a10f80be5c779cbf28633aa8ae1a9ac10"></a>
-template&lt;class Op , class... SizeType&gt; </td></tr>
-<tr class="memitem:a10f80be5c779cbf28633aa8ae1a9ac10"><td class="memTemplItemLeft" align="right" valign="top">static VisitIndicesResultT&lt; Op, decltype(EndIndices)... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Run</b> (Op &amp;&amp;op, SizeType... i)</td></tr>
+<tr class="memitem:a10f80be5c779cbf28633aa8ae1a9ac10" id="r_a10f80be5c779cbf28633aa8ae1a9ac10"><td class="memTemplParams" colspan="2">template&lt;class Op , class... SizeType&gt; </td></tr>
+<tr class="memitem:a10f80be5c779cbf28633aa8ae1a9ac10"><td class="memTemplItemLeft" align="right" valign="top">static VisitIndicesResultT&lt; Op, decltype(EndIndices)... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a10f80be5c779cbf28633aa8ae1a9ac10">Run</a> (Op &amp;&amp;op, SizeType... i)</td></tr>
 <tr class="separator:a10f80be5c779cbf28633aa8ae1a9ac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;std::size_t... N, std::size_t... EndIndices&gt;<br />
+struct absl::variant_internal::VisitIndicesVariadicImpl&lt; absl::index_sequence&lt; N... &gt;, EndIndices... &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00482">482</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a10f80be5c779cbf28633aa8ae1a9ac10" name="a10f80be5c779cbf28633aa8ae1a9ac10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f80be5c779cbf28633aa8ae1a9ac10">&#9670;&#160;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t... N, std::size_t... EndIndices&gt; </div>
+<div class="memtemplate">
+template&lt;class Op , class... SizeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static VisitIndicesResultT&lt; Op, decltype(EndIndices)... &gt; <a class="el" href="../../d5/d34/structabsl_1_1variant__internal_1_1_visit_indices_variadic_impl.html">absl::variant_internal::VisitIndicesVariadicImpl</a>&lt; <a class="el" href="../../d1/dd9/structabsl_1_1integer__sequence.html">absl::index_sequence</a>&lt; N... &gt;, EndIndices... &gt;::Run </td>
+          <td>(</td>
+          <td class="paramtype">Op &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>op</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeType...</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00501">501</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  502</span>                                                                             {</div>
+<div class="line"><span class="lineno">  503</span>    <span class="keywordflow">return</span> VisitIndicesSwitch&lt;NumCasesOfSwitch&lt;EndIndices...&gt;::value&gt;::Run(</div>
+<div class="line"><span class="lineno">  504</span>        FlattenedOp&lt;Op&gt;{absl::forward&lt;Op&gt;(op)},</div>
+<div class="line"><span class="lineno">  505</span>        FlattenIndices&lt;(EndIndices + std::size_t{1})...&gt;::Run(</div>
+<div class="line"><span class="lineno">  506</span>            (i + std::size_t{1})...));</div>
+<div class="line"><span class="lineno">  507</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a></li>
 </ul>

@@ -117,15 +117,70 @@ Collaboration diagram for xinxin_bot_test.ISMCTSBotTest:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a024a1dadd90b02ee55e43e9bb10d4ffc" id="r_a024a1dadd90b02ee55e43e9bb10d4ffc"><td class="memItemLeft" align="right" valign="top"><a id="a024a1dadd90b02ee55e43e9bb10d4ffc" name="a024a1dadd90b02ee55e43e9bb10d4ffc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>xinxin_play_game</b> (self, game)</td></tr>
+<tr class="memitem:a024a1dadd90b02ee55e43e9bb10d4ffc" id="r_a024a1dadd90b02ee55e43e9bb10d4ffc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a024a1dadd90b02ee55e43e9bb10d4ffc">xinxin_play_game</a> (self, game)</td></tr>
 <tr class="separator:a024a1dadd90b02ee55e43e9bb10d4ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce0e46452808878bc20e5e334d3cde7" id="r_abce0e46452808878bc20e5e334d3cde7"><td class="memItemLeft" align="right" valign="top"><a id="abce0e46452808878bc20e5e334d3cde7" name="abce0e46452808878bc20e5e334d3cde7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_basic_xinxin_selfplay</b> (self)</td></tr>
+<tr class="memitem:abce0e46452808878bc20e5e334d3cde7" id="r_abce0e46452808878bc20e5e334d3cde7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abce0e46452808878bc20e5e334d3cde7">test_basic_xinxin_selfplay</a> (self)</td></tr>
 <tr class="separator:abce0e46452808878bc20e5e334d3cde7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d9/da4/xinxin__bot__test_8py_source.html#l00026">26</a> of file <a class="el" href="../../d9/da4/xinxin__bot__test_8py_source.html">xinxin_bot_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abce0e46452808878bc20e5e334d3cde7" name="abce0e46452808878bc20e5e334d3cde7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce0e46452808878bc20e5e334d3cde7">&#9670;&#160;</a></span>test_basic_xinxin_selfplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xinxin_bot_test.ISMCTSBotTest.test_basic_xinxin_selfplay </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/da4/xinxin__bot__test_8py_source.html#l00034">34</a> of file <a class="el" href="../../d9/da4/xinxin__bot__test_8py_source.html">xinxin_bot_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>  <span class="keyword">def </span>test_basic_xinxin_selfplay(self):</div>
+<div class="line"><span class="lineno">   35</span>    game = pyspiel.load_game(<span class="stringliteral">&quot;hearts&quot;</span>)</div>
+<div class="line"><span class="lineno">   36</span>    self.xinxin_play_game(game)</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a024a1dadd90b02ee55e43e9bb10d4ffc" name="a024a1dadd90b02ee55e43e9bb10d4ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024a1dadd90b02ee55e43e9bb10d4ffc">&#9670;&#160;</a></span>xinxin_play_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xinxin_bot_test.ISMCTSBotTest.xinxin_play_game </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/da4/xinxin__bot__test_8py_source.html#l00028">28</a> of file <a class="el" href="../../d9/da4/xinxin__bot__test_8py_source.html">xinxin_bot_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>  <span class="keyword">def </span>xinxin_play_game(self, game):</div>
+<div class="line"><span class="lineno">   29</span>    bots = []</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(4):</div>
+<div class="line"><span class="lineno">   31</span>      bots.append(pyspiel.make_xinxin_bot(game.get_parameters()))</div>
+<div class="line"><span class="lineno">   32</span>    evaluate_bots.evaluate_bots(game.new_initial_state(), bots, np.random)</div>
+<div class="line"><span class="lineno">   33</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/bots/xinxin/<b>xinxin_bot_test.py</b></li>
+<li>open_spiel/bots/xinxin/<a class="el" href="../../d9/da4/xinxin__bot__test_8py_source.html">xinxin_bot_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

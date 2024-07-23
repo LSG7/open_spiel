@@ -128,7 +128,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0d9c621d04601e922d6b30bbb58b8c07" id="r_a0d9c621d04601e922d6b30bbb58b8c07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d9c621d04601e922d6b30bbb58b8c07">simp_to_euc</a> (a, b, center)</td></tr>
 <tr class="separator:a0d9c621d04601e922d6b30bbb58b8c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dc/d3a/small__test_8py_source.html#l00027">27</a> of file <a class="el" href="../../dc/d3a/small__test_8py_source.html">small_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0d9c621d04601e922d6b30bbb58b8c07" name="a0d9c621d04601e922d6b30bbb58b8c07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d9c621d04601e922d6b30bbb58b8c07">&#9670;&#160;</a></span>simp_to_euc()</h2>
 
@@ -171,7 +174,29 @@ Static Public Member Functions</h2></td></tr>
     b: vertical deviation from center
     center: center of ref frame given in [x, y, z] Euclidean coordinates
   Returns:
-    1-d np.array of len 3, i.e., np.array([x, y, z])</pre> <div class="dynheader">
+    1-d np.array of len 3, i.e., np.array([x, y, z])</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/d3a/small__test_8py_source.html#l00053">53</a> of file <a class="el" href="../../dc/d3a/small__test_8py_source.html">small_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>  <span class="keyword">def </span>simp_to_euc(a, b, center):</div>
+<div class="line"><span class="lineno">   54</span>    <span class="stringliteral">r&quot;&quot;&quot;Transforms a point [a, b] on the simplex to Euclidean space.</span></div>
+<div class="line"><span class="lineno">   55</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   56</span><span class="stringliteral">      /\   ^ b</span></div>
+<div class="line"><span class="lineno">   57</span><span class="stringliteral">     /  \  |</span></div>
+<div class="line"><span class="lineno">   58</span><span class="stringliteral">    /____\ --&gt; a</span></div>
+<div class="line"><span class="lineno">   59</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral">    Args:</span></div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">      a: horizonal deviation from center</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">      b: vertical deviation from center</span></div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">      center: center of ref frame given in [x, y, z] Euclidean coordinates</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral">    Returns:</span></div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">      1-d np.array of len 3, i.e., np.array([x, y, z])</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   67</span>    transform = np.array([[.5, -.5, 0], [-.5, -.5, 1], [1, 1, 1]]).T</div>
+<div class="line"><span class="lineno">   68</span>    transform /= np.linalg.norm(transform, axis=0)</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span> transform.dot(np.array([a, b, 0])) + center</div>
+<div class="line"><span class="lineno">   70</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../dc/d3a/small__test_8py_source.html#l00080">open_spiel.python.algorithms.adidas_utils.games.small_test.SmallTest.test_spiral_game()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d47/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small__test_1_1_small_test_a0d9c621d04601e922d6b30bbb58b8c07_icgraph.png" border="0" usemap="#ade/d47/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small__test_1_1_small_test_a0d9c621d04601e922d6b30bbb58b8c07_icgraph" alt=""/></div>
@@ -218,6 +243,31 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Test best responses to sampled opp. actions in BiasedGame are biased.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/d3a/small__test_8py_source.html#l00029">29</a> of file <a class="el" href="../../dc/d3a/small__test_8py_source.html">small_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>  <span class="keyword">def </span>test_biased_game(self, trials=100, atol=1e-5, rtol=1e-5, seed=1234):</div>
+<div class="line"><span class="lineno">   30</span>    <span class="stringliteral">&quot;&quot;&quot;Test best responses to sampled opp. actions in BiasedGame are biased.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   31</span>    game = small.BiasedGame(seed)</div>
+<div class="line"><span class="lineno">   32</span>    random = np.random.RandomState(seed)</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    successes = []</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(trials):</div>
+<div class="line"><span class="lineno">   36</span>      dirichlet_alpha = np.ones(game.num_strategies()[0])</div>
+<div class="line"><span class="lineno">   37</span>      dist = random.dirichlet(dirichlet_alpha)  <span class="comment"># mixed srategy</span></div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>      sample_best_responses = np.argmax(game.payoff_tensor()[0], axis=0)</div>
+<div class="line"><span class="lineno">   40</span>      estimated_best_response = np.dot(sample_best_responses, dist)</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>      true_best_response = game.best_response(dist)</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>      successes += [<span class="keywordflow">not</span> np.allclose(estimated_best_response, true_best_response,</div>
+<div class="line"><span class="lineno">   45</span>                                    rtol, atol)]</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    perc = 100 * np.mean(successes)</div>
+<div class="line"><span class="lineno">   48</span>    logging.info(<span class="stringliteral">&#39;bias rate out of %d is %f&#39;</span>, trials, perc)</div>
+<div class="line"><span class="lineno">   49</span>    self.assertGreaterEqual(</div>
+<div class="line"><span class="lineno">   50</span>        perc, 99., <span class="stringliteral">&#39;best responses should be biased more often&#39;</span>)</div>
+<div class="line"><span class="lineno">   51</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa101458bf7015b08b47d4288e8fffe8e" name="aa101458bf7015b08b47d4288e8fffe8e"></a>
@@ -273,7 +323,38 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Test that gradients on simplex rotate around SpiralGame's center.</pre> <div class="dynheader">
+<pre class="fragment">Test that gradients on simplex rotate around SpiralGame's center.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/d3a/small__test_8py_source.html#l00079">79</a> of file <a class="el" href="../../dc/d3a/small__test_8py_source.html">small_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                       trials=100, eps=0.1, seed=1234):</div>
+<div class="line"><span class="lineno">   81</span>    <span class="stringliteral">&quot;&quot;&quot;Test that gradients on simplex rotate around SpiralGame&#39;s center.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   82</span>    random = np.random.RandomState(seed)</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    successes = []</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(trials):</div>
+<div class="line"><span class="lineno">   86</span>      dx, dy = eps * (random.rand(2) * 2 - 1)</div>
+<div class="line"><span class="lineno">   87</span>      center = self.simp_to_euc(dx, dy, np.ones(3) / 3.)</div>
+<div class="line"><span class="lineno">   88</span>      game = small.SpiralGame(center, seed)</div>
+<div class="line"><span class="lineno">   89</span>      pt = game.payoff_tensor()[0]</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>      point_1 = self.simp_to_euc(dx_1, dy_1, game.center)</div>
+<div class="line"><span class="lineno">   92</span>      point_2 = self.simp_to_euc(dx_2, dy_2, game.center)</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>      grad_1 = simplex.project_grad(pt.dot(point_1))</div>
+<div class="line"><span class="lineno">   95</span>      grad_2 = simplex.project_grad(pt.dot(point_2))</div>
+<div class="line"><span class="lineno">   96</span>      norm = np.linalg.norm(grad_1) * np.linalg.norm(grad_2)</div>
+<div class="line"><span class="lineno">   97</span>      cos_sim = grad_1.dot(grad_2) / norm</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>      successes += [(np.abs(cos_sim - expected_cos_sim) &lt; 1e-5)]</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    perc = 100 * np.mean(successes)</div>
+<div class="line"><span class="lineno">  102</span>    logging.info(<span class="stringliteral">&#39;alignment success rate out of %d is %f&#39;</span>, trials, perc)</div>
+<div class="line"><span class="lineno">  103</span>    self.assertGreaterEqual(</div>
+<div class="line"><span class="lineno">  104</span>        perc, 99., <span class="stringliteral">&#39;gradient field should exhibit cycles&#39;</span>)</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dc/d3a/small__test_8py_source.html#l00053">open_spiel.python.algorithms.adidas_utils.games.small_test.SmallTest.simp_to_euc()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d47/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small__test_1_1_small_test_aa101458bf7015b08b47d4288e8fffe8e_cgraph.png" border="0" usemap="#ade/d47/classopen__spiel_1_1python_1_1algorithms_1_1adidas__utils_1_1games_1_1small__test_1_1_small_test_aa101458bf7015b08b47d4288e8fffe8e_cgraph" alt=""/></div>
@@ -287,7 +368,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/adidas_utils/games/<b>small_test.py</b></li>
+<li>open_spiel/python/algorithms/adidas_utils/games/<a class="el" href="../../dc/d3a/small__test_8py_source.html">small_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

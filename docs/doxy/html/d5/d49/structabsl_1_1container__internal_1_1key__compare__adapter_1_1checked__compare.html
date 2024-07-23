@@ -121,28 +121,188 @@ Collaboration diagram for absl::container_internal::key_compare_adapter&lt; Comp
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a856a8a5cd32c909425e9979e08888137" id="r_a856a8a5cd32c909425e9979e08888137"><td class="memItemLeft" align="right" valign="top"><a id="a856a8a5cd32c909425e9979e08888137" name="a856a8a5cd32c909425e9979e08888137"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>checked_compare</b> (Compare comp)</td></tr>
+<tr class="memitem:a856a8a5cd32c909425e9979e08888137" id="r_a856a8a5cd32c909425e9979e08888137"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a856a8a5cd32c909425e9979e08888137">checked_compare</a> (Compare comp)</td></tr>
 <tr class="separator:a856a8a5cd32c909425e9979e08888137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ed4858e722bea527428b7a3aba12c8b" id="r_a8ed4858e722bea527428b7a3aba12c8b"><td class="memItemLeft" align="right" valign="top"><a id="a8ed4858e722bea527428b7a3aba12c8b" name="a8ed4858e722bea527428b7a3aba12c8b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator Compare</b> () const</td></tr>
+<tr class="memitem:a8ed4858e722bea527428b7a3aba12c8b" id="r_a8ed4858e722bea527428b7a3aba12c8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ed4858e722bea527428b7a3aba12c8b">operator Compare</a> () const</td></tr>
 <tr class="separator:a8ed4858e722bea527428b7a3aba12c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4866980272aeb23431d874ef76e59318" id="r_a4866980272aeb23431d874ef76e59318"><td class="memTemplParams" colspan="2"><a id="a4866980272aeb23431d874ef76e59318" name="a4866980272aeb23431d874ef76e59318"></a>
-template&lt;typename T , typename U , absl::enable_if_t&lt; std::is_same&lt; bool, compare_result_t&lt; Compare, T, U &gt; &gt;::value, int &gt;  = 0&gt; </td></tr>
-<tr class="memitem:a4866980272aeb23431d874ef76e59318"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const T &amp;lhs, const U &amp;rhs) const</td></tr>
+<tr class="memitem:a4866980272aeb23431d874ef76e59318" id="r_a4866980272aeb23431d874ef76e59318"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , absl::enable_if_t&lt; std::is_same&lt; bool, compare_result_t&lt; Compare, T, U &gt; &gt;::value, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a4866980272aeb23431d874ef76e59318"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4866980272aeb23431d874ef76e59318">operator()</a> (const T &amp;lhs, const U &amp;rhs) const</td></tr>
 <tr class="separator:a4866980272aeb23431d874ef76e59318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cc2fad7a99a268788711694c885d36c" id="r_a8cc2fad7a99a268788711694c885d36c"><td class="memTemplParams" colspan="2"><a id="a8cc2fad7a99a268788711694c885d36c" name="a8cc2fad7a99a268788711694c885d36c"></a>
-template&lt;typename T , typename U , absl::enable_if_t&lt; std::is_convertible&lt; compare_result_t&lt; Compare, T, U &gt;, <a class="el" href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a> &gt;::value, int &gt;  = 0&gt; </td></tr>
-<tr class="memitem:a8cc2fad7a99a268788711694c885d36c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const T &amp;lhs, const U &amp;rhs) const</td></tr>
+<tr class="memitem:a8cc2fad7a99a268788711694c885d36c" id="r_a8cc2fad7a99a268788711694c885d36c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , absl::enable_if_t&lt; std::is_convertible&lt; compare_result_t&lt; Compare, T, U &gt;, <a class="el" href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a> &gt;::value, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a8cc2fad7a99a268788711694c885d36c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8cc2fad7a99a268788711694c885d36c">operator()</a> (const T &amp;lhs, const U &amp;rhs) const</td></tr>
 <tr class="separator:a8cc2fad7a99a268788711694c885d36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structabsl_1_1container__internal_1_1checked__compare__base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_structabsl_1_1container__internal_1_1checked__compare__base')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../db/d71/structabsl_1_1container__internal_1_1checked__compare__base.html">absl::container_internal::checked_compare_base&lt; Compare, is_class &gt;</a></td></tr>
-<tr class="memitem:a9eabdf8e1cf5b681c332a5b0c86857a4 inherit pub_methods_structabsl_1_1container__internal_1_1checked__compare__base" id="r_a9eabdf8e1cf5b681c332a5b0c86857a4"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>checked_compare_base</b> (Compare c)</td></tr>
+<tr class="memitem:a9eabdf8e1cf5b681c332a5b0c86857a4 inherit pub_methods_structabsl_1_1container__internal_1_1checked__compare__base" id="r_a9eabdf8e1cf5b681c332a5b0c86857a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/structabsl_1_1container__internal_1_1checked__compare__base.html#a9eabdf8e1cf5b681c332a5b0c86857a4">checked_compare_base</a> (Compare c)</td></tr>
 <tr class="separator:a9eabdf8e1cf5b681c332a5b0c86857a4 inherit pub_methods_structabsl_1_1container__internal_1_1checked__compare__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30fbd695f7f208bc07d04a0332ee656f inherit pub_methods_structabsl_1_1container__internal_1_1checked__compare__base" id="r_a30fbd695f7f208bc07d04a0332ee656f"><td class="memItemLeft" align="right" valign="top">
-const Compare &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>comp</b> () const</td></tr>
+<tr class="memitem:a30fbd695f7f208bc07d04a0332ee656f inherit pub_methods_structabsl_1_1container__internal_1_1checked__compare__base" id="r_a30fbd695f7f208bc07d04a0332ee656f"><td class="memItemLeft" align="right" valign="top">const Compare &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d71/structabsl_1_1container__internal_1_1checked__compare__base.html#a30fbd695f7f208bc07d04a0332ee656f">comp</a> () const</td></tr>
 <tr class="separator:a30fbd695f7f208bc07d04a0332ee656f inherit pub_methods_structabsl_1_1container__internal_1_1checked__compare__base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Compare, typename Key&gt;<br />
+struct absl::container_internal::key_compare_adapter&lt; Compare, Key &gt;::checked_compare</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00199">199</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a856a8a5cd32c909425e9979e08888137" name="a856a8a5cd32c909425e9979e08888137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a856a8a5cd32c909425e9979e08888137">&#9670;&#160;</a></span>checked_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Compare , typename Key &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d7c/structabsl_1_1container__internal_1_1key__compare__adapter.html">absl::container_internal::key_compare_adapter</a>&lt; Compare, Key &gt;::checked_compare::checked_compare </td>
+          <td>(</td>
+          <td class="paramtype">Compare</td>          <td class="paramname"><span class="paramname"><em>comp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00220">220</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  220</span>: Base(std::move(comp)) {}  <span class="comment">// NOLINT</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8ed4858e722bea527428b7a3aba12c8b" name="a8ed4858e722bea527428b7a3aba12c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ed4858e722bea527428b7a3aba12c8b">&#9670;&#160;</a></span>operator Compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Compare , typename Key &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d7c/structabsl_1_1container__internal_1_1key__compare__adapter.html">absl::container_internal::key_compare_adapter</a>&lt; Compare, Key &gt;::checked_compare::operator Compare </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00223">223</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  223</span>{ <span class="keywordflow">return</span> comp(); }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4866980272aeb23431d874ef76e59318" name="a4866980272aeb23431d874ef76e59318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4866980272aeb23431d874ef76e59318">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Compare , typename Key &gt; </div>
+<div class="memtemplate">
+template&lt;typename T , typename U , absl::enable_if_t&lt; std::is_same&lt; bool, compare_result_t&lt; Compare, T, U &gt; &gt;::value, int &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d4/d7c/structabsl_1_1container__internal_1_1key__compare__adapter.html">absl::container_internal::key_compare_adapter</a>&lt; Compare, Key &gt;::checked_compare::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00229">229</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>                                                      {</div>
+<div class="line"><span class="lineno">  230</span>      <span class="comment">// NOTE: if any of these assertions fail, then the comparator does not</span></div>
+<div class="line"><span class="lineno">  231</span>      <span class="comment">// establish a strict-weak-ordering (see</span></div>
+<div class="line"><span class="lineno">  232</span>      <span class="comment">// https://en.cppreference.com/w/cpp/named_req/Compare).</span></div>
+<div class="line"><span class="lineno">  233</span>      assert(is_self_equivalent(lhs));</div>
+<div class="line"><span class="lineno">  234</span>      assert(is_self_equivalent(rhs));</div>
+<div class="line"><span class="lineno">  235</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> lhs_comp_rhs = comp()(lhs, rhs);</div>
+<div class="line"><span class="lineno">  236</span>      assert(!lhs_comp_rhs || !comp()(rhs, lhs));</div>
+<div class="line"><span class="lineno">  237</span>      <span class="keywordflow">return</span> lhs_comp_rhs;</div>
+<div class="line"><span class="lineno">  238</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8cc2fad7a99a268788711694c885d36c" name="a8cc2fad7a99a268788711694c885d36c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc2fad7a99a268788711694c885d36c">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Compare , typename Key &gt; </div>
+<div class="memtemplate">
+template&lt;typename T , typename U , absl::enable_if_t&lt; std::is_convertible&lt; compare_result_t&lt; Compare, T, U &gt;, <a class="el" href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a> &gt;::value, int &gt;  = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a> <a class="el" href="../../d4/d7c/structabsl_1_1container__internal_1_1key__compare__adapter.html">absl::container_internal::key_compare_adapter</a>&lt; Compare, Key &gt;::checked_compare::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d13/btree_8h_source.html#l00245">245</a> of file <a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  245</span>                                                                   {</div>
+<div class="line"><span class="lineno">  246</span>      <span class="comment">// NOTE: if any of these assertions fail, then the comparator does not</span></div>
+<div class="line"><span class="lineno">  247</span>      <span class="comment">// establish a strict-weak-ordering (see</span></div>
+<div class="line"><span class="lineno">  248</span>      <span class="comment">// https://en.cppreference.com/w/cpp/named_req/Compare).</span></div>
+<div class="line"><span class="lineno">  249</span>      assert(is_self_equivalent(lhs));</div>
+<div class="line"><span class="lineno">  250</span>      assert(is_self_equivalent(rhs));</div>
+<div class="line"><span class="lineno">  251</span>      <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a> lhs_comp_rhs = comp()(lhs, rhs);</div>
+<div class="line"><span class="lineno">  252</span><span class="preprocessor">#ifndef NDEBUG</span></div>
+<div class="line"><span class="lineno">  253</span>      <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a> rhs_comp_lhs = comp()(rhs, lhs);</div>
+<div class="line"><span class="lineno">  254</span>      <span class="keywordflow">if</span> (lhs_comp_rhs &gt; 0) {</div>
+<div class="line"><span class="lineno">  255</span>        assert(rhs_comp_lhs &lt; 0 &amp;&amp; &quot;lhs_comp_rhs &gt; 0 -&gt; rhs_comp_lhs &lt; 0<span class="stringliteral">&quot;);</span></div>
+<div class="line"><span class="lineno">  256</span><span class="stringliteral">      } else if (lhs_comp_rhs == 0) {</span></div>
+<div class="line"><span class="lineno">  257</span><span class="stringliteral">        assert(rhs_comp_lhs == 0 &amp;&amp; &quot;</span>lhs_comp_rhs == 0 -&gt; rhs_comp_lhs == 0<span class="stringliteral">&quot;);</span></div>
+<div class="line"><span class="lineno">  258</span><span class="stringliteral">      } else {</span></div>
+<div class="line"><span class="lineno">  259</span><span class="stringliteral">        assert(rhs_comp_lhs &gt; 0 &amp;&amp; &quot;</span>lhs_comp_rhs &lt; 0 -&gt; rhs_comp_lhs &gt; 0<span class="stringliteral">&quot;);</span></div>
+<div class="line"><span class="lineno">  260</span><span class="stringliteral">      }</span></div>
+<div class="line"><span class="lineno">  261</span><span class="stringliteral">#endif</span></div>
+<div class="line"><span class="lineno">  262</span><span class="stringliteral">      return lhs_comp_rhs;</span></div>
+<div class="line"><span class="lineno">  263</span><span class="stringliteral">    }</span></div>
+<div class="ttc" id="aclassabsl_1_1weak__ordering_html"><div class="ttname"><a href="../../dd/d42/classabsl_1_1weak__ordering.html">absl::weak_ordering</a></div><div class="ttdef"><b>Definition</b> <a href="../../d1/dcc/abseil-cpp_2absl_2types_2compare_8h_source.html#l00347">compare.h:348</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../d9/d13/btree_8h_source.html">btree.h</a></li>
 </ul>

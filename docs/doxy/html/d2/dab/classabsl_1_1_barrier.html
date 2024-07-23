@@ -105,8 +105,7 @@ Collaboration diagram for absl::Barrier:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6db7c1d2657239ab9fb7f126e3fe1239" id="r_a6db7c1d2657239ab9fb7f126e3fe1239"><td class="memItemLeft" align="right" valign="top"><a id="a6db7c1d2657239ab9fb7f126e3fe1239" name="a6db7c1d2657239ab9fb7f126e3fe1239"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Barrier</b> (int num_threads)</td></tr>
+<tr class="memitem:a6db7c1d2657239ab9fb7f126e3fe1239" id="r_a6db7c1d2657239ab9fb7f126e3fe1239"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6db7c1d2657239ab9fb7f126e3fe1239">Barrier</a> (int num_threads)</td></tr>
 <tr class="separator:a6db7c1d2657239ab9fb7f126e3fe1239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a787583797d5b23154adf78581e8c9c0d" id="r_a787583797d5b23154adf78581e8c9c0d"><td class="memItemLeft" align="right" valign="top"><a id="a787583797d5b23154adf78581e8c9c0d" name="a787583797d5b23154adf78581e8c9c0d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Barrier</b> (const <a class="el" href="../../d2/dab/classabsl_1_1_barrier.html">Barrier</a> &amp;)=delete</td></tr>
@@ -114,13 +113,86 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24060e7f4327a742c4fb5d0903368715" id="r_a24060e7f4327a742c4fb5d0903368715"><td class="memItemLeft" align="right" valign="top"><a id="a24060e7f4327a742c4fb5d0903368715" name="a24060e7f4327a742c4fb5d0903368715"></a>
 <a class="el" href="../../d2/dab/classabsl_1_1_barrier.html">Barrier</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d2/dab/classabsl_1_1_barrier.html">Barrier</a> &amp;)=delete</td></tr>
 <tr class="separator:a24060e7f4327a742c4fb5d0903368715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a028c40cca1a6ccbf82764a1dbadfabdf" id="r_a028c40cca1a6ccbf82764a1dbadfabdf"><td class="memItemLeft" align="right" valign="top"><a id="a028c40cca1a6ccbf82764a1dbadfabdf" name="a028c40cca1a6ccbf82764a1dbadfabdf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Block</b> ()</td></tr>
+<tr class="memitem:a028c40cca1a6ccbf82764a1dbadfabdf" id="r_a028c40cca1a6ccbf82764a1dbadfabdf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a028c40cca1a6ccbf82764a1dbadfabdf">Block</a> ()</td></tr>
 <tr class="separator:a028c40cca1a6ccbf82764a1dbadfabdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../df/d9a/barrier_8h_source.html#l00050">50</a> of file <a class="el" href="../../df/d9a/barrier_8h_source.html">barrier.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6db7c1d2657239ab9fb7f126e3fe1239" name="a6db7c1d2657239ab9fb7f126e3fe1239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db7c1d2657239ab9fb7f126e3fe1239">&#9670;&#160;</a></span>Barrier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">absl::Barrier::Barrier </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_threads</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../df/d9a/barrier_8h_source.html#l00053">53</a> of file <a class="el" href="../../df/d9a/barrier_8h_source.html">barrier.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>      : num_to_block_(num_threads), num_to_exit_(num_threads) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a028c40cca1a6ccbf82764a1dbadfabdf" name="a028c40cca1a6ccbf82764a1dbadfabdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028c40cca1a6ccbf82764a1dbadfabdf">&#9670;&#160;</a></span>Block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool absl::Barrier::Block </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d5/dd7/barrier_8cc_source.html#l00028">28</a> of file <a class="el" href="../../d5/dd7/barrier_8cc_source.html">barrier.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>                    {</div>
+<div class="line"><span class="lineno">   29</span>  MutexLock l(&amp;this-&gt;lock_);</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>  this-&gt;num_to_block_--;</div>
+<div class="line"><span class="lineno">   32</span>  <span class="keywordflow">if</span> (this-&gt;num_to_block_ &lt; 0) {</div>
+<div class="line"><span class="lineno">   33</span>    ABSL_RAW_LOG(</div>
+<div class="line"><span class="lineno">   34</span>        FATAL,</div>
+<div class="line"><span class="lineno">   35</span>        <span class="stringliteral">&quot;Block() called too many times.  num_to_block_=%d out of total=%d&quot;</span>,</div>
+<div class="line"><span class="lineno">   36</span>        this-&gt;num_to_block_, this-&gt;num_to_exit_);</div>
+<div class="line"><span class="lineno">   37</span>  }</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>  this-&gt;lock_.Await(Condition(IsZero, &amp;this-&gt;num_to_block_));</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>  <span class="comment">// Determine which thread can safely delete this Barrier object</span></div>
+<div class="line"><span class="lineno">   42</span>  this-&gt;num_to_exit_--;</div>
+<div class="line"><span class="lineno">   43</span>  ABSL_RAW_CHECK(this-&gt;num_to_exit_ &gt;= 0, <span class="stringliteral">&quot;barrier underflow&quot;</span>);</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>  <span class="comment">// If num_to_exit_ == 0 then all other threads in the barrier have</span></div>
+<div class="line"><span class="lineno">   46</span>  <span class="comment">// exited the Wait() and have released the Mutex so this thread is</span></div>
+<div class="line"><span class="lineno">   47</span>  <span class="comment">// free to delete the barrier.</span></div>
+<div class="line"><span class="lineno">   48</span>  <span class="keywordflow">return</span> this-&gt;num_to_exit_ == 0;</div>
+<div class="line"><span class="lineno">   49</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/abseil-cpp/absl/synchronization/<a class="el" href="../../df/d9a/barrier_8h_source.html">barrier.h</a></li>
-<li>open_spiel/abseil-cpp/absl/synchronization/<b>barrier.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/synchronization/<a class="el" href="../../d5/dd7/barrier_8cc_source.html">barrier.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

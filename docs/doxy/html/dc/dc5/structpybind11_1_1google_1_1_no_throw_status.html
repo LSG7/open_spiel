@@ -106,16 +106,68 @@ Collaboration diagram for pybind11::google::NoThrowStatus&lt; StatusType &gt;:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad6e5e5e7d8ca8410eb04872ed58e3c0e" id="r_ad6e5e5e7d8ca8410eb04872ed58e3c0e"><td class="memItemLeft" align="right" valign="top"><a id="ad6e5e5e7d8ca8410eb04872ed58e3c0e" name="ad6e5e5e7d8ca8410eb04872ed58e3c0e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>NoThrowStatus</b> (StatusType status_in)</td></tr>
+<tr class="memitem:ad6e5e5e7d8ca8410eb04872ed58e3c0e" id="r_ad6e5e5e7d8ca8410eb04872ed58e3c0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6e5e5e7d8ca8410eb04872ed58e3c0e">NoThrowStatus</a> (StatusType status_in)</td></tr>
 <tr class="separator:ad6e5e5e7d8ca8410eb04872ed58e3c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2a4bb5767a2893cf4a2730c23d189d47" id="r_a2a4bb5767a2893cf4a2730c23d189d47"><td class="memItemLeft" align="right" valign="top"><a id="a2a4bb5767a2893cf4a2730c23d189d47" name="a2a4bb5767a2893cf4a2730c23d189d47"></a>
-StatusType&#160;</td><td class="memItemRight" valign="bottom"><b>status</b></td></tr>
+<tr class="memitem:a2a4bb5767a2893cf4a2730c23d189d47" id="r_a2a4bb5767a2893cf4a2730c23d189d47"><td class="memItemLeft" align="right" valign="top">StatusType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a4bb5767a2893cf4a2730c23d189d47">status</a></td></tr>
 <tr class="separator:a2a4bb5767a2893cf4a2730c23d189d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename StatusType&gt;<br />
+struct pybind11::google::NoThrowStatus&lt; StatusType &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../da/d9f/no__throw__status_8h_source.html#l00014">14</a> of file <a class="el" href="../../da/d9f/no__throw__status_8h_source.html">no_throw_status.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad6e5e5e7d8ca8410eb04872ed58e3c0e" name="ad6e5e5e7d8ca8410eb04872ed58e3c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e5e5e7d8ca8410eb04872ed58e3c0e">&#9670;&#160;</a></span>NoThrowStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StatusType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">pybind11::google::NoThrowStatus</a>&lt; StatusType &gt;::NoThrowStatus </td>
+          <td>(</td>
+          <td class="paramtype">StatusType</td>          <td class="paramname"><span class="paramname"><em>status_in</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d9f/no__throw__status_8h_source.html#l00015">15</a> of file <a class="el" href="../../da/d9f/no__throw__status_8h_source.html">no_throw_status.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>      : status(std::forward&lt;StatusType&gt;(status_in)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2a4bb5767a2893cf4a2730c23d189d47" name="a2a4bb5767a2893cf4a2730c23d189d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4bb5767a2893cf4a2730c23d189d47">&#9670;&#160;</a></span>status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename StatusType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">StatusType <a class="el" href="../../dc/dc5/structpybind11_1_1google_1_1_no_throw_status.html">pybind11::google::NoThrowStatus</a>&lt; StatusType &gt;::status</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d9f/no__throw__status_8h_source.html#l00017">17</a> of file <a class="el" href="../../da/d9f/no__throw__status_8h_source.html">no_throw_status.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/pybind11_abseil/pybind11_abseil/<a class="el" href="../../da/d9f/no__throw__status_8h_source.html">no_throw_status.h</a></li>
 </ul>

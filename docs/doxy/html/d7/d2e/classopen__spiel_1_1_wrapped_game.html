@@ -148,8 +148,7 @@ Collaboration diagram for open_spiel::WrappedGame:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a404ed6bf815fb72084e8586d75386a79" id="r_a404ed6bf815fb72084e8586d75386a79"><td class="memItemLeft" align="right" valign="top"><a id="a404ed6bf815fb72084e8586d75386a79" name="a404ed6bf815fb72084e8586d75386a79"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WrappedGame</b> (std::shared_ptr&lt; const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &gt; game, <a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a> game_type, GameParameters game_parameters)</td></tr>
+<tr class="memitem:a404ed6bf815fb72084e8586d75386a79" id="r_a404ed6bf815fb72084e8586d75386a79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a404ed6bf815fb72084e8586d75386a79">WrappedGame</a> (std::shared_ptr&lt; const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &gt; game, <a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a> game_type, GameParameters game_parameters)</td></tr>
 <tr class="separator:a404ed6bf815fb72084e8586d75386a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab338d125f828455252f7edf65e3a86c3" id="r_ab338d125f828455252f7edf65e3a86c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab338d125f828455252f7edf65e3a86c3">NumDistinctActions</a> () const override</td></tr>
 <tr class="separator:ab338d125f828455252f7edf65e3a86c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,94 +185,110 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24c7b0caccaf0fbaa1e3b5ee313a3720 inherit pub_methods_classopen__spiel_1_1_game" id="r_a24c7b0caccaf0fbaa1e3b5ee313a3720"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;)=delete</td></tr>
 <tr class="separator:a24c7b0caccaf0fbaa1e3b5ee313a3720 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa76d3480113257e022575019af601df1 inherit pub_methods_classopen__spiel_1_1_game" id="r_aa76d3480113257e022575019af601df1"><td class="memItemLeft" align="right" valign="top">
-virtual std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>NewInitialState</b> (const std::string &amp;str) const</td></tr>
+<tr class="memitem:aa76d3480113257e022575019af601df1 inherit pub_methods_classopen__spiel_1_1_game" id="r_aa76d3480113257e022575019af601df1"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#aa76d3480113257e022575019af601df1">NewInitialState</a> (const std::string &amp;str) const</td></tr>
 <tr class="separator:aa76d3480113257e022575019af601df1 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbc718240c9580d8dbfe5e8ef0282d92 inherit pub_methods_classopen__spiel_1_1_game" id="r_acbc718240c9580d8dbfe5e8ef0282d92"><td class="memItemLeft" align="right" valign="top">
-virtual std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>NewInitialStates</b> () const</td></tr>
+<tr class="memitem:acbc718240c9580d8dbfe5e8ef0282d92 inherit pub_methods_classopen__spiel_1_1_game" id="r_acbc718240c9580d8dbfe5e8ef0282d92"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#acbc718240c9580d8dbfe5e8ef0282d92">NewInitialStates</a> () const</td></tr>
 <tr class="separator:acbc718240c9580d8dbfe5e8ef0282d92 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7abf0c828e092399ca08e1881e0bbf54 inherit pub_methods_classopen__spiel_1_1_game" id="r_a7abf0c828e092399ca08e1881e0bbf54"><td class="memItemLeft" align="right" valign="top">
-GameParameters&#160;</td><td class="memItemRight" valign="bottom"><b>GetParameters</b> () const</td></tr>
+<tr class="memitem:a7abf0c828e092399ca08e1881e0bbf54 inherit pub_methods_classopen__spiel_1_1_game" id="r_a7abf0c828e092399ca08e1881e0bbf54"><td class="memItemLeft" align="right" valign="top">GameParameters&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a7abf0c828e092399ca08e1881e0bbf54">GetParameters</a> () const</td></tr>
 <tr class="separator:a7abf0c828e092399ca08e1881e0bbf54 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab43a710b19e2cebf48ceaeccd3c8961f inherit pub_methods_classopen__spiel_1_1_game" id="r_ab43a710b19e2cebf48ceaeccd3c8961f"><td class="memItemLeft" align="right" valign="top">
-const <a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetType</b> () const</td></tr>
+<tr class="memitem:ab43a710b19e2cebf48ceaeccd3c8961f inherit pub_methods_classopen__spiel_1_1_game" id="r_ab43a710b19e2cebf48ceaeccd3c8961f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#ab43a710b19e2cebf48ceaeccd3c8961f">GetType</a> () const</td></tr>
 <tr class="separator:ab43a710b19e2cebf48ceaeccd3c8961f inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e260b8faf1879f3bbe8d0bcab31a437 inherit pub_methods_classopen__spiel_1_1_game" id="r_a4e260b8faf1879f3bbe8d0bcab31a437"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>InformationStateTensorSize</b> () const</td></tr>
+<tr class="memitem:a4e260b8faf1879f3bbe8d0bcab31a437 inherit pub_methods_classopen__spiel_1_1_game" id="r_a4e260b8faf1879f3bbe8d0bcab31a437"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a4e260b8faf1879f3bbe8d0bcab31a437">InformationStateTensorSize</a> () const</td></tr>
 <tr class="separator:a4e260b8faf1879f3bbe8d0bcab31a437 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19ffc4fce853df1f6314fc341472e5c4 inherit pub_methods_classopen__spiel_1_1_game" id="r_a19ffc4fce853df1f6314fc341472e5c4"><td class="memItemLeft" align="right" valign="top">
-int&#160;</td><td class="memItemRight" valign="bottom"><b>ObservationTensorSize</b> () const</td></tr>
+<tr class="memitem:a19ffc4fce853df1f6314fc341472e5c4 inherit pub_methods_classopen__spiel_1_1_game" id="r_a19ffc4fce853df1f6314fc341472e5c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a19ffc4fce853df1f6314fc341472e5c4">ObservationTensorSize</a> () const</td></tr>
 <tr class="separator:a19ffc4fce853df1f6314fc341472e5c4 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0e6b899dc09f73c4251f07a823f592 inherit pub_methods_classopen__spiel_1_1_game" id="r_a4a0e6b899dc09f73c4251f07a823f592"><td class="memItemLeft" align="right" valign="top">
-virtual std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>DeserializeState</b> (const std::string &amp;str) const</td></tr>
+<tr class="memitem:a4a0e6b899dc09f73c4251f07a823f592 inherit pub_methods_classopen__spiel_1_1_game" id="r_a4a0e6b899dc09f73c4251f07a823f592"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a4a0e6b899dc09f73c4251f07a823f592">DeserializeState</a> (const std::string &amp;str) const</td></tr>
 <tr class="separator:a4a0e6b899dc09f73c4251f07a823f592 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b0c5bbf1361734cc6740fc6be893fda inherit pub_methods_classopen__spiel_1_1_game" id="r_a4b0c5bbf1361734cc6740fc6be893fda"><td class="memItemLeft" align="right" valign="top">
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxMoveNumber</b> () const</td></tr>
+<tr class="memitem:a4b0c5bbf1361734cc6740fc6be893fda inherit pub_methods_classopen__spiel_1_1_game" id="r_a4b0c5bbf1361734cc6740fc6be893fda"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a4b0c5bbf1361734cc6740fc6be893fda">MaxMoveNumber</a> () const</td></tr>
 <tr class="separator:a4b0c5bbf1361734cc6740fc6be893fda inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0bbcc085789b58460771b4277e5adb2 inherit pub_methods_classopen__spiel_1_1_game" id="r_af0bbcc085789b58460771b4277e5adb2"><td class="memItemLeft" align="right" valign="top">
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxHistoryLength</b> () const</td></tr>
+<tr class="memitem:af0bbcc085789b58460771b4277e5adb2 inherit pub_methods_classopen__spiel_1_1_game" id="r_af0bbcc085789b58460771b4277e5adb2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#af0bbcc085789b58460771b4277e5adb2">MaxHistoryLength</a> () const</td></tr>
 <tr class="separator:af0bbcc085789b58460771b4277e5adb2 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21a64ae854cebf2185bbc7aa1c8348f1 inherit pub_methods_classopen__spiel_1_1_game" id="r_a21a64ae854cebf2185bbc7aa1c8348f1"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Serialize</b> () const</td></tr>
+<tr class="memitem:a21a64ae854cebf2185bbc7aa1c8348f1 inherit pub_methods_classopen__spiel_1_1_game" id="r_a21a64ae854cebf2185bbc7aa1c8348f1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a21a64ae854cebf2185bbc7aa1c8348f1">Serialize</a> () const</td></tr>
 <tr class="separator:a21a64ae854cebf2185bbc7aa1c8348f1 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1961953c180729dc203b777850f07319 inherit pub_methods_classopen__spiel_1_1_game" id="r_a1961953c180729dc203b777850f07319"><td class="memItemLeft" align="right" valign="top">
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> () const</td></tr>
+<tr class="memitem:a1961953c180729dc203b777850f07319 inherit pub_methods_classopen__spiel_1_1_game" id="r_a1961953c180729dc203b777850f07319"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a1961953c180729dc203b777850f07319">ToString</a> () const</td></tr>
 <tr class="separator:a1961953c180729dc203b777850f07319 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc137887a4ef3ab77988ecea40a8cc9c inherit pub_methods_classopen__spiel_1_1_game" id="r_afc137887a4ef3ab77988ecea40a8cc9c"><td class="memItemLeft" align="right" valign="top">
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;other) const</td></tr>
+<tr class="memitem:afc137887a4ef3ab77988ecea40a8cc9c inherit pub_methods_classopen__spiel_1_1_game" id="r_afc137887a4ef3ab77988ecea40a8cc9c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#afc137887a4ef3ab77988ecea40a8cc9c">operator==</a> (const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &amp;other) const</td></tr>
 <tr class="separator:afc137887a4ef3ab77988ecea40a8cc9c inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8e566fa7343c252e2895a46ef6cdd31 inherit pub_methods_classopen__spiel_1_1_game" id="r_ad8e566fa7343c252e2895a46ef6cdd31"><td class="memItemLeft" align="right" valign="top">
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetRNGState</b> () const</td></tr>
+<tr class="memitem:ad8e566fa7343c252e2895a46ef6cdd31 inherit pub_methods_classopen__spiel_1_1_game" id="r_ad8e566fa7343c252e2895a46ef6cdd31"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#ad8e566fa7343c252e2895a46ef6cdd31">GetRNGState</a> () const</td></tr>
 <tr class="separator:ad8e566fa7343c252e2895a46ef6cdd31 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04741ccd0d5da41a454501dd2953af69 inherit pub_methods_classopen__spiel_1_1_game" id="r_a04741ccd0d5da41a454501dd2953af69"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRNGState</b> (const std::string &amp;rng_state) const</td></tr>
+<tr class="memitem:a04741ccd0d5da41a454501dd2953af69 inherit pub_methods_classopen__spiel_1_1_game" id="r_a04741ccd0d5da41a454501dd2953af69"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a04741ccd0d5da41a454501dd2953af69">SetRNGState</a> (const std::string &amp;rng_state) const</td></tr>
 <tr class="separator:a04741ccd0d5da41a454501dd2953af69 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a223d65cc15f5961951e2c685a77879d9 inherit pub_methods_classopen__spiel_1_1_game" id="r_a223d65cc15f5961951e2c685a77879d9"><td class="memItemLeft" align="right" valign="top">
-virtual std::shared_ptr&lt; <a class="el" href="../../db/ddb/classopen__spiel_1_1_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MakeObserver</b> (<a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; <a class="el" href="../../da/d8d/structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt; iig_obs_type, const GameParameters &amp;params) const</td></tr>
+<tr class="memitem:a223d65cc15f5961951e2c685a77879d9 inherit pub_methods_classopen__spiel_1_1_game" id="r_a223d65cc15f5961951e2c685a77879d9"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="../../db/ddb/classopen__spiel_1_1_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a223d65cc15f5961951e2c685a77879d9">MakeObserver</a> (<a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; <a class="el" href="../../da/d8d/structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt; iig_obs_type, const GameParameters &amp;params) const</td></tr>
 <tr class="separator:a223d65cc15f5961951e2c685a77879d9 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a53334739ff4d4b6b81269ea5518136 inherit pub_methods_classopen__spiel_1_1_game" id="r_a3a53334739ff4d4b6b81269ea5518136"><td class="memItemLeft" align="right" valign="top">
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ActionToString</b> (Player player, Action action_id) const</td></tr>
+<tr class="memitem:a3a53334739ff4d4b6b81269ea5518136 inherit pub_methods_classopen__spiel_1_1_game" id="r_a3a53334739ff4d4b6b81269ea5518136"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a3a53334739ff4d4b6b81269ea5518136">ActionToString</a> (Player player, Action action_id) const</td></tr>
 <tr class="separator:a3a53334739ff4d4b6b81269ea5518136 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28537d9c2a657634e611724e12d2f32f inherit pub_methods_classopen__spiel_1_1_game" id="r_a28537d9c2a657634e611724e12d2f32f"><td class="memItemLeft" align="right" valign="top">
-std::shared_ptr&lt; <a class="el" href="../../db/ddb/classopen__spiel_1_1_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MakeRegisteredObserver</b> (<a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; <a class="el" href="../../da/d8d/structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt; iig_obs_type, const GameParameters &amp;params) const</td></tr>
+<tr class="memitem:a28537d9c2a657634e611724e12d2f32f inherit pub_methods_classopen__spiel_1_1_game" id="r_a28537d9c2a657634e611724e12d2f32f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../db/ddb/classopen__spiel_1_1_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a28537d9c2a657634e611724e12d2f32f">MakeRegisteredObserver</a> (<a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; <a class="el" href="../../da/d8d/structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt; iig_obs_type, const GameParameters &amp;params) const</td></tr>
 <tr class="separator:a28537d9c2a657634e611724e12d2f32f inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa99f0ac0aeb14c3a190ae9fa56f428c3 inherit pub_methods_classopen__spiel_1_1_game" id="r_aa99f0ac0aeb14c3a190ae9fa56f428c3"><td class="memItemLeft" align="right" valign="top">
-std::shared_ptr&lt; <a class="el" href="../../db/ddb/classopen__spiel_1_1_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MakeBuiltInObserver</b> (<a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; <a class="el" href="../../da/d8d/structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt; iig_obs_type) const</td></tr>
+<tr class="memitem:aa99f0ac0aeb14c3a190ae9fa56f428c3 inherit pub_methods_classopen__spiel_1_1_game" id="r_aa99f0ac0aeb14c3a190ae9fa56f428c3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../db/ddb/classopen__spiel_1_1_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#aa99f0ac0aeb14c3a190ae9fa56f428c3">MakeBuiltInObserver</a> (<a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; <a class="el" href="../../da/d8d/structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt; iig_obs_type) const</td></tr>
 <tr class="separator:aa99f0ac0aeb14c3a190ae9fa56f428c3 inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac46c5cfeeb05478188b382fa4d182efd inherit pub_methods_classopen__spiel_1_1_game" id="r_ac46c5cfeeb05478188b382fa4d182efd"><td class="memItemLeft" align="right" valign="top">
-virtual std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>NewInitialStateForPopulation</b> (int population) const</td></tr>
+<tr class="memitem:ac46c5cfeeb05478188b382fa4d182efd inherit pub_methods_classopen__spiel_1_1_game" id="r_ac46c5cfeeb05478188b382fa4d182efd"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="../../d8/d89/classopen__spiel_1_1_state.html">State</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#ac46c5cfeeb05478188b382fa4d182efd">NewInitialStateForPopulation</a> (int population) const</td></tr>
 <tr class="separator:ac46c5cfeeb05478188b382fa4d182efd inherit pub_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a05c02b20534600a9f940cb5a8d0c4d38" id="r_a05c02b20534600a9f940cb5a8d0c4d38"><td class="memItemLeft" align="right" valign="top"><a id="a05c02b20534600a9f940cb5a8d0c4d38" name="a05c02b20534600a9f940cb5a8d0c4d38"></a>
-std::shared_ptr&lt; const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>game_</b></td></tr>
+<tr class="memitem:a05c02b20534600a9f940cb5a8d0c4d38" id="r_a05c02b20534600a9f940cb5a8d0c4d38"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05c02b20534600a9f940cb5a8d0c4d38">game_</a></td></tr>
 <tr class="separator:a05c02b20534600a9f940cb5a8d0c4d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classopen__spiel_1_1_game"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classopen__spiel_1_1_game')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a></td></tr>
-<tr class="memitem:a40968ba04914278a389265b7063aac3f inherit pro_attribs_classopen__spiel_1_1_game" id="r_a40968ba04914278a389265b7063aac3f"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>game_type_</b></td></tr>
+<tr class="memitem:a40968ba04914278a389265b7063aac3f inherit pro_attribs_classopen__spiel_1_1_game" id="r_a40968ba04914278a389265b7063aac3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a40968ba04914278a389265b7063aac3f">game_type_</a></td></tr>
 <tr class="separator:a40968ba04914278a389265b7063aac3f inherit pro_attribs_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0256cac5f169b067d69c0b5cb82b8b4 inherit pro_attribs_classopen__spiel_1_1_game" id="r_aa0256cac5f169b067d69c0b5cb82b8b4"><td class="memItemLeft" align="right" valign="top">
-GameParameters&#160;</td><td class="memItemRight" valign="bottom"><b>game_parameters_</b></td></tr>
+<tr class="memitem:aa0256cac5f169b067d69c0b5cb82b8b4 inherit pro_attribs_classopen__spiel_1_1_game" id="r_aa0256cac5f169b067d69c0b5cb82b8b4"><td class="memItemLeft" align="right" valign="top">GameParameters&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#aa0256cac5f169b067d69c0b5cb82b8b4">game_parameters_</a></td></tr>
 <tr class="separator:aa0256cac5f169b067d69c0b5cb82b8b4 inherit pro_attribs_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f8eed0c692e15bd1d9806647b575f91 inherit pro_attribs_classopen__spiel_1_1_game" id="r_a9f8eed0c692e15bd1d9806647b575f91"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">absl::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mutex_defaulted_parameters_</b></td></tr>
+<tr class="memitem:a9f8eed0c692e15bd1d9806647b575f91 inherit pro_attribs_classopen__spiel_1_1_game" id="r_a9f8eed0c692e15bd1d9806647b575f91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d37/classabsl_1_1_mutex.html">absl::Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#a9f8eed0c692e15bd1d9806647b575f91">mutex_defaulted_parameters_</a></td></tr>
 <tr class="separator:a9f8eed0c692e15bd1d9806647b575f91 inherit pro_attribs_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classopen__spiel_1_1_game"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_classopen__spiel_1_1_game')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a></td></tr>
-<tr class="memitem:ae1b45088cc527add6874e85d4c3a6cc3 inherit pro_methods_classopen__spiel_1_1_game" id="r_ae1b45088cc527add6874e85d4c3a6cc3"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Game</b> (<a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a> game_type, GameParameters game_parameters)</td></tr>
+<tr class="memitem:ae1b45088cc527add6874e85d4c3a6cc3 inherit pro_methods_classopen__spiel_1_1_game" id="r_ae1b45088cc527add6874e85d4c3a6cc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#ae1b45088cc527add6874e85d4c3a6cc3">Game</a> (<a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a> game_type, GameParameters game_parameters)</td></tr>
 <tr class="separator:ae1b45088cc527add6874e85d4c3a6cc3 inherit pro_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6156eb0a128486d9de8a054ab7365a9 inherit pro_methods_classopen__spiel_1_1_game" id="r_ab6156eb0a128486d9de8a054ab7365a9"><td class="memTemplParams" colspan="2">
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab6156eb0a128486d9de8a054ab7365a9 inherit pro_methods_classopen__spiel_1_1_game"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ParameterValue</b> (const std::string &amp;key, <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; T &gt; default_value=absl::nullopt) const</td></tr>
+<tr class="memitem:ab6156eb0a128486d9de8a054ab7365a9 inherit pro_methods_classopen__spiel_1_1_game" id="r_ab6156eb0a128486d9de8a054ab7365a9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab6156eb0a128486d9de8a054ab7365a9 inherit pro_methods_classopen__spiel_1_1_game"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html#ab6156eb0a128486d9de8a054ab7365a9">ParameterValue</a> (const std::string &amp;key, <a class="el" href="../../dc/d44/classabsl_1_1optional.html">absl::optional</a>&lt; T &gt; default_value=absl::nullopt) const</td></tr>
 <tr class="separator:ab6156eb0a128486d9de8a054ab7365a9 inherit pro_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd86016f8990a05ac6c68b7bb8ce3711 inherit pro_methods_classopen__spiel_1_1_game" id="r_acd86016f8990a05ac6c68b7bb8ce3711"><td class="memItemLeft" align="right" valign="top">
 GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="bottom"><b>ABSL_GUARDED_BY</b> (mutex_defaulted_parameters_)</td></tr>
 <tr class="separator:acd86016f8990a05ac6c68b7bb8ce3711 inherit pro_methods_classopen__spiel_1_1_game"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00107">107</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a404ed6bf815fb72084e8586d75386a79" name="a404ed6bf815fb72084e8586d75386a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a404ed6bf815fb72084e8586d75386a79">&#9670;&#160;</a></span>WrappedGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::WrappedGame::WrappedGame </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/dfb/structopen__spiel_1_1_game_type.html">GameType</a></td>          <td class="paramname"><span class="paramname"><em>game_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameParameters</td>          <td class="paramname"><span class="paramname"><em>game_parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00109">109</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>      : Game(game_type, game_parameters), game_(game) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aac52e2612c89017a8c98a1e3cce0bd6d" name="aac52e2612c89017a8c98a1e3cce0bd6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac52e2612c89017a8c98a1e3cce0bd6d">&#9670;&#160;</a></span>InformationStateTensorLayout()</h2>
@@ -300,6 +315,11 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Reimplemented from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00135">135</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                             {</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> game_-&gt;InformationStateTensorLayout();</div>
+<div class="line"><span class="lineno">  137</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2cc26b07bbb24afe40d544c4693f6298" name="a2cc26b07bbb24afe40d544c4693f6298"></a>
@@ -327,6 +347,11 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Reimplemented from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00127">127</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                              {</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">return</span> game_-&gt;InformationStateTensorShape();</div>
+<div class="line"><span class="lineno">  129</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="af0e5eec46f1da853acd49045d9a136a6" name="af0e5eec46f1da853acd49045d9a136a6"></a>
@@ -354,6 +379,11 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Reimplemented from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00145">145</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                               {</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> game_-&gt;MaxChanceNodesInHistory();</div>
+<div class="line"><span class="lineno">  147</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7dd817dfef8771534dcb577838ff397c" name="a7dd817dfef8771534dcb577838ff397c"></a>
@@ -381,6 +411,9 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Reimplemented from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00119">119</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>{ <span class="keywordflow">return</span> game_-&gt;MaxChanceOutcomes(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a199defdab06f2da8d8412e9514bf93f6" name="a199defdab06f2da8d8412e9514bf93f6"></a>
@@ -408,6 +441,9 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Implements <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00144">144</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>{ <span class="keywordflow">return</span> game_-&gt;MaxGameLength(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad1ce524c200fb13fa82e381c91891a33" name="ad1ce524c200fb13fa82e381c91891a33"></a>
@@ -435,6 +471,9 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Implements <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00122">122</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>{ <span class="keywordflow">return</span> game_-&gt;MaxUtility(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a34a7c65a22d09f6388407b4fa28b4485" name="a34a7c65a22d09f6388407b4fa28b4485"></a>
@@ -462,6 +501,9 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Implements <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00121">121</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>{ <span class="keywordflow">return</span> game_-&gt;MinUtility(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a45d7024cc0d0d3fc2d1eeb0569cac901" name="a45d7024cc0d0d3fc2d1eeb0569cac901"></a>
@@ -516,6 +558,11 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Implements <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00113">113</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>                                          {</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span> game_-&gt;NumDistinctActions();</div>
+<div class="line"><span class="lineno">  115</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a610d60d09123acf696c8cd1f4d8044f1" name="a610d60d09123acf696c8cd1f4d8044f1"></a>
@@ -543,6 +590,9 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Implements <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00120">120</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>{ <span class="keywordflow">return</span> game_-&gt;NumPlayers(); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0dace9f85f66879d4f7650ea45ebc95b" name="a0dace9f85f66879d4f7650ea45ebc95b"></a>
@@ -570,6 +620,11 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Reimplemented from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00138">138</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>                                                        {</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> game_-&gt;ObservationTensorLayout();</div>
+<div class="line"><span class="lineno">  140</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a72157a764750b8481167050a3756485f" name="a72157a764750b8481167050a3756485f"></a>
@@ -597,6 +652,11 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Reimplemented from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00131">131</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                                         {</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">return</span> game_-&gt;ObservationTensorShape();</div>
+<div class="line"><span class="lineno">  133</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3843e2325ff4216fd8e04028e16b62df" name="a3843e2325ff4216fd8e04028e16b62df"></a>
@@ -624,6 +684,11 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 
 <p>Reimplemented from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00141">141</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                    {</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">return</span> game_-&gt;PolicyTensorShape();</div>
+<div class="line"><span class="lineno">  143</span>  }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aad2b5f615d8ac86378ae37334bad8441" name="aad2b5f615d8ac86378ae37334bad8441"></a>
@@ -650,6 +715,36 @@ GameParameters defaulted_parameters_&#160;</td><td class="memItemRight" valign="
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">open_spiel::Game</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00123">123</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                                   {</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span> game_-&gt;UtilitySum();</div>
+<div class="line"><span class="lineno">  125</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a05c02b20534600a9f940cb5a8d0c4d38" name="a05c02b20534600a9f940cb5a8d0c4d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c02b20534600a9f940cb5a8d0c4d38">&#9670;&#160;</a></span>game_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;const <a class="el" href="../../d4/dc3/classopen__spiel_1_1_game.html">Game</a>&gt; open_spiel::WrappedGame::game_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html#l00150">150</a> of file <a class="el" href="../../dd/d6f/game__wrapper_8h_source.html">game_wrapper.h</a>.</p>
 
 </div>
 </div>

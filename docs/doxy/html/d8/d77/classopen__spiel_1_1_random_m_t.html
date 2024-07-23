@@ -117,11 +117,9 @@ Collaboration diagram for open_spiel::RandomMT:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af70b11da9190c85e0f903ae4c0b37fbf" id="r_af70b11da9190c85e0f903ae4c0b37fbf"><td class="memItemLeft" align="right" valign="top"><a id="af70b11da9190c85e0f903ae4c0b37fbf" name="af70b11da9190c85e0f903ae4c0b37fbf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RandomMT</b> (int seed)</td></tr>
+<tr class="memitem:af70b11da9190c85e0f903ae4c0b37fbf" id="r_af70b11da9190c85e0f903ae4c0b37fbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af70b11da9190c85e0f903ae4c0b37fbf">RandomMT</a> (int seed)</td></tr>
 <tr class="separator:af70b11da9190c85e0f903ae4c0b37fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef5ff53fba17913486e8b4932576edb" id="r_aeef5ff53fba17913486e8b4932576edb"><td class="memItemLeft" align="right" valign="top"><a id="aeef5ff53fba17913486e8b4932576edb" name="aeef5ff53fba17913486e8b4932576edb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RandomMT</b> (const std::mt19937 &amp;generator)</td></tr>
+<tr class="memitem:aeef5ff53fba17913486e8b4932576edb" id="r_aeef5ff53fba17913486e8b4932576edb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef5ff53fba17913486e8b4932576edb">RandomMT</a> (const std::mt19937 &amp;generator)</td></tr>
 <tr class="separator:aeef5ff53fba17913486e8b4932576edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f26b3fb099af66fea890f935b407433" id="r_a3f26b3fb099af66fea890f935b407433"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f26b3fb099af66fea890f935b407433">RandomUniform</a> () final</td></tr>
 <tr class="separator:a3f26b3fb099af66fea890f935b407433"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +128,66 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Random</b> (const <a class="el" href="../../d3/de2/classopen__spiel_1_1_random.html">Random</a> &amp;)=default</td></tr>
 <tr class="separator:a7896e71cc46606199797e00b773e03d5 inherit pub_methods_classopen__spiel_1_1_random"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/d2c/utils_2random_8h_source.html#l00043">43</a> of file <a class="el" href="../../d0/d2c/utils_2random_8h_source.html">random.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af70b11da9190c85e0f903ae4c0b37fbf" name="af70b11da9190c85e0f903ae4c0b37fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70b11da9190c85e0f903ae4c0b37fbf">&#9670;&#160;</a></span>RandomMT() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::RandomMT::RandomMT </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>seed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d2c/utils_2random_8h_source.html#l00047">47</a> of file <a class="el" href="../../d0/d2c/utils_2random_8h_source.html">random.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>: generator_(std::mt19937(seed)) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeef5ff53fba17913486e8b4932576edb" name="aeef5ff53fba17913486e8b4932576edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef5ff53fba17913486e8b4932576edb">&#9670;&#160;</a></span>RandomMT() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::RandomMT::RandomMT </td>
+          <td>(</td>
+          <td class="paramtype">const std::mt19937 &amp;</td>          <td class="paramname"><span class="paramname"><em>generator</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d2c/utils_2random_8h_source.html#l00048">48</a> of file <a class="el" href="../../d0/d2c/utils_2random_8h_source.html">random.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>: generator_(generator) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3f26b3fb099af66fea890f935b407433" name="a3f26b3fb099af66fea890f935b407433"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f26b3fb099af66fea890f935b407433">&#9670;&#160;</a></span>RandomUniform()</h2>
@@ -156,11 +214,14 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d3/de2/classopen__spiel_1_1_random.html">open_spiel::Random</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../df/d1f/random_8cc_source.html#l00024">24</a> of file <a class="el" href="../../df/d1f/random_8cc_source.html">random.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keywordflow">return</span> uniformDist(generator_); }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/utils/<a class="el" href="../../d0/d2c/utils_2random_8h_source.html">random.h</a></li>
-<li>open_spiel/utils/<b>random.cc</b></li>
+<li>open_spiel/utils/<a class="el" href="../../df/d1f/random_8cc_source.html">random.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

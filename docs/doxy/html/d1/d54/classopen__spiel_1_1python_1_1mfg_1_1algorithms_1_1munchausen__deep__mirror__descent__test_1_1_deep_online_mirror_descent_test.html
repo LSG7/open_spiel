@@ -120,7 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f746601bd4213e1f80aa4d9d150ebd1" id="r_a8f746601bd4213e1f80aa4d9d150ebd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f746601bd4213e1f80aa4d9d150ebd1">test_train</a> (self, name)</td></tr>
 <tr class="separator:a8f746601bd4213e1f80aa4d9d150ebd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../de/d7c/munchausen__deep__mirror__descent__test_8py_source.html#l00029">29</a> of file <a class="el" href="../../de/d7c/munchausen__deep__mirror__descent__test_8py_source.html">munchausen_deep_mirror_descent_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8f746601bd4213e1f80aa4d9d150ebd1" name="a8f746601bd4213e1f80aa4d9d150ebd1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f746601bd4213e1f80aa4d9d150ebd1">&#9670;&#160;</a></span>test_train()</h2>
 
@@ -140,10 +143,51 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Checks that the training works.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../de/d7c/munchausen__deep__mirror__descent__test_8py_source.html#l00033">33</a> of file <a class="el" href="../../de/d7c/munchausen__deep__mirror__descent__test_8py_source.html">munchausen_deep_mirror_descent_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>  <span class="keyword">def </span>test_train(self, name):</div>
+<div class="line"><span class="lineno">   34</span>    <span class="stringliteral">&quot;&quot;&quot;Checks that the training works.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   35</span>    game = pyspiel.load_game(name)</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keyword">assert</span> game.num_players() == 1</div>
+<div class="line"><span class="lineno">   37</span>    uniform_policy = policy.UniformRandomPolicy(game)</div>
+<div class="line"><span class="lineno">   38</span>    uniform_dist = distribution.DistributionPolicy(game, uniform_policy)</div>
+<div class="line"><span class="lineno">   39</span>    env = rl_environment.Environment(</div>
+<div class="line"><span class="lineno">   40</span>        game, mfg_distribution=uniform_dist, mfg_population=0)</div>
+<div class="line"><span class="lineno">   41</span>    info_state_size = env.observation_spec()[<span class="stringliteral">&#39;info_state&#39;</span>][0]</div>
+<div class="line"><span class="lineno">   42</span>    num_actions = env.action_spec()[<span class="stringliteral">&#39;num_actions&#39;</span>]</div>
+<div class="line"><span class="lineno">   43</span>    np.random.seed(0)</div>
+<div class="line"><span class="lineno">   44</span>    args = {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="stringliteral">&#39;alpha&#39;</span>: 0.9,</div>
+<div class="line"><span class="lineno">   46</span>        <span class="stringliteral">&#39;batch_size&#39;</span>: 128,</div>
+<div class="line"><span class="lineno">   47</span>        <span class="stringliteral">&#39;discount_factor&#39;</span>: 1.0,</div>
+<div class="line"><span class="lineno">   48</span>        <span class="stringliteral">&#39;epsilon_decay_duration&#39;</span>: 20000000,</div>
+<div class="line"><span class="lineno">   49</span>        <span class="stringliteral">&#39;epsilon_end&#39;</span>: 0.1,</div>
+<div class="line"><span class="lineno">   50</span>        <span class="stringliteral">&#39;epsilon_start&#39;</span>: 0.1,</div>
+<div class="line"><span class="lineno">   51</span>        <span class="stringliteral">&#39;gradient_clipping&#39;</span>: 40,</div>
+<div class="line"><span class="lineno">   52</span>        <span class="stringliteral">&#39;hidden_layers_sizes&#39;</span>: [128, 128],</div>
+<div class="line"><span class="lineno">   53</span>        <span class="stringliteral">&#39;learn_every&#39;</span>: 64,</div>
+<div class="line"><span class="lineno">   54</span>        <span class="stringliteral">&#39;learning_rate&#39;</span>: 0.01,</div>
+<div class="line"><span class="lineno">   55</span>        <span class="stringliteral">&#39;loss&#39;</span>: <span class="stringliteral">&#39;mse&#39;</span>,</div>
+<div class="line"><span class="lineno">   56</span>        <span class="stringliteral">&#39;min_buffer_size_to_learn&#39;</span>: 500,</div>
+<div class="line"><span class="lineno">   57</span>        <span class="stringliteral">&#39;optimizer&#39;</span>: <span class="stringliteral">&#39;adam&#39;</span>,</div>
+<div class="line"><span class="lineno">   58</span>        <span class="stringliteral">&#39;replay_buffer_capacity&#39;</span>: 2000,</div>
+<div class="line"><span class="lineno">   59</span>        <span class="stringliteral">&#39;tau&#39;</span>: 10,</div>
+<div class="line"><span class="lineno">   60</span>        <span class="stringliteral">&#39;update_target_network_every&#39;</span>: 50</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="line"><span class="lineno">   62</span>    agent = munchausen_deep_mirror_descent.MunchausenDQN(</div>
+<div class="line"><span class="lineno">   63</span>        0, info_state_size, num_actions, **args)</div>
+<div class="line"><span class="lineno">   64</span>    md = munchausen_deep_mirror_descent.DeepOnlineMirrorDescent(</div>
+<div class="line"><span class="lineno">   65</span>        game, [env], [agent], num_episodes_per_iteration=100)</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(10):</div>
+<div class="line"><span class="lineno">   67</span>      md.iteration()</div>
+<div class="line"><span class="lineno">   68</span>    nash_conv_md = nash_conv.NashConv(game, md.policy)</div>
+<div class="line"><span class="lineno">   69</span>    self.assertLessEqual(nash_conv_md.nash_conv(), 3)</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/mfg/algorithms/<b>munchausen_deep_mirror_descent_test.py</b></li>
+<li>open_spiel/python/mfg/algorithms/<a class="el" href="../../de/d7c/munchausen__deep__mirror__descent__test_8py_source.html">munchausen_deep_mirror_descent_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

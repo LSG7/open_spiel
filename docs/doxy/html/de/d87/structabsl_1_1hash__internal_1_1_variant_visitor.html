@@ -106,17 +106,73 @@ Collaboration diagram for absl::hash_internal::VariantVisitor&lt; H &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9f1ff22ec34802db90b336cd21ee0da5" id="r_a9f1ff22ec34802db90b336cd21ee0da5"><td class="memTemplParams" colspan="2"><a id="a9f1ff22ec34802db90b336cd21ee0da5" name="a9f1ff22ec34802db90b336cd21ee0da5"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a9f1ff22ec34802db90b336cd21ee0da5"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (const T &amp;t) const</td></tr>
+<tr class="memitem:a9f1ff22ec34802db90b336cd21ee0da5" id="r_a9f1ff22ec34802db90b336cd21ee0da5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9f1ff22ec34802db90b336cd21ee0da5"><td class="memTemplItemLeft" align="right" valign="top">H&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9f1ff22ec34802db90b336cd21ee0da5">operator()</a> (const T &amp;t) const</td></tr>
 <tr class="separator:a9f1ff22ec34802db90b336cd21ee0da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3639d20fa91e3b668319853f45e6fdcd" id="r_a3639d20fa91e3b668319853f45e6fdcd"><td class="memItemLeft" align="right" valign="top"><a id="a3639d20fa91e3b668319853f45e6fdcd" name="a3639d20fa91e3b668319853f45e6fdcd"></a>
-H &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><b>hash_state</b></td></tr>
+<tr class="memitem:a3639d20fa91e3b668319853f45e6fdcd" id="r_a3639d20fa91e3b668319853f45e6fdcd"><td class="memItemLeft" align="right" valign="top">H &amp;&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3639d20fa91e3b668319853f45e6fdcd">hash_state</a></td></tr>
 <tr class="separator:a3639d20fa91e3b668319853f45e6fdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename H&gt;<br />
+struct absl::hash_internal::VariantVisitor&lt; H &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00764">764</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9f1ff22ec34802db90b336cd21ee0da5" name="a9f1ff22ec34802db90b336cd21ee0da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f1ff22ec34802db90b336cd21ee0da5">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">H <a class="el" href="../../de/d87/structabsl_1_1hash__internal_1_1_variant_visitor.html">absl::hash_internal::VariantVisitor</a>&lt; H &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00767">767</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  767</span>                                 {</div>
+<div class="line"><span class="lineno">  768</span>    <span class="keywordflow">return</span> H::combine(std::move(hash_state), t);</div>
+<div class="line"><span class="lineno">  769</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3639d20fa91e3b668319853f45e6fdcd" name="a3639d20fa91e3b668319853f45e6fdcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3639d20fa91e3b668319853f45e6fdcd">&#9670;&#160;</a></span>hash_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename H &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">H&amp;&amp; <a class="el" href="../../de/d87/structabsl_1_1hash__internal_1_1_variant_visitor.html">absl::hash_internal::VariantVisitor</a>&lt; H &gt;::hash_state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d1/d28/internal_2hash_8h_source.html#l00765">765</a> of file <a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/hash/internal/<a class="el" href="../../d1/d28/internal_2hash_8h_source.html">hash.h</a></li>
 </ul>

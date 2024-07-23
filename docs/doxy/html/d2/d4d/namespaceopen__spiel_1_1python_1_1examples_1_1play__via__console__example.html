@@ -97,13 +97,11 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af8a80222898e6f53deaa7701b70c2530" id="r_af8a80222898e6f53deaa7701b70c2530"><td class="memItemLeft" align="right" valign="top"><a id="af8a80222898e6f53deaa7701b70c2530" name="af8a80222898e6f53deaa7701b70c2530"></a>
-pyspiel.Bot&#160;</td><td class="memItemRight" valign="bottom"><b>load_bot</b> (str bot_type, int pid)</td></tr>
+<tr class="memitem:af8a80222898e6f53deaa7701b70c2530" id="r_af8a80222898e6f53deaa7701b70c2530"><td class="memItemLeft" align="right" valign="top">pyspiel.Bot&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8a80222898e6f53deaa7701b70c2530">load_bot</a> (str bot_type, int pid)</td></tr>
 <tr class="separator:af8a80222898e6f53deaa7701b70c2530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dd02e666adacc7e95ba2aeaa1aa5f93" id="r_a2dd02e666adacc7e95ba2aeaa1aa5f93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dd02e666adacc7e95ba2aeaa1aa5f93">play_game</a> (pyspiel.State state, list[pyspiel.Bot] bots)</td></tr>
 <tr class="separator:a2dd02e666adacc7e95ba2aeaa1aa5f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3fce9c56cc2271e0a486189acf81419" id="r_ac3fce9c56cc2271e0a486189acf81419"><td class="memItemLeft" align="right" valign="top"><a id="ac3fce9c56cc2271e0a486189acf81419" name="ac3fce9c56cc2271e0a486189acf81419"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (_)</td></tr>
+<tr class="memitem:ac3fce9c56cc2271e0a486189acf81419" id="r_ac3fce9c56cc2271e0a486189acf81419"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3fce9c56cc2271e0a486189acf81419">main</a> (_)</td></tr>
 <tr class="separator:ac3fce9c56cc2271e0a486189acf81419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -117,6 +115,65 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Example to traverse an entire game tree.</pre> </div><h2 class="groupheader">Function Documentation</h2>
+<a id="af8a80222898e6f53deaa7701b70c2530" name="af8a80222898e6f53deaa7701b70c2530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8a80222898e6f53deaa7701b70c2530">&#9670;&#160;</a></span>load_bot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> pyspiel.Bot open_spiel.python.examples.play_via_console_example.load_bot </td>
+          <td>(</td>
+          <td class="paramtype">str</td>          <td class="paramname"><span class="paramname"><em>bot_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html#l00037">37</a> of file <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html">play_via_console_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span><span class="keyword">def </span>load_bot(bot_type: str, pid: int) -&gt; pyspiel.Bot:</div>
+<div class="line"><span class="lineno">   38</span>  <span class="keywordflow">if</span> bot_type == <span class="stringliteral">&quot;human&quot;</span>:</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">return</span> human.HumanBot()</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordflow">elif</span> bot_type == <span class="stringliteral">&quot;uniform&quot;</span>:</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">return</span> uniform_random.UniformRandomBot(pid, np.random)</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3fce9c56cc2271e0a486189acf81419" name="ac3fce9c56cc2271e0a486189acf81419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3fce9c56cc2271e0a486189acf81419">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.examples.play_via_console_example.main </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html#l00068">68</a> of file <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html">play_via_console_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span><span class="keyword">def </span><a class="code hl_namespace" href="../../d2/dc1/namespacemain.html">main</a>(_):</div>
+<div class="line"><span class="lineno">   69</span>  game = pyspiel.load_game(_GAME_STRING.value)</div>
+<div class="line"><span class="lineno">   70</span>  state = game.new_initial_state()</div>
+<div class="line"><span class="lineno">   71</span>  bots = []</div>
+<div class="line"><span class="lineno">   72</span>  bots.append(load_bot(_PLAYER0_TYPE.value, 0))</div>
+<div class="line"><span class="lineno">   73</span>  bots.append(load_bot(_PLAYER1_TYPE.value, 1))</div>
+<div class="line"><span class="lineno">   74</span>  play_game(state, bots)</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="../../d2/dc1/namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d9e/matrix__games_2main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a2dd02e666adacc7e95ba2aeaa1aa5f93" name="a2dd02e666adacc7e95ba2aeaa1aa5f93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2dd02e666adacc7e95ba2aeaa1aa5f93">&#9670;&#160;</a></span>play_game()</h2>
 
@@ -135,7 +192,36 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Play the game via console.</pre> <div class="dynheader">
+<pre class="fragment">Play the game via console.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html#l00044">44</a> of file <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html">play_via_console_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>              bots: list[pyspiel.Bot]):</div>
+<div class="line"><span class="lineno">   46</span>  <span class="stringliteral">&quot;&quot;&quot;Play the game via console.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>  <span class="keywordflow">while</span> <span class="keywordflow">not</span> state.is_terminal():</div>
+<div class="line"><span class="lineno">   49</span>    print(f<span class="stringliteral">&quot;State: \n{state}\n&quot;</span>)</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> state.is_chance_node():</div>
+<div class="line"><span class="lineno">   51</span>      outcomes = state.chance_outcomes()</div>
+<div class="line"><span class="lineno">   52</span>      action_list, prob_list = zip(*outcomes)</div>
+<div class="line"><span class="lineno">   53</span>      outcome = np.random.choice(action_list, p=prob_list)</div>
+<div class="line"><span class="lineno">   54</span>      print(f<span class="stringliteral">&quot;Chance chose: {outcome} ({state.action_to_string(outcome)})&quot;</span>)</div>
+<div class="line"><span class="lineno">   55</span>      state.apply_action(outcome)</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   57</span>      player = state.current_player()</div>
+<div class="line"><span class="lineno">   58</span>      action = bots[player].step(state)</div>
+<div class="line"><span class="lineno">   59</span>      print(f<span class="stringliteral">&quot;Chose action: {action} ({state.action_to_string(action)})&quot;</span>)</div>
+<div class="line"><span class="lineno">   60</span>      state.apply_action(action)</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  print(<span class="stringliteral">&quot;\n-=- Game over -=-\n&quot;</span>)</div>
+<div class="line"><span class="lineno">   63</span>  print(f<span class="stringliteral">&quot;Terminal state:\n{state}&quot;</span>)</div>
+<div class="line"><span class="lineno">   64</span>  print(f<span class="stringliteral">&quot;Returns: {state.returns()}&quot;</span>)</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">return</span></div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html#l00045">open_spiel.python.examples.play_via_console_example.play_game()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html#l00045">open_spiel.python.examples.play_via_console_example.play_game()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d4d/namespaceopen__spiel_1_1python_1_1examples_1_1play__via__console__example_a2dd02e666adacc7e95ba2aeaa1aa5f93_cgraph.png" border="0" usemap="#ad2/d4d/namespaceopen__spiel_1_1python_1_1examples_1_1play__via__console__example_a2dd02e666adacc7e95ba2aeaa1aa5f93_cgraph" alt=""/></div>
@@ -180,6 +266,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;game_string&quot;</span>, <span class="stringliteral">&quot;tic_tac_toe&quot;</span>, <span class="stringliteral">&quot;Name of the game&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html#l00026">26</a> of file <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html">play_via_console_example.py</a>.</p>
+
 </div>
 </div>
 <a id="af6082acc191e16223955ee9ad63b05f1" name="af6082acc191e16223955ee9ad63b05f1"></a>
@@ -205,6 +293,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;player0_type&quot;</span>, <span class="stringliteral">&quot;human&quot;</span>, <span class="stringliteral">&quot;Player 0 type (human or uniform)&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html#l00029">29</a> of file <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html">play_via_console_example.py</a>.</p>
+
 </div>
 </div>
 <a id="a2de66f8f87fb2ebdb98049a971ddbe9f" name="a2de66f8f87fb2ebdb98049a971ddbe9f"></a>
@@ -230,6 +320,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">    2</span>    <span class="stringliteral">&quot;player1_type&quot;</span>, <span class="stringliteral">&quot;uniform&quot;</span>, <span class="stringliteral">&quot;Player 1 type (human or uniform)&quot;</span></div>
 <div class="line"><span class="lineno">    3</span>)</div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html#l00032">32</a> of file <a class="el" href="../../dd/dd3/play__via__console__example_8py_source.html">play_via_console_example.py</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

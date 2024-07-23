@@ -117,8 +117,7 @@ Collaboration diagram for open_spiel.python.games.tic_tac_toe.TicTacToeGame:</di
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2dba063368b4cd9c089f0b60e0977aab" id="r_a2dba063368b4cd9c089f0b60e0977aab"><td class="memItemLeft" align="right" valign="top"><a id="a2dba063368b4cd9c089f0b60e0977aab" name="a2dba063368b4cd9c089f0b60e0977aab"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, params=None)</td></tr>
+<tr class="memitem:a2dba063368b4cd9c089f0b60e0977aab" id="r_a2dba063368b4cd9c089f0b60e0977aab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dba063368b4cd9c089f0b60e0977aab">__init__</a> (self, params=None)</td></tr>
 <tr class="separator:a2dba063368b4cd9c089f0b60e0977aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fe1c8c6211014c7eb69914a277f9ff2" id="r_a0fe1c8c6211014c7eb69914a277f9ff2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fe1c8c6211014c7eb69914a277f9ff2">new_initial_state</a> (self)</td></tr>
 <tr class="separator:a0fe1c8c6211014c7eb69914a277f9ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,7 +125,36 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa05fe69a9d0ccb4e36bccf4309e4525a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A Python version of the Tic-Tac-Toe game.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><pre class="fragment">A Python version of the Tic-Tac-Toe game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00064">64</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2dba063368b4cd9c089f0b60e0977aab" name="a2dba063368b4cd9c089f0b60e0977aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dba063368b4cd9c089f0b60e0977aab">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.games.tic_tac_toe.TicTacToeGame.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>params</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00067">67</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   67</span>  <span class="keyword">def </span>__init__(self, params=None):</div>
+<div class="line"><span class="lineno">   68</span>    super().__init__(_GAME_TYPE, _GAME_INFO, params <span class="keywordflow">or</span> dict())</div>
+<div class="line"><span class="lineno">   69</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa05fe69a9d0ccb4e36bccf4309e4525a" name="aa05fe69a9d0ccb4e36bccf4309e4525a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa05fe69a9d0ccb4e36bccf4309e4525a">&#9670;&#160;</a></span>make_py_observer()</h2>
 
@@ -151,6 +179,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns an object used for observing game state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00074">74</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>  <span class="keyword">def </span>make_py_observer(self, iig_obs_type=None, params=None):</div>
+<div class="line"><span class="lineno">   75</span>    <span class="stringliteral">&quot;&quot;&quot;Returns an object used for observing game state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">if</span> ((iig_obs_type <span class="keywordflow">is</span> <span class="keywordtype">None</span>) <span class="keywordflow">or</span></div>
+<div class="line"><span class="lineno">   77</span>        (iig_obs_type.public_info <span class="keywordflow">and</span> <span class="keywordflow">not</span> iig_obs_type.perfect_recall)):</div>
+<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">return</span> BoardObserver(params)</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><span class="lineno">   80</span>      <span class="keywordflow">return</span> IIGObserverForPublicInfoGame(iig_obs_type, params)</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a0fe1c8c6211014c7eb69914a277f9ff2" name="a0fe1c8c6211014c7eb69914a277f9ff2"></a>
@@ -168,10 +207,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns a state corresponding to the start of a game.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html#l00070">70</a> of file <a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>  <span class="keyword">def </span>new_initial_state(self):</div>
+<div class="line"><span class="lineno">   71</span>    <span class="stringliteral">&quot;&quot;&quot;Returns a state corresponding to the start of a game.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> TicTacToeState(self)</div>
+<div class="line"><span class="lineno">   73</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/games/<b>tic_tac_toe.py</b></li>
+<li>open_spiel/python/games/<a class="el" href="../../dc/de4/tic__tac__toe_8py_source.html">tic_tac_toe.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

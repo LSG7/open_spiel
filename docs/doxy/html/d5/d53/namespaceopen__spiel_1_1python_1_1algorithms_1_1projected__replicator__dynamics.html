@@ -152,7 +152,30 @@ Args:
 
 Returns:
   Projected distribution.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00074">74</a> of file <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html">projected_replicator_dynamics.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span><span class="keyword">def </span>_approx_simplex_projection(updated_strategy, gamma=0.0):</div>
+<div class="line"><span class="lineno">   75</span>  <span class="stringliteral">&quot;&quot;&quot;Approximately projects the distribution in updated_x to have minimal probabilities.</span></div>
+<div class="line"><span class="lineno">   76</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   77</span><span class="stringliteral">  Minimal probabilities are set as gamma, and the probabilities are then</span></div>
+<div class="line"><span class="lineno">   78</span><span class="stringliteral">  renormalized to sum to 1.</span></div>
+<div class="line"><span class="lineno">   79</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   80</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   81</span><span class="stringliteral">    updated_strategy: New distribution value after being updated by update rule.</span></div>
+<div class="line"><span class="lineno">   82</span><span class="stringliteral">    gamma: minimal probability value when divided by number of actions.</span></div>
+<div class="line"><span class="lineno">   83</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   84</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   85</span><span class="stringliteral">    Projected distribution.</span></div>
+<div class="line"><span class="lineno">   86</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   87</span>  <span class="comment"># Epsilon approximation of L2-norm projection onto the Delta_gamma space.</span></div>
+<div class="line"><span class="lineno">   88</span>  updated_strategy[updated_strategy &lt; gamma] = gamma</div>
+<div class="line"><span class="lineno">   89</span>  updated_strategy = updated_strategy / np.sum(updated_strategy)</div>
+<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">return</span> updated_strategy</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00123">open_spiel.python.algorithms.projected_replicator_dynamics._projected_replicator_dynamics_step()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d53/namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics_ad3596e854dab9e97d93f6a97515a7fd2_icgraph.png" border="0" usemap="#ad5/d53/namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics_ad3596e854dab9e97d93f6a97515a7fd2_icgraph" alt=""/></div>
@@ -215,7 +238,40 @@ Args:
 Returns:
   Vector of expected returns for each action of player [the player indexed by
     index_avoided].
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00026">26</a> of file <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html">projected_replicator_dynamics.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span><span class="keyword">def </span>_partial_multi_dot(player_payoff_tensor, strategies, index_avoided):</div>
+<div class="line"><span class="lineno">   27</span>  <span class="stringliteral">&quot;&quot;&quot;Computes a generalized dot product avoiding one dimension.</span></div>
+<div class="line"><span class="lineno">   28</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   29</span><span class="stringliteral">  This is used to directly get the expected return of a given action, given</span></div>
+<div class="line"><span class="lineno">   30</span><span class="stringliteral">  other players&#39; strategies, for the player indexed by index_avoided.</span></div>
+<div class="line"><span class="lineno">   31</span><span class="stringliteral">  Note that the numpy.dot function is used to compute this product, as it ended</span></div>
+<div class="line"><span class="lineno">   32</span><span class="stringliteral">  up being (Slightly) faster in performance tests than np.tensordot. Using the</span></div>
+<div class="line"><span class="lineno">   33</span><span class="stringliteral">  reduce function proved slower for both np.dot and np.tensordot.</span></div>
+<div class="line"><span class="lineno">   34</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   35</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   36</span><span class="stringliteral">    player_payoff_tensor: payoff tensor for player[index_avoided], of dimension</span></div>
+<div class="line"><span class="lineno">   37</span><span class="stringliteral">      (dim(vector[0]), dim(vector[1]), ..., dim(vector[-1])).</span></div>
+<div class="line"><span class="lineno">   38</span><span class="stringliteral">    strategies: Meta strategy probabilities for each player.</span></div>
+<div class="line"><span class="lineno">   39</span><span class="stringliteral">    index_avoided: Player for which we do not compute the dot product.</span></div>
+<div class="line"><span class="lineno">   40</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   41</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   42</span><span class="stringliteral">    Vector of expected returns for each action of player [the player indexed by</span></div>
+<div class="line"><span class="lineno">   43</span><span class="stringliteral">      index_avoided].</span></div>
+<div class="line"><span class="lineno">   44</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   45</span>  new_axis_order = [index_avoided] + [</div>
+<div class="line"><span class="lineno">   46</span>      i <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(strategies)) <span class="keywordflow">if</span> (i != index_avoided)</div>
+<div class="line"><span class="lineno">   47</span>  ]</div>
+<div class="line"><span class="lineno">   48</span>  accumulator = np.transpose(player_payoff_tensor, new_axis_order)</div>
+<div class="line"><span class="lineno">   49</span>  <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(strategies) - 1, -1, -1):</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> i != index_avoided:</div>
+<div class="line"><span class="lineno">   51</span>      accumulator = np.dot(accumulator, strategies[i])</div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">return</span> accumulator</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00123">open_spiel.python.algorithms.projected_replicator_dynamics._projected_replicator_dynamics_step()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d53/namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics_abaeae812ee0eb708273e6fffb8311f3b_icgraph.png" border="0" usemap="#ad5/d53/namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics_abaeae812ee0eb708273e6fffb8311f3b_icgraph" alt=""/></div>
@@ -268,6 +324,27 @@ Args:
 Returns:
   Projected distribution.
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00055">55</a> of file <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html">projected_replicator_dynamics.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span><span class="keyword">def </span>_project_distribution(updated_strategy, gamma):</div>
+<div class="line"><span class="lineno">   56</span>  <span class="stringliteral">&quot;&quot;&quot;Projects the distribution in updated_x to have minimal probabilities.</span></div>
+<div class="line"><span class="lineno">   57</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   58</span><span class="stringliteral">  Minimal probabilities are set as gamma, and the probabilities are then</span></div>
+<div class="line"><span class="lineno">   59</span><span class="stringliteral">  renormalized to sum to 1.</span></div>
+<div class="line"><span class="lineno">   60</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   61</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   62</span><span class="stringliteral">    updated_strategy: New distribution value after being updated by update rule.</span></div>
+<div class="line"><span class="lineno">   63</span><span class="stringliteral">    gamma: minimal probability value when divided by number of actions.</span></div>
+<div class="line"><span class="lineno">   64</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   65</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">   66</span><span class="stringliteral">    Projected distribution.</span></div>
+<div class="line"><span class="lineno">   67</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   68</span>  <span class="comment"># Epsilon approximation of L2-norm projection onto the Delta_gamma space.</span></div>
+<div class="line"><span class="lineno">   69</span>  updated_strategy[updated_strategy &lt; gamma] = gamma</div>
+<div class="line"><span class="lineno">   70</span>  updated_strategy = updated_strategy / np.sum(updated_strategy)</div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordflow">return</span> updated_strategy</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a040ee791e8cd53ebfa8a338997e9ce6b" name="a040ee791e8cd53ebfa8a338997e9ce6b"></a>
@@ -322,7 +399,46 @@ Args:
 
 Returns:
   A list of updated strategies for each player.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00122">122</a> of file <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html">projected_replicator_dynamics.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                        use_approx=<span class="keyword">False</span>):</div>
+<div class="line"><span class="lineno">  124</span>  <span class="stringliteral">&quot;&quot;&quot;Does one step of the projected replicator dynamics algorithm.</span></div>
+<div class="line"><span class="lineno">  125</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  126</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  127</span><span class="stringliteral">    payoff_tensors: List of payoff tensors for each player.</span></div>
+<div class="line"><span class="lineno">  128</span><span class="stringliteral">    strategies: List of the strategies used by each player.</span></div>
+<div class="line"><span class="lineno">  129</span><span class="stringliteral">    dt: Update amplitude term.</span></div>
+<div class="line"><span class="lineno">  130</span><span class="stringliteral">    gamma: Minimum exploratory probability term.</span></div>
+<div class="line"><span class="lineno">  131</span><span class="stringliteral">    use_approx: use approximate simplex projection.</span></div>
+<div class="line"><span class="lineno">  132</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  133</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  134</span><span class="stringliteral">    A list of updated strategies for each player.</span></div>
+<div class="line"><span class="lineno">  135</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>  <span class="comment"># TODO(author4): Investigate whether this update could be fully vectorized.</span></div>
+<div class="line"><span class="lineno">  138</span>  new_strategies = []</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">for</span> player <span class="keywordflow">in</span> range(len(payoff_tensors)):</div>
+<div class="line"><span class="lineno">  140</span>    current_payoff_tensor = payoff_tensors[player]</div>
+<div class="line"><span class="lineno">  141</span>    current_strategy = strategies[player]</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    values_per_strategy = _partial_multi_dot(current_payoff_tensor, strategies,</div>
+<div class="line"><span class="lineno">  144</span>                                             player)</div>
+<div class="line"><span class="lineno">  145</span>    average_return = np.dot(values_per_strategy, current_strategy)</div>
+<div class="line"><span class="lineno">  146</span>    delta = current_strategy * (values_per_strategy - average_return)</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    updated_strategy = current_strategy + dt * delta</div>
+<div class="line"><span class="lineno">  149</span>    updated_strategy = (</div>
+<div class="line"><span class="lineno">  150</span>        _approx_simplex_projection(updated_strategy, gamma) <span class="keywordflow">if</span> use_approx</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordflow">else</span> _simplex_projection(updated_strategy, gamma))</div>
+<div class="line"><span class="lineno">  152</span>    new_strategies.append(updated_strategy)</div>
+<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">return</span> new_strategies</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00074">open_spiel.python.algorithms.projected_replicator_dynamics._approx_simplex_projection()</a>, and <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00026">open_spiel.python.algorithms.projected_replicator_dynamics._partial_multi_dot()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00163">open_spiel.python.algorithms.projected_replicator_dynamics.projected_replicator_dynamics()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d53/namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics_a040ee791e8cd53ebfa8a338997e9ce6b_cgraph.png" border="0" usemap="#ad5/d53/namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics_a040ee791e8cd53ebfa8a338997e9ce6b_cgraph" alt=""/></div>
@@ -392,6 +508,37 @@ Example: [0.4, 0.7, 0.6], 0.2 -- &gt; find lam=0.25
           --&gt; [max(0.4-0.25, 0.2), max(0.7-0.25, 0.2), max(0.6-0.25, 0.2)]
           --&gt; [0.2,  0.45, 0.35]
 </pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00093">93</a> of file <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html">projected_replicator_dynamics.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span><span class="keyword">def </span>_simplex_projection(updated_strategy, gamma=0.0):</div>
+<div class="line"><span class="lineno">   94</span>  <span class="stringliteral">&quot;&quot;&quot;Project updated_strategy on the closest point in L2-norm on gamma-simplex.</span></div>
+<div class="line"><span class="lineno">   95</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   96</span><span class="stringliteral">  Based on: https://eng.ucmerced.edu/people/wwang5/papers/SimplexProj.pdf</span></div>
+<div class="line"><span class="lineno">   97</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   98</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">   99</span><span class="stringliteral">    updated_strategy: New distribution value after being updated by update rule.</span></div>
+<div class="line"><span class="lineno">  100</span><span class="stringliteral">    gamma: minimal probability value when divided by number of actions.</span></div>
+<div class="line"><span class="lineno">  101</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  102</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  103</span><span class="stringliteral">    Projected distribution</span></div>
+<div class="line"><span class="lineno">  104</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  105</span><span class="stringliteral">  Algorithm description:</span></div>
+<div class="line"><span class="lineno">  106</span><span class="stringliteral">  It aims to find a scalar lam to be substracted by each dimension of v</span></div>
+<div class="line"><span class="lineno">  107</span><span class="stringliteral">  with the restriction that the resulted quantity should lie in [gamma, 1]</span></div>
+<div class="line"><span class="lineno">  108</span><span class="stringliteral">  until the resulted vector summed up to 1</span></div>
+<div class="line"><span class="lineno">  109</span><span class="stringliteral">  Example: [0.4, 0.7, 0.6], 0.2 -- &gt; find lam=0.25</span></div>
+<div class="line"><span class="lineno">  110</span><span class="stringliteral">            --&gt; [max(0.4-0.25, 0.2), max(0.7-0.25, 0.2), max(0.6-0.25, 0.2)]</span></div>
+<div class="line"><span class="lineno">  111</span><span class="stringliteral">            --&gt; [0.2,  0.45, 0.35]</span></div>
+<div class="line"><span class="lineno">  112</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>  n = len(updated_strategy)</div>
+<div class="line"><span class="lineno">  115</span>  idx = np.arange(1, n + 1)</div>
+<div class="line"><span class="lineno">  116</span>  u = np.sort(updated_strategy)[::-1]</div>
+<div class="line"><span class="lineno">  117</span>  u_tmp = (1 - np.cumsum(u) - (n - idx) * gamma) / idx</div>
+<div class="line"><span class="lineno">  118</span>  rho = np.searchsorted(u + u_tmp &lt;= gamma, <span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">return</span> np.maximum(updated_strategy + u_tmp[rho - 1], gamma)</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span> </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a95c5e14e8de783a67408c5d04f88b931" name="a95c5e14e8de783a67408c5d04f88b931"></a>
@@ -461,7 +608,51 @@ Args:
 
 Returns:
   PRD-computed strategies.
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00156">156</a> of file <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html">projected_replicator_dynamics.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>                                  **unused_kwargs):</div>
+<div class="line"><span class="lineno">  164</span>  <span class="stringliteral">&quot;&quot;&quot;The Projected Replicator Dynamics algorithm.</span></div>
+<div class="line"><span class="lineno">  165</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  166</span><span class="stringliteral">  Args:</span></div>
+<div class="line"><span class="lineno">  167</span><span class="stringliteral">    payoff_tensors: List of payoff tensors for each player.</span></div>
+<div class="line"><span class="lineno">  168</span><span class="stringliteral">    prd_initial_strategies: Initial list of the strategies used by each player,</span></div>
+<div class="line"><span class="lineno">  169</span><span class="stringliteral">      if any. Could be used to speed up the search by providing a good initial</span></div>
+<div class="line"><span class="lineno">  170</span><span class="stringliteral">      solution.</span></div>
+<div class="line"><span class="lineno">  171</span><span class="stringliteral">    prd_iterations: Number of algorithmic steps to take before returning an</span></div>
+<div class="line"><span class="lineno">  172</span><span class="stringliteral">      answer.</span></div>
+<div class="line"><span class="lineno">  173</span><span class="stringliteral">    prd_dt: Update amplitude term.</span></div>
+<div class="line"><span class="lineno">  174</span><span class="stringliteral">    prd_gamma: Minimum exploratory probability term.</span></div>
+<div class="line"><span class="lineno">  175</span><span class="stringliteral">    average_over_last_n_strategies: Running average window size for average</span></div>
+<div class="line"><span class="lineno">  176</span><span class="stringliteral">      policy computation. If None, use the whole trajectory.</span></div>
+<div class="line"><span class="lineno">  177</span><span class="stringliteral">    use_approx: use the approximate simplex projection.</span></div>
+<div class="line"><span class="lineno">  178</span><span class="stringliteral">    **unused_kwargs: Convenient way of exposing an API compatible with other</span></div>
+<div class="line"><span class="lineno">  179</span><span class="stringliteral">      methods with possibly different arguments.</span></div>
+<div class="line"><span class="lineno">  180</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">  181</span><span class="stringliteral">  Returns:</span></div>
+<div class="line"><span class="lineno">  182</span><span class="stringliteral">    PRD-computed strategies.</span></div>
+<div class="line"><span class="lineno">  183</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">  184</span>  number_players = len(payoff_tensors)</div>
+<div class="line"><span class="lineno">  185</span>  <span class="comment"># Number of actions available to each player.</span></div>
+<div class="line"><span class="lineno">  186</span>  action_space_shapes = payoff_tensors[0].shape</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>  <span class="comment"># If no initial starting position is given, start with uniform probabilities.</span></div>
+<div class="line"><span class="lineno">  189</span>  new_strategies = prd_initial_strategies <span class="keywordflow">or</span> [</div>
+<div class="line"><span class="lineno">  190</span>      np.ones(action_space_shapes[k]) / action_space_shapes[k]</div>
+<div class="line"><span class="lineno">  191</span>      <span class="keywordflow">for</span> k <span class="keywordflow">in</span> range(number_players)</div>
+<div class="line"><span class="lineno">  192</span>  ]</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>  averager = nfg_utils.StrategyAverager(number_players, action_space_shapes,</div>
+<div class="line"><span class="lineno">  195</span>                                        average_over_last_n_strategies)</div>
+<div class="line"><span class="lineno">  196</span>  averager.append(new_strategies)</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>  <span class="keywordflow">for</span> _ <span class="keywordflow">in</span> range(prd_iterations):</div>
+<div class="line"><span class="lineno">  199</span>    new_strategies = _projected_replicator_dynamics_step(</div>
+<div class="line"><span class="lineno">  200</span>        payoff_tensors, new_strategies, prd_dt, prd_gamma, use_approx)</div>
+<div class="line"><span class="lineno">  201</span>    averager.append(new_strategies)</div>
+<div class="line"><span class="lineno">  202</span>  <span class="keywordflow">return</span> averager.average_strategies()</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d9c/projected__replicator__dynamics_8py_source.html#l00123">open_spiel.python.algorithms.projected_replicator_dynamics._projected_replicator_dynamics_step()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d53/namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics_a95c5e14e8de783a67408c5d04f88b931_cgraph.png" border="0" usemap="#ad5/d53/namespaceopen__spiel_1_1python_1_1algorithms_1_1projected__replicator__dynamics_a95c5e14e8de783a67408c5d04f88b931_cgraph" alt=""/></div>

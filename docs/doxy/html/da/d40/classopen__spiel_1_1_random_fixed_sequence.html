@@ -117,8 +117,7 @@ Collaboration diagram for open_spiel::RandomFixedSequence:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae5009f27f3a0ac7cc032ecfc44978763" id="r_ae5009f27f3a0ac7cc032ecfc44978763"><td class="memItemLeft" align="right" valign="top"><a id="ae5009f27f3a0ac7cc032ecfc44978763" name="ae5009f27f3a0ac7cc032ecfc44978763"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RandomFixedSequence</b> (std::initializer_list&lt; double &gt; l)</td></tr>
+<tr class="memitem:ae5009f27f3a0ac7cc032ecfc44978763" id="r_ae5009f27f3a0ac7cc032ecfc44978763"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5009f27f3a0ac7cc032ecfc44978763">RandomFixedSequence</a> (std::initializer_list&lt; double &gt; l)</td></tr>
 <tr class="separator:ae5009f27f3a0ac7cc032ecfc44978763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee10df10e7ea107b42baf504b55e9de5" id="r_aee10df10e7ea107b42baf504b55e9de5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee10df10e7ea107b42baf504b55e9de5">RandomUniform</a> () final</td></tr>
 <tr class="separator:aee10df10e7ea107b42baf504b55e9de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +126,38 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Random</b> (const <a class="el" href="../../d3/de2/classopen__spiel_1_1_random.html">Random</a> &amp;)=default</td></tr>
 <tr class="separator:a7896e71cc46606199797e00b773e03d5 inherit pub_methods_classopen__spiel_1_1_random"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d0/d2c/utils_2random_8h_source.html#l00055">55</a> of file <a class="el" href="../../d0/d2c/utils_2random_8h_source.html">random.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae5009f27f3a0ac7cc032ecfc44978763" name="ae5009f27f3a0ac7cc032ecfc44978763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5009f27f3a0ac7cc032ecfc44978763">&#9670;&#160;</a></span>RandomFixedSequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel::RandomFixedSequence::RandomFixedSequence </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; double &gt;</td>          <td class="paramname"><span class="paramname"><em>l</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d2c/utils_2random_8h_source.html#l00061">61</a> of file <a class="el" href="../../d0/d2c/utils_2random_8h_source.html">random.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>: values_(l) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aee10df10e7ea107b42baf504b55e9de5" name="aee10df10e7ea107b42baf504b55e9de5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee10df10e7ea107b42baf504b55e9de5">&#9670;&#160;</a></span>RandomUniform()</h2>
@@ -153,11 +184,18 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d3/de2/classopen__spiel_1_1_random.html">open_spiel::Random</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="../../df/d1f/random_8cc_source.html#l00026">26</a> of file <a class="el" href="../../df/d1f/random_8cc_source.html">random.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>                                          {</div>
+<div class="line"><span class="lineno">   27</span>  <span class="keywordtype">double</span> v = values_[position_];</div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordflow">if</span> (++position_ == values_.size()) position_ = 0;</div>
+<div class="line"><span class="lineno">   29</span>  <span class="keywordflow">return</span> v;</div>
+<div class="line"><span class="lineno">   30</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>open_spiel/utils/<a class="el" href="../../d0/d2c/utils_2random_8h_source.html">random.h</a></li>
-<li>open_spiel/utils/<b>random.cc</b></li>
+<li>open_spiel/utils/<a class="el" href="../../df/d1f/random_8cc_source.html">random.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

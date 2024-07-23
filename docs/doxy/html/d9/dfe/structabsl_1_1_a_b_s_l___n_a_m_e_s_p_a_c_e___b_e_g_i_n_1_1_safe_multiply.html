@@ -105,12 +105,60 @@ Collaboration diagram for absl::ABSL_NAMESPACE_BEGIN::SafeMultiply&lt; Ignored &
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3fbc5b022a2acf995a4d81be52b61397" id="r_a3fbc5b022a2acf995a4d81be52b61397"><td class="memItemLeft" align="right" valign="top"><a id="a3fbc5b022a2acf995a4d81be52b61397" name="a3fbc5b022a2acf995a4d81be52b61397"></a>
-<a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a> a, <a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a> b) const</td></tr>
+<tr class="memitem:a3fbc5b022a2acf995a4d81be52b61397" id="r_a3fbc5b022a2acf995a4d81be52b61397"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fbc5b022a2acf995a4d81be52b61397">operator()</a> (<a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a> a, <a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a> b) const</td></tr>
 <tr class="separator:a3fbc5b022a2acf995a4d81be52b61397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename Ignored&gt;<br />
+struct absl::ABSL_NAMESPACE_BEGIN::SafeMultiply&lt; Ignored &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../db/dba/duration_8cc_source.html#l00219">219</a> of file <a class="el" href="../../db/dba/duration_8cc_source.html">duration.cc</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3fbc5b022a2acf995a4d81be52b61397" name="a3fbc5b022a2acf995a4d81be52b61397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fbc5b022a2acf995a4d81be52b61397">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Ignored &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a> <a class="el" href="../../d9/dfe/structabsl_1_1_a_b_s_l___n_a_m_e_s_p_a_c_e___b_e_g_i_n_1_1_safe_multiply.html">absl::ABSL_NAMESPACE_BEGIN::SafeMultiply</a>&lt; Ignored &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/da5/classabsl_1_1uint128.html">uint128</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/dba/duration_8cc_source.html#l00220">220</a> of file <a class="el" href="../../db/dba/duration_8cc_source.html">duration.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  220</span>                                                 {</div>
+<div class="line"><span class="lineno">  221</span>    <span class="comment">// b hi is always zero because it originated as an int64_t.</span></div>
+<div class="line"><span class="lineno">  222</span>    assert(Uint128High64(b) == 0);</div>
+<div class="line"><span class="lineno">  223</span>    <span class="comment">// Fastpath to avoid the expensive overflow check with division.</span></div>
+<div class="line"><span class="lineno">  224</span>    <span class="keywordflow">if</span> (Uint128High64(a) == 0) {</div>
+<div class="line"><span class="lineno">  225</span>      <span class="keywordflow">return</span> (((Uint128Low64(a) | Uint128Low64(b)) &gt;&gt; 32) == 0)</div>
+<div class="line"><span class="lineno">  226</span>                 ? <span class="keyword">static_cast&lt;</span>uint128<span class="keyword">&gt;</span>(Uint128Low64(a) * Uint128Low64(b))</div>
+<div class="line"><span class="lineno">  227</span>                 : a * b;</div>
+<div class="line"><span class="lineno">  228</span>    }</div>
+<div class="line"><span class="lineno">  229</span>    <span class="keywordflow">return</span> b == 0 ? b : (a &gt; kuint128max / b) ? kuint128max : a * b;</div>
+<div class="line"><span class="lineno">  230</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>open_spiel/abseil-cpp/absl/time/<b>duration.cc</b></li>
+<li>open_spiel/abseil-cpp/absl/time/<a class="el" href="../../db/dba/duration_8cc_source.html">duration.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

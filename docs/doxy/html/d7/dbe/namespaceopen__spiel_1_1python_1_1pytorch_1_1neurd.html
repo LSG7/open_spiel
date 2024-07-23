@@ -145,7 +145,20 @@ Shayegan Omidshafiei, Daniel Hennes, Dustin Morrill, Remi Munos,
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Zeros out `regrets` where `logits` are too negative or too large.</pre> <div class="dynheader">
+<pre class="fragment">Zeros out `regrets` where `logits` are too negative or too large.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html#l00034">34</a> of file <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html">neurd.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span><span class="keyword">def </span>thresholded(logits, regrets, threshold=2.0):</div>
+<div class="line"><span class="lineno">   35</span>  <span class="stringliteral">&quot;&quot;&quot;Zeros out `regrets` where `logits` are too negative or too large.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   36</span>  can_decrease = torch.gt(logits, -threshold).float()</div>
+<div class="line"><span class="lineno">   37</span>  can_increase = torch.lt(logits, threshold).float()</div>
+<div class="line"><span class="lineno">   38</span>  regrets_negative = torch.minimum(regrets, torch.Tensor([0.0]))</div>
+<div class="line"><span class="lineno">   39</span>  regrets_positive = torch.maximum(regrets, torch.Tensor([0.0]))</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordflow">return</span> can_decrease * regrets_negative + can_increase * regrets_positive</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html#l00048">open_spiel.python.pytorch.neurd.train()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dbe/namespaceopen__spiel_1_1python_1_1pytorch_1_1neurd_a15342ede42508fbed31334c539872393_icgraph.png" border="0" usemap="#ad7/dbe/namespaceopen__spiel_1_1python_1_1pytorch_1_1neurd_a15342ede42508fbed31334c539872393_icgraph" alt=""/></div>
@@ -196,7 +209,33 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Train NeuRD `model` on `data`.</pre> <div class="dynheader">
+<pre class="fragment">Train NeuRD `model` on `data`.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html#l00043">43</a> of file <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html">neurd.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>          autoencoder_loss=<span class="keywordtype">None</span>):</div>
+<div class="line"><span class="lineno">   49</span>  <span class="stringliteral">&quot;&quot;&quot;Train NeuRD `model` on `data`.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   50</span>  data = torch.utils.data.DataLoader(data, batch_size=batch_size, shuffle=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">for</span> x, regrets <span class="keywordflow">in</span> data:</div>
+<div class="line"><span class="lineno">   53</span>    output = model(x, training=<span class="keyword">True</span>)</div>
+<div class="line"><span class="lineno">   54</span>    logits = output[:, :1]</div>
+<div class="line"><span class="lineno">   55</span>    logits = logits - torch.mean(logits)</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    regrets = thresholded(logits, regrets, threshold=threshold).detach()</div>
+<div class="line"><span class="lineno">   58</span>    utility = torch.mean(logits * regrets)</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">if</span> autoencoder_loss <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><span class="lineno">   61</span>      utility = utility - autoencoder_loss(x, output[:, 1:])</div>
+<div class="line"><span class="lineno">   62</span>    model.zero_grad()</div>
+<div class="line"><span class="lineno">   63</span>    utility.backward()</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keyword">with</span> torch.no_grad():</div>
+<div class="line"><span class="lineno">   65</span>      <span class="keywordflow">for</span> var <span class="keywordflow">in</span> model.layers.parameters():</div>
+<div class="line"><span class="lineno">   66</span>        new_var = var + step_size * var.grad</div>
+<div class="line"><span class="lineno">   67</span>        var.copy_(new_var)</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d5/d13/pytorch_2neurd_8py_source.html#l00034">open_spiel.python.pytorch.neurd.thresholded()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/dbe/namespaceopen__spiel_1_1python_1_1pytorch_1_1neurd_a27c09347c6e8726c2d2021dfb235ace2_cgraph.png" border="0" usemap="#ad7/dbe/namespaceopen__spiel_1_1python_1_1pytorch_1_1neurd_a27c09347c6e8726c2d2021dfb235ace2_cgraph" alt=""/></div>

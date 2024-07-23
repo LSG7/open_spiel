@@ -126,7 +126,37 @@ Functions</h2></td></tr>
 <pre class="fragment">Example usage of multiagent Nash Q-learner.
 
 Based on https://www.jmlr.org/papers/volume4/hu03a/hu03a.pdf
-</pre> <div class="dynheader">
+</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d34/marl__nashq__example_8py_source.html#l00042">42</a> of file <a class="el" href="../../d9/d34/marl__nashq__example_8py_source.html">marl_nashq_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span><span class="keyword">def </span>marl_path_finding_example(_):</div>
+<div class="line"><span class="lineno">   43</span>  <span class="stringliteral">&quot;&quot;&quot;Example usage of multiagent Nash Q-learner.</span></div>
+<div class="line"><span class="lineno">   44</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   45</span><span class="stringliteral">  Based on https://www.jmlr.org/papers/volume4/hu03a/hu03a.pdf</span></div>
+<div class="line"><span class="lineno">   46</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>  logging.info(<span class="stringliteral">&quot;Creating the Grid Game&quot;</span>)</div>
+<div class="line"><span class="lineno">   49</span>  env = rl_environment.Environment(</div>
+<div class="line"><span class="lineno">   50</span>      <span class="stringliteral">&quot;pathfinding&quot;</span>, grid=<span class="stringliteral">&quot;B.A\n...\na.b&quot;</span>, players=2, step_reward=-1.)</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>  qlearner = QLearner(0, env.game.num_distinct_actions())</div>
+<div class="line"><span class="lineno">   53</span>  nashqlearner = MAQLearner(1, 2, [env.game.num_distinct_actions()] * 2,</div>
+<div class="line"><span class="lineno">   54</span>                            TwoPlayerNashSolver())</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>  time_step = env.reset()</div>
+<div class="line"><span class="lineno">   57</span>  actions = [<span class="keywordtype">None</span>, <span class="keywordtype">None</span>]</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">while</span> <span class="keywordflow">not</span> time_step.last():</div>
+<div class="line"><span class="lineno">   60</span>    actions = [</div>
+<div class="line"><span class="lineno">   61</span>        qlearner.step(time_step).action,</div>
+<div class="line"><span class="lineno">   62</span>        nashqlearner.step(time_step, actions).action</div>
+<div class="line"><span class="lineno">   63</span>    ]</div>
+<div class="line"><span class="lineno">   64</span>    time_step = env.step(actions)</div>
+<div class="line"><span class="lineno">   65</span>    print_iteration(actions, env.get_state)</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span> </div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d34/marl__nashq__example_8py_source.html#l00034">open_spiel.python.examples.marl_nashq_example.print_iteration()</a>.</p>
+<div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d37/namespaceopen__spiel_1_1python_1_1examples_1_1marl__nashq__example_a503b71fb4d383ceab3da290c1cce726e_cgraph.png" border="0" usemap="#ad2/d37/namespaceopen__spiel_1_1python_1_1examples_1_1marl__nashq__example_a503b71fb4d383ceab3da290c1cce726e_cgraph" alt=""/></div>
@@ -157,7 +187,19 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Print actions and state.</pre> <div class="dynheader">
+<pre class="fragment">Print actions and state.</pre> 
+<p class="definition">Definition at line <a class="el" href="../../d9/d34/marl__nashq__example_8py_source.html#l00034">34</a> of file <a class="el" href="../../d9/d34/marl__nashq__example_8py_source.html">marl_nashq_example.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span><span class="keyword">def </span>print_iteration(actions, state):</div>
+<div class="line"><span class="lineno">   35</span>  <span class="stringliteral">&quot;&quot;&quot;Print actions and state.&quot;&quot;&quot;</span></div>
+<div class="line"><span class="lineno">   36</span>  logging.info(<span class="stringliteral">&quot;Action taken by agent 0: %s&quot;</span>, Action(actions[0]).name)</div>
+<div class="line"><span class="lineno">   37</span>  logging.info(<span class="stringliteral">&quot;Action taken by agent 1: %s&quot;</span>, Action(actions[1]).name)</div>
+<div class="line"><span class="lineno">   38</span>  logging.info(<span class="stringliteral">&quot;Board state:\n %s&quot;</span>, state)</div>
+<div class="line"><span class="lineno">   39</span>  logging.info(<span class="stringliteral">&quot;-&quot;</span> * 80)</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span> </div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d9/d34/marl__nashq__example_8py_source.html#l00042">open_spiel.python.examples.marl_nashq_example.marl_path_finding_example()</a>.</p>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d37/namespaceopen__spiel_1_1python_1_1examples_1_1marl__nashq__example_ac51de7af9326c1a84ac7670b1779bc41_icgraph.png" border="0" usemap="#ad2/d37/namespaceopen__spiel_1_1python_1_1examples_1_1marl__nashq__example_ac51de7af9326c1a84ac7670b1779bc41_icgraph" alt=""/></div>

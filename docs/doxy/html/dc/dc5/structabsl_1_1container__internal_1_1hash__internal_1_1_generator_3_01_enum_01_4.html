@@ -105,10 +105,49 @@ Collaboration diagram for absl::container_internal::hash_internal::Generator&lt;
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a594dc220343a6c391f580ed84481ef48" id="r_a594dc220343a6c391f580ed84481ef48"><td class="memItemLeft" align="right" valign="top"><a id="a594dc220343a6c391f580ed84481ef48" name="a594dc220343a6c391f580ed84481ef48"></a>
-Enum&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> () const</td></tr>
+<tr class="memitem:a594dc220343a6c391f580ed84481ef48" id="r_a594dc220343a6c391f580ed84481ef48"><td class="memItemLeft" align="right" valign="top">Enum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a594dc220343a6c391f580ed84481ef48">operator()</a> () const</td></tr>
 <tr class="separator:a594dc220343a6c391f580ed84481ef48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html#l00079">79</a> of file <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html">hash_generator_testing.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a594dc220343a6c391f580ed84481ef48" name="a594dc220343a6c391f580ed84481ef48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a594dc220343a6c391f580ed84481ef48">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Enum <a class="el" href="../../d6/de7/structabsl_1_1container__internal_1_1hash__internal_1_1_generator.html">absl::container_internal::hash_internal::Generator</a>&lt; Enum &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html#l00080">80</a> of file <a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html">hash_generator_testing.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                          {</div>
+<div class="line"><span class="lineno">   81</span>    std::uniform_int_distribution&lt;typename std::underlying_type&lt;Enum&gt;::type&gt;</div>
+<div class="line"><span class="lineno">   82</span>        dist;</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><span class="lineno">   84</span>      <span class="keyword">auto</span> variate = dist(*GetSharedRng());</div>
+<div class="line"><span class="lineno">   85</span>      <span class="keywordflow">if</span> (variate != kEnumEmpty &amp;&amp; variate != kEnumDeleted)</div>
+<div class="line"><span class="lineno">   86</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>Enum<span class="keyword">&gt;</span>(variate);</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="line"><span class="lineno">   88</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/container/internal/<a class="el" href="../../db/d6c/hash__generator__testing_8h_source.html">hash_generator_testing.h</a></li>
 </ul>

@@ -105,11 +105,53 @@ Collaboration diagram for absl::variant_internal::FlattenIndices&lt; HeadSize, T
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a6c4b3bb4f6906653432d8b724f694899" id="r_a6c4b3bb4f6906653432d8b724f694899"><td class="memTemplParams" colspan="2"><a id="a6c4b3bb4f6906653432d8b724f694899" name="a6c4b3bb4f6906653432d8b724f694899"></a>
-template&lt;class... SizeType&gt; </td></tr>
-<tr class="memitem:a6c4b3bb4f6906653432d8b724f694899"><td class="memTemplItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Run</b> (std::size_t head, SizeType... tail)</td></tr>
+<tr class="memitem:a6c4b3bb4f6906653432d8b724f694899" id="r_a6c4b3bb4f6906653432d8b724f694899"><td class="memTemplParams" colspan="2">template&lt;class... SizeType&gt; </td></tr>
+<tr class="memitem:a6c4b3bb4f6906653432d8b724f694899"><td class="memTemplItemLeft" align="right" valign="top">static constexpr std::size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6c4b3bb4f6906653432d8b724f694899">Run</a> (std::size_t head, SizeType... tail)</td></tr>
 <tr class="separator:a6c4b3bb4f6906653432d8b724f694899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;std::size_t HeadSize, std::size_t... TailSize&gt;<br />
+struct absl::variant_internal::FlattenIndices&lt; HeadSize, TailSize... &gt;</div>
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00451">451</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6c4b3bb4f6906653432d8b724f694899" name="a6c4b3bb4f6906653432d8b724f694899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c4b3bb4f6906653432d8b724f694899">&#9670;&#160;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t HeadSize, std::size_t... TailSize&gt; </div>
+<div class="memtemplate">
+template&lt;class... SizeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr std::size_t <a class="el" href="../../db/d71/structabsl_1_1variant__internal_1_1_flatten_indices.html">absl::variant_internal::FlattenIndices</a>&lt; HeadSize, TailSize... &gt;::Run </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t</td>          <td class="paramname"><span class="paramname"><em>head</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SizeType...</td>          <td class="paramname"><span class="paramname"><em>tail</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d4/daa/internal_2variant_8h_source.html#l00453">453</a> of file <a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  453</span>                                                                   {</div>
+<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">return</span> head + HeadSize * FlattenIndices&lt;TailSize...&gt;::Run(tail...);</div>
+<div class="line"><span class="lineno">  455</span>  }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>open_spiel/abseil-cpp/absl/types/internal/<a class="el" href="../../d4/daa/internal_2variant_8h_source.html">variant.h</a></li>
 </ul>

@@ -117,12 +117,65 @@ Collaboration diagram for open_spiel.python.algorithms.stackelberg_lp_test.Stack
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad994484ba73e2c07e864861d33d0c8bf" id="r_ad994484ba73e2c07e864861d33d0c8bf"><td class="memItemLeft" align="right" valign="top"><a id="ad994484ba73e2c07e864861d33d0c8bf" name="ad994484ba73e2c07e864861d33d0c8bf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>test_simple_games</b> (self, game, commit_strategy, commit_value)</td></tr>
+<tr class="memitem:ad994484ba73e2c07e864861d33d0c8bf" id="r_ad994484ba73e2c07e864861d33d0c8bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad994484ba73e2c07e864861d33d0c8bf">test_simple_games</a> (self, game, commit_strategy, commit_value)</td></tr>
 <tr class="separator:ad994484ba73e2c07e864861d33d0c8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/stackelberg__lp__test_8py_source.html#l00044">44</a> of file <a class="el" href="../../d2/d08/stackelberg__lp__test_8py_source.html">stackelberg_lp_test.py</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad994484ba73e2c07e864861d33d0c8bf" name="ad994484ba73e2c07e864861d33d0c8bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad994484ba73e2c07e864861d33d0c8bf">&#9670;&#160;</a></span>test_simple_games()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">open_spiel.python.algorithms.stackelberg_lp_test.StackelbergLPTest.test_simple_games </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>game</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>commit_strategy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>commit_value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d08/stackelberg__lp__test_8py_source.html#l00051">51</a> of file <a class="el" href="../../d2/d08/stackelberg__lp__test_8py_source.html">stackelberg_lp_test.py</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>  <span class="keyword">def </span>test_simple_games(self, game, commit_strategy, commit_value):</div>
+<div class="line"><span class="lineno">   52</span>    leader_eq_strategy, _, leader_eq_value, _ = solve_stackelberg(game)</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keyword">with</span> self.subTest(<span class="stringliteral">&quot;optimal commitment&quot;</span>):</div>
+<div class="line"><span class="lineno">   55</span>      np.testing.assert_array_almost_equal(commit_strategy, leader_eq_strategy)</div>
+<div class="line"><span class="lineno">   56</span>      self.assertAlmostEqual(commit_value, leader_eq_value)</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    <span class="keyword">with</span> self.subTest(<span class="stringliteral">&quot;Leader-payoff in SSE no less than in NE&quot;</span>):</div>
+<div class="line"><span class="lineno">   59</span>      p_mat = game_payoffs_array(game)</div>
+<div class="line"><span class="lineno">   60</span>      nashpy_game = nash.Game(p_mat[0], p_mat[1])</div>
+<div class="line"><span class="lineno">   61</span>      <span class="keywordflow">for</span> eq <span class="keywordflow">in</span> nashpy_game.support_enumeration():</div>
+<div class="line"><span class="lineno">   62</span>        leader_nash_value = eq[0].reshape(1,</div>
+<div class="line"><span class="lineno">   63</span>                                          -1).dot(p_mat[0]).dot(eq[1].reshape(</div>
+<div class="line"><span class="lineno">   64</span>                                              -1, 1))</div>
+<div class="line"><span class="lineno">   65</span>        self.assertGreaterEqual(leader_eq_value - leader_nash_value, -EPS)</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span> </div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>open_spiel/python/algorithms/<b>stackelberg_lp_test.py</b></li>
+<li>open_spiel/python/algorithms/<a class="el" href="../../d2/d08/stackelberg__lp__test_8py_source.html">stackelberg_lp_test.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
