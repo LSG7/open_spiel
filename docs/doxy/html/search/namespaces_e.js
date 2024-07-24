@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['utils_0',['utils',['../d6/d84/namespaceutils.html',1,'']]]
+  ['typing_0',['typing',['../namespacetyping.html',1,'']]]
 ];

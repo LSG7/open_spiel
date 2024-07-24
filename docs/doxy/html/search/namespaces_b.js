@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['regret_5fmatching_0',['regret_matching',['../df/d91/namespaceregret__matching.html',1,'']]],
-  ['regret_5fmatching_5fagent_1',['regret_matching_agent',['../df/d00/namespaceregret__matching__agent.html',1,'']]],
-  ['regret_5fminimizer_2',['regret_minimizer',['../d1/d56/namespaceregret__minimizer.html',1,'']]],
-  ['rnn_5fmeta_5fselfplay_5fagent_3',['rnn_meta_selfplay_agent',['../d9/ddd/namespacernn__meta__selfplay__agent.html',1,'']]],
-  ['rnn_5fmodel_4',['rnn_model',['../d4/d16/namespacernn__model.html',1,'']]],
-  ['run_5fpython_5ftest_5ffile_5',['run_python_test_file',['../d6/dbf/namespacerun__python__test__file.html',1,'']]]
+  ['polynomial_5fweights_0',['polynomial_weights',['../namespacepolynomial__weights.html',1,'']]],
+  ['pybind11_1',['pybind11',['../namespacepybind11.html',1,'']]],
+  ['pybind11_3a_3adetail_2',['detail',['../namespacepybind11_1_1detail.html',1,'pybind11']]],
+  ['pybind11_3a_3agoogle_3',['google',['../namespacepybind11_1_1google.html',1,'pybind11']]],
+  ['pybind11_3a_3agoogle_3a_3ainternal_4',['internal',['../namespacepybind11_1_1google_1_1internal.html',1,'pybind11::google']]],
+  ['pybind11_3a_3atest_5',['test',['../namespacepybind11_1_1test.html',1,'pybind11']]]
 ];
