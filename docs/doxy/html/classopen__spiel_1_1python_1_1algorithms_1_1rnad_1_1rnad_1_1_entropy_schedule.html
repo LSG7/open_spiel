@@ -171,7 +171,7 @@ Args:
 <div class="line"><span class="lineno">   55</span><span class="stringliteral">        size from `sizes` to repeat.</span></div>
 <div class="line"><span class="lineno">   56</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
 <div class="line"><span class="lineno">   57</span>    <span class="keywordflow">try</span>:</div>
-<div class="line"><span class="lineno">   58</span>      <span class="keywordflow">if</span> <a class="code hl_variable" href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a>(repeats) != <a class="code hl_variable" href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a>(sizes):</div>
+<div class="line"><span class="lineno">   58</span>      <span class="keywordflow">if</span> len(repeats) != len(sizes):</div>
 <div class="line"><span class="lineno">   59</span>        <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&quot;`repeats` must be parallel to `sizes`.&quot;</span>)</div>
 <div class="line"><span class="lineno">   60</span>      <span class="keywordflow">if</span> <span class="keywordflow">not</span> sizes:</div>
 <div class="line"><span class="lineno">   61</span>        <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&quot;`sizes` and `repeats` must not be empty.&quot;</span>)</div>
@@ -192,10 +192,7 @@ Args:
 <div class="line"><span class="lineno">   76</span> </div>
 <div class="line"><span class="lineno">   77</span>    self.schedule = np.array(schedule, dtype=np.int32)</div>
 <div class="line"><span class="lineno">   78</span> </div>
-<div class="ttc" id="alow__level__alloc__test_8cc_html_afed088663f8704004425cdae2120b9b3"><div class="ttname"><a href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a></div><div class="ttdeci">int len</div><div class="ttdef"><b>Definition</b> <a href="low__level__alloc__test_8cc_source.html#l00046">low_level_alloc_test.cc:46</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="low__level__alloc__test_8cc_source.html#l00046">len</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>

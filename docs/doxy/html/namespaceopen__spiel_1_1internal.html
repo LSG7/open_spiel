@@ -97,10 +97,10 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0b89016d4868241c8c00def1362207fe" id="r_a0b89016d4868241c8c00def1362207fe"><td class="memTemplParams" colspan="2">template&lt;typename Out , typename T &gt; </td></tr>
-<tr class="memitem:a0b89016d4868241c8c00def1362207fe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0b89016d4868241c8c00def1362207fe">SpielStrOut</a> (Out &amp;<a class="el" href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a>, const T &amp;<a class="el" href="mutex_8cc.html#a9ce2ec4812a92cb6ab39f6e81e9173a9">arg</a>)</td></tr>
+<tr class="memitem:a0b89016d4868241c8c00def1362207fe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0b89016d4868241c8c00def1362207fe">SpielStrOut</a> (Out &amp;out, const T &amp;arg)</td></tr>
 <tr class="separator:a0b89016d4868241c8c00def1362207fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5afb648bb3b18a005f7ebf135e2b074" id="r_aa5afb648bb3b18a005f7ebf135e2b074"><td class="memTemplParams" colspan="2">template&lt;typename Out , typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:aa5afb648bb3b18a005f7ebf135e2b074"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa5afb648bb3b18a005f7ebf135e2b074">SpielStrOut</a> (Out &amp;<a class="el" href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a>, const T &amp;arg1, Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:aa5afb648bb3b18a005f7ebf135e2b074"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa5afb648bb3b18a005f7ebf135e2b074">SpielStrOut</a> (Out &amp;out, const T &amp;arg1, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:aa5afb648bb3b18a005f7ebf135e2b074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bcbdcb0a975ffcdf757709e755ab92e" id="r_a8bcbdcb0a975ffcdf757709e755ab92e"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a8bcbdcb0a975ffcdf757709e755ab92e"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8bcbdcb0a975ffcdf757709e755ab92e">SpielStrCat</a> (Args &amp;&amp;... args)</td></tr>
@@ -126,14 +126,13 @@ template&lt;typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="spiel__utils_8h_source.html#l00124">124</a> of file <a class="el" href="spiel__utils_8h_source.html">spiel_utils.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  124</span>                                      {</div>
-<div class="line"><span class="lineno">  125</span>  std::ostringstream <a class="code hl_variable" href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a>;</div>
-<div class="line"><span class="lineno">  126</span>  <a class="code hl_function" href="#a0b89016d4868241c8c00def1362207fe">SpielStrOut</a>(<a class="code hl_variable" href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a>, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a>.str();</div>
+<div class="line"><span class="lineno">  125</span>  std::ostringstream out;</div>
+<div class="line"><span class="lineno">  126</span>  <a class="code hl_function" href="#a0b89016d4868241c8c00def1362207fe">SpielStrOut</a>(out, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">return</span> out.str();</div>
 <div class="line"><span class="lineno">  128</span>}</div>
 <div class="ttc" id="anamespaceopen__spiel_1_1internal_html_a0b89016d4868241c8c00def1362207fe"><div class="ttname"><a href="#a0b89016d4868241c8c00def1362207fe">open_spiel::internal::SpielStrOut</a></div><div class="ttdeci">void SpielStrOut(Out &amp;out, const T &amp;arg)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8h_source.html#l00105">spiel_utils.h:105</a></div></div>
-<div class="ttc" id="aparser__test_8cc_html_a8905de849f303a8598c0f7c3d37d46ed"><div class="ttname"><a href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a></div><div class="ttdeci">std::string * out</div><div class="ttdef"><b>Definition</b> <a href="parser__test_8cc_source.html#l00337">parser_test.cc:337</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="parser__test_8cc_source.html#l00337">out</a>, and <a class="el" href="spiel__utils_8h_source.html#l00105">SpielStrOut()</a>.</p>
+<p class="reference">References <a class="el" href="spiel__utils_8h_source.html#l00105">SpielStrOut()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="spiel_8cc_source.html#l00670">open_spiel::GameTypeToString()</a>.</p>
 <div class="dynheader">
@@ -182,12 +181,9 @@ template&lt;typename Out , typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="spiel__utils_8h_source.html#l00105">105</a> of file <a class="el" href="spiel__utils_8h_source.html">spiel_utils.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  105</span>                                         {</div>
-<div class="line"><span class="lineno">  106</span>  <a class="code hl_variable" href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a> &lt;&lt; <a class="code hl_variable" href="mutex_8cc.html#a9ce2ec4812a92cb6ab39f6e81e9173a9">arg</a>;</div>
+<div class="line"><span class="lineno">  106</span>  out &lt;&lt; arg;</div>
 <div class="line"><span class="lineno">  107</span>}</div>
-<div class="ttc" id="amutex_8cc_html_a9ce2ec4812a92cb6ab39f6e81e9173a9"><div class="ttname"><a href="mutex_8cc.html#a9ce2ec4812a92cb6ab39f6e81e9173a9">arg</a></div><div class="ttdeci">void * arg</div><div class="ttdef"><b>Definition</b> <a href="mutex_8cc_source.html#l00013">mutex.cc:13</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="mutex_8cc_source.html#l00013">arg</a>, and <a class="el" href="parser__test_8cc_source.html#l00337">out</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="spiel__utils_8h_source.html#l00124">SpielStrCat()</a>, and <a class="el" href="spiel__utils_8h_source.html#l00110">SpielStrOut()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -234,11 +230,11 @@ template&lt;typename Out , typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="spiel__utils_8h_source.html#l00110">110</a> of file <a class="el" href="spiel__utils_8h_source.html">spiel_utils.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  110</span>                                                          {</div>
-<div class="line"><span class="lineno">  111</span>  <a class="code hl_variable" href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a> &lt;&lt; arg1;</div>
-<div class="line"><span class="lineno">  112</span>  <a class="code hl_function" href="#a0b89016d4868241c8c00def1362207fe">SpielStrOut</a>(<a class="code hl_variable" href="parser__test_8cc.html#a8905de849f303a8598c0f7c3d37d46ed">out</a>, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">  111</span>  out &lt;&lt; arg1;</div>
+<div class="line"><span class="lineno">  112</span>  <a class="code hl_function" href="#a0b89016d4868241c8c00def1362207fe">SpielStrOut</a>(out, std::forward&lt;Args&gt;(args)...);</div>
 <div class="line"><span class="lineno">  113</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="parser__test_8cc_source.html#l00337">out</a>, and <a class="el" href="spiel__utils_8h_source.html#l00105">SpielStrOut()</a>.</p>
+<p class="reference">References <a class="el" href="spiel__utils_8h_source.html#l00105">SpielStrOut()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

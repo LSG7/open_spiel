@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['egt_20toolbox_0',['Open Spiel Evolutionary Game Theory (EGT) Toolbox',['../md_open__spiel_2python_2egt_2_r_e_a_d_m_e.html',1,'']]],
-  ['env_1',['Env',['../md_open__spiel_2games_2_s_g_2_r_e_a_d_m_e.html',1,'']]],
-  ['evolutionary_20game_20theory_20egt_20toolbox_2',['Open Spiel Evolutionary Game Theory (EGT) Toolbox',['../md_open__spiel_2python_2egt_2_r_e_a_d_m_e.html',1,'']]],
-  ['experiments_3',['Reproducing routing game experiments',['../md_open__spiel_2data_2paper__data_2routing__game__experiments_2readme.html',1,'']]]
+  ['open_20spiel_20python_20api_0',['Open Spiel Python API',['../md_open__spiel_2python_2_r_e_a_d_m_e.html',1,'']]]
 ];

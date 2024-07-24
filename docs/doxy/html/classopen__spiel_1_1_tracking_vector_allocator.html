@@ -121,7 +121,7 @@ Collaboration diagram for open_spiel::TrackingVectorAllocator:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1aac5f591b14c63f59b679d87aa8c71b" id="r_a1aac5f591b14c63f59b679d87aa8c71b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aac5f591b14c63f59b679d87aa8c71b">TrackingVectorAllocator</a> ()</td></tr>
 <tr class="separator:a1aac5f591b14c63f59b679d87aa8c71b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7a4b3ec53cb80beec25e295d92599a9" id="r_ac7a4b3ec53cb80beec25e295d92599a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen__spiel_1_1_span_tensor.html">SpanTensor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7a4b3ec53cb80beec25e295d92599a9">Get</a> (<a class="el" href="classabsl_1_1string__view.html">absl::string_view</a> <a class="el" href="mutex_8cc.html#ac8b44a387cf3da062c4a32316b43962c">name</a>, const <a class="el" href="classabsl_1_1_inlined_vector.html">absl::InlinedVector</a>&lt; int, 4 &gt; &amp;shape) override</td></tr>
+<tr class="memitem:ac7a4b3ec53cb80beec25e295d92599a9" id="r_ac7a4b3ec53cb80beec25e295d92599a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopen__spiel_1_1_span_tensor.html">SpanTensor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7a4b3ec53cb80beec25e295d92599a9">Get</a> (absl::string_view name, const absl::InlinedVector&lt; int, 4 &gt; &amp;shape) override</td></tr>
 <tr class="separator:ac7a4b3ec53cb80beec25e295d92599a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b33c4f381cb9a2dfc4c6d8d00ff2e7a" id="r_a2b33c4f381cb9a2dfc4c6d8d00ff2e7a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classopen__spiel_1_1_span_tensor_info.html">SpanTensorInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b33c4f381cb9a2dfc4c6d8d00ff2e7a">tensors_info</a> () const</td></tr>
 <tr class="separator:a2b33c4f381cb9a2dfc4c6d8d00ff2e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,32 +192,19 @@ Public Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="observer_8h_source.html#l00201">201</a> of file <a class="el" href="observer_8h_source.html">observer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  201</span>{ <span class="keywordflow">return</span> data_; }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="algorithms_2alpha__zero_2alpha__zero_8py_source.html#l00096">open_spiel.python.algorithms.alpha_zero.alpha_zero.Buffer::__bool__()</a>, <a class="el" href="algorithms_2alpha__zero_2alpha__zero_8py_source.html#l00093">open_spiel.python.algorithms.alpha_zero.alpha_zero.Buffer::__len__()</a>, <a class="el" href="algorithms_2alpha__zero_2alpha__zero_8py_source.html#l00102">open_spiel.python.algorithms.alpha_zero.alpha_zero.Buffer::extend()</a>, <a class="el" href="observer_8cc_source.html#l00215">open_spiel::Observation::Observation()</a>, <a class="el" href="observer_8cc_source.html#l00380">open_spiel::ObserverTensorShape()</a>, <a class="el" href="algorithms_2alpha__zero_2alpha__zero_8py_source.html#l00108">open_spiel.python.algorithms.alpha_zero.alpha_zero.Buffer::sample()</a>, and <a class="el" href="observer_8cc_source.html#l00373">open_spiel::TensorFromObserver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="observer_8cc_source.html#l00215">open_spiel::Observation::Observation()</a>, <a class="el" href="observer_8cc_source.html#l00380">open_spiel::ObserverTensorShape()</a>, and <a class="el" href="observer_8cc_source.html#l00373">open_spiel::TensorFromObserver()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_tracking_vector_allocator_a94caba8e758ac00e63ec5236932aa721_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_tracking_vector_allocator_a94caba8e758ac00e63ec5236932aa721_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_tracking_vector_allocator_a94caba8e758ac00e63ec5236932aa721_icgraph" id="aclassopen__spiel_1_1_tracking_vector_allocator_a94caba8e758ac00e63ec5236932aa721_icgraph">
-<area shape="rect" title=" " alt="" coords="552,225,731,266"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#acaf3368ac60d8ae3a314934ee25de520" title=" " alt="" coords="279,5,504,46"/>
-<area shape="poly" title=" " alt="" coords="622,213,602,177,575,136,542,96,502,61,481,49,483,44,506,57,545,92,579,133,606,174,626,210"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#adc314bd789721037601428db31fd6a76" title=" " alt="" coords="279,71,504,111"/>
-<area shape="poly" title=" " alt="" coords="611,216,563,170,534,147,503,127,476,114,478,109,505,122,537,142,566,166,614,212"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#a173dc60f8b345f2339fdf0a61b61857b" title=" " alt="" coords="279,160,504,201"/>
-<area shape="poly" title=" " alt="" coords="546,223,471,204,473,199,547,218"/>
-<area shape="rect" href="classopen__spiel_1_1_observation.html#ac47e27b2a3474cac22dbc97d8152a63c" title=" " alt="" coords="311,225,472,266"/>
-<area shape="poly" title=" " alt="" coords="536,248,473,248,473,243,536,243"/>
-<area shape="rect" href="namespaceopen__spiel.html#a03fc20c0c2c07f8c196ebe7dd9f0c251" title=" " alt="" coords="300,291,483,331"/>
-<area shape="poly" title=" " alt="" coords="547,273,473,293,471,287,546,268"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#aa74e87eede519c6ad2aae68201950d5b" title=" " alt="" coords="279,356,504,397"/>
-<area shape="poly" title=" " alt="" coords="606,278,560,313,505,345,475,358,473,353,503,341,557,309,603,274"/>
-<area shape="rect" href="namespaceopen__spiel.html#a91fe25f1b974060eec9ada51abe43b78" title=" " alt="" coords="285,421,498,446"/>
-<area shape="poly" title=" " alt="" coords="623,281,576,348,543,382,505,411,479,423,477,418,503,406,539,378,572,344,619,278"/>
-<area shape="poly" title=" " alt="" coords="432,147,417,141,391,139,367,141,353,145,347,151,350,159,344,160,342,150,350,141,366,135,391,133,418,136,434,142"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#ae96aced19d667bfff55002f197ad257d" title=" " alt="" coords="5,160,231,201"/>
-<area shape="poly" title=" " alt="" coords="263,183,231,183,231,178,263,178"/>
-<area shape="rect" href="classopen__spiel_1_1kriegspiel_1_1_kriegspiel_game.html#a1064193bb301bd8bd7f55361bef9cdc4" title=" " alt="" coords="18,283,218,339"/>
-<area shape="poly" title=" " alt="" coords="284,314,218,314,218,308,284,308"/>
+<area shape="rect" title=" " alt="" coords="267,71,446,111"/>
+<area shape="rect" href="classopen__spiel_1_1_observation.html#ac47e27b2a3474cac22dbc97d8152a63c" title=" " alt="" coords="31,5,193,46"/>
+<area shape="poly" title=" " alt="" coords="263,69,190,49,192,44,264,64"/>
+<area shape="rect" href="namespaceopen__spiel.html#a03fc20c0c2c07f8c196ebe7dd9f0c251" title=" " alt="" coords="20,71,204,111"/>
+<area shape="poly" title=" " alt="" coords="251,94,204,94,204,88,251,88"/>
+<area shape="rect" href="namespaceopen__spiel.html#a91fe25f1b974060eec9ada51abe43b78" title=" " alt="" coords="5,136,219,161"/>
+<area shape="poly" title=" " alt="" coords="252,118,171,137,170,132,251,113"/>
 </map>
 </div>
 
@@ -249,27 +236,6 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="observer_8h_source.html#l00202">202</a> of file <a class="el" href="observer_8h_source.html">observer.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  202</span>{ <span class="keywordflow">return</span> data_; }</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="algorithms_2alpha__zero_2alpha__zero_8py_source.html#l00096">open_spiel.python.algorithms.alpha_zero.alpha_zero.Buffer::__bool__()</a>, <a class="el" href="algorithms_2alpha__zero_2alpha__zero_8py_source.html#l00093">open_spiel.python.algorithms.alpha_zero.alpha_zero.Buffer::__len__()</a>, <a class="el" href="algorithms_2alpha__zero_2alpha__zero_8py_source.html#l00102">open_spiel.python.algorithms.alpha_zero.alpha_zero.Buffer::extend()</a>, and <a class="el" href="algorithms_2alpha__zero_2alpha__zero_8py_source.html#l00108">open_spiel.python.algorithms.alpha_zero.alpha_zero.Buffer::sample()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classopen__spiel_1_1_tracking_vector_allocator_a1908b4c5b4c40c5fcf490353ce1fb4dc_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_tracking_vector_allocator_a1908b4c5b4c40c5fcf490353ce1fb4dc_icgraph" alt=""/></div>
-<map name="aclassopen__spiel_1_1_tracking_vector_allocator_a1908b4c5b4c40c5fcf490353ce1fb4dc_icgraph" id="aclassopen__spiel_1_1_tracking_vector_allocator_a1908b4c5b4c40c5fcf490353ce1fb4dc_icgraph">
-<area shape="rect" title=" " alt="" coords="552,116,731,157"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#acaf3368ac60d8ae3a314934ee25de520" title=" " alt="" coords="279,5,504,46"/>
-<area shape="poly" title=" " alt="" coords="594,110,551,85,503,61,470,49,472,44,505,57,553,80,597,105"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#adc314bd789721037601428db31fd6a76" title=" " alt="" coords="279,71,504,111"/>
-<area shape="poly" title=" " alt="" coords="536,120,504,114,505,109,537,115"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#a173dc60f8b345f2339fdf0a61b61857b" title=" " alt="" coords="279,160,504,201"/>
-<area shape="poly" title=" " alt="" coords="537,157,505,163,504,158,536,152"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#aa74e87eede519c6ad2aae68201950d5b" title=" " alt="" coords="279,225,504,266"/>
-<area shape="poly" title=" " alt="" coords="596,167,553,192,505,215,472,227,470,222,503,210,550,187,594,163"/>
-<area shape="poly" title=" " alt="" coords="432,147,417,141,391,139,367,141,353,145,347,151,350,159,344,160,342,150,350,141,366,135,391,133,418,136,434,142"/>
-<area shape="rect" href="classopen__spiel_1_1python_1_1algorithms_1_1alpha__zero_1_1alpha__zero_1_1_buffer.html#ae96aced19d667bfff55002f197ad257d" title=" " alt="" coords="5,160,231,201"/>
-<area shape="poly" title=" " alt="" coords="263,183,231,183,231,178,263,178"/>
-</map>
-</div>
-
 </div>
 </div>
 <a id="ac7a4b3ec53cb80beec25e295d92599a9" name="ac7a4b3ec53cb80beec25e295d92599a9"></a>
@@ -284,12 +250,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="classopen__spiel_1_1_span_tensor.html">SpanTensor</a> open_spiel::TrackingVectorAllocator::Get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+          <td class="paramtype">absl::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classabsl_1_1_inlined_vector.html">absl::InlinedVector</a>&lt; int, 4 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>&#160;)</td>
+          <td class="paramtype">const absl::InlinedVector&lt; int, 4 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -303,31 +269,27 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="observer_8cc_source.html#l00192">192</a> of file <a class="el" href="observer_8cc_source.html">observer.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  193</span>                                                                  {</div>
-<div class="line"><span class="lineno">  194</span>  <a class="code hl_define" href="spiel__utils_8h.html#a4347e9de74af6457a8509c6d13ab5a2e">SPIEL_DCHECK_TRUE</a>(IsNameUnique(<a class="code hl_variable" href="mutex_8cc.html#ac8b44a387cf3da062c4a32316b43962c">name</a>));</div>
+<div class="line"><span class="lineno">  194</span>  <a class="code hl_define" href="spiel__utils_8h.html#a4347e9de74af6457a8509c6d13ab5a2e">SPIEL_DCHECK_TRUE</a>(IsNameUnique(name));</div>
 <div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>  SpanTensorInfo <a class="code hl_variable" href="namespaceopen__spiel_1_1python_1_1games_1_1chat__games_1_1envs_1_1base__envs_1_1trade__fruit__with__info.html#a1cd11b8bd6cd75d8eda3eb965b4071fa">info</a>(<a class="code hl_variable" href="mutex_8cc.html#ac8b44a387cf3da062c4a32316b43962c">name</a>, shape);</div>
+<div class="line"><span class="lineno">  196</span>  SpanTensorInfo info(name, shape);</div>
 <div class="line"><span class="lineno">  197</span>  tensors_info_.push_back(info);</div>
 <div class="line"><span class="lineno">  198</span> </div>
 <div class="line"><span class="lineno">  199</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> offset = data_.size();</div>
-<div class="line"><span class="lineno">  200</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a> = <a class="code hl_variable" href="namespaceopen__spiel_1_1python_1_1games_1_1chat__games_1_1envs_1_1base__envs_1_1trade__fruit__with__info.html#a1cd11b8bd6cd75d8eda3eb965b4071fa">info</a>.size();</div>
-<div class="line"><span class="lineno">  201</span>  data_.resize(offset + <a class="code hl_variable" href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a>);</div>
+<div class="line"><span class="lineno">  200</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> size = info.size();</div>
+<div class="line"><span class="lineno">  201</span>  data_.resize(offset + size);</div>
 <div class="line"><span class="lineno">  202</span>  <span class="keywordflow">return</span> SpanTensor(std::move(info),</div>
-<div class="line"><span class="lineno">  203</span>                    <a class="code hl_function" href="namespaceabsl.html#a2775cc67ce619020b73cc4b395301331">absl::MakeSpan</a>(data_).subspan(offset, <a class="code hl_variable" href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a>));</div>
+<div class="line"><span class="lineno">  203</span>                    absl::MakeSpan(data_).subspan(offset, size));</div>
 <div class="line"><span class="lineno">  204</span>}</div>
-<div class="ttc" id="alow__level__alloc_8cc_html_aad9b71a31372d5c0ab9c23163efe9544"><div class="ttname"><a href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a></div><div class="ttdeci">uintptr_t size</div><div class="ttdef"><b>Definition</b> <a href="low__level__alloc_8cc_source.html#l00080">low_level_alloc.cc:80</a></div></div>
-<div class="ttc" id="amutex_8cc_html_ac8b44a387cf3da062c4a32316b43962c"><div class="ttname"><a href="mutex_8cc.html#ac8b44a387cf3da062c4a32316b43962c">name</a></div><div class="ttdeci">char name[1]</div><div class="ttdef"><b>Definition</b> <a href="mutex_8cc_source.html#l00017">mutex.cc:17</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a2775cc67ce619020b73cc4b395301331"><div class="ttname"><a href="namespaceabsl.html#a2775cc67ce619020b73cc4b395301331">absl::MakeSpan</a></div><div class="ttdeci">constexpr Span&lt; T &gt; MakeSpan(T *ptr, size_t size) noexcept</div><div class="ttdef"><b>Definition</b> <a href="span_8h_source.html#l00683">span.h:683</a></div></div>
-<div class="ttc" id="anamespaceopen__spiel_1_1python_1_1games_1_1chat__games_1_1envs_1_1base__envs_1_1trade__fruit__with__info_html_a1cd11b8bd6cd75d8eda3eb965b4071fa"><div class="ttname"><a href="namespaceopen__spiel_1_1python_1_1games_1_1chat__games_1_1envs_1_1base__envs_1_1trade__fruit__with__info.html#a1cd11b8bd6cd75d8eda3eb965b4071fa">open_spiel.python.games.chat_games.envs.base_envs.trade_fruit_with_info.info</a></div><div class="ttdeci">tuple info</div><div class="ttdef"><b>Definition</b> <a href="trade__fruit__with__info_8py_source.html#l00142">trade_fruit_with_info.py:142</a></div></div>
 <div class="ttc" id="aspiel__utils_8h_html_a4347e9de74af6457a8509c6d13ab5a2e"><div class="ttname"><a href="spiel__utils_8h.html#a4347e9de74af6457a8509c6d13ab5a2e">SPIEL_DCHECK_TRUE</a></div><div class="ttdeci">#define SPIEL_DCHECK_TRUE(x)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8h_source.html#l00320">spiel_utils.h:320</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="span_8h_source.html#l00683">absl::MakeSpan()</a>, <a class="el" href="mutex_8cc_source.html#l00017">name</a>, <a class="el" href="low__level__alloc_8cc_source.html#l00080">size</a>, and <a class="el" href="spiel__utils_8h_source.html#l00320">SPIEL_DCHECK_TRUE</a>.</p>
+<p class="reference">References <a class="el" href="observer_8h_source.html#l00085">open_spiel::SpanTensorInfo::size()</a>, and <a class="el" href="spiel__utils_8h_source.html#l00320">SPIEL_DCHECK_TRUE</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_tracking_vector_allocator_ac7a4b3ec53cb80beec25e295d92599a9_cgraph.png" border="0" usemap="#aclassopen__spiel_1_1_tracking_vector_allocator_ac7a4b3ec53cb80beec25e295d92599a9_cgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_tracking_vector_allocator_ac7a4b3ec53cb80beec25e295d92599a9_cgraph" id="aclassopen__spiel_1_1_tracking_vector_allocator_ac7a4b3ec53cb80beec25e295d92599a9_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,185,46"/>
-<area shape="rect" href="namespaceabsl.html#a2775cc67ce619020b73cc4b395301331" title=" " alt="" coords="233,13,348,38"/>
+<area shape="rect" href="classopen__spiel_1_1_span_tensor_info.html#a8b285f32d9f13ccd8083780760fab2f0" title=" " alt="" coords="233,5,415,46"/>
 <area shape="poly" title=" " alt="" coords="185,23,217,23,217,28,185,28"/>
 </map>
 </div>
@@ -366,13 +328,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_tracking_vector_allocator_a2b33c4f381cb9a2dfc4c6d8d00ff2e7a_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_tracking_vector_allocator_a2b33c4f381cb9a2dfc4c6d8d00ff2e7a_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_tracking_vector_allocator_a2b33c4f381cb9a2dfc4c6d8d00ff2e7a_icgraph" id="aclassopen__spiel_1_1_tracking_vector_allocator_a2b33c4f381cb9a2dfc4c6d8d00ff2e7a_icgraph">
-<area shape="rect" title=" " alt="" coords="484,39,663,79"/>
-<area shape="rect" href="classopen__spiel_1_1_observation.html#ac47e27b2a3474cac22dbc97d8152a63c" title=" " alt="" coords="264,5,425,46"/>
-<area shape="poly" title=" " alt="" coords="468,46,425,40,426,35,469,41"/>
-<area shape="rect" href="namespaceopen__spiel.html#a03fc20c0c2c07f8c196ebe7dd9f0c251" title=" " alt="" coords="253,71,436,111"/>
-<area shape="poly" title=" " alt="" coords="469,76,437,81,436,76,468,71"/>
-<area shape="rect" href="classopen__spiel_1_1kriegspiel_1_1_kriegspiel_game.html#a1064193bb301bd8bd7f55361bef9cdc4" title=" " alt="" coords="5,63,205,119"/>
-<area shape="poly" title=" " alt="" coords="237,94,205,94,205,88,237,88"/>
+<area shape="rect" title=" " alt="" coords="237,39,416,79"/>
+<area shape="rect" href="classopen__spiel_1_1_observation.html#ac47e27b2a3474cac22dbc97d8152a63c" title=" " alt="" coords="16,5,178,46"/>
+<area shape="poly" title=" " alt="" coords="221,46,178,40,179,35,222,41"/>
+<area shape="rect" href="namespaceopen__spiel.html#a03fc20c0c2c07f8c196ebe7dd9f0c251" title=" " alt="" coords="5,71,189,111"/>
+<area shape="poly" title=" " alt="" coords="222,76,190,81,189,76,221,71"/>
 </map>
 </div>
 

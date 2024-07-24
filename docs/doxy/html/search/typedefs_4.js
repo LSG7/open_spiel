@@ -1,32 +1,4 @@
 var searchData=
 [
-  ['edges_0',['Edges',['../namespaceabsl_1_1synchronization__internal.html#af29d30333b703139f37dfc73b2fc4ffe',1,'absl::synchronization_internal']]],
-  ['element_5ftype_1',['element_type',['../classabsl_1_1_span.html#a486fde8b628b72c4e186e678b09c9854',1,'absl::Span']]],
-  ['elementt_2',['ElementT',['../namespaceabsl_1_1span__internal.html#aea83d3c81441f2ef7789c3e3fa2abf10',1,'absl::span_internal']]],
-  ['elementtype_3',['ElementType',['../classabsl_1_1container__internal_1_1internal__layout_1_1_layout_impl_3_01std_1_1tuple_3_01_elemef7d20b05fd730e2425e9c695bc381c18.html#a251e873180abed0fa54ab1b8b04c9ff3',1,'absl::container_internal::internal_layout::LayoutImpl&lt; std::tuple&lt; Elements... &gt;, absl::index_sequence&lt; SizeSeq... &gt;, absl::index_sequence&lt; OffsetSeq... &gt; &gt;']]],
-  ['elementtypes_4',['ElementTypes',['../classabsl_1_1container__internal_1_1internal__layout_1_1_layout_impl_3_01std_1_1tuple_3_01_elemef7d20b05fd730e2425e9c695bc381c18.html#a51f044df78bc7e22e345f6b667984a14',1,'absl::container_internal::internal_layout::LayoutImpl&lt; std::tuple&lt; Elements... &gt;, absl::index_sequence&lt; SizeSeq... &gt;, absl::index_sequence&lt; OffsetSeq... &gt; &gt;']]],
-  ['elemt_5',['ElemT',['../namespaceabsl_1_1container__internal_1_1internal__compressed__tuple.html#a8e77adc0a4e53f56fad02413b91cfbad',1,'absl::container_internal::internal_compressed_tuple']]],
-  ['enable_5fif_5ft_6',['enable_if_t',['../namespaceabsl.html#a059ea7c8c3122cd36d4e270733757ff9',1,'absl']]],
-  ['enableif_7',['EnableIf',['../namespaceabsl_1_1container__internal_1_1internal__layout.html#a1ab1f10ab928808e7eaac9962c64dbff',1,'absl::container_internal::internal_layout::EnableIf'],['../namespaceabsl_1_1functional__internal.html#a0f92d1679b8e7f27efa616b28adf0e26',1,'absl::functional_internal::EnableIf']]],
-  ['enableifconvertibleto_8',['EnableIfConvertibleTo',['../namespaceabsl_1_1span__internal.html#aae70f3fbe11a22edfa7c3e9dd67d1fd7',1,'absl::span_internal']]],
-  ['enableiffloat_9',['EnableIfFloat',['../namespaceabsl_1_1time__internal.html#abd6c6ded8adb606996051d3f407ef3d7',1,'absl::time_internal']]],
-  ['enableifintegral_10',['EnableIfIntegral',['../namespaceabsl_1_1time__internal.html#a67f5322df0b449480f360a4a7fa8f070',1,'absl::time_internal']]],
-  ['enableifisview_11',['EnableIfIsView',['../namespaceabsl_1_1span__internal.html#a78dbe04f0dd41341808eb99952190678',1,'absl::span_internal']]],
-  ['enableifmutable_12',['EnableIfMutable',['../namespaceabsl_1_1span__internal.html#a34224befa671d8ebb2edec0c3cecf000',1,'absl::span_internal']]],
-  ['enableifnotisview_13',['EnableIfNotIsView',['../namespaceabsl_1_1span__internal.html#a141ed912b86a8556c765addc41bef8fd',1,'absl::span_internal']]],
-  ['enablesplitifstring_14',['EnableSplitIfString',['../namespaceabsl.html#a124b1288e5be91e66320ee35e93a4f06',1,'absl']]],
-  ['eq_15',['Eq',['../structabsl_1_1container__internal_1_1_hash_eq.html#a64b6f6302fb489fbbb6592d58ef7bd5f',1,'absl::container_internal::HashEq::Eq'],['../structabsl_1_1container__internal_1_1_string_hash_eq.html#ae33c6ee974ed69f8b9215fee30877df8',1,'absl::container_internal::StringHashEq::Eq']]],
-  ['errorhandler_16',['ErrorHandler',['../namespaceopen__spiel.html#a6ae50259664bd4ee81332e34b49d2ebd',1,'open_spiel']]],
-  ['expandbasiccomparableprofiles_17',['ExpandBasicComparableProfiles',['../namespaceabsl_1_1types__internal.html#a9dfe28e030e7d754d38a53b3c899c862',1,'absl::types_internal']]],
-  ['expandbasicdefaultconstructibleprofiles_18',['ExpandBasicDefaultConstructibleProfiles',['../namespaceabsl_1_1types__internal.html#a2f4033120a77f02b25f6fe7f35d65a07',1,'absl::types_internal']]],
-  ['expandbasicequatableprofiles_19',['ExpandBasicEquatableProfiles',['../namespaceabsl_1_1types__internal.html#aeb0a6f4d528f639d20fa3bf95e6fb071',1,'absl::types_internal']]],
-  ['expandbasichashableprofiles_20',['ExpandBasicHashableProfiles',['../namespaceabsl_1_1types__internal.html#a549fddfdc4e9a144db12b0dacf0a75ca',1,'absl::types_internal']]],
-  ['expandbasicprofiles_21',['ExpandBasicProfiles',['../namespaceabsl_1_1types__internal.html#ac939527cf46aa3de08e687426c344bdf',1,'absl::types_internal']]],
-  ['expandsupportedprofiles_22',['ExpandSupportedProfiles',['../namespaceabsl_1_1types__internal.html#a0de32d368b21ff37c22462c95761a1cd',1,'absl::types_internal']]],
-  ['expect_5falloc_5fconstructors_23',['expect_alloc_constructors',['../namespaceabsl_1_1container__internal.html#a04974ba45e637474f9d5f9f7c3e2e3ad',1,'absl::container_internal']]],
-  ['expect_5fcxx14_5fapis_24',['expect_cxx14_apis',['../namespaceabsl_1_1container__internal.html#aec56af22ea0e5929aded54e07d8a8fbf',1,'absl::container_internal']]],
-  ['expectconformanceoftype_25',['ExpectConformanceOfType',['../namespaceabsl_1_1types__internal.html#a60b2bec436dac2caf57b774b66bf4432',1,'absl::types_internal']]],
-  ['expectnonconformanceoftype_26',['ExpectNonconformanceOfType',['../namespaceabsl_1_1types__internal.html#abed295177b489181aa0f33db35730b30',1,'absl::types_internal']]],
-  ['externalreleaserinvoker_27',['ExternalReleaserInvoker',['../namespaceabsl_1_1cord__internal.html#ad3aab6abfc84b9652a07ed10273b072f',1,'absl::cord_internal']]],
-  ['extractort_28',['ExtractOrT',['../namespaceabsl_1_1memory__internal.html#a9b9afffb39996c4a0be98b56e1acc910',1,'absl::memory_internal']]]
+  ['historydistribution_0',['HistoryDistribution',['../namespaceopen__spiel.html#ad03e31d0186baba8fb60b04965c48e86',1,'open_spiel']]]
 ];

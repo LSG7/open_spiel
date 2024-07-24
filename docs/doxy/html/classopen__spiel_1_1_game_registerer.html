@@ -226,17 +226,17 @@ Here is the call graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="spiel_8cc_source.html#l00143">143</a> of file <a class="el" href="spiel_8cc_source.html">spiel.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  144</span>                                                               {</div>
 <div class="line"><span class="lineno">  145</span>  <span class="comment">// Check if it&#39;s a game with a known issue. If so, output a warning.</span></div>
-<div class="line"><span class="lineno">  146</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="namespaceabsl.html#ab49771a8f24583a93c1599b61be10721">absl::c_linear_search</a>(<a class="code hl_function" href="#a6a640935af5f3b93cf4a3ed2168b81d6">GamesWithKnownIssues</a>(), short_name)) {</div>
+<div class="line"><span class="lineno">  146</span>  <span class="keywordflow">if</span> (absl::c_linear_search(<a class="code hl_function" href="#a6a640935af5f3b93cf4a3ed2168b81d6">GamesWithKnownIssues</a>(), short_name)) {</div>
 <div class="line"><span class="lineno">  147</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;Warning! This game has known issues. Please see the games &quot;</span></div>
 <div class="line"><span class="lineno">  148</span>              &lt;&lt; <span class="stringliteral">&quot;list on github or the code for details.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  149</span>  }</div>
 <div class="line"><span class="lineno">  150</span> </div>
 <div class="line"><span class="lineno">  151</span>  <span class="comment">// Find the factory for this game and load it.</span></div>
 <div class="line"><span class="lineno">  152</span>  <span class="keyword">auto</span> iter = factories().find(short_name);</div>
-<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">if</span> (iter == factories().<a class="code hl_variable" href="float__conversion_8cc.html#a8fd806ad19b8f5513a4cf18cbf77532c">end</a>()) {</div>
-<div class="line"><span class="lineno">  154</span>    <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(<a class="code hl_function" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a>(<span class="stringliteral">&quot;Unknown game &#39;&quot;</span>, short_name,</div>
+<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">if</span> (iter == factories().end()) {</div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(absl::StrCat(<span class="stringliteral">&quot;Unknown game &#39;&quot;</span>, short_name,</div>
 <div class="line"><span class="lineno">  155</span>                                 <span class="stringliteral">&quot;&#39;. Available games are:\n&quot;</span>,</div>
-<div class="line"><span class="lineno">  156</span>                                 <a class="code hl_function" href="namespaceabsl.html#a66735d042e8e255930c66b67f3b39244">absl::StrJoin</a>(<a class="code hl_function" href="#a2dd29263f74ac828f1c9c4ee0161b04f">RegisteredNames</a>(), <span class="stringliteral">&quot;\n&quot;</span>)));</div>
+<div class="line"><span class="lineno">  156</span>                                 absl::StrJoin(<a class="code hl_function" href="#a2dd29263f74ac828f1c9c4ee0161b04f">RegisteredNames</a>(), <span class="stringliteral">&quot;\n&quot;</span>)));</div>
 <div class="line"><span class="lineno">  157</span> </div>
 <div class="line"><span class="lineno">  158</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  159</span>    ValidateParams(params, iter-&gt;second.first.parameter_specification);</div>
@@ -245,13 +245,9 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  162</span>}</div>
 <div class="ttc" id="aclassopen__spiel_1_1_game_registerer_html_a2dd29263f74ac828f1c9c4ee0161b04f"><div class="ttname"><a href="#a2dd29263f74ac828f1c9c4ee0161b04f">open_spiel::GameRegisterer::RegisteredNames</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; RegisteredNames()</div><div class="ttdef"><b>Definition</b> <a href="spiel_8cc_source.html#l00164">spiel.cc:164</a></div></div>
 <div class="ttc" id="aclassopen__spiel_1_1_game_registerer_html_a6a640935af5f3b93cf4a3ed2168b81d6"><div class="ttname"><a href="#a6a640935af5f3b93cf4a3ed2168b81d6">open_spiel::GameRegisterer::GamesWithKnownIssues</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; GamesWithKnownIssues()</div><div class="ttdef"><b>Definition</b> <a href="spiel_8cc_source.html#l00172">spiel.cc:172</a></div></div>
-<div class="ttc" id="afloat__conversion_8cc_html_a8fd806ad19b8f5513a4cf18cbf77532c"><div class="ttname"><a href="float__conversion_8cc.html#a8fd806ad19b8f5513a4cf18cbf77532c">end</a></div><div class="ttdeci">char * end</div><div class="ttdef"><b>Definition</b> <a href="float__conversion_8cc_source.html#l01029">float_conversion.cc:1029</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a0a9abdb6ee6367339931d4cab29d50df"><div class="ttname"><a href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a></div><div class="ttdeci">ABSL_MUST_USE_RESULT std::string StrCat()</div><div class="ttdef"><b>Definition</b> <a href="str__cat_8h_source.html#l00381">str_cat.h:381</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a66735d042e8e255930c66b67f3b39244"><div class="ttname"><a href="namespaceabsl.html#a66735d042e8e255930c66b67f3b39244">absl::StrJoin</a></div><div class="ttdeci">std::string StrJoin(Iterator start, Iterator end, absl::string_view sep, Formatter &amp;&amp;fmt)</div><div class="ttdef"><b>Definition</b> <a href="str__join_8h_source.html#l00239">str_join.h:239</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_ab49771a8f24583a93c1599b61be10721"><div class="ttname"><a href="namespaceabsl.html#ab49771a8f24583a93c1599b61be10721">absl::c_linear_search</a></div><div class="ttdeci">bool c_linear_search(const C &amp;c, EqualityComparable &amp;&amp;value)</div><div class="ttdef"><b>Definition</b> <a href="container_8h_source.html#l00144">container.h:144</a></div></div>
 <div class="ttc" id="anamespaceopen__spiel_html_a43513b6f8f3a26ce1a64a1a807df9011"><div class="ttname"><a href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">open_spiel::SpielFatalError</a></div><div class="ttdeci">void SpielFatalError(const std::string &amp;error_msg)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8cc_source.html#l00132">spiel_utils.cc:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="container_8h_source.html#l00144">absl::c_linear_search()</a>, <a class="el" href="float__conversion_8cc_source.html#l01029">end</a>, <a class="el" href="spiel_8cc_source.html#l00172">GamesWithKnownIssues()</a>, <a class="el" href="spiel_8cc_source.html#l00164">RegisteredNames()</a>, <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>, <a class="el" href="str__cat_8h_source.html#l00381">absl::StrCat()</a>, and <a class="el" href="str__join_8h_source.html#l00239">absl::StrJoin()</a>.</p>
+<p class="reference">References <a class="el" href="spiel_8cc_source.html#l00172">GamesWithKnownIssues()</a>, <a class="el" href="spiel_8cc_source.html#l00164">RegisteredNames()</a>, and <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="spiel_8cc_source.html#l00231">open_spiel::LoadGame()</a>, and <a class="el" href="spiel_8cc_source.html#l00241">open_spiel::LoadGame()</a>.</p>
 <div class="dynheader">
@@ -259,31 +255,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_game_registerer_a6e6f8091b1e3c521af50e71b0dce5717_cgraph.png" border="0" usemap="#aclassopen__spiel_1_1_game_registerer_a6e6f8091b1e3c521af50e71b0dce5717_cgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_game_registerer_a6e6f8091b1e3c521af50e71b0dce5717_cgraph" id="aclassopen__spiel_1_1_game_registerer_a6e6f8091b1e3c521af50e71b0dce5717_cgraph">
-<area shape="rect" title=" " alt="" coords="5,223,192,263"/>
-<area shape="rect" href="namespaceabsl.html#ab49771a8f24583a93c1599b61be10721" title=" " alt="" coords="261,78,405,104"/>
-<area shape="poly" title=" " alt="" coords="115,220,167,167,201,139,238,114,253,107,255,112,241,119,204,143,170,171,119,224"/>
-<area shape="rect" href="classopen__spiel_1_1_game_registerer.html#a6a640935af5f3b93cf4a3ed2168b81d6" title=" " alt="" coords="240,128,426,169"/>
-<area shape="poly" title=" " alt="" coords="144,220,239,179,257,172,259,177,241,184,147,225"/>
-<area shape="rect" href="classopen__spiel_1_1_game_registerer.html#a2dd29263f74ac828f1c9c4ee0161b04f" title=" " alt="" coords="240,193,426,234"/>
-<area shape="poly" title=" " alt="" coords="192,229,224,225,224,230,192,234"/>
-<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="244,258,422,284"/>
-<area shape="poly" title=" " alt="" coords="192,251,229,256,228,261,192,257"/>
-<area shape="rect" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df" title=" " alt="" coords="287,308,378,333"/>
-<area shape="poly" title=" " alt="" coords="151,261,240,294,273,303,272,308,239,299,150,266"/>
-<area shape="rect" href="namespaceabsl.html#a66735d042e8e255930c66b67f3b39244" title=" " alt="" coords="286,357,380,382"/>
-<area shape="poly" title=" " alt="" coords="124,262,175,303,241,343,272,355,270,360,238,348,172,307,121,266"/>
-<area shape="rect" href="namespaceabsl_1_1container__algorithm__internal.html#a06daa82467b235da8b6b9b1d09b520a1" title=" " alt="" coords="474,5,640,46"/>
-<area shape="poly" title=" " alt="" coords="379,75,470,48,471,53,380,80"/>
-<area shape="rect" href="namespaceabsl_1_1container__algorithm__internal.html#a00879fc0ada934de06b3b429cecddb57" title=" " alt="" coords="474,71,640,111"/>
-<area shape="poly" title=" " alt="" coords="406,88,459,88,459,94,406,94"/>
-<area shape="rect" href="namespaceabsl.html#a39f0778f08f890e83a0adf1d3facbdbf" title=" " alt="" coords="492,136,622,161"/>
-<area shape="poly" title=" " alt="" coords="387,102,490,128,488,134,385,107"/>
-<area shape="rect" href="namespaceabsl_1_1strings__internal.html#ad5b694c25b0f1ab42df683172f72e1ce" title=" " alt="" coords="486,349,628,390"/>
-<area shape="poly" title=" " alt="" coords="381,367,471,367,471,372,381,372"/>
-<area shape="rect" href="classabsl_1_1string__view.html#acdd63d87adecc9cb89e3bb2c4efedf47" title=" " alt="" coords="688,332,841,357"/>
-<area shape="poly" title=" " alt="" coords="628,358,672,353,673,358,629,364"/>
-<area shape="rect" href="classabsl_1_1string__view.html#a3950f228eccec8f88e34b9a90ad94428" title=" " alt="" coords="689,381,840,406"/>
-<area shape="poly" title=" " alt="" coords="629,375,674,380,673,386,628,381"/>
+<area shape="rect" title=" " alt="" coords="5,71,192,111"/>
+<area shape="rect" href="classopen__spiel_1_1_game_registerer.html#a6a640935af5f3b93cf4a3ed2168b81d6" title=" " alt="" coords="240,5,426,46"/>
+<area shape="poly" title=" " alt="" coords="173,68,242,48,243,53,174,73"/>
+<area shape="rect" href="classopen__spiel_1_1_game_registerer.html#a2dd29263f74ac828f1c9c4ee0161b04f" title=" " alt="" coords="240,71,426,111"/>
+<area shape="poly" title=" " alt="" coords="192,88,224,88,224,94,192,94"/>
+<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="244,136,422,161"/>
+<area shape="poly" title=" " alt="" coords="185,109,263,129,262,134,183,114"/>
 </map>
 </div>
 <div class="dynheader">
@@ -421,17 +399,15 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  181</span>  <span class="keywordflow">return</span> games;</div>
 <div class="line"><span class="lineno">  182</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="spieljl_8cc_source.html#l00117">define_julia_module()</a>, and <a class="el" href="spiel_8cc_source.html#l00201">open_spiel::RegisteredGameTypes()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spiel_8cc_source.html#l00201">open_spiel::RegisteredGameTypes()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_game_registerer_ab0c87d50dfa049e12c70c2a665def26c_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_game_registerer_ab0c87d50dfa049e12c70c2a665def26c_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_game_registerer_ab0c87d50dfa049e12c70c2a665def26c_icgraph" id="aclassopen__spiel_1_1_game_registerer_ab0c87d50dfa049e12c70c2a665def26c_icgraph">
-<area shape="rect" title=" " alt="" coords="243,27,429,68"/>
-<area shape="rect" href="spieljl_8cc.html#a3fd385f8fe7b981e30b95ff471f542a3" title=" " alt="" coords="32,5,168,31"/>
-<area shape="poly" title=" " alt="" coords="227,37,168,29,169,24,227,31"/>
-<area shape="rect" href="namespaceopen__spiel.html#a79f969c1807e578a2090d314ab71bf68" title=" " alt="" coords="5,55,195,96"/>
-<area shape="poly" title=" " alt="" coords="227,63,196,67,195,62,227,58"/>
+<area shape="rect" title=" " alt="" coords="243,5,429,46"/>
+<area shape="rect" href="namespaceopen__spiel.html#a79f969c1807e578a2090d314ab71bf68" title=" " alt="" coords="5,5,195,46"/>
+<area shape="poly" title=" " alt="" coords="227,28,195,28,195,23,227,23"/>
 </map>
 </div>
 
@@ -469,25 +445,21 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  169</span>  <span class="keywordflow">return</span> names;</div>
 <div class="line"><span class="lineno">  170</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="spiel_8cc_source.html#l00143">CreateByName()</a>, <a class="el" href="spieljl_8cc_source.html#l00117">define_julia_module()</a>, and <a class="el" href="spiel_8cc_source.html#l00197">open_spiel::RegisteredGames()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spiel_8cc_source.html#l00143">CreateByName()</a>, and <a class="el" href="spiel_8cc_source.html#l00197">open_spiel::RegisteredGames()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_game_registerer_a2dd29263f74ac828f1c9c4ee0161b04f_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_game_registerer_a2dd29263f74ac828f1c9c4ee0161b04f_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_game_registerer_a2dd29263f74ac828f1c9c4ee0161b04f_icgraph" id="aclassopen__spiel_1_1_game_registerer_a2dd29263f74ac828f1c9c4ee0161b04f_icgraph">
-<area shape="rect" title=" " alt="" coords="452,79,638,120"/>
+<area shape="rect" title=" " alt="" coords="452,51,638,92"/>
 <area shape="rect" href="classopen__spiel_1_1_game_registerer.html#a6e6f8091b1e3c521af50e71b0dce5717" title=" " alt="" coords="213,22,399,62"/>
-<area shape="poly" title=" " alt="" coords="442,78,393,66,394,61,443,72"/>
-<area shape="rect" href="spieljl_8cc.html#a3fd385f8fe7b981e30b95ff471f542a3" title=" " alt="" coords="238,87,374,112"/>
-<area shape="poly" title=" " alt="" coords="437,102,374,102,374,97,437,97"/>
-<area shape="rect" href="namespaceopen__spiel.html#a5fc96e037a90ad323529c4f55d7d2cce" title=" " alt="" coords="208,136,404,162"/>
-<area shape="poly" title=" " alt="" coords="438,124,372,138,371,133,437,119"/>
+<area shape="poly" title=" " alt="" coords="436,61,399,56,400,51,437,56"/>
+<area shape="rect" href="namespaceopen__spiel.html#a5fc96e037a90ad323529c4f55d7d2cce" title=" " alt="" coords="208,87,404,112"/>
+<area shape="poly" title=" " alt="" coords="437,87,405,91,404,85,436,82"/>
 <area shape="rect" href="namespaceopen__spiel.html#a041180755b50ef57ca83e4ca9f3827b0" title=" " alt="" coords="5,5,160,31"/>
 <area shape="poly" title=" " alt="" coords="197,33,160,29,160,24,197,28"/>
 <area shape="rect" href="namespaceopen__spiel.html#ab464ff98519dd7819e7cd8fc30234716" title=" " alt="" coords="5,55,160,80"/>
 <area shape="poly" title=" " alt="" coords="197,57,160,61,160,56,197,52"/>
-<area shape="rect" href="example_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="58,136,107,162"/>
-<area shape="poly" title=" " alt="" coords="192,152,108,152,108,146,192,146"/>
 </map>
 </div>
 
@@ -527,17 +499,15 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="spiel_8h_source.html#l00052">open_spiel::GameType::short_name</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="spiel_8cc_source.html#l00139">GameRegisterer()</a>, and <a class="el" href="python__games_8cc_source.html#l00160">open_spiel::RegisterPyGame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spiel_8cc_source.html#l00139">GameRegisterer()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_game_registerer_a9087e5af855f413241a8ff7fba0dadeb_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_game_registerer_a9087e5af855f413241a8ff7fba0dadeb_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_game_registerer_a9087e5af855f413241a8ff7fba0dadeb_icgraph" id="aclassopen__spiel_1_1_game_registerer_a9087e5af855f413241a8ff7fba0dadeb_icgraph">
-<area shape="rect" title=" " alt="" coords="245,35,431,75"/>
-<area shape="rect" href="classopen__spiel_1_1_game_registerer.html#ab27bd0cfcf8b9cd0425627751749c384" title=" " alt="" coords="8,5,194,46"/>
-<area shape="poly" title=" " alt="" coords="229,44,194,40,195,35,229,39"/>
-<area shape="rect" href="namespaceopen__spiel.html#a84c11aafa0e2b61307a48691af6e993a" title=" " alt="" coords="5,70,197,96"/>
-<area shape="poly" title=" " alt="" coords="230,70,197,74,197,69,229,65"/>
+<area shape="rect" title=" " alt="" coords="240,5,426,46"/>
+<area shape="rect" href="classopen__spiel_1_1_game_registerer.html#ab27bd0cfcf8b9cd0425627751749c384" title=" " alt="" coords="5,5,192,46"/>
+<area shape="poly" title=" " alt="" coords="224,28,192,28,192,23,224,23"/>
 </map>
 </div>
 

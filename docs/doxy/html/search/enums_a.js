@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['lengthmod_0',['LengthMod',['../namespaceabsl_1_1str__format__internal.html#a208aa9c1527b41e79ca80679ceeb9c38',1,'absl::str_format_internal']]],
-  ['locationtype_1',['LocationType',['../namespaceopen__spiel_1_1solitaire.html#ad44809ed39e8235365d2184e8e796b65',1,'open_spiel::solitaire']]],
-  ['logseverity_2',['LogSeverity',['../namespaceabsl.html#ad1a5e4bd360138eb7556a7a18e23cd23',1,'absl']]],
-  ['logseverityatleast_3',['LogSeverityAtLeast',['../namespaceabsl.html#a832010b17d39c0ee41de0b07a35092ae',1,'absl']]],
-  ['logseverityatmost_4',['LogSeverityAtMost',['../namespaceabsl.html#a97e433d7dcf4f71c5e7db6bfdfb85608',1,'absl']]]
+  ['unitactionkind_0',['UnitActionKind',['../namespaceopen__spiel_1_1base_t.html#a1faa1ee3dcc9f4f8142f000a1d10a820',1,'open_spiel::baseT']]],
+  ['unitactionstate_1',['UnitActionState',['../namespaceopen__spiel_1_1base_t.html#a8b64a310e8d3d2adf0c3885844c0c210',1,'open_spiel::baseT']]],
+  ['unitclass_2',['UnitClass',['../namespaceopen__spiel_1_1base_t.html#a36051c579891871042a78fba2c83d08f',1,'open_spiel::baseT::UnitClass'],['../namespaceopen__spiel_1_1base_t.html#a36051c579891871042a78fba2c83d08f',1,'open_spiel::baseT::UnitClass']]],
+  ['unitdirection_3',['UnitDirection',['../namespaceopen__spiel_1_1base_t.html#abfa32b13dbb2a5ac0324588dd2e10104',1,'open_spiel::baseT']]],
+  ['unitn_4',['UnitN',['../namespaceopen__spiel_1_1base_t.html#a89f89ce09300d96353257fbc0930d474',1,'open_spiel::baseT']]],
+  ['unitselectionorder_5',['UnitSelectionOrder',['../namespaceopen__spiel_1_1base_t.html#a5477112451464b4f5b2dbabed3faac7e',1,'open_spiel::baseT']]],
+  ['utility_6',['Utility',['../structopen__spiel_1_1_game_type.html#a1ac5c4948c36c41709023b391bb58ef3',1,'open_spiel::GameType']]]
 ];

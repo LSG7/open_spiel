@@ -108,11 +108,11 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7830f1fa91a3081532b9e8a78f3c208b" id="r_a7830f1fa91a3081532b9e8a78f3c208b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7830f1fa91a3081532b9e8a78f3c208b">child</a> (<a class="el" href="policy__iteration_8cc.html#aef5972335703cda91a1daa78e046d9d5">state</a>, <a class="el" href="basic__tests_8cc.html#aa9cf7d0afedceb0d21dd5f412fe08c18">action</a>)</td></tr>
+<tr class="memitem:a7830f1fa91a3081532b9e8a78f3c208b" id="r_a7830f1fa91a3081532b9e8a78f3c208b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7830f1fa91a3081532b9e8a78f3c208b">child</a> (state, action)</td></tr>
 <tr class="separator:a7830f1fa91a3081532b9e8a78f3c208b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8afb3c75599f70588315528bbd7722f8" id="r_a8afb3c75599f70588315528bbd7722f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8afb3c75599f70588315528bbd7722f8">joint_action_probabilities_aux</a> (<a class="el" href="policy__iteration_8cc.html#aef5972335703cda91a1daa78e046d9d5">state</a>, policy)</td></tr>
+<tr class="memitem:a8afb3c75599f70588315528bbd7722f8" id="r_a8afb3c75599f70588315528bbd7722f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8afb3c75599f70588315528bbd7722f8">joint_action_probabilities_aux</a> (state, policy)</td></tr>
 <tr class="separator:a8afb3c75599f70588315528bbd7722f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1f959571dc79a9d3b346c66a116f0a6" id="r_af1f959571dc79a9d3b346c66a116f0a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1f959571dc79a9d3b346c66a116f0a6">joint_action_probabilities</a> (<a class="el" href="policy__iteration_8cc.html#aef5972335703cda91a1daa78e046d9d5">state</a>, policy)</td></tr>
+<tr class="memitem:af1f959571dc79a9d3b346c66a116f0a6" id="r_af1f959571dc79a9d3b346c66a116f0a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1f959571dc79a9d3b346c66a116f0a6">joint_action_probabilities</a> (state, policy)</td></tr>
 <tr class="separator:af1f959571dc79a9d3b346c66a116f0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af790d4355be9443cf04c9a1a206149cd" id="r_af790d4355be9443cf04c9a1a206149cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af790d4355be9443cf04c9a1a206149cd">get_tabular_policy_states</a> (game)</td></tr>
 <tr class="separator:af790d4355be9443cf04c9a1a206149cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,9 +411,9 @@ Returns:
 <div class="line"><span class="lineno">  565</span><span class="stringliteral">    merged_policy: A TabularPolicy with each player i&#39;s policy taken from the</span></div>
 <div class="line"><span class="lineno">  566</span><span class="stringliteral">      ith joint_policy.</span></div>
 <div class="line"><span class="lineno">  567</span><span class="stringliteral">  &quot;&quot;&quot;</span></div>
-<div class="line"><span class="lineno">  568</span>  <span class="keywordflow">if</span> <a class="code hl_variable" href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a>(tabular_policies) != game.num_players():</div>
+<div class="line"><span class="lineno">  568</span>  <span class="keywordflow">if</span> len(tabular_policies) != game.num_players():</div>
 <div class="line"><span class="lineno">  569</span>    <span class="keywordflow">raise</span> ValueError(<span class="stringliteral">&quot;len(tabular_policies) != num_players: %d != %d&quot;</span> %</div>
-<div class="line"><span class="lineno">  570</span>                     (<a class="code hl_variable" href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a>(tabular_policies), game.num_players()))</div>
+<div class="line"><span class="lineno">  570</span>                     (len(tabular_policies), game.num_players()))</div>
 <div class="line"><span class="lineno">  571</span>  merged_policy = TabularPolicy(game)</div>
 <div class="line"><span class="lineno">  572</span>  <span class="keywordflow">for</span> p, p_states <span class="keywordflow">in</span> enumerate(merged_policy.states_per_player):</div>
 <div class="line"><span class="lineno">  573</span>    <span class="keywordflow">for</span> p_state <span class="keywordflow">in</span> p_states:</div>
@@ -424,10 +424,7 @@ Returns:
 <div class="line"><span class="lineno">  578</span>        merged_policy.action_probability_array[to_index] = (</div>
 <div class="line"><span class="lineno">  579</span>            tabular_policies[p].action_probability_array[from_index])</div>
 <div class="line"><span class="lineno">  580</span>  <span class="keywordflow">return</span> merged_policy</div>
-<div class="ttc" id="alow__level__alloc__test_8cc_html_afed088663f8704004425cdae2120b9b3"><div class="ttname"><a href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a></div><div class="ttdeci">int len</div><div class="ttdef"><b>Definition</b> <a href="low__level__alloc__test_8cc_source.html#l00046">low_level_alloc_test.cc:46</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="low__level__alloc__test_8cc_source.html#l00046">len</a>.</p>
-
 </div>
 </div>
 <a id="ab94aca1416f617f17950d02053a38a5b" name="ab94aca1416f617f17950d02053a38a5b"></a>

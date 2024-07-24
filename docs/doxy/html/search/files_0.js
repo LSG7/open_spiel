@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['2048_2ecc_0',['2048.cc',['../2048_8cc.html',1,'']]],
-  ['2048_2eh_1',['2048.h',['../2048_8h.html',1,'']]],
-  ['2048_5ftest_2ecc_2',['2048_test.cc',['../2048__test_8cc.html',1,'']]]
+  ['_5f_5finit_5f_5f_2epy_0',['__init__.py',['../____init_____8py.html',1,'(Global Namespace)'],['../python_2____init_____8py.html',1,'(Global Namespace)'],['../python_2algorithms_2rnad_2____init_____8py.html',1,'(Global Namespace)']]]
 ];

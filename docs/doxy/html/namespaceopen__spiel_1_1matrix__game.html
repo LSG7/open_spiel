@@ -258,9 +258,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="184,67,216,62,216,68,185,72"/>
 <area shape="rect" href="namespaceopen__spiel_1_1matrix__game.html#ac598d47a7f8ba44a9ce78c3cb74488ff" title=" " alt="" coords="249,95,393,135"/>
 <area shape="poly" title=" " alt="" coords="185,93,234,100,233,105,184,98"/>
-<area shape="poly" title=" " alt="" coords="286,29,284,19,290,10,302,5,321,3,341,5,353,11,350,16,339,10,321,8,304,10,293,14,289,20,291,28"/>
-<area shape="rect" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df" title=" " alt="" coords="458,37,549,62"/>
-<area shape="poly" title=" " alt="" coords="411,47,442,47,442,52,411,52"/>
+<area shape="poly" title=" " alt="" coords="278,29,276,19,283,10,298,5,321,3,345,5,360,11,358,16,344,10,321,8,299,10,286,15,281,21,283,28"/>
 </map>
 </div>
 
@@ -292,31 +290,27 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  152</span>  <span class="keywordtype">int</span> num_columns = row_player_utils[0].size();</div>
 <div class="line"><span class="lineno">  153</span>  std::vector&lt;std::string&gt; row_names(num_rows);</div>
 <div class="line"><span class="lineno">  154</span>  std::vector&lt;std::string&gt; col_names(num_columns);</div>
-<div class="line"><span class="lineno">  155</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> = 0; <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> &lt; num_rows; ++<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>) {</div>
-<div class="line"><span class="lineno">  156</span>    row_names[<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>] = <a class="code hl_function" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a>(<span class="stringliteral">&quot;row&quot;</span>, <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>);</div>
+<div class="line"><span class="lineno">  155</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_rows; ++i) {</div>
+<div class="line"><span class="lineno">  156</span>    row_names[i] = absl::StrCat(<span class="stringliteral">&quot;row&quot;</span>, i);</div>
 <div class="line"><span class="lineno">  157</span>  }</div>
-<div class="line"><span class="lineno">  158</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> = 0; <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> &lt; num_columns; ++<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>) {</div>
-<div class="line"><span class="lineno">  159</span>    col_names[<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>] = <a class="code hl_function" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a>(<span class="stringliteral">&quot;col&quot;</span>, <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>);</div>
+<div class="line"><span class="lineno">  158</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_columns; ++i) {</div>
+<div class="line"><span class="lineno">  159</span>    col_names[i] = absl::StrCat(<span class="stringliteral">&quot;col&quot;</span>, i);</div>
 <div class="line"><span class="lineno">  160</span>  }</div>
 <div class="line"><span class="lineno">  161</span>  <span class="keywordflow">return</span> CreateMatrixGame(<span class="stringliteral">&quot;short_name&quot;</span>, <span class="stringliteral">&quot;Long Name&quot;</span>, row_names, col_names,</div>
 <div class="line"><span class="lineno">  162</span>                          row_player_utils, col_player_utils);</div>
 <div class="line"><span class="lineno">  163</span>}</div>
-<div class="ttc" id="abtree__benchmark_8cc_html_a717c50cfde3924051c279a89096afd3d"><div class="ttname"><a href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a></div><div class="ttdeci">uint64_t i</div><div class="ttdef"><b>Definition</b> <a href="btree__benchmark_8cc_source.html#l00232">btree_benchmark.cc:232</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a0a9abdb6ee6367339931d4cab29d50df"><div class="ttname"><a href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a></div><div class="ttdeci">ABSL_MUST_USE_RESULT std::string StrCat()</div><div class="ttdef"><b>Definition</b> <a href="str__cat_8h_source.html#l00381">str_cat.h:381</a></div></div>
 <div class="ttc" id="aspiel__utils_8h_html_a948872aa56d9cd14a37c436d9b4d8760"><div class="ttname"><a href="spiel__utils_8h.html#a948872aa56d9cd14a37c436d9b4d8760">SPIEL_CHECK_GT</a></div><div class="ttdeci">#define SPIEL_CHECK_GT(x, y)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8h_source.html#l00256">spiel_utils.h:256</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="matrix__game_8cc_source.html#l00147">CreateMatrixGame()</a>, <a class="el" href="btree__benchmark_8cc_source.html#l00232">i</a>, <a class="el" href="spiel__utils_8h_source.html#l00256">SPIEL_CHECK_GT</a>, and <a class="el" href="str__cat_8h_source.html#l00381">absl::StrCat()</a>.</p>
+<p class="reference">References <a class="el" href="matrix__game_8cc_source.html#l00147">CreateMatrixGame()</a>, and <a class="el" href="spiel__utils_8h_source.html#l00256">SPIEL_CHECK_GT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tensor__game_8h_source.html#l00130">open_spiel::tensor_game::TensorGame::AsMatrixGame()</a>, <a class="el" href="matrix__game_8cc_source.html#l00167">CreateMatrixGame()</a>, <a class="el" href="matrix__game_8cc_source.html#l00147">CreateMatrixGame()</a>, <a class="el" href="spieljl_8cc_source.html#l00117">define_julia_module()</a>, and <a class="el" href="matrix__game__utils_8cc_source.html#l00094">open_spiel::algorithms::ExtensiveToMatrixGame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tensor__game_8h_source.html#l00130">open_spiel::tensor_game::TensorGame::AsMatrixGame()</a>, <a class="el" href="matrix__game_8cc_source.html#l00167">CreateMatrixGame()</a>, and <a class="el" href="matrix__game_8cc_source.html#l00147">CreateMatrixGame()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopen__spiel_1_1matrix__game_a490bbd5e0048fa156eed430b1c353d70_cgraph.png" border="0" usemap="#anamespaceopen__spiel_1_1matrix__game_a490bbd5e0048fa156eed430b1c353d70_cgraph" alt=""/></div>
 <map name="anamespaceopen__spiel_1_1matrix__game_a490bbd5e0048fa156eed430b1c353d70_cgraph" id="anamespaceopen__spiel_1_1matrix__game_a490bbd5e0048fa156eed430b1c353d70_cgraph">
 <area shape="rect" title=" " alt="" coords="5,29,184,70"/>
-<area shape="poly" title=" " alt="" coords="59,29,58,19,63,10,76,5,95,3,115,5,126,11,124,16,113,10,94,8,77,10,67,14,63,20,65,28"/>
-<area shape="rect" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df" title=" " alt="" coords="232,37,323,62"/>
-<area shape="poly" title=" " alt="" coords="184,47,216,47,216,52,184,52"/>
+<area shape="poly" title=" " alt="" coords="60,29,59,19,64,10,76,5,95,3,114,5,126,11,123,16,112,10,94,8,78,10,68,14,64,20,66,28"/>
 </map>
 </div>
 <div class="dynheader">
@@ -324,17 +318,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopen__spiel_1_1matrix__game_a490bbd5e0048fa156eed430b1c353d70_icgraph.png" border="0" usemap="#anamespaceopen__spiel_1_1matrix__game_a490bbd5e0048fa156eed430b1c353d70_icgraph" alt=""/></div>
 <map name="anamespaceopen__spiel_1_1matrix__game_a490bbd5e0048fa156eed430b1c353d70_icgraph" id="anamespaceopen__spiel_1_1matrix__game_a490bbd5e0048fa156eed430b1c353d70_icgraph">
-<area shape="rect" title=" " alt="" coords="474,100,652,141"/>
-<area shape="poly" title=" " alt="" coords="605,87,589,81,563,79,539,81,524,85,518,91,520,99,515,100,513,90,521,81,538,75,563,73,591,76,607,82"/>
-<area shape="rect" href="classopen__spiel_1_1tensor__game_1_1_tensor_game.html#a71a2ca91924cdb74c953fc8a4533b6b7" title=" " alt="" coords="189,5,426,46"/>
-<area shape="poly" title=" " alt="" coords="505,95,425,61,387,49,389,44,427,57,507,90"/>
-<area shape="rect" href="namespaceopen__spiel_1_1matrix__game.html#ad0c53d489b3503a2ad022411e4604cdc" title=" " alt="" coords="218,71,396,111"/>
-<area shape="poly" title=" " alt="" coords="459,111,397,104,397,99,459,106"/>
-<area shape="rect" href="spieljl_8cc.html#a3fd385f8fe7b981e30b95ff471f542a3" title=" " alt="" coords="5,165,141,190"/>
-<area shape="poly" title=" " alt="" coords="459,135,142,172,141,167,458,130"/>
-<area shape="rect" href="namespaceopen__spiel_1_1algorithms.html#a9dd872a5926683e3e084c45d67946d8f" title=" " alt="" coords="221,185,394,226"/>
-<area shape="poly" title=" " alt="" coords="488,149,427,170,373,187,372,182,425,164,486,144"/>
-<area shape="poly" title=" " alt="" coords="206,196,141,188,141,183,206,191"/>
+<area shape="rect" title=" " alt="" coords="291,39,469,79"/>
+<area shape="poly" title=" " alt="" coords="422,26,406,20,380,17,355,19,340,24,335,30,337,37,332,39,330,29,337,20,354,14,380,12,407,14,424,21"/>
+<area shape="rect" href="classopen__spiel_1_1tensor__game_1_1_tensor_game.html#a71a2ca91924cdb74c953fc8a4533b6b7" title=" " alt="" coords="5,5,243,46"/>
+<area shape="poly" title=" " alt="" coords="275,48,243,44,243,39,276,43"/>
+<area shape="rect" href="namespaceopen__spiel_1_1matrix__game.html#ad0c53d489b3503a2ad022411e4604cdc" title=" " alt="" coords="35,71,213,111"/>
+<area shape="poly" title=" " alt="" coords="276,75,214,82,213,77,275,69"/>
 </map>
 </div>
 
@@ -360,29 +349,27 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  124</span>  std::vector&lt;double&gt; utilities;</div>
 <div class="line"><span class="lineno">  125</span>  <span class="keywordtype">int</span> total_size = 0;</div>
 <div class="line"><span class="lineno">  126</span>  <span class="keywordtype">int</span> row_size = -1;</div>
-<div class="line"><span class="lineno">  127</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> = 0;</div>
+<div class="line"><span class="lineno">  127</span>  <span class="keywordtype">int</span> i = 0;</div>
 <div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="pentago_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a> = 0; <a class="code hl_variable" href="pentago_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a> &lt; matrix_rows.size(); ++<a class="code hl_variable" href="pentago_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a>) {</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; matrix_rows.size(); ++r) {</div>
 <div class="line"><span class="lineno">  130</span>    <span class="keywordflow">if</span> (row_size &lt; 0) {</div>
-<div class="line"><span class="lineno">  131</span>      row_size = matrix_rows[<a class="code hl_variable" href="pentago_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a>].size();</div>
+<div class="line"><span class="lineno">  131</span>      row_size = matrix_rows[r].size();</div>
 <div class="line"><span class="lineno">  132</span>    }</div>
 <div class="line"><span class="lineno">  133</span>    <a class="code hl_define" href="spiel__utils_8h.html#a948872aa56d9cd14a37c436d9b4d8760">SPIEL_CHECK_GT</a>(row_size, 0);</div>
-<div class="line"><span class="lineno">  134</span>    <a class="code hl_define" href="spiel__utils_8h.html#abcb08ef83297cd8a69ac67d47cfa5da2">SPIEL_CHECK_EQ</a>(row_size, matrix_rows[<a class="code hl_variable" href="pentago_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a>].<a class="code hl_variable" href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a>());</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_define" href="spiel__utils_8h.html#abcb08ef83297cd8a69ac67d47cfa5da2">SPIEL_CHECK_EQ</a>(row_size, matrix_rows[r].size());</div>
 <div class="line"><span class="lineno">  135</span>    total_size += row_size;</div>
 <div class="line"><span class="lineno">  136</span>    utilities.resize(total_size, 0);</div>
 <div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; matrix_rows[<a class="code hl_variable" href="pentago_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a>].size(); ++c) {</div>
-<div class="line"><span class="lineno">  139</span>      utilities[<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>] = matrix_rows[<a class="code hl_variable" href="pentago_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a>][c];</div>
-<div class="line"><span class="lineno">  140</span>      ++<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>;</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; matrix_rows[r].size(); ++c) {</div>
+<div class="line"><span class="lineno">  139</span>      utilities[i] = matrix_rows[r][c];</div>
+<div class="line"><span class="lineno">  140</span>      ++i;</div>
 <div class="line"><span class="lineno">  141</span>    }</div>
 <div class="line"><span class="lineno">  142</span>  }</div>
 <div class="line"><span class="lineno">  143</span> </div>
 <div class="line"><span class="lineno">  144</span>  <span class="keywordflow">return</span> utilities;</div>
 <div class="line"><span class="lineno">  145</span>}</div>
-<div class="ttc" id="alow__level__alloc_8cc_html_aad9b71a31372d5c0ab9c23163efe9544"><div class="ttname"><a href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a></div><div class="ttdeci">uintptr_t size</div><div class="ttdef"><b>Definition</b> <a href="low__level__alloc_8cc_source.html#l00080">low_level_alloc.cc:80</a></div></div>
-<div class="ttc" id="apentago_8cc_html_acab531abaa74a7e664e3986f2522b33a"><div class="ttname"><a href="pentago_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition</b> <a href="pentago_8cc_source.html#l00057">pentago.cc:57</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="btree__benchmark_8cc_source.html#l00232">i</a>, <a class="el" href="pentago_8cc_source.html#l00057">r</a>, <a class="el" href="low__level__alloc_8cc_source.html#l00080">size</a>, <a class="el" href="spiel__utils_8h_source.html#l00259">SPIEL_CHECK_EQ</a>, and <a class="el" href="spiel__utils_8h_source.html#l00256">SPIEL_CHECK_GT</a>.</p>
+<p class="reference">References <a class="el" href="spiel__utils_8h_source.html#l00259">SPIEL_CHECK_EQ</a>, and <a class="el" href="spiel__utils_8h_source.html#l00256">SPIEL_CHECK_GT</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="matrix__game_8cc_source.html#l00167">CreateMatrixGame()</a>.</p>
 <div class="dynheader">

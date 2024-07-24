@@ -198,7 +198,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  314</span>  std::vector&lt;std::string&gt; bot_names;</div>
 <div class="line"><span class="lineno">  315</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; key_val : factories()) {</div>
 <div class="line"><span class="lineno">  316</span>    <span class="keywordtype">bool</span> can_play_for_all = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> player_id = 0; player_id &lt; <a class="code hl_variable" href="namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__policy.html#a50efa498e20f9eb5fe9a7ff5deea2d1a">game</a>.NumPlayers(); ++player_id) {</div>
+<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> player_id = 0; player_id &lt; game.NumPlayers(); ++player_id) {</div>
 <div class="line"><span class="lineno">  318</span>      <span class="keywordflow">if</span> (!key_val.second-&gt;CanPlayGame(game, player_id)) {</div>
 <div class="line"><span class="lineno">  319</span>        can_play_for_all = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  320</span>        <span class="keywordflow">break</span>;</div>
@@ -208,8 +208,19 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  324</span>  }</div>
 <div class="line"><span class="lineno">  325</span>  <span class="keywordflow">return</span> bot_names;</div>
 <div class="line"><span class="lineno">  326</span>}</div>
-<div class="ttc" id="anamespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__policy_html_a50efa498e20f9eb5fe9a7ff5deea2d1a"><div class="ttname"><a href="namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__policy.html#a50efa498e20f9eb5fe9a7ff5deea2d1a">open_spiel.python.algorithms.psro_v2.rl_policy.game</a></div><div class="ttdeci">game</div><div class="ttdef"><b>Definition</b> <a href="rl__policy_8py_source.html#l00133">rl_policy.py:133</a></div></div>
 </div><!-- fragment -->
+<p class="reference">References <a class="el" href="classopen__spiel_1_1_game.html#ade22718c6a0360525840cb7f7c68cab0">open_spiel::Game::NumPlayers()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classopen__spiel_1_1_bot_registerer_a08f69cbf8cd553aae6a893d13fb2b18e_cgraph.png" border="0" usemap="#aclassopen__spiel_1_1_bot_registerer_a08f69cbf8cd553aae6a893d13fb2b18e_cgraph" alt=""/></div>
+<map name="aclassopen__spiel_1_1_bot_registerer_a08f69cbf8cd553aae6a893d13fb2b18e_cgraph" id="aclassopen__spiel_1_1_bot_registerer_a08f69cbf8cd553aae6a893d13fb2b18e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,46"/>
+<area shape="rect" href="classopen__spiel_1_1_game.html#ade22718c6a0360525840cb7f7c68cab0" title=" " alt="" coords="225,13,431,38"/>
+<area shape="poly" title=" " alt="" coords="177,23,209,23,209,28,177,28"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a14f4d786c80eb75555552cf61a9b1074" name="a14f4d786c80eb75555552cf61a9b1074"></a>
@@ -256,13 +267,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_bot_registerer_a14f4d786c80eb75555552cf61a9b1074_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_bot_registerer_a14f4d786c80eb75555552cf61a9b1074_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_bot_registerer_a14f4d786c80eb75555552cf61a9b1074_icgraph" id="aclassopen__spiel_1_1_bot_registerer_a14f4d786c80eb75555552cf61a9b1074_icgraph">
-<area shape="rect" title=" " alt="" coords="519,23,690,64"/>
-<area shape="rect" href="namespaceopen__spiel.html#ad83b581d5a6bd67815e9f878cdd8dafc" title=" " alt="" coords="242,5,471,31"/>
-<area shape="poly" title=" " alt="" coords="503,36,471,33,472,27,504,31"/>
-<area shape="rect" href="namespaceopen__spiel.html#ad1a5e5758d75373ec551327b963ca887" title=" " alt="" coords="242,55,471,80"/>
-<area shape="poly" title=" " alt="" coords="504,56,472,59,471,54,503,51"/>
-<area shape="rect" href="namespaceopen__spiel.html#ab5a66044f3c30a6c61a5c40449a537d6" title=" " alt="" coords="5,55,194,80"/>
-<area shape="poly" title=" " alt="" coords="226,70,194,70,194,65,226,65"/>
+<area shape="rect" title=" " alt="" coords="283,23,454,64"/>
+<area shape="rect" href="namespaceopen__spiel.html#ad83b581d5a6bd67815e9f878cdd8dafc" title=" " alt="" coords="5,5,235,31"/>
+<area shape="poly" title=" " alt="" coords="267,36,235,33,236,27,267,31"/>
+<area shape="rect" href="namespaceopen__spiel.html#ad1a5e5758d75373ec551327b963ca887" title=" " alt="" coords="5,55,235,80"/>
+<area shape="poly" title=" " alt="" coords="267,56,236,59,235,54,267,51"/>
 </map>
 </div>
 
@@ -308,10 +317,10 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="spiel__bots_8cc_source.html#l00287">287</a> of file <a class="el" href="spiel__bots_8cc_source.html">spiel_bots.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  289</span>                                                    {</div>
 <div class="line"><span class="lineno">  290</span>  <span class="keyword">auto</span> iter = factories().find(bot_name);</div>
-<div class="line"><span class="lineno">  291</span>  <span class="keywordflow">if</span> (iter == factories().<a class="code hl_variable" href="float__conversion_8cc.html#a8fd806ad19b8f5513a4cf18cbf77532c">end</a>()) {</div>
-<div class="line"><span class="lineno">  292</span>    <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(<a class="code hl_function" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a>(<span class="stringliteral">&quot;Unknown bot &#39;&quot;</span>, bot_name,</div>
+<div class="line"><span class="lineno">  291</span>  <span class="keywordflow">if</span> (iter == factories().end()) {</div>
+<div class="line"><span class="lineno">  292</span>    <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(absl::StrCat(<span class="stringliteral">&quot;Unknown bot &#39;&quot;</span>, bot_name,</div>
 <div class="line"><span class="lineno">  293</span>                                 <span class="stringliteral">&quot;&#39;. Available bots are:\n&quot;</span>,</div>
-<div class="line"><span class="lineno">  294</span>                                 <a class="code hl_function" href="namespaceabsl.html#a66735d042e8e255930c66b67f3b39244">absl::StrJoin</a>(<a class="code hl_function" href="#acda325423331a4326b118934c89143ef">RegisteredBots</a>(), <span class="stringliteral">&quot;\n&quot;</span>)));</div>
+<div class="line"><span class="lineno">  294</span>                                 absl::StrJoin(<a class="code hl_function" href="#acda325423331a4326b118934c89143ef">RegisteredBots</a>(), <span class="stringliteral">&quot;\n&quot;</span>)));</div>
 <div class="line"><span class="lineno">  295</span> </div>
 <div class="line"><span class="lineno">  296</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><span class="lineno">  297</span>    <span class="keyword">const</span> std::unique_ptr&lt;BotFactory&gt;&amp; factory = iter-&gt;second;</div>
@@ -319,12 +328,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  299</span>  }</div>
 <div class="line"><span class="lineno">  300</span>}</div>
 <div class="ttc" id="aclassopen__spiel_1_1_bot_registerer_html_acda325423331a4326b118934c89143ef"><div class="ttname"><a href="#acda325423331a4326b118934c89143ef">open_spiel::BotRegisterer::RegisteredBots</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; RegisteredBots()</div><div class="ttdef"><b>Definition</b> <a href="spiel__bots_8cc_source.html#l00333">spiel_bots.cc:333</a></div></div>
-<div class="ttc" id="afloat__conversion_8cc_html_a8fd806ad19b8f5513a4cf18cbf77532c"><div class="ttname"><a href="float__conversion_8cc.html#a8fd806ad19b8f5513a4cf18cbf77532c">end</a></div><div class="ttdeci">char * end</div><div class="ttdef"><b>Definition</b> <a href="float__conversion_8cc_source.html#l01029">float_conversion.cc:1029</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a0a9abdb6ee6367339931d4cab29d50df"><div class="ttname"><a href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a></div><div class="ttdeci">ABSL_MUST_USE_RESULT std::string StrCat()</div><div class="ttdef"><b>Definition</b> <a href="str__cat_8h_source.html#l00381">str_cat.h:381</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a66735d042e8e255930c66b67f3b39244"><div class="ttname"><a href="namespaceabsl.html#a66735d042e8e255930c66b67f3b39244">absl::StrJoin</a></div><div class="ttdeci">std::string StrJoin(Iterator start, Iterator end, absl::string_view sep, Formatter &amp;&amp;fmt)</div><div class="ttdef"><b>Definition</b> <a href="str__join_8h_source.html#l00239">str_join.h:239</a></div></div>
 <div class="ttc" id="anamespaceopen__spiel_html_a43513b6f8f3a26ce1a64a1a807df9011"><div class="ttname"><a href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">open_spiel::SpielFatalError</a></div><div class="ttdeci">void SpielFatalError(const std::string &amp;error_msg)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8cc_source.html#l00132">spiel_utils.cc:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="float__conversion_8cc_source.html#l01029">end</a>, <a class="el" href="spiel__bots_8cc_source.html#l00333">RegisteredBots()</a>, <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>, <a class="el" href="str__cat_8h_source.html#l00381">absl::StrCat()</a>, and <a class="el" href="str__join_8h_source.html#l00239">absl::StrJoin()</a>.</p>
+<p class="reference">References <a class="el" href="spiel__bots_8cc_source.html#l00333">RegisteredBots()</a>, and <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="spiel__bots_8cc_source.html#l00363">open_spiel::LoadBot()</a>.</p>
 <div class="dynheader">
@@ -332,21 +338,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_bot_registerer_a541147e08ab383cd9fb40e58e12789eb_cgraph.png" border="0" usemap="#aclassopen__spiel_1_1_bot_registerer_a541147e08ab383cd9fb40e58e12789eb_cgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_bot_registerer_a541147e08ab383cd9fb40e58e12789eb_cgraph" id="aclassopen__spiel_1_1_bot_registerer_a541147e08ab383cd9fb40e58e12789eb_cgraph">
-<area shape="rect" title=" " alt="" coords="5,88,177,129"/>
+<area shape="rect" title=" " alt="" coords="5,35,177,75"/>
 <area shape="rect" href="classopen__spiel_1_1_bot_registerer.html#acda325423331a4326b118934c89143ef" title=" " alt="" coords="228,5,399,46"/>
-<area shape="poly" title=" " alt="" coords="145,85,224,55,240,49,241,54,226,60,147,90"/>
+<area shape="poly" title=" " alt="" coords="177,41,212,36,212,42,178,46"/>
 <area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="225,70,402,96"/>
-<area shape="poly" title=" " alt="" coords="177,96,209,92,209,98,178,101"/>
-<area shape="rect" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df" title=" " alt="" coords="268,120,359,145"/>
-<area shape="poly" title=" " alt="" coords="178,115,253,123,252,128,177,120"/>
-<area shape="rect" href="namespaceabsl.html#a66735d042e8e255930c66b67f3b39244" title=" " alt="" coords="266,169,360,194"/>
-<area shape="poly" title=" " alt="" coords="146,127,226,155,252,163,250,168,224,160,144,132"/>
-<area shape="rect" href="namespaceabsl_1_1strings__internal.html#ad5b694c25b0f1ab42df683172f72e1ce" title=" " alt="" coords="450,161,591,202"/>
-<area shape="poly" title=" " alt="" coords="361,179,434,179,434,184,361,184"/>
-<area shape="rect" href="classabsl_1_1string__view.html#acdd63d87adecc9cb89e3bb2c4efedf47" title=" " alt="" coords="639,144,792,169"/>
-<area shape="poly" title=" " alt="" coords="592,170,623,166,624,171,592,175"/>
-<area shape="rect" href="classabsl_1_1string__view.html#a3950f228eccec8f88e34b9a90ad94428" title=" " alt="" coords="640,193,791,218"/>
-<area shape="poly" title=" " alt="" coords="592,188,625,192,624,197,592,193"/>
+<area shape="poly" title=" " alt="" coords="178,63,209,67,209,73,177,68"/>
 </map>
 </div>
 <div class="dynheader">
@@ -396,11 +392,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_bot_registerer_a7df6413dfd4fc49e44d163f9c464561a_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_bot_registerer_a7df6413dfd4fc49e44d163f9c464561a_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_bot_registerer_a7df6413dfd4fc49e44d163f9c464561a_icgraph" id="aclassopen__spiel_1_1_bot_registerer_a7df6413dfd4fc49e44d163f9c464561a_icgraph">
-<area shape="rect" title=" " alt="" coords="475,5,646,46"/>
-<area shape="rect" href="namespaceopen__spiel.html#a81c2cfd16725f2a50eff8e6db4383e0e" title=" " alt="" coords="242,13,427,38"/>
-<area shape="poly" title=" " alt="" coords="460,28,427,28,427,23,460,23"/>
-<area shape="rect" href="namespaceopen__spiel.html#ab5a66044f3c30a6c61a5c40449a537d6" title=" " alt="" coords="5,13,194,38"/>
-<area shape="poly" title=" " alt="" coords="226,28,194,28,194,23,226,23"/>
+<area shape="rect" title=" " alt="" coords="239,5,410,46"/>
+<area shape="rect" href="namespaceopen__spiel.html#a81c2cfd16725f2a50eff8e6db4383e0e" title=" " alt="" coords="5,13,191,38"/>
+<area shape="poly" title=" " alt="" coords="223,28,191,28,191,23,223,23"/>
 </map>
 </div>
 
@@ -478,10 +472,9 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="spiel__bots_8cc_source.html#l00333">333</a> of file <a class="el" href="spiel__bots_8cc_source.html">spiel_bots.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  333</span>                                                   {</div>
 <div class="line"><span class="lineno">  334</span>  std::vector&lt;std::string&gt; names;</div>
-<div class="line"><span class="lineno">  335</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; key_val : factories()) names.push_back(key_val.<a class="code hl_variable" href="hands_8cpp.html#a1334c4a4638471a447d2290b7ceaf345">first</a>);</div>
+<div class="line"><span class="lineno">  335</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; key_val : factories()) names.push_back(key_val.first);</div>
 <div class="line"><span class="lineno">  336</span>  <span class="keywordflow">return</span> names;</div>
 <div class="line"><span class="lineno">  337</span>}</div>
-<div class="ttc" id="ahands_8cpp_html_a1334c4a4638471a447d2290b7ceaf345"><div class="ttname"><a href="hands_8cpp.html#a1334c4a4638471a447d2290b7ceaf345">first</a></div><div class="ttdeci">int first[3]</div><div class="ttdef"><b>Definition</b> <a href="hands_8cpp_source.html#l00074">hands.cpp:74</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="spiel__bots_8cc_source.html#l00287">CreateByName()</a>, and <a class="el" href="spiel__bots_8cc_source.html#l00339">open_spiel::RegisteredBots()</a>.</p>
 <div class="dynheader">
@@ -489,15 +482,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_bot_registerer_acda325423331a4326b118934c89143ef_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_bot_registerer_acda325423331a4326b118934c89143ef_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_bot_registerer_acda325423331a4326b118934c89143ef_icgraph" id="aclassopen__spiel_1_1_bot_registerer_acda325423331a4326b118934c89143ef_icgraph">
-<area shape="rect" title=" " alt="" coords="471,35,642,75"/>
-<area shape="rect" href="classopen__spiel_1_1_bot_registerer.html#a541147e08ab383cd9fb40e58e12789eb" title=" " alt="" coords="247,5,418,46"/>
-<area shape="poly" title=" " alt="" coords="456,44,418,40,419,34,456,39"/>
-<area shape="rect" href="namespaceopen__spiel.html#a28d19e65fe9bd9cd5849dbc620d12d5e" title=" " alt="" coords="242,70,423,96"/>
-<area shape="poly" title=" " alt="" coords="456,70,424,74,423,69,455,65"/>
-<area shape="rect" href="namespaceopen__spiel.html#adf7d52b8cc21ea6b1bc3963837073829" title=" " alt="" coords="30,13,169,38"/>
-<area shape="poly" title=" " alt="" coords="232,28,170,28,170,23,232,23"/>
-<area shape="rect" href="namespaceopen__spiel.html#ab5a66044f3c30a6c61a5c40449a537d6" title=" " alt="" coords="5,70,194,96"/>
-<area shape="poly" title=" " alt="" coords="226,86,194,86,194,80,226,80"/>
+<area shape="rect" title=" " alt="" coords="422,35,593,75"/>
+<area shape="rect" href="classopen__spiel_1_1_bot_registerer.html#a541147e08ab383cd9fb40e58e12789eb" title=" " alt="" coords="198,5,369,46"/>
+<area shape="poly" title=" " alt="" coords="407,44,369,40,370,34,407,39"/>
+<area shape="rect" href="namespaceopen__spiel.html#a28d19e65fe9bd9cd5849dbc620d12d5e" title=" " alt="" coords="193,70,374,96"/>
+<area shape="poly" title=" " alt="" coords="407,70,375,74,374,69,406,65"/>
+<area shape="rect" href="namespaceopen__spiel.html#adf7d52b8cc21ea6b1bc3963837073829" title=" " alt="" coords="5,13,145,38"/>
+<area shape="poly" title=" " alt="" coords="182,28,145,28,145,23,182,23"/>
 </map>
 </div>
 

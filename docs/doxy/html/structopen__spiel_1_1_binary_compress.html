@@ -106,9 +106,9 @@ Collaboration diagram for open_spiel::BinaryCompress:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a895394e4f18b247a59451b6673e9e1de" id="r_a895394e4f18b247a59451b6673e9e1de"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a895394e4f18b247a59451b6673e9e1de">Compress</a> (<a class="el" href="classabsl_1_1_span.html">absl::Span</a>&lt; const float &gt; buffer)</td></tr>
+<tr class="memitem:a895394e4f18b247a59451b6673e9e1de" id="r_a895394e4f18b247a59451b6673e9e1de"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a895394e4f18b247a59451b6673e9e1de">Compress</a> (absl::Span&lt; const float &gt; buffer)</td></tr>
 <tr class="separator:a895394e4f18b247a59451b6673e9e1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af39b201900da7fb1cdb2205d26a28ad1" id="r_af39b201900da7fb1cdb2205d26a28ad1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af39b201900da7fb1cdb2205d26a28ad1">Decompress</a> (<a class="el" href="classabsl_1_1string__view.html">absl::string_view</a> compressed, <a class="el" href="classabsl_1_1_span.html">absl::Span</a>&lt; float &gt; buffer)</td></tr>
+<tr class="memitem:af39b201900da7fb1cdb2205d26a28ad1" id="r_af39b201900da7fb1cdb2205d26a28ad1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af39b201900da7fb1cdb2205d26a28ad1">Decompress</a> (absl::string_view compressed, absl::Span&lt; float &gt; buffer)</td></tr>
 <tr class="separator:af39b201900da7fb1cdb2205d26a28ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -132,7 +132,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">static std::string open_spiel::BinaryCompress::Compress </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classabsl_1_1_span.html">absl::Span</a>&lt; const float &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
+          <td class="paramtype">absl::Span&lt; const float &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -145,38 +145,26 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="observer_8cc_source.html#l00256">256</a> of file <a class="el" href="observer_8cc_source.html">observer.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  256</span>                                                          {</div>
-<div class="line"><span class="lineno">  257</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_bytes = (buffer.<a class="code hl_function" href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797">size</a>() + <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a> - 1) / <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>;</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_bytes = (buffer.size() + <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a> - 1) / <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>;</div>
 <div class="line"><span class="lineno">  258</span>    std::string str(num_bytes + <a class="code hl_variable" href="namespaceopen__spiel.html#abbbd5ca7f9bdf4b135de88371f3cfe89">kNumHeaderBytes</a>, <span class="charliteral">&#39;\0&#39;</span>);</div>
 <div class="line"><span class="lineno">  259</span>    str[0] = <a class="code hl_enumvalue" href="namespaceopen__spiel.html#a08afe0fc0d80483f36b9cd463ceadb67a9b491bcb461132fb35177b9eac9331f7">kCompressionBinary</a>;</div>
 <div class="line"><span class="lineno">  260</span> </div>
-<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> = 0; <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> &lt; buffer.<a class="code hl_function" href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797">size</a>(); ++<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>) {</div>
-<div class="line"><span class="lineno">  262</span>      <span class="keywordflow">if</span> (buffer[<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>]) {</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">byte</span> = <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> / <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>;</div>
-<div class="line"><span class="lineno">  264</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> bit = <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> % <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>;</div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; buffer.size(); ++i) {</div>
+<div class="line"><span class="lineno">  262</span>      <span class="keywordflow">if</span> (buffer[i]) {</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">byte</span> = i / <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>;</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> bit = i % <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>;</div>
 <div class="line"><span class="lineno">  265</span>        str[<a class="code hl_variable" href="namespaceopen__spiel.html#abbbd5ca7f9bdf4b135de88371f3cfe89">kNumHeaderBytes</a> + byte] += (1 &lt;&lt; bit);</div>
 <div class="line"><span class="lineno">  266</span>      }</div>
 <div class="line"><span class="lineno">  267</span>    }</div>
 <div class="line"><span class="lineno">  268</span>    <span class="keywordflow">return</span> str;</div>
 <div class="line"><span class="lineno">  269</span>  }</div>
-<div class="ttc" id="abtree__benchmark_8cc_html_a717c50cfde3924051c279a89096afd3d"><div class="ttname"><a href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a></div><div class="ttdeci">uint64_t i</div><div class="ttdef"><b>Definition</b> <a href="btree__benchmark_8cc_source.html#l00232">btree_benchmark.cc:232</a></div></div>
-<div class="ttc" id="aclassabsl_1_1_span_html_a92186c247036e10dd12603c09f8b8797"><div class="ttname"><a href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797">absl::Span::size</a></div><div class="ttdeci">constexpr size_type size() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="span_8h_source.html#l00283">span.h:283</a></div></div>
 <div class="ttc" id="anamespaceopen__spiel_html_a08afe0fc0d80483f36b9cd463ceadb67a9b491bcb461132fb35177b9eac9331f7"><div class="ttname"><a href="namespaceopen__spiel.html#a08afe0fc0d80483f36b9cd463ceadb67a9b491bcb461132fb35177b9eac9331f7">open_spiel::kCompressionBinary</a></div><div class="ttdeci">@ kCompressionBinary</div><div class="ttdef"><b>Definition</b> <a href="observer_8cc_source.html#l00249">observer.cc:248</a></div></div>
 <div class="ttc" id="anamespaceopen__spiel_html_abbbd5ca7f9bdf4b135de88371f3cfe89"><div class="ttname"><a href="namespaceopen__spiel.html#abbbd5ca7f9bdf4b135de88371f3cfe89">open_spiel::kNumHeaderBytes</a></div><div class="ttdeci">constexpr int kNumHeaderBytes</div><div class="ttdef"><b>Definition</b> <a href="observer_8cc_source.html#l00250">observer.cc:250</a></div></div>
 <div class="ttc" id="astructopen__spiel_1_1_binary_compress_html_a36d871481646e126819bbc36bf1a6b06"><div class="ttname"><a href="#a36d871481646e126819bbc36bf1a6b06">open_spiel::BinaryCompress::kBitsPerByte</a></div><div class="ttdeci">static constexpr int kBitsPerByte</div><div class="ttdef"><b>Definition</b> <a href="observer_8cc_source.html#l00254">observer.cc:254</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="btree__benchmark_8cc_source.html#l00232">i</a>, <a class="el" href="observer_8cc_source.html#l00254">kBitsPerByte</a>, <a class="el" href="observer_8cc_source.html#l00248">open_spiel::kCompressionBinary</a>, <a class="el" href="observer_8cc_source.html#l00250">open_spiel::kNumHeaderBytes</a>, and <a class="el" href="span_8h_source.html#l00283">absl::Span&lt; T &gt;::size()</a>.</p>
+<p class="reference">References <a class="el" href="observer_8cc_source.html#l00254">kBitsPerByte</a>, <a class="el" href="observer_8cc_source.html#l00248">open_spiel::kCompressionBinary</a>, and <a class="el" href="observer_8cc_source.html#l00250">open_spiel::kNumHeaderBytes</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="observer_8cc_source.html#l00304">open_spiel::Observation::Compress()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structopen__spiel_1_1_binary_compress_a895394e4f18b247a59451b6673e9e1de_cgraph.png" border="0" usemap="#astructopen__spiel_1_1_binary_compress_a895394e4f18b247a59451b6673e9e1de_cgraph" alt=""/></div>
-<map name="astructopen__spiel_1_1_binary_compress_a895394e4f18b247a59451b6673e9e1de_cgraph" id="astructopen__spiel_1_1_binary_compress_a895394e4f18b247a59451b6673e9e1de_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,194,46"/>
-<area shape="rect" href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797" title=" " alt="" coords="242,13,357,38"/>
-<area shape="poly" title=" " alt="" coords="194,23,226,23,226,28,194,28"/>
-</map>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -202,12 +190,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">static void open_spiel::BinaryCompress::Decompress </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classabsl_1_1string__view.html">absl::string_view</a></td>          <td class="paramname"><span class="paramname"><em>compressed</em></span>, </td>
+          <td class="paramtype">absl::string_view</td>          <td class="paramname"><span class="paramname"><em>compressed</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classabsl_1_1_span.html">absl::Span</a>&lt; float &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
+          <td class="paramtype">absl::Span&lt; float &gt;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -219,9 +207,9 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="observer_8cc_source.html#l00271">271</a> of file <a class="el" href="observer_8cc_source.html">observer.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  272</span>                                                 {</div>
-<div class="line"><span class="lineno">  273</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_bytes = (buffer.<a class="code hl_function" href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797">size</a>() + <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a> - 1) / <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>;</div>
-<div class="line"><span class="lineno">  274</span>    <a class="code hl_function" href="namespaceabsl.html#a1b228348b0d7cd46a5d9a1d4daf702cb">absl::c_fill</a>(buffer, 0);</div>
-<div class="line"><span class="lineno">  275</span>    <a class="code hl_define" href="spiel__utils_8h.html#abcb08ef83297cd8a69ac67d47cfa5da2">SPIEL_CHECK_EQ</a>(compressed.<a class="code hl_function" href="classabsl_1_1string__view.html#a3950f228eccec8f88e34b9a90ad94428">size</a>(), num_bytes + <a class="code hl_variable" href="namespaceopen__spiel.html#abbbd5ca7f9bdf4b135de88371f3cfe89">kNumHeaderBytes</a>);</div>
+<div class="line"><span class="lineno">  273</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_bytes = (buffer.size() + <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a> - 1) / <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>;</div>
+<div class="line"><span class="lineno">  274</span>    absl::c_fill(buffer, 0);</div>
+<div class="line"><span class="lineno">  275</span>    <a class="code hl_define" href="spiel__utils_8h.html#abcb08ef83297cd8a69ac67d47cfa5da2">SPIEL_CHECK_EQ</a>(compressed.size(), num_bytes + <a class="code hl_variable" href="namespaceopen__spiel.html#abbbd5ca7f9bdf4b135de88371f3cfe89">kNumHeaderBytes</a>);</div>
 <div class="line"><span class="lineno">  276</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <span class="keywordtype">byte</span> = 0; <span class="keywordtype">byte</span> &lt; num_bytes; ++byte) {</div>
 <div class="line"><span class="lineno">  277</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> bit = 0; bit &lt; <a class="code hl_variable" href="#a36d871481646e126819bbc36bf1a6b06">kBitsPerByte</a>; ++bit) {</div>
 <div class="line"><span class="lineno">  278</span>        <span class="keywordflow">if</span> (compressed[<a class="code hl_variable" href="namespaceopen__spiel.html#abbbd5ca7f9bdf4b135de88371f3cfe89">kNumHeaderBytes</a> + <span class="keywordtype">byte</span>] &amp; (1 &lt;&lt; bit)) {</div>
@@ -230,41 +218,19 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  281</span>      }</div>
 <div class="line"><span class="lineno">  282</span>    }</div>
 <div class="line"><span class="lineno">  283</span>  }</div>
-<div class="ttc" id="aclassabsl_1_1string__view_html_a3950f228eccec8f88e34b9a90ad94428"><div class="ttname"><a href="classabsl_1_1string__view.html#a3950f228eccec8f88e34b9a90ad94428">absl::string_view::size</a></div><div class="ttdeci">constexpr size_type size() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="string__view_8h_source.html#l00271">string_view.h:271</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a1b228348b0d7cd46a5d9a1d4daf702cb"><div class="ttname"><a href="namespaceabsl.html#a1b228348b0d7cd46a5d9a1d4daf702cb">absl::c_fill</a></div><div class="ttdeci">void c_fill(C &amp;c, const T &amp;value)</div><div class="ttdef"><b>Definition</b> <a href="container_8h_source.html#l00672">container.h:672</a></div></div>
 <div class="ttc" id="aspiel__utils_8h_html_abcb08ef83297cd8a69ac67d47cfa5da2"><div class="ttname"><a href="spiel__utils_8h.html#abcb08ef83297cd8a69ac67d47cfa5da2">SPIEL_CHECK_EQ</a></div><div class="ttdeci">#define SPIEL_CHECK_EQ(x, y)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8h_source.html#l00259">spiel_utils.h:259</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="container_8h_source.html#l00672">absl::c_fill()</a>, <a class="el" href="observer_8cc_source.html#l00254">kBitsPerByte</a>, <a class="el" href="observer_8cc_source.html#l00250">open_spiel::kNumHeaderBytes</a>, <a class="el" href="span_8h_source.html#l00283">absl::Span&lt; T &gt;::size()</a>, <a class="el" href="string__view_8h_source.html#l00271">absl::string_view::size()</a>, and <a class="el" href="spiel__utils_8h_source.html#l00259">SPIEL_CHECK_EQ</a>.</p>
+<p class="reference">References <a class="el" href="observer_8cc_source.html#l00254">kBitsPerByte</a>, <a class="el" href="observer_8cc_source.html#l00250">open_spiel::kNumHeaderBytes</a>, and <a class="el" href="spiel__utils_8h_source.html#l00259">SPIEL_CHECK_EQ</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="observer_8cc_source.html#l00311">open_spiel::Observation::Decompress()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="structopen__spiel_1_1_binary_compress_af39b201900da7fb1cdb2205d26a28ad1_cgraph.png" border="0" usemap="#astructopen__spiel_1_1_binary_compress_af39b201900da7fb1cdb2205d26a28ad1_cgraph" alt=""/></div>
-<map name="astructopen__spiel_1_1_binary_compress_af39b201900da7fb1cdb2205d26a28ad1_cgraph" id="astructopen__spiel_1_1_binary_compress_af39b201900da7fb1cdb2205d26a28ad1_cgraph">
-<area shape="rect" title=" " alt="" coords="5,87,194,127"/>
-<area shape="rect" href="namespaceabsl.html#a1b228348b0d7cd46a5d9a1d4daf702cb" title=" " alt="" coords="277,45,358,70"/>
-<area shape="poly" title=" " alt="" coords="191,83,261,67,262,73,193,89"/>
-<area shape="rect" href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797" title=" " alt="" coords="260,94,375,120"/>
-<area shape="poly" title=" " alt="" coords="194,104,244,104,244,110,194,110"/>
-<area shape="rect" href="classabsl_1_1string__view.html#a3950f228eccec8f88e34b9a90ad94428" title=" " alt="" coords="242,144,393,169"/>
-<area shape="poly" title=" " alt="" coords="193,125,244,137,242,142,191,131"/>
-<area shape="rect" href="namespaceabsl_1_1container__algorithm__internal.html#a06daa82467b235da8b6b9b1d09b520a1" title=" " alt="" coords="441,5,607,46"/>
-<area shape="poly" title=" " alt="" coords="358,49,425,38,426,44,358,54"/>
-<area shape="rect" href="namespaceabsl_1_1container__algorithm__internal.html#a00879fc0ada934de06b3b429cecddb57" title=" " alt="" coords="441,71,607,111"/>
-<area shape="poly" title=" " alt="" coords="358,61,426,73,425,78,358,67"/>
-</map>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structopen__spiel_1_1_binary_compress_af39b201900da7fb1cdb2205d26a28ad1_icgraph.png" border="0" usemap="#astructopen__spiel_1_1_binary_compress_af39b201900da7fb1cdb2205d26a28ad1_icgraph" alt=""/></div>
 <map name="astructopen__spiel_1_1_binary_compress_af39b201900da7fb1cdb2205d26a28ad1_icgraph" id="astructopen__spiel_1_1_binary_compress_af39b201900da7fb1cdb2205d26a28ad1_icgraph">
-<area shape="rect" title=" " alt="" coords="419,5,607,46"/>
-<area shape="rect" href="classopen__spiel_1_1_observation.html#a4c80d6da14f27eac718ee4b0f237c4d5" title=" " alt="" coords="210,5,371,46"/>
-<area shape="poly" title=" " alt="" coords="403,28,372,28,372,23,403,23"/>
-<area shape="rect" href="namespaceopen__spiel.html#ac23e6ea7e105e0c39c2d704fb0319939" title=" " alt="" coords="5,5,162,46"/>
-<area shape="poly" title=" " alt="" coords="194,28,162,28,162,23,194,23"/>
+<area shape="rect" title=" " alt="" coords="215,5,403,46"/>
+<area shape="rect" href="classopen__spiel_1_1_observation.html#a4c80d6da14f27eac718ee4b0f237c4d5" title=" " alt="" coords="5,5,167,46"/>
+<area shape="poly" title=" " alt="" coords="199,28,167,28,167,23,199,23"/>
 </map>
 </div>
 

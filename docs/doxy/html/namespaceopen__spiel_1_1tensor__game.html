@@ -141,16 +141,16 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="tensor__game_8cc_source.html#l00109">109</a> of file <a class="el" href="tensor__game_8cc_source.html">tensor_game.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  112</span>                                               {</div>
-<div class="line"><span class="lineno">  113</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a> =</div>
+<div class="line"><span class="lineno">  113</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> size =</div>
 <div class="line"><span class="lineno">  114</span>      std::accumulate(action_names.begin(), action_names.end(), 1,</div>
 <div class="line"><span class="lineno">  115</span>                      [](<span class="keyword">const</span> <span class="keywordtype">int</span> s, <span class="keyword">auto</span> names) { return s * names.size(); });</div>
 <div class="line"><span class="lineno">  116</span>  <a class="code hl_define" href="spiel__utils_8h.html#ac998e613afb013e8bd31b3da80f747ae">SPIEL_CHECK_TRUE</a>(</div>
-<div class="line"><span class="lineno">  117</span>      std::all_of(<a class="code hl_namespace" href="namespaceutils.html">utils</a>.begin(), <a class="code hl_namespace" href="namespaceutils.html">utils</a>.end(), [<a class="code hl_variable" href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a>](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; player_utils) {</div>
+<div class="line"><span class="lineno">  117</span>      std::all_of(utils.begin(), utils.end(), [size](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; player_utils) {</div>
 <div class="line"><span class="lineno">  118</span>        return player_utils.size() == size;</div>
 <div class="line"><span class="lineno">  119</span>      }));</div>
 <div class="line"><span class="lineno">  120</span> </div>
 <div class="line"><span class="lineno">  121</span>  <span class="comment">// Detect the utility type from the utilities.</span></div>
-<div class="line"><span class="lineno">  122</span>  <span class="keyword">const</span> <a class="code hl_enumeration" href="structopen__spiel_1_1_game_type.html#a1ac5c4948c36c41709023b391bb58ef3">GameType::Utility</a> utility = GetUtilityType(<a class="code hl_namespace" href="namespaceutils.html">utils</a>);</div>
+<div class="line"><span class="lineno">  122</span>  <span class="keyword">const</span> <a class="code hl_enumeration" href="structopen__spiel_1_1_game_type.html#a1ac5c4948c36c41709023b391bb58ef3">GameType::Utility</a> utility = GetUtilityType(utils);</div>
 <div class="line"><span class="lineno">  123</span> </div>
 <div class="line"><span class="lineno">  124</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structopen__spiel_1_1_game_type.html">GameType</a> game_type{</div>
 <div class="line"><span class="lineno">  125</span>      <span class="comment">/*short_name=*/</span>short_name,</div>
@@ -160,8 +160,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  129</span>      GameType::Information::kOneShot,</div>
 <div class="line"><span class="lineno">  130</span>      utility,</div>
 <div class="line"><span class="lineno">  131</span>      GameType::RewardModel::kTerminal,</div>
-<div class="line"><span class="lineno">  132</span>      <span class="comment">/*max_num_players=*/</span><span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_namespace" href="namespaceutils.html">utils</a>.size()),</div>
-<div class="line"><span class="lineno">  133</span>      <span class="comment">/*min_num_players=*/</span><span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_namespace" href="namespaceutils.html">utils</a>.size()),</div>
+<div class="line"><span class="lineno">  132</span>      <span class="comment">/*max_num_players=*/</span><span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(utils.size()),</div>
+<div class="line"><span class="lineno">  133</span>      <span class="comment">/*min_num_players=*/</span><span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(utils.size()),</div>
 <div class="line"><span class="lineno">  134</span>      <span class="comment">/*provides_information_state_string=*/</span><span class="keyword">true</span>,</div>
 <div class="line"><span class="lineno">  135</span>      <span class="comment">/*provides_information_state_tensor=*/</span><span class="keyword">true</span>,</div>
 <div class="line"><span class="lineno">  136</span>      <span class="comment">/*provides_observation_string=*/</span><span class="keyword">false</span>,</div>
@@ -170,15 +170,13 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  139</span>  };</div>
 <div class="line"><span class="lineno">  140</span> </div>
 <div class="line"><span class="lineno">  141</span>  <span class="keywordflow">return</span> std::shared_ptr&lt;const TensorGame&gt;(</div>
-<div class="line"><span class="lineno">  142</span>      <span class="keyword">new</span> TensorGame(game_type, {}, action_names, <a class="code hl_namespace" href="namespaceutils.html">utils</a>));</div>
+<div class="line"><span class="lineno">  142</span>      <span class="keyword">new</span> TensorGame(game_type, {}, action_names, utils));</div>
 <div class="line"><span class="lineno">  143</span>}</div>
-<div class="ttc" id="alow__level__alloc_8cc_html_aad9b71a31372d5c0ab9c23163efe9544"><div class="ttname"><a href="low__level__alloc_8cc.html#aad9b71a31372d5c0ab9c23163efe9544">size</a></div><div class="ttdeci">uintptr_t size</div><div class="ttdef"><b>Definition</b> <a href="low__level__alloc_8cc_source.html#l00080">low_level_alloc.cc:80</a></div></div>
-<div class="ttc" id="anamespaceutils_html"><div class="ttname"><a href="namespaceutils.html">utils</a></div><div class="ttdef"><b>Definition</b> <a href="data_2paper__data_2routing__game__experiments_2utils_8py_source.html#l00001">utils.py:1</a></div></div>
 <div class="ttc" id="aspiel__utils_8h_html_ac998e613afb013e8bd31b3da80f747ae"><div class="ttname"><a href="spiel__utils_8h.html#ac998e613afb013e8bd31b3da80f747ae">SPIEL_CHECK_TRUE</a></div><div class="ttdeci">#define SPIEL_CHECK_TRUE(x)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8h_source.html#l00282">spiel_utils.h:282</a></div></div>
 <div class="ttc" id="astructopen__spiel_1_1_game_type_html"><div class="ttname"><a href="structopen__spiel_1_1_game_type.html">open_spiel::GameType</a></div><div class="ttdef"><b>Definition</b> <a href="spiel_8h_source.html#l00049">spiel.h:49</a></div></div>
 <div class="ttc" id="astructopen__spiel_1_1_game_type_html_a1ac5c4948c36c41709023b391bb58ef3"><div class="ttname"><a href="structopen__spiel_1_1_game_type.html#a1ac5c4948c36c41709023b391bb58ef3">open_spiel::GameType::Utility</a></div><div class="ttdeci">Utility</div><div class="ttdef"><b>Definition</b> <a href="spiel_8h_source.html#l00095">spiel.h:95</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="structopen__spiel_1_1_game_type.html#a1f22342e8a8c066323b49c0340a06d8eab1ebb5017b01aead05321c8dd2107ab0">open_spiel::GameType::kDeterministic</a>, <a class="el" href="structopen__spiel_1_1_game_type.html#a0b4230b668f857b0815bd55f11b522aea21e6a5b3710e0b13334d892e2b8a4be3">open_spiel::GameType::kOneShot</a>, <a class="el" href="structopen__spiel_1_1_game_type.html#a624349737f34cc67d0cf81fd7138c17ba0ffc281e20028439b1995e0fa983ffcb">open_spiel::GameType::kSimultaneous</a>, <a class="el" href="structopen__spiel_1_1_game_type.html#a5a5f739de73ade6cfe6961fd4a2f41a5a217dd2f6ef26065693bb5043fce241ea">open_spiel::GameType::kTerminal</a>, <a class="el" href="low__level__alloc_8cc_source.html#l00080">size</a>, and <a class="el" href="spiel__utils_8h_source.html#l00282">SPIEL_CHECK_TRUE</a>.</p>
+<p class="reference">References <a class="el" href="structopen__spiel_1_1_game_type.html#a1f22342e8a8c066323b49c0340a06d8eab1ebb5017b01aead05321c8dd2107ab0">open_spiel::GameType::kDeterministic</a>, <a class="el" href="structopen__spiel_1_1_game_type.html#a0b4230b668f857b0815bd55f11b522aea21e6a5b3710e0b13334d892e2b8a4be3">open_spiel::GameType::kOneShot</a>, <a class="el" href="structopen__spiel_1_1_game_type.html#a624349737f34cc67d0cf81fd7138c17ba0ffc281e20028439b1995e0fa983ffcb">open_spiel::GameType::kSimultaneous</a>, <a class="el" href="structopen__spiel_1_1_game_type.html#a5a5f739de73ade6cfe6961fd4a2f41a5a217dd2f6ef26065693bb5043fce241ea">open_spiel::GameType::kTerminal</a>, and <a class="el" href="spiel__utils_8h_source.html#l00282">SPIEL_CHECK_TRUE</a>.</p>
 
 </div>
 </div>
@@ -204,30 +202,25 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="tensor__game_8cc_source.html#l00094">94</a> of file <a class="el" href="tensor__game_8cc_source.html">tensor_game.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   96</span>                                 {</div>
 <div class="line"><span class="lineno">   97</span>  std::vector&lt;std::vector&lt;std::string&gt;&gt; action_names(shape.size());</div>
-<div class="line"><span class="lineno">   98</span>  <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceopen__spiel.html#a8e9bf6a040c687a9f0c8393728dc0121">Player</a> <a class="code hl_variable" href="basic__tests_8cc.html#af61d6983a9396a11078805087518af88">player</a> = 0; <a class="code hl_variable" href="basic__tests_8cc.html#af61d6983a9396a11078805087518af88">player</a> &lt; shape.size(); ++<a class="code hl_variable" href="basic__tests_8cc.html#af61d6983a9396a11078805087518af88">player</a>) {</div>
-<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> = 0; <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> &lt; shape[<a class="code hl_variable" href="basic__tests_8cc.html#af61d6983a9396a11078805087518af88">player</a>]; ++<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>) {</div>
-<div class="line"><span class="lineno">  100</span>      action_names[<a class="code hl_variable" href="basic__tests_8cc.html#af61d6983a9396a11078805087518af88">player</a>].push_back(<a class="code hl_function" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a>(<span class="stringliteral">&quot;action&quot;</span>, <a class="code hl_variable" href="basic__tests_8cc.html#af61d6983a9396a11078805087518af88">player</a>, <span class="stringliteral">&quot;_&quot;</span>, <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>));</div>
+<div class="line"><span class="lineno">   98</span>  <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespaceopen__spiel.html#a8e9bf6a040c687a9f0c8393728dc0121">Player</a> player = 0; player &lt; shape.size(); ++player) {</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; shape[player]; ++i) {</div>
+<div class="line"><span class="lineno">  100</span>      action_names[player].push_back(absl::StrCat(<span class="stringliteral">&quot;action&quot;</span>, player, <span class="stringliteral">&quot;_&quot;</span>, i));</div>
 <div class="line"><span class="lineno">  101</span>    }</div>
 <div class="line"><span class="lineno">  102</span>  }</div>
-<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">return</span> CreateTensorGame(<span class="stringliteral">&quot;short_name&quot;</span>, <span class="stringliteral">&quot;Long Name&quot;</span>, action_names, <a class="code hl_namespace" href="namespaceutils.html">utils</a>);</div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">return</span> CreateTensorGame(<span class="stringliteral">&quot;short_name&quot;</span>, <span class="stringliteral">&quot;Long Name&quot;</span>, action_names, utils);</div>
 <div class="line"><span class="lineno">  104</span>}</div>
-<div class="ttc" id="abasic__tests_8cc_html_af61d6983a9396a11078805087518af88"><div class="ttname"><a href="basic__tests_8cc.html#af61d6983a9396a11078805087518af88">player</a></div><div class="ttdeci">Player player</div><div class="ttdef"><b>Definition</b> <a href="basic__tests_8cc_source.html#l00050">basic_tests.cc:50</a></div></div>
-<div class="ttc" id="abtree__benchmark_8cc_html_a717c50cfde3924051c279a89096afd3d"><div class="ttname"><a href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a></div><div class="ttdeci">uint64_t i</div><div class="ttdef"><b>Definition</b> <a href="btree__benchmark_8cc_source.html#l00232">btree_benchmark.cc:232</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a0a9abdb6ee6367339931d4cab29d50df"><div class="ttname"><a href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a></div><div class="ttdeci">ABSL_MUST_USE_RESULT std::string StrCat()</div><div class="ttdef"><b>Definition</b> <a href="str__cat_8h_source.html#l00381">str_cat.h:381</a></div></div>
 <div class="ttc" id="anamespaceopen__spiel_html_a8e9bf6a040c687a9f0c8393728dc0121"><div class="ttname"><a href="namespaceopen__spiel.html#a8e9bf6a040c687a9f0c8393728dc0121">open_spiel::Player</a></div><div class="ttdeci">int Player</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8h_source.html#l00132">spiel_utils.h:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="tensor__game_8cc_source.html#l00094">CreateTensorGame()</a>, <a class="el" href="btree__benchmark_8cc_source.html#l00232">i</a>, <a class="el" href="basic__tests_8cc_source.html#l00050">player</a>, and <a class="el" href="str__cat_8h_source.html#l00381">absl::StrCat()</a>.</p>
+<p class="reference">References <a class="el" href="tensor__game_8cc_source.html#l00094">CreateTensorGame()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="tensor__game_8cc_source.html#l00094">CreateTensorGame()</a>, and <a class="el" href="normal__form__extensive__game_8cc_source.html#l00054">open_spiel::ExtensiveToTensorGame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="tensor__game_8cc_source.html#l00094">CreateTensorGame()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopen__spiel_1_1tensor__game_a937748364dc4a23755602e432c8d4d79_cgraph.png" border="0" usemap="#anamespaceopen__spiel_1_1tensor__game_a937748364dc4a23755602e432c8d4d79_cgraph" alt=""/></div>
 <map name="anamespaceopen__spiel_1_1tensor__game_a937748364dc4a23755602e432c8d4d79_cgraph" id="anamespaceopen__spiel_1_1tensor__game_a937748364dc4a23755602e432c8d4d79_cgraph">
 <area shape="rect" title=" " alt="" coords="5,29,187,70"/>
-<area shape="poly" title=" " alt="" coords="61,29,59,19,65,10,77,5,96,3,116,5,128,11,126,16,115,10,96,8,79,10,68,14,64,20,66,28"/>
-<area shape="rect" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df" title=" " alt="" coords="235,37,326,62"/>
-<area shape="poly" title=" " alt="" coords="187,47,219,47,219,52,187,52"/>
+<area shape="poly" title=" " alt="" coords="61,29,60,19,65,10,78,5,96,3,116,5,128,11,125,16,114,10,96,8,79,10,69,14,65,20,66,28"/>
 </map>
 </div>
 <div class="dynheader">
@@ -235,16 +228,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceopen__spiel_1_1tensor__game_a937748364dc4a23755602e432c8d4d79_icgraph.png" border="0" usemap="#anamespaceopen__spiel_1_1tensor__game_a937748364dc4a23755602e432c8d4d79_icgraph" alt=""/></div>
 <map name="anamespaceopen__spiel_1_1tensor__game_a937748364dc4a23755602e432c8d4d79_icgraph" id="anamespaceopen__spiel_1_1tensor__game_a937748364dc4a23755602e432c8d4d79_icgraph">
-<area shape="rect" title=" " alt="" coords="690,35,872,75"/>
-<area shape="poly" title=" " alt="" coords="823,22,807,16,781,13,756,15,741,20,736,26,738,33,733,35,730,25,738,16,755,10,781,8,809,10,825,17"/>
-<area shape="rect" href="namespaceopen__spiel.html#a64afb954f484f70578ee0f3c639650e0" title=" " alt="" coords="405,42,642,68"/>
-<area shape="poly" title=" " alt="" coords="675,58,643,58,643,52,675,52"/>
-<area shape="rect" href="namespaceopen__spiel.html#aa9b7b74c0d7a7f649a66113d4b1d1543" title=" " alt="" coords="211,13,346,38"/>
-<area shape="poly" title=" " alt="" coords="396,42,347,36,347,31,397,37"/>
-<area shape="rect" href="namespaceopen__spiel.html#abc134b7df1e76ff54c6df6c003cde2ac" title=" " alt="" coords="201,63,357,103"/>
-<area shape="poly" title=" " alt="" coords="391,73,358,77,357,71,391,68"/>
-<area shape="rect" href="namespaceopen__spiel_1_1battleship.html#af5c622f076a51fdd9e4e12ddc90a9297" title=" " alt="" coords="5,5,153,46"/>
-<area shape="poly" title=" " alt="" coords="196,28,153,28,153,23,196,23"/>
+<area shape="rect" title=" " alt="" coords="5,29,187,70"/>
+<area shape="poly" title=" " alt="" coords="125,16,114,10,96,8,79,10,69,14,65,20,66,28,61,29,60,19,65,10,78,5,96,3,116,5,128,11"/>
 </map>
 </div>
 

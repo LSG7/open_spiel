@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['gamephase_0',['GamePhase',['../namespaceopen__spiel_1_1coin__game.html#a825685d39111216f7d22ffb9d28a2593',1,'open_spiel::coin_game::GamePhase'],['../namespaceopen__spiel_1_1tarok.html#ad67589044b8524b974552228e61901aa',1,'open_spiel::tarok::GamePhase']]],
-  ['gameversion_1',['GameVersion',['../namespaceopen__spiel_1_1dark__hex.html#a2bf949124cba4a948556ab0a2f50568a',1,'open_spiel::dark_hex']]],
-  ['gocolor_2',['GoColor',['../namespaceopen__spiel_1_1go.html#ad391b5c0d2669f6fd1ff686ff323d749',1,'open_spiel::go::GoColor'],['../namespaceopen__spiel_1_1phantom__go.html#a9f8c2bc14d56c30258896b35d6cf6ddd',1,'open_spiel::phantom_go::GoColor']]],
-  ['groundtype_3',['GroundType',['../namespaceopen__spiel_1_1base_t.html#ad1e9ae7df9a3f8c72ae781ffb6d787b5',1,'open_spiel::baseT::GroundType'],['../namespaceopen__spiel_1_1base_t.html#ad1e9ae7df9a3f8c72ae781ffb6d787b5',1,'open_spiel::baseT::GroundType']]]
+  ['playeractionstate_0',['PlayerActionState',['../namespaceopen__spiel_1_1base_t.html#a2e15b27a978eadc0f161cbe0bf36193d',1,'open_spiel::baseT']]],
+  ['playerid_1',['PlayerId',['../namespaceopen__spiel.html#a5677cc0bb3f0c3d54e59c5df948718d6',1,'open_spiel']]],
+  ['playern_2',['PlayerN',['../namespaceopen__spiel_1_1base_t.html#a6fedcc3e5dbfaec66517ae083022879c',1,'open_spiel::baseT']]],
+  ['privateinfotype_3',['PrivateInfoType',['../namespaceopen__spiel.html#aa9281a1c15b90072251b89cdf81b6b1a',1,'open_spiel']]]
 ];

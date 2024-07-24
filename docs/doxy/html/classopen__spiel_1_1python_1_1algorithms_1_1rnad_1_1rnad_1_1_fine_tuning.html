@@ -231,11 +231,11 @@ The post-processing is used on the learner, and thus must be jit-friendly.
 <div class="line"><span class="lineno">  202</span>      <span class="keywordflow">return</span> policy</div>
 <div class="line"><span class="lineno">  203</span> </div>
 <div class="line"><span class="lineno">  204</span>    <span class="comment"># The unbatched/single policy case:</span></div>
-<div class="line"><span class="lineno">  205</span>    <span class="keywordflow">if</span> <a class="code hl_variable" href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a>(policy.shape) == 1:</div>
+<div class="line"><span class="lineno">  205</span>    <span class="keywordflow">if</span> len(policy.shape) == 1:</div>
 <div class="line"><span class="lineno">  206</span>      <span class="keywordflow">return</span> self._discretize_single(policy)</div>
 <div class="line"><span class="lineno">  207</span> </div>
 <div class="line"><span class="lineno">  208</span>    <span class="comment"># policy may be [B, A] or [T, B, A], etc. Thus add hk.BatchApply.</span></div>
-<div class="line"><span class="lineno">  209</span>    dims = <a class="code hl_variable" href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a>(policy.shape) - 1</div>
+<div class="line"><span class="lineno">  209</span>    dims = len(policy.shape) - 1</div>
 <div class="line"><span class="lineno">  210</span> </div>
 <div class="line"><span class="lineno">  211</span>    <span class="comment"># TODO(author18): avoid mixing vmap and BatchApply since the two could</span></div>
 <div class="line"><span class="lineno">  212</span>    <span class="comment"># be folded into either a single BatchApply or a sequence of vmaps, but</span></div>
@@ -245,9 +245,8 @@ The post-processing is used on the learner, and thus must be jit-friendly.
 <div class="line"><span class="lineno">  216</span> </div>
 <div class="line"><span class="lineno">  217</span>    <span class="keywordflow">return</span> policy</div>
 <div class="line"><span class="lineno">  218</span> </div>
-<div class="ttc" id="alow__level__alloc__test_8cc_html_afed088663f8704004425cdae2120b9b3"><div class="ttname"><a href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a></div><div class="ttdeci">int len</div><div class="ttdef"><b>Definition</b> <a href="low__level__alloc__test_8cc_source.html#l00046">low_level_alloc_test.cc:46</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="rnad_8py_source.html#l00219">open_spiel.python.algorithms.rnad.rnad.FineTuning._discretize_single()</a>, <a class="el" href="low__level__alloc__test_8cc_source.html#l00046">len</a>, and <a class="el" href="rnad_8py_source.html#l00162">open_spiel.python.algorithms.rnad.rnad.FineTuning.policy_discretization</a>.</p>
+<p class="reference">References <a class="el" href="rnad_8py_source.html#l00219">open_spiel.python.algorithms.rnad.rnad.FineTuning._discretize_single()</a>, and <a class="el" href="rnad_8py_source.html#l00162">open_spiel.python.algorithms.rnad.rnad.FineTuning.policy_discretization</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00178">open_spiel.python.algorithms.rnad.rnad.FineTuning.post_process_policy()</a>.</p>
 <div class="dynheader">
@@ -305,7 +304,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  220</span>    <span class="stringliteral">&quot;&quot;&quot;A version of self._discretize but for the unbatched data.&quot;&quot;&quot;</span></div>
 <div class="line"><span class="lineno">  221</span>    <span class="comment"># TODO(author18): try to merge _discretize and _discretize_single</span></div>
 <div class="line"><span class="lineno">  222</span>    <span class="comment"># into one function that handles both batched and unbatched cases.</span></div>
-<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> <a class="code hl_variable" href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a>(mu.shape) == 2:</div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> len(mu.shape) == 2:</div>
 <div class="line"><span class="lineno">  224</span>      mu_ = jnp.squeeze(mu, axis=0)</div>
 <div class="line"><span class="lineno">  225</span>    <span class="keywordflow">else</span>:</div>
 <div class="line"><span class="lineno">  226</span>      mu_ = mu</div>
@@ -339,13 +338,13 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  254</span>    result_next = jnp.where(weight_left_next &gt; 0,</div>
 <div class="line"><span class="lineno">  255</span>                            result_next.at[order[0]].add(weight_left_next),</div>
 <div class="line"><span class="lineno">  256</span>                            result_next)</div>
-<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">if</span> <a class="code hl_variable" href="low__level__alloc__test_8cc.html#afed088663f8704004425cdae2120b9b3">len</a>(mu.shape) == 2:</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">if</span> len(mu.shape) == 2:</div>
 <div class="line"><span class="lineno">  258</span>      result_next = jnp.expand_dims(result_next, axis=0)</div>
 <div class="line"><span class="lineno">  259</span>    <span class="keywordflow">return</span> result_next / self.policy_discretization</div>
 <div class="line"><span class="lineno">  260</span> </div>
 <div class="line"><span class="lineno">  261</span> </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="low__level__alloc__test_8cc_source.html#l00046">len</a>, and <a class="el" href="rnad_8py_source.html#l00162">open_spiel.python.algorithms.rnad.rnad.FineTuning.policy_discretization</a>.</p>
+<p class="reference">References <a class="el" href="rnad_8py_source.html#l00162">open_spiel.python.algorithms.rnad.rnad.FineTuning.policy_discretization</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="rnad_8py_source.html#l00199">open_spiel.python.algorithms.rnad.rnad.FineTuning._discretize()</a>.</p>
 <div class="dynheader">

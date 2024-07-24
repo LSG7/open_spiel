@@ -87,7 +87,7 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Env</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md68"></a></p><ul>
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p><ul>
 <li>source env_sg.sh (환경변수) <br  />
 </li>
 <li>source venv/bin/activate <br  />
@@ -103,14 +103,14 @@ $(function(){ initResizable(false); });
 <ul>
 <li>bfloat16 변수가 컴파일러마다 다르다.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md69"></a>
+<h1><a class="anchor" id="autotoc_md2"></a>
 Program flow</h1>
 <ol type="1">
 <li>User 가 만든 게임(BaseT 를 상속한) 의 State 객체가 생성될 때 init_first() 를 호출한다.(반드시)</li>
 <li>init_first() 에서 가장 먼저 init_server() 를 호출하고 파이선 클라이언트가 달라붙기를 기다린다. 기다리지 않고 진행해도 됨.</li>
 <li>Cell, Unit 정보가 변경 될 때마다 클라이언트에게 변경된 정보를 보낸다. Observation 정보를 전부 다 매번 보내는건 불필요, 메모리낭비 라서, 변경된 것만 기록하고 송신한다.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md70"></a>
+<h1><a class="anchor" id="autotoc_md3"></a>
 Ground Rule</h1>
 <ul>
 <li>정형화 시켜서 재사용 원활히</li>
@@ -119,14 +119,14 @@ Ground Rule</h1>
 <li>관련 앱과 데이터 호환 용이</li>
 <li>학습에 사용하기 용이</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md71"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 TODO</h1>
 <ol type="1">
 <li>하나의 게임에서 self-play 로 trajectory 를 2개 만들어야 한다. 어차피 상대방 역할 해주는 봇도 있어야 하는데 그 봇도 똑똑해야 하고 하는김에 궤적 하나 더 만드는게 효율성 좋으니 <br  />
 </li>
 <li>joint action 으로 만들어야 한다. 한번은 이동하고 한번은 행동하고 deepnash 는 선택,행동 이었다면 나는 이동,행동 이다.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md72"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 일기</h1>
 <p>23.8.30 게임 생성 시작 <br  />
 </p>

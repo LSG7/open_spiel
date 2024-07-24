@@ -109,7 +109,7 @@ Collaboration diagram for open_spiel::SamplerFromRng:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acea8254b33e8b7d5f5c5a8d91fbb5060" id="r_acea8254b33e8b7d5f5c5a8d91fbb5060"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acea8254b33e8b7d5f5c5a8d91fbb5060">SamplerFromRng</a> (std::function&lt; double()&gt; rng)</td></tr>
 <tr class="separator:acea8254b33e8b7d5f5c5a8d91fbb5060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f5569c54d6bd6f94970ea5cac49ab92" id="r_a6f5569c54d6bd6f94970ea5cac49ab92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f5569c54d6bd6f94970ea5cac49ab92">operator()</a> (<a class="el" href="classabsl_1_1_span.html">absl::Span</a>&lt; const double &gt; probs)</td></tr>
+<tr class="memitem:a6f5569c54d6bd6f94970ea5cac49ab92" id="r_a6f5569c54d6bd6f94970ea5cac49ab92"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f5569c54d6bd6f94970ea5cac49ab92">operator()</a> (absl::Span&lt; const double &gt; probs)</td></tr>
 <tr class="separator:a6f5569c54d6bd6f94970ea5cac49ab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -154,7 +154,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int open_spiel::SamplerFromRng::operator() </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classabsl_1_1_span.html">absl::Span</a>&lt; const double &gt;</td>          <td class="paramname"><span class="paramname"><em>probs</em></span></td><td>)</td>
+          <td class="paramtype">absl::Span&lt; const double &gt;</td>          <td class="paramname"><span class="paramname"><em>probs</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -163,37 +163,32 @@ Public Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="spiel__utils_8cc_source.html#l00183">183</a> of file <a class="el" href="spiel__utils_8cc_source.html">spiel_utils.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  183</span>                                                           {</div>
 <div class="line"><span class="lineno">  184</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> cutoff = rng_();</div>
-<div class="line"><span class="lineno">  185</span>  <span class="keywordtype">float</span> <a class="code hl_function" href="namespaceabsl__log__internal.html#a4799c9d0746ac532aa42fe37019db2a9">sum</a> = 0.0f;</div>
-<div class="line"><span class="lineno">  186</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> = 0; <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> &lt; probs.<a class="code hl_function" href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797">size</a>(); ++<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>) {</div>
-<div class="line"><span class="lineno">  187</span>    <a class="code hl_function" href="namespaceabsl__log__internal.html#a4799c9d0746ac532aa42fe37019db2a9">sum</a> += probs[<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>];</div>
+<div class="line"><span class="lineno">  185</span>  <span class="keywordtype">float</span> sum = 0.0f;</div>
+<div class="line"><span class="lineno">  186</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; probs.size(); ++i) {</div>
+<div class="line"><span class="lineno">  187</span>    sum += probs[i];</div>
 <div class="line"><span class="lineno">  188</span>    <span class="keywordflow">if</span> (cutoff &lt; sum) {</div>
-<div class="line"><span class="lineno">  189</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>;</div>
+<div class="line"><span class="lineno">  189</span>      <span class="keywordflow">return</span> i;</div>
 <div class="line"><span class="lineno">  190</span>    }</div>
 <div class="line"><span class="lineno">  191</span>  }</div>
 <div class="line"><span class="lineno">  192</span> </div>
 <div class="line"><span class="lineno">  193</span>  <span class="comment">// To be on the safe side, cover case cutoff == 1.0 and sum &lt; 1</span></div>
-<div class="line"><span class="lineno">  194</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> = probs.<a class="code hl_function" href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797">size</a>() - 1; <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a> &gt;= 0; --<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>) {</div>
-<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (probs[<a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>] &gt; 0.0) <span class="keywordflow">return</span> <a class="code hl_variable" href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a>;</div>
+<div class="line"><span class="lineno">  194</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = probs.size() - 1; i &gt;= 0; --i) {</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (probs[i] &gt; 0.0) <span class="keywordflow">return</span> i;</div>
 <div class="line"><span class="lineno">  196</span>  }</div>
 <div class="line"><span class="lineno">  197</span> </div>
 <div class="line"><span class="lineno">  198</span>  <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(<span class="stringliteral">&quot;SamplerFromRng: not a probability distribution.&quot;</span>);</div>
 <div class="line"><span class="lineno">  199</span>}</div>
-<div class="ttc" id="abtree__benchmark_8cc_html_a717c50cfde3924051c279a89096afd3d"><div class="ttname"><a href="btree__benchmark_8cc.html#a717c50cfde3924051c279a89096afd3d">i</a></div><div class="ttdeci">uint64_t i</div><div class="ttdef"><b>Definition</b> <a href="btree__benchmark_8cc_source.html#l00232">btree_benchmark.cc:232</a></div></div>
-<div class="ttc" id="aclassabsl_1_1_span_html_a92186c247036e10dd12603c09f8b8797"><div class="ttname"><a href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797">absl::Span::size</a></div><div class="ttdeci">constexpr size_type size() const noexcept</div><div class="ttdef"><b>Definition</b> <a href="span_8h_source.html#l00283">span.h:283</a></div></div>
-<div class="ttc" id="anamespaceabsl__log__internal_html_a4799c9d0746ac532aa42fe37019db2a9"><div class="ttname"><a href="namespaceabsl__log__internal.html#a4799c9d0746ac532aa42fe37019db2a9">absl_log_internal::sum</a></div><div class="ttdeci">constexpr int sum()</div><div class="ttdef"><b>Definition</b> <a href="check__test__impl_8h_source.html#l00125">check_test_impl.h:125</a></div></div>
 <div class="ttc" id="anamespaceopen__spiel_html_a43513b6f8f3a26ce1a64a1a807df9011"><div class="ttname"><a href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">open_spiel::SpielFatalError</a></div><div class="ttdeci">void SpielFatalError(const std::string &amp;error_msg)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8cc_source.html#l00132">spiel_utils.cc:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="btree__benchmark_8cc_source.html#l00232">i</a>, <a class="el" href="span_8h_source.html#l00283">absl::Span&lt; T &gt;::size()</a>, and <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>.</p>
+<p class="reference">References <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_sampler_from_rng_a6f5569c54d6bd6f94970ea5cac49ab92_cgraph.png" border="0" usemap="#aclassopen__spiel_1_1_sampler_from_rng_a6f5569c54d6bd6f94970ea5cac49ab92_cgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_sampler_from_rng_a6f5569c54d6bd6f94970ea5cac49ab92_cgraph" id="aclassopen__spiel_1_1_sampler_from_rng_a6f5569c54d6bd6f94970ea5cac49ab92_cgraph">
-<area shape="rect" title=" " alt="" coords="5,23,199,64"/>
-<area shape="rect" href="classabsl_1_1_span.html#a92186c247036e10dd12603c09f8b8797" title=" " alt="" coords="278,5,393,31"/>
-<area shape="poly" title=" " alt="" coords="199,30,262,23,263,29,199,36"/>
-<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="247,55,424,80"/>
-<area shape="poly" title=" " alt="" coords="199,51,232,54,231,59,199,56"/>
+<area shape="rect" title=" " alt="" coords="5,5,199,46"/>
+<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="247,13,424,38"/>
+<area shape="poly" title=" " alt="" coords="199,23,231,23,231,28,199,28"/>
 </map>
 </div>
 

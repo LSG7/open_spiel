@@ -121,7 +121,7 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a39b06045bb6b5017f3496bd379cb7ae8" id="r_a39b06045bb6b5017f3496bd379cb7ae8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39b06045bb6b5017f3496bd379cb7ae8">RegisterObserver</a> (const std::string &amp;game_name, const std::string &amp;observer_name, <a class="el" href="#a3efb02dcd6e75be774796b4e2ebdbf38">CreateFunc</a> creator)</td></tr>
 <tr class="separator:a39b06045bb6b5017f3496bd379cb7ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a758f476da1265e23e37d42253be73b07" id="r_a758f476da1265e23e37d42253be73b07"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classopen__spiel_1_1_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a758f476da1265e23e37d42253be73b07">CreateByName</a> (const std::string &amp;observer_name, const <a class="el" href="classopen__spiel_1_1_game.html">Game</a> &amp;game, <a class="el" href="classabsl_1_1optional.html">absl::optional</a>&lt; <a class="el" href="structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt; iig_obs_type, const <a class="el" href="namespaceopen__spiel.html#aac43798f2a15711572119a41e8a91466">ObservationParams</a> &amp;params)</td></tr>
+<tr class="memitem:a758f476da1265e23e37d42253be73b07" id="r_a758f476da1265e23e37d42253be73b07"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classopen__spiel_1_1_observer.html">Observer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a758f476da1265e23e37d42253be73b07">CreateByName</a> (const std::string &amp;observer_name, const <a class="el" href="classopen__spiel_1_1_game.html">Game</a> &amp;game, absl::optional&lt; <a class="el" href="structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt; iig_obs_type, const <a class="el" href="namespaceopen__spiel.html#aac43798f2a15711572119a41e8a91466">ObservationParams</a> &amp;params)</td></tr>
 <tr class="separator:a758f476da1265e23e37d42253be73b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -140,9 +140,8 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line"> std::function&lt;std::shared_ptr&lt;Observer&gt;(</div>
-<div class="line">      <span class="keyword">const</span> Game&amp; game, <a class="code hl_class" href="classabsl_1_1optional.html">absl::optional&lt;IIGObservationType&gt;</a> iig_obs_type,</div>
+<div class="line">      <span class="keyword">const</span> Game&amp; game, absl::optional&lt;IIGObservationType&gt; iig_obs_type,</div>
 <div class="line">      <span class="keyword">const</span> <a class="code hl_typedef" href="namespaceopen__spiel.html#aac43798f2a15711572119a41e8a91466">ObservationParams</a>&amp; params)&gt;</div>
-<div class="ttc" id="aclassabsl_1_1optional_html"><div class="ttname"><a href="classabsl_1_1optional.html">absl::optional</a></div><div class="ttdef"><b>Definition</b> <a href="optional_8h_source.html#l00119">optional.h:123</a></div></div>
 <div class="ttc" id="anamespaceopen__spiel_html_aac43798f2a15711572119a41e8a91466"><div class="ttname"><a href="namespaceopen__spiel.html#aac43798f2a15711572119a41e8a91466">open_spiel::ObservationParams</a></div><div class="ttdeci">GameParameters ObservationParams</div><div class="ttdef"><b>Definition</b> <a href="observer_8h_source.html#l00064">observer.h:64</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="observer_8h_source.html#l00418">418</a> of file <a class="el" href="observer_8h_source.html">observer.h</a>.</p>
@@ -186,13 +185,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_observer_registerer_a890a9b8d751a79768497750b0766e248_cgraph.png" border="0" usemap="#aclassopen__spiel_1_1_observer_registerer_a890a9b8d751a79768497750b0766e248_cgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_observer_registerer_a890a9b8d751a79768497750b0766e248_cgraph" id="aclassopen__spiel_1_1_observer_registerer_a890a9b8d751a79768497750b0766e248_cgraph">
-<area shape="rect" title=" " alt="" coords="5,23,210,64"/>
-<area shape="rect" href="classopen__spiel_1_1_observer_registerer.html#a39b06045bb6b5017f3496bd379cb7ae8" title=" " alt="" coords="258,23,462,64"/>
-<area shape="poly" title=" " alt="" coords="210,41,242,41,242,46,210,46"/>
-<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="510,5,687,31"/>
-<area shape="poly" title=" " alt="" coords="462,30,494,27,495,32,463,35"/>
-<area shape="rect" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df" title=" " alt="" coords="553,55,644,80"/>
-<area shape="poly" title=" " alt="" coords="463,51,538,59,537,64,462,56"/>
+<area shape="rect" title=" " alt="" coords="5,5,210,46"/>
+<area shape="rect" href="classopen__spiel_1_1_observer_registerer.html#a39b06045bb6b5017f3496bd379cb7ae8" title=" " alt="" coords="258,5,462,46"/>
+<area shape="poly" title=" " alt="" coords="210,23,242,23,242,28,210,28"/>
+<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="510,13,687,38"/>
+<area shape="poly" title=" " alt="" coords="462,23,494,23,494,28,462,28"/>
 </map>
 </div>
 
@@ -221,7 +218,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classabsl_1_1optional.html">absl::optional</a>&lt; <a class="el" href="structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>iig_obs_type</em></span>, </td>
+          <td class="paramtype">absl::optional&lt; <a class="el" href="structopen__spiel_1_1_i_i_g_observation_type.html">IIGObservationType</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>iig_obs_type</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -238,21 +235,17 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="observer_8cc_source.html#l00359">359</a> of file <a class="el" href="observer_8cc_source.html">observer.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  363</span>                                     {</div>
-<div class="line"><span class="lineno">  364</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a> = std::pair(<a class="code hl_variable" href="namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__policy.html#a50efa498e20f9eb5fe9a7ff5deea2d1a">game</a>.GetType().short_name, observer_name);</div>
-<div class="line"><span class="lineno">  365</span>  <span class="keyword">auto</span> it = observers().find(<a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a>);</div>
-<div class="line"><span class="lineno">  366</span>  <span class="keywordflow">if</span> (it == observers().<a class="code hl_variable" href="float__conversion_8cc.html#a8fd806ad19b8f5513a4cf18cbf77532c">end</a>()) {</div>
-<div class="line"><span class="lineno">  367</span>    <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(<a class="code hl_function" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a>(<span class="stringliteral">&quot;No observer &#39;&quot;</span>, <a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a>.second, <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  368</span>                                 <span class="stringliteral">&quot; found for game &#39;&quot;</span>, <a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a>.first, <span class="stringliteral">&quot;&#39;&quot;</span>));</div>
+<div class="line"><span class="lineno">  364</span>  <span class="keyword">auto</span> key = std::pair(game.GetType().short_name, observer_name);</div>
+<div class="line"><span class="lineno">  365</span>  <span class="keyword">auto</span> it = observers().find(key);</div>
+<div class="line"><span class="lineno">  366</span>  <span class="keywordflow">if</span> (it == observers().end()) {</div>
+<div class="line"><span class="lineno">  367</span>    <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(absl::StrCat(<span class="stringliteral">&quot;No observer &#39;&quot;</span>, key.second, <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  368</span>                                 <span class="stringliteral">&quot; found for game &#39;&quot;</span>, key.first, <span class="stringliteral">&quot;&#39;&quot;</span>));</div>
 <div class="line"><span class="lineno">  369</span>  }</div>
 <div class="line"><span class="lineno">  370</span>  <span class="keywordflow">return</span> it-&gt;second(game, iig_obs_type, params);</div>
 <div class="line"><span class="lineno">  371</span>}</div>
-<div class="ttc" id="abtree__test_8cc_html_a35af0be900467fedbb610bd6ea65ed78"><div class="ttname"><a href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a></div><div class="ttdeci">int key</div><div class="ttdef"><b>Definition</b> <a href="btree__test_8cc_source.html#l02202">btree_test.cc:2202</a></div></div>
-<div class="ttc" id="afloat__conversion_8cc_html_a8fd806ad19b8f5513a4cf18cbf77532c"><div class="ttname"><a href="float__conversion_8cc.html#a8fd806ad19b8f5513a4cf18cbf77532c">end</a></div><div class="ttdeci">char * end</div><div class="ttdef"><b>Definition</b> <a href="float__conversion_8cc_source.html#l01029">float_conversion.cc:1029</a></div></div>
-<div class="ttc" id="anamespaceabsl_html_a0a9abdb6ee6367339931d4cab29d50df"><div class="ttname"><a href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a></div><div class="ttdeci">ABSL_MUST_USE_RESULT std::string StrCat()</div><div class="ttdef"><b>Definition</b> <a href="str__cat_8h_source.html#l00381">str_cat.h:381</a></div></div>
-<div class="ttc" id="anamespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__policy_html_a50efa498e20f9eb5fe9a7ff5deea2d1a"><div class="ttname"><a href="namespaceopen__spiel_1_1python_1_1algorithms_1_1psro__v2_1_1rl__policy.html#a50efa498e20f9eb5fe9a7ff5deea2d1a">open_spiel.python.algorithms.psro_v2.rl_policy.game</a></div><div class="ttdeci">game</div><div class="ttdef"><b>Definition</b> <a href="rl__policy_8py_source.html#l00133">rl_policy.py:133</a></div></div>
 <div class="ttc" id="anamespaceopen__spiel_html_a43513b6f8f3a26ce1a64a1a807df9011"><div class="ttname"><a href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">open_spiel::SpielFatalError</a></div><div class="ttdeci">void SpielFatalError(const std::string &amp;error_msg)</div><div class="ttdef"><b>Definition</b> <a href="spiel__utils_8cc_source.html#l00132">spiel_utils.cc:132</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="float__conversion_8cc_source.html#l01029">end</a>, <a class="el" href="btree__test_8cc_source.html#l02202">key</a>, <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>, and <a class="el" href="str__cat_8h_source.html#l00381">absl::StrCat()</a>.</p>
+<p class="reference">References <a class="el" href="spiel_8h_source.html#l00809">open_spiel::Game::GetType()</a>, <a class="el" href="spiel_8h_source.html#l00052">open_spiel::GameType::short_name</a>, and <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="observer_8cc_source.html#l00125">open_spiel::Game::MakeRegisteredObserver()</a>.</p>
 <div class="dynheader">
@@ -261,10 +254,10 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classopen__spiel_1_1_observer_registerer_a758f476da1265e23e37d42253be73b07_cgraph.png" border="0" usemap="#aclassopen__spiel_1_1_observer_registerer_a758f476da1265e23e37d42253be73b07_cgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_observer_registerer_a758f476da1265e23e37d42253be73b07_cgraph" id="aclassopen__spiel_1_1_observer_registerer_a758f476da1265e23e37d42253be73b07_cgraph">
 <area shape="rect" title=" " alt="" coords="5,23,210,64"/>
-<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="258,5,435,31"/>
-<area shape="poly" title=" " alt="" coords="210,30,242,27,242,32,210,35"/>
-<area shape="rect" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df" title=" " alt="" coords="301,55,392,80"/>
-<area shape="poly" title=" " alt="" coords="210,51,285,59,285,64,210,56"/>
+<area shape="rect" href="classopen__spiel_1_1_game.html#ab43a710b19e2cebf48ceaeccd3c8961f" title=" " alt="" coords="258,5,441,31"/>
+<area shape="poly" title=" " alt="" coords="210,30,242,27,242,32,211,35"/>
+<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="261,55,438,80"/>
+<area shape="poly" title=" " alt="" coords="211,51,245,55,245,60,210,56"/>
 </map>
 </div>
 <div class="dynheader">
@@ -272,17 +265,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_observer_registerer_a758f476da1265e23e37d42253be73b07_icgraph.png" border="0" usemap="#aclassopen__spiel_1_1_observer_registerer_a758f476da1265e23e37d42253be73b07_icgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_observer_registerer_a758f476da1265e23e37d42253be73b07_icgraph" id="aclassopen__spiel_1_1_observer_registerer_a758f476da1265e23e37d42253be73b07_icgraph">
-<area shape="rect" title=" " alt="" coords="550,88,754,129"/>
-<area shape="rect" href="classopen__spiel_1_1_game.html#a28537d9c2a657634e611724e12d2f32f" title=" " alt="" coords="273,88,502,129"/>
-<area shape="poly" title=" " alt="" coords="534,112,502,112,502,106,534,106"/>
-<area shape="rect" href="classopen__spiel_1_1_game.html#a223d65cc15f5961951e2c685a77879d9" title=" " alt="" coords="5,5,225,31"/>
-<area shape="poly" title=" " alt="" coords="325,84,224,46,180,34,182,29,225,41,327,79"/>
-<area shape="rect" href="classopen__spiel_1_1kuhn__poker_1_1_kuhn_game.html#a1704ab0df0fefad4affdeb941f52283b" title=" " alt="" coords="21,55,209,96"/>
-<area shape="poly" title=" " alt="" coords="257,96,209,90,209,84,258,90"/>
-<area shape="rect" href="classopen__spiel_1_1leduc__poker_1_1_leduc_game.html#a439593f5bcebfadaddf2eff2e803a400" title=" " alt="" coords="19,120,211,161"/>
-<area shape="poly" title=" " alt="" coords="257,127,212,132,211,127,257,122"/>
-<area shape="rect" href="classopen__spiel_1_1_restricted_nash_response_game.html#ace64b80cfba0610b76a2c1d718e3df79" title=" " alt="" coords="11,186,219,226"/>
-<area shape="poly" title=" " alt="" coords="323,138,226,175,188,188,186,183,224,170,321,133"/>
+<area shape="rect" title=" " alt="" coords="550,5,754,46"/>
+<area shape="rect" href="classopen__spiel_1_1_game.html#a28537d9c2a657634e611724e12d2f32f" title=" " alt="" coords="273,5,502,46"/>
+<area shape="poly" title=" " alt="" coords="534,28,502,28,502,23,534,23"/>
+<area shape="rect" href="classopen__spiel_1_1_game.html#a223d65cc15f5961951e2c685a77879d9" title=" " alt="" coords="5,13,225,38"/>
+<area shape="poly" title=" " alt="" coords="257,28,225,28,225,23,257,23"/>
 </map>
 </div>
 
@@ -322,15 +309,15 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="observer_8cc_source.html#l00336">336</a> of file <a class="el" href="observer_8cc_source.html">observer.cc</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  338</span>                                                              {</div>
-<div class="line"><span class="lineno">  339</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a> = std::pair(game_name, observer_name);</div>
-<div class="line"><span class="lineno">  340</span>  <span class="keywordflow">if</span> (observers().find(<a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a>) != observers().<a class="code hl_variable" href="float__conversion_8cc.html#a8fd806ad19b8f5513a4cf18cbf77532c">end</a>()) {</div>
-<div class="line"><span class="lineno">  341</span>    <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(<a class="code hl_function" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df">absl::StrCat</a>(<span class="stringliteral">&quot;Duplicate observer &#39;&quot;</span>, <a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a>.second, <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
-<div class="line"><span class="lineno">  342</span>                                 <span class="stringliteral">&quot; for game &#39;&quot;</span>, <a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a>.first, <span class="stringliteral">&quot;&#39;&quot;</span>));</div>
+<div class="line"><span class="lineno">  339</span>  <span class="keyword">auto</span> key = std::pair(game_name, observer_name);</div>
+<div class="line"><span class="lineno">  340</span>  <span class="keywordflow">if</span> (observers().find(key) != observers().end()) {</div>
+<div class="line"><span class="lineno">  341</span>    <a class="code hl_function" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011">SpielFatalError</a>(absl::StrCat(<span class="stringliteral">&quot;Duplicate observer &#39;&quot;</span>, key.second, <span class="stringliteral">&quot;&#39;&quot;</span>,</div>
+<div class="line"><span class="lineno">  342</span>                                 <span class="stringliteral">&quot; for game &#39;&quot;</span>, key.first, <span class="stringliteral">&quot;&#39;&quot;</span>));</div>
 <div class="line"><span class="lineno">  343</span>  }</div>
-<div class="line"><span class="lineno">  344</span>  observers()[<a class="code hl_variable" href="btree__test_8cc.html#a35af0be900467fedbb610bd6ea65ed78">key</a>] = creator;</div>
+<div class="line"><span class="lineno">  344</span>  observers()[key] = creator;</div>
 <div class="line"><span class="lineno">  345</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="float__conversion_8cc_source.html#l01029">end</a>, <a class="el" href="btree__test_8cc_source.html#l02202">key</a>, <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>, and <a class="el" href="str__cat_8h_source.html#l00381">absl::StrCat()</a>.</p>
+<p class="reference">References <a class="el" href="spiel__utils_8cc_source.html#l00132">open_spiel::SpielFatalError()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="observer_8cc_source.html#l00330">ObserverRegisterer()</a>.</p>
 <div class="dynheader">
@@ -338,11 +325,9 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classopen__spiel_1_1_observer_registerer_a39b06045bb6b5017f3496bd379cb7ae8_cgraph.png" border="0" usemap="#aclassopen__spiel_1_1_observer_registerer_a39b06045bb6b5017f3496bd379cb7ae8_cgraph" alt=""/></div>
 <map name="aclassopen__spiel_1_1_observer_registerer_a39b06045bb6b5017f3496bd379cb7ae8_cgraph" id="aclassopen__spiel_1_1_observer_registerer_a39b06045bb6b5017f3496bd379cb7ae8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,23,210,64"/>
-<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="258,5,435,31"/>
-<area shape="poly" title=" " alt="" coords="210,30,242,27,242,32,210,35"/>
-<area shape="rect" href="namespaceabsl.html#a0a9abdb6ee6367339931d4cab29d50df" title=" " alt="" coords="301,55,392,80"/>
-<area shape="poly" title=" " alt="" coords="210,51,285,59,285,64,210,56"/>
+<area shape="rect" title=" " alt="" coords="5,5,210,46"/>
+<area shape="rect" href="namespaceopen__spiel.html#a43513b6f8f3a26ce1a64a1a807df9011" title=" " alt="" coords="258,13,435,38"/>
+<area shape="poly" title=" " alt="" coords="210,23,242,23,242,28,210,28"/>
 </map>
 </div>
 <div class="dynheader">
