@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_tracking_vector_allocator" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::TrackingVectorAllocator</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_allocator" prot="public" virt="non-virtual">open_spiel::Allocator</basecompoundref>
+    <includes refid="observer_8h" local="no">observer.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_tracking_vector_allocator_1a0e7c5346e79fbaf89df464cf5a61b740" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; open_spiel::TrackingVectorAllocator::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="207" column="15" bodyfile="open_spiel/observer.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_tracking_vector_allocator_1aab42071e0a84758a54290ebcfe6a04d7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classopen__spiel_1_1_span_tensor_info" kindref="compound">SpanTensorInfo</ref> &gt;</type>
+        <definition>std::vector&lt;SpanTensorInfo&gt; open_spiel::TrackingVectorAllocator::tensors_info_</definition>
+        <argsstring></argsstring>
+        <name>tensors_info_</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::tensors_info_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="208" column="15" bodyfile="open_spiel/observer.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_tracking_vector_allocator_1a91aacfc55b20e21f32f7356bdf76f1dc" prot="private" static="no" mutable="no">
+        <type>absl::flat_hash_set&lt; std::string &gt;</type>
+        <definition>absl::flat_hash_set&lt;std::string&gt; open_spiel::TrackingVectorAllocator::tensor_names_</definition>
+        <argsstring></argsstring>
+        <name>tensor_names_</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::tensor_names_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="209" column="23" bodyfile="open_spiel/observer.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_tracking_vector_allocator_1a1aac5f591b14c63f59b679d87aa8c71b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::TrackingVectorAllocator::TrackingVectorAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>TrackingVectorAllocator</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::TrackingVectorAllocator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="192" column="3" bodyfile="open_spiel/observer.h" bodystart="192" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tracking_vector_allocator_1ac7a4b3ec53cb80beec25e295d92599a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classopen__spiel_1_1_span_tensor" kindref="compound">SpanTensor</ref></type>
+        <definition>SpanTensor open_spiel::TrackingVectorAllocator::Get</definition>
+        <argsstring>(absl::string_view name, const absl::InlinedVector&lt; int, 4 &gt; &amp;shape) override</argsstring>
+        <name>Get</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::Get</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_allocator_1abd2b9c82341d4d97233f936bb0c562db">Get</reimplements>
+        <param>
+          <type>absl::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const absl::InlinedVector&lt; int, 4 &gt; &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="194" column="14" bodyfile="open_spiel/observer.cc" bodystart="192" bodyend="204"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a8b285f32d9f13ccd8083780760fab2f0" compoundref="observer_8h" startline="85" endline="88">open_spiel::SpanTensorInfo::size</references>
+        <references refid="spiel__utils_8h_1a4347e9de74af6457a8509c6d13ab5a2e" compoundref="spiel__utils_8h" startline="320">SPIEL_DCHECK_TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tracking_vector_allocator_1a2b33c4f381cb9a2dfc4c6d8d00ff2e7a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classopen__spiel_1_1_span_tensor_info" kindref="compound">SpanTensorInfo</ref> &gt;</type>
+        <definition>std::vector&lt; SpanTensorInfo &gt; open_spiel::TrackingVectorAllocator::tensors_info</definition>
+        <argsstring>() const</argsstring>
+        <name>tensors_info</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::tensors_info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="199" column="15" bodyfile="open_spiel/observer.h" bodystart="199" bodyend="199"/>
+        <referencedby refid="classopen__spiel_1_1_observation_1ac47e27b2a3474cac22dbc97d8152a63c" compoundref="observer_8cc" startline="215" endline="225">open_spiel::Observation::Observation</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a03fc20c0c2c07f8c196ebe7dd9f0c251" compoundref="observer_8cc" startline="380" endline="389">open_spiel::ObserverTensorShape</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tracking_vector_allocator_1a94caba8e758ac00e63ec5236932aa721" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; float &gt; &amp;</type>
+        <definition>std::vector&lt; float &gt; &amp; open_spiel::TrackingVectorAllocator::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="201" column="15" bodyfile="open_spiel/observer.h" bodystart="201" bodyend="201"/>
+        <referencedby refid="classopen__spiel_1_1_observation_1ac47e27b2a3474cac22dbc97d8152a63c" compoundref="observer_8cc" startline="215" endline="225">open_spiel::Observation::Observation</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a03fc20c0c2c07f8c196ebe7dd9f0c251" compoundref="observer_8cc" startline="380" endline="389">open_spiel::ObserverTensorShape</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a91fe25f1b974060eec9ada51abe43b78" compoundref="observer_8cc" startline="373" endline="378">open_spiel::TensorFromObserver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tracking_vector_allocator_1a1908b4c5b4c40c5fcf490353ce1fb4dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; float &gt; &amp;</type>
+        <definition>const std::vector&lt; float &gt; &amp; open_spiel::TrackingVectorAllocator::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="202" column="21" bodyfile="open_spiel/observer.h" bodystart="202" bodyend="202"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_tracking_vector_allocator_1a62df82ce555b424ca1e9e05f9090e5a2" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::TrackingVectorAllocator::IsNameUnique</definition>
+        <argsstring>(absl::string_view name) const</argsstring>
+        <name>IsNameUnique</name>
+        <qualifiedname>open_spiel::TrackingVectorAllocator::IsNameUnique</qualifiedname>
+        <param>
+          <type>absl::string_view</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="205" column="8" bodyfile="open_spiel/observer.cc" bodystart="206" bodyend="213"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>open_spiel::Allocator</label>
+        <link refid="classopen__spiel_1_1_allocator"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::TrackingVectorAllocator</label>
+        <link refid="classopen__spiel_1_1_tracking_vector_allocator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>open_spiel::Allocator</label>
+        <link refid="classopen__spiel_1_1_allocator"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::TrackingVectorAllocator</label>
+        <link refid="classopen__spiel_1_1_tracking_vector_allocator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.h" line="190" column="1" bodyfile="open_spiel/observer.h" bodystart="190" bodyend="210"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1a94caba8e758ac00e63ec5236932aa721" prot="public" virt="non-virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>data</name></member>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1a1908b4c5b4c40c5fcf490353ce1fb4dc" prot="public" virt="non-virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>data</name></member>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1a0e7c5346e79fbaf89df464cf5a61b740" prot="private" virt="non-virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>data_</name></member>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1ac7a4b3ec53cb80beec25e295d92599a9" prot="public" virt="virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>Get</name></member>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1a62df82ce555b424ca1e9e05f9090e5a2" prot="private" virt="non-virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>IsNameUnique</name></member>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1a91aacfc55b20e21f32f7356bdf76f1dc" prot="private" virt="non-virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>tensor_names_</name></member>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1a2b33c4f381cb9a2dfc4c6d8d00ff2e7a" prot="public" virt="non-virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>tensors_info</name></member>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1aab42071e0a84758a54290ebcfe6a04d7" prot="private" virt="non-virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>tensors_info_</name></member>
+      <member refid="classopen__spiel_1_1_tracking_vector_allocator_1a1aac5f591b14c63f59b679d87aa8c71b" prot="public" virt="non-virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>TrackingVectorAllocator</name></member>
+      <member refid="classopen__spiel_1_1_allocator_1aae4b5826e7832d9614c0ee0224526516" prot="public" virt="virtual"><scope>open_spiel::TrackingVectorAllocator</scope><name>~Allocator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

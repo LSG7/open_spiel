@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="structopen__spiel_1_1base_t_1_1_p___cell" kind="struct" language="C++" prot="public">
+    <compoundname>open_spiel::baseT::P_Cell</compoundname>
+    <includes refid="base_type_8h" local="no">baseType.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structopen__spiel_1_1base_t_1_1_p___cell_1ae8683f2584a52d9bb3834036e636107c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::baseT::P_Cell::pn</definition>
+        <argsstring></argsstring>
+        <name>pn</name>
+        <qualifiedname>open_spiel::baseT::P_Cell::pn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="37" column="9" bodyfile="open_spiel/games/SG/baseType.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1base_t_1_1_p___cell_1acc759df559e3441dd27f2a8e7aa2fadd" prot="public" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+        <definition>MapCoord open_spiel::baseT::P_Cell::crd</definition>
+        <argsstring></argsstring>
+        <name>crd</name>
+        <qualifiedname>open_spiel::baseT::P_Cell::crd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="38" column="14" bodyfile="open_spiel/games/SG/baseType.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>open_spiel::baseT::MapCoord</label>
+        <link refid="structopen__spiel_1_1base_t_1_1_map_coord"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::baseT::P_Cell</label>
+        <link refid="structopen__spiel_1_1base_t_1_1_p___cell"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+crd</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/games/SG/baseType.h" line="36" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="36" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structopen__spiel_1_1base_t_1_1_p___cell_1acc759df559e3441dd27f2a8e7aa2fadd" prot="public" virt="non-virtual"><scope>open_spiel::baseT::P_Cell</scope><name>crd</name></member>
+      <member refid="structopen__spiel_1_1base_t_1_1_p___cell_1ae8683f2584a52d9bb3834036e636107c" prot="public" virt="non-virtual"><scope>open_spiel::baseT::P_Cell</scope><name>pn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

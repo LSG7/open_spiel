@@ -1,0 +1,905 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">policy_lib.Policy</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a579b3948496b6f60b6c8f093bf62e294" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="726" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="726" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af128c6fb1dbd90d17168485ae1a718d1" compoundref="rnad_8py" startline="1035" endline="1039">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply_and_post_process</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3c3f02e55d4e8d2d80907f52afbdd5e4" compoundref="rnad_8py" startline="989" endline="1018">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._state_as_env_step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" compoundref="rnad_8py" startline="1061" endline="1089">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" compoundref="rnad_8py" startline="811" endline="865">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a43e78d0f16faa3272e825896fb20f9f7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::learner_steps</definition>
+        <argsstring></argsstring>
+        <name>learner_steps</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.learner_steps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="729" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="729" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a4e148caa5741ebb5c77262488fd0a854" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::actor_steps</definition>
+        <argsstring></argsstring>
+        <name>actor_steps</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_steps</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="730" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="730" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a0e82e96b88dae2e8be901b6f23e68a97" compoundref="rnad_8py" startline="1102" endline="1110">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_apply_action</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1afd70d281b51a6f4a881c545876e845a6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::network</definition>
+        <argsstring></argsstring>
+        <name>network</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.network</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="776" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="776" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af5446d67ee2a98f29b359956fc640e65" compoundref="rnad_8py" startline="1041" endline="1044">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af128c6fb1dbd90d17168485ae1a718d1" compoundref="rnad_8py" startline="1035" endline="1039">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply_and_post_process</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" compoundref="rnad_8py" startline="811" endline="865">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aafd5a3031eadac063f5d222876ad69c4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="791" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="791" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aee206ac0c22bc34bf1bdfdfbae234aec" compoundref="rnad_8py" startline="1045" endline="1060">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a2e21ac00ff1eaa5d79e19dcba0943d36" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::params_target</definition>
+        <argsstring></argsstring>
+        <name>params_target</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_target</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="792" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="792" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7897df8492ad475e0c0a2dbb27ca3c" compoundref="rnad_8py" startline="1021" endline="1032">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f9e162873fb409199f37d76934865ec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::params_prev</definition>
+        <argsstring></argsstring>
+        <name>params_prev</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_prev</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="793" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="793" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3ed39566e229df9f1275e8cc0fd57aaa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::params_prev_</definition>
+        <argsstring></argsstring>
+        <name>params_prev_</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_prev_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="794" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="794" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a5f7a8400f1dfeeb8f19c92fc80f6d0b2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::optimizer</definition>
+        <argsstring></argsstring>
+        <name>optimizer</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="798" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="798" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1add79449167b846f91eb372c8b84e6913" compoundref="rnad_8py" startline="878" endline="904">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.update_parameters</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae8d990e1edfae8c3eee9909d710c3369" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::optimizer_target</definition>
+        <argsstring></argsstring>
+        <name>optimizer_target</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer_target</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="806" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="806" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1add79449167b846f91eb372c8b84e6913" compoundref="rnad_8py" startline="878" endline="904">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.update_parameters</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a73ea6dc6c3738e775794ebae572378d1" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::_rngkey</definition>
+        <argsstring></argsstring>
+        <name>_rngkey</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._rngkey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="737" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="737" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a260f26b058a1957adc5b4f04714fff50" compoundref="rnad_8py" startline="977" endline="987">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._next_rng_key</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab15a3ac45ce2c2c52832950432488cb9" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::_np_rng</definition>
+        <argsstring></argsstring>
+        <name>_np_rng</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._np_rng</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="738" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="738" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" compoundref="rnad_8py" startline="905" endline="928">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1affec6d365e4a7898bb53258436405889" compoundref="rnad_8py" startline="1111" endline="1125">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._play_chance</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aee206ac0c22bc34bf1bdfdfbae234aec" compoundref="rnad_8py" startline="1045" endline="1060">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::_game</definition>
+        <argsstring></argsstring>
+        <name>_game</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="743" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="743" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1adf39539769c6522554a2a8ccdc28239a" compoundref="rl__environment_8py" startline="404" endline="419">open_spiel.python.rl_environment.Environment.action_spec</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" compoundref="rnad_8py" startline="1061" endline="1089">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a5eda9be6e375bbe3e2a741972e7c2538" compoundref="rl__environment_8py" startline="459" endline="461">open_spiel.python.rl_environment.Environment.game</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab0a1d4432531718839681174bfff7475" compoundref="rl__environment_8py" startline="444" endline="449">open_spiel.python.rl_environment.Environment.is_turn_based</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" compoundref="rnad_8py" startline="811" endline="865">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a2e9639edb575a67238a912c738028565" compoundref="rl__environment_8py" startline="451" endline="453">open_spiel.python.rl_environment.Environment.max_game_length</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a1ef034430a2c9fd145fc126bc30eef27" compoundref="rl__environment_8py" startline="431" endline="433">open_spiel.python.rl_environment.Environment.name</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6e640909a93c376b52991722064a6dfe" compoundref="rl__environment_8py" startline="435" endline="437">open_spiel.python.rl_environment.Environment.num_players</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab23bfab44b60da9b844ea227d9458062" compoundref="rl__environment_8py" startline="384" endline="403">open_spiel.python.rl_environment.Environment.observation_spec</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1afceda495233508d0264783c55631b237" compoundref="rl__environment_8py" startline="476" endline="481">open_spiel.python.rl_environment.Environment.update_mfg_distribution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ad96e38a787bf36ed3e0df939ca791e6c" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::_ex_state</definition>
+        <argsstring></argsstring>
+        <name>_ex_state</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._ex_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="744" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="744" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3c3f02e55d4e8d2d80907f52afbdd5e4" compoundref="rnad_8py" startline="989" endline="1018">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._state_as_env_step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1afddb8e926f6fde5d663ba3356910ba8c" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::_entropy_schedule</definition>
+        <argsstring></argsstring>
+        <name>_entropy_schedule</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._entropy_schedule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="779" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="779" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1abd7a8db27eb155eda7abea698ca24ee5" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver::_loss_and_grad</definition>
+        <argsstring></argsstring>
+        <name>_loss_and_grad</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._loss_and_grad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="785" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="785" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1add79449167b846f91eb372c8b84e6913" compoundref="rnad_8py" startline="878" endline="904">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.update_parameters</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a4a5b0a4ddd3cbd6313e19745bf8607e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__init__</definition>
+        <argsstring>(self, RNaDConfig config)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_config" kindref="compound">RNaDConfig</ref></type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="725" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="725" bodyend="733"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7a4d71f42bf84d07b88fbbe407dbc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.init</definition>
+        <argsstring>(self)</argsstring>
+        <name>init</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.init</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize the network and losses.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="734" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="734" bodyend="808"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" compoundref="rnad_8py" startline="929" endline="952">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition> float open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</definition>
+        <argsstring>(self, Params params, Params params_target, Params params_prev, Params params_prev_, TimeStep ts, float alpha, int learner_steps)</argsstring>
+        <name>loss</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params_target</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params_prev</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params_prev_</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>ts</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>learner_steps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="809" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="811" bodyend="865"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a4b23dcb30573c752adb2aad69108ad25" compoundref="rnad_8py" startline="299" endline="317">open_spiel.python.algorithms.rnad.rnad._player_others</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a579b3948496b6f60b6c8f093bf62e294" compoundref="rnad_8py" startline="726">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.config</references>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a4b87ca6049d2cc87d36ab2ce24494567" compoundref="rnad_8py" startline="561" endline="592">open_spiel.python.algorithms.rnad.rnad.get_loss_nerd</references>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1af8710d79494052c266890bd5afeedffe" compoundref="rnad_8py" startline="513" endline="531">open_spiel.python.algorithms.rnad.rnad.get_loss_v</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1afd70d281b51a6f4a881c545876e845a6" compoundref="rnad_8py" startline="776">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.network</references>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a81380b95401f321a5f8befcf35147411" compoundref="rnad_8py" startline="413" endline="510">open_spiel.python.algorithms.rnad.rnad.v_trace</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1add79449167b846f91eb372c8b84e6913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.update_parameters</definition>
+        <argsstring>(self, Params params, Params params_target, Params params_prev, Params params_prev_, Optimizer optimizer, Optimizer optimizer_target, TimeStep timestep, float alpha, int learner_steps, bool update_target_net)</argsstring>
+        <name>update_parameters</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.update_parameters</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params_target</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params_prev</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params_prev_</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1aeefc704975bea5c0744ce3cf67bfbda5" kindref="member">Optimizer</ref></type>
+          <declname>optimizer</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1aeefc704975bea5c0744ce3cf67bfbda5" kindref="member">Optimizer</ref></type>
+          <declname>optimizer_target</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step" kindref="compound">TimeStep</ref></type>
+          <declname>timestep</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>learner_steps</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>update_target_net</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>A jitted pure-functional part of the `step`.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="867" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="878" bodyend="904"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1abd7a8db27eb155eda7abea698ca24ee5" compoundref="rnad_8py" startline="785">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._loss_and_grad</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a5f7a8400f1dfeeb8f19c92fc80f6d0b2" compoundref="rnad_8py" startline="798">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae8d990e1edfae8c3eee9909d710c3369" compoundref="rnad_8py" startline="806">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer_target</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__getstate__</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__getstate__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>To serialize the agent.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="905" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="905" bodyend="928"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab15a3ac45ce2c2c52832950432488cb9" compoundref="rnad_8py" startline="738">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._np_rng</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a73ea6dc6c3738e775794ebae572378d1" compoundref="rnad_8py" startline="737">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._rngkey</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a4e148caa5741ebb5c77262488fd0a854" compoundref="rnad_8py" startline="730">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_steps</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a579b3948496b6f60b6c8f093bf62e294" compoundref="rnad_8py" startline="726">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.config</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a43e78d0f16faa3272e825896fb20f9f7" compoundref="rnad_8py" startline="729">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.learner_steps</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a5f7a8400f1dfeeb8f19c92fc80f6d0b2" compoundref="rnad_8py" startline="798">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae8d990e1edfae8c3eee9909d710c3369" compoundref="rnad_8py" startline="806">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer_target</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aafd5a3031eadac063f5d222876ad69c4" compoundref="rnad_8py" startline="791">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f9e162873fb409199f37d76934865ec" compoundref="rnad_8py" startline="793">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_prev</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3ed39566e229df9f1275e8cc0fd57aaa" compoundref="rnad_8py" startline="794">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_prev_</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a2e21ac00ff1eaa5d79e19dcba0943d36" compoundref="rnad_8py" startline="792">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_target</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</definition>
+        <argsstring>(self, state)</argsstring>
+        <name>__setstate__</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.__setstate__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a8ac8b8cd71b67616a4dea57f981a5b91" kindref="member">state</ref></type>
+          <defname>state</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>To deserialize the agent.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="929" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="929" bodyend="952"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab15a3ac45ce2c2c52832950432488cb9" compoundref="rnad_8py" startline="738">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._np_rng</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a73ea6dc6c3738e775794ebae572378d1" compoundref="rnad_8py" startline="737">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._rngkey</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a4e148caa5741ebb5c77262488fd0a854" compoundref="rnad_8py" startline="730">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_steps</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a579b3948496b6f60b6c8f093bf62e294" compoundref="rnad_8py" startline="726">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.config</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7a4d71f42bf84d07b88fbbe407dbc6" compoundref="rnad_8py" startline="734" endline="808">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.init</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a43e78d0f16faa3272e825896fb20f9f7" compoundref="rnad_8py" startline="729">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.learner_steps</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a5f7a8400f1dfeeb8f19c92fc80f6d0b2" compoundref="rnad_8py" startline="798">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae8d990e1edfae8c3eee9909d710c3369" compoundref="rnad_8py" startline="806">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer_target</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aafd5a3031eadac063f5d222876ad69c4" compoundref="rnad_8py" startline="791">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f9e162873fb409199f37d76934865ec" compoundref="rnad_8py" startline="793">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_prev</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3ed39566e229df9f1275e8cc0fd57aaa" compoundref="rnad_8py" startline="794">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_prev_</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a2e21ac00ff1eaa5d79e19dcba0943d36" compoundref="rnad_8py" startline="792">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_target</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</definition>
+        <argsstring>(self)</argsstring>
+        <name>step</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>One step of the algorithm, that plays the game and improves params.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="953" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="953" bodyend="976"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1afddb8e926f6fde5d663ba3356910ba8c" compoundref="rnad_8py" startline="779">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._entropy_schedule</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a4e148caa5741ebb5c77262488fd0a854" compoundref="rnad_8py" startline="730">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_steps</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" compoundref="rnad_8py" startline="1061" endline="1089">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a43e78d0f16faa3272e825896fb20f9f7" compoundref="rnad_8py" startline="729">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.learner_steps</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a5f7a8400f1dfeeb8f19c92fc80f6d0b2" compoundref="rnad_8py" startline="798">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae8d990e1edfae8c3eee9909d710c3369" compoundref="rnad_8py" startline="806">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.optimizer_target</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aafd5a3031eadac063f5d222876ad69c4" compoundref="rnad_8py" startline="791">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f9e162873fb409199f37d76934865ec" compoundref="rnad_8py" startline="793">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_prev</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3ed39566e229df9f1275e8cc0fd57aaa" compoundref="rnad_8py" startline="794">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_prev_</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a2e21ac00ff1eaa5d79e19dcba0943d36" compoundref="rnad_8py" startline="792">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_target</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1add79449167b846f91eb372c8b84e6913" compoundref="rnad_8py" startline="878" endline="904">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.update_parameters</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7897df8492ad475e0c0a2dbb27ca3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities</definition>
+        <argsstring>(self, pyspiel.State state, Any player_id=None)</argsstring>
+        <name>action_probabilities</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pyspiel.State</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>Any</type>
+          <declname>player_id</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns action probabilities dict for a single batch.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1019" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="1021" bodyend="1032"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1abe7d8782e7d692ffea9f8b4d0ceb2cb9" compoundref="rnad_8py" startline="1093" endline="1098">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_as_env_step</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af128c6fb1dbd90d17168485ae1a718d1" compoundref="rnad_8py" startline="1035" endline="1039">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply_and_post_process</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a2e21ac00ff1eaa5d79e19dcba0943d36" compoundref="rnad_8py" startline="792">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params_target</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a5755c0c1868c78cba8d68773d3d32831" compoundref="policy_8py" startline="145" endline="157">open_spiel.python.policy.Policy.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aee206ac0c22bc34bf1bdfdfbae234aec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_step</definition>
+        <argsstring>(self, EnvStep env_step)</argsstring>
+        <name>actor_step</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_step</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref></type>
+          <declname>env_step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1045" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="1045" bodyend="1060"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af5446d67ee2a98f29b359956fc640e65" compoundref="rnad_8py" startline="1041" endline="1044">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab15a3ac45ce2c2c52832950432488cb9" compoundref="rnad_8py" startline="738">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._np_rng</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aafd5a3031eadac063f5d222876ad69c4" compoundref="rnad_8py" startline="791">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.params</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" compoundref="rnad_8py" startline="1061" endline="1089">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step" kindref="compound">TimeStep</ref></type>
+        <definition> TimeStep open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</definition>
+        <argsstring>(self)</argsstring>
+        <name>collect_batch_trajectory</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1061" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="1061" bodyend="1089"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a0e82e96b88dae2e8be901b6f23e68a97" compoundref="rnad_8py" startline="1102" endline="1110">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_apply_action</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1abe7d8782e7d692ffea9f8b4d0ceb2cb9" compoundref="rnad_8py" startline="1093" endline="1098">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_as_env_step</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1affec6d365e4a7898bb53258436405889" compoundref="rnad_8py" startline="1111" endline="1125">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._play_chance</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aee206ac0c22bc34bf1bdfdfbae234aec" compoundref="rnad_8py" startline="1045" endline="1060">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_step</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a579b3948496b6f60b6c8f093bf62e294" compoundref="rnad_8py" startline="726">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.config</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" compoundref="rnad_8py" startline="953" endline="976">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.step</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a260f26b058a1957adc5b4f04714fff50" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.PRNGKey</type>
+        <definition> chex.PRNGKey open_spiel.python.algorithms.rnad.rnad.RNaDSolver._next_rng_key</definition>
+        <argsstring>(self)</argsstring>
+        <name>_next_rng_key</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._next_rng_key</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get the next rng subkey from class rngkey.
+
+Must *not* be called from under a jitted function!
+
+Returns:
+  A fresh rng_key.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="977" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="977" bodyend="987"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a73ea6dc6c3738e775794ebae572378d1" compoundref="rnad_8py" startline="737">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._rngkey</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3c3f02e55d4e8d2d80907f52afbdd5e4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref></type>
+        <definition> EnvStep open_spiel.python.algorithms.rnad.rnad.RNaDSolver._state_as_env_step</definition>
+        <argsstring>(self, pyspiel.State state)</argsstring>
+        <name>_state_as_env_step</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._state_as_env_step</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pyspiel.State</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="989" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="989" bodyend="1018"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ad96e38a787bf36ed3e0df939ca791e6c" compoundref="rnad_8py" startline="744">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._ex_state</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a579b3948496b6f60b6c8f093bf62e294" compoundref="rnad_8py" startline="726">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.config</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1abe7d8782e7d692ffea9f8b4d0ceb2cb9" compoundref="rnad_8py" startline="1093" endline="1098">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_as_env_step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af128c6fb1dbd90d17168485ae1a718d1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply_and_post_process</definition>
+        <argsstring>(self, Params params, EnvStep env_step)</argsstring>
+        <name>_network_jit_apply_and_post_process</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply_and_post_process</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref></type>
+          <declname>env_step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1034" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="1035" bodyend="1039"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a579b3948496b6f60b6c8f093bf62e294" compoundref="rnad_8py" startline="726">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.config</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1afd70d281b51a6f4a881c545876e845a6" compoundref="rnad_8py" startline="776">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.network</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7897df8492ad475e0c0a2dbb27ca3c" compoundref="rnad_8py" startline="1021" endline="1032">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af5446d67ee2a98f29b359956fc640e65" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply</definition>
+        <argsstring>(self, Params params, EnvStep env_step)</argsstring>
+        <name>_network_jit_apply</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._network_jit_apply</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref></type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref></type>
+          <declname>env_step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1041" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="1041" bodyend="1044"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1afd70d281b51a6f4a881c545876e845a6" compoundref="rnad_8py" startline="776">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.network</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aee206ac0c22bc34bf1bdfdfbae234aec" compoundref="rnad_8py" startline="1045" endline="1060">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1abe7d8782e7d692ffea9f8b4d0ceb2cb9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref></type>
+        <definition> EnvStep open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_as_env_step</definition>
+        <argsstring>(self, Sequence[pyspiel.State] states)</argsstring>
+        <name>_batch_of_states_as_env_step</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_as_env_step</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>states</declname>
+          <array>[pyspiel.State]</array>
+        </param>
+        <briefdescription>
+<para><ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> 마다 <ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref> 을 만들고 <ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref> 들을 하나의 <ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref> 으로 합친다. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1092" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="1093" bodyend="1098"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3c3f02e55d4e8d2d80907f52afbdd5e4" compoundref="rnad_8py" startline="989" endline="1018">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._state_as_env_step</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7897df8492ad475e0c0a2dbb27ca3c" compoundref="rnad_8py" startline="1021" endline="1032">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" compoundref="rnad_8py" startline="1061" endline="1089">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a0e82e96b88dae2e8be901b6f23e68a97" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Sequence[pyspiel.State]</type>
+        <definition> Sequence[pyspiel.State] open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_apply_action</definition>
+        <argsstring>(self, Sequence[pyspiel.State] states, chex.Array actions)</argsstring>
+        <name>_batch_of_states_apply_action</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_apply_action</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>states</declname>
+          <array>[pyspiel.State]</array>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Apply a batch of `actions` to a parallel list of `states`.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1100" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="1102" bodyend="1110"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1affec6d365e4a7898bb53258436405889" compoundref="rnad_8py" startline="1111" endline="1125">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._play_chance</references>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a4e148caa5741ebb5c77262488fd0a854" compoundref="rnad_8py" startline="730">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.actor_steps</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" compoundref="rnad_8py" startline="1061" endline="1089">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1affec6d365e4a7898bb53258436405889" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pyspiel.State</type>
+        <definition> pyspiel.State open_spiel.python.algorithms.rnad.rnad.RNaDSolver._play_chance</definition>
+        <argsstring>(self, pyspiel.State state)</argsstring>
+        <name>_play_chance</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.RNaDSolver._play_chance</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pyspiel.State</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Plays the chance nodes until we end up at another type of node.
+
+Args:
+  state: to be updated until it does not correspond to a chance node.
+Returns:
+  The same input state object, but updated. The state is returned
+  only for convenience, to allow chaining function calls.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1111" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="1111" bodyend="1125"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab15a3ac45ce2c2c52832950432488cb9" compoundref="rnad_8py" startline="738">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._np_rng</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a0e82e96b88dae2e8be901b6f23e68a97" compoundref="rnad_8py" startline="1102" endline="1110">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._batch_of_states_apply_action</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" compoundref="rnad_8py" startline="1061" endline="1089">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Implements a solver for the R-NaD Algorithm.
+
+See https://arxiv.org/abs/2206.15378.
+
+Define all networks. Derive losses &amp; learning steps. Initialize the game
+state and algorithmic variables.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel.python.algorithms.rnad.rnad.RNaDSolver</label>
+        <link refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>policy_lib::Policy</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.algorithms.rnad.rnad.RNaDSolver</label>
+        <link refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>policy_lib::Policy</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/algorithms/rnad/rnad.py" line="716" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="716" bodyend="1125"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae9e75be308a669b863dda36d7553eb7b" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>__getstate__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a4a5b0a4ddd3cbd6313e19745bf8607e7" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab952b8e7473cf001be5f9448c8617855" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>__setstate__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a0e82e96b88dae2e8be901b6f23e68a97" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_batch_of_states_apply_action</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1abe7d8782e7d692ffea9f8b4d0ceb2cb9" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_batch_of_states_as_env_step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1afddb8e926f6fde5d663ba3356910ba8c" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_entropy_schedule</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ad96e38a787bf36ed3e0df939ca791e6c" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_ex_state</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_game</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1abd7a8db27eb155eda7abea698ca24ee5" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_loss_and_grad</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af5446d67ee2a98f29b359956fc640e65" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_network_jit_apply</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1af128c6fb1dbd90d17168485ae1a718d1" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_network_jit_apply_and_post_process</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a260f26b058a1957adc5b4f04714fff50" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_next_rng_key</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ab15a3ac45ce2c2c52832950432488cb9" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_np_rng</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1affec6d365e4a7898bb53258436405889" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_play_chance</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a73ea6dc6c3738e775794ebae572378d1" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_rngkey</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3c3f02e55d4e8d2d80907f52afbdd5e4" prot="protected" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>_state_as_env_step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7897df8492ad475e0c0a2dbb27ca3c" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>action_probabilities</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aee206ac0c22bc34bf1bdfdfbae234aec" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>actor_step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a4e148caa5741ebb5c77262488fd0a854" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>actor_steps</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>collect_batch_trajectory</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a579b3948496b6f60b6c8f093bf62e294" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>config</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7a4d71f42bf84d07b88fbbe407dbc6" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>init</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a43e78d0f16faa3272e825896fb20f9f7" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>learner_steps</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>loss</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1afd70d281b51a6f4a881c545876e845a6" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>network</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a5f7a8400f1dfeeb8f19c92fc80f6d0b2" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>optimizer</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1ae8d990e1edfae8c3eee9909d710c3369" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>optimizer_target</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aafd5a3031eadac063f5d222876ad69c4" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>params</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f9e162873fb409199f37d76934865ec" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>params_prev</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a3ed39566e229df9f1275e8cc0fd57aaa" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>params_prev_</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a2e21ac00ff1eaa5d79e19dcba0943d36" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>params_target</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1aadd1611b3e8d5c6633cf66d357078d17" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1add79449167b846f91eb372c8b84e6913" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::RNaDSolver</scope><name>update_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

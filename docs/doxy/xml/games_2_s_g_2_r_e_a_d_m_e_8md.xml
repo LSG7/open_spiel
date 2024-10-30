@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="games_2_s_g_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Env</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>source<sp/>env_sg.sh<sp/>(환경변수)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>source<sp/>venv/bin/activate<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">빌드<sp/>방법<sp/>두가지.</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>open<sp/>spiel<sp/>에서<sp/>제공하는<sp/>방법.<sp/>clang<sp/>을<sp/>쓴다.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>./build_sg.sh</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>내가<sp/>만든<sp/>방법.<sp/>gcc<sp/>clang<sp/>중에<sp/>골라<sp/>쓴다.<sp/>gcc,clang<sp/>선택은<sp/>env_sg.sh<sp/>에서.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cd<sp/>build_sg<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>bash<sp/>../set_cmake_manual.sh<sp/>(처음<sp/>한번만.<sp/>cmake<sp/>설정용)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>make<sp/>-j8<sp/>kbg_test</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>bfloat16<sp/>변수가<sp/>컴파일러마다<sp/>다르다.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Program<sp/>flow</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>User<sp/>가<sp/>만든<sp/>게임(BaseT<sp/>를<sp/>상속한)<sp/>의<sp/>State<sp/>객체가<sp/>생성될<sp/>때<sp/>init_first()<sp/>를<sp/>호출한다.(반드시)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>init_first()<sp/>에서<sp/>가장<sp/>먼저<sp/>init_server()<sp/>를<sp/>호출하고<sp/>파이선<sp/>클라이언트가<sp/>달라붙기를<sp/>기다린다.</highlight></codeline>
+<codeline><highlight class="normal">기다리지<sp/>않고<sp/>진행해도<sp/>됨.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Cell,<sp/>Unit<sp/>정보가<sp/>변경<sp/>될<sp/>때마다<sp/>클라이언트에게<sp/>변경된<sp/>정보를<sp/>보낸다.</highlight></codeline>
+<codeline><highlight class="normal">Observation<sp/>정보를<sp/>전부<sp/>다<sp/>매번<sp/>보내는건<sp/>불필요,<sp/>메모리낭비<sp/>라서,<sp/>변경된<sp/>것만<sp/>기록하고<sp/>송신한다.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Ground<sp/>Rule<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>정형화<sp/>시켜서<sp/>재사용<sp/>원활히</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>순차적<sp/>주석으로<sp/>로직<sp/>심플&amp;이해쉽게</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>확장성.<sp/>나중에<sp/>대규모로<sp/>확장<sp/>가능하게.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>관련<sp/>앱과<sp/>데이터<sp/>호환<sp/>용이</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>학습에<sp/>사용하기<sp/>용이</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>TODO</highlight></codeline>
+<codeline><highlight class="normal"><sp/>1.<sp/>하나의<sp/>게임에서<sp/>self-play<sp/>로<sp/>trajectory<sp/>를<sp/>2개<sp/>만들어야<sp/>한다.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>어차피<sp/>상대방<sp/>역할<sp/>해주는<sp/>봇도<sp/>있어야<sp/>하는데<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>그<sp/>봇도<sp/>똑똑해야<sp/>하고</highlight></codeline>
+<codeline><highlight class="normal"><sp/>하는김에<sp/>궤적<sp/>하나<sp/>더<sp/>만드는게<sp/>효율성<sp/>좋으니<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>2.<sp/>joint<sp/>action<sp/>으로<sp/>만들어야<sp/>한다.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>한번은<sp/>이동하고<sp/>한번은<sp/>행동하고</highlight></codeline>
+<codeline><highlight class="normal"><sp/>deepnash<sp/>는<sp/>선택,행동<sp/>이었다면<sp/>나는<sp/>이동,행동<sp/>이다.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>#<sp/>일기</highlight></codeline>
+<codeline><highlight class="normal">23.8.30<sp/></highlight></codeline>
+<codeline><highlight class="normal">게임<sp/>생성<sp/>시작<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>셀은<sp/>vector<sp/>[z][y][x],<sp/>map_coord<sp/>로<sp/>접근<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>유닛은<sp/>vector<sp/>[id],<sp/>unique<sp/>unit_id<sp/>로<sp/>접근<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">0<sp/>번<sp/>player<sp/>는<sp/>1번부터<sp/>시작.<sp/>접근할<sp/>때<sp/>(p0_id)<sp/>으로<sp/>접근<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1<sp/>번<sp/>player<sp/>는<sp/>1001번부터<sp/>시작.<sp/>접근할<sp/>때<sp/>(p1_id<sp/>-<sp/>1000)<sp/>으로<sp/>접근<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">23.10.10</highlight></codeline>
+<codeline><highlight class="normal">보드<sp/>표현<sp/>규정</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[빈땅은<sp/>&apos;_<sp/>&apos;]<sp/>스페이스는<sp/>유닛<sp/>개수에<sp/>따라<sp/>변동적<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[유닛은<sp/>&apos;player_id<sp/>+<sp/>unit_id]<sp/>ex=[01]<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">23.10.12</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>수동빌드<sp/>할<sp/>때<sp/>BUILD_TYPE=Debug<sp/>해줘야<sp/>-g<sp/>옵션<sp/>들어감</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>games/<sp/>아래에서<sp/>CMakeLists.txt<sp/>에서<sp/>빌드해줘야<sp/>실행<sp/>파일에<sp/>디버그<sp/>들어가서<sp/>같이<sp/>빌드됨</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Interger<sp/>Encoding<sp/>vs<sp/>One-hot<sp/>Encoding</highlight></codeline>
+<codeline><highlight class="normal">https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-encoding-f180eb831cf1<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>유닛<sp/>위치의<sp/>Z축<sp/>=<sp/>채널<sp/>에<sp/>병종을<sp/>one-hot,<sp/>체력,<sp/>공격력,<sp/>방어력<sp/>표현<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mac<sp/>에는<sp/>gdb<sp/>가<sp/>없다.<sp/>lldb<sp/>써야<sp/>한다.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mac<sp/>에서<sp/>vs<sp/>code<sp/>에다가<sp/>codeLLDB<sp/>깔면<sp/>연결된다.<sp/>F5<sp/>로<sp/>디버깅<sp/>실행</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>채널에<sp/>셀의<sp/>정보를<sp/>나열하고<sp/>Unet<sp/>으로<sp/>셀의<sp/>정보를<sp/>분석해야<sp/>한다.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>셀이<sp/>z<sp/>축으로<sp/>쌓여도<sp/>되나?<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>action<sp/>id<sp/>를<sp/>셀<sp/>번호로<sp/>해야<sp/>한다.<sp/>근데<sp/>셀이<sp/>존나<sp/>많다.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>관찰,<sp/>생각,<sp/>행동</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">23.10.31</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>혼합<sp/>정밀도를<sp/>사용해야<sp/>한다.<sp/>인풋은<sp/>float,<sp/>연산은<sp/>bf16,<sp/>아웃은<sp/>?</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>obs<sp/>를<sp/>1D<sp/>vector<sp/>로<sp/>만든다.<sp/>pythoh<sp/>에서<sp/>이것을<sp/>asarray()<sp/>하고<sp/>reshape()<sp/>한다.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">23.11.6</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>apple<sp/>M3<sp/>에서는<sp/>bf16<sp/>지원한다고<sp/>하나<sp/>apple<sp/>coreML<sp/>문서에는<sp/>float16<sp/>지원하는<sp/>것만<sp/>설명되어<sp/>있다.</highlight></codeline>
+<codeline><highlight class="normal">그러니<sp/>지금은<sp/>일단<sp/>float16<sp/>으로<sp/>만든다.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>C++23<sp/>부터<sp/>float16_t<sp/>bfloat16_t<sp/>존재.<sp/>c++23<sp/>으로<sp/>빌드.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>gcc<sp/>g++13<sp/>깔아야함.<sp/>developernote.com/2023/08/installing-gcc13-on-ubuntu-22-04</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>clang++17<sp/>깔아야함.<sp/>clang<sp/>은<sp/>STDCPP_FLOAT16_T<sp/>지원안해서<sp/>못씀.<sp/>c++23<sp/>정식지원까지<sp/>사용중지.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mac<sp/>에서도<sp/>gcc<sp/>써야함.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">24.7.12</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>한턴에<sp/>몇번<sp/>행동<sp/>할<sp/>것인가,<sp/>어떤<sp/>행동을<sp/>할<sp/>것인가<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>당장은<sp/>한턴에<sp/>한번만<sp/>행동하는<sp/>것으로<sp/>만들고<sp/>실험해봄</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>발더스3<sp/>같은<sp/>경우<sp/>순서<sp/>상관없이<sp/>액션1<sp/>이동1<sp/>이<sp/>가능해야<sp/>한다.</highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/games/SG/README.md"/>
+  </compounddef>
+</doxygen>

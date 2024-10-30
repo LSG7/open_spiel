@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="base_t_8h" kind="file" language="C++">
+    <compoundname>baseT.h</compoundname>
+    <includes refid="spiel_8h" local="yes">open_spiel/spiel.h</includes>
+    <includes refid="base_type_8h" local="yes">baseType.h</includes>
+    <includes refid="user__specified__type_8h" local="yes">user_specified_type.h</includes>
+    <includes refid="socket__server_8h" local="yes">socket_server.h</includes>
+    <includedby refid="base_t_8cc" local="yes">open_spiel/games/SG/baseT.cc</includedby>
+    <includedby refid="base_t__utils_8cc" local="yes">open_spiel/games/SG/baseT_utils.cc</includedby>
+    <includedby refid="ki__bo__gung_8h" local="yes">open_spiel/games/SG/ki_bo_gung.h</includedby>
+    <incdepgraph>
+      <node id="19">
+        <label>open_spiel/game_parameters.h</label>
+        <link refid="game__parameters_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel/games/SG/baseT.h</label>
+        <link refid="base_t_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>baseType.h</label>
+        <link refid="base_type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>socket_server.h</label>
+        <link refid="socket__server_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>user_specified_type.h</label>
+        <link refid="user__specified__type_8h"/>
+      </node>
+      <node id="31">
+        <label>open_spiel/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel/spiel.h</label>
+        <link refid="spiel_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>open_spiel/spiel_globals.h</label>
+        <link refid="spiel__globals_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>open_spiel/spiel_utils.h</label>
+        <link refid="spiel__utils_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>algorithm</label>
+      </node>
+      <node id="22">
+        <label>array</label>
+      </node>
+      <node id="23">
+        <label>cmath</label>
+      </node>
+      <node id="24">
+        <label>cstddef</label>
+      </node>
+      <node id="25">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="7">
+        <label>numeric</label>
+      </node>
+      <node id="32">
+        <label>open_spiel/abseil-cpp/absl/algorithm/container.h</label>
+      </node>
+      <node id="33">
+        <label>open_spiel/abseil-cpp/absl/base/attributes.h</label>
+      </node>
+      <node id="34">
+        <label>open_spiel/abseil-cpp/absl/container/flat_hash_set.h</label>
+      </node>
+      <node id="35">
+        <label>open_spiel/abseil-cpp/absl/container/inlined_vector.h</label>
+      </node>
+      <node id="14">
+        <label>open_spiel/abseil-cpp/absl/random/bit_gen_ref.h</label>
+      </node>
+      <node id="27">
+        <label>open_spiel/abseil-cpp/absl/random/uniform_real_distribution.h</label>
+      </node>
+      <node id="28">
+        <label>open_spiel/abseil-cpp/absl/strings/str_cat.h</label>
+      </node>
+      <node id="15">
+        <label>open_spiel/abseil-cpp/absl/strings/str_join.h</label>
+      </node>
+      <node id="36">
+        <label>open_spiel/abseil-cpp/absl/strings/string_view.h</label>
+      </node>
+      <node id="16">
+        <label>open_spiel/abseil-cpp/absl/synchronization/mutex.h</label>
+      </node>
+      <node id="29">
+        <label>open_spiel/abseil-cpp/absl/time/clock.h</label>
+      </node>
+      <node id="30">
+        <label>open_spiel/abseil-cpp/absl/time/time.h</label>
+      </node>
+      <node id="17">
+        <label>open_spiel/abseil-cpp/absl/types/optional.h</label>
+      </node>
+      <node id="18">
+        <label>open_spiel/abseil-cpp/absl/types/span.h</label>
+      </node>
+      <node id="8">
+        <label>random</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="41">
+        <label>thread</label>
+      </node>
+      <node id="26">
+        <label>type_traits</label>
+      </node>
+      <node id="11">
+        <label>unordered_map</label>
+      </node>
+      <node id="12">
+        <label>utility</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>open_spiel/games/SG/baseT.cc</label>
+        <link refid="base_t_8cc"/>
+      </node>
+      <node id="1">
+        <label>open_spiel/games/SG/baseT.h</label>
+        <link refid="base_t_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel/games/SG/baseT_utils.cc</label>
+        <link refid="base_t__utils_8cc"/>
+      </node>
+      <node id="5">
+        <label>open_spiel/games/SG/kbg_test.cc</label>
+        <link refid="kbg__test_8cc"/>
+      </node>
+      <node id="6">
+        <label>open_spiel/games/SG/ki_bo_gung.cc</label>
+        <link refid="ki__bo__gung_8cc"/>
+      </node>
+      <node id="4">
+        <label>open_spiel/games/SG/ki_bo_gung.h</label>
+        <link refid="ki__bo__gung_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classopen__spiel_1_1base_t_1_1base_t_game" prot="public">open_spiel::baseT::baseTGame</innerclass>
+    <innerclass refid="classopen__spiel_1_1base_t_1_1base_t_state" prot="public">open_spiel::baseT::baseTState</innerclass>
+    <innernamespace refid="namespaceopen__spiel">open_spiel</innernamespace>
+    <innernamespace refid="namespaceopen__spiel_1_1base_t">open_spiel::baseT</innernamespace>
+    <briefdescription>
+<para>아무것도 구현 안되어있는 템플릿 용 </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>SG Lee </para>
+</simplesect>
+<simplesect kind="date"><para>8/30/2023 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>OPEN_SPIEL_GAMES_SG_BASET_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPEN_SPIEL_GAMES_SG_BASET_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STD<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IMPORTANT<sp/>!!!!!!!!!!!!!!!!!!!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>bfloat_16<sp/>will<sp/>be<sp/>supported<sp/>from<sp/>c++23.<sp/>Use<sp/>GCC(&gt;=13).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GCC13<sp/>is<sp/>still<sp/>in<sp/>test<sp/>branch<sp/>on<sp/>May<sp/>2024.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FP16<sp/>Macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__linux__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifdef<sp/>__clang__<sp/></highlight><highlight class="comment">//<sp/>Ubuntu<sp/>clang</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>FP16<sp/>_Float16<sp/></highlight><highlight class="comment">//<sp/>clang<sp/>not<sp/>support<sp/>bfloat16<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>__GNUC__<sp/></highlight><highlight class="comment">//<sp/>Ubuntu<sp/>gcc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>(__GNUC__<sp/>&gt;<sp/>13)<sp/>||<sp/>(__GNUC__<sp/>==<sp/>13)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;stdfloat&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>UBUNTU<sp/>gcc-13.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>FP16<sp/>std::bfloat16_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>__APPLE__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifdef<sp/>__clang__<sp/></highlight><highlight class="comment">//<sp/>Mac<sp/>clang</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>FP16<sp/>_Float16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>__GNUC__<sp/></highlight><highlight class="comment">//<sp/>Mac<sp/>gcc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>FP16<sp/>_Float16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spiel_8h" kindref="compound">open_spiel/spiel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base_type_8h" kindref="compound">baseType.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="user__specified__type_8h" kindref="compound">user_specified_type.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="socket__server_8h" kindref="compound">socket_server.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel" kindref="compound">open_spiel</ref><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">baseT<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classopen__spiel_1_1base_t_1_1base_t_game" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1base_t_1_1base_t_game" kindref="compound">baseTGame</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1a90e93a4cbbc2d8d313a94a160af2bb69" kindref="member">baseTGame</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref>&amp;<sp/>params);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1a90e93a4cbbc2d8d313a94a160af2bb69" kindref="member">baseTGame</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref>&amp;<sp/>game_type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref>&amp;<sp/>game_parameters);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1a7dbf14dc0dec62e1f3ef78dc52b08a8f" kindref="member">~baseTGame</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1aba247b7d920d5089b123f3f1238ac8f0" kindref="member">InformationStateTensorShape</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1ae926b2b4a88086e76c220ec4aff532eb" kindref="member">MaxChanceOutcomes</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1afacbdc14c5fdbe5ab688127b96552e1b" kindref="member">MaxGameLength</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1aa0b3058250743541e68bcc8b9517b5f7" kindref="member">MaxUtility</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1afade9ca373d958d0a1f69e7853169937" kindref="member">MinUtility</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;State&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1a62737f5a7696f708b1ec22f31c1ec5fc" kindref="member">NewInitialState</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1ae772da211ea6b6def3ca9496ec6d3142" kindref="member">NumDistinctActions</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1a4dc3e22a7333c3ae82e3e7c682c04bc7" kindref="member">ObservationTensorShape</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>absl::optional&lt;double&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_game_1a0357b44456a44e399e55e7f17e99af1e" kindref="member">UtilitySum</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classopen__spiel_1_1base_t_1_1base_t_state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1base_t_1_1base_t_state" kindref="compound">baseTState</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/>/*****<sp/><sp/>모든<sp/>게임<sp/>공용<sp/>*****/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a42cab2176731e93afc6e54b3e195afdf" kindref="member">baseTState</ref>(std::shared_ptr&lt;const<sp/>Game&gt;<sp/>game);</highlight></codeline>
+<codeline lineno="65" refid="classopen__spiel_1_1base_t_1_1base_t_state_1af9862334790cf8f44fa587452a736236" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af9862334790cf8f44fa587452a736236" kindref="member">baseTState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state" kindref="compound">baseTState</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a66671b52e5472d46aa554b7764b14807" kindref="member">~baseTState</ref>();</highlight></codeline>
+<codeline lineno="67" refid="classopen__spiel_1_1base_t_1_1base_t_state_1af570bad799dc0575ea3cd2cb3ddda31f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state" kindref="compound">baseTState</ref>&amp;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af570bad799dc0575ea3cd2cb3ddda31f" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state" kindref="compound">baseTState</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae36794c0d6337e0f5e4cd5dc10788e61" kindref="member">ActionToString</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>action_id)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2" kindref="member">CurrentPlayer</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1acf7403b244fc8bf4826d115ee4714039" kindref="member">IsTerminal</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::vector&lt;Action&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae1fcc7dea2a058cd9659540a3e183cd0" kindref="member">LegalActions</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a48c5439902ef0239be7510b9bc56bf59" kindref="member">Returns</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a3faa248c30ac5235797d881509b9c4b4" kindref="member">ToString</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;State&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a88c1baa247493f6ba6a6cd179f10b8e4" kindref="member">Clone</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" kindref="member">ObservationString</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" kindref="member">set_next_unit_to_action</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" kindref="member">deploy_unit</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player_id,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_alive,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>shift_dstc,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>atk_dstc,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vw_dstc,</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>hp,</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>power,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08f" kindref="member">UnitClass</ref><sp/>unit_class,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/>crd,<sp/>std::string<sp/>name);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210" kindref="member">UnitActionState</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4aa7a9803410fc0cfb1cfc3e1d21d984" kindref="member">CurrentUAS</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193d" kindref="member">PlayerActionState</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa0b7b663f43a2b9a4356eff110ace5fe" kindref="member">CurrentPAS</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2d690c8827f64f5bc07f148dc870c9e2" kindref="member">CurrentUniqueUnitId</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a84d182f9b2362a5b9be63f181f1193f4" kindref="member">CurrentUnitId</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6df22a3f31c04d507b854c9a8aa644d7" kindref="member">SetNextUAS</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af0e8bc2cc0b37f5e9b477fe23ee72f3b" kindref="member">SetNextPAS</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a57a36566c44ce5ee6d99bdcb0a2d84d5" kindref="member">SetNextPlayer</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4672d2912ae7cb5fda21e160c427a3b9" kindref="member">ObservationTensorBaseT</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af654d270b4ab00648c37e9617fcc94a5" kindref="member">DoApplyAction</ref>(<ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>move)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac636de5cc424cdef50e99e1af612f02b" kindref="member">action_select_tile</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pn,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>unit_id,<sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/>tg_crd,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_init);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad2e14532082ba02dc13546031adba3fa" kindref="member">scout</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pn,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>unit_id,<sp/><ref refid="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0" kindref="member">ObsRefCount</ref><sp/>o_r_c);<sp/><sp/></highlight><highlight class="comment">//<sp/>unit<sp/>주변<sp/>셀들을<sp/>관찰한다.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" kindref="member">init_first</ref></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_u,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>piece_tn,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last_mn,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>supply_n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>land_channel_d,<sp/><ref refid="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7e" kindref="member">UnitSelectionOrder</ref><sp/>uso,<sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/>ms,<sp/><ref refid="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820" kindref="member">UnitActionKind</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab4329031fc1032d4f6c170947524380d" kindref="member">game_uak</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6f0ae115ff986d522f90c5e1d18d71b8" kindref="member">get_cell_observation_string</ref>(<ref refid="structopen__spiel_1_1base_t_1_1_map_state" kindref="compound">MapState</ref><sp/>state,<sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/>crd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1aed1a550468e99047a479f5ed59dabd09" kindref="member">get_set_error</ref>(std::string<sp/>log,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_save);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad28ce776013babd3b3b7844164aa5bc4" kindref="member">id_to_crd</ref>(<ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>a);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae963870fa1777a9cc5bbc3db5919320f" kindref="member">crd_to_id</ref>(<ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/>crd);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a11a113c452cfdfc4e55f93d720821eac" kindref="member">ObservationTensorBaseT_Land</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last_index);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae10e7d5b335b44bb623a0c38a6217cbc" kindref="member">set_next_unit_to_action_rand_all_p</ref>();<sp/></highlight><highlight class="comment">//<sp/>모든<sp/>플레이어의<sp/>유닛에서<sp/>다음행동<sp/>유닛<sp/>뽑기</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" kindref="member">set_next_unit_to_action_rand_per_p</ref>();<sp/></highlight><highlight class="comment">//<sp/>특정<sp/>플레이어에게서<sp/>다음행동<sp/>유닛<sp/>랜덤뽑기</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1base_t_1_1_unit" kindref="compound">Unit</ref>&amp;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd6c019a2901580f5bb5eb91f9a9ca21" kindref="member">get_unit_by_uniqueId</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>unique_id);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" kindref="member">ObservationTensor</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/>absl::Span&lt;float&gt;<sp/>values)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" kindref="member">set_cell_and_obs</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structopen__spiel_1_1base_t_1_1_cell__set__flags" kindref="compound">Cell_set_flags</ref><sp/>flags,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structopen__spiel_1_1base_t_1_1_cell" kindref="compound">Cell</ref><sp/>cell,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/>crd,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>player_n,<sp/>int8_t<sp/>ref_c,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structopen__spiel_1_1base_t_1_1scout__info" kindref="compound">scout_info</ref><sp/>sc_info);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab116dedd343ede7e4f7d6b15547c857b" kindref="member">cells_to_obs</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1adae9ff5624af24a548b291b0af6859df" kindref="member">is_watched_by_others</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/>std::vector&lt;int8_t&gt;&amp;<sp/>being_observed_by);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" kindref="member">map_size</ref>;</highlight></codeline>
+<codeline lineno="114" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_state" kindref="compound">MapState</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" kindref="member">msn</ref>;<sp/></highlight><highlight class="comment">//map<sp/>state<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0567cd25b590bd54d9d09aa9e17f089d" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;MapState&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0567cd25b590bd54d9d09aa9e17f089d" kindref="member">Map_history</ref>;</highlight></codeline>
+<codeline lineno="116" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0bd6b95f931c88084697b3dd765c3eff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0bd6b95f931c88084697b3dd765c3eff" kindref="member">max_units</ref>;<sp/></highlight><highlight class="comment">//<sp/>max<sp/>number<sp/>of<sp/>one<sp/>player</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0b44e571e7dabfcd48098cf4de22ba5a" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int8_t&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0b44e571e7dabfcd48098cf4de22ba5a" kindref="member">unit_id_count</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>per<sp/>player<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2ae1fb9c3f9dde62caa852eda3a4fbe8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2ae1fb9c3f9dde62caa852eda3a4fbe8" kindref="member">unique_unit_id_count</ref>;</highlight></codeline>
+<codeline lineno="119" refid="classopen__spiel_1_1base_t_1_1base_t_state_1af4a5caa583d02de970ada6a278cc2703" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;int8_t&gt;&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af4a5caa583d02de970ada6a278cc2703" kindref="member">turn_unit_per_p_v</ref>;<sp/></highlight><highlight class="comment">//<sp/>플레이어<sp/>별<sp/>유닛<sp/>순서</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a43c4868babadab0049677655907f41fc" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;int8_t&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a43c4868babadab0049677655907f41fc" kindref="member">turn_unit_all_p_v</ref>;<sp/></highlight><highlight class="comment">//<sp/>모든<sp/>플레이어의<sp/>유닛<sp/>순서</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a04df2aa61d879687013ea9dc347ce641" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193d" kindref="member">PlayerActionState</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a04df2aa61d879687013ea9dc347ce641" kindref="member">current_pas</ref>;</highlight></codeline>
+<codeline lineno="122" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a10007f185220c4323e2acc82ecd50385" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7e" kindref="member">UnitSelectionOrder</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a10007f185220c4323e2acc82ecd50385" kindref="member">unit_selection_order</ref>;</highlight></codeline>
+<codeline lineno="123" refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa230dadaa0d199d8b7f2d69bb9b4ef15" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa230dadaa0d199d8b7f2d69bb9b4ef15" kindref="member">ground_type_num</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Observation<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classopen__spiel_1_1base_t_1_1base_t_state_1afb7f380f98cf7e23364cc6ce3a69d1df" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1afb7f380f98cf7e23364cc6ce3a69d1df" kindref="member">land_info_channel_depth</ref>;</highlight></codeline>
+<codeline lineno="127" refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac41af26c91b5add5b7c4defe42c4f7c7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac41af26c91b5add5b7c4defe42c4f7c7" kindref="member">piece_type_n</ref>;</highlight></codeline>
+<codeline lineno="128" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a7a56ad1ae720032d86b2d1509056e462" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;std::vector&lt;std::vector&lt;std::vector&lt;int8_t&gt;&gt;&gt;&gt;&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a7a56ad1ae720032d86b2d1509056e462" kindref="member">obs_per_p_v</ref>;<sp/></highlight><highlight class="comment">//z,y,x,c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a10afd836b7211d3a20dd85f93dd00c25" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a10afd836b7211d3a20dd85f93dd00c25" kindref="member">obs_total_channel_depth</ref>;</highlight></codeline>
+<codeline lineno="130" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a887a4094e27fa25d85a9d5217e7ec2db" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a887a4094e27fa25d85a9d5217e7ec2db" kindref="member">last_move_len</ref>;</highlight></codeline>
+<codeline lineno="131" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2dc10f3c7e575edea6c42887c21d03df" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;FP16&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2dc10f3c7e575edea6c42887c21d03df" kindref="member">supply_v</ref>;</highlight></codeline>
+<codeline lineno="132" refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac58e79674f658b353aeeb919f362f939" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;P_UnitId&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac58e79674f658b353aeeb919f362f939" kindref="member">unique_id_to_player_id_v</ref>;</highlight></codeline>
+<codeline lineno="133" refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab4329031fc1032d4f6c170947524380d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820" kindref="member">UnitActionKind</ref><sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab4329031fc1032d4f6c170947524380d" kindref="member">game_uak</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ipc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classopen__spiel_1_1base_t_1_1base_t_state_1a32bfa8f11a37ecf5bad70a6c7e335be9" refkind="member"><highlight class="normal"><sp/><sp/><sp/>std::unique_ptr&lt;SocketServer&gt;<sp/><ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a32bfa8f11a37ecf5bad70a6c7e335be9" kindref="member">ipc_server</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_cells();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_obs();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_map();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_unit();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_server();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_obs_onehot_vector(std::vector&lt;int8_t&gt;&amp;<sp/>now_obs_v,<sp/><ref refid="structopen__spiel_1_1base_t_1_1_cell" kindref="compound">Cell</ref>&amp;<sp/>now_cell,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>distance_between(<ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/>crd_0,<sp/><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref><sp/>crd_1);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>attack(<ref refid="classopen__spiel_1_1base_t_1_1_unit" kindref="compound">Unit</ref>&amp;<sp/>target_unit,<sp/><ref refid="classopen__spiel_1_1base_t_1_1_unit" kindref="compound">Unit</ref>&amp;<sp/>src_unit);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetNextUAS_1step();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SetNextUAS_2step();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment"><sp/>/**********<sp/>각<sp/>게임<sp/>별<sp/>전용<sp/>***********/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>baseT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>open_spiel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>OPEN_SPIEL_GAMES_SG_BASET_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/games/SG/baseT.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,947 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_game" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>open_spiel::Game</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Game &gt;</basecompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1_sim_move_game" prot="public" virt="non-virtual">open_spiel::SimMoveGame</derivedcompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1base_t_1_1base_t_game" prot="public" virt="non-virtual">open_spiel::baseT::baseTGame</derivedcompoundref>
+    <includes refid="spiel_8h" local="no">spiel.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" prot="protected" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref></type>
+        <definition>GameType open_spiel::Game::game_type_</definition>
+        <argsstring></argsstring>
+        <name>game_type_</name>
+        <qualifiedname>open_spiel::Game::game_type_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1032" column="12" bodyfile="open_spiel/spiel.h" bodystart="1032" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" compoundref="spiel_8cc" startline="409" endline="442">DeserializeState</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" compoundref="spiel_8h" startline="809" endline="809">GetType</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" compoundref="observer_8cc" startline="137" endline="175">MakeBuiltInObserver</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c" compoundref="spiel_8h" startline="919" endline="925">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" compoundref="spiel_8h" startline="988" endline="1029">ParameterValue</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" compoundref="spiel_8cc" startline="664" endline="668">ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_normal_form_game_1a520aa138f4c14bda7b271a51541927bc" compoundref="normal__form__game_8h" startline="135" endline="145">open_spiel::NormalFormGame::UtilitySum</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+        <definition>GameParameters open_spiel::Game::game_parameters_</definition>
+        <argsstring></argsstring>
+        <name>game_parameters_</name>
+        <qualifiedname>open_spiel::Game::game_parameters_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1035" column="18" bodyfile="open_spiel/spiel.h" bodystart="1035" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" compoundref="spiel_8h" startline="787" endline="792">GetParameters</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" compoundref="spiel_8h" startline="988" endline="1029">ParameterValue</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" compoundref="spiel_8cc" startline="664" endline="668">ToString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" prot="protected" static="no" mutable="yes">
+        <type>absl::Mutex</type>
+        <definition>absl::Mutex open_spiel::Game::mutex_defaulted_parameters_</definition>
+        <argsstring></argsstring>
+        <name>mutex_defaulted_parameters_</name>
+        <qualifiedname>open_spiel::Game::mutex_defaulted_parameters_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1041" column="23" bodyfile="open_spiel/spiel.h" bodystart="1041" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" compoundref="spiel_8h" startline="787" endline="792">GetParameters</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" compoundref="spiel_8h" startline="988" endline="1029">ParameterValue</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a1854931cb033de9f16657172659943d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual open_spiel::Game::~Game</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Game</name>
+        <qualifiedname>open_spiel::Game::~Game</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="748" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a02f9a81ec83227c45b70c6daf6ac09c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::Game::Game</definition>
+        <argsstring>(const Game &amp;)=delete</argsstring>
+        <name>Game</name>
+        <qualifiedname>open_spiel::Game::Game</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="749" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a24c7b0caccaf0fbaa1e3b5ee313a3720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+        <definition>Game &amp; open_spiel::Game::operator=</definition>
+        <argsstring>(const Game &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>open_spiel::Game::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="750" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a01a5c08dfab0c2260a31c78be362476f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int open_spiel::Game::NumDistinctActions</definition>
+        <argsstring>() const =0</argsstring>
+        <name>NumDistinctActions</name>
+        <qualifiedname>open_spiel::Game::NumDistinctActions</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1ae772da211ea6b6def3ca9496ec6d3142">NumDistinctActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5245fe0eba2197fd42f1202f1ff6b846">NumDistinctActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a743024a2d64444ffdb58c25b35e674a1">NumDistinctActions</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="762" column="15"/>
+        <referencedby refid="classopen__spiel_1_1_game_1a41ff35e433f78eabf4ff306257522fbd" compoundref="spiel_8h" startline="859" endline="861">PolicyTensorShape</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a5696835fab2961be5e2a0a08e36999a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; State &gt; open_spiel::Game::NewInitialState</definition>
+        <argsstring>() const =0</argsstring>
+        <name>NewInitialState</name>
+        <qualifiedname>open_spiel::Game::NewInitialState</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1a62737f5a7696f708b1ec22f31c1ec5fc">NewInitialState</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1kbg_1_1kbg_game_1a2e49bd4be9a7efdb7a72499d8fed2ea8">NewInitialState</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a797de24e8a087cb7192da8008f769fac">NewInitialState</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a93780aa65740267f9d6aa0e0492ebf7f">NewInitialState</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="765" column="27"/>
+        <referencedby refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" compoundref="spiel_8cc" startline="409" endline="442">DeserializeState</referencedby>
+        <referencedby refid="namespaceopen__spiel_1aab6328ff82289cc5a639af623b07983f" compoundref="policy_8cc" startline="275" endline="321">open_spiel::GetEmptyTabularPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a0fa54efbbbe01ea0ece4b0323105158c" compoundref="policy_8cc" startline="432" endline="475">open_spiel::GetFirstActionPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a5dc710e7fbd94c8c96e616086be2437d" compoundref="policy_8cc" startline="376" endline="430">open_spiel::GetRandomDeterministicPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_normal_form_game_1a636e3d1f642c56ed360e2ebb69853849" compoundref="normal__form__game_8h" startline="123" endline="128">open_spiel::NormalFormGame::GetUtilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" compoundref="spiel_8cc" startline="395" endline="407">NewInitialStates</referencedby>
+        <referencedby refid="classopen__spiel_1_1_observation_1ac47e27b2a3474cac22dbc97d8152a63c" compoundref="observer_8cc" startline="215" endline="225">open_spiel::Observation::Observation</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a869a3dd2e31acc33871b10af3ce370d0" compoundref="policy_8cc" startline="488" endline="518">open_spiel::ToTabularPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1aa76d3480113257e022575019af601df1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; State &gt; open_spiel::Game::NewInitialState</definition>
+        <argsstring>(const std::string &amp;str) const</argsstring>
+        <name>NewInitialState</name>
+        <qualifiedname>open_spiel::Game::NewInitialState</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="769" column="27" bodyfile="open_spiel/spiel.h" bodystart="769" bodyend="771"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::unique_ptr&lt; State &gt; &gt; open_spiel::Game::NewInitialStates</definition>
+        <argsstring>() const</argsstring>
+        <name>NewInitialStates</name>
+        <qualifiedname>open_spiel::Game::NewInitialStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="779" column="23" bodyfile="open_spiel/spiel.cc" bodystart="395" bodyend="407"/>
+        <references refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" compoundref="spiel_8h" startline="809" endline="809">GetType</references>
+        <references refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba6a40bb1d52ea6251e5ce3b9e7d3577bd">open_spiel::GameType::kMeanField</references>
+        <references refid="classopen__spiel_1_1_game_1a5696835fab2961be5e2a0a08e36999a5">NewInitialState</references>
+        <references refid="classopen__spiel_1_1_game_1ac46c5cfeeb05478188b382fa4d182efd" compoundref="spiel_8h" startline="974" endline="977">NewInitialStateForPopulation</references>
+        <references refid="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0">NumPlayers</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a23c04050a938cc94e9fa68e285131ac6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int open_spiel::Game::MaxChanceOutcomes</definition>
+        <argsstring>() const</argsstring>
+        <name>MaxChanceOutcomes</name>
+        <qualifiedname>open_spiel::Game::MaxChanceOutcomes</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1ae926b2b4a88086e76c220ec4aff532eb">MaxChanceOutcomes</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="782" column="15" bodyfile="open_spiel/spiel.h" bodystart="782" bodyend="782"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+        <definition>GameParameters open_spiel::Game::GetParameters</definition>
+        <argsstring>() const</argsstring>
+        <name>GetParameters</name>
+        <qualifiedname>open_spiel::Game::GetParameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="787" column="18" bodyfile="open_spiel/spiel.h" bodystart="787" bodyend="792"/>
+        <references refid="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" compoundref="spiel_8h" startline="1035">game_parameters_</references>
+        <references refid="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" compoundref="spiel_8h" startline="1041">mutex_defaulted_parameters_</references>
+        <referencedby refid="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c" compoundref="spiel_8h" startline="919" endline="925">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int open_spiel::Game::NumPlayers</definition>
+        <argsstring>() const =0</argsstring>
+        <name>NumPlayers</name>
+        <qualifiedname>open_spiel::Game::NumPlayers</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1kbg_1_1kbg_game_1af49728debda32adef2db40215cd58ffa">NumPlayers</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1af3118dae2700f2bdaf437d5b9999ed88">NumPlayers</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95">NumPlayers</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="796" column="15"/>
+        <referencedby refid="classopen__spiel_1_1_bot_registerer_1a08f69cbf8cd553aae6a893d13fb2b18e" compoundref="spiel__bots_8cc" startline="313" endline="326">open_spiel::BotRegisterer::BotsThatCanPlayGame</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" compoundref="spiel_8h" startline="897" endline="907">MaxHistoryLength</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" compoundref="spiel_8cc" startline="395" endline="407">NewInitialStates</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a869a3dd2e31acc33871b10af3ce370d0" compoundref="policy_8cc" startline="488" endline="518">open_spiel::ToTabularPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_normal_form_game_1a520aa138f4c14bda7b271a51541927bc" compoundref="normal__form__game_8h" startline="135" endline="145">open_spiel::NormalFormGame::UtilitySum</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1ab9390e351cfe88541b1057d7b60c6fb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double open_spiel::Game::MinUtility</definition>
+        <argsstring>() const =0</argsstring>
+        <name>MinUtility</name>
+        <qualifiedname>open_spiel::Game::MinUtility</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1afade9ca373d958d0a1f69e7853169937">MinUtility</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a7245fbe7efa3a6fa10aeefbeea3cfe25">MinUtility</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a41f59944fffb4c46db07f19092b1d55a">MinUtility</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="804" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a89bb13e2ab0da0f38c2c24072ac22b5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double open_spiel::Game::MaxUtility</definition>
+        <argsstring>() const =0</argsstring>
+        <name>MaxUtility</name>
+        <qualifiedname>open_spiel::Game::MaxUtility</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1aa0b3058250743541e68bcc8b9517b5f7">MaxUtility</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6da3de0d6b22ddd3a81d4e616c9d1997">MaxUtility</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab0f8ec980cc99b2fd7b8c8aa09fa2c90">MaxUtility</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="805" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref> &amp;</type>
+        <definition>const GameType &amp; open_spiel::Game::GetType</definition>
+        <argsstring>() const</argsstring>
+        <name>GetType</name>
+        <qualifiedname>open_spiel::Game::GetType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="809" column="18" bodyfile="open_spiel/spiel.h" bodystart="809" bodyend="809"/>
+        <references refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" compoundref="spiel_8h" startline="1032">game_type_</references>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a71a2ca91924cdb74c953fc8a4533b6b7" compoundref="tensor__game_8h" startline="130" endline="137">open_spiel::tensor_game::TensorGame::AsMatrixGame</referencedby>
+        <referencedby refid="classopen__spiel_1_1_observer_registerer_1a758f476da1265e23e37d42253be73b07" compoundref="observer_8cc" startline="359" endline="371">open_spiel::ObserverRegisterer::CreateByName</referencedby>
+        <referencedby refid="namespaceopen__spiel_1aab6328ff82289cc5a639af623b07983f" compoundref="policy_8cc" startline="275" endline="321">open_spiel::GetEmptyTabularPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a0fa54efbbbe01ea0ece4b0323105158c" compoundref="policy_8cc" startline="432" endline="475">open_spiel::GetFirstActionPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a5dc710e7fbd94c8c96e616086be2437d" compoundref="policy_8cc" startline="376" endline="430">open_spiel::GetRandomDeterministicPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a817f5d34cf3d2bcf5e890357f9c2ef1f" compoundref="spiel_8h" startline="882" endline="887">MaxChanceNodesInHistory</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" compoundref="spiel_8h" startline="897" endline="907">MaxHistoryLength</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" compoundref="spiel_8cc" startline="395" endline="407">NewInitialStates</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" compoundref="spiel_8cc" startline="655" endline="662">Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a735212bf068b8461236ccc596664e4da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>absl::optional&lt; double &gt;</type>
+        <definition>virtual absl::optional&lt; double &gt; open_spiel::Game::UtilitySum</definition>
+        <argsstring>() const</argsstring>
+        <name>UtilitySum</name>
+        <qualifiedname>open_spiel::Game::UtilitySum</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1a0357b44456a44e399e55e7f17e99af1e">UtilitySum</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e971623256866471a99758a25bf9729">UtilitySum</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_normal_form_game_1a520aa138f4c14bda7b271a51541927bc">UtilitySum</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="813" column="26" bodyfile="open_spiel/spiel.h" bodystart="813" bodyend="813"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a209f3549db02ccfd23e5f534f49c6b9c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>virtual std::vector&lt; int &gt; open_spiel::Game::InformationStateTensorShape</definition>
+        <argsstring>() const</argsstring>
+        <name>InformationStateTensorShape</name>
+        <qualifiedname>open_spiel::Game::InformationStateTensorShape</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1aba247b7d920d5089b123f3f1238ac8f0">InformationStateTensorShape</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_normal_form_game_1a058411943ab631a5c1961869ba578816">InformationStateTensorShape</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="820" column="23" bodyfile="open_spiel/spiel.h" bodystart="820" bodyend="822"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_game_1a4e260b8faf1879f3bbe8d0bcab31a437" compoundref="spiel_8h" startline="829" endline="833">InformationStateTensorSize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a41c14e07fcb4939e8b283b1b8c623b23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1a57f1e9721fa60d57e91a64796bdbcad0" kindref="member">TensorLayout</ref></type>
+        <definition>virtual TensorLayout open_spiel::Game::InformationStateTensorLayout</definition>
+        <argsstring>() const</argsstring>
+        <name>InformationStateTensorLayout</name>
+        <qualifiedname>open_spiel::Game::InformationStateTensorLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="823" column="24" bodyfile="open_spiel/spiel.h" bodystart="823" bodyend="825"/>
+        <references refid="namespaceopen__spiel_1a57f1e9721fa60d57e91a64796bdbcad0a3abb5fb021a7312e31bf05647cc4c148">open_spiel::kCHW</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a4e260b8faf1879f3bbe8d0bcab31a437" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::Game::InformationStateTensorSize</definition>
+        <argsstring>() const</argsstring>
+        <name>InformationStateTensorSize</name>
+        <qualifiedname>open_spiel::Game::InformationStateTensorSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="829" column="7" bodyfile="open_spiel/spiel.h" bodystart="829" bodyend="833"/>
+        <references refid="classopen__spiel_1_1_game_1a209f3549db02ccfd23e5f534f49c6b9c" compoundref="spiel_8h" startline="820" endline="822">InformationStateTensorShape</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a36bc618e4f23f2b81cb479e68dadf310" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>virtual std::vector&lt; int &gt; open_spiel::Game::ObservationTensorShape</definition>
+        <argsstring>() const</argsstring>
+        <name>ObservationTensorShape</name>
+        <qualifiedname>open_spiel::Game::ObservationTensorShape</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1a4dc3e22a7333c3ae82e3e7c682c04bc7">ObservationTensorShape</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_normal_form_game_1a407b41a9bf6cb9c45957247bf27bafd8">ObservationTensorShape</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="840" column="23" bodyfile="open_spiel/spiel.h" bodystart="840" bodyend="842"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_game_1a19ffc4fce853df1f6314fc341472e5c4" compoundref="spiel_8h" startline="849" endline="853">ObservationTensorSize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a3ad925d3568e428a6c3e4d601ac0cea0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1a57f1e9721fa60d57e91a64796bdbcad0" kindref="member">TensorLayout</ref></type>
+        <definition>virtual TensorLayout open_spiel::Game::ObservationTensorLayout</definition>
+        <argsstring>() const</argsstring>
+        <name>ObservationTensorLayout</name>
+        <qualifiedname>open_spiel::Game::ObservationTensorLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="843" column="24" bodyfile="open_spiel/spiel.h" bodystart="843" bodyend="845"/>
+        <references refid="namespaceopen__spiel_1a57f1e9721fa60d57e91a64796bdbcad0a3abb5fb021a7312e31bf05647cc4c148">open_spiel::kCHW</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a19ffc4fce853df1f6314fc341472e5c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::Game::ObservationTensorSize</definition>
+        <argsstring>() const</argsstring>
+        <name>ObservationTensorSize</name>
+        <qualifiedname>open_spiel::Game::ObservationTensorSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="849" column="7" bodyfile="open_spiel/spiel.h" bodystart="849" bodyend="853"/>
+        <references refid="classopen__spiel_1_1_game_1a36bc618e4f23f2b81cb479e68dadf310" compoundref="spiel_8h" startline="840" endline="842">ObservationTensorShape</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a41ff35e433f78eabf4ff306257522fbd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>virtual std::vector&lt; int &gt; open_spiel::Game::PolicyTensorShape</definition>
+        <argsstring>() const</argsstring>
+        <name>PolicyTensorShape</name>
+        <qualifiedname>open_spiel::Game::PolicyTensorShape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="859" column="23" bodyfile="open_spiel/spiel.h" bodystart="859" bodyend="861"/>
+        <references refid="classopen__spiel_1_1_game_1a01a5c08dfab0c2260a31c78be362476f">NumDistinctActions</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; State &gt; open_spiel::Game::DeserializeState</definition>
+        <argsstring>(const std::string &amp;str) const</argsstring>
+        <name>DeserializeState</name>
+        <qualifiedname>open_spiel::Game::DeserializeState</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="871" column="27" bodyfile="open_spiel/spiel.cc" bodystart="409" bodyend="442"/>
+        <references refid="structopen__spiel_1_1_game_type_1a7a1a6c9e079e58933da6b62c4d04279e" compoundref="spiel_8h" startline="84">open_spiel::GameType::chance_mode</references>
+        <references refid="structopen__spiel_1_1_game_type_1ac1176bf5ed045dc24fb4b113af2750b8" compoundref="spiel_8h" startline="65">open_spiel::GameType::dynamics</references>
+        <references refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" compoundref="spiel_8h" startline="1032">game_type_</references>
+        <references refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba6a40bb1d52ea6251e5ce3b9e7d3577bd">open_spiel::GameType::kMeanField</references>
+        <references refid="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8ea39686673a19498ee90ed998e494c5bc7">open_spiel::GameType::kSampledStochastic</references>
+        <references refid="classopen__spiel_1_1_game_1a5696835fab2961be5e2a0a08e36999a5">NewInitialState</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+        <references refid="spiel__utils_8h_1a32ffad2dd43a12e9d7443bc75f456bbb" compoundref="spiel__utils_8h" startline="260">SPIEL_CHECK_NE</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1aa74315d4db85544a8835269b26ba2966" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int open_spiel::Game::MaxGameLength</definition>
+        <argsstring>() const =0</argsstring>
+        <name>MaxGameLength</name>
+        <qualifiedname>open_spiel::Game::MaxGameLength</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_game_1afacbdc14c5fdbe5ab688127b96552e1b">MaxGameLength</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_normal_form_game_1a41ad19711e6dad5b43d5dfe2f8746308">MaxGameLength</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="878" column="15"/>
+        <referencedby refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" compoundref="spiel_8h" startline="897" endline="907">MaxHistoryLength</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a4b0c5bbf1361734cc6740fc6be893fda" compoundref="spiel_8h" startline="891" endline="893">MaxMoveNumber</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a817f5d34cf3d2bcf5e890357f9c2ef1f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int open_spiel::Game::MaxChanceNodesInHistory</definition>
+        <argsstring>() const</argsstring>
+        <name>MaxChanceNodesInHistory</name>
+        <qualifiedname>open_spiel::Game::MaxChanceNodesInHistory</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1_normal_form_game_1a7467e615bc2d6b4f06b4b87d947e685a">MaxChanceNodesInHistory</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="882" column="15" bodyfile="open_spiel/spiel.h" bodystart="882" bodyend="887"/>
+        <references refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" compoundref="spiel_8h" startline="809" endline="809">GetType</references>
+        <references refid="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8eab1ebb5017b01aead05321c8dd2107ab0">open_spiel::GameType::kDeterministic</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" compoundref="spiel_8h" startline="897" endline="907">MaxHistoryLength</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a4b0c5bbf1361734cc6740fc6be893fda" compoundref="spiel_8h" startline="891" endline="893">MaxMoveNumber</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a4b0c5bbf1361734cc6740fc6be893fda" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int open_spiel::Game::MaxMoveNumber</definition>
+        <argsstring>() const</argsstring>
+        <name>MaxMoveNumber</name>
+        <qualifiedname>open_spiel::Game::MaxMoveNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="891" column="15" bodyfile="open_spiel/spiel.h" bodystart="891" bodyend="893"/>
+        <references refid="classopen__spiel_1_1_game_1a817f5d34cf3d2bcf5e890357f9c2ef1f" compoundref="spiel_8h" startline="882" endline="887">MaxChanceNodesInHistory</references>
+        <references refid="classopen__spiel_1_1_game_1aa74315d4db85544a8835269b26ba2966">MaxGameLength</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>virtual int open_spiel::Game::MaxHistoryLength</definition>
+        <argsstring>() const</argsstring>
+        <name>MaxHistoryLength</name>
+        <qualifiedname>open_spiel::Game::MaxHistoryLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="897" column="15" bodyfile="open_spiel/spiel.h" bodystart="897" bodyend="907"/>
+        <references refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" compoundref="spiel_8h" startline="809" endline="809">GetType</references>
+        <references refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17baeb609b99f542b955302693c0f445ba0c">open_spiel::GameType::kSequential</references>
+        <references refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba0ffc281e20028439b1995e0fa983ffcb">open_spiel::GameType::kSimultaneous</references>
+        <references refid="classopen__spiel_1_1_game_1a817f5d34cf3d2bcf5e890357f9c2ef1f" compoundref="spiel_8h" startline="882" endline="887">MaxChanceNodesInHistory</references>
+        <references refid="classopen__spiel_1_1_game_1aa74315d4db85544a8835269b26ba2966">MaxGameLength</references>
+        <references refid="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0">NumPlayers</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::Game::Serialize</definition>
+        <argsstring>() const</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>open_spiel::Game::Serialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="913" column="15" bodyfile="open_spiel/spiel.cc" bodystart="655" bodyend="662"/>
+        <references refid="classopen__spiel_1_1_game_1ad8e566fa7343c252e2895a46ef6cdd31" compoundref="spiel_8h" startline="931" endline="933">GetRNGState</references>
+        <references refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" compoundref="spiel_8h" startline="809" endline="809">GetType</references>
+        <references refid="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8ea39686673a19498ee90ed998e494c5bc7">open_spiel::GameType::kSampledStochastic</references>
+        <references refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" compoundref="spiel_8cc" startline="664" endline="668">ToString</references>
+        <referencedby refid="namespaceopen__spiel_1a8c5224bc6b99621bd7c32c04dc9ddafa" compoundref="spiel_8cc" startline="444" endline="464">open_spiel::SerializeGameAndState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::Game::ToString</definition>
+        <argsstring>() const</argsstring>
+        <name>ToString</name>
+        <qualifiedname>open_spiel::Game::ToString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="916" column="15" bodyfile="open_spiel/spiel.cc" bodystart="664" bodyend="668"/>
+        <references refid="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" compoundref="spiel_8h" startline="1035">game_parameters_</references>
+        <references refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" compoundref="spiel_8h" startline="1032">game_type_</references>
+        <references refid="namespaceopen__spiel_1aa0832688fe92be988164cf8e87089ada" compoundref="game__parameters_8cc" startline="153" endline="170">open_spiel::GameParametersToString</references>
+        <references refid="structopen__spiel_1_1_game_type_1a7dc97c2b88971ea7c5180d3c2fe29cf1" compoundref="spiel_8h" startline="52">open_spiel::GameType::short_name</references>
+        <referencedby refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" compoundref="spiel_8h" startline="988" endline="1029">ParameterValue</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" compoundref="spiel_8cc" startline="655" endline="662">Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::Game::operator==</definition>
+        <argsstring>(const Game &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>open_spiel::Game::operator==</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e7d72bf6f1a12f87ea448e6f83a82e4">operator==</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1af8206eecf92a2adf8172a6702c1b1f2b">operator==</reimplementedby>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="919" column="16" bodyfile="open_spiel/spiel.h" bodystart="919" bodyend="925"/>
+        <references refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" compoundref="spiel_8h" startline="1032">game_type_</references>
+        <references refid="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" compoundref="spiel_8h" startline="787" endline="792">GetParameters</references>
+        <references refid="structopen__spiel_1_1_game_type_1a7dc97c2b88971ea7c5180d3c2fe29cf1" compoundref="spiel_8h" startline="52">open_spiel::GameType::short_name</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1ad8e566fa7343c252e2895a46ef6cdd31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string open_spiel::Game::GetRNGState</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRNGState</name>
+        <qualifiedname>open_spiel::Game::GetRNGState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="931" column="23" bodyfile="open_spiel/spiel.h" bodystart="931" bodyend="933"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" compoundref="spiel_8cc" startline="655" endline="662">Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a04741ccd0d5da41a454501dd2953af69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::Game::SetRNGState</definition>
+        <argsstring>(const std::string &amp;rng_state) const</argsstring>
+        <name>SetRNGState</name>
+        <qualifiedname>open_spiel::Game::SetRNGState</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rng_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="937" column="16" bodyfile="open_spiel/spiel.h" bodystart="937" bodyend="939"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a223d65cc15f5961951e2c685a77879d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="classopen__spiel_1_1_observer" kindref="compound">Observer</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Observer &gt; open_spiel::Game::MakeObserver</definition>
+        <argsstring>(absl::optional&lt; IIGObservationType &gt; iig_obs_type, const GameParameters &amp;params) const</argsstring>
+        <name>MakeObserver</name>
+        <qualifiedname>open_spiel::Game::MakeObserver</qualifiedname>
+        <param>
+          <type>absl::optional&lt; <ref refid="structopen__spiel_1_1_i_i_g_observation_type" kindref="compound">IIGObservationType</ref> &gt;</type>
+          <declname>iig_obs_type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="949" column="27" bodyfile="open_spiel/observer.cc" bodystart="177" bodyend="190"/>
+        <references refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" compoundref="observer_8cc" startline="137" endline="175">MakeBuiltInObserver</references>
+        <references refid="classopen__spiel_1_1_game_1a28537d9c2a657634e611724e12d2f32f" compoundref="observer_8cc" startline="125" endline="135">MakeRegisteredObserver</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a3a53334739ff4d4b6b81269ea5518136" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string open_spiel::Game::ActionToString</definition>
+        <argsstring>(Player player, Action action_id) const</argsstring>
+        <name>ActionToString</name>
+        <qualifiedname>open_spiel::Game::ActionToString</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a42356a06a9bc76e7c88767bdae84afdd">ActionToString</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a61789265c5f99c7115b44ee176a22d22">ActionToString</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="955" column="23" bodyfile="open_spiel/spiel.h" bodystart="955" bodyend="957"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1a28537d9c2a657634e611724e12d2f32f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classopen__spiel_1_1_observer" kindref="compound">Observer</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Observer &gt; open_spiel::Game::MakeRegisteredObserver</definition>
+        <argsstring>(absl::optional&lt; IIGObservationType &gt; iig_obs_type, const GameParameters &amp;params) const</argsstring>
+        <name>MakeRegisteredObserver</name>
+        <qualifiedname>open_spiel::Game::MakeRegisteredObserver</qualifiedname>
+        <param>
+          <type>absl::optional&lt; <ref refid="structopen__spiel_1_1_i_i_g_observation_type" kindref="compound">IIGObservationType</ref> &gt;</type>
+          <declname>iig_obs_type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="960" column="19" bodyfile="open_spiel/observer.cc" bodystart="125" bodyend="135"/>
+        <references refid="classopen__spiel_1_1_observer_registerer_1a758f476da1265e23e37d42253be73b07" compoundref="observer_8cc" startline="359" endline="371">open_spiel::ObserverRegisterer::CreateByName</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_game_1a223d65cc15f5961951e2c685a77879d9" compoundref="observer_8cc" startline="177" endline="190">MakeObserver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classopen__spiel_1_1_observer" kindref="compound">Observer</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Observer &gt; open_spiel::Game::MakeBuiltInObserver</definition>
+        <argsstring>(absl::optional&lt; IIGObservationType &gt; iig_obs_type) const</argsstring>
+        <name>MakeBuiltInObserver</name>
+        <qualifiedname>open_spiel::Game::MakeBuiltInObserver</qualifiedname>
+        <param>
+          <type>absl::optional&lt; <ref refid="structopen__spiel_1_1_i_i_g_observation_type" kindref="compound">IIGObservationType</ref> &gt;</type>
+          <declname>iig_obs_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="966" column="19" bodyfile="open_spiel/observer.cc" bodystart="137" bodyend="175"/>
+        <references refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" compoundref="spiel_8h" startline="1032">game_type_</references>
+        <references refid="structopen__spiel_1_1_game_type_1a99e4ce5d58635d108e99367a5d12f589" compoundref="spiel_8h" startline="92">open_spiel::GameType::information</references>
+        <references refid="namespaceopen__spiel_1a5bc6e01a4042ac7ea2e321608cb441d8" compoundref="observer_8h" startline="288" endline="291">open_spiel::kDefaultObsType</references>
+        <references refid="namespaceopen__spiel_1a37db6d5fe2c988fdfbf73e22163c451d" compoundref="observer_8h" startline="295" endline="298">open_spiel::kInfoStateObsType</references>
+        <references refid="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522aeacd60620d6401b630c39d1af12e6d701a">open_spiel::GameType::kPerfectInformation</references>
+        <references refid="structopen__spiel_1_1_game_type_1a20640f61e3d0524691ec952281d2eccd" compoundref="spiel_8h" startline="145" endline="148">open_spiel::GameType::provides_information_state</references>
+        <references refid="structopen__spiel_1_1_game_type_1a2759dc85a4cd799fdcb247b0c9c870cf" compoundref="spiel_8h" startline="149" endline="152">open_spiel::GameType::provides_observation</references>
+        <referencedby refid="classopen__spiel_1_1_game_1a223d65cc15f5961951e2c685a77879d9" compoundref="observer_8cc" startline="177" endline="190">MakeObserver</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ab19b15f183ec8ff4b20c30ea93d752ca" compoundref="observer_8cc" startline="347" endline="351">open_spiel::MakeSingleTensorObserver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1ac46c5cfeeb05478188b382fa4d182efd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; State &gt; open_spiel::Game::NewInitialStateForPopulation</definition>
+        <argsstring>(int population) const</argsstring>
+        <name>NewInitialStateForPopulation</name>
+        <qualifiedname>open_spiel::Game::NewInitialStateForPopulation</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>population</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="974" column="27" bodyfile="open_spiel/spiel.h" bodystart="974" bodyend="977"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" compoundref="spiel_8cc" startline="395" endline="407">NewInitialStates</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1ae1b45088cc527add6874e85d4c3a6cc3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::Game::Game</definition>
+        <argsstring>(GameType game_type, GameParameters game_parameters)</argsstring>
+        <name>Game</name>
+        <qualifiedname>open_spiel::Game::Game</qualifiedname>
+        <param>
+          <type><ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref></type>
+          <declname>game_type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+          <declname>game_parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="980" column="3" bodyfile="open_spiel/spiel.h" bodystart="980" bodyend="981"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T open_spiel::Game::ParameterValue</definition>
+        <argsstring>(const std::string &amp;key, absl::optional&lt; T &gt; default_value=absl::nullopt) const</argsstring>
+        <name>ParameterValue</name>
+        <qualifiedname>open_spiel::Game::ParameterValue</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>absl::optional&lt; T &gt;</type>
+          <declname>default_value</declname>
+          <defval>absl::nullopt</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="988" column="5" bodyfile="open_spiel/spiel.h" bodystart="988" bodyend="1029"/>
+        <references refid="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" compoundref="spiel_8h" startline="1035">game_parameters_</references>
+        <references refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" compoundref="spiel_8h" startline="1032">game_type_</references>
+        <references refid="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" compoundref="spiel_8h" startline="1041">mutex_defaulted_parameters_</references>
+        <references refid="structopen__spiel_1_1_game_type_1a2d265bb0c5d0be4d64222ac322bf3510" compoundref="spiel_8h" startline="130">open_spiel::GameType::parameter_specification</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" compoundref="game__parameters_8cc" startline="35" endline="55">open_spiel::GameParameter::ToReprString</references>
+        <references refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" compoundref="spiel_8cc" startline="664" endline="668">ToString</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf">open_spiel::GameParameter::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_1acd86016f8990a05ac6c68b7bb8ce3711" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> defaulted_parameters_</type>
+        <definition>GameParameters defaulted_parameters_ open_spiel::Game::ABSL_GUARDED_BY</definition>
+        <argsstring>(mutex_defaulted_parameters_)</argsstring>
+        <name>ABSL_GUARDED_BY</name>
+        <qualifiedname>open_spiel::Game::ABSL_GUARDED_BY</qualifiedname>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" kindref="member">mutex_defaulted_parameters_</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1040" column="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel::NormalFormGame</label>
+        <link refid="classopen__spiel_1_1_normal_form_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::SimMoveGame</label>
+        <link refid="classopen__spiel_1_1_sim_move_game"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>open_spiel::baseT::baseTGame</label>
+        <link refid="classopen__spiel_1_1base_t_1_1base_t_game"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>open_spiel::kbg::kbgGame</label>
+        <link refid="classopen__spiel_1_1kbg_1_1kbg_game"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>open_spiel::matrix_game::MatrixGame</label>
+        <link refid="classopen__spiel_1_1matrix__game_1_1_matrix_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>open_spiel::tensor_game::TensorGame</label>
+        <link refid="classopen__spiel_1_1tensor__game_1_1_tensor_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#game_type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::GameType</label>
+        <link refid="structopen__spiel_1_1_game_type"/>
+      </node>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel.h" line="746" column="1" bodyfile="open_spiel/spiel.h" bodystart="746" bodyend="1042"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_game_1acd86016f8990a05ac6c68b7bb8ce3711" prot="protected" virt="non-virtual"><scope>open_spiel::Game</scope><name>ABSL_GUARDED_BY</name></member>
+      <member refid="classopen__spiel_1_1_game_1a3a53334739ff4d4b6b81269ea5518136" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>DeserializeState</name></member>
+      <member refid="classopen__spiel_1_1_game_1a02f9a81ec83227c45b70c6daf6ac09c7" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1ae1b45088cc527add6874e85d4c3a6cc3" prot="protected" virt="non-virtual"><scope>open_spiel::Game</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" prot="protected" virt="non-virtual"><scope>open_spiel::Game</scope><name>game_parameters_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" prot="protected" virt="non-virtual"><scope>open_spiel::Game</scope><name>game_type_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>GetParameters</name></member>
+      <member refid="classopen__spiel_1_1_game_1ad8e566fa7343c252e2895a46ef6cdd31" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>GetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41c14e07fcb4939e8b283b1b8c623b23" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>InformationStateTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1_game_1a209f3549db02ccfd23e5f534f49c6b9c" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>InformationStateTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4e260b8faf1879f3bbe8d0bcab31a437" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>InformationStateTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>MakeBuiltInObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a223d65cc15f5961951e2c685a77879d9" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>MakeObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a28537d9c2a657634e611724e12d2f32f" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>MakeRegisteredObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a817f5d34cf3d2bcf5e890357f9c2ef1f" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>MaxChanceNodesInHistory</name></member>
+      <member refid="classopen__spiel_1_1_game_1a23c04050a938cc94e9fa68e285131ac6" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>MaxChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa74315d4db85544a8835269b26ba2966" prot="public" virt="pure-virtual"><scope>open_spiel::Game</scope><name>MaxGameLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>MaxHistoryLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4b0c5bbf1361734cc6740fc6be893fda" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>MaxMoveNumber</name></member>
+      <member refid="classopen__spiel_1_1_game_1a89bb13e2ab0da0f38c2c24072ac22b5d" prot="public" virt="pure-virtual"><scope>open_spiel::Game</scope><name>MaxUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab9390e351cfe88541b1057d7b60c6fb5" prot="public" virt="pure-virtual"><scope>open_spiel::Game</scope><name>MinUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" prot="protected" virt="non-virtual"><scope>open_spiel::Game</scope><name>mutex_defaulted_parameters_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a5696835fab2961be5e2a0a08e36999a5" prot="public" virt="pure-virtual"><scope>open_spiel::Game</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa76d3480113257e022575019af601df1" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ac46c5cfeeb05478188b382fa4d182efd" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>NewInitialStateForPopulation</name></member>
+      <member refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>NewInitialStates</name></member>
+      <member refid="classopen__spiel_1_1_game_1a01a5c08dfab0c2260a31c78be362476f" prot="public" virt="pure-virtual"><scope>open_spiel::Game</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0" prot="public" virt="pure-virtual"><scope>open_spiel::Game</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1_game_1a3ad925d3568e428a6c3e4d601ac0cea0" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>ObservationTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1_game_1a36bc618e4f23f2b81cb479e68dadf310" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>ObservationTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a19ffc4fce853df1f6314fc341472e5c4" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>ObservationTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a24c7b0caccaf0fbaa1e3b5ee313a3720" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>operator=</name></member>
+      <member refid="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" prot="protected" virt="non-virtual"><scope>open_spiel::Game</scope><name>ParameterValue</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41ff35e433f78eabf4ff306257522fbd" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>PolicyTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a04741ccd0d5da41a454501dd2953af69" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>SetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" prot="public" virt="non-virtual"><scope>open_spiel::Game</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1_game_1a735212bf068b8461236ccc596664e4da" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>UtilitySum</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1854931cb033de9f16657172659943d3" prot="public" virt="virtual"><scope>open_spiel::Game</scope><name>~Game</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

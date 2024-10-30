@@ -1,0 +1,706 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1matrix__game_1_1_matrix_game" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::matrix_game::MatrixGame</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_normal_form_game" prot="public" virt="non-virtual">open_spiel::NormalFormGame</basecompoundref>
+    <includes refid="matrix__game_8h" local="no">matrix_game.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a97697e0558f772eb87358044a769b91d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; open_spiel::matrix_game::MatrixGame::row_action_names_</definition>
+        <argsstring></argsstring>
+        <name>row_action_names_</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::row_action_names_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="166" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a038692701350c13e768dabcfc87da973" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; open_spiel::matrix_game::MatrixGame::col_action_names_</definition>
+        <argsstring></argsstring>
+        <name>col_action_names_</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::col_action_names_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="167" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1af1447826cd2230cf3bd27730d1a45a4f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; open_spiel::matrix_game::MatrixGame::row_utilities_</definition>
+        <argsstring></argsstring>
+        <name>row_utilities_</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::row_utilities_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="168" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a095b984c0bc4cbcced54d1ded3e7f1e4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; open_spiel::matrix_game::MatrixGame::col_utilities_</definition>
+        <argsstring></argsstring>
+        <name>col_utilities_</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::col_utilities_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="169" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1ad97a646279f0dd8348e80dd08c2f4e68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::matrix_game::MatrixGame::MatrixGame</definition>
+        <argsstring>(GameType game_type, GameParameters game_parameters, std::vector&lt; std::string &gt; row_action_names, std::vector&lt; std::string &gt; col_action_names, std::vector&lt; double &gt; row_utilities, std::vector&lt; double &gt; col_utilities)</argsstring>
+        <name>MatrixGame</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::MatrixGame</qualifiedname>
+        <param>
+          <type><ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref></type>
+          <declname>game_type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+          <declname>game_parameters</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>row_action_names</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>col_action_names</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>row_utilities</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt;</type>
+          <declname>col_utilities</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="45" column="3" bodyfile="open_spiel/matrix_game.h" bodystart="45" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1acf8c3d52e9b650c5a56b89c57dd6e0b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::matrix_game::MatrixGame::MatrixGame</definition>
+        <argsstring>(GameType game_type, GameParameters game_parameters, std::vector&lt; std::string &gt; row_action_names, std::vector&lt; std::string &gt; col_action_names, const std::vector&lt; std::vector&lt; double &gt; &gt; row_utilities, const std::vector&lt; std::vector&lt; double &gt; &gt; col_utilities)</argsstring>
+        <name>MatrixGame</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::MatrixGame</qualifiedname>
+        <param>
+          <type><ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref></type>
+          <declname>game_type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+          <declname>game_parameters</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>row_action_names</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>col_action_names</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+          <declname>row_utilities</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+          <declname>col_utilities</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="56" column="3" bodyfile="open_spiel/matrix_game.h" bodystart="56" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5245fe0eba2197fd42f1202f1ff6b846" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int open_spiel::matrix_game::MatrixGame::NumDistinctActions</definition>
+        <argsstring>() const override</argsstring>
+        <name>NumDistinctActions</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::NumDistinctActions</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a01a5c08dfab0c2260a31c78be362476f">NumDistinctActions</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="68" column="7" bodyfile="open_spiel/matrix_game.h" bodystart="68" bodyend="70"/>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" compoundref="matrix__game_8h" startline="111" endline="111">NumCols</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" compoundref="matrix__game_8h" startline="110" endline="110">NumRows</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a797de24e8a087cb7192da8008f769fac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; State &gt; open_spiel::matrix_game::MatrixGame::NewInitialState</definition>
+        <argsstring>() const override</argsstring>
+        <name>NewInitialState</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::NewInitialState</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a5696835fab2961be5e2a0a08e36999a5">NewInitialState</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="72" column="19" bodyfile="open_spiel/matrix_game.cc" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1af3118dae2700f2bdaf437d5b9999ed88" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int open_spiel::matrix_game::MatrixGame::NumPlayers</definition>
+        <argsstring>() const override</argsstring>
+        <name>NumPlayers</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::NumPlayers</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0">NumPlayers</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="74" column="7" bodyfile="open_spiel/matrix_game.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a7245fbe7efa3a6fa10aeefbeea3cfe25" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double open_spiel::matrix_game::MatrixGame::MinUtility</definition>
+        <argsstring>() const override</argsstring>
+        <name>MinUtility</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::MinUtility</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1ab9390e351cfe88541b1057d7b60c6fb5">MinUtility</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="76" column="10" bodyfile="open_spiel/matrix_game.h" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6da3de0d6b22ddd3a81d4e616c9d1997" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double open_spiel::matrix_game::MatrixGame::MaxUtility</definition>
+        <argsstring>() const override</argsstring>
+        <name>MaxUtility</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::MaxUtility</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a89bb13e2ab0da0f38c2c24072ac22b5d">MaxUtility</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="82" column="10" bodyfile="open_spiel/matrix_game.h" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e971623256866471a99758a25bf9729" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>absl::optional&lt; double &gt;</type>
+        <definition>absl::optional&lt; double &gt; open_spiel::matrix_game::MatrixGame::UtilitySum</definition>
+        <argsstring>() const override</argsstring>
+        <name>UtilitySum</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::UtilitySum</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a735212bf068b8461236ccc596664e4da">UtilitySum</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="88" column="18" bodyfile="open_spiel/matrix_game.cc" bodystart="213" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a42356a06a9bc76e7c88767bdae84afdd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::matrix_game::MatrixGame::ActionToString</definition>
+        <argsstring>(Player player, Action action) const override</argsstring>
+        <name>ActionToString</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::ActionToString</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a3a53334739ff4d4b6b81269ea5518136">ActionToString</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="90" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="90" bodyend="107"/>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::matrix_game::MatrixGame::NumRows</definition>
+        <argsstring>() const</argsstring>
+        <name>NumRows</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::NumRows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="110" column="7" bodyfile="open_spiel/matrix_game.h" bodystart="110" bodyend="110"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" compoundref="matrix__game_8h" startline="216" endline="223">open_spiel::matrix_game::MatrixState::DoApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" compoundref="matrix__game_8h" startline="177" endline="187">open_spiel::matrix_game::MatrixState::LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5245fe0eba2197fd42f1202f1ff6b846" compoundref="matrix__game_8h" startline="68" endline="70">NumDistinctActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">open_spiel::matrix_game::MatrixState::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::matrix_game::MatrixGame::NumCols</definition>
+        <argsstring>() const</argsstring>
+        <name>NumCols</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::NumCols</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="111" column="7" bodyfile="open_spiel/matrix_game.h" bodystart="111" bodyend="111"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" compoundref="matrix__game_8h" startline="216" endline="223">open_spiel::matrix_game::MatrixState::DoApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" compoundref="matrix__game_8h" startline="177" endline="187">open_spiel::matrix_game::MatrixState::LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5245fe0eba2197fd42f1202f1ff6b846" compoundref="matrix__game_8h" startline="68" endline="70">NumDistinctActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">open_spiel::matrix_game::MatrixState::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a34096a7e7b15983b1b7964413e7dbc25" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double open_spiel::matrix_game::MatrixGame::RowUtility</definition>
+        <argsstring>(int row, int col) const</argsstring>
+        <name>RowUtility</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::RowUtility</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="112" column="10" bodyfile="open_spiel/matrix_game.h" bodystart="112" bodyend="114"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43" compoundref="matrix__game_8h" startline="202" endline="209">open_spiel::matrix_game::MatrixState::Returns</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">open_spiel::matrix_game::MatrixState::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aee28d3a9f554a4997ea9bf212a189de9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double open_spiel::matrix_game::MatrixGame::ColUtility</definition>
+        <argsstring>(int row, int col) const</argsstring>
+        <name>ColUtility</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::ColUtility</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="115" column="10" bodyfile="open_spiel/matrix_game.h" bodystart="115" bodyend="117"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43" compoundref="matrix__game_8h" startline="202" endline="209">open_spiel::matrix_game::MatrixState::Returns</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">open_spiel::matrix_game::MatrixState::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a35723b6742e79d6728a2ebb614aa15f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double open_spiel::matrix_game::MatrixGame::PlayerUtility</definition>
+        <argsstring>(Player player, int row, int col) const</argsstring>
+        <name>PlayerUtility</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::PlayerUtility</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="118" column="10" bodyfile="open_spiel/matrix_game.h" bodystart="118" bodyend="122"/>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a088f57627ab2ef1cc5f1ccdcebf49947" compoundref="matrix__game_8h" startline="143" endline="146">GetUtility</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aed3a847f28afc7561dfae5ccbf3cc69e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; double &gt; &amp;</type>
+        <definition>const std::vector&lt; double &gt; &amp; open_spiel::matrix_game::MatrixGame::RowUtilities</definition>
+        <argsstring>() const</argsstring>
+        <name>RowUtilities</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::RowUtilities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="123" column="21" bodyfile="open_spiel/matrix_game.h" bodystart="123" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4242ca2fd213843cc8ecf29b6c751fb5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; double &gt; &amp;</type>
+        <definition>const std::vector&lt; double &gt; &amp; open_spiel::matrix_game::MatrixGame::ColUtilities</definition>
+        <argsstring>() const</argsstring>
+        <name>ColUtilities</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::ColUtilities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="124" column="21" bodyfile="open_spiel/matrix_game.h" bodystart="124" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6399f34abd19d65c91562ca1163e57fd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; double &gt; &amp;</type>
+        <definition>const std::vector&lt; double &gt; &amp; open_spiel::matrix_game::MatrixGame::PlayerUtilities</definition>
+        <argsstring>(const Player player) const</argsstring>
+        <name>PlayerUtilities</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::PlayerUtilities</qualifiedname>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="125" column="21" bodyfile="open_spiel/matrix_game.h" bodystart="125" bodyend="129"/>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a248bd8d010f9aebb9e16cdd9e5c5a242" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; open_spiel::matrix_game::MatrixGame::RowActionName</definition>
+        <argsstring>(int row) const</argsstring>
+        <name>RowActionName</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::RowActionName</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="130" column="21" bodyfile="open_spiel/matrix_game.h" bodystart="130" bodyend="132"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" compoundref="matrix__game_8h" startline="191" endline="198">open_spiel::matrix_game::MatrixState::ActionToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5fe875f0c31f64d520e73beba307172f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; open_spiel::matrix_game::MatrixGame::ColActionName</definition>
+        <argsstring>(int col) const</argsstring>
+        <name>ColActionName</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::ColActionName</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="133" column="21" bodyfile="open_spiel/matrix_game.h" bodystart="133" bodyend="135"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" compoundref="matrix__game_8h" startline="191" endline="198">open_spiel::matrix_game::MatrixState::ActionToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1afa0c5530843605ce3a7407135986e902" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; open_spiel::matrix_game::MatrixGame::GetUtilities</definition>
+        <argsstring>(const std::vector&lt; Action &gt; &amp;joint_action) const override</argsstring>
+        <name>GetUtilities</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::GetUtilities</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_normal_form_game_1a636e3d1f642c56ed360e2ebb69853849">GetUtilities</reimplements>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>joint_action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="137" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="137" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a088f57627ab2ef1cc5f1ccdcebf49947" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double open_spiel::matrix_game::MatrixGame::GetUtility</definition>
+        <argsstring>(Player player, const std::vector&lt; Action &gt; &amp;joint_action) const override</argsstring>
+        <name>GetUtility</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::GetUtility</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_normal_form_game_1a773326bfdbe035e85d9075f84eeb3f66">GetUtility</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>joint_action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="143" column="10" bodyfile="open_spiel/matrix_game.h" bodystart="143" bodyend="146"/>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a35723b6742e79d6728a2ebb614aa15f6" compoundref="matrix__game_8h" startline="118" endline="122">PlayerUtility</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e7d72bf6f1a12f87ea448e6f83a82e4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::matrix_game::MatrixGame::operator==</definition>
+        <argsstring>(const Game &amp;other_game) const override</argsstring>
+        <name>operator==</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::operator==</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c">operator==</reimplements>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>other_game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="148" column="8" bodyfile="open_spiel/matrix_game.h" bodystart="148" bodyend="154"/>
+        <references refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" compoundref="spiel__utils_8h" startline="397" endline="408">open_spiel::down_cast</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a82911b10d26c92f982fb61f22aeb6db2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::matrix_game::MatrixGame::ApproxEqual</definition>
+        <argsstring>(const Game &amp;other_game, double tolerance) const</argsstring>
+        <name>ApproxEqual</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::ApproxEqual</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>other_game</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tolerance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="156" column="8" bodyfile="open_spiel/matrix_game.h" bodystart="156" bodyend="162"/>
+        <references refid="namespaceopen__spiel_1ae00c0c4427507797bc362d31541ff684" compoundref="spiel__utils_8h" startline="200" endline="211">open_spiel::AllNear</references>
+        <references refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" compoundref="spiel__utils_8h" startline="397" endline="408">open_spiel::down_cast</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5804a01a16062912ac862fed2c0bfb24" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::matrix_game::MatrixGame::Index</definition>
+        <argsstring>(int row, int col) const</argsstring>
+        <name>Index</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixGame::Index</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="165" column="7" bodyfile="open_spiel/matrix_game.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::NormalFormGame</label>
+        <link refid="classopen__spiel_1_1_normal_form_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::SimMoveGame</label>
+        <link refid="classopen__spiel_1_1_sim_move_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::matrix_game::MatrixGame</label>
+        <link refid="classopen__spiel_1_1matrix__game_1_1_matrix_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#game_type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>open_spiel::GameType</label>
+        <link refid="structopen__spiel_1_1_game_type"/>
+      </node>
+      <node id="2">
+        <label>open_spiel::NormalFormGame</label>
+        <link refid="classopen__spiel_1_1_normal_form_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::SimMoveGame</label>
+        <link refid="classopen__spiel_1_1_sim_move_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::matrix_game::MatrixGame</label>
+        <link refid="classopen__spiel_1_1matrix__game_1_1_matrix_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/matrix_game.h" line="43" column="1" bodyfile="open_spiel/matrix_game.h" bodystart="43" bodyend="170"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_game_1acd86016f8990a05ac6c68b7bb8ce3711" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ABSL_GUARDED_BY</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a42356a06a9bc76e7c88767bdae84afdd" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a82911b10d26c92f982fb61f22aeb6db2" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ApproxEqual</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a038692701350c13e768dabcfc87da973" prot="private" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>col_action_names_</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a095b984c0bc4cbcced54d1ded3e7f1e4" prot="private" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>col_utilities_</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5fe875f0c31f64d520e73beba307172f" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ColActionName</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4242ca2fd213843cc8ecf29b6c751fb5" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ColUtilities</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aee28d3a9f554a4997ea9bf212a189de9" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ColUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>DeserializeState</name></member>
+      <member refid="classopen__spiel_1_1_game_1a02f9a81ec83227c45b70c6daf6ac09c7" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1ae1b45088cc527add6874e85d4c3a6cc3" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>game_parameters_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>game_type_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>GetParameters</name></member>
+      <member refid="classopen__spiel_1_1_game_1ad8e566fa7343c252e2895a46ef6cdd31" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>GetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1afa0c5530843605ce3a7407135986e902" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>GetUtilities</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a088f57627ab2ef1cc5f1ccdcebf49947" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>GetUtility</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5804a01a16062912ac862fed2c0bfb24" prot="private" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>Index</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41c14e07fcb4939e8b283b1b8c623b23" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>InformationStateTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a058411943ab631a5c1961869ba578816" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>InformationStateTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4e260b8faf1879f3bbe8d0bcab31a437" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>InformationStateTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MakeBuiltInObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a223d65cc15f5961951e2c685a77879d9" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MakeObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a28537d9c2a657634e611724e12d2f32f" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MakeRegisteredObserver</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1ad97a646279f0dd8348e80dd08c2f4e68" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MatrixGame</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1acf8c3d52e9b650c5a56b89c57dd6e0b4" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MatrixGame</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a7467e615bc2d6b4f06b4b87d947e685a" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MaxChanceNodesInHistory</name></member>
+      <member refid="classopen__spiel_1_1_game_1a23c04050a938cc94e9fa68e285131ac6" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MaxChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a41ad19711e6dad5b43d5dfe2f8746308" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MaxGameLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MaxHistoryLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4b0c5bbf1361734cc6740fc6be893fda" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MaxMoveNumber</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6da3de0d6b22ddd3a81d4e616c9d1997" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MaxUtility</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a7245fbe7efa3a6fa10aeefbeea3cfe25" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>MinUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>mutex_defaulted_parameters_</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a797de24e8a087cb7192da8008f769fac" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa76d3480113257e022575019af601df1" prot="public" virt="virtual" ambiguityscope="open_spiel::NormalFormGame::"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ac46c5cfeeb05478188b382fa4d182efd" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NewInitialStateForPopulation</name></member>
+      <member refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NewInitialStates</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1ae73048319c9bcd1309e475795af57aac" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NormalFormGame</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NumCols</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5245fe0eba2197fd42f1202f1ff6b846" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1af3118dae2700f2bdaf437d5b9999ed88" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>NumRows</name></member>
+      <member refid="classopen__spiel_1_1_game_1a3ad925d3568e428a6c3e4d601ac0cea0" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ObservationTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a407b41a9bf6cb9c45957247bf27bafd8" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ObservationTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a19ffc4fce853df1f6314fc341472e5c4" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ObservationTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a24c7b0caccaf0fbaa1e3b5ee313a3720" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>operator=</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e7d72bf6f1a12f87ea448e6f83a82e4" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ParameterValue</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6399f34abd19d65c91562ca1163e57fd" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>PlayerUtilities</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a35723b6742e79d6728a2ebb614aa15f6" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>PlayerUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41ff35e433f78eabf4ff306257522fbd" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>PolicyTensorShape</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a97697e0558f772eb87358044a769b91d" prot="private" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>row_action_names_</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1af1447826cd2230cf3bd27730d1a45a4f" prot="private" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>row_utilities_</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a248bd8d010f9aebb9e16cdd9e5c5a242" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>RowActionName</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aed3a847f28afc7561dfae5ccbf3cc69e" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>RowUtilities</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a34096a7e7b15983b1b7964413e7dbc25" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>RowUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a04741ccd0d5da41a454501dd2953af69" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>SetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_game_1a20ed26ce994d812630a9e8478c7d0f08" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>SimMoveGame</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e971623256866471a99758a25bf9729" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>UtilitySum</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1854931cb033de9f16657172659943d3" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixGame</scope><name>~Game</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

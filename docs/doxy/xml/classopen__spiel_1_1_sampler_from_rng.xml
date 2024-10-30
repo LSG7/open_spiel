@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_sampler_from_rng" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::SamplerFromRng</compoundname>
+    <includes refid="spiel__utils_8h" local="no">spiel_utils.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_sampler_from_rng_1ab39d37c9d6e483f6beed5879f5249faa" prot="private" static="no" mutable="no">
+        <type>std::function&lt; double()&gt;</type>
+        <definition>std::function&lt;double()&gt; open_spiel::SamplerFromRng::rng_</definition>
+        <argsstring></argsstring>
+        <name>rng_</name>
+        <qualifiedname>open_spiel::SamplerFromRng::rng_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="437" column="17" bodyfile="open_spiel/spiel_utils.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_sampler_from_rng_1acea8254b33e8b7d5f5c5a8d91fbb5060" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::SamplerFromRng::SamplerFromRng</definition>
+        <argsstring>(std::function&lt; double()&gt; rng)</argsstring>
+        <name>SamplerFromRng</name>
+        <qualifiedname>open_spiel::SamplerFromRng::SamplerFromRng</qualifiedname>
+        <param>
+          <type>std::function&lt; double()&gt;</type>
+          <declname>rng</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="432" column="12" bodyfile="open_spiel/spiel_utils.h" bodystart="432" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sampler_from_rng_1a6f5569c54d6bd6f94970ea5cac49ab92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::SamplerFromRng::operator()</definition>
+        <argsstring>(absl::Span&lt; const double &gt; probs)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>open_spiel::SamplerFromRng::operator()</qualifiedname>
+        <param>
+          <type>absl::Span&lt; const double &gt;</type>
+          <declname>probs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="434" column="7" bodyfile="open_spiel/spiel_utils.cc" bodystart="183" bodyend="199"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::SamplerFromRng</label>
+        <link refid="classopen__spiel_1_1_sampler_from_rng"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel_utils.h" line="430" column="1" bodyfile="open_spiel/spiel_utils.h" bodystart="430" bodyend="438"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_sampler_from_rng_1a6f5569c54d6bd6f94970ea5cac49ab92" prot="public" virt="non-virtual"><scope>open_spiel::SamplerFromRng</scope><name>operator()</name></member>
+      <member refid="classopen__spiel_1_1_sampler_from_rng_1ab39d37c9d6e483f6beed5879f5249faa" prot="private" virt="non-virtual"><scope>open_spiel::SamplerFromRng</scope><name>rng_</name></member>
+      <member refid="classopen__spiel_1_1_sampler_from_rng_1acea8254b33e8b7d5f5c5a8d91fbb5060" prot="public" virt="non-virtual"><scope>open_spiel::SamplerFromRng</scope><name>SamplerFromRng</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

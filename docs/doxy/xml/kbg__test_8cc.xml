@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="kbg__test_8cc" kind="file" language="C++">
+    <compoundname>kbg_test.cc</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="spiel_8h" local="yes">open_spiel/spiel.h</includes>
+    <includes refid="spiel__utils_8h" local="yes">open_spiel/spiel_utils.h</includes>
+    <includes local="yes">open_spiel/tests/basic_tests.h</includes>
+    <includes refid="ki__bo__gung_8h" local="yes">open_spiel/games/SG/ki_bo_gung.h</includes>
+    <incdepgraph>
+      <node id="19">
+        <label>open_spiel/game_parameters.h</label>
+        <link refid="game__parameters_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>baseT.h</label>
+        <link refid="base_t_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>baseType.h</label>
+        <link refid="base_type_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel/games/SG/kbg_test.cc</label>
+        <link refid="kbg__test_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>open_spiel/games/SG/ki_bo_gung.h</label>
+        <link refid="ki__bo__gung_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>socket_server.h</label>
+        <link refid="socket__server_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>user_specified_type.h</label>
+        <link refid="user__specified__type_8h"/>
+      </node>
+      <node id="31">
+        <label>open_spiel/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel/spiel.h</label>
+        <link refid="spiel_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>open_spiel/spiel_globals.h</label>
+        <link refid="spiel__globals_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>open_spiel/spiel_utils.h</label>
+        <link refid="spiel__utils_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>algorithm</label>
+      </node>
+      <node id="22">
+        <label>array</label>
+      </node>
+      <node id="23">
+        <label>cmath</label>
+      </node>
+      <node id="24">
+        <label>cstddef</label>
+      </node>
+      <node id="25">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="7">
+        <label>numeric</label>
+      </node>
+      <node id="32">
+        <label>open_spiel/abseil-cpp/absl/algorithm/container.h</label>
+      </node>
+      <node id="33">
+        <label>open_spiel/abseil-cpp/absl/base/attributes.h</label>
+      </node>
+      <node id="34">
+        <label>open_spiel/abseil-cpp/absl/container/flat_hash_set.h</label>
+      </node>
+      <node id="35">
+        <label>open_spiel/abseil-cpp/absl/container/inlined_vector.h</label>
+      </node>
+      <node id="14">
+        <label>open_spiel/abseil-cpp/absl/random/bit_gen_ref.h</label>
+      </node>
+      <node id="27">
+        <label>open_spiel/abseil-cpp/absl/random/uniform_real_distribution.h</label>
+      </node>
+      <node id="28">
+        <label>open_spiel/abseil-cpp/absl/strings/str_cat.h</label>
+      </node>
+      <node id="15">
+        <label>open_spiel/abseil-cpp/absl/strings/str_join.h</label>
+      </node>
+      <node id="36">
+        <label>open_spiel/abseil-cpp/absl/strings/string_view.h</label>
+      </node>
+      <node id="16">
+        <label>open_spiel/abseil-cpp/absl/synchronization/mutex.h</label>
+      </node>
+      <node id="29">
+        <label>open_spiel/abseil-cpp/absl/time/clock.h</label>
+      </node>
+      <node id="30">
+        <label>open_spiel/abseil-cpp/absl/time/time.h</label>
+      </node>
+      <node id="17">
+        <label>open_spiel/abseil-cpp/absl/types/optional.h</label>
+      </node>
+      <node id="18">
+        <label>open_spiel/abseil-cpp/absl/types/span.h</label>
+      </node>
+      <node id="38">
+        <label>open_spiel/tests/basic_tests.h</label>
+      </node>
+      <node id="8">
+        <label>random</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="44">
+        <label>thread</label>
+      </node>
+      <node id="26">
+        <label>type_traits</label>
+      </node>
+      <node id="11">
+        <label>unordered_map</label>
+      </node>
+      <node id="12">
+        <label>utility</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/kbg_test.cc" line="10" column="5" bodyfile="open_spiel/games/SG/kbg_test.cc" bodystart="10" bodyend="64"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2" compoundref="base_t_8cc" startline="121" endline="125">open_spiel::baseT::baseTState::CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4aa7a9803410fc0cfb1cfc3e1d21d984" compoundref="base_t_8cc" startline="127" endline="130">open_spiel::baseT::baseTState::CurrentUAS</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2d690c8827f64f5bc07f148dc870c9e2" compoundref="base_t_8cc" startline="132" endline="135">open_spiel::baseT::baseTState::CurrentUniqueUnitId</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a84d182f9b2362a5b9be63f181f1193f4" compoundref="base_t_8cc" startline="137" endline="140">open_spiel::baseT::baseTState::CurrentUnitId</references>
+        <references refid="namespaceopen__spiel_1afd4ac299a038385def0ea56521067137" compoundref="spiel_8cc" startline="227" endline="229">open_spiel::LoadGame</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a26e6f5018d4f9c75a7bb8679a8623a87" compoundref="base_t_8cc" startline="460" endline="489">open_spiel::baseT::baseTState::ObservationString</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" compoundref="base_t_8cc" startline="254" endline="269">open_spiel::baseT::baseTState::set_next_unit_to_action</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1af0e8bc2cc0b37f5e9b477fe23ee72f3b" compoundref="base_t_8cc" startline="178" endline="194">open_spiel::baseT::baseTState::SetNextPAS</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6df22a3f31c04d507b854c9a8aa644d7" compoundref="base_t_8cc" startline="146" endline="157">open_spiel::baseT::baseTState::SetNextUAS</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210a12b698b1251998d78d50d80a4cc955c2" compoundref="base_type_8h" startline="15">open_spiel::baseT::UA_Act_0</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spiel_8h" kindref="compound">open_spiel/spiel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spiel__utils_8h" kindref="compound">open_spiel/spiel_utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/tests/basic_tests.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ki__bo__gung_8h" kindref="compound">open_spiel/games/SG/ki_bo_gung.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel_1_1base_t" kindref="compound">open_spiel::baseT</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Loading<sp/>game..\n&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;const<sp/>open_spiel::Game&gt;<sp/>game<sp/>=<sp/><ref refid="namespaceopen__spiel_1afd4ac299a038385def0ea56521067137" kindref="member">open_spiel::LoadGame</ref>(</highlight><highlight class="stringliteral">&quot;kbg&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!game)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;problem<sp/>with<sp/>loading<sp/>game,<sp/>exiting...&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Starting<sp/>new<sp/>state...&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;open_spiel::State&gt;<sp/>state<sp/>=<sp/>game-&gt;NewInitialState();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1kbg_1_1kbg_state" kindref="compound">open_spiel::kbg::kbgState</ref>*<sp/>s<sp/>=<sp/>(<ref refid="classopen__spiel_1_1kbg_1_1kbg_state" kindref="compound">open_spiel::kbg::kbgState</ref>*)<sp/>state.release();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" kindref="member">set_next_unit_to_action</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>obs<sp/>-<sp/>think<sp/>-<sp/>actino<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nPlayer:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::to_string(s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2" kindref="member">CurrentPlayer</ref>());</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>UnitId:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::to_string(s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a84d182f9b2362a5b9be63f181f1193f4" kindref="member">CurrentUnitId</ref>());</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>UniqueUnitId:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::to_string(s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2d690c8827f64f5bc07f148dc870c9e2" kindref="member">CurrentUniqueUnitId</ref>());</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>UAState:&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::to_string(s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4aa7a9803410fc0cfb1cfc3e1d21d984" kindref="member">CurrentUAS</ref>())<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PA_Obs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Player<sp/>observing&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>p_observation<sp/>=<sp/>s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a26e6f5018d4f9c75a7bb8679a8623a87" kindref="member">ObservationString</ref>(s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2" kindref="member">CurrentPlayer</ref>());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>p_observation;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>:<sp/>make<sp/>obtensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af0e8bc2cc0b37f5e9b477fe23ee72f3b" kindref="member">SetNextPAS</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PA_Think</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Player<sp/>thinking&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>:<sp/>inference<sp/>network</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af0e8bc2cc0b37f5e9b477fe23ee72f3b" kindref="member">SetNextPAS</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PA_Action</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Player<sp/>acting&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>:<sp/>action_apply(p,a);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1af0e8bc2cc0b37f5e9b477fe23ee72f3b" kindref="member">SetNextPAS</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6df22a3f31c04d507b854c9a8aa644d7" kindref="member">SetNextUAS</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4aa7a9803410fc0cfb1cfc3e1d21d984" kindref="member">CurrentUAS</ref>()<sp/>==<sp/><ref refid="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210a12b698b1251998d78d50d80a4cc955c2" kindref="member">UA_Act_0</ref>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>플레이어<sp/>차례<sp/>끝남<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>s-&gt;<ref refid="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" kindref="member">set_next_unit_to_action</ref>();<sp/></highlight><highlight class="comment">//<sp/>플레이한<sp/>다음<sp/>유닛<sp/>뽑아냄</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Unit<sp/>changed&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;move<sp/>to<sp/>Next<sp/>State.<sp/>input<sp/>any<sp/>char<sp/>to<sp/>next<sp/>:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>input;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/>input;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/games/SG/kbg_test.cc"/>
+  </compounddef>
+</doxygen>

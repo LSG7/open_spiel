@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::algorithms::rnad::rnad::EntropySchedule</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule_1ad0bf1b5ba3ea594d87fcdf3da8c0be91" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.EntropySchedule::schedule</definition>
+        <argsstring></argsstring>
+        <name>schedule</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.EntropySchedule.schedule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="77" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule_1ad1a6f7025f52b2fb616e857aec9f63a1" compoundref="rnad_8py" startline="79" endline="136">open_spiel.python.algorithms.rnad.rnad.EntropySchedule.__call__</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule_1a7eb2f4696251d1d690f96a9979d6524d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.algorithms.rnad.rnad.EntropySchedule.__init__</definition>
+        <argsstring>(self, *, Sequence[int] sizes, Sequence[int] repeats)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.EntropySchedule.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>*</type>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>sizes</declname>
+          <array>[int]</array>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>repeats</declname>
+          <array>[int]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Constructs a schedule of entropy iterations.
+
+Args:
+  sizes: the list of iteration sizes.
+  repeats: the list, parallel to sizes, with the number of times for each
+    size from `sizes` to repeat.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="49" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="49" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule_1ad1a6f7025f52b2fb616e857aec9f63a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Tuple[float, bool]</type>
+        <definition> Tuple[float, bool] open_spiel.python.algorithms.rnad.rnad.EntropySchedule.__call__</definition>
+        <argsstring>(self, int learner_step)</argsstring>
+        <name>__call__</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.EntropySchedule.__call__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>learner_step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Entropy scheduling parameters for a given `learner_step`.
+
+Args:
+  learner_step: The current learning step.
+
+Returns:
+  alpha: The mixing weight (from [0, 1]) of the previous policy with
+    the one before for computing the intrinsic reward.
+  update_target_net: A boolean indicator for updating the target network
+    with the current network.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="79" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="79" bodyend="136"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule_1ad0bf1b5ba3ea594d87fcdf3da8c0be91" compoundref="rnad_8py" startline="77">open_spiel.python.algorithms.rnad.rnad.EntropySchedule.schedule</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>An increasing list of steps where the regularisation network is updated.
+
+Example
+  EntropySchedule([3, 5, 10], [2, 4, 1])
+  =&gt;   [0, 3, 6, 11, 16, 21, 26, 36]
+        | 3 x2 |      5 x4     | 10 x1
+</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.algorithms.rnad.rnad.EntropySchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/algorithms/rnad/rnad.py" line="40" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="40" bodyend="136"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule_1ad1a6f7025f52b2fb616e857aec9f63a1" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::EntropySchedule</scope><name>__call__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule_1a7eb2f4696251d1d690f96a9979d6524d" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::EntropySchedule</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule_1ad0bf1b5ba3ea594d87fcdf3da8c0be91" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::EntropySchedule</scope><name>schedule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

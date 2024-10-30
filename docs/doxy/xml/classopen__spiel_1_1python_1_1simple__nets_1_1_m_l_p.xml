@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::simple_nets::MLP</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tf.Module</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.MLP::_layers</definition>
+        <argsstring></argsstring>
+        <name>_layers</name>
+        <qualifiedname>open_spiel.python.simple_nets.MLP._layers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="102" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="102" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1af30f8eced23027aa012dca28492b3e5e" compoundref="simple__nets_8py" startline="116" endline="121">open_spiel.python.simple_nets.MLP.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1aa50d5c388f9ce1b16135f36b135ab897" compoundref="simple__nets_8py" startline="137" endline="141">open_spiel.python.simple_nets.MLPTorso.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1ac4ad23b25a0794dd75ae7594aac90c19" compoundref="simple__nets_8py" startline="76" endline="81">open_spiel.python.simple_nets.Sequential.__call__</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a247bc4f927cd4bdd902cec7bc350e7f5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.MLP::name_scope</definition>
+        <argsstring></argsstring>
+        <name>name_scope</name>
+        <qualifiedname>open_spiel.python.simple_nets.MLP.name_scope</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="103" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a7a2dc164fcfcbf2e4f7110874d8b76b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.MLP.__init__</definition>
+        <argsstring>(self, input_size, hidden_sizes, output_size, activate_final=False, name=None)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.simple_nets.MLP.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>input_size</type>
+          <defname>input_size</defname>
+        </param>
+        <param>
+          <type>hidden_sizes</type>
+          <defname>hidden_sizes</defname>
+        </param>
+        <param>
+          <type>output_size</type>
+          <defname>output_size</defname>
+        </param>
+        <param>
+          <type>activate_final</type>
+          <defname>activate_final</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create the MLP.
+
+Args:
+  input_size: (int) number of inputs
+  hidden_sizes: (list) sizes (number of units) of each hidden layer
+  output_size: (int) number of outputs
+  activate_final: (bool) should final layer should include a ReLU
+  name: (string): the name to give to this network
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="85" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="90" bodyend="114"/>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a7a2dc164fcfcbf2e4f7110874d8b76b2" compoundref="simple__nets_8py" startline="90" endline="114">open_spiel.python.simple_nets.MLP.__init__</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a7a2dc164fcfcbf2e4f7110874d8b76b2" compoundref="simple__nets_8py" startline="90" endline="114">open_spiel.python.simple_nets.MLP.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1af30f8eced23027aa012dca28492b3e5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.MLP.__call__</definition>
+        <argsstring>(self, x)</argsstring>
+        <name>__call__</name>
+        <qualifiedname>open_spiel.python.simple_nets.MLP.__call__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="116" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="116" bodyend="121"/>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" compoundref="simple__nets_8py" startline="102">open_spiel.python.simple_nets.MLP._layers</references>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a99dc2f7dffee1883ddfe2f92a557688c" compoundref="simple__nets_8py" startline="130">open_spiel.python.simple_nets.MLPTorso._layers</references>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1a6c12e3092a8c12a716755042995129e4" compoundref="simple__nets_8py" startline="74">open_spiel.python.simple_nets.Sequential._layers</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A simple dense network built from linear layers above.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel.python.simple_nets.MLP</label>
+        <link refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tf.Module</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.simple_nets.MLP</label>
+        <link refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tf.Module</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/simple_nets.py" line="82" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="82" bodyend="121"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1af30f8eced23027aa012dca28492b3e5e" prot="public" virt="non-virtual"><scope>open_spiel::python::simple_nets::MLP</scope><name>__call__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a7a2dc164fcfcbf2e4f7110874d8b76b2" prot="public" virt="non-virtual"><scope>open_spiel::python::simple_nets::MLP</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" prot="protected" virt="non-virtual"><scope>open_spiel::python::simple_nets::MLP</scope><name>_layers</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a247bc4f927cd4bdd902cec7bc350e7f5" prot="public" virt="non-virtual"><scope>open_spiel::python::simple_nets::MLP</scope><name>name_scope</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

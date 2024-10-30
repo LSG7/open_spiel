@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="game__parameters_8h" kind="file" language="C++">
+    <compoundname>game_parameters.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">map</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">utility</includes>
+    <includes local="yes">open_spiel/abseil-cpp/absl/types/optional.h</includes>
+    <includes refid="spiel__utils_8h" local="yes">open_spiel/spiel_utils.h</includes>
+    <includedby refid="game__parameters_8cc" local="yes">open_spiel/game_parameters.cc</includedby>
+    <includedby refid="observer_8h" local="yes">open_spiel/observer.h</includedby>
+    <includedby refid="spiel_8cc" local="yes">open_spiel/spiel.cc</includedby>
+    <includedby refid="spiel_8h" local="yes">open_spiel/spiel.h</includedby>
+    <includedby refid="spiel__bots_8cc" local="yes">open_spiel/spiel_bots.cc</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>open_spiel/game_parameters.h</label>
+        <link refid="game__parameters_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>open_spiel/spiel_utils.h</label>
+        <link refid="spiel__utils_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>array</label>
+      </node>
+      <node id="11">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>cstddef</label>
+      </node>
+      <node id="13">
+        <label>cstdint</label>
+      </node>
+      <node id="14">
+        <label>functional</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="19">
+        <label>open_spiel/abseil-cpp/absl/random/uniform_real_distribution.h</label>
+      </node>
+      <node id="20">
+        <label>open_spiel/abseil-cpp/absl/strings/str_cat.h</label>
+      </node>
+      <node id="21">
+        <label>open_spiel/abseil-cpp/absl/time/clock.h</label>
+      </node>
+      <node id="22">
+        <label>open_spiel/abseil-cpp/absl/time/time.h</label>
+      </node>
+      <node id="7">
+        <label>open_spiel/abseil-cpp/absl/types/optional.h</label>
+      </node>
+      <node id="23">
+        <label>open_spiel/abseil-cpp/absl/types/span.h</label>
+      </node>
+      <node id="15">
+        <label>random</label>
+      </node>
+      <node id="16">
+        <label>sstream</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="17">
+        <label>type_traits</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+      <node id="18">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>open_spiel/action_view.cc</label>
+        <link refid="action__view_8cc"/>
+      </node>
+      <node id="7">
+        <label>open_spiel/action_view.h</label>
+        <link refid="action__view_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel/game_parameters.cc</label>
+        <link refid="game__parameters_8cc"/>
+      </node>
+      <node id="1">
+        <label>open_spiel/game_parameters.h</label>
+        <link refid="game__parameters_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>open_spiel/games/SG/baseT.cc</label>
+        <link refid="base_t_8cc"/>
+      </node>
+      <node id="9">
+        <label>open_spiel/games/SG/baseT.h</label>
+        <link refid="base_t_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>open_spiel/games/SG/baseT_utils.cc</label>
+        <link refid="base_t__utils_8cc"/>
+      </node>
+      <node id="15">
+        <label>open_spiel/games/SG/baseType.h</label>
+        <link refid="base_type_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>open_spiel/games/SG/kbg_test.cc</label>
+        <link refid="kbg__test_8cc"/>
+      </node>
+      <node id="14">
+        <label>open_spiel/games/SG/ki_bo_gung.cc</label>
+        <link refid="ki__bo__gung_8cc"/>
+      </node>
+      <node id="12">
+        <label>open_spiel/games/SG/ki_bo_gung.h</label>
+        <link refid="ki__bo__gung_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>open_spiel/matrix_game.cc</label>
+        <link refid="matrix__game_8cc"/>
+      </node>
+      <node id="17">
+        <label>open_spiel/matrix_game.h</label>
+        <link refid="matrix__game_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>open_spiel/normal_form_game.h</label>
+        <link refid="normal__form__game_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel/observer.cc</label>
+        <link refid="observer_8cc"/>
+      </node>
+      <node id="3">
+        <label>open_spiel/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>open_spiel/policy.cc</label>
+        <link refid="policy_8cc"/>
+      </node>
+      <node id="22">
+        <label>open_spiel/policy.h</label>
+        <link refid="policy_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>open_spiel/simultaneous_move_game.cc</label>
+        <link refid="simultaneous__move__game_8cc"/>
+      </node>
+      <node id="25">
+        <label>open_spiel/simultaneous_move_game.h</label>
+        <link refid="simultaneous__move__game_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>open_spiel/spiel.cc</label>
+        <link refid="spiel_8cc"/>
+      </node>
+      <node id="5">
+        <label>open_spiel/spiel.h</label>
+        <link refid="spiel_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>open_spiel/spiel_bots.cc</label>
+        <link refid="spiel__bots_8cc"/>
+      </node>
+      <node id="24">
+        <label>open_spiel/spiel_bots.h</label>
+        <link refid="spiel__bots_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>open_spiel/tensor_game.cc</label>
+        <link refid="tensor__game_8cc"/>
+      </node>
+      <node id="18">
+        <label>open_spiel/tensor_game.h</label>
+        <link refid="tensor__game_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classopen__spiel_1_1_game_parameter" prot="public">open_spiel::GameParameter</innerclass>
+    <innernamespace refid="namespaceopen__spiel">open_spiel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2021<sp/>DeepMind<sp/>Technologies<sp/>Limited</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OPEN_SPIEL_GAME_PARAMETERS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPEN_SPIEL_GAME_PARAMETERS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/abseil-cpp/absl/types/optional.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spiel__utils_8h" kindref="compound">open_spiel/spiel_utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel" kindref="compound">open_spiel</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>GameParameter<sp/>can<sp/>be<sp/>used<sp/>in<sp/>3<sp/>contexts:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>when<sp/>defining<sp/>the<sp/>parameters<sp/>for<sp/>a<sp/>game,<sp/>with<sp/>their<sp/>optional<sp/>default<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>and<sp/>whether<sp/>they<sp/>are<sp/>mandatory<sp/>or<sp/>not.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>when<sp/>specifying<sp/>in<sp/>Python<sp/>a<sp/>parameter<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>when<sp/>passing<sp/>a<sp/>parametrization<sp/>of<sp/>additional<sp/>Observer<sp/>fields.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel_1_1python_1a5eb3950566f2574e924b2ab572a818dd" kindref="member">GameParameter</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref><sp/>=<sp/>std::map&lt;std::string,<sp/>GameParameter&gt;;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">std::string<sp/><ref refid="namespaceopen__spiel_1aa0832688fe92be988164cf8e87089ada" kindref="member">GameParametersToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref>&amp;<sp/>game_params);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="classopen__spiel_1_1_game_parameter" kindref="compound">GameParameter</ref><sp/><ref refid="namespaceopen__spiel_1a035f482ab5b89b96645f2a9496430f61" kindref="member">GameParameterFromString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref><sp/><ref refid="namespaceopen__spiel_1ab52b8891e58c4d116690500440ca8f4c" kindref="member">GameParametersFromString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>game_string);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="namespaceopen__spiel_1aede0e21cbb3bf6ae07192c951536b721" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespaceopen__spiel_1aede0e21cbb3bf6ae07192c951536b721" kindref="member">kDefaultNameDelimiter</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;=&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43" refid="namespaceopen__spiel_1a9add0dfc4c260595ccd7648c126e21ac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespaceopen__spiel_1a9add0dfc4c260595ccd7648c126e21ac" kindref="member">kDefaultParameterDelimiter</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;|||&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44" refid="namespaceopen__spiel_1a46834d0f5d6fe1c930944e946d8a790e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="namespaceopen__spiel_1a46834d0f5d6fe1c930944e946d8a790e" kindref="member">kDefaultInternalDelimiter</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;***&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classopen__spiel_1_1_game_parameter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1_game_parameter" kindref="compound">GameParameter</ref><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48" refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref><sp/>{<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f" kindref="member">kUnset</ref><sp/>=<sp/>-1,<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0" kindref="member">kInt</ref>,<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28" kindref="member">kDouble</ref>,<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2" kindref="member">kString</ref>,<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc" kindref="member">kBool</ref>,<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca" kindref="member">kGame</ref><sp/>};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classopen__spiel_1_1_game_parameter_1a5248b0d1cbc4e09ba9f2d861d3925a58" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a5248b0d1cbc4e09ba9f2d861d3925a58" kindref="member">GameParameter</ref>(<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a6f0c523fb9eff239d9a82dbc227b907d" kindref="member">type</ref><sp/>=<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f" kindref="member">Type::kUnset</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_mandatory_(<ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref>),<sp/>type_(<ref refid="classopen__spiel_1_1_game_parameter_1a6f0c523fb9eff239d9a82dbc227b907d" kindref="member">type</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classopen__spiel_1_1_game_parameter_1ad2948a238f1437429ffcc766ce2b819a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1ad2948a238f1437429ffcc766ce2b819a" kindref="member">GameParameter</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_mandatory_(<ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref>),<sp/>int_value_(<ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>),<sp/>type_(<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref>::<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0" kindref="member">kInt</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classopen__spiel_1_1_game_parameter_1ac56aa245c1055e62370b17cd322ed2a5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1ac56aa245c1055e62370b17cd322ed2a5" kindref="member">GameParameter</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_mandatory_(<ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref>),</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double_value_(<ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type_(<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref>::<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28" kindref="member">kDouble</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classopen__spiel_1_1_game_parameter_1a5e69b201fcaee08c7425a32f13c3bdf0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a5e69b201fcaee08c7425a32f13c3bdf0" kindref="member">GameParameter</ref>(std::string<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_mandatory_(<ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref>),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string_value_(<ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type_(<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref>::<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2" kindref="member">kString</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Allows<sp/>construction<sp/>of<sp/>a<sp/>`GameParameter`<sp/>from<sp/>a<sp/>string<sp/>literal.<sp/>This<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>not<sp/>subsumed<sp/>by<sp/>the<sp/>previous<sp/>method,<sp/>even<sp/>if<sp/>value<sp/>can<sp/>be<sp/>converted<sp/>to<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>std::string,<sp/>because<sp/>the<sp/>[C++<sp/>standard][iso]<sp/>requires<sp/>that<sp/>the<sp/>*standard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>conversion<sp/>sequence*<sp/>(see<sp/>§13.3.3.1.1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>`(const<sp/>char[])<sp/>-&gt;<sp/>const<sp/>char*<sp/>-&gt;<sp/>bool`<sp/>take<sp/>precedence<sp/>over<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>*user-defined<sp/>conversion<sp/>sequence*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>`(const<sp/>char[])<sp/>-&gt;<sp/>const<sp/>char*<sp/>-&gt;<sp/>std::string`<sp/>defined<sp/>in<sp/>the<sp/>standard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>[iso]:<sp/>http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2011/n3242.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classopen__spiel_1_1_game_parameter_1ae7081167a923e2da62e90ac878f5de6a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1ae7081167a923e2da62e90ac878f5de6a" kindref="member">GameParameter</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_mandatory_(<ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref>),</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string_value_(<ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type_(<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref>::<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2" kindref="member">kString</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classopen__spiel_1_1_game_parameter_1af22f0bdd56982171b922b37789caa0ce" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1af22f0bdd56982171b922b37789caa0ce" kindref="member">GameParameter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_mandatory_(<ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref>),<sp/>bool_value_(<ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>),<sp/>type_(<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref>::<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc" kindref="member">kBool</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classopen__spiel_1_1_game_parameter_1a8bf20b25598bdc0d9946ac3d0a86ae43" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a8bf20b25598bdc0d9946ac3d0a86ae43" kindref="member">GameParameter</ref>(<ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>is_mandatory_(<ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref>),</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>game_value_(std::move(<ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>)),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type_(<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref>::<ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca" kindref="member">kGame</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classopen__spiel_1_1_game_parameter_1a29f0d36362f3f07c67a91dc6a1ebcca6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a29f0d36362f3f07c67a91dc6a1ebcca6" kindref="member">has_int_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0" kindref="member">Type::kInt</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="90" refid="classopen__spiel_1_1_game_parameter_1afe157eb4411ecf0b00bc214f32059643" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1afe157eb4411ecf0b00bc214f32059643" kindref="member">has_double_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28" kindref="member">Type::kDouble</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="91" refid="classopen__spiel_1_1_game_parameter_1a68fa91fd545a38c7b586473e1d1851fb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a68fa91fd545a38c7b586473e1d1851fb" kindref="member">has_string_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2" kindref="member">Type::kString</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="92" refid="classopen__spiel_1_1_game_parameter_1a23c27d6f48a44bc2fa161354e0b54cdb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a23c27d6f48a44bc2fa161354e0b54cdb" kindref="member">has_bool_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc" kindref="member">Type::kBool</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="93" refid="classopen__spiel_1_1_game_parameter_1aa189ed96c9732997e47b4a8be37f2c03" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1aa189ed96c9732997e47b4a8be37f2c03" kindref="member">has_game_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca" kindref="member">Type::kGame</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="94" refid="classopen__spiel_1_1_game_parameter_1a6f0c523fb9eff239d9a82dbc227b907d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a6f0c523fb9eff239d9a82dbc227b907d" kindref="member">type</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_;<sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" kindref="member">is_mandatory</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>is_mandatory_;<sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>readable<sp/>string<sp/>format,<sp/>for<sp/>display<sp/>purposes;<sp/>does<sp/>not<sp/>distinguish</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>types<sp/>in<sp/>ambiguous<sp/>cases,<sp/>e.g.<sp/>string<sp/>True<sp/>vs<sp/>boolean<sp/>True.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" kindref="member">ToString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>An<sp/>unambiguous<sp/>string<sp/>representation,<sp/>including<sp/>type<sp/>information.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Used<sp/>for<sp/>__repr__<sp/>in<sp/>the<sp/>Python<sp/>interface.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" kindref="member">ToReprString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Everything<sp/>necessary<sp/>to<sp/>reconstruct<sp/>the<sp/>parameter<sp/>in<sp/>string<sp/>form:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>&lt;delimiter&gt;<sp/>value<sp/>&lt;delimiter&gt;<sp/>is_mandatory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classopen__spiel_1_1_game_parameter_1ae97b3381b233541cd8890e10fc2ae4f5" kindref="member">Serialize</ref>(</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>delimiter<sp/>=<sp/><ref refid="namespaceopen__spiel_1a46834d0f5d6fe1c930944e946d8a790e" kindref="member">kDefaultInternalDelimiter</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" kindref="member">int_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" kindref="member">SPIEL_CHECK_TRUE</ref>(type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0" kindref="member">Type::kInt</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>int_value_;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" kindref="member">double_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" kindref="member">SPIEL_CHECK_TRUE</ref>(type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28" kindref="member">Type::kDouble</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>double_value_;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" kindref="member">string_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" kindref="member">SPIEL_CHECK_TRUE</ref>(type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2" kindref="member">Type::kString</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string_value_;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" kindref="member">bool_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" kindref="member">SPIEL_CHECK_TRUE</ref>(type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc" kindref="member">Type::kBool</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bool_value_;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref>&amp;<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" kindref="member">game_value</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" kindref="member">SPIEL_CHECK_TRUE</ref>(type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca" kindref="member">Type::kGame</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>game_value_;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Access<sp/>values<sp/>via<sp/>param.value&lt;T&gt;().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>There<sp/>are<sp/>explicit<sp/>specializations<sp/>of<sp/>this<sp/>function<sp/>that<sp/>call<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>***_value()<sp/>functions<sp/>above,<sp/>however<sp/>they<sp/>are<sp/>defined<sp/>in<sp/>game_parameters.cc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>avoid<sp/>compilation<sp/>problems<sp/>on<sp/>some<sp/>older<sp/>compilers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="141" refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" kindref="member">value</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="144" refid="classopen__spiel_1_1_game_parameter_1a91cd85d7d7ec6a84ddfe6e67bf751161" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a91cd85d7d7ec6a84ddfe6e67bf751161" kindref="member">value_with_default</ref>(T<sp/>default_value)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter" kindref="compound">GameParameter</ref>&amp;<sp/>rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(type_)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0" kindref="member">Type::kInt</ref>:</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1a29f0d36362f3f07c67a91dc6a1ebcca6" kindref="member">has_int_value</ref>()<sp/>&amp;&amp;<sp/>int_value_<sp/>==<sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" kindref="member">int_value</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28" kindref="member">Type::kDouble</ref>:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1afe157eb4411ecf0b00bc214f32059643" kindref="member">has_double_value</ref>()<sp/>&amp;&amp;<sp/>double_value_<sp/>==<sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" kindref="member">double_value</ref>();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2" kindref="member">Type::kString</ref>:</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1a68fa91fd545a38c7b586473e1d1851fb" kindref="member">has_string_value</ref>()<sp/>&amp;&amp;<sp/>string_value_<sp/>==<sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" kindref="member">string_value</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc" kindref="member">Type::kBool</ref>:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1a23c27d6f48a44bc2fa161354e0b54cdb" kindref="member">has_bool_value</ref>()<sp/>&amp;&amp;<sp/>bool_value_<sp/>==<sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" kindref="member">bool_value</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca" kindref="member">Type::kGame</ref>:</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1aa189ed96c9732997e47b4a8be37f2c03" kindref="member">has_game_value</ref>()<sp/>&amp;&amp;<sp/>game_value_<sp/>==<sp/>rhs.<ref refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" kindref="member">game_value</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f" kindref="member">Type::kUnset</ref>:</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rhs.type_<sp/>==<sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f" kindref="member">Type::kUnset</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Unrecognized<sp/>parameter<sp/>type<sp/>in<sp/>operator==&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>returning<sp/>false.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165" refid="classopen__spiel_1_1_game_parameter_1ac1e51b6c7c97146d4a364e98ebbbcf00" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1ac1e51b6c7c97146d4a364e98ebbbcf00" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter" kindref="compound">GameParameter</ref>&amp;<sp/>rhs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>==<sp/>rhs);<sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_mandatory_;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>initializations<sp/>are<sp/>required<sp/>here.<sp/>This<sp/>is<sp/>because<sp/>some<sp/>games<sp/>mark</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>parameters<sp/>as<sp/>not<sp/>mandatory<sp/>and<sp/>also<sp/>do<sp/>not<sp/>specify<sp/>default<sp/>values<sp/>when</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>registering<sp/>the<sp/>game<sp/>type..<sp/>instead,<sp/>setting<sp/>the<sp/>documented<sp/>defaults<sp/>upon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>game<sp/>creation<sp/>(often<sp/>due<sp/>to<sp/>missing<sp/>information<sp/>at<sp/>registration<sp/>time).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>causes<sp/>a<sp/>problem<sp/>when<sp/>inspecting<sp/>the<sp/>game<sp/>types<sp/>themselves,<sp/>even<sp/>after</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>game<sp/>is<sp/>created<sp/>via<sp/>Game::GetType(),<sp/>which<sp/>returns<sp/>the<sp/>type<sp/>as<sp/>it<sp/>was</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>when<sp/>it<sp/>was<sp/>registered.<sp/>These<sp/>initial<sp/>values<sp/>are<sp/>used<sp/>for<sp/>those<sp/>cases.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int_value_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>double_value_<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>std::string<sp/>string_value_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bool_value_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref><sp/>game_value_<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref><sp/>type_;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">std::string<sp/><ref refid="namespaceopen__spiel_1a9bc31aee9bea953807b92aa4399d1d10" kindref="member">GameParameterTypeToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">GameParameter::Type</ref>&amp;<sp/>type);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Game<sp/>Parameters<sp/>and<sp/>Game<sp/>Parameter<sp/>Serialization/Deserialization<sp/>form:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">//<sp/>param_name=type/value/is_mandatory|param_name_2=type2/value2/is_mandatory2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="comment">//<sp/>assumes<sp/>none<sp/>of<sp/>the<sp/>delimeters<sp/>appears<sp/>in<sp/>the<sp/>string<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">std::string<sp/><ref refid="namespaceopen__spiel_1af4fbe25f93445525489169ed595bb330" kindref="member">SerializeGameParameters</ref>(</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref>&amp;<sp/>game_params,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name_delimiter<sp/>=<sp/><ref refid="namespaceopen__spiel_1aede0e21cbb3bf6ae07192c951536b721" kindref="member">kDefaultNameDelimiter</ref>,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>parameter_delimeter<sp/>=<sp/><ref refid="namespaceopen__spiel_1a9add0dfc4c260595ccd7648c126e21ac" kindref="member">kDefaultParameterDelimiter</ref>);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref><sp/><ref refid="namespaceopen__spiel_1a5409de787fa4c65008c7668559d3dd0c" kindref="member">DeserializeGameParameters</ref>(</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>data,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name_delimiter<sp/>=<sp/><ref refid="namespaceopen__spiel_1aede0e21cbb3bf6ae07192c951536b721" kindref="member">kDefaultNameDelimiter</ref>,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>parameter_delimeter<sp/>=<sp/><ref refid="namespaceopen__spiel_1a9add0dfc4c260595ccd7648c126e21ac" kindref="member">kDefaultParameterDelimiter</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><ref refid="namespaceopen__spiel_1_1python_1a5eb3950566f2574e924b2ab572a818dd" kindref="member">GameParameter</ref><sp/><ref refid="namespaceopen__spiel_1ad272c6703ae8bac4d974608f1c58a9e9" kindref="member">DeserializeGameParameter</ref>(</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>data,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>delimiter<sp/>=<sp/><ref refid="namespaceopen__spiel_1a46834d0f5d6fe1c930944e946d8a790e" kindref="member">kDefaultInternalDelimiter</ref>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="namespaceopen__spiel_1a884574376c8bd58e2bc3df5ffbc7eb0f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a884574376c8bd58e2bc3df5ffbc7eb0f" kindref="member">IsParameterSpecified</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref>&amp;<sp/>table,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>table.find(key)<sp/>!=<sp/>table.end();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="208" refid="namespaceopen__spiel_1a1e640b32f7c4fb2f9405803b79a93b19" refkind="member"><highlight class="normal">T<sp/><ref refid="namespaceopen__spiel_1a1e640b32f7c4fb2f9405803b79a93b19" kindref="member">ParameterValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref>&amp;<sp/>params,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>key,</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>absl::optional&lt;T&gt;<sp/>default_value<sp/>=<sp/>absl::nullopt)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>iter<sp/>=<sp/>params.find(key);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iter<sp/>==<sp/>params.end())<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!default_value.has_value())<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">SpielFatalError</ref>(absl::StrCat(</highlight><highlight class="stringliteral">&quot;Cannot<sp/>find<sp/>parameter<sp/>and<sp/>no<sp/>default<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;value<sp/>passed<sp/>for<sp/>key:<sp/>&quot;</highlight><highlight class="normal">,<sp/>key));</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*default_value;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>iter-&gt;second.value&lt;T&gt;();</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>open_spiel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>OPEN_SPIEL_GAME_PARAMETERS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/game_parameters.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="structopen__spiel_1_1_action_view" kind="struct" language="C++" prot="public">
+    <compoundname>open_spiel::ActionView</compoundname>
+    <includes refid="action__view_8h" local="no">action_view.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structopen__spiel_1_1_action_view_1a0b9ddc7cce7fc23e858ef713510a239d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+        <definition>const Player open_spiel::ActionView::current_player</definition>
+        <argsstring></argsstring>
+        <name>current_player</name>
+        <qualifiedname>open_spiel::ActionView::current_player</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="72" column="16" bodyfile="open_spiel/action_view.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="structopen__spiel_1_1_action_view_1ae654aa10475477626ab5c34161600797" compoundref="action__view_8cc" startline="78" endline="92">fixed_action</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_action_view_1a584e70464a8f7f9fa8644ab9c45b81e3" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &gt;</type>
+        <definition>const std::vector&lt;std::vector&lt;Action&gt; &gt; open_spiel::ActionView::legal_actions</definition>
+        <argsstring></argsstring>
+        <name>legal_actions</name>
+        <qualifiedname>open_spiel::ActionView::legal_actions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="73" column="21" bodyfile="open_spiel/action_view.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="structopen__spiel_1_1_action_view_1ae654aa10475477626ab5c34161600797" compoundref="action__view_8cc" startline="78" endline="92">fixed_action</referencedby>
+        <referencedby refid="structopen__spiel_1_1_action_view_1a36972503930b7eb28793228c0536da63" compoundref="action__view_8cc" startline="46" endline="52">flat_joint_actions</referencedby>
+        <referencedby refid="structopen__spiel_1_1_action_view_1a7a55cf52a2ace8a4b7b0bc1c5b81bf56" compoundref="action__view_8h" startline="81" endline="81">num_actions</referencedby>
+        <referencedby refid="structopen__spiel_1_1_action_view_1af5cc636acb99e4a0d08e6b236cd169d8" compoundref="action__view_8h" startline="80" endline="80">num_players</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structopen__spiel_1_1_action_view_1a6a7f4d712beac59296424a0e81b5d8be" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::ActionView::ActionView</definition>
+        <argsstring>(const State &amp;state)</argsstring>
+        <name>ActionView</name>
+        <qualifiedname>open_spiel::ActionView::ActionView</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="75" column="12" bodyfile="open_spiel/action_view.cc" bodystart="41" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structopen__spiel_1_1_action_view_1ad286bc776048fc116bf80dd4f5bc1135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::ActionView::ActionView</definition>
+        <argsstring>(const Player current_player, const std::vector&lt; std::vector&lt; Action &gt; &gt; legal_actions)</argsstring>
+        <name>ActionView</name>
+        <qualifiedname>open_spiel::ActionView::ActionView</qualifiedname>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>current_player</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &gt;</type>
+          <declname>legal_actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="77" column="3" bodyfile="open_spiel/action_view.cc" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="structopen__spiel_1_1_action_view_1af5cc636acb99e4a0d08e6b236cd169d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::ActionView::num_players</definition>
+        <argsstring>() const</argsstring>
+        <name>num_players</name>
+        <qualifiedname>open_spiel::ActionView::num_players</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="80" column="7" bodyfile="open_spiel/action_view.h" bodystart="80" bodyend="80"/>
+        <references refid="structopen__spiel_1_1_action_view_1a584e70464a8f7f9fa8644ab9c45b81e3" compoundref="action__view_8h" startline="73">legal_actions</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abe0ef18a489a7cb0c9cee9dbf69394cb" compoundref="rl__environment_8py" startline="439" endline="441">open_spiel.python.rl_environment.Environment.num_actions_per_step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structopen__spiel_1_1_action_view_1a7a55cf52a2ace8a4b7b0bc1c5b81bf56" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::ActionView::num_actions</definition>
+        <argsstring>(Player pl) const</argsstring>
+        <name>num_actions</name>
+        <qualifiedname>open_spiel::ActionView::num_actions</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>pl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="81" column="7" bodyfile="open_spiel/action_view.h" bodystart="81" bodyend="81"/>
+        <references refid="structopen__spiel_1_1_action_view_1a584e70464a8f7f9fa8644ab9c45b81e3" compoundref="action__view_8h" startline="73">legal_actions</references>
+        <referencedby refid="structopen__spiel_1_1_action_view_1ae654aa10475477626ab5c34161600797" compoundref="action__view_8cc" startline="78" endline="92">fixed_action</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structopen__spiel_1_1_action_view_1a36972503930b7eb28793228c0536da63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structopen__spiel_1_1_flat_joint_actions" kindref="compound">FlatJointActions</ref></type>
+        <definition>FlatJointActions open_spiel::ActionView::flat_joint_actions</definition>
+        <argsstring>() const</argsstring>
+        <name>flat_joint_actions</name>
+        <qualifiedname>open_spiel::ActionView::flat_joint_actions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="92" column="20" bodyfile="open_spiel/action_view.cc" bodystart="46" bodyend="52"/>
+        <references refid="structopen__spiel_1_1_action_view_1a584e70464a8f7f9fa8644ab9c45b81e3" compoundref="action__view_8h" startline="73">legal_actions</references>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" compoundref="simultaneous__move__game_8cc" startline="51" endline="60">open_spiel::SimMoveState::LegalFlatJointActions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structopen__spiel_1_1_action_view_1ae654aa10475477626ab5c34161600797" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structopen__spiel_1_1_fixed_actions" kindref="compound">FixedActions</ref></type>
+        <definition>FixedActions open_spiel::ActionView::fixed_action</definition>
+        <argsstring>(Player player, int action_index) const</argsstring>
+        <name>fixed_action</name>
+        <qualifiedname>open_spiel::ActionView::fixed_action</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="96" column="16" bodyfile="open_spiel/action_view.cc" bodystart="78" bodyend="92"/>
+        <references refid="structopen__spiel_1_1_action_view_1a0b9ddc7cce7fc23e858ef713510a239d" compoundref="action__view_8h" startline="72">current_player</references>
+        <references refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a98b448895a60295bcb57104abae3e302" compoundref="spiel__globals_8h" startline="30">open_spiel::kSimultaneousPlayerId</references>
+        <references refid="structopen__spiel_1_1_action_view_1a584e70464a8f7f9fa8644ab9c45b81e3" compoundref="action__view_8h" startline="73">legal_actions</references>
+        <references refid="structopen__spiel_1_1_action_view_1a7a55cf52a2ace8a4b7b0bc1c5b81bf56" compoundref="action__view_8h" startline="81" endline="81">num_actions</references>
+        <references refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" compoundref="spiel__utils_8h" startline="259">SPIEL_CHECK_EQ</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::ActionView</label>
+        <link refid="structopen__spiel_1_1_action_view"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/action_view.h" line="71" column="1" bodyfile="open_spiel/action_view.h" bodystart="71" bodyend="97"/>
+    <listofallmembers>
+      <member refid="structopen__spiel_1_1_action_view_1a6a7f4d712beac59296424a0e81b5d8be" prot="public" virt="non-virtual"><scope>open_spiel::ActionView</scope><name>ActionView</name></member>
+      <member refid="structopen__spiel_1_1_action_view_1ad286bc776048fc116bf80dd4f5bc1135" prot="public" virt="non-virtual"><scope>open_spiel::ActionView</scope><name>ActionView</name></member>
+      <member refid="structopen__spiel_1_1_action_view_1a0b9ddc7cce7fc23e858ef713510a239d" prot="public" virt="non-virtual"><scope>open_spiel::ActionView</scope><name>current_player</name></member>
+      <member refid="structopen__spiel_1_1_action_view_1ae654aa10475477626ab5c34161600797" prot="public" virt="non-virtual"><scope>open_spiel::ActionView</scope><name>fixed_action</name></member>
+      <member refid="structopen__spiel_1_1_action_view_1a36972503930b7eb28793228c0536da63" prot="public" virt="non-virtual"><scope>open_spiel::ActionView</scope><name>flat_joint_actions</name></member>
+      <member refid="structopen__spiel_1_1_action_view_1a584e70464a8f7f9fa8644ab9c45b81e3" prot="public" virt="non-virtual"><scope>open_spiel::ActionView</scope><name>legal_actions</name></member>
+      <member refid="structopen__spiel_1_1_action_view_1a7a55cf52a2ace8a4b7b0bc1c5b81bf56" prot="public" virt="non-virtual"><scope>open_spiel::ActionView</scope><name>num_actions</name></member>
+      <member refid="structopen__spiel_1_1_action_view_1af5cc636acb99e4a0d08e6b236cd169d8" prot="public" virt="non-virtual"><scope>open_spiel::ActionView</scope><name>num_players</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

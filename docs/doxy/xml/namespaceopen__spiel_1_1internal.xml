@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceopen__spiel_1_1internal" kind="namespace" language="C++">
+    <compoundname>open_spiel::internal</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceopen__spiel_1_1internal_1a0b89016d4868241c8c00def1362207fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Out</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void open_spiel::internal::SpielStrOut</definition>
+        <argsstring>(Out &amp;out, const T &amp;arg)</argsstring>
+        <name>SpielStrOut</name>
+        <qualifiedname>open_spiel::internal::SpielStrOut</qualifiedname>
+        <param>
+          <type>Out &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="105" column="6" bodyfile="open_spiel/spiel_utils.h" bodystart="105" bodyend="107"/>
+        <referencedby refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" compoundref="spiel__utils_8h" startline="124" endline="128">SpielStrCat</referencedby>
+        <referencedby refid="namespaceopen__spiel_1_1internal_1aa5afb648bb3b18a005f7ebf135e2b074" compoundref="spiel__utils_8h" startline="110" endline="113">SpielStrOut</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1internal_1aa5afb648bb3b18a005f7ebf135e2b074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Out</type>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void open_spiel::internal::SpielStrOut</definition>
+        <argsstring>(Out &amp;out, const T &amp;arg1, Args &amp;&amp;... args)</argsstring>
+        <name>SpielStrOut</name>
+        <qualifiedname>open_spiel::internal::SpielStrOut</qualifiedname>
+        <param>
+          <type>Out &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="110" column="6" bodyfile="open_spiel/spiel_utils.h" bodystart="110" bodyend="113"/>
+        <references refid="namespaceopen__spiel_1_1internal_1a0b89016d4868241c8c00def1362207fe" compoundref="spiel__utils_8h" startline="105" endline="107">SpielStrOut</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string open_spiel::internal::SpielStrCat</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>SpielStrCat</name>
+        <qualifiedname>open_spiel::internal::SpielStrCat</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="124" column="13" bodyfile="open_spiel/spiel_utils.h" bodystart="124" bodyend="128"/>
+        <references refid="namespaceopen__spiel_1_1internal_1a0b89016d4868241c8c00def1362207fe" compoundref="spiel__utils_8h" startline="105" endline="107">SpielStrOut</references>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="open_spiel/spiel_utils.h" line="100" column="1"/>
+  </compounddef>
+</doxygen>

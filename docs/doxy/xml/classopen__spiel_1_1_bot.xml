@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_bot" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>open_spiel::Bot</compoundname>
+    <includes refid="spiel__bots_8h" local="no">spiel_bots.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1a19df23b2f1849d9d5288bc8e7c46bd0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual open_spiel::Bot::~Bot</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Bot</name>
+        <qualifiedname>open_spiel::Bot::~Bot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="75" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1af1fb47734c2143ce6b18701eddab8970" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+        <definition>virtual Action open_spiel::Bot::Step</definition>
+        <argsstring>(const State &amp;state)=0</argsstring>
+        <name>Step</name>
+        <qualifiedname>open_spiel::Bot::Step</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="79" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1ae4cb78465e95b5aef74141646e031221" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::Bot::InformAction</definition>
+        <argsstring>(const State &amp;state, Player player_id, Action action)</argsstring>
+        <name>InformAction</name>
+        <qualifiedname>open_spiel::Bot::InformAction</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player_id</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="102" column="16" bodyfile="open_spiel/spiel_bots.h" bodystart="102" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1ab61924d468f42600b4aaa1b039f6ef8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::Bot::InformActions</definition>
+        <argsstring>(const State &amp;state, const std::vector&lt; Action &gt; &amp;actions)</argsstring>
+        <name>InformActions</name>
+        <qualifiedname>open_spiel::Bot::InformActions</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="106" column="16" bodyfile="open_spiel/spiel_bots.h" bodystart="106" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1acc37816aa57da212ea7aa2e3f71d5e9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::Bot::Restart</definition>
+        <argsstring>()</argsstring>
+        <name>Restart</name>
+        <qualifiedname>open_spiel::Bot::Restart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="110" column="16" bodyfile="open_spiel/spiel_bots.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1aceae4d02f217fad76c55f74b1fb91d5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::Bot::RestartAt</definition>
+        <argsstring>(const State &amp;state)</argsstring>
+        <name>RestartAt</name>
+        <qualifiedname>open_spiel::Bot::RestartAt</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="113" column="16" bodyfile="open_spiel/spiel_bots.h" bodystart="113" bodyend="115"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1ab5d1cc3d483f0f79ff6bb7070717f275" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::Bot::ProvidesForceAction</definition>
+        <argsstring>()</argsstring>
+        <name>ProvidesForceAction</name>
+        <qualifiedname>open_spiel::Bot::ProvidesForceAction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="120" column="16" bodyfile="open_spiel/spiel_bots.h" bodystart="120" bodyend="120"/>
+        <referencedby refid="classopen__spiel_1_1_bot_1a0022d99994e0dc09b97b2d2c387e63da" compoundref="spiel__bots_8h" startline="123" endline="132">ForceAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1a0022d99994e0dc09b97b2d2c387e63da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::Bot::ForceAction</definition>
+        <argsstring>(const State &amp;state, Action action)</argsstring>
+        <name>ForceAction</name>
+        <qualifiedname>open_spiel::Bot::ForceAction</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="123" column="16" bodyfile="open_spiel/spiel_bots.h" bodystart="123" bodyend="132"/>
+        <references refid="classopen__spiel_1_1_bot_1ab5d1cc3d483f0f79ff6bb7070717f275" compoundref="spiel__bots_8h" startline="120" endline="120">ProvidesForceAction</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1a6731c3c3b3819de2875646a3f5faf2c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::Bot::ProvidesPolicy</definition>
+        <argsstring>()</argsstring>
+        <name>ProvidesPolicy</name>
+        <qualifiedname>open_spiel::Bot::ProvidesPolicy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="136" column="16" bodyfile="open_spiel/spiel_bots.h" bodystart="136" bodyend="136"/>
+        <referencedby refid="classopen__spiel_1_1_bot_1ab9a38a83389cc6f48dbec28ecd243519" compoundref="spiel__bots_8h" startline="137" endline="147">GetPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_bot_1ae48130d7b9291f22e9d7460d88f2e87c" compoundref="spiel__bots_8h" startline="148" endline="159">StepWithPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1ab9a38a83389cc6f48dbec28ecd243519" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref></type>
+        <definition>virtual ActionsAndProbs open_spiel::Bot::GetPolicy</definition>
+        <argsstring>(const State &amp;state)</argsstring>
+        <name>GetPolicy</name>
+        <qualifiedname>open_spiel::Bot::GetPolicy</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="137" column="27" bodyfile="open_spiel/spiel_bots.h" bodystart="137" bodyend="147"/>
+        <references refid="classopen__spiel_1_1_bot_1a6731c3c3b3819de2875646a3f5faf2c1" compoundref="spiel__bots_8h" startline="136" endline="136">ProvidesPolicy</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1ae48130d7b9291f22e9d7460d88f2e87c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::pair&lt; <ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref>, <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>virtual std::pair&lt; ActionsAndProbs, Action &gt; open_spiel::Bot::StepWithPolicy</definition>
+        <argsstring>(const State &amp;state)</argsstring>
+        <name>StepWithPolicy</name>
+        <qualifiedname>open_spiel::Bot::StepWithPolicy</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="148" column="21" bodyfile="open_spiel/spiel_bots.h" bodystart="148" bodyend="159"/>
+        <references refid="classopen__spiel_1_1_bot_1a6731c3c3b3819de2875646a3f5faf2c1" compoundref="spiel__bots_8h" startline="136" endline="136">ProvidesPolicy</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1a067065a5ccf5620847f42cad7582b5f6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::Bot::IsClonable</definition>
+        <argsstring>() const</argsstring>
+        <name>IsClonable</name>
+        <qualifiedname>open_spiel::Bot::IsClonable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="173" column="16" bodyfile="open_spiel/spiel_bots.h" bodystart="173" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_1a98f07d0444b04513d593fed7b6edc062" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_bot" kindref="compound">Bot</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; Bot &gt; open_spiel::Bot::Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <qualifiedname>open_spiel::Bot::Clone</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="174" column="27" bodyfile="open_spiel/spiel_bots.h" bodystart="174" bodyend="176"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::Bot</label>
+        <link refid="classopen__spiel_1_1_bot"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel_bots.h" line="72" column="1" bodyfile="open_spiel/spiel_bots.h" bodystart="72" bodyend="177"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_bot_1a98f07d0444b04513d593fed7b6edc062" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>Clone</name></member>
+      <member refid="classopen__spiel_1_1_bot_1a0022d99994e0dc09b97b2d2c387e63da" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>ForceAction</name></member>
+      <member refid="classopen__spiel_1_1_bot_1ab9a38a83389cc6f48dbec28ecd243519" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>GetPolicy</name></member>
+      <member refid="classopen__spiel_1_1_bot_1ae4cb78465e95b5aef74141646e031221" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>InformAction</name></member>
+      <member refid="classopen__spiel_1_1_bot_1ab61924d468f42600b4aaa1b039f6ef8d" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>InformActions</name></member>
+      <member refid="classopen__spiel_1_1_bot_1a067065a5ccf5620847f42cad7582b5f6" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>IsClonable</name></member>
+      <member refid="classopen__spiel_1_1_bot_1ab5d1cc3d483f0f79ff6bb7070717f275" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>ProvidesForceAction</name></member>
+      <member refid="classopen__spiel_1_1_bot_1a6731c3c3b3819de2875646a3f5faf2c1" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>ProvidesPolicy</name></member>
+      <member refid="classopen__spiel_1_1_bot_1acc37816aa57da212ea7aa2e3f71d5e9c" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>Restart</name></member>
+      <member refid="classopen__spiel_1_1_bot_1aceae4d02f217fad76c55f74b1fb91d5e" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>RestartAt</name></member>
+      <member refid="classopen__spiel_1_1_bot_1af1fb47734c2143ce6b18701eddab8970" prot="public" virt="pure-virtual"><scope>open_spiel::Bot</scope><name>Step</name></member>
+      <member refid="classopen__spiel_1_1_bot_1ae48130d7b9291f22e9d7460d88f2e87c" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>StepWithPolicy</name></member>
+      <member refid="classopen__spiel_1_1_bot_1a19df23b2f1849d9d5288bc8e7c46bd0e" prot="public" virt="virtual"><scope>open_spiel::Bot</scope><name>~Bot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

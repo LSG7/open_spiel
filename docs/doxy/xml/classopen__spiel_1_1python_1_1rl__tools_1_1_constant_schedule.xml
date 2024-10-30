@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::rl_tools::ConstantSchedule</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule" prot="public" virt="non-virtual">open_spiel.python.rl_tools.ValueSchedule</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a18bf4914e60c76b7e1aad7cf69a0f3d9" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_tools.ConstantSchedule::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>open_spiel.python.rl_tools.ConstantSchedule._value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_tools.py" line="48" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1ae3def6ebe5d5fd9264047ff7fcb3ded6" compoundref="rl__tools_8py" startline="50" endline="52">open_spiel.python.rl_tools.ConstantSchedule.step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule_1a27d0eccc6d039d9c86fb20da48729210" compoundref="rl__tools_8py" startline="80" endline="87">open_spiel.python.rl_tools.LinearSchedule.step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a799eb792334575bc3db7403c38465828" compoundref="rl__tools_8py" startline="54" endline="57">open_spiel.python.rl_tools.ConstantSchedule.value</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule_1ae4dc703ddc927bbc42f7d00147bcb713" compoundref="rl__tools_8py" startline="89" endline="91">open_spiel.python.rl_tools.LinearSchedule.value</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1acbd5550557738188892c84fd71cb18e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_tools.ConstantSchedule.__init__</definition>
+        <argsstring>(self, value)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.rl_tools.ConstantSchedule.__init__</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1a760b8b5407894d0eacb389a3c67e2047">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a799eb792334575bc3db7403c38465828" kindref="member">value</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize the value schedule.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_tools.py" line="46" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="46" bodyend="49"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1acbd5550557738188892c84fd71cb18e1" compoundref="rl__tools_8py" startline="46" endline="49">open_spiel.python.rl_tools.ConstantSchedule.__init__</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1acbd5550557738188892c84fd71cb18e1" compoundref="rl__tools_8py" startline="46" endline="49">open_spiel.python.rl_tools.ConstantSchedule.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1ae3def6ebe5d5fd9264047ff7fcb3ded6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_tools.ConstantSchedule.step</definition>
+        <argsstring>(self)</argsstring>
+        <name>step</name>
+        <qualifiedname>open_spiel.python.rl_tools.ConstantSchedule.step</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1a22376b068811a1eac3504d1df0be4b87">step</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Apply a potential change in the value.
+
+This method should be called every time the agent takes a training step.
+
+Returns:
+  the value after the step.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_tools.py" line="50" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="50" bodyend="52"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a18bf4914e60c76b7e1aad7cf69a0f3d9" compoundref="rl__tools_8py" startline="48">open_spiel.python.rl_tools.ConstantSchedule._value</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule_1a2ce62e42a0505a51dcf3be2ab24c5b48" compoundref="rl__tools_8py" startline="73">open_spiel.python.rl_tools.LinearSchedule._value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a799eb792334575bc3db7403c38465828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_tools.ConstantSchedule.value</definition>
+        <argsstring>(self)</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel.python.rl_tools.ConstantSchedule.value</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1adfe3d35afe741339ff6fc4b93daa8231">value</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return the current value.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_tools.py" line="54" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="54" bodyend="57"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a18bf4914e60c76b7e1aad7cf69a0f3d9" compoundref="rl__tools_8py" startline="48">open_spiel.python.rl_tools.ConstantSchedule._value</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule_1a2ce62e42a0505a51dcf3be2ab24c5b48" compoundref="rl__tools_8py" startline="73">open_spiel.python.rl_tools.LinearSchedule._value</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A schedule that keeps the value constant.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>abc.ABCMeta</label>
+      </node>
+      <node id="3">
+        <label>metaclass</label>
+      </node>
+      <node id="1">
+        <label>open_spiel.python.rl_tools.ConstantSchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.rl_tools.ValueSchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>abc.ABCMeta</label>
+      </node>
+      <node id="3">
+        <label>metaclass</label>
+      </node>
+      <node id="1">
+        <label>open_spiel.python.rl_tools.ConstantSchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.rl_tools.ValueSchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/rl_tools.py" line="43" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="43" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1acbd5550557738188892c84fd71cb18e1" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_tools::ConstantSchedule</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a18bf4914e60c76b7e1aad7cf69a0f3d9" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_tools::ConstantSchedule</scope><name>_value</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1ae3def6ebe5d5fd9264047ff7fcb3ded6" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_tools::ConstantSchedule</scope><name>step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a799eb792334575bc3db7403c38465828" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_tools::ConstantSchedule</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

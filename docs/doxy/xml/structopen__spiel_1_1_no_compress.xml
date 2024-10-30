@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="structopen__spiel_1_1_no_compress" kind="struct" language="C++" prot="public">
+    <compoundname>open_spiel::NoCompress</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structopen__spiel_1_1_no_compress_1a03880cc50fa9531d7e3788aec23867cf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string open_spiel::NoCompress::Compress</definition>
+        <argsstring>(absl::Span&lt; const float &gt; buffer)</argsstring>
+        <name>Compress</name>
+        <qualifiedname>open_spiel::NoCompress::Compress</qualifiedname>
+        <param>
+          <type>absl::Span&lt; const float &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.cc" line="288" column="22" bodyfile="open_spiel/observer.cc" bodystart="288" bodyend="294"/>
+        <references refid="namespaceopen__spiel_1a08afe0fc0d80483f36b9cd463ceadb67ae8cf6f97ad7efc429cee3aef81e40d51" compoundref="observer_8cc" startline="247">open_spiel::kCompressionNone</references>
+        <references refid="namespaceopen__spiel_1abbbd5ca7f9bdf4b135de88371f3cfe89" compoundref="observer_8cc" startline="250">open_spiel::kNumHeaderBytes</references>
+        <referencedby refid="classopen__spiel_1_1_observation_1a5e9bf445999e571f95dc13c4f018c880" compoundref="observer_8cc" startline="304" endline="309">open_spiel::Observation::Compress</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structopen__spiel_1_1_no_compress_1ad4a1724352baf560b865ed13d392ae85" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void open_spiel::NoCompress::Decompress</definition>
+        <argsstring>(absl::string_view compressed, absl::Span&lt; float &gt; buffer)</argsstring>
+        <name>Decompress</name>
+        <qualifiedname>open_spiel::NoCompress::Decompress</qualifiedname>
+        <param>
+          <type>absl::string_view</type>
+          <declname>compressed</declname>
+        </param>
+        <param>
+          <type>absl::Span&lt; float &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.cc" line="296" column="15" bodyfile="open_spiel/observer.cc" bodystart="296" bodyend="301"/>
+        <references refid="namespaceopen__spiel_1abbbd5ca7f9bdf4b135de88371f3cfe89" compoundref="observer_8cc" startline="250">open_spiel::kNumHeaderBytes</references>
+        <references refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" compoundref="spiel__utils_8h" startline="259">SPIEL_CHECK_EQ</references>
+        <referencedby refid="classopen__spiel_1_1_observation_1a4c80d6da14f27eac718ee4b0f237c4d5" compoundref="observer_8cc" startline="311" endline="322">open_spiel::Observation::Decompress</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::NoCompress</label>
+        <link refid="structopen__spiel_1_1_no_compress"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.cc" line="287" column="1" bodyfile="open_spiel/observer.cc" bodystart="287" bodyend="302"/>
+    <listofallmembers>
+      <member refid="structopen__spiel_1_1_no_compress_1a03880cc50fa9531d7e3788aec23867cf" prot="public" virt="non-virtual"><scope>open_spiel::NoCompress</scope><name>Compress</name></member>
+      <member refid="structopen__spiel_1_1_no_compress_1ad4a1724352baf560b865ed13d392ae85" prot="public" virt="non-virtual"><scope>open_spiel::NoCompress</scope><name>Decompress</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

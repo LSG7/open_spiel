@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="network__input_8md" kind="file" language="Markdown">
+    <compoundname>network_input.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;stratego_input.jpg&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>index<sp/>|<sp/>정보<sp/>|<sp/>채널<sp/>깊이<sp/>|<sp/>D<sp/>type<sp/>|<sp/>비고<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>:---:<sp/>|<sp/>:---:<sp/>|<sp/>:---:<sp/>|<sp/>:---:<sp/>|<sp/>:---:<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>0<sp/>|<sp/>지형정보<sp/><sp/>[이동가능,<sp/>이동불가,<sp/>숲]<sp/>|<sp/>3<sp/>|<sp/>one-hot<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>1<sp/>|<sp/>P&apos;s<sp/>own<sp/>private<sp/>info&lt;br&gt;P에게만<sp/>보이는<sp/>자기말<sp/>정보<sp/><sp/>|<sp/>병종수<sp/>|<sp/>one-hot<sp/>||</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>2<sp/>|<sp/>Op&apos;s<sp/>public<sp/>info&lt;br&gt;<sp/>P에게<sp/>보이는<sp/>Op&apos;s<sp/>말<sp/>정보<sp/><sp/>|<sp/>병종수<sp/>|<sp/>one-hot<sp/>||</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>3<sp/>|<sp/>P&apos;s<sp/>own<sp/>public<sp/>info&lt;br&gt;<sp/>Op<sp/>에게<sp/>보이는<sp/>P&apos;s<sp/>말<sp/>정보<sp/>|<sp/>병종수<sp/>|<sp/>one-hot<sp/>||</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>4<sp/>|<sp/>last<sp/>move<sp/>|<sp/>움직임수<sp/>|<sp/>?<sp/>|<sp/>필요한가?<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>5<sp/>|<sp/>무승부까지,<sp/>보급품남음수로할까&lt;br&gt;보급품<sp/>떨어지면<sp/>약해지는<sp/>걸로<sp/>|<sp/>플레이어수<sp/>|<sp/>float<sp/>||</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>6<sp/>|<sp/><sp/><sp/>|<sp/>?<sp/>||</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>7<sp/>|<sp/><sp/><sp/>|<sp/>?<sp/>||</highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/games/SG/network_input.md"/>
+  </compounddef>
+</doxygen>

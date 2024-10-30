@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="matrix__game_8h" kind="file" language="C++">
+    <compoundname>matrix_game.h</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="normal__form__game_8h" local="yes">open_spiel/normal_form_game.h</includes>
+    <includes refid="spiel_8h" local="yes">open_spiel/spiel.h</includes>
+    <includes refid="spiel__utils_8h" local="yes">open_spiel/spiel_utils.h</includes>
+    <includedby refid="matrix__game_8cc" local="yes">open_spiel/matrix_game.cc</includedby>
+    <includedby refid="tensor__game_8h" local="yes">open_spiel/tensor_game.h</includedby>
+    <incdepgraph>
+      <node id="24">
+        <label>open_spiel/game_parameters.h</label>
+        <link refid="game__parameters_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel/matrix_game.h</label>
+        <link refid="matrix__game_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>open_spiel/normal_form_game.h</label>
+        <link refid="normal__form__game_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>open_spiel/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>open_spiel/simultaneous_move_game.h</label>
+        <link refid="simultaneous__move__game_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>open_spiel/spiel.h</label>
+        <link refid="spiel_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>open_spiel/spiel_globals.h</label>
+        <link refid="spiel__globals_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>open_spiel/spiel_utils.h</label>
+        <link refid="spiel__utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+      <node id="26">
+        <label>array</label>
+      </node>
+      <node id="27">
+        <label>cmath</label>
+      </node>
+      <node id="28">
+        <label>cstddef</label>
+      </node>
+      <node id="29">
+        <label>cstdint</label>
+      </node>
+      <node id="13">
+        <label>functional</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>iterator</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>numeric</label>
+      </node>
+      <node id="35">
+        <label>open_spiel/abseil-cpp/absl/algorithm/container.h</label>
+      </node>
+      <node id="36">
+        <label>open_spiel/abseil-cpp/absl/base/attributes.h</label>
+      </node>
+      <node id="37">
+        <label>open_spiel/abseil-cpp/absl/container/flat_hash_set.h</label>
+      </node>
+      <node id="38">
+        <label>open_spiel/abseil-cpp/absl/container/inlined_vector.h</label>
+      </node>
+      <node id="20">
+        <label>open_spiel/abseil-cpp/absl/random/bit_gen_ref.h</label>
+      </node>
+      <node id="31">
+        <label>open_spiel/abseil-cpp/absl/random/uniform_real_distribution.h</label>
+      </node>
+      <node id="9">
+        <label>open_spiel/abseil-cpp/absl/strings/str_cat.h</label>
+      </node>
+      <node id="10">
+        <label>open_spiel/abseil-cpp/absl/strings/str_join.h</label>
+      </node>
+      <node id="39">
+        <label>open_spiel/abseil-cpp/absl/strings/string_view.h</label>
+      </node>
+      <node id="21">
+        <label>open_spiel/abseil-cpp/absl/synchronization/mutex.h</label>
+      </node>
+      <node id="32">
+        <label>open_spiel/abseil-cpp/absl/time/clock.h</label>
+      </node>
+      <node id="33">
+        <label>open_spiel/abseil-cpp/absl/time/time.h</label>
+      </node>
+      <node id="22">
+        <label>open_spiel/abseil-cpp/absl/types/optional.h</label>
+      </node>
+      <node id="23">
+        <label>open_spiel/abseil-cpp/absl/types/span.h</label>
+      </node>
+      <node id="16">
+        <label>random</label>
+      </node>
+      <node id="17">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="30">
+        <label>type_traits</label>
+      </node>
+      <node id="18">
+        <label>unordered_map</label>
+      </node>
+      <node id="19">
+        <label>utility</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>open_spiel/matrix_game.cc</label>
+        <link refid="matrix__game_8cc"/>
+      </node>
+      <node id="1">
+        <label>open_spiel/matrix_game.h</label>
+        <link refid="matrix__game_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel/tensor_game.cc</label>
+        <link refid="tensor__game_8cc"/>
+      </node>
+      <node id="3">
+        <label>open_spiel/tensor_game.h</label>
+        <link refid="tensor__game_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" prot="public">open_spiel::matrix_game::MatrixGame</innerclass>
+    <innerclass refid="classopen__spiel_1_1matrix__game_1_1_matrix_state" prot="public">open_spiel::matrix_game::MatrixState</innerclass>
+    <innernamespace refid="namespaceopen__spiel">open_spiel</innernamespace>
+    <innernamespace refid="namespaceopen__spiel_1_1matrix__game">open_spiel::matrix_game</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2021<sp/>DeepMind<sp/>Technologies<sp/>Limited</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OPEN_SPIEL_MATRIX_GAME_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPEN_SPIEL_MATRIX_GAME_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="normal__form__game_8h" kindref="compound">open_spiel/normal_form_game.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spiel_8h" kindref="compound">open_spiel/spiel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spiel__utils_8h" kindref="compound">open_spiel/spiel_utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>matrix<sp/>game<sp/>is<sp/>an<sp/>example<sp/>of<sp/>a<sp/>2-player<sp/>normal-form<sp/>game.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel" kindref="compound">open_spiel</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">matrix_game<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" kindref="member">kRowPlayer</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35" refid="namespaceopen__spiel_1_1matrix__game_1a02db67a6c4c253329c156106f8600c4c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1_1matrix__game_1a02db67a6c4c253329c156106f8600c4c" kindref="member">kColPlayer</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Return<sp/>a<sp/>flattened<sp/>version<sp/>of<sp/>these<sp/>vector<sp/>of<sp/>rows.<sp/>This<sp/>simply<sp/>scans<sp/>each</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>row<sp/>in<sp/>turn,<sp/>appending<sp/>each<sp/>elements<sp/>onto<sp/>the<sp/>end<sp/>of<sp/>a<sp/>1D<sp/>vector.<sp/>The<sp/>rows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>must<sp/>have<sp/>the<sp/>same<sp/>size.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">std::vector&lt;double&gt;<sp/><ref refid="namespaceopen__spiel_1_1matrix__game_1ac598d47a7f8ba44a9ce78c3cb74488ff" kindref="member">FlattenMatrix</ref>(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;&amp;<sp/>matrix_rows);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" kindref="compound">MatrixGame</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_normal_form_game" kindref="compound">NormalFormGame</ref><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1ad97a646279f0dd8348e80dd08c2f4e68" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1ad97a646279f0dd8348e80dd08c2f4e68" kindref="member">MatrixGame</ref>(<ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref><sp/>game_type,<sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref><sp/>game_parameters,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>row_action_names,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>col_action_names,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>row_utilities,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>col_utilities)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classopen__spiel_1_1_normal_form_game" kindref="compound">NormalFormGame</ref>(game_type,<sp/>game_parameters),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>row_action_names_(row_action_names),</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_action_names_(col_action_names),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>row_utilities_(row_utilities),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_utilities_(col_utilities)<sp/>{}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1acf8c3d52e9b650c5a56b89c57dd6e0b4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1acf8c3d52e9b650c5a56b89c57dd6e0b4" kindref="member">MatrixGame</ref>(<ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref><sp/>game_type,<sp/><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref><sp/>game_parameters,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>row_action_names,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>col_action_names,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/>row_utilities,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;<sp/>col_utilities)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classopen__spiel_1_1_normal_form_game" kindref="compound">NormalFormGame</ref>(game_type,<sp/>game_parameters),</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>row_action_names_(row_action_names),</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_action_names_(col_action_names),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>row_utilities_(<ref refid="namespaceopen__spiel_1_1matrix__game_1ac598d47a7f8ba44a9ce78c3cb74488ff" kindref="member">FlattenMatrix</ref>(row_utilities)),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_utilities_(<ref refid="namespaceopen__spiel_1_1matrix__game_1ac598d47a7f8ba44a9ce78c3cb74488ff" kindref="member">FlattenMatrix</ref>(col_utilities))<sp/>{}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Implementation<sp/>of<sp/>Game<sp/>interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5245fe0eba2197fd42f1202f1ff6b846" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5245fe0eba2197fd42f1202f1ff6b846" kindref="member">NumDistinctActions</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::max(<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" kindref="member">NumRows</ref>(),<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" kindref="member">NumCols</ref>());</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;State&gt;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a797de24e8a087cb7192da8008f769fac" kindref="member">NewInitialState</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1af3118dae2700f2bdaf437d5b9999ed88" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1af3118dae2700f2bdaf437d5b9999ed88" kindref="member">NumPlayers</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;<sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a7245fbe7efa3a6fa10aeefbeea3cfe25" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a7245fbe7efa3a6fa10aeefbeea3cfe25" kindref="member">MinUtility</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::min(</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*std::min_element(begin(row_utilities_),<sp/>end(row_utilities_)),</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*std::min_element(begin(col_utilities_),<sp/>end(col_utilities_)));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6da3de0d6b22ddd3a81d4e616c9d1997" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6da3de0d6b22ddd3a81d4e616c9d1997" kindref="member">MaxUtility</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::max(</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*std::max_element(begin(row_utilities_),<sp/>end(row_utilities_)),</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*std::max_element(begin(col_utilities_),<sp/>end(col_utilities_)));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>absl::optional&lt;double&gt;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e971623256866471a99758a25bf9729" kindref="member">UtilitySum</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a42356a06a9bc76e7c88767bdae84afdd" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a42356a06a9bc76e7c88767bdae84afdd" kindref="member">ActionToString</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>action)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(player)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" kindref="member">SPIEL_CHECK_GE</ref>(action,<sp/>0);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" kindref="member">SPIEL_CHECK_LT</ref>(action,<sp/>row_action_names_.size());</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>row_action_names_[action];</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" kindref="member">SPIEL_CHECK_GE</ref>(action,<sp/>0);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" kindref="member">SPIEL_CHECK_LT</ref>(action,<sp/>col_action_names_.size());</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>col_action_names_[action];</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">SpielFatalError</ref>(</highlight><highlight class="stringliteral">&quot;Unknown<sp/>player&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods<sp/>for<sp/>MatrixState<sp/>to<sp/>call.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" kindref="member">NumRows</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>row_action_names_.size();<sp/>}</highlight></codeline>
+<codeline lineno="111" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" kindref="member">NumCols</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>col_action_names_.size();<sp/>}</highlight></codeline>
+<codeline lineno="112" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a34096a7e7b15983b1b7964413e7dbc25" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a34096a7e7b15983b1b7964413e7dbc25" kindref="member">RowUtility</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>row_utilities_[Index(row,<sp/>col)];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aee28d3a9f554a4997ea9bf212a189de9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aee28d3a9f554a4997ea9bf212a189de9" kindref="member">ColUtility</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>col_utilities_[Index(row,<sp/>col)];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a35723b6742e79d6728a2ebb614aa15f6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a35723b6742e79d6728a2ebb614aa15f6" kindref="member">PlayerUtility</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" kindref="member">SPIEL_CHECK_TRUE</ref>(player<sp/>==<sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref>{0}<sp/>||<sp/>player<sp/>==<sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref>{1});</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(player<sp/>==<sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref>{0}<sp/>?<sp/>row_utilities_[Index(row,<sp/>col)]</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>col_utilities_[Index(row,<sp/>col)]);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aed3a847f28afc7561dfae5ccbf3cc69e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aed3a847f28afc7561dfae5ccbf3cc69e" kindref="member">RowUtilities</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>row_utilities_;<sp/>}</highlight></codeline>
+<codeline lineno="124" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4242ca2fd213843cc8ecf29b6c751fb5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4242ca2fd213843cc8ecf29b6c751fb5" kindref="member">ColUtilities</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>col_utilities_;<sp/>}</highlight></codeline>
+<codeline lineno="125" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6399f34abd19d65c91562ca1163e57fd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6399f34abd19d65c91562ca1163e57fd" kindref="member">PlayerUtilities</ref>(</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" kindref="member">SPIEL_CHECK_TRUE</ref>(player<sp/>==<sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref>{0}<sp/>||<sp/>player<sp/>==<sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref>{1});</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(player<sp/>==<sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref>{0}<sp/>?<sp/>row_utilities_<sp/>:<sp/>col_utilities_);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a248bd8d010f9aebb9e16cdd9e5c5a242" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a248bd8d010f9aebb9e16cdd9e5c5a242" kindref="member">RowActionName</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>row_action_names_[row];</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5fe875f0c31f64d520e73beba307172f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5fe875f0c31f64d520e73beba307172f" kindref="member">ColActionName</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>col_action_names_[col];</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1afa0c5530843605ce3a7407135986e902" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1afa0c5530843605ce3a7407135986e902" kindref="member">GetUtilities</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Action&gt;&amp;<sp/>joint_action)</highlight><highlight class="keyword"></highlight></codeline>
+<codeline lineno="138"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>Index(joint_action[0],<sp/>joint_action[1]);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{row_utilities_[index],<sp/>col_utilities_[index]};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a088f57627ab2ef1cc5f1ccdcebf49947" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a088f57627ab2ef1cc5f1ccdcebf49947" kindref="member">GetUtility</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Action&gt;&amp;<sp/>joint_action)</highlight><highlight class="keyword"></highlight></codeline>
+<codeline lineno="144"><highlight class="keyword"><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a35723b6742e79d6728a2ebb614aa15f6" kindref="member">PlayerUtility</ref>(player,<sp/>joint_action[0],<sp/>joint_action[1]);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e7d72bf6f1a12f87ea448e6f83a82e4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a1e7d72bf6f1a12f87ea448e6f83a82e4" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref>&amp;<sp/>other_game)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>other<sp/>=<sp/><ref refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" kindref="member">down_cast&lt;const MatrixGame&amp;&gt;</ref>(other_game);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(row_action_names_.size()<sp/>==<sp/>other.row_action_names_.size()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_action_names_.size()<sp/>==<sp/>other.col_action_names_.size()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>row_utilities_<sp/>==<sp/>other.row_utilities_<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_utilities_<sp/>==<sp/>other.col_utilities_);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a82911b10d26c92f982fb61f22aeb6db2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a82911b10d26c92f982fb61f22aeb6db2" kindref="member">ApproxEqual</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref>&amp;<sp/>other_game,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tolerance)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>other<sp/>=<sp/><ref refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" kindref="member">down_cast&lt;const MatrixGame&amp;&gt;</ref>(other_game);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(row_action_names_.size()<sp/>==<sp/>other.row_action_names_.size()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_action_names_.size()<sp/>==<sp/>other.col_action_names_.size()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceopen__spiel_1ae00c0c4427507797bc362d31541ff684" kindref="member">AllNear</ref>(row_utilities_,<sp/>other.row_utilities_,<sp/>tolerance)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceopen__spiel_1ae00c0c4427507797bc362d31541ff684" kindref="member">AllNear</ref>(col_utilities_,<sp/>other.col_utilities_,<sp/>tolerance));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Index(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>row<sp/>*<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" kindref="member">NumCols</ref>()<sp/>+<sp/>col;<sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>row_action_names_;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>col_action_names_;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/>row_utilities_;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/>col_utilities_;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="classopen__spiel_1_1matrix__game_1_1_matrix_state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state" kindref="compound">MatrixState</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_n_f_g_state" kindref="compound">NFGState</ref><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a49bc7d4037cc059ed50d1d9a128fda70" kindref="member">MatrixState</ref>(std::shared_ptr&lt;const<sp/>Game&gt;<sp/>game);</highlight></codeline>
+<codeline lineno="175" refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ae39b1e397e4220e8b5458e9f2767dd84" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ae39b1e397e4220e8b5458e9f2767dd84" kindref="member">MatrixState</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state" kindref="compound">MatrixState</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;Action&gt;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" kindref="member">LegalActions</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" kindref="member">IsTerminal</ref>())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(player<sp/>==<sp/><ref refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a98b448895a60295bcb57104abae3e302" kindref="member">kSimultaneousPlayerId</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" kindref="member">LegalFlatJointActions</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Action&gt;<sp/>moves(player<sp/>==<sp/><ref refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" kindref="member">kRowPlayer</ref><sp/>?<sp/>matrix_game_-&gt;<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" kindref="member">NumRows</ref>()</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>matrix_game_-&gt;<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" kindref="member">NumCols</ref>());</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::iota(moves.begin(),<sp/>moves.end(),<sp/>0);<sp/><sp/></highlight><highlight class="comment">//<sp/>fill<sp/>with<sp/>values<sp/>0...n-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>moves;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" kindref="member">ToString</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" kindref="member">ActionToString</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>action_id)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(player<sp/>==<sp/><ref refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a98b448895a60295bcb57104abae3e302" kindref="member">kSimultaneousPlayerId</ref>)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" kindref="member">FlatJointActionToString</ref>(action_id);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(player<sp/>==<sp/><ref refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" kindref="member">kRowPlayer</ref>)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>matrix_game_-&gt;<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a248bd8d010f9aebb9e16cdd9e5c5a242" kindref="member">RowActionName</ref>(action_id);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>matrix_game_-&gt;<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5fe875f0c31f64d520e73beba307172f" kindref="member">ColActionName</ref>(action_id);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" kindref="member">IsTerminal</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!joint_move_.empty();<sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43" kindref="member">Returns</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" kindref="member">IsTerminal</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{matrix_game_-&gt;<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a34096a7e7b15983b1b7964413e7dbc25" kindref="member">RowUtility</ref>(joint_move_[0],<sp/>joint_move_[1]),</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix_game_-&gt;<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aee28d3a9f554a4997ea9bf212a189de9" kindref="member">ColUtility</ref>(joint_move_[0],<sp/>joint_move_[1])};</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{0,<sp/>0};</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a1554bebfbd31a4bd7c02994f2e2bb95d" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;State&gt;<sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a1554bebfbd31a4bd7c02994f2e2bb95d" kindref="member">Clone</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;State&gt;(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a49bc7d4037cc059ed50d1d9a128fda70" kindref="member">MatrixState</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="216" refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" kindref="member">DoApplyActions</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;Action&gt;&amp;<sp/>moves)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" kindref="member">SPIEL_CHECK_EQ</ref>(moves.size(),<sp/>2);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" kindref="member">SPIEL_CHECK_GE</ref>(moves[<ref refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" kindref="member">kRowPlayer</ref>],<sp/>0);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" kindref="member">SPIEL_CHECK_LT</ref>(moves[<ref refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" kindref="member">kRowPlayer</ref>],<sp/>matrix_game_-&gt;<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" kindref="member">NumRows</ref>());</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" kindref="member">SPIEL_CHECK_GE</ref>(moves[<ref refid="namespaceopen__spiel_1_1matrix__game_1a02db67a6c4c253329c156106f8600c4c" kindref="member">kColPlayer</ref>],<sp/>0);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" kindref="member">SPIEL_CHECK_LT</ref>(moves[<ref refid="namespaceopen__spiel_1_1matrix__game_1a02db67a6c4c253329c156106f8600c4c" kindref="member">kColPlayer</ref>],<sp/>matrix_game_-&gt;<ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" kindref="member">NumCols</ref>());</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>joint_move_<sp/>=<sp/>moves;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>std::vector&lt;Action&gt;<sp/>joint_move_{};<sp/><sp/></highlight><highlight class="comment">//<sp/>joint<sp/>move<sp/>that<sp/>was<sp/>chosen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MatrixGame*<sp/>matrix_game_;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>matrix<sp/>game<sp/>with<sp/>the<sp/>specified<sp/>utilities<sp/>and<sp/>row/column<sp/>names.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Utilities<sp/>must<sp/>be<sp/>in<sp/>row-major<sp/>form.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">std::shared_ptr&lt;const<sp/>MatrixGame&gt;<sp/><ref refid="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" kindref="member">CreateMatrixGame</ref>(</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>short_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>long_name,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>row_names,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>col_names,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;&amp;<sp/>row_player_utils,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;&amp;<sp/>col_player_utils);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>matrix<sp/>game<sp/>with<sp/>the<sp/>specified<sp/>utilities,<sp/>with<sp/>default<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(&quot;short_name&quot;,<sp/>&quot;Long<sp/>Name&quot;,<sp/>row<sp/>player<sp/>utilities,<sp/>col<sp/>player<sp/>utilities).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Utilities<sp/>must<sp/>be<sp/>in<sp/>row-major<sp/>order.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal">std::shared_ptr&lt;const<sp/>MatrixGame&gt;<sp/><ref refid="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" kindref="member">CreateMatrixGame</ref>(</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>short_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>long_name,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>row_names,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;&amp;<sp/>col_names,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>flat_row_utils,</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>flat_col_utils);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>matrix<sp/>game<sp/>with<sp/>the<sp/>specified<sp/>utilities,<sp/>with<sp/>default<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(&quot;short_name&quot;,<sp/>&quot;Long<sp/>Name&quot;,<sp/>row0,<sp/>row1..,<sp/>col0,<sp/>col1,<sp/>...).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Utilities<sp/>must<sp/>be<sp/>in<sp/>row-major<sp/>form.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal">std::shared_ptr&lt;const<sp/>MatrixGame&gt;<sp/><ref refid="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" kindref="member">CreateMatrixGame</ref>(</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;&amp;<sp/>row_player_utils,</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;double&gt;&gt;&amp;<sp/>col_player_utils);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>matrix_game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>open_spiel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>OPEN_SPIEL_MATRIX_GAME_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/matrix_game.h"/>
+  </compounddef>
+</doxygen>

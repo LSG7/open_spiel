@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceopen__spiel_1_1python_1_1policy" kind="namespace" language="Python">
+    <compoundname>open_spiel::python::policy</compoundname>
+    <innerclass refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy" prot="public">open_spiel::python::policy::FirstActionPolicy</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1policy_1_1_policy" prot="public">open_spiel::python::policy::Policy</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy" prot="public">open_spiel::python::policy::TabularPolicy</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy" prot="public">open_spiel::python::policy::UniformRandomPolicy</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1a7830f1fa91a3081532b9e8a78f3c208b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.child</definition>
+        <argsstring>(state, action)</argsstring>
+        <name>child</name>
+        <qualifiedname>open_spiel.python.policy.child</qualifiedname>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <param>
+          <type>action</type>
+          <defname>action</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns a child state, handling the simultaneous node case.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="43" column="1" bodyfile="open_spiel/python/policy.py" bodystart="43" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1a8afb3c75599f70588315528bbd7722f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.joint_action_probabilities_aux</definition>
+        <argsstring>(state, policy)</argsstring>
+        <name>joint_action_probabilities_aux</name>
+        <qualifiedname>open_spiel.python.policy.joint_action_probabilities_aux</qualifiedname>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <param>
+          <type>policy</type>
+          <defname>policy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Auxiliary function for joint_action_probabilities.
+
+Args:
+  state: a game state at a simultaneous decision node.
+  policy: policy that gives the probability distribution over the legal
+    actions for each players.
+
+Returns:
+  actions_per_player: list of list of actions for each player
+  probs_per_player: list of list of probabilities do the corresponding action
+   in actions_per_player for each player.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="53" column="1" bodyfile="open_spiel/python/policy.py" bodystart="53" bodyend="75"/>
+        <referencedby refid="namespaceopen__spiel_1_1python_1_1policy_1af1f959571dc79a9d3b346c66a116f0a6" compoundref="policy_8py" startline="76" endline="96">open_spiel.python.policy.joint_action_probabilities</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1af1f959571dc79a9d3b346c66a116f0a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.joint_action_probabilities</definition>
+        <argsstring>(state, policy)</argsstring>
+        <name>joint_action_probabilities</name>
+        <qualifiedname>open_spiel.python.policy.joint_action_probabilities</qualifiedname>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <param>
+          <type>policy</type>
+          <defname>policy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Yields action, probability pairs for a joint policy in simultaneous state.
+
+Args:
+  state: a game state at a simultaneous decision node.
+  policy: policy that gives the probability distribution over the legal
+    actions for each players.
+
+Yields:
+  (action, probability) pairs. An action is a tuple of individual
+    actions for each player of the game. The probability is a single joint
+    probability (product of all the individual probabilities).
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="76" column="1" bodyfile="open_spiel/python/policy.py" bodystart="76" bodyend="96"/>
+        <references refid="namespaceopen__spiel_1_1python_1_1policy_1a8afb3c75599f70588315528bbd7722f8" compoundref="policy_8py" startline="53" endline="75">open_spiel.python.policy.joint_action_probabilities_aux</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1af790d4355be9443cf04c9a1a206149cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.get_tabular_policy_states</definition>
+        <argsstring>(game)</argsstring>
+        <name>get_tabular_policy_states</name>
+        <qualifiedname>open_spiel.python.policy.get_tabular_policy_states</qualifiedname>
+        <param>
+          <type>game</type>
+          <defname>game</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns the states of the game for a tabular policy.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="453" column="1" bodyfile="open_spiel/python/policy.py" bodystart="453" bodyend="474"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1a897c31d2e2114f88e9df618aef1c2800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.tabular_policy_from_callable</definition>
+        <argsstring>(game, callable_policy, players=None)</argsstring>
+        <name>tabular_policy_from_callable</name>
+        <qualifiedname>open_spiel.python.policy.tabular_policy_from_callable</qualifiedname>
+        <param>
+          <type>game</type>
+          <defname>game</defname>
+        </param>
+        <param>
+          <type>callable_policy</type>
+          <defname>callable_policy</defname>
+        </param>
+        <param>
+          <type>players</type>
+          <defname>players</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Converts a legacy callable policy into a TabularPolicy.
+
+Recommendation - instead of using this to convert your policy for evaluation
+purposes, work directly with a `TabularPolicy` if possible.
+Second choice - work with a `Policy` class and call `to_tabular` as needed.
+
+Args:
+  game: The game for which we want a TabularPolicy.
+  callable_policy: A callable: state -&gt; action probabilities dict or list.
+  players: List of players this policy applies to. If `None`, applies to all
+    players.
+
+Returns:
+  A TabularPolicy that materializes the callable policy.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="475" column="1" bodyfile="open_spiel/python/policy.py" bodystart="475" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1ab94aca1416f617f17950d02053a38a5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.pyspiel_policy_to_python_policy</definition>
+        <argsstring>(game, pyspiel_tabular_policy, players=None)</argsstring>
+        <name>pyspiel_policy_to_python_policy</name>
+        <qualifiedname>open_spiel.python.policy.pyspiel_policy_to_python_policy</qualifiedname>
+        <param>
+          <type>game</type>
+          <defname>game</defname>
+        </param>
+        <param>
+          <type>pyspiel_tabular_policy</type>
+          <defname>pyspiel_tabular_policy</defname>
+        </param>
+        <param>
+          <type>players</type>
+          <defname>players</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Converts a pyspiel.TabularPolicy to a TabularPolicy.
+
+Args:
+  game: The OpenSpiel game.
+  pyspiel_tabular_policy: Pyspiel tabular policy to copy from.
+  players: List of integer player ids to copy policy from. For example,
+    `players=[0]` will only copy player 0&apos;s policy over into the python policy
+    (the other player&apos;s policies will be undefined). Default value of `None`
+    will copy all players&apos; policies.
+
+Returns:
+  python_policy
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="502" column="1" bodyfile="open_spiel/python/policy.py" bodystart="502" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1abf19f1c6de40f4f3bc77be68fafdb396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.python_policy_to_pyspiel_policy</definition>
+        <argsstring>(python_tabular_policy)</argsstring>
+        <name>python_policy_to_pyspiel_policy</name>
+        <qualifiedname>open_spiel.python.policy.python_policy_to_pyspiel_policy</qualifiedname>
+        <param>
+          <type>python_tabular_policy</type>
+          <defname>python_tabular_policy</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Converts a TabularPolicy to a pyspiel.TabularPolicy.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="528" column="1" bodyfile="open_spiel/python/policy.py" bodystart="528" bodyend="542"/>
+        <referencedby refid="namespaceopen__spiel_1_1python_1_1policy_1a3b489234e6aaac89abffa8a7088fd542" compoundref="policy_8py" startline="543" endline="554">open_spiel.python.policy.python_policies_to_pyspiel_policies</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1a3b489234e6aaac89abffa8a7088fd542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.python_policies_to_pyspiel_policies</definition>
+        <argsstring>(policies)</argsstring>
+        <name>python_policies_to_pyspiel_policies</name>
+        <qualifiedname>open_spiel.python.policy.python_policies_to_pyspiel_policies</qualifiedname>
+        <param>
+          <type>policies</type>
+          <defname>policies</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Same conversion as above (list version).
+
+Args:
+  policies: a list of python.TabularPolicy
+
+Returns:
+  a list of pyspiel.TabularPolicy.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="543" column="1" bodyfile="open_spiel/python/policy.py" bodystart="543" bodyend="554"/>
+        <references refid="namespaceopen__spiel_1_1python_1_1policy_1abf19f1c6de40f4f3bc77be68fafdb396" compoundref="policy_8py" startline="528" endline="542">open_spiel.python.policy.python_policy_to_pyspiel_policy</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1policy_1aea67d9e6edba3429e7feaa289e25c3a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.merge_tabular_policies</definition>
+        <argsstring>(tabular_policies, game)</argsstring>
+        <name>merge_tabular_policies</name>
+        <qualifiedname>open_spiel.python.policy.merge_tabular_policies</qualifiedname>
+        <param>
+          <type>tabular_policies</type>
+          <defname>tabular_policies</defname>
+        </param>
+        <param>
+          <type>game</type>
+          <defname>game</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Merges n_player policies into single joint policy.
+
+Missing states are filled with a valid uniform policy.
+
+Args:
+  tabular_policies: List of python TabularPolicy (one for each player).
+  game: The game corresponding to the resulting TabularPolicy.
+
+Returns:
+  merged_policy: A TabularPolicy with each player i&apos;s policy taken from the
+    ith joint_policy.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="555" column="1" bodyfile="open_spiel/python/policy.py" bodystart="555" bodyend="581"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Representation of a policy for a game.
+
+This is a standard representation for passing policies into algorithms,
+with currently the following implementations:
+
+  TabularPolicy - an explicit policy per state, stored in an array
+    of shape `(num_states, num_actions)`, convenient for tabular policy
+    solution methods.
+  UniformRandomPolicy - a uniform distribution over all legal actions for
+    the specified player. This is computed as needed, so can be used for
+    games where a tabular policy would be unfeasibly large.
+
+The main way of using a policy is to call `action_probabilities(state,
+player_id`), to obtain a dict of {action: probability}. `TabularPolicy`
+objects expose a lower-level interface, which may be more efficient for
+some use cases.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="open_spiel/python/policy.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

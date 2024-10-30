@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="user__specified__type_8h" kind="file" language="C++">
+    <compoundname>user_specified_type.h</compoundname>
+    <includedby refid="base_t_8h" local="yes">open_spiel/games/SG/baseT.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>open_spiel/games/SG/baseT.cc</label>
+        <link refid="base_t_8cc"/>
+      </node>
+      <node id="2">
+        <label>open_spiel/games/SG/baseT.h</label>
+        <link refid="base_t_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel/games/SG/baseT_utils.cc</label>
+        <link refid="base_t__utils_8cc"/>
+      </node>
+      <node id="6">
+        <label>open_spiel/games/SG/kbg_test.cc</label>
+        <link refid="kbg__test_8cc"/>
+      </node>
+      <node id="7">
+        <label>open_spiel/games/SG/ki_bo_gung.cc</label>
+        <link refid="ki__bo__gung_8cc"/>
+      </node>
+      <node id="5">
+        <label>open_spiel/games/SG/ki_bo_gung.h</label>
+        <link refid="ki__bo__gung_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel/games/SG/user_specified_type.h</label>
+        <link refid="user__specified__type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceopen__spiel">open_spiel</innernamespace>
+    <innernamespace refid="namespaceopen__spiel_1_1base_t">open_spiel::baseT</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>OPEN_SPIEL_GAMES_SG_BASETYPE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPEN_SPIEL_GAMES_SG_BASETYPE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel" kindref="compound">open_spiel</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">baseT<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5" kindref="member">GroundType</ref><sp/>{<ref refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a7e89b06b9731c34b44613c5d73b23b77" kindref="member">GT_Normal</ref><sp/>=<sp/>0,<sp/><ref refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a547d91a883e33e15b821e0430734c4a2" kindref="member">GT_CannotEnter</ref><sp/>=<sp/>1,<sp/><ref refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a86190289987c5d404dea69ee72253ff5" kindref="member">GT_None</ref><sp/>=<sp/>-1,<sp/>};</highlight></codeline>
+<codeline lineno="8" refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08f" kindref="member">UnitClass</ref><sp/>{<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faa9a80237c33d0f32418b2a9b550f6943" kindref="member">C0</ref><sp/>=<sp/>0,<sp/><ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa8bf3f5f52869f02ff487444372baef73" kindref="member">C1</ref>,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fadac354e707cc3373a29db4e6dd1ffd7e" kindref="member">C2</ref>,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faffcc08fd8a4101cb58455a3054f1ed6a" kindref="member">C3</ref>,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa27871b92c8fc7f8668d8b1b0ff98cd47" kindref="member">C4</ref>,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa4671c0ad808e3ae8e69909a7be337b49" kindref="member">C5</ref>,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa945a79cc5ed450f9957ef039287120cd" kindref="member">C6</ref>,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa87dc09c9f727d321faefacb12e4ad596" kindref="member">C7</ref>,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fad3a1198c8dc9fcd6a229f29019e39106" kindref="member">C8</ref>,<ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa48786a71e0586f1e86e28b0b75f65b29" kindref="member">C9</ref>,<sp/><ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa3808b5cb3d3d4780d572f6d8f03788c5" kindref="member">CNone</ref><sp/>=<sp/>-1,};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>baseT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>open_spiel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>OPEN_SPIEL_GAMES_SG_BASETYPE_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/games/SG/user_specified_type.h"/>
+  </compounddef>
+</doxygen>

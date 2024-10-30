@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="structopen__spiel_1_1_i_i_g_observation_type" kind="struct" language="C++" prot="public">
+    <compoundname>open_spiel::IIGObservationType</compoundname>
+    <includes refid="observer_8h" local="no">observer.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structopen__spiel_1_1_i_i_g_observation_type_1a639a6f0272beb5003daa089bc6694288" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::IIGObservationType::public_info</definition>
+        <argsstring></argsstring>
+        <name>public_info</name>
+        <qualifiedname>open_spiel::IIGObservationType::public_info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="273" column="8" bodyfile="open_spiel/observer.h" bodystart="273" bodyend="-1"/>
+        <referencedby refid="structopen__spiel_1_1_i_i_g_observation_type_1a8718861a400799643d18747be14a62bb" compoundref="observer_8cc" startline="324" endline="328">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_i_i_g_observation_type_1a47dbc867f5d4ceabc0aa57af2c3d2989" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::IIGObservationType::perfect_recall</definition>
+        <argsstring></argsstring>
+        <name>perfect_recall</name>
+        <qualifiedname>open_spiel::IIGObservationType::perfect_recall</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="278" column="8" bodyfile="open_spiel/observer.h" bodystart="278" bodyend="-1"/>
+        <referencedby refid="structopen__spiel_1_1_i_i_g_observation_type_1a8718861a400799643d18747be14a62bb" compoundref="observer_8cc" startline="324" endline="328">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_i_i_g_observation_type_1a45ea0f7c2d1ccd4d5ce21884bd417623" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceopen__spiel_1aa9281a1c15b90072251b89cdf81b6b1a" kindref="member">PrivateInfoType</ref></type>
+        <definition>PrivateInfoType open_spiel::IIGObservationType::private_info</definition>
+        <argsstring></argsstring>
+        <name>private_info</name>
+        <qualifiedname>open_spiel::IIGObservationType::private_info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="281" column="19" bodyfile="open_spiel/observer.h" bodystart="281" bodyend="-1"/>
+        <referencedby refid="structopen__spiel_1_1_i_i_g_observation_type_1a8718861a400799643d18747be14a62bb" compoundref="observer_8cc" startline="324" endline="328">operator==</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structopen__spiel_1_1_i_i_g_observation_type_1a8718861a400799643d18747be14a62bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::IIGObservationType::operator==</definition>
+        <argsstring>(const IIGObservationType &amp;)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>open_spiel::IIGObservationType::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="structopen__spiel_1_1_i_i_g_observation_type" kindref="compound">IIGObservationType</ref> &amp;</type>
+          <defname>other</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="283" column="8" bodyfile="open_spiel/observer.cc" bodystart="324" bodyend="328"/>
+        <references refid="structopen__spiel_1_1_i_i_g_observation_type_1a47dbc867f5d4ceabc0aa57af2c3d2989" compoundref="observer_8h" startline="278">perfect_recall</references>
+        <references refid="structopen__spiel_1_1_i_i_g_observation_type_1a45ea0f7c2d1ccd4d5ce21884bd417623" compoundref="observer_8h" startline="281">private_info</references>
+        <references refid="structopen__spiel_1_1_i_i_g_observation_type_1a639a6f0272beb5003daa089bc6694288" compoundref="observer_8h" startline="273">public_info</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::IIGObservationType</label>
+        <link refid="structopen__spiel_1_1_i_i_g_observation_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.h" line="271" column="1" bodyfile="open_spiel/observer.h" bodystart="271" bodyend="284"/>
+    <listofallmembers>
+      <member refid="structopen__spiel_1_1_i_i_g_observation_type_1a8718861a400799643d18747be14a62bb" prot="public" virt="non-virtual"><scope>open_spiel::IIGObservationType</scope><name>operator==</name></member>
+      <member refid="structopen__spiel_1_1_i_i_g_observation_type_1a47dbc867f5d4ceabc0aa57af2c3d2989" prot="public" virt="non-virtual"><scope>open_spiel::IIGObservationType</scope><name>perfect_recall</name></member>
+      <member refid="structopen__spiel_1_1_i_i_g_observation_type_1a45ea0f7c2d1ccd4d5ce21884bd417623" prot="public" virt="non-virtual"><scope>open_spiel::IIGObservationType</scope><name>private_info</name></member>
+      <member refid="structopen__spiel_1_1_i_i_g_observation_type_1a639a6f0272beb5003daa089bc6694288" prot="public" virt="non-virtual"><scope>open_spiel::IIGObservationType</scope><name>public_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

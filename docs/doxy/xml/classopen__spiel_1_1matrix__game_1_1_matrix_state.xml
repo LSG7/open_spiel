@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1matrix__game_1_1_matrix_state" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::matrix_game::MatrixState</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_n_f_g_state" prot="public" virt="non-virtual">open_spiel::NFGState</basecompoundref>
+    <includes refid="matrix__game_8h" local="no">matrix_game.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1af82a5807da932fa960d50402d96830b3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>std::vector&lt;Action&gt; open_spiel::matrix_game::MatrixState::joint_move_</definition>
+        <argsstring></argsstring>
+        <name>joint_move_</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::joint_move_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="226" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="226" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a0f2659bd1acc8069fc31f8f890e67d97" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" kindref="compound">MatrixGame</ref> *</type>
+        <definition>const MatrixGame* open_spiel::matrix_game::MatrixState::matrix_game_</definition>
+        <argsstring></argsstring>
+        <name>matrix_game_</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::matrix_game_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="227" column="20" bodyfile="open_spiel/matrix_game.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a49bc7d4037cc059ed50d1d9a128fda70" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::matrix_game::MatrixState::MatrixState</definition>
+        <argsstring>(std::shared_ptr&lt; const Game &gt; game)</argsstring>
+        <name>MatrixState</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::MatrixState</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+          <declname>game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="174" column="12" bodyfile="open_spiel/matrix_game.cc" bodystart="88" bodyend="90"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a1554bebfbd31a4bd7c02994f2e2bb95d" compoundref="matrix__game_8h" startline="211" endline="213">Clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ae39b1e397e4220e8b5458e9f2767dd84" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::matrix_game::MatrixState::MatrixState</definition>
+        <argsstring>(const MatrixState &amp;)=default</argsstring>
+        <name>MatrixState</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::MatrixState</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_state" kindref="compound">MatrixState</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="175" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>std::vector&lt; Action &gt; open_spiel::matrix_game::MatrixState::LegalActions</definition>
+        <argsstring>(Player player) const override</argsstring>
+        <name>LegalActions</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::LegalActions</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_sim_move_state_1a8e2a133c55b0e52662aa547b57a30ada">LegalActions</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="177" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="177" bodyend="187"/>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" compoundref="matrix__game_8h" startline="200" endline="200">IsTerminal</references>
+        <references refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" compoundref="matrix__game_8h" startline="34">open_spiel::matrix_game::kRowPlayer</references>
+        <references refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a98b448895a60295bcb57104abae3e302" compoundref="spiel__globals_8h" startline="30">open_spiel::kSimultaneousPlayerId</references>
+        <references refid="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" compoundref="simultaneous__move__game_8cc" startline="51" endline="60">open_spiel::SimMoveState::LegalFlatJointActions</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" compoundref="matrix__game_8h" startline="111" endline="111">open_spiel::matrix_game::MatrixGame::NumCols</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" compoundref="matrix__game_8h" startline="110" endline="110">open_spiel::matrix_game::MatrixGame::NumRows</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::matrix_game::MatrixState::ToString</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToString</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::ToString</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a0c1bce556da5c9d7314152a2e764198e">ToString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="189" column="15" bodyfile="open_spiel/matrix_game.cc" bodystart="92" bodyend="116"/>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" compoundref="matrix__game_8h" startline="191" endline="198">ActionToString</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aee28d3a9f554a4997ea9bf212a189de9" compoundref="matrix__game_8h" startline="115" endline="117">open_spiel::matrix_game::MatrixGame::ColUtility</references>
+        <references refid="classopen__spiel_1_1_state_1a148bf75c2afdad5489b684d2d7014aab" compoundref="spiel_8h" startline="421" endline="421">open_spiel::State::HistoryString</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" compoundref="matrix__game_8h" startline="200" endline="200">IsTerminal</references>
+        <references refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">open_spiel::SimMoveState::LegalActions</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" compoundref="matrix__game_8h" startline="111" endline="111">open_spiel::matrix_game::MatrixGame::NumCols</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" compoundref="matrix__game_8h" startline="110" endline="110">open_spiel::matrix_game::MatrixGame::NumRows</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43" compoundref="matrix__game_8h" startline="202" endline="209">Returns</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a34096a7e7b15983b1b7964413e7dbc25" compoundref="matrix__game_8h" startline="112" endline="114">open_spiel::matrix_game::MatrixGame::RowUtility</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::matrix_game::MatrixState::ActionToString</definition>
+        <argsstring>(Player player, Action action_id) const override</argsstring>
+        <name>ActionToString</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::ActionToString</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477">ActionToString</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="191" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="191" bodyend="198"/>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a5fe875f0c31f64d520e73beba307172f" compoundref="matrix__game_8h" startline="133" endline="135">open_spiel::matrix_game::MatrixGame::ColActionName</references>
+        <references refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" compoundref="simultaneous__move__game_8cc" startline="62" endline="76">open_spiel::SimMoveState::FlatJointActionToString</references>
+        <references refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" compoundref="matrix__game_8h" startline="34">open_spiel::matrix_game::kRowPlayer</references>
+        <references refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a98b448895a60295bcb57104abae3e302" compoundref="spiel__globals_8h" startline="30">open_spiel::kSimultaneousPlayerId</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a248bd8d010f9aebb9e16cdd9e5c5a242" compoundref="matrix__game_8h" startline="130" endline="132">open_spiel::matrix_game::MatrixGame::RowActionName</references>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::matrix_game::MatrixState::IsTerminal</definition>
+        <argsstring>() const override</argsstring>
+        <name>IsTerminal</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::IsTerminal</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c">IsTerminal</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="200" column="8" bodyfile="open_spiel/matrix_game.h" bodystart="200" bodyend="200"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" compoundref="matrix__game_8h" startline="177" endline="187">LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43" compoundref="matrix__game_8h" startline="202" endline="209">Returns</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; open_spiel::matrix_game::MatrixState::Returns</definition>
+        <argsstring>() const override</argsstring>
+        <name>Returns</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::Returns</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a0de4bf25d3763fd7ad920fb4eced5219">Returns</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="202" column="15" bodyfile="open_spiel/matrix_game.h" bodystart="202" bodyend="209"/>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aee28d3a9f554a4997ea9bf212a189de9" compoundref="matrix__game_8h" startline="115" endline="117">open_spiel::matrix_game::MatrixGame::ColUtility</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" compoundref="matrix__game_8h" startline="200" endline="200">IsTerminal</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a34096a7e7b15983b1b7964413e7dbc25" compoundref="matrix__game_8h" startline="112" endline="114">open_spiel::matrix_game::MatrixGame::RowUtility</references>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a1554bebfbd31a4bd7c02994f2e2bb95d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; State &gt; open_spiel::matrix_game::MatrixState::Clone</definition>
+        <argsstring>() const override</argsstring>
+        <name>Clone</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::Clone</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a252ac372f002809f41be1003e50f9ca4">Clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="211" column="19" bodyfile="open_spiel/matrix_game.h" bodystart="211" bodyend="213"/>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a49bc7d4037cc059ed50d1d9a128fda70" compoundref="matrix__game_8cc" startline="88" endline="90">MatrixState</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::matrix_game::MatrixState::DoApplyActions</definition>
+        <argsstring>(const std::vector&lt; Action &gt; &amp;moves) override</argsstring>
+        <name>DoApplyActions</name>
+        <qualifiedname>open_spiel::matrix_game::MatrixState::DoApplyActions</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_sim_move_state_1a944ce1b7f2b910580ac8691a8763337e">DoApplyActions</reimplements>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>moves</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="216" column="8" bodyfile="open_spiel/matrix_game.h" bodystart="216" bodyend="223"/>
+        <references refid="namespaceopen__spiel_1_1matrix__game_1a02db67a6c4c253329c156106f8600c4c" compoundref="matrix__game_8h" startline="35">open_spiel::matrix_game::kColPlayer</references>
+        <references refid="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" compoundref="matrix__game_8h" startline="34">open_spiel::matrix_game::kRowPlayer</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a4359060cedf4f847098ae3713486082d" compoundref="matrix__game_8h" startline="111" endline="111">open_spiel::matrix_game::MatrixGame::NumCols</references>
+        <references refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1aa82e7aca0d95655bfefb51762b222389" compoundref="matrix__game_8h" startline="110" endline="110">open_spiel::matrix_game::MatrixGame::NumRows</references>
+        <references refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" compoundref="spiel__utils_8h" startline="259">SPIEL_CHECK_EQ</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>open_spiel::NFGState</label>
+        <link refid="classopen__spiel_1_1_n_f_g_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::SimMoveState</label>
+        <link refid="classopen__spiel_1_1_sim_move_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel::State</label>
+        <link refid="classopen__spiel_1_1_state"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::matrix_game::MatrixState</label>
+        <link refid="classopen__spiel_1_1matrix__game_1_1_matrix_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>open_spiel::NFGState</label>
+        <link refid="classopen__spiel_1_1_n_f_g_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::SimMoveState</label>
+        <link refid="classopen__spiel_1_1_sim_move_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel::State</label>
+        <link refid="classopen__spiel_1_1_state"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::matrix_game::MatrixState</label>
+        <link refid="classopen__spiel_1_1matrix__game_1_1_matrix_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/matrix_game.h" line="172" column="1" bodyfile="open_spiel/matrix_game.h" bodystart="172" bodyend="228"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_state_1af8cc963b423ec2a56e6b5292a8d9f6df" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ActionsConsistentWithInformationFrom</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0467f66e4c157eab1aa4140bcb856e3f" prot="public" virt="non-virtual" ambiguityscope="open_spiel::NFGState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ApplyAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ApplyActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a479150baad280f0f236d2cced41ddc13" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ApplyActionsWithLegalityChecks</name></member>
+      <member refid="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ApplyActionWithLegalityCheck</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a8ea7b3b80e5fc90c6058087342f180a1" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ApplyFlatJointAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa177f864d35f39d38aaa7551e21b9b3b" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_state_1ae86a2e3710382c2aa7383abe21934825" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>Child</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a1554bebfbd31a4bd7c02994f2e2bb95d" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>Clone</name></member>
+      <member refid="classopen__spiel_1_1_n_f_g_state_1aee8769e63a7b5604e86c2e98faf51992" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>CurrentPlayer</name></member>
+      <member refid="classopen__spiel_1_1_state_1a51e334578eba7ca7ce10518964021179" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>DistributionSupport</name></member>
+      <member refid="classopen__spiel_1_1_state_1af2b72b90cb27986377e1867bb713f07d" prot="protected" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>DoApplyAction</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" prot="protected" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>DoApplyActions</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>FlatJointActionToActions</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>FlatJointActionToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a61d84cb66edc9a12fa6d6f46873411d5" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>FullHistory</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>game_</name></member>
+      <member refid="classopen__spiel_1_1_state_1a7fff989fb01a5d93e849ed6fe406cc3f" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>GetGame</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0a85ab6f45efdcf19d00531f7c59a3e0" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>GetHistoriesConsistentWithInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1aaf3da3c4030a5563d84ec198f089cd87" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>GetHistoriesConsistentWithInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad128b0fe37fa9439328ad27a7ba11cbd" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>History</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>history_</name></member>
+      <member refid="classopen__spiel_1_1_state_1a148bf75c2afdad5489b684d2d7014aab" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>HistoryString</name></member>
+      <member refid="classopen__spiel_1_1_n_f_g_state_1a5643c5f4b1e20c36a72c85b1e85e5de9" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>InformationStateString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a75f81af7266685a7412960554e3d792e" prot="public" virt="non-virtual" ambiguityscope="open_spiel::SimMoveState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>InformationStateString</name></member>
+      <member refid="classopen__spiel_1_1_n_f_g_state_1a4e2d82731a467bd83e5046945f7971d4" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" prot="public" virt="non-virtual" ambiguityscope="open_spiel::SimMoveState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" prot="public" virt="non-virtual" ambiguityscope="open_spiel::SimMoveState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a9753ec678915734fe38f4e86e3309894" prot="public" virt="virtual" ambiguityscope="open_spiel::SimMoveState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>IsChanceNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1acb22b26b3e8134b4380ff329562cf4b2" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>IsInitialState</name></member>
+      <member refid="classopen__spiel_1_1_state_1a9fd53f8e7abb3d779b1a3a135ec306f5" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>IsMeanFieldNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>IsPlayerActing</name></member>
+      <member refid="classopen__spiel_1_1_state_1a53434c13daf176733c44502734acf320" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>IsPlayerNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>IsSimultaneousNode</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>IsTerminal</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1af82a5807da932fa960d50402d96830b3" prot="private" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>joint_move_</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>LegalActions</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" prot="public" virt="virtual" ambiguityscope="open_spiel::NFGState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>LegalActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1ac024b6c48d8b99a2004532362484efe3" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>LegalActionsMask</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4f481e63a08d15a060bc35d8ad6e448c" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>LegalActionsMask</name></member>
+      <member refid="classopen__spiel_1_1_state_1a610b46ccda2eefd984a3716a5219f78a" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>LegalChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>LegalFlatJointActions</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a0f2659bd1acc8069fc31f8f890e67d97" prot="private" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>matrix_game_</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a49bc7d4037cc059ed50d1d9a128fda70" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>MatrixState</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ae39b1e397e4220e8b5458e9f2767dd84" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>MatrixState</name></member>
+      <member refid="classopen__spiel_1_1_state_1ac721b1cb2b8dccaec4350278fc5cb724" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>MeanFieldPopulation</name></member>
+      <member refid="classopen__spiel_1_1_state_1a127ada084056b47d96839440dbbe3a2f" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>move_number_</name></member>
+      <member refid="classopen__spiel_1_1_state_1aea56c32f2cbd62b2a6a280010ddd54ee" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>MoveNumber</name></member>
+      <member refid="classopen__spiel_1_1_n_f_g_state_1a6fcf2ffaa15d152a90995ec33ea5a261" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>NFGState</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3a374a3e9cbc2993efec3ae375fb1e93" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>num_distinct_actions_</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" prot="protected" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>num_players_</name></member>
+      <member refid="classopen__spiel_1_1_state_1ada4c2b6afc305febbe7e52bc569e005e" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a43f01fe8bdbb6292407feb51bc535d4f" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1_n_f_g_state_1a8b07a721ec586c32138b105423639f58" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ObservationString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" prot="public" virt="non-virtual" ambiguityscope="open_spiel::SimMoveState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>ObservationString</name></member>
+      <member refid="classopen__spiel_1_1_n_f_g_state_1a210018fdbd48678de3de3d882c2de701" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" prot="public" virt="non-virtual" ambiguityscope="open_spiel::SimMoveState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" prot="public" virt="non-virtual" ambiguityscope="open_spiel::SimMoveState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1adc0a7f028252d613b8a4ccb6c6b0de15" prot="public" virt="non-virtual" ambiguityscope="open_spiel::SimMoveState::"><scope>open_spiel::matrix_game::MatrixState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3e336272587c1c62a8455412b7105ebf" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab32ea9872b81db0383b9d7206d1ae3f9" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>PlayerReturn</name></member>
+      <member refid="classopen__spiel_1_1_state_1a510f85123de13949d34186755753e742" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>PlayerReward</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1bee92c295ffd0404712cd6004ab9df0" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ResampleFromInfostate</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>Returns</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>Rewards</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1a6bf403d6d8bcc41b36634a7fa8b1eb" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a984f5edee8769835a7c322701675394b" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>SimMoveState</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1ab67c57bafc83f642e1fad5a5365730c0" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>SimMoveState</name></member>
+      <member refid="classopen__spiel_1_1_state_1a246bd5cf1da14d3ab69d479aea0edc03" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>State</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4c77fe7bf4738cb8bd3bbd6dfadddf9c" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>State</name></member>
+      <member refid="classopen__spiel_1_1_state_1acbd1f66c9496f350693594ad38fc7907" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>StringToAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1abd0bac25b0d9ced7f5f1009fd56ec1ae" prot="public" virt="non-virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>StringToAction</name></member>
+      <member refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab355df7c0595648cb657eb9aa1ab9a50" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>UndoAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0e4105f5d7a425bc9d7393ae56f1f854" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>UpdateDistribution</name></member>
+      <member refid="classopen__spiel_1_1_state_1abef057180744ea28a0cd85289ce0761e" prot="public" virt="virtual"><scope>open_spiel::matrix_game::MatrixState</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

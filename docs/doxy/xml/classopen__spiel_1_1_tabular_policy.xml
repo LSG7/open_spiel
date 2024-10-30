@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_tabular_policy" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::TabularPolicy</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_policy" prot="public" virt="non-virtual">open_spiel::Policy</basecompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1_partial_tabular_policy" prot="public" virt="non-virtual">open_spiel::PartialTabularPolicy</derivedcompoundref>
+    <includes refid="policy_8h" local="no">policy.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, <ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref> &gt;</type>
+        <definition>std::unordered_map&lt;std::string, ActionsAndProbs&gt; open_spiel::TabularPolicy::policy_table_</definition>
+        <argsstring></argsstring>
+        <name>policy_table_</name>
+        <qualifiedname>open_spiel::TabularPolicy::policy_table_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="279" column="22" bodyfile="open_spiel/policy.h" bodystart="279" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_partial_tabular_policy_1a10ef080e41044e62f0704153d89ca016" compoundref="policy_8cc" startline="246" endline="253">open_spiel::PartialTabularPolicy::GetStatePolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_partial_tabular_policy_1a4b45e04a9f0e67e35a0971ce79dba2d5" compoundref="policy_8cc" startline="255" endline="263">open_spiel::PartialTabularPolicy::GetStatePolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_partial_tabular_policy_1a0dcbfbc352298c4180bfabff8ac9d61a" compoundref="policy_8cc" startline="265" endline="273">open_spiel::PartialTabularPolicy::GetStatePolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a8eda4e771e35eacab6ec90b26b8aff15" compoundref="policy_8h" startline="189" endline="196">GetStatePolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1aadd48620dda02dd41ddabbe9094be3cb" compoundref="policy_8h" startline="239" endline="244">ImportPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1aeb80cea37a604e77f71a6a7c25c5d6de" compoundref="policy_8h" startline="263" endline="265">PolicyTable</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1ac085bf612ba9b17e99f502ccb821b204" compoundref="policy_8h" startline="267" endline="269">PolicyTable</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a933b8698b3924573c2f1c55b31f3c7a1" compoundref="policy_8h" startline="198" endline="234">Serialize</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1aecf68dd4e96c21ef396b9c539c81e801" compoundref="policy_8h" startline="249" endline="256">SetProb</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a9e49a297648e0c5493b6d637b49ab97a" compoundref="policy_8h" startline="258" endline="261">SetStatePolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a7934bc1202dd35cf11d4bc9c246bedb7" compoundref="policy_8h" startline="271" endline="271">size</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a8939f2f427c387090d5b82ccaf9b48cc" compoundref="policy_8h" startline="167" endline="171">TabularPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a0d077c4fd7e808b1ff7281bd655e92f2" compoundref="policy_8h" startline="176" endline="187">TabularPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a66508a71bd025c53277794d08ea9b20d" compoundref="policy_8cc" startline="198" endline="208">ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a1e05d745134aee24d272f29e883d51e6" compoundref="policy_8cc" startline="210" endline="229">ToStringSorted</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a284747d207ef0f016c771401e074c54a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::TabularPolicy::TabularPolicy</definition>
+        <argsstring>()=default</argsstring>
+        <name>TabularPolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::TabularPolicy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="160" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1af1b69b6752677681f9c50392197838ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::TabularPolicy::TabularPolicy</definition>
+        <argsstring>(const Game &amp;game)</argsstring>
+        <name>TabularPolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::TabularPolicy</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="161" column="3" bodyfile="open_spiel/policy.cc" bodystart="158" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1ab3643d854dc4414606c2761a6908aac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::TabularPolicy::TabularPolicy</definition>
+        <argsstring>(const TabularPolicy &amp;other)=default</argsstring>
+        <name>TabularPolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::TabularPolicy</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_tabular_policy" kindref="compound">TabularPolicy</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="162" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a99e9d19a6674d0e7631087c3838ee0d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::TabularPolicy::TabularPolicy</definition>
+        <argsstring>(const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;table)</argsstring>
+        <name>TabularPolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::TabularPolicy</qualifiedname>
+        <param>
+          <type>const std::unordered_map&lt; std::string, <ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref> &gt; &amp;</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="163" column="3" bodyfile="open_spiel/policy.h" bodystart="163" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a8939f2f427c387090d5b82ccaf9b48cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::TabularPolicy::TabularPolicy</definition>
+        <argsstring>(const Game &amp;game, const Policy &amp;policy)</argsstring>
+        <name>TabularPolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::TabularPolicy</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>game</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_policy" kindref="compound">Policy</ref> &amp;</type>
+          <declname>policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="167" column="3" bodyfile="open_spiel/policy.h" bodystart="167" bodyend="171"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a8eda4e771e35eacab6ec90b26b8aff15" compoundref="policy_8h" startline="189" endline="196">GetStatePolicy</references>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a0d077c4fd7e808b1ff7281bd655e92f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::TabularPolicy::TabularPolicy</definition>
+        <argsstring>(const TabularPolicy &amp;dummy_policy, const std::unordered_map&lt; std::string, Action &gt; &amp;action_map)</argsstring>
+        <name>TabularPolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::TabularPolicy</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_tabular_policy" kindref="compound">TabularPolicy</ref> &amp;</type>
+          <declname>dummy_policy</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; std::string, <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>action_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="176" column="3" bodyfile="open_spiel/policy.h" bodystart="176" bodyend="187"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a8eda4e771e35eacab6ec90b26b8aff15" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref></type>
+        <definition>ActionsAndProbs open_spiel::TabularPolicy::GetStatePolicy</definition>
+        <argsstring>(const std::string &amp;info_state) const override</argsstring>
+        <name>GetStatePolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::GetStatePolicy</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_policy_1abbe4e1b820b5ca95e67b60de92d38370">GetStatePolicy</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>info_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="189" column="19" bodyfile="open_spiel/policy.h" bodystart="189" bodyend="196"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a8939f2f427c387090d5b82ccaf9b48cc" compoundref="policy_8h" startline="167" endline="171">TabularPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a933b8698b3924573c2f1c55b31f3c7a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::TabularPolicy::Serialize</definition>
+        <argsstring>(int double_precision=-1, std::string delimiter=&quot;&lt;~&gt;&quot;) const override</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>open_spiel::TabularPolicy::Serialize</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_policy_1a53e9086029e7365dc2f5d4a3fda33124">Serialize</reimplements>
+        <param>
+          <type>int</type>
+          <declname>double_precision</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>delimiter</declname>
+          <defval>&quot;&lt;~&gt;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="198" column="15" bodyfile="open_spiel/policy.h" bodystart="198" bodyend="234"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1aadd48620dda02dd41ddabbe9094be3cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::TabularPolicy::ImportPolicy</definition>
+        <argsstring>(const TabularPolicy &amp;other_policy)</argsstring>
+        <name>ImportPolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::ImportPolicy</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_tabular_policy" kindref="compound">TabularPolicy</ref> &amp;</type>
+          <declname>other_policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="239" column="8" bodyfile="open_spiel/policy.h" bodystart="239" bodyend="244"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a9e49a297648e0c5493b6d637b49ab97a" compoundref="policy_8h" startline="258" endline="261">SetStatePolicy</references>
+        <referencedby refid="namespaceopen__spiel_1a9d4e65df2e25cb6f13ab027a35419458" compoundref="policy_8cc" startline="534" endline="547">open_spiel::ToJointTabularPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1aecf68dd4e96c21ef396b9c539c81e801" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::TabularPolicy::SetProb</definition>
+        <argsstring>(const std::string &amp;info_state, Action action, double prob)</argsstring>
+        <name>SetProb</name>
+        <qualifiedname>open_spiel::TabularPolicy::SetProb</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>info_state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>prob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="249" column="8" bodyfile="open_spiel/policy.h" bodystart="249" bodyend="256"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+        <references refid="namespaceopen__spiel_1af107cfba13b9ff637482f49799818200" compoundref="policy_8cc" startline="41" endline="49">open_spiel::SetProb</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a9e49a297648e0c5493b6d637b49ab97a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::TabularPolicy::SetStatePolicy</definition>
+        <argsstring>(const std::string &amp;info_state, const ActionsAndProbs &amp;state_policy)</argsstring>
+        <name>SetStatePolicy</name>
+        <qualifiedname>open_spiel::TabularPolicy::SetStatePolicy</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>info_state</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref> &amp;</type>
+          <declname>state_policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="258" column="8" bodyfile="open_spiel/policy.h" bodystart="258" bodyend="261"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1aadd48620dda02dd41ddabbe9094be3cb" compoundref="policy_8h" startline="239" endline="244">ImportPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a869a3dd2e31acc33871b10af3ce370d0" compoundref="policy_8cc" startline="488" endline="518">open_spiel::ToTabularPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1aeb80cea37a604e77f71a6a7c25c5d6de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unordered_map&lt; std::string, <ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref> &gt; &amp;</type>
+        <definition>std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp; open_spiel::TabularPolicy::PolicyTable</definition>
+        <argsstring>()</argsstring>
+        <name>PolicyTable</name>
+        <qualifiedname>open_spiel::TabularPolicy::PolicyTable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="263" column="22" bodyfile="open_spiel/policy.h" bodystart="263" bodyend="265"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+        <referencedby refid="namespaceopen__spiel_1a9d4e65df2e25cb6f13ab027a35419458" compoundref="policy_8cc" startline="534" endline="547">open_spiel::ToJointTabularPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1ac085bf612ba9b17e99f502ccb821b204" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::unordered_map&lt; std::string, <ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref> &gt; &amp;</type>
+        <definition>const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp; open_spiel::TabularPolicy::PolicyTable</definition>
+        <argsstring>() const</argsstring>
+        <name>PolicyTable</name>
+        <qualifiedname>open_spiel::TabularPolicy::PolicyTable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="267" column="28" bodyfile="open_spiel/policy.h" bodystart="267" bodyend="269"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a7934bc1202dd35cf11d4bc9c246bedb7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::TabularPolicy::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>open_spiel::TabularPolicy::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="271" column="7" bodyfile="open_spiel/policy.h" bodystart="271" bodyend="271"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a66508a71bd025c53277794d08ea9b20d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::TabularPolicy::ToString</definition>
+        <argsstring>() const</argsstring>
+        <name>ToString</name>
+        <qualifiedname>open_spiel::TabularPolicy::ToString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="273" column="15" bodyfile="open_spiel/policy.cc" bodystart="198" bodyend="208"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_tabular_policy_1a1e05d745134aee24d272f29e883d51e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::TabularPolicy::ToStringSorted</definition>
+        <argsstring>() const</argsstring>
+        <name>ToStringSorted</name>
+        <qualifiedname>open_spiel::TabularPolicy::ToStringSorted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="276" column="15" bodyfile="open_spiel/policy.cc" bodystart="210" bodyend="229"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">policy_table_</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>open_spiel::PartialTabularPolicy</label>
+        <link refid="classopen__spiel_1_1_partial_tabular_policy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::Policy</label>
+        <link refid="classopen__spiel_1_1_policy"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::TabularPolicy</label>
+        <link refid="classopen__spiel_1_1_tabular_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>open_spiel::Policy</label>
+        <link refid="classopen__spiel_1_1_policy"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::TabularPolicy</label>
+        <link refid="classopen__spiel_1_1_tabular_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/policy.h" line="158" column="1" bodyfile="open_spiel/policy.h" bodystart="158" bodyend="280"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a8eda4e771e35eacab6ec90b26b8aff15" prot="public" virt="virtual"><scope>open_spiel::TabularPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_policy_1ab5b6ff779e99ea042f7bb261e78ed6c6" prot="public" virt="virtual" ambiguityscope="open_spiel::Policy::"><scope>open_spiel::TabularPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_policy_1a17e0b9275e629f68174168f6abfcb54b" prot="public" virt="virtual" ambiguityscope="open_spiel::Policy::"><scope>open_spiel::TabularPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_policy_1a65cde909235df749977cbaa0d3320186" prot="public" virt="virtual"><scope>open_spiel::TabularPolicy</scope><name>GetStatePolicyAsMap</name></member>
+      <member refid="classopen__spiel_1_1_policy_1ac4aa0cf8b821528b20fe70d0f30dbc4e" prot="public" virt="virtual"><scope>open_spiel::TabularPolicy</scope><name>GetStatePolicyAsMap</name></member>
+      <member refid="classopen__spiel_1_1_policy_1acd81eb036ef229697a18cebaa270083b" prot="public" virt="virtual"><scope>open_spiel::TabularPolicy</scope><name>GetStatePolicyAsParallelVectors</name></member>
+      <member refid="classopen__spiel_1_1_policy_1a9acb6d6cb2f40f5ad6ac5490a4ec618c" prot="public" virt="virtual"><scope>open_spiel::TabularPolicy</scope><name>GetStatePolicyAsParallelVectors</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1aadd48620dda02dd41ddabbe9094be3cb" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>ImportPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" prot="protected" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>policy_table_</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1aeb80cea37a604e77f71a6a7c25c5d6de" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>PolicyTable</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1ac085bf612ba9b17e99f502ccb821b204" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>PolicyTable</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a933b8698b3924573c2f1c55b31f3c7a1" prot="public" virt="virtual"><scope>open_spiel::TabularPolicy</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1aecf68dd4e96c21ef396b9c539c81e801" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>SetProb</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a9e49a297648e0c5493b6d637b49ab97a" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>SetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a7934bc1202dd35cf11d4bc9c246bedb7" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>size</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a284747d207ef0f016c771401e074c54a" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1af1b69b6752677681f9c50392197838ca" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1ab3643d854dc4414606c2761a6908aac7" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a99e9d19a6674d0e7631087c3838ee0d8" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a8939f2f427c387090d5b82ccaf9b48cc" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a0d077c4fd7e808b1ff7281bd655e92f2" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a66508a71bd025c53277794d08ea9b20d" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a1e05d745134aee24d272f29e883d51e6" prot="public" virt="non-virtual"><scope>open_spiel::TabularPolicy</scope><name>ToStringSorted</name></member>
+      <member refid="classopen__spiel_1_1_policy_1ada2523d991dccc11adc1320d28423629" prot="public" virt="virtual"><scope>open_spiel::TabularPolicy</scope><name>~Policy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

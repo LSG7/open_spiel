@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_game_registerer" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::GameRegisterer</compoundname>
+    <includes refid="spiel_8h" local="no">spiel.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classopen__spiel_1_1_game_registerer_1ab80c0c1ef72439db9a7a5fbf28a03435" prot="public" static="no">
+        <type>std::function&lt; std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;(const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;params)&gt;</type>
+        <definition>using open_spiel::GameRegisterer::CreateFunc = 
+      std::function&lt;std::shared_ptr&lt;const Game&gt;(const GameParameters&amp; params)&gt;</definition>
+        <argsstring></argsstring>
+        <name>CreateFunc</name>
+        <qualifiedname>open_spiel::GameRegisterer::CreateFunc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1051" column="3" bodyfile="open_spiel/spiel.h" bodystart="1051" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_game_registerer_1ab27bd0cfcf8b9cd0425627751749c384" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::GameRegisterer::GameRegisterer</definition>
+        <argsstring>(const GameType &amp;game_type, CreateFunc creator)</argsstring>
+        <name>GameRegisterer</name>
+        <qualifiedname>open_spiel::GameRegisterer::GameRegisterer</qualifiedname>
+        <param>
+          <type>const <ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref> &amp;</type>
+          <declname>game_type</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_game_registerer_1ab80c0c1ef72439db9a7a5fbf28a03435" kindref="member">CreateFunc</ref></type>
+          <declname>creator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1054" column="3" bodyfile="open_spiel/spiel.cc" bodystart="139" bodyend="141"/>
+        <references refid="classopen__spiel_1_1_game_registerer_1a9087e5af855f413241a8ff7fba0dadeb" compoundref="spiel_8cc" startline="188" endline="191">RegisterGame</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_game_registerer_1a6e6f8091b1e3c521af50e71b0dce5717" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const Game &gt; open_spiel::GameRegisterer::CreateByName</definition>
+        <argsstring>(const std::string &amp;short_name, const GameParameters &amp;params)</argsstring>
+        <name>CreateByName</name>
+        <qualifiedname>open_spiel::GameRegisterer::CreateByName</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>short_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1056" column="26" bodyfile="open_spiel/spiel.cc" bodystart="143" bodyend="162"/>
+        <references refid="classopen__spiel_1_1_game_registerer_1a6a640935af5f3b93cf4a3ed2168b81d6" compoundref="spiel_8cc" startline="172" endline="174">GamesWithKnownIssues</references>
+        <references refid="classopen__spiel_1_1_game_registerer_1a2dd29263f74ac828f1c9c4ee0161b04f" compoundref="spiel_8cc" startline="164" endline="170">RegisteredNames</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="namespaceopen__spiel_1a041180755b50ef57ca83e4ca9f3827b0" compoundref="spiel_8cc" startline="231" endline="239">open_spiel::LoadGame</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ab464ff98519dd7819e7cd8fc30234716" compoundref="spiel_8cc" startline="241" endline="256">open_spiel::LoadGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_registerer_1a6a640935af5f3b93cf4a3ed2168b81d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; open_spiel::GameRegisterer::GamesWithKnownIssues</definition>
+        <argsstring>()</argsstring>
+        <name>GamesWithKnownIssues</name>
+        <qualifiedname>open_spiel::GameRegisterer::GamesWithKnownIssues</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1059" column="22" bodyfile="open_spiel/spiel.cc" bodystart="172" bodyend="174"/>
+        <referencedby refid="classopen__spiel_1_1_game_registerer_1a6e6f8091b1e3c521af50e71b0dce5717" compoundref="spiel_8cc" startline="143" endline="162">CreateByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_registerer_1a2dd29263f74ac828f1c9c4ee0161b04f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; open_spiel::GameRegisterer::RegisteredNames</definition>
+        <argsstring>()</argsstring>
+        <name>RegisteredNames</name>
+        <qualifiedname>open_spiel::GameRegisterer::RegisteredNames</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1060" column="22" bodyfile="open_spiel/spiel.cc" bodystart="164" bodyend="170"/>
+        <referencedby refid="classopen__spiel_1_1_game_registerer_1a6e6f8091b1e3c521af50e71b0dce5717" compoundref="spiel_8cc" startline="143" endline="162">CreateByName</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a5fc96e037a90ad323529c4f55d7d2cce" compoundref="spiel_8cc" startline="197" endline="199">open_spiel::RegisteredGames</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_registerer_1ab0c87d50dfa049e12c70c2a665def26c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref> &gt;</type>
+        <definition>std::vector&lt; GameType &gt; open_spiel::GameRegisterer::RegisteredGames</definition>
+        <argsstring>()</argsstring>
+        <name>RegisteredGames</name>
+        <qualifiedname>open_spiel::GameRegisterer::RegisteredGames</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1061" column="22" bodyfile="open_spiel/spiel.cc" bodystart="176" bodyend="182"/>
+        <referencedby refid="namespaceopen__spiel_1a79f969c1807e578a2090d314ab71bf68" compoundref="spiel_8cc" startline="201" endline="203">open_spiel::RegisteredGameTypes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_registerer_1a656bdcb02ce81779bb05dda3fb2e7936" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameRegisterer::IsValidName</definition>
+        <argsstring>(const std::string &amp;short_name)</argsstring>
+        <name>IsValidName</name>
+        <qualifiedname>open_spiel::GameRegisterer::IsValidName</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>short_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1062" column="15" bodyfile="open_spiel/spiel.cc" bodystart="184" bodyend="186"/>
+        <referencedby refid="namespaceopen__spiel_1adbb556e9d12546dd17acfe8c3887b869" compoundref="spiel_8cc" startline="193" endline="195">open_spiel::IsGameRegistered</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_registerer_1a9087e5af855f413241a8ff7fba0dadeb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::GameRegisterer::RegisterGame</definition>
+        <argsstring>(const GameType &amp;game_type, CreateFunc creator)</argsstring>
+        <name>RegisterGame</name>
+        <qualifiedname>open_spiel::GameRegisterer::RegisterGame</qualifiedname>
+        <param>
+          <type>const <ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref> &amp;</type>
+          <declname>game_type</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_game_registerer_1ab80c0c1ef72439db9a7a5fbf28a03435" kindref="member">CreateFunc</ref></type>
+          <declname>creator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1063" column="15" bodyfile="open_spiel/spiel.cc" bodystart="188" bodyend="191"/>
+        <references refid="structopen__spiel_1_1_game_type_1a7dc97c2b88971ea7c5180d3c2fe29cf1" compoundref="spiel_8h" startline="52">open_spiel::GameType::short_name</references>
+        <referencedby refid="classopen__spiel_1_1_game_registerer_1ab27bd0cfcf8b9cd0425627751749c384" compoundref="spiel_8cc" startline="139" endline="141">GameRegisterer</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_game_registerer_1a21fff5360af08dfee89e4ccbbd49d6ae" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; std::string, std::pair&lt; <ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref>, <ref refid="classopen__spiel_1_1_game_registerer_1ab80c0c1ef72439db9a7a5fbf28a03435" kindref="member">CreateFunc</ref> &gt; &gt; &amp;</type>
+        <definition>static std::map&lt; std::string, std::pair&lt; GameType, CreateFunc &gt; &gt; &amp; open_spiel::GameRegisterer::factories</definition>
+        <argsstring>()</argsstring>
+        <name>factories</name>
+        <qualifiedname>open_spiel::GameRegisterer::factories</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="1070" column="19" bodyfile="open_spiel/spiel.h" bodystart="1070" bodyend="1073"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::GameRegisterer</label>
+        <link refid="classopen__spiel_1_1_game_registerer"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel.h" line="1049" column="1" bodyfile="open_spiel/spiel.h" bodystart="1049" bodyend="1074"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_game_registerer_1a6e6f8091b1e3c521af50e71b0dce5717" prot="public" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>CreateByName</name></member>
+      <member refid="classopen__spiel_1_1_game_registerer_1ab80c0c1ef72439db9a7a5fbf28a03435" prot="public" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>CreateFunc</name></member>
+      <member refid="classopen__spiel_1_1_game_registerer_1a21fff5360af08dfee89e4ccbbd49d6ae" prot="private" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>factories</name></member>
+      <member refid="classopen__spiel_1_1_game_registerer_1ab27bd0cfcf8b9cd0425627751749c384" prot="public" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>GameRegisterer</name></member>
+      <member refid="classopen__spiel_1_1_game_registerer_1a6a640935af5f3b93cf4a3ed2168b81d6" prot="public" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>GamesWithKnownIssues</name></member>
+      <member refid="classopen__spiel_1_1_game_registerer_1a656bdcb02ce81779bb05dda3fb2e7936" prot="public" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>IsValidName</name></member>
+      <member refid="classopen__spiel_1_1_game_registerer_1ab0c87d50dfa049e12c70c2a665def26c" prot="public" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>RegisteredGames</name></member>
+      <member refid="classopen__spiel_1_1_game_registerer_1a2dd29263f74ac828f1c9c4ee0161b04f" prot="public" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>RegisteredNames</name></member>
+      <member refid="classopen__spiel_1_1_game_registerer_1a9087e5af855f413241a8ff7fba0dadeb" prot="public" virt="non-virtual"><scope>open_spiel::GameRegisterer</scope><name>RegisterGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

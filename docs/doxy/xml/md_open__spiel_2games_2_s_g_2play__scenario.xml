@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="md_open__spiel_2games_2_s_g_2play__scenario" kind="page">
+    <compoundname>md_open__spiel_2games_2_s_g_2play__scenario</compoundname>
+    <title>play_scenario</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>0. 맵 초기화, 유닛 배치 <programlisting><codeline><highlight class="normal">init_first<sp/>-&gt;<sp/>init_map,init_unit</highlight></codeline>
+</programlisting> Player 별 돌아가며 다음을 한턴 안에 수행 함.<orderedlist>
+<listitem><para>Observation String 생성 (유저에게 보여주기 위함), Obseravation | Information Tensor 준비 (매 액션마다 갱신하는 방법 사용)</para>
+</listitem><listitem><para>inference network or random select(개발중 사용)</para>
+</listitem><listitem><para>액션 선택 (action_select_tile)</para>
+</listitem></orderedlist>
+</para>
+<para>턴 넘김</para>
+<para><hruler/>
+</para>
+<para>0. NewInitialState() 에서 state 객체가 만들어짐<orderedlist>
+<listitem><para>state 객체가 만들어지면서 init_first() 불려서 초기화 과정 시작</para>
+</listitem><listitem></listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <location file="open_spiel/games/SG/play_scenario.md"/>
+  </compounddef>
+</doxygen>

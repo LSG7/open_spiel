@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1simple__nets_1_1_linear" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::simple_nets::Linear</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tf.Module</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a19eaa4752972cabb7c6fa5344f913e4d" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.Linear::_activate_relu</definition>
+        <argsstring></argsstring>
+        <name>_activate_relu</name>
+        <qualifiedname>open_spiel.python.simple_nets.Linear._activate_relu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="44" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a97f96815d7fc7581ddab38e663a2da74" compoundref="simple__nets_8py" startline="54" endline="58">open_spiel.python.simple_nets.Linear.__call__</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a98fc28b6708c1c91f5f1182f5e9a0a90" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.Linear::_weights</definition>
+        <argsstring></argsstring>
+        <name>_weights</name>
+        <qualifiedname>open_spiel.python.simple_nets.Linear._weights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="48" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a97f96815d7fc7581ddab38e663a2da74" compoundref="simple__nets_8py" startline="54" endline="58">open_spiel.python.simple_nets.Linear.__call__</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8abae2a369231b997ae7e884517a5e7e" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.Linear::_bias</definition>
+        <argsstring></argsstring>
+        <name>_bias</name>
+        <qualifiedname>open_spiel.python.simple_nets.Linear._bias</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="52" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a97f96815d7fc7581ddab38e663a2da74" compoundref="simple__nets_8py" startline="54" endline="58">open_spiel.python.simple_nets.Linear.__call__</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8e268d12ac253134e7e39f39cca5ef5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.Linear.__init__</definition>
+        <argsstring>(self, in_size, out_size, activate_relu=True, name=None)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.simple_nets.Linear.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>in_size</type>
+          <defname>in_size</defname>
+        </param>
+        <param>
+          <type>out_size</type>
+          <defname>out_size</defname>
+        </param>
+        <param>
+          <type>activate_relu</type>
+          <defname>activate_relu</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a linear layer.
+
+Args:
+  in_size: (int) number of inputs
+  out_size: (int) number of outputs
+  activate_relu: (bool) whether to include a ReLU activation layer
+  name: (string): the name to give to this layer
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="33" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="33" bodyend="53"/>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8e268d12ac253134e7e39f39cca5ef5f" compoundref="simple__nets_8py" startline="33" endline="53">open_spiel.python.simple_nets.Linear.__init__</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8e268d12ac253134e7e39f39cca5ef5f" compoundref="simple__nets_8py" startline="33" endline="53">open_spiel.python.simple_nets.Linear.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a97f96815d7fc7581ddab38e663a2da74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.Linear.__call__</definition>
+        <argsstring>(self, tensor)</argsstring>
+        <name>__call__</name>
+        <qualifiedname>open_spiel.python.simple_nets.Linear.__call__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>tensor</type>
+          <defname>tensor</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="54" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="54" bodyend="58"/>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a19eaa4752972cabb7c6fa5344f913e4d" compoundref="simple__nets_8py" startline="44">open_spiel.python.simple_nets.Linear._activate_relu</references>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8abae2a369231b997ae7e884517a5e7e" compoundref="simple__nets_8py" startline="52">open_spiel.python.simple_nets.Linear._bias</references>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a98fc28b6708c1c91f5f1182f5e9a0a90" compoundref="simple__nets_8py" startline="48">open_spiel.python.simple_nets.Linear._weights</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A simple linear module.
+
+Always includes biases and only supports ReLU activations.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel.python.simple_nets.Linear</label>
+        <link refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tf::Module</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.simple_nets.Linear</label>
+        <link refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tf::Module</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/simple_nets.py" line="27" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="27" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a97f96815d7fc7581ddab38e663a2da74" prot="public" virt="non-virtual"><scope>open_spiel::python::simple_nets::Linear</scope><name>__call__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8e268d12ac253134e7e39f39cca5ef5f" prot="public" virt="non-virtual"><scope>open_spiel::python::simple_nets::Linear</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a19eaa4752972cabb7c6fa5344f913e4d" prot="protected" virt="non-virtual"><scope>open_spiel::python::simple_nets::Linear</scope><name>_activate_relu</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8abae2a369231b997ae7e884517a5e7e" prot="protected" virt="non-virtual"><scope>open_spiel::python::simple_nets::Linear</scope><name>_bias</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a98fc28b6708c1c91f5f1182f5e9a0a90" prot="protected" virt="non-virtual"><scope>open_spiel::python::simple_nets::Linear</scope><name>_weights</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

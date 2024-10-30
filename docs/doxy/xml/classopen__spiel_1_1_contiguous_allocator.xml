@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_contiguous_allocator" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::ContiguousAllocator</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_allocator" prot="public" virt="non-virtual">open_spiel::Allocator</basecompoundref>
+    <includes refid="observer_8h" local="no">observer.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_contiguous_allocator_1a60164d191a2531ef60d5172689c1002a" prot="private" static="no" mutable="no">
+        <type>absl::Span&lt; float &gt;</type>
+        <definition>absl::Span&lt;float&gt; open_spiel::ContiguousAllocator::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <qualifiedname>open_spiel::ContiguousAllocator::data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="183" column="14" bodyfile="open_spiel/observer.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_contiguous_allocator_1afca770db66d4977eac175e1174ccab62" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::ContiguousAllocator::offset_</definition>
+        <argsstring></argsstring>
+        <name>offset_</name>
+        <qualifiedname>open_spiel::ContiguousAllocator::offset_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="184" column="7" bodyfile="open_spiel/observer.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_contiguous_allocator_1a0962b935bae0fa8fdd7f2157719c0aba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::ContiguousAllocator::ContiguousAllocator</definition>
+        <argsstring>(absl::Span&lt; float &gt; data)</argsstring>
+        <name>ContiguousAllocator</name>
+        <qualifiedname>open_spiel::ContiguousAllocator::ContiguousAllocator</qualifiedname>
+        <param>
+          <type>absl::Span&lt; float &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="176" column="3" bodyfile="open_spiel/observer.h" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_contiguous_allocator_1ad5788d75dc02bdedd831fe1ffc77c849" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classopen__spiel_1_1_span_tensor" kindref="compound">SpanTensor</ref></type>
+        <definition>SpanTensor open_spiel::ContiguousAllocator::Get</definition>
+        <argsstring>(absl::string_view name, const absl::InlinedVector&lt; int, 4 &gt; &amp;shape) override</argsstring>
+        <name>Get</name>
+        <qualifiedname>open_spiel::ContiguousAllocator::Get</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_allocator_1abd2b9c82341d4d97233f936bb0c562db">Get</reimplements>
+        <param>
+          <type>absl::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const absl::InlinedVector&lt; int, 4 &gt; &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="179" column="14" bodyfile="open_spiel/observer.cc" bodystart="28" bodyend="35"/>
+        <references refid="spiel__utils_8h_1ac27ebb5dceeb59bfcbcbda40368d2a08" compoundref="spiel__utils_8h" startline="312">SPIEL_DCHECK_LE</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>open_spiel::Allocator</label>
+        <link refid="classopen__spiel_1_1_allocator"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::ContiguousAllocator</label>
+        <link refid="classopen__spiel_1_1_contiguous_allocator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>open_spiel::Allocator</label>
+        <link refid="classopen__spiel_1_1_allocator"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::ContiguousAllocator</label>
+        <link refid="classopen__spiel_1_1_contiguous_allocator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.h" line="174" column="1" bodyfile="open_spiel/observer.h" bodystart="174" bodyend="185"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_contiguous_allocator_1a0962b935bae0fa8fdd7f2157719c0aba" prot="public" virt="non-virtual"><scope>open_spiel::ContiguousAllocator</scope><name>ContiguousAllocator</name></member>
+      <member refid="classopen__spiel_1_1_contiguous_allocator_1a60164d191a2531ef60d5172689c1002a" prot="private" virt="non-virtual"><scope>open_spiel::ContiguousAllocator</scope><name>data_</name></member>
+      <member refid="classopen__spiel_1_1_contiguous_allocator_1ad5788d75dc02bdedd831fe1ffc77c849" prot="public" virt="virtual"><scope>open_spiel::ContiguousAllocator</scope><name>Get</name></member>
+      <member refid="classopen__spiel_1_1_contiguous_allocator_1afca770db66d4977eac175e1174ccab62" prot="private" virt="non-virtual"><scope>open_spiel::ContiguousAllocator</scope><name>offset_</name></member>
+      <member refid="classopen__spiel_1_1_allocator_1aae4b5826e7832d9614c0ee0224526516" prot="public" virt="virtual"><scope>open_spiel::ContiguousAllocator</scope><name>~Allocator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

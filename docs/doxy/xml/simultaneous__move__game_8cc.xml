@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="simultaneous__move__game_8cc" kind="file" language="C++">
+    <compoundname>simultaneous_move_game.cc</compoundname>
+    <includes refid="simultaneous__move__game_8h" local="yes">open_spiel/simultaneous_move_game.h</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">open_spiel/abseil-cpp/absl/strings/str_cat.h</includes>
+    <includes refid="action__view_8h" local="yes">open_spiel/action_view.h</includes>
+    <includes refid="spiel_8h" local="yes">open_spiel/spiel.h</includes>
+    <includes refid="spiel__utils_8h" local="yes">open_spiel/spiel_utils.h</includes>
+    <incdepgraph>
+      <node id="39">
+        <label>open_spiel/action_view.h</label>
+        <link refid="action__view_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>open_spiel/game_parameters.h</label>
+        <link refid="game__parameters_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>open_spiel/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel/simultaneous_move_game.cc</label>
+        <link refid="simultaneous__move__game_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel/simultaneous_move_game.h</label>
+        <link refid="simultaneous__move__game_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>open_spiel/spiel.h</label>
+        <link refid="spiel_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>open_spiel/spiel_globals.h</label>
+        <link refid="spiel__globals_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>open_spiel/spiel_utils.h</label>
+        <link refid="spiel__utils_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>algorithm</label>
+      </node>
+      <node id="23">
+        <label>array</label>
+      </node>
+      <node id="24">
+        <label>cmath</label>
+      </node>
+      <node id="25">
+        <label>cstddef</label>
+      </node>
+      <node id="26">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>functional</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="10">
+        <label>numeric</label>
+      </node>
+      <node id="33">
+        <label>open_spiel/abseil-cpp/absl/algorithm/container.h</label>
+      </node>
+      <node id="34">
+        <label>open_spiel/abseil-cpp/absl/base/attributes.h</label>
+      </node>
+      <node id="35">
+        <label>open_spiel/abseil-cpp/absl/container/flat_hash_set.h</label>
+      </node>
+      <node id="36">
+        <label>open_spiel/abseil-cpp/absl/container/inlined_vector.h</label>
+      </node>
+      <node id="15">
+        <label>open_spiel/abseil-cpp/absl/random/bit_gen_ref.h</label>
+      </node>
+      <node id="28">
+        <label>open_spiel/abseil-cpp/absl/random/uniform_real_distribution.h</label>
+      </node>
+      <node id="29">
+        <label>open_spiel/abseil-cpp/absl/strings/str_cat.h</label>
+      </node>
+      <node id="16">
+        <label>open_spiel/abseil-cpp/absl/strings/str_join.h</label>
+      </node>
+      <node id="37">
+        <label>open_spiel/abseil-cpp/absl/strings/string_view.h</label>
+      </node>
+      <node id="17">
+        <label>open_spiel/abseil-cpp/absl/synchronization/mutex.h</label>
+      </node>
+      <node id="30">
+        <label>open_spiel/abseil-cpp/absl/time/clock.h</label>
+      </node>
+      <node id="31">
+        <label>open_spiel/abseil-cpp/absl/time/time.h</label>
+      </node>
+      <node id="18">
+        <label>open_spiel/abseil-cpp/absl/types/optional.h</label>
+      </node>
+      <node id="19">
+        <label>open_spiel/abseil-cpp/absl/types/span.h</label>
+      </node>
+      <node id="11">
+        <label>random</label>
+      </node>
+      <node id="12">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="27">
+        <label>type_traits</label>
+      </node>
+      <node id="13">
+        <label>unordered_map</label>
+      </node>
+      <node id="14">
+        <label>utility</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceopen__spiel">open_spiel</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2021<sp/>DeepMind<sp/>Technologies<sp/>Limited</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="simultaneous__move__game_8h" kindref="compound">open_spiel/simultaneous_move_game.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/abseil-cpp/absl/strings/str_cat.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="action__view_8h" kindref="compound">open_spiel/action_view.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spiel_8h" kindref="compound">open_spiel/spiel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spiel__utils_8h" kindref="compound">open_spiel/spiel_utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel" kindref="compound">open_spiel</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" refkind="member"><highlight class="normal">std::vector&lt;Action&gt;<sp/><ref refid="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" kindref="member">SimMoveState::FlatJointActionToActions</ref>(</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>flat_action)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>std::vector&lt;Action&gt;<sp/>actions(<ref refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" kindref="member">num_players_</ref>,<sp/><ref refid="namespaceopen__spiel_1adbc825960a0651d53f5d6423343fafae" kindref="member">kInvalidAction</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player<sp/>=<sp/>0;<sp/>player<sp/>&lt;<sp/><ref refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" kindref="member">num_players_</ref>;<sp/>++player)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>each<sp/>player<sp/>with<sp/>legal<sp/>actions<sp/>available:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>legal_actions<sp/>=<sp/><ref refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" kindref="member">LegalActions</ref>(player);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_actions<sp/>=<sp/>legal_actions.size();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num_actions<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>least-significant<sp/>digit<sp/>(radix<sp/>=<sp/>the<sp/>number<sp/>legal<sp/>actions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>the<sp/>current<sp/>player)<sp/>from<sp/>flat_action.<sp/>Use<sp/>the<sp/>digit<sp/>as<sp/>an<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>into<sp/>the<sp/>player&apos;s<sp/>set<sp/>of<sp/>legal<sp/>actions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>actions[player]<sp/>=<sp/>legal_actions[flat_action<sp/>%<sp/>num_actions];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>flat_action<sp/>to<sp/>be<sp/>for<sp/>the<sp/>remaining<sp/>players<sp/>only.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>flat_action<sp/>/=<sp/>num_actions;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>actions;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classopen__spiel_1_1_sim_move_state_1a8ea7b3b80e5fc90c6058087342f180a1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_sim_move_state_1a8ea7b3b80e5fc90c6058087342f180a1" kindref="member">SimMoveState::ApplyFlatJointAction</ref>(<ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>flat_action)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" kindref="member">ApplyActions</ref>(<ref refid="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" kindref="member">FlatJointActionToActions</ref>(flat_action));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" refkind="member"><highlight class="normal">std::vector&lt;Action&gt;<sp/><ref refid="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" kindref="member">SimMoveState::LegalFlatJointActions</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="structopen__spiel_1_1_action_view" kindref="compound">ActionView</ref><sp/>view(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="structopen__spiel_1_1_flat_joint_actions" kindref="compound">FlatJointActions</ref><sp/>flat_joint_actions<sp/>=<sp/>view.<ref refid="structopen__spiel_1_1_action_view_1a36972503930b7eb28793228c0536da63" kindref="member">flat_joint_actions</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>std::vector&lt;Action&gt;<sp/>joint_actions;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>joint_actions.reserve(flat_joint_actions.<ref refid="structopen__spiel_1_1_flat_joint_actions_1ae279ebedd158eb8d4deebbe88e12a8da" kindref="member">num_flat_joint_actions</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>flat_joint_action<sp/>:<sp/>flat_joint_actions)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>joint_actions.push_back(flat_joint_action);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>joint_actions;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" refkind="member"><highlight class="normal">std::string<sp/><ref refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" kindref="member">SimMoveState::FlatJointActionToString</ref>(<ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>flat_action)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Assembles<sp/>the<sp/>string<sp/>for<sp/>each<sp/>individual<sp/>player<sp/>action<sp/>into<sp/>a<sp/>single</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>string.<sp/>For<sp/>example,<sp/>[Heads,<sp/>Tails]<sp/>would<sp/>mean<sp/>than<sp/>player<sp/>0<sp/>chooses<sp/>Heads,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>player<sp/>1<sp/>chooses<sp/>Tails.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>std::string<sp/>str;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>player<sp/>=<sp/><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref>{0};<sp/>player<sp/>&lt;<sp/><ref refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" kindref="member">num_players_</ref>;<sp/>++player)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!str.empty())<sp/>str.append(</highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>legal_actions<sp/>=<sp/><ref refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" kindref="member">LegalActions</ref>(player);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_actions<sp/>=<sp/>legal_actions.size();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>str.append(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477" kindref="member">ActionToString</ref>(player,<sp/>legal_actions[flat_action<sp/>%<sp/>num_actions]));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>flat_action<sp/>/=<sp/>num_actions;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>absl::StrCat(</highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal">,<sp/>str,<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>open_spiel</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/simultaneous_move_game.cc"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="structopen__spiel_1_1_game_type" kind="struct" language="C++" prot="public">
+    <compoundname>open_spiel::GameType</compoundname>
+    <includes refid="spiel_8h" local="no">spiel.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17b" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Dynamics</name>
+        <qualifiedname>open_spiel::GameType::Dynamics</qualifiedname>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba0ffc281e20028439b1995e0fa983ffcb" prot="public">
+          <name>kSimultaneous</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17baeb609b99f542b955302693c0f445ba0c" prot="public">
+          <name>kSequential</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba6a40bb1d52ea6251e5ce3b9e7d3577bd" prot="public">
+          <name>kMeanField</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="58" column="3" bodyfile="open_spiel/spiel.h" bodystart="58" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="enum" id="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8e" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ChanceMode</name>
+        <qualifiedname>open_spiel::GameType::ChanceMode</qualifiedname>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8eab1ebb5017b01aead05321c8dd2107ab0" prot="public">
+          <name>kDeterministic</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8ea10b2b50f4692475e7972d0dd6b73694b" prot="public">
+          <name>kExplicitStochastic</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8ea39686673a19498ee90ed998e494c5bc7" prot="public">
+          <name>kSampledStochastic</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="77" column="3" bodyfile="open_spiel/spiel.h" bodystart="77" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="enum" id="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522ae" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Information</name>
+        <qualifiedname>open_spiel::GameType::Information</qualifiedname>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522aea21e6a5b3710e0b13334d892e2b8a4be3" prot="public">
+          <name>kOneShot</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522aeacd60620d6401b630c39d1af12e6d701a" prot="public">
+          <name>kPerfectInformation</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522aeac9856f08bbc3ba2427a640b6bfdcb9f1" prot="public">
+          <name>kImperfectInformation</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="87" column="3" bodyfile="open_spiel/spiel.h" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="enum" id="structopen__spiel_1_1_game_type_1a1ac5c4948c36c41709023b391bb58ef3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Utility</name>
+        <qualifiedname>open_spiel::GameType::Utility</qualifiedname>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a1ac5c4948c36c41709023b391bb58ef3a1cf995c896f7178e2472254ada88096f" prot="public">
+          <name>kZeroSum</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a1ac5c4948c36c41709023b391bb58ef3a6a09f3b5a2bec5deeb985ff0c06067b5" prot="public">
+          <name>kConstantSum</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a1ac5c4948c36c41709023b391bb58ef3a986cbc0a359db75471832f86381b190e" prot="public">
+          <name>kGeneralSum</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a1ac5c4948c36c41709023b391bb58ef3a2addd5cc0adb04673609d0c5475e022e" prot="public">
+          <name>kIdentical</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="95" column="3" bodyfile="open_spiel/spiel.h" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="enum" id="structopen__spiel_1_1_game_type_1a5a5f739de73ade6cfe6961fd4a2f41a5" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>RewardModel</name>
+        <qualifiedname>open_spiel::GameType::RewardModel</qualifiedname>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a5a5f739de73ade6cfe6961fd4a2f41a5a5feb2f9f9be894b60ede74a61a0f27f5" prot="public">
+          <name>kRewards</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structopen__spiel_1_1_game_type_1a5a5f739de73ade6cfe6961fd4a2f41a5a217dd2f6ef26065693bb5043fce241ea" prot="public">
+          <name>kTerminal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="106" column="3" bodyfile="open_spiel/spiel.h" bodystart="106" bodyend="109"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a7dc97c2b88971ea7c5180d3c2fe29cf1" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string open_spiel::GameType::short_name</definition>
+        <argsstring></argsstring>
+        <name>short_name</name>
+        <qualifiedname>open_spiel::GameType::short_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="52" column="15" bodyfile="open_spiel/spiel.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a71a2ca91924cdb74c953fc8a4533b6b7" compoundref="tensor__game_8h" startline="130" endline="137">open_spiel::tensor_game::TensorGame::AsMatrixGame</referencedby>
+        <referencedby refid="classopen__spiel_1_1_observer_registerer_1a758f476da1265e23e37d42253be73b07" compoundref="observer_8cc" startline="359" endline="371">open_spiel::ObserverRegisterer::CreateByName</referencedby>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c" compoundref="spiel_8h" startline="919" endline="925">open_spiel::Game::operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_registerer_1a9087e5af855f413241a8ff7fba0dadeb" compoundref="spiel_8cc" startline="188" endline="191">open_spiel::GameRegisterer::RegisterGame</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" compoundref="spiel_8cc" startline="664" endline="668">open_spiel::Game::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a89c154ac202bd4a659b9e4ea3d28ebbb" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string open_spiel::GameType::long_name</definition>
+        <argsstring></argsstring>
+        <name>long_name</name>
+        <qualifiedname>open_spiel::GameType::long_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="55" column="15" bodyfile="open_spiel/spiel.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a71a2ca91924cdb74c953fc8a4533b6b7" compoundref="tensor__game_8h" startline="130" endline="137">open_spiel::tensor_game::TensorGame::AsMatrixGame</referencedby>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1ac1176bf5ed045dc24fb4b113af2750b8" prot="public" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17b" kindref="member">Dynamics</ref></type>
+        <definition>Dynamics open_spiel::GameType::dynamics</definition>
+        <argsstring></argsstring>
+        <name>dynamics</name>
+        <qualifiedname>open_spiel::GameType::dynamics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="65" column="12" bodyfile="open_spiel/spiel.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" compoundref="spiel_8cc" startline="409" endline="442">open_spiel::Game::DeserializeState</referencedby>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1aab6328ff82289cc5a639af623b07983f" compoundref="policy_8cc" startline="275" endline="321">open_spiel::GetEmptyTabularPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a0fa54efbbbe01ea0ece4b0323105158c" compoundref="policy_8cc" startline="432" endline="475">open_spiel::GetFirstActionPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a5dc710e7fbd94c8c96e616086be2437d" compoundref="policy_8cc" startline="376" endline="430">open_spiel::GetRandomDeterministicPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a7a1a6c9e079e58933da6b62c4d04279e" prot="public" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8e" kindref="member">ChanceMode</ref></type>
+        <definition>ChanceMode open_spiel::GameType::chance_mode</definition>
+        <argsstring></argsstring>
+        <name>chance_mode</name>
+        <qualifiedname>open_spiel::GameType::chance_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="84" column="14" bodyfile="open_spiel/spiel.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" compoundref="spiel_8cc" startline="409" endline="442">open_spiel::Game::DeserializeState</referencedby>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a99e4ce5d58635d108e99367a5d12f589" prot="public" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522ae" kindref="member">Information</ref></type>
+        <definition>Information open_spiel::GameType::information</definition>
+        <argsstring></argsstring>
+        <name>information</name>
+        <qualifiedname>open_spiel::GameType::information</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="92" column="15" bodyfile="open_spiel/spiel.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a5dc710e7fbd94c8c96e616086be2437d" compoundref="policy_8cc" startline="376" endline="430">open_spiel::GetRandomDeterministicPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" compoundref="observer_8cc" startline="137" endline="175">open_spiel::Game::MakeBuiltInObserver</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a97241a4820868fc48068e6585ab142a6" prot="public" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1_game_type_1a1ac5c4948c36c41709023b391bb58ef3" kindref="member">Utility</ref></type>
+        <definition>Utility open_spiel::GameType::utility</definition>
+        <argsstring></argsstring>
+        <name>utility</name>
+        <qualifiedname>open_spiel::GameType::utility</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="101" column="11" bodyfile="open_spiel/spiel.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_normal_form_game_1a520aa138f4c14bda7b271a51541927bc" compoundref="normal__form__game_8h" startline="135" endline="145">open_spiel::NormalFormGame::UtilitySum</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1aa72d7337710404c4a4c85cad77ad9992" prot="public" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1_game_type_1a5a5f739de73ade6cfe6961fd4a2f41a5" kindref="member">RewardModel</ref></type>
+        <definition>RewardModel open_spiel::GameType::reward_model</definition>
+        <argsstring></argsstring>
+        <name>reward_model</name>
+        <qualifiedname>open_spiel::GameType::reward_model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="110" column="15" bodyfile="open_spiel/spiel.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1acb7c9c12c353ccb42a4273e026bd61cf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::GameType::max_num_players</definition>
+        <argsstring></argsstring>
+        <name>max_num_players</name>
+        <qualifiedname>open_spiel::GameType::max_num_players</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="114" column="7" bodyfile="open_spiel/spiel.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a8156a1d7578c71dd5425d6b22c171611" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::GameType::min_num_players</definition>
+        <argsstring></argsstring>
+        <name>min_num_players</name>
+        <qualifiedname>open_spiel::GameType::min_num_players</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="115" column="7" bodyfile="open_spiel/spiel.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a909f5d7264115920cd4e63527fa80bc3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::provides_information_state_string</definition>
+        <argsstring></argsstring>
+        <name>provides_information_state_string</name>
+        <qualifiedname>open_spiel::GameType::provides_information_state_string</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="120" column="8" bodyfile="open_spiel/spiel.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="structopen__spiel_1_1_game_type_1a20640f61e3d0524691ec952281d2eccd" compoundref="spiel_8h" startline="145" endline="148">provides_information_state</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a0e75001913b46cb55660c87ff67ec72b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::provides_information_state_tensor</definition>
+        <argsstring></argsstring>
+        <name>provides_information_state_tensor</name>
+        <qualifiedname>open_spiel::GameType::provides_information_state_tensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="121" column="8" bodyfile="open_spiel/spiel.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="structopen__spiel_1_1_game_type_1a20640f61e3d0524691ec952281d2eccd" compoundref="spiel_8h" startline="145" endline="148">provides_information_state</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1aefe22999e3f3866dfac4512fefa09259" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::provides_observation_string</definition>
+        <argsstring></argsstring>
+        <name>provides_observation_string</name>
+        <qualifiedname>open_spiel::GameType::provides_observation_string</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="127" column="8" bodyfile="open_spiel/spiel.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="structopen__spiel_1_1_game_type_1a2759dc85a4cd799fdcb247b0c9c870cf" compoundref="spiel_8h" startline="149" endline="152">provides_observation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1aa7926b4919729c6aba36bcb5cd55895c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::provides_observation_tensor</definition>
+        <argsstring></argsstring>
+        <name>provides_observation_tensor</name>
+        <qualifiedname>open_spiel::GameType::provides_observation_tensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="128" column="8" bodyfile="open_spiel/spiel.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="structopen__spiel_1_1_game_type_1a2759dc85a4cd799fdcb247b0c9c870cf" compoundref="spiel_8h" startline="149" endline="152">provides_observation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a2d265bb0c5d0be4d64222ac322bf3510" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+        <definition>GameParameters open_spiel::GameType::parameter_specification</definition>
+        <argsstring></argsstring>
+        <name>parameter_specification</name>
+        <qualifiedname>open_spiel::GameType::parameter_specification</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="130" column="18" bodyfile="open_spiel/spiel.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="structopen__spiel_1_1_game_type_1a3478a4e3b97e7b14ac147d3d996a0e35" compoundref="spiel_8cc" startline="130" endline="137">ContainsRequiredParameters</referencedby>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" compoundref="spiel_8h" startline="988" endline="1029">open_spiel::Game::ParameterValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1a58d658cf0ae6c7a104b621ed20d65c52" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::default_loadable</definition>
+        <argsstring></argsstring>
+        <name>default_loadable</name>
+        <qualifiedname>open_spiel::GameType::default_loadable</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="138" column="8" bodyfile="open_spiel/spiel.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structopen__spiel_1_1_game_type_1ad0f911229d1f5b893dc2225069703c36" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::provides_factored_observation_string</definition>
+        <argsstring></argsstring>
+        <name>provides_factored_observation_string</name>
+        <qualifiedname>open_spiel::GameType::provides_factored_observation_string</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="143" column="8" bodyfile="open_spiel/spiel.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structopen__spiel_1_1_game_type_1a3478a4e3b97e7b14ac147d3d996a0e35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::ContainsRequiredParameters</definition>
+        <argsstring>() const</argsstring>
+        <name>ContainsRequiredParameters</name>
+        <qualifiedname>open_spiel::GameType::ContainsRequiredParameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="131" column="8" bodyfile="open_spiel/spiel.cc" bodystart="130" bodyend="137"/>
+        <references refid="structopen__spiel_1_1_game_type_1a2d265bb0c5d0be4d64222ac322bf3510" compoundref="spiel_8h" startline="130">parameter_specification</references>
+      </memberdef>
+      <memberdef kind="function" id="structopen__spiel_1_1_game_type_1a20640f61e3d0524691ec952281d2eccd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::provides_information_state</definition>
+        <argsstring>() const</argsstring>
+        <name>provides_information_state</name>
+        <qualifiedname>open_spiel::GameType::provides_information_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="145" column="8" bodyfile="open_spiel/spiel.h" bodystart="145" bodyend="148"/>
+        <references refid="structopen__spiel_1_1_game_type_1a909f5d7264115920cd4e63527fa80bc3" compoundref="spiel_8h" startline="120">provides_information_state_string</references>
+        <references refid="structopen__spiel_1_1_game_type_1a0e75001913b46cb55660c87ff67ec72b" compoundref="spiel_8h" startline="121">provides_information_state_tensor</references>
+        <referencedby refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" compoundref="observer_8cc" startline="137" endline="175">open_spiel::Game::MakeBuiltInObserver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structopen__spiel_1_1_game_type_1a2759dc85a4cd799fdcb247b0c9c870cf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameType::provides_observation</definition>
+        <argsstring>() const</argsstring>
+        <name>provides_observation</name>
+        <qualifiedname>open_spiel::GameType::provides_observation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="149" column="8" bodyfile="open_spiel/spiel.h" bodystart="149" bodyend="152"/>
+        <references refid="structopen__spiel_1_1_game_type_1aefe22999e3f3866dfac4512fefa09259" compoundref="spiel_8h" startline="127">provides_observation_string</references>
+        <references refid="structopen__spiel_1_1_game_type_1aa7926b4919729c6aba36bcb5cd55895c" compoundref="spiel_8h" startline="128">provides_observation_tensor</references>
+        <referencedby refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" compoundref="observer_8cc" startline="137" endline="175">open_spiel::Game::MakeBuiltInObserver</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::GameType</label>
+        <link refid="structopen__spiel_1_1_game_type"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel.h" line="49" column="1" bodyfile="open_spiel/spiel.h" bodystart="49" bodyend="153"/>
+    <listofallmembers>
+      <member refid="structopen__spiel_1_1_game_type_1a7a1a6c9e079e58933da6b62c4d04279e" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>chance_mode</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8e" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>ChanceMode</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a3478a4e3b97e7b14ac147d3d996a0e35" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>ContainsRequiredParameters</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a58d658cf0ae6c7a104b621ed20d65c52" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>default_loadable</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17b" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>Dynamics</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1ac1176bf5ed045dc24fb4b113af2750b8" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>dynamics</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522ae" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>Information</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a99e4ce5d58635d108e99367a5d12f589" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>information</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a89c154ac202bd4a659b9e4ea3d28ebbb" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>long_name</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1acb7c9c12c353ccb42a4273e026bd61cf" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>max_num_players</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a8156a1d7578c71dd5425d6b22c171611" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>min_num_players</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a2d265bb0c5d0be4d64222ac322bf3510" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>parameter_specification</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1ad0f911229d1f5b893dc2225069703c36" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>provides_factored_observation_string</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a20640f61e3d0524691ec952281d2eccd" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>provides_information_state</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a909f5d7264115920cd4e63527fa80bc3" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>provides_information_state_string</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a0e75001913b46cb55660c87ff67ec72b" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>provides_information_state_tensor</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a2759dc85a4cd799fdcb247b0c9c870cf" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>provides_observation</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1aefe22999e3f3866dfac4512fefa09259" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>provides_observation_string</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1aa7926b4919729c6aba36bcb5cd55895c" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>provides_observation_tensor</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1aa72d7337710404c4a4c85cad77ad9992" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>reward_model</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a5a5f739de73ade6cfe6961fd4a2f41a5" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>RewardModel</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a7dc97c2b88971ea7c5180d3c2fe29cf1" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>short_name</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a1ac5c4948c36c41709023b391bb58ef3" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>Utility</name></member>
+      <member refid="structopen__spiel_1_1_game_type_1a97241a4820868fc48068e6585ab142a6" prot="public" virt="non-virtual"><scope>open_spiel::GameType</scope><name>utility</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

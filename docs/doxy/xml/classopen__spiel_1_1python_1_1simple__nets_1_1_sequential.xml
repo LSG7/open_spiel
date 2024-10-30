@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::simple_nets::Sequential</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tf.Module</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1a6c12e3092a8c12a716755042995129e4" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.Sequential::_layers</definition>
+        <argsstring></argsstring>
+        <name>_layers</name>
+        <qualifiedname>open_spiel.python.simple_nets.Sequential._layers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="74" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="74" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1af30f8eced23027aa012dca28492b3e5e" compoundref="simple__nets_8py" startline="116" endline="121">open_spiel.python.simple_nets.MLP.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1aa50d5c388f9ce1b16135f36b135ab897" compoundref="simple__nets_8py" startline="137" endline="141">open_spiel.python.simple_nets.MLPTorso.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1ac4ad23b25a0794dd75ae7594aac90c19" compoundref="simple__nets_8py" startline="76" endline="81">open_spiel.python.simple_nets.Sequential.__call__</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1af0bf73f90fd110dd49eb392b37b320f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.Sequential.__init__</definition>
+        <argsstring>(self, layers, name=None)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.simple_nets.Sequential.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>layers</type>
+          <defname>layers</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a model from successively applying layers.
+
+Args:
+  layers: Iterable[tf.Module] that can be applied.
+  name: (string): the name to give to this layer
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="65" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="65" bodyend="75"/>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1af0bf73f90fd110dd49eb392b37b320f0" compoundref="simple__nets_8py" startline="65" endline="75">open_spiel.python.simple_nets.Sequential.__init__</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1af0bf73f90fd110dd49eb392b37b320f0" compoundref="simple__nets_8py" startline="65" endline="75">open_spiel.python.simple_nets.Sequential.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1ac4ad23b25a0794dd75ae7594aac90c19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.simple_nets.Sequential.__call__</definition>
+        <argsstring>(self, tensor)</argsstring>
+        <name>__call__</name>
+        <qualifiedname>open_spiel.python.simple_nets.Sequential.__call__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>tensor</type>
+          <defname>tensor</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/simple_nets.py" line="76" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="76" bodyend="81"/>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" compoundref="simple__nets_8py" startline="102">open_spiel.python.simple_nets.MLP._layers</references>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a99dc2f7dffee1883ddfe2f92a557688c" compoundref="simple__nets_8py" startline="130">open_spiel.python.simple_nets.MLPTorso._layers</references>
+        <references refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1a6c12e3092a8c12a716755042995129e4" compoundref="simple__nets_8py" startline="74">open_spiel.python.simple_nets.Sequential._layers</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A simple sequential module.
+
+Always includes biases and only supports ReLU activations.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel.python.simple_nets.Sequential</label>
+        <link refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tf.Module</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.simple_nets.Sequential</label>
+        <link refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tf.Module</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/simple_nets.py" line="59" column="1" bodyfile="open_spiel/python/simple_nets.py" bodystart="59" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1ac4ad23b25a0794dd75ae7594aac90c19" prot="public" virt="non-virtual"><scope>open_spiel::python::simple_nets::Sequential</scope><name>__call__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1af0bf73f90fd110dd49eb392b37b320f0" prot="public" virt="non-virtual"><scope>open_spiel::python::simple_nets::Sequential</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1a6c12e3092a8c12a716755042995129e4" prot="protected" virt="non-virtual"><scope>open_spiel::python::simple_nets::Sequential</scope><name>_layers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

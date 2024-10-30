@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="md_open__spiel_2games_2_s_g_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_open__spiel_2games_2_s_g_2_r_e_a_d_m_e</compoundname>
+    <title>Env</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_open__spiel_2games_2_s_g_2_r_e_a_d_m_e_1autotoc_md1"/><itemizedlist>
+<listitem><para>source env_sg.sh (환경변수) <linebreak/>
+</para>
+</listitem><listitem><para>source venv/bin/activate <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>빌드 방법 두가지.<orderedlist>
+<listitem><para>open spiel 에서 제공하는 방법. clang 을 쓴다. <linebreak/>
+ ./build_sg.sh</para>
+</listitem><listitem><para>내가 만든 방법. gcc clang 중에 골라 쓴다. gcc,clang 선택은 env_sg.sh 에서. <linebreak/>
+ cd build_sg bash ../set_cmake_manual.sh (처음 한번만. cmake 설정용) <linebreak/>
+ make -j8 kbg_test</para>
+</listitem></orderedlist>
+<itemizedlist>
+<listitem><para>bfloat16 변수가 컴파일러마다 다르다.</para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="md_open__spiel_2games_2_s_g_2_r_e_a_d_m_e_1autotoc_md2">
+<title>Program flow</title><para><orderedlist>
+<listitem><para>User 가 만든 게임(BaseT 를 상속한) 의 State 객체가 생성될 때 init_first() 를 호출한다.(반드시)</para>
+</listitem><listitem><para>init_first() 에서 가장 먼저 init_server() 를 호출하고 파이선 클라이언트가 달라붙기를 기다린다. 기다리지 않고 진행해도 됨.</para>
+</listitem><listitem><para>Cell, Unit 정보가 변경 될 때마다 클라이언트에게 변경된 정보를 보낸다. Observation 정보를 전부 다 매번 보내는건 불필요, 메모리낭비 라서, 변경된 것만 기록하고 송신한다.</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="md_open__spiel_2games_2_s_g_2_r_e_a_d_m_e_1autotoc_md3">
+<title>Ground Rule</title><para><itemizedlist>
+<listitem><para>정형화 시켜서 재사용 원활히</para>
+</listitem><listitem><para>순차적 주석으로 로직 심플&amp;이해쉽게</para>
+</listitem><listitem><para>확장성. 나중에 대규모로 확장 가능하게.</para>
+</listitem><listitem><para>관련 앱과 데이터 호환 용이</para>
+</listitem><listitem><para>학습에 사용하기 용이</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_open__spiel_2games_2_s_g_2_r_e_a_d_m_e_1autotoc_md4">
+<title>TODO</title><para><orderedlist>
+<listitem><para>하나의 게임에서 self-play 로 trajectory 를 2개 만들어야 한다. 어차피 상대방 역할 해주는 봇도 있어야 하는데 그 봇도 똑똑해야 하고 하는김에 궤적 하나 더 만드는게 효율성 좋으니 <linebreak/>
+</para>
+</listitem><listitem><para>joint action 으로 만들어야 한다. 한번은 이동하고 한번은 행동하고 deepnash 는 선택,행동 이었다면 나는 이동,행동 이다.</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="md_open__spiel_2games_2_s_g_2_r_e_a_d_m_e_1autotoc_md5">
+<title>일기</title><para>23.8.30 게임 생성 시작 <linebreak/>
+</para>
+<para><itemizedlist>
+<listitem><para>셀은 vector [z][y][x], map_coord 로 접근 <linebreak/>
+</para>
+</listitem><listitem><para>유닛은 vector [id], unique unit_id 로 접근 <linebreak/>
+ 0 번 player 는 1번부터 시작. 접근할 때 (p0_id) 으로 접근 <linebreak/>
+ 1 번 player 는 1001번부터 시작. 접근할 때 (p1_id - 1000) 으로 접근 <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>23.10.10 보드 표현 규정<itemizedlist>
+<listitem><para>[빈땅은 &apos;_ &apos;] 스페이스는 유닛 개수에 따라 변동적 <linebreak/>
+</para>
+</listitem><listitem><para>[유닛은 &apos;player_id + unit_id] ex=[01] <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>23.10.12<itemizedlist>
+<listitem><para>수동빌드 할 때 BUILD_TYPE=Debug 해줘야 -g 옵션 들어감</para>
+</listitem><listitem><para>games/ 아래에서 CMakeLists.txt 에서 빌드해줘야 실행 파일에 디버그 들어가서 같이 빌드됨</para>
+</listitem><listitem><para>Interger Encoding vs One-hot Encoding <ulink url="https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-encoding-f180eb831cf1">https://medium.com/geekculture/machine-learning-one-hot-encoding-vs-integer-encoding-f180eb831cf1</ulink> <linebreak/>
+</para>
+</listitem><listitem><para>유닛 위치의 Z축 = 채널 에 병종을 one-hot, 체력, 공격력, 방어력 표현 <linebreak/>
+</para>
+</listitem><listitem><para>Mac 에는 gdb 가 없다. lldb 써야 한다. <linebreak/>
+</para>
+</listitem><listitem><para>Mac 에서 vs code 에다가 codeLLDB 깔면 연결된다. F5 로 디버깅 실행</para>
+</listitem><listitem><para>채널에 셀의 정보를 나열하고 Unet 으로 셀의 정보를 분석해야 한다.</para>
+</listitem><listitem><para>셀이 z 축으로 쌓여도 되나?</para>
+</listitem><listitem><para>action id 를 셀 번호로 해야 한다. 근데 셀이 존나 많다.</para>
+</listitem><listitem><para>관찰, 생각, 행동</para>
+</listitem></itemizedlist>
+</para>
+<para>23.10.31<itemizedlist>
+<listitem><para>혼합 정밀도를 사용해야 한다. 인풋은 float, 연산은 bf16, 아웃은 ?</para>
+</listitem><listitem><para>obs 를 1D vector 로 만든다. pythoh 에서 이것을 asarray() 하고 reshape() 한다.</para>
+</listitem></itemizedlist>
+</para>
+<para>23.11.6<itemizedlist>
+<listitem><para>apple M3 에서는 bf16 지원한다고 하나 apple coreML 문서에는 float16 지원하는 것만 설명되어 있다. 그러니 지금은 일단 float16 으로 만든다.</para>
+</listitem><listitem><para>C++23 부터 float16_t bfloat16_t 존재. c++23 으로 빌드.</para>
+</listitem><listitem><para>gcc g++13 깔아야함. developernote.com/2023/08/installing-gcc13-on-ubuntu-22-04</para>
+</listitem><listitem><para>clang++17 깔아야함. clang 은 STDCPP_FLOAT16_T 지원안해서 못씀. c++23 정식지원까지 사용중지.</para>
+</listitem><listitem><para>Mac 에서도 gcc 써야함.</para>
+</listitem></itemizedlist>
+</para>
+<para>24.7.12<itemizedlist>
+<listitem><para>한턴에 몇번 행동 할 것인가, 어떤 행동을 할 것인가</para>
+</listitem><listitem><para>당장은 한턴에 한번만 행동하는 것으로 만들고 실험해봄</para>
+</listitem><listitem><para>발더스3 같은 경우 순서 상관없이 액션1 이동1 이 가능해야 한다. </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="open_spiel/games/SG/README.md"/>
+  </compounddef>
+</doxygen>

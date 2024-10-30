@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_flat_joint_actions_iterator" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::FlatJointActionsIterator</compoundname>
+    <includes refid="action__view_8h" local="no">action_view.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_flat_joint_actions_iterator_1a243e172fbd2b1245b8694bfa10879478" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::FlatJointActionsIterator::current_action_</definition>
+        <argsstring></argsstring>
+        <name>current_action_</name>
+        <qualifiedname>open_spiel::FlatJointActionsIterator::current_action_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="53" column="7" bodyfile="open_spiel/action_view.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_flat_joint_actions_iterator_1a6ada747e329c501d7233205543b99b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::FlatJointActionsIterator::FlatJointActionsIterator</definition>
+        <argsstring>(int current_action)</argsstring>
+        <name>FlatJointActionsIterator</name>
+        <qualifiedname>open_spiel::FlatJointActionsIterator::FlatJointActionsIterator</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>current_action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="56" column="3" bodyfile="open_spiel/action_view.cc" bodystart="73" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_flat_joint_actions_iterator_1a537fe03bccdf7f08ce524dd73132888b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classopen__spiel_1_1_flat_joint_actions_iterator" kindref="compound">FlatJointActionsIterator</ref> &amp;</type>
+        <definition>FlatJointActionsIterator &amp; open_spiel::FlatJointActionsIterator::operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <qualifiedname>open_spiel::FlatJointActionsIterator::operator++</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="57" column="28" bodyfile="open_spiel/action_view.cc" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_flat_joint_actions_iterator_1a470c4b676e9dd3af3875d03237aa300b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::FlatJointActionsIterator::operator==</definition>
+        <argsstring>(FlatJointActionsIterator other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>open_spiel::FlatJointActionsIterator::operator==</qualifiedname>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_flat_joint_actions_iterator" kindref="compound">FlatJointActionsIterator</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="58" column="8" bodyfile="open_spiel/action_view.cc" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_flat_joint_actions_iterator_1aff7ae8d8fd89a03b5253048764999e25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::FlatJointActionsIterator::operator!=</definition>
+        <argsstring>(FlatJointActionsIterator other) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>open_spiel::FlatJointActionsIterator::operator!=</qualifiedname>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_flat_joint_actions_iterator" kindref="compound">FlatJointActionsIterator</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="59" column="8" bodyfile="open_spiel/action_view.cc" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_flat_joint_actions_iterator_1a475487b1c11a921dee9465961648f470" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+        <definition>Action open_spiel::FlatJointActionsIterator::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>open_spiel::FlatJointActionsIterator::operator*</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/action_view.h" line="60" column="10" bodyfile="open_spiel/action_view.cc" bodystart="72" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::FlatJointActionsIterator</label>
+        <link refid="classopen__spiel_1_1_flat_joint_actions_iterator"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/action_view.h" line="52" column="1" bodyfile="open_spiel/action_view.h" bodystart="52" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_flat_joint_actions_iterator_1a243e172fbd2b1245b8694bfa10879478" prot="private" virt="non-virtual"><scope>open_spiel::FlatJointActionsIterator</scope><name>current_action_</name></member>
+      <member refid="classopen__spiel_1_1_flat_joint_actions_iterator_1a6ada747e329c501d7233205543b99b77" prot="public" virt="non-virtual"><scope>open_spiel::FlatJointActionsIterator</scope><name>FlatJointActionsIterator</name></member>
+      <member refid="classopen__spiel_1_1_flat_joint_actions_iterator_1aff7ae8d8fd89a03b5253048764999e25" prot="public" virt="non-virtual"><scope>open_spiel::FlatJointActionsIterator</scope><name>operator!=</name></member>
+      <member refid="classopen__spiel_1_1_flat_joint_actions_iterator_1a475487b1c11a921dee9465961648f470" prot="public" virt="non-virtual"><scope>open_spiel::FlatJointActionsIterator</scope><name>operator*</name></member>
+      <member refid="classopen__spiel_1_1_flat_joint_actions_iterator_1a537fe03bccdf7f08ce524dd73132888b" prot="public" virt="non-virtual"><scope>open_spiel::FlatJointActionsIterator</scope><name>operator++</name></member>
+      <member refid="classopen__spiel_1_1_flat_joint_actions_iterator_1a470c4b676e9dd3af3875d03237aa300b" prot="public" virt="non-virtual"><scope>open_spiel::FlatJointActionsIterator</scope><name>operator==</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

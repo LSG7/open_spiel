@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="md_open__spiel_2games_2_s_g_2network__input" kind="page">
+    <compoundname>md_open__spiel_2games_2_s_g_2network__input</compoundname>
+    <title>network_input</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para></para>
+<para><image type="html" name="stratego_input.jpg" inline="yes"></image>
+ </para>
+<para><table rows="7" cols="5"><row>
+<entry thead="yes" align='center'><para>index   </para>
+</entry><entry thead="yes" align='center'><para>정보   </para>
+</entry><entry thead="yes" align='center'><para>채널 깊이   </para>
+</entry><entry thead="yes" align='center'><para>D type   </para>
+</entry><entry thead="yes" align='center'><para>비고    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>0   </para>
+</entry><entry thead="no" align='center'><para>지형정보 [이동가능, 이동불가, 숲]   </para>
+</entry><entry thead="no" align='center'><para>3   </para>
+</entry><entry thead="no" align='center'><para>one-hot   </para>
+</entry><entry thead="no" align='center'><para></para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>1   </para>
+</entry><entry thead="no" align='center'><para>P&apos;s own private info<linebreak/>
+P에게만 보이는 자기말 정보   </para>
+</entry><entry thead="no" align='center'><para>병종수   </para>
+</entry><entry thead="no" align='center' colspan="2"><para>one-hot    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>2   </para>
+</entry><entry thead="no" align='center'><para>Op&apos;s public info<linebreak/>
+ P에게 보이는 Op&apos;s 말 정보   </para>
+</entry><entry thead="no" align='center'><para>병종수   </para>
+</entry><entry thead="no" align='center' colspan="2"><para>one-hot    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>3   </para>
+</entry><entry thead="no" align='center'><para>P&apos;s own public info<linebreak/>
+ Op 에게 보이는 P&apos;s 말 정보   </para>
+</entry><entry thead="no" align='center'><para>병종수   </para>
+</entry><entry thead="no" align='center' colspan="2"><para>one-hot    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>4   </para>
+</entry><entry thead="no" align='center'><para>last move   </para>
+</entry><entry thead="no" align='center'><para>움직임수   </para>
+</entry><entry thead="no" align='center'><para>?   </para>
+</entry><entry thead="no" align='center'><para>필요한가?    </para>
+</entry></row>
+<row>
+<entry thead="no" align='center'><para>5   </para>
+</entry><entry thead="no" align='center'><para>무승부까지, 보급품남음수로할까<linebreak/>
+보급품 떨어지면 약해지는 걸로   </para>
+</entry><entry thead="no" align='center'><para>플레이어수   </para>
+</entry><entry thead="no" align='center' colspan="2"><para>float   </para>
+</entry></row>
+</table>
+| 6 | | ? || | 7 | | ? || </para>
+    </detaileddescription>
+    <location file="open_spiel/games/SG/network_input.md"/>
+  </compounddef>
+</doxygen>

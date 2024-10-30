@@ -1,0 +1,919 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::rl_environment::Environment</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa97a4b7812c3985634952178b803ceed" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_chance_event_sampler</definition>
+        <argsstring></argsstring>
+        <name>_chance_event_sampler</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._chance_event_sampler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="170" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="170" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a230efd26d11086dacef783663691f316" compoundref="rl__environment_8py" startline="369" endline="383">open_spiel.python.rl_environment.Environment._sample_external_events</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a327f8a1a5aaf068a28eea7849c4bec8b" compoundref="rl__environment_8py" startline="216" endline="218">open_spiel.python.rl_environment.Environment.seed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a580652a1e241b754ee8b7fb1ecd4ecbf" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_include_full_state</definition>
+        <argsstring></argsstring>
+        <name>_include_full_state</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._include_full_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="171" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="171" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ae6cf3f2cf7a0c074cce9809264eecf30" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_mfg_distribution</definition>
+        <argsstring></argsstring>
+        <name>_mfg_distribution</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._mfg_distribution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="172" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="172" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a230efd26d11086dacef783663691f316" compoundref="rl__environment_8py" startline="369" endline="383">open_spiel.python.rl_environment.Environment._sample_external_events</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a492f84a4c0108f2af0024b0c2e02a1cd" compoundref="rl__environment_8py" startline="473" endline="475">open_spiel.python.rl_environment.Environment.mfg_distribution</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1afceda495233508d0264783c55631b237" compoundref="rl__environment_8py" startline="476" endline="481">open_spiel.python.rl_environment.Environment.update_mfg_distribution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a079292efba13501fa783bf91e1a27644" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_mfg_population</definition>
+        <argsstring></argsstring>
+        <name>_mfg_population</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._mfg_population</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="173" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="173" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab63bd0af56bc88a2928b8fffe8b7459a" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_enable_legality_check</definition>
+        <argsstring></argsstring>
+        <name>_enable_legality_check</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._enable_legality_check</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="174" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_game</definition>
+        <argsstring></argsstring>
+        <name>_game</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._game</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="180" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="180" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1adf39539769c6522554a2a8ccdc28239a" compoundref="rl__environment_8py" startline="404" endline="419">open_spiel.python.rl_environment.Environment.action_spec</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a32f13f6376bcfb191fa2d34ef851a77d" compoundref="rnad_8py" startline="1061" endline="1089">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.collect_batch_trajectory</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a5eda9be6e375bbe3e2a741972e7c2538" compoundref="rl__environment_8py" startline="459" endline="461">open_spiel.python.rl_environment.Environment.game</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab0a1d4432531718839681174bfff7475" compoundref="rl__environment_8py" startline="444" endline="449">open_spiel.python.rl_environment.Environment.is_turn_based</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" compoundref="rnad_8py" startline="811" endline="865">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a2e9639edb575a67238a912c738028565" compoundref="rl__environment_8py" startline="451" endline="453">open_spiel.python.rl_environment.Environment.max_game_length</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a1ef034430a2c9fd145fc126bc30eef27" compoundref="rl__environment_8py" startline="431" endline="433">open_spiel.python.rl_environment.Environment.name</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6e640909a93c376b52991722064a6dfe" compoundref="rl__environment_8py" startline="435" endline="437">open_spiel.python.rl_environment.Environment.num_players</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab23bfab44b60da9b844ea227d9458062" compoundref="rl__environment_8py" startline="384" endline="403">open_spiel.python.rl_environment.Environment.observation_spec</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1afceda495233508d0264783c55631b237" compoundref="rl__environment_8py" startline="476" endline="481">open_spiel.python.rl_environment.Environment.update_mfg_distribution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a7044754416cd1fbb1c04216045ff4506" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_num_players</definition>
+        <argsstring></argsstring>
+        <name>_num_players</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._num_players</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="188" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="188" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a176887d4dc595d7e3f12433b3c25b56e" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_state</definition>
+        <argsstring></argsstring>
+        <name>_state</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="189" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="189" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a230efd26d11086dacef783663691f316" compoundref="rl__environment_8py" startline="369" endline="383">open_spiel.python.rl_environment.Environment._sample_external_events</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab802656870336ea14206423aa14fb31e" compoundref="rl__environment_8py" startline="469" endline="471">open_spiel.python.rl_environment.Environment.get_state</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a375770809594b1c3dbbfeb553eaf87d2" compoundref="rl__environment_8py" startline="219" endline="269">open_spiel.python.rl_environment.Environment.get_time_step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa891fe769a1ddedb0bc35ec6b0fa2292" compoundref="rl__environment_8py" startline="455" endline="457">open_spiel.python.rl_environment.Environment.is_chance_node</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aefa496c5461824795bc9a1f274df94f8" compoundref="rl__environment_8py" startline="462" endline="467">open_spiel.python.rl_environment.Environment.set_state</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a8ad3127243e93acc3c084a8343b5088d" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_should_reset</definition>
+        <argsstring></argsstring>
+        <name>_should_reset</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._should_reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="190" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="190" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a375770809594b1c3dbbfeb553eaf87d2" compoundref="rl__environment_8py" startline="219" endline="269">open_spiel.python.rl_environment.Environment.get_time_step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1afede8e3865cf9a847bb32dd2b1b87288" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_discounts</definition>
+        <argsstring></argsstring>
+        <name>_discounts</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._discounts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="193" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a881d3b4fc40ccf0b7af5664bbd458a87" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::_use_observation</definition>
+        <argsstring></argsstring>
+        <name>_use_observation</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._use_observation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="209" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="209" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f" compoundref="rl__agent__policy_8py" startline="53" endline="81">open_spiel.python.rl_agent_policy.JointRLAgentPolicy.action_probabilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab23bfab44b60da9b844ea227d9458062" compoundref="rl__environment_8py" startline="384" endline="403">open_spiel.python.rl_environment.Environment.observation_spec</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abf762d87fdd5e9c5a87035b45d25d4d1" compoundref="rl__environment_8py" startline="422" endline="428">open_spiel.python.rl_environment.Environment.use_observation</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a34ce4c3d0934b9ad11134510f1fb4f2b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::num_players</definition>
+        <argsstring></argsstring>
+        <name>num_players</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.num_players</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="243" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="243" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abe0ef18a489a7cb0c9cee9dbf69394cb" compoundref="rl__environment_8py" startline="439" endline="441">open_spiel.python.rl_environment.Environment.num_actions_per_step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6e640909a93c376b52991722064a6dfe" compoundref="rl__environment_8py" startline="435" endline="437">open_spiel.python.rl_environment.Environment.num_players</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a29f8479f52fefffb186a1e5801924001" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::is_turn_based</definition>
+        <argsstring></argsstring>
+        <name>is_turn_based</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.is_turn_based</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="271" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="271" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abe0ef18a489a7cb0c9cee9dbf69394cb" compoundref="rl__environment_8py" startline="439" endline="441">open_spiel.python.rl_environment.Environment.num_actions_per_step</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6213af09557fe87e9543bd9809ab7024" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment::num_actions_per_step</definition>
+        <argsstring></argsstring>
+        <name>num_actions_per_step</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.num_actions_per_step</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="309" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="309" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a58dee24a7616d6a5648d5bcd55d84a20" compoundref="rl__environment_8py" startline="282" endline="323">open_spiel.python.rl_environment.Environment.step</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ac8f6f7f5afac59865a24954c7b6596d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.__init__</definition>
+        <argsstring>(self, game, discount=1.0, chance_event_sampler=None, observation_type=None, include_full_state=False, mfg_distribution=None, mfg_population=None, enable_legality_check=False, **kwargs)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a5eda9be6e375bbe3e2a741972e7c2538" kindref="member">game</ref></type>
+          <defname>game</defname>
+        </param>
+        <param>
+          <type>discount</type>
+          <defname>discount</defname>
+          <defval>1.0</defval>
+        </param>
+        <param>
+          <type>chance_event_sampler</type>
+          <defname>chance_event_sampler</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>observation_type</type>
+          <defname>observation_type</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>include_full_state</type>
+          <defname>include_full_state</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a492f84a4c0108f2af0024b0c2e02a1cd" kindref="member">mfg_distribution</ref></type>
+          <defname>mfg_distribution</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>mfg_population</type>
+          <defname>mfg_population</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>enable_legality_check</type>
+          <defname>enable_legality_check</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>**</type>
+          <declname>kwargs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Constructor.
+
+Args:
+  game: [string, pyspiel.Game] Open Spiel game name or game instance.
+  discount: float, discount used in non-initial steps. Defaults to 1.0.
+  chance_event_sampler: optional object with `sample_external_events` method
+    to sample chance events.
+  observation_type: what kind of observation to use. If not specified, will
+    default to INFORMATION_STATE unless the game doesn&apos;t provide it.
+  include_full_state: whether or not to include the full serialized
+    OpenSpiel state in the observations (sometimes useful for debugging).
+  mfg_distribution: the distribution over states if the game is a mean field
+    game.
+  mfg_population: The Mean Field Game population to consider.
+  enable_legality_check: Check the legality of the move before stepping.
+  **kwargs: dict, additional settings passed to the Open Spiel game.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="143" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="152" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a327f8a1a5aaf068a28eea7849c4bec8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.seed</definition>
+        <argsstring>(self, seed=None)</argsstring>
+        <name>seed</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.seed</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>seed</type>
+          <defname>seed</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="216" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="216" bodyend="218"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa97a4b7812c3985634952178b803ceed" compoundref="rl__environment_8py" startline="170">open_spiel.python.rl_environment.Environment._chance_event_sampler</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a327f8a1a5aaf068a28eea7849c4bec8b" compoundref="rl__environment_8py" startline="216" endline="218">open_spiel.python.rl_environment.Environment.seed</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_chance_event_sampler_1a0b9b87fc73788872a6dbfb35fc729da0" compoundref="rl__environment_8py" startline="122" endline="124">open_spiel.python.rl_environment.ChanceEventSampler.__init__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a327f8a1a5aaf068a28eea7849c4bec8b" compoundref="rl__environment_8py" startline="216" endline="218">open_spiel.python.rl_environment.Environment.seed</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a375770809594b1c3dbbfeb553eaf87d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.get_time_step</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_time_step</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.get_time_step</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns a `TimeStep` without updating the environment.
+
+Returns:
+  A `TimeStep` namedtuple containing:
+    observation: list of dicts containing one observations per player, each
+      corresponding to `observation_spec()`.
+    reward: list of rewards at this timestep, or None if step_type is
+      `StepType.FIRST`.
+    discount: list of discounts in the range [0, 1], or None if step_type is
+      `StepType.FIRST`.
+    step_type: A `StepType` value.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="219" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="219" bodyend="269"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a8ad3127243e93acc3c084a8343b5088d" compoundref="rl__environment_8py" startline="190">open_spiel.python.rl_environment.Environment._should_reset</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a176887d4dc595d7e3f12433b3c25b56e" compoundref="rl__environment_8py" startline="189">open_spiel.python.rl_environment.Environment._state</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a58dee24a7616d6a5648d5bcd55d84a20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.step</definition>
+        <argsstring>(self, actions)</argsstring>
+        <name>step</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.step</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>actions</type>
+          <defname>actions</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Updates the environment according to `actions` and returns a `TimeStep`.
+
+If the environment returned a `TimeStep` with `StepType.LAST` at the
+previous step, this call to `step` will start a new sequence and `actions`
+will be ignored.
+
+This method will also start a new sequence if called after the environment
+has been constructed and `reset` has not been called. Again, in this case
+`actions` will be ignored.
+
+Args:
+  actions: a list containing one action per player, following specifications
+    defined in `action_spec()`.
+
+Returns:
+  A `TimeStep` namedtuple containing:
+    observation: list of dicts containing one observations per player, each
+      corresponding to `observation_spec()`.
+    reward: list of rewards at this timestep, or None if step_type is
+      `StepType.FIRST`.
+    discount: list of discounts in the range [0, 1], or None if step_type is
+      `StepType.FIRST`.
+    step_type: A `StepType` value.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="282" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="282" bodyend="323"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6213af09557fe87e9543bd9809ab7024" compoundref="rl__environment_8py" startline="309">open_spiel.python.rl_environment.Environment.num_actions_per_step</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abe0ef18a489a7cb0c9cee9dbf69394cb" compoundref="rl__environment_8py" startline="439" endline="441">open_spiel.python.rl_environment.Environment.num_actions_per_step</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.reset</definition>
+        <argsstring>(self)</argsstring>
+        <name>reset</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.reset</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Starts a new sequence and returns the first `TimeStep` of this sequence.
+
+Returns:
+  A `TimeStep` namedtuple containing:
+    observations: list of dicts containing one observations per player, each
+      corresponding to `observation_spec()`.
+    rewards: list of rewards at this timestep, or None if step_type is
+      `StepType.FIRST`.
+    discounts: list of discounts in the range [0, 1], or None if step_type
+      is `StepType.FIRST`.
+    step_type: A `StepType` value.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="324" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="324" bodyend="368"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a580652a1e241b754ee8b7fb1ecd4ecbf" compoundref="rl__environment_8py" startline="171">open_spiel.python.rl_environment.Environment._include_full_state</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a079292efba13501fa783bf91e1a27644" compoundref="rl__environment_8py" startline="173">open_spiel.python.rl_environment.Environment._mfg_population</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a7044754416cd1fbb1c04216045ff4506" compoundref="rl__environment_8py" startline="188">open_spiel.python.rl_environment.Environment._num_players</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a230efd26d11086dacef783663691f316" compoundref="rl__environment_8py" startline="369" endline="383">open_spiel.python.rl_environment.Environment._sample_external_events</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a8ad3127243e93acc3c084a8343b5088d" compoundref="rl__environment_8py" startline="190">open_spiel.python.rl_environment.Environment._should_reset</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a176887d4dc595d7e3f12433b3c25b56e" compoundref="rl__environment_8py" startline="189">open_spiel.python.rl_environment.Environment._state</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2c84a4cb48d79021776745797399c9e8" compoundref="rl__agent__policy_8py" startline="51">open_spiel.python.rl_agent_policy.JointRLAgentPolicy._use_observation</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a881d3b4fc40ccf0b7af5664bbd458a87" compoundref="rl__environment_8py" startline="209">open_spiel.python.rl_environment.Environment._use_observation</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a34ce4c3d0934b9ad11134510f1fb4f2b" compoundref="rl__environment_8py" startline="243">open_spiel.python.rl_environment.Environment.num_players</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6e640909a93c376b52991722064a6dfe" compoundref="rl__environment_8py" startline="435" endline="437">open_spiel.python.rl_environment.Environment.num_players</references>
+        <references refid="classopen__spiel_1_1python_1_1vector__env_1_1_sync_vector_env_1afc0bfe9d8252f3d70df19bb5f18335d6" compoundref="vector__env_8py" startline="37" endline="39">open_spiel.python.vector_env.SyncVectorEnv.num_players</references>
+        <references refid="structopen__spiel_1_1_action_view_1af5cc636acb99e4a0d08e6b236cd169d8" compoundref="action__view_8h" startline="80" endline="80">open_spiel::ActionView::num_players</references>
+        <references refid="structopen__spiel_1_1_game_info_1a08b82d096c652f4b0d129c0fc317e1ee" compoundref="spiel_8h" startline="167">open_spiel::GameInfo::num_players</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1vector__env_1_1_sync_vector_env_1a1221d0c9f00fd5a71970d90fd4efaa53" compoundref="vector__env_8py" startline="40" endline="68">open_spiel.python.vector_env.SyncVectorEnv.step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab23bfab44b60da9b844ea227d9458062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.observation_spec</definition>
+        <argsstring>(self)</argsstring>
+        <name>observation_spec</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.observation_spec</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Defines the observation per player provided by the environment.
+
+Each dict member will contain its expected structure and shape. E.g.: for
+Kuhn Poker {&quot;info_state&quot;: (6,), &quot;legal_actions&quot;: (2,), &quot;current_player&quot;: (),
+            &quot;serialized_state&quot;: ()}
+
+Returns:
+  A specification dict describing the observation fields and shapes.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="384" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="384" bodyend="403"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2c84a4cb48d79021776745797399c9e8" compoundref="rl__agent__policy_8py" startline="51">open_spiel.python.rl_agent_policy.JointRLAgentPolicy._use_observation</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a881d3b4fc40ccf0b7af5664bbd458a87" compoundref="rl__environment_8py" startline="209">open_spiel.python.rl_environment.Environment._use_observation</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1adf39539769c6522554a2a8ccdc28239a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.action_spec</definition>
+        <argsstring>(self)</argsstring>
+        <name>action_spec</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.action_spec</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Defines per player action specifications.
+
+Specifications include action boundaries and their data type.
+E.g.: for Kuhn Poker {&quot;num_actions&quot;: 2, &quot;min&quot;: 0, &quot;max&quot;:1, &quot;dtype&quot;: int}
+
+Returns:
+  A specification dict containing per player action properties.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="404" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="404" bodyend="419"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abf762d87fdd5e9c5a87035b45d25d4d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.use_observation</definition>
+        <argsstring>(self)</argsstring>
+        <name>use_observation</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.use_observation</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns whether the environment is using the game&apos;s observation.
+
+If false, it is using the game&apos;s information state.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="422" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="422" bodyend="428"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2c84a4cb48d79021776745797399c9e8" compoundref="rl__agent__policy_8py" startline="51">open_spiel.python.rl_agent_policy.JointRLAgentPolicy._use_observation</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a881d3b4fc40ccf0b7af5664bbd458a87" compoundref="rl__environment_8py" startline="209">open_spiel.python.rl_environment.Environment._use_observation</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a1ef034430a2c9fd145fc126bc30eef27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.name</definition>
+        <argsstring>(self)</argsstring>
+        <name>name</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.name</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="431" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="431" bodyend="433"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6e640909a93c376b52991722064a6dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.num_players</definition>
+        <argsstring>(self)</argsstring>
+        <name>num_players</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.num_players</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="435" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="435" bodyend="437"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a34ce4c3d0934b9ad11134510f1fb4f2b" compoundref="rl__environment_8py" startline="243">open_spiel.python.rl_environment.Environment.num_players</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abe0ef18a489a7cb0c9cee9dbf69394cb" compoundref="rl__environment_8py" startline="439" endline="441">open_spiel.python.rl_environment.Environment.num_actions_per_step</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abe0ef18a489a7cb0c9cee9dbf69394cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.num_actions_per_step</definition>
+        <argsstring>(self)</argsstring>
+        <name>num_actions_per_step</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.num_actions_per_step</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="439" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="439" bodyend="441"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a29f8479f52fefffb186a1e5801924001" compoundref="rl__environment_8py" startline="271">open_spiel.python.rl_environment.Environment.is_turn_based</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab0a1d4432531718839681174bfff7475" compoundref="rl__environment_8py" startline="444" endline="449">open_spiel.python.rl_environment.Environment.is_turn_based</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a34ce4c3d0934b9ad11134510f1fb4f2b" compoundref="rl__environment_8py" startline="243">open_spiel.python.rl_environment.Environment.num_players</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6e640909a93c376b52991722064a6dfe" compoundref="rl__environment_8py" startline="435" endline="437">open_spiel.python.rl_environment.Environment.num_players</references>
+        <references refid="classopen__spiel_1_1python_1_1vector__env_1_1_sync_vector_env_1afc0bfe9d8252f3d70df19bb5f18335d6" compoundref="vector__env_8py" startline="37" endline="39">open_spiel.python.vector_env.SyncVectorEnv.num_players</references>
+        <references refid="structopen__spiel_1_1_action_view_1af5cc636acb99e4a0d08e6b236cd169d8" compoundref="action__view_8h" startline="80" endline="80">open_spiel::ActionView::num_players</references>
+        <references refid="structopen__spiel_1_1_game_info_1a08b82d096c652f4b0d129c0fc317e1ee" compoundref="spiel_8h" startline="167">open_spiel::GameInfo::num_players</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a58dee24a7616d6a5648d5bcd55d84a20" compoundref="rl__environment_8py" startline="282" endline="323">open_spiel.python.rl_environment.Environment.step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab0a1d4432531718839681174bfff7475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.is_turn_based</definition>
+        <argsstring>(self)</argsstring>
+        <name>is_turn_based</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.is_turn_based</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="444" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="444" bodyend="449"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abe0ef18a489a7cb0c9cee9dbf69394cb" compoundref="rl__environment_8py" startline="439" endline="441">open_spiel.python.rl_environment.Environment.num_actions_per_step</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a2e9639edb575a67238a912c738028565" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.max_game_length</definition>
+        <argsstring>(self)</argsstring>
+        <name>max_game_length</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.max_game_length</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="451" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="451" bodyend="453"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a2e9639edb575a67238a912c738028565" compoundref="rl__environment_8py" startline="451" endline="453">open_spiel.python.rl_environment.Environment.max_game_length</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a2e9639edb575a67238a912c738028565" compoundref="rl__environment_8py" startline="451" endline="453">open_spiel.python.rl_environment.Environment.max_game_length</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa891fe769a1ddedb0bc35ec6b0fa2292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.is_chance_node</definition>
+        <argsstring>(self)</argsstring>
+        <name>is_chance_node</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.is_chance_node</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="455" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="455" bodyend="457"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a176887d4dc595d7e3f12433b3c25b56e" compoundref="rl__environment_8py" startline="189">open_spiel.python.rl_environment.Environment._state</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa891fe769a1ddedb0bc35ec6b0fa2292" compoundref="rl__environment_8py" startline="455" endline="457">open_spiel.python.rl_environment.Environment.is_chance_node</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a230efd26d11086dacef783663691f316" compoundref="rl__environment_8py" startline="369" endline="383">open_spiel.python.rl_environment.Environment._sample_external_events</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa891fe769a1ddedb0bc35ec6b0fa2292" compoundref="rl__environment_8py" startline="455" endline="457">open_spiel.python.rl_environment.Environment.is_chance_node</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a5eda9be6e375bbe3e2a741972e7c2538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.game</definition>
+        <argsstring>(self)</argsstring>
+        <name>game</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.game</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="459" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="459" bodyend="461"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy_1ae1b612d442f7a45eb1cee3bcdf80e38d" compoundref="policy_8py" startline="341" endline="368">open_spiel.python.policy.TabularPolicy.__copy__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aefa496c5461824795bc9a1f274df94f8" compoundref="rl__environment_8py" startline="462" endline="467">open_spiel.python.rl_environment.Environment.set_state</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aefa496c5461824795bc9a1f274df94f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.set_state</definition>
+        <argsstring>(self, new_state)</argsstring>
+        <name>set_state</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.set_state</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>new_state</type>
+          <defname>new_state</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Updates the game state.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="462" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="462" bodyend="467"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a176887d4dc595d7e3f12433b3c25b56e" compoundref="rl__environment_8py" startline="189">open_spiel.python.rl_environment.Environment._state</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ae972849a1b0e68c8201c45dd6d27f1bd" compoundref="policy_8py" startline="117">open_spiel.python.policy.Policy.game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a5eda9be6e375bbe3e2a741972e7c2538" compoundref="rl__environment_8py" startline="459" endline="461">open_spiel.python.rl_environment.Environment.game</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab802656870336ea14206423aa14fb31e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.get_state</definition>
+        <argsstring>(self)</argsstring>
+        <name>get_state</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.get_state</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="469" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="469" bodyend="471"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a176887d4dc595d7e3f12433b3c25b56e" compoundref="rl__environment_8py" startline="189">open_spiel.python.rl_environment.Environment._state</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a492f84a4c0108f2af0024b0c2e02a1cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.mfg_distribution</definition>
+        <argsstring>(self)</argsstring>
+        <name>mfg_distribution</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.mfg_distribution</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="473" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="473" bodyend="475"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ae6cf3f2cf7a0c074cce9809264eecf30" compoundref="rl__environment_8py" startline="172">open_spiel.python.rl_environment.Environment._mfg_distribution</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1afceda495233508d0264783c55631b237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment.update_mfg_distribution</definition>
+        <argsstring>(self, mfg_distribution)</argsstring>
+        <name>update_mfg_distribution</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment.update_mfg_distribution</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a492f84a4c0108f2af0024b0c2e02a1cd" kindref="member">mfg_distribution</ref></type>
+          <defname>mfg_distribution</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Updates the distribution over the states of the mean field game.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="476" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="476" bodyend="481"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a8b79f63921dd584113611874377dfbc7" compoundref="rnad_8py" startline="743">open_spiel.python.algorithms.rnad.rnad.RNaDSolver._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" compoundref="rl__environment_8py" startline="180">open_spiel.python.rl_environment.Environment._game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ae6cf3f2cf7a0c074cce9809264eecf30" compoundref="rl__environment_8py" startline="172">open_spiel.python.rl_environment.Environment._mfg_distribution</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a44ded8ce513a4bd2745e420d17a5180d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment._check_legality</definition>
+        <argsstring>(self, actions)</argsstring>
+        <name>_check_legality</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._check_legality</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>actions</type>
+          <defname>actions</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="270" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="270" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a230efd26d11086dacef783663691f316" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.Environment._sample_external_events</definition>
+        <argsstring>(self)</argsstring>
+        <name>_sample_external_events</name>
+        <qualifiedname>open_spiel.python.rl_environment.Environment._sample_external_events</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sample chance events until we get to a decision node.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="369" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="369" bodyend="383"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa97a4b7812c3985634952178b803ceed" compoundref="rl__environment_8py" startline="170">open_spiel.python.rl_environment.Environment._chance_event_sampler</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ae6cf3f2cf7a0c074cce9809264eecf30" compoundref="rl__environment_8py" startline="172">open_spiel.python.rl_environment.Environment._mfg_distribution</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a176887d4dc595d7e3f12433b3c25b56e" compoundref="rl__environment_8py" startline="189">open_spiel.python.rl_environment.Environment._state</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa891fe769a1ddedb0bc35ec6b0fa2292" compoundref="rl__environment_8py" startline="455" endline="457">open_spiel.python.rl_environment.Environment.is_chance_node</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Open Spiel reinforcement learning environment class.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>object</label>
+      </node>
+      <node id="1">
+        <label>open_spiel.python.rl_environment.Environment</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>object</label>
+      </node>
+      <node id="1">
+        <label>open_spiel.python.rl_environment.Environment</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/rl_environment.py" line="140" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="140" bodyend="481"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ac8f6f7f5afac59865a24954c7b6596d8" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa97a4b7812c3985634952178b803ceed" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_chance_event_sampler</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a44ded8ce513a4bd2745e420d17a5180d" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_check_legality</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1afede8e3865cf9a847bb32dd2b1b87288" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_discounts</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab63bd0af56bc88a2928b8fffe8b7459a" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_enable_legality_check</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1af882e535ed6f35d7c761f2940015a3b0" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_game</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a580652a1e241b754ee8b7fb1ecd4ecbf" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_include_full_state</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ae6cf3f2cf7a0c074cce9809264eecf30" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_mfg_distribution</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a079292efba13501fa783bf91e1a27644" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_mfg_population</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a7044754416cd1fbb1c04216045ff4506" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_num_players</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a230efd26d11086dacef783663691f316" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_sample_external_events</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a8ad3127243e93acc3c084a8343b5088d" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_should_reset</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a176887d4dc595d7e3f12433b3c25b56e" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_state</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a881d3b4fc40ccf0b7af5664bbd458a87" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>_use_observation</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1adf39539769c6522554a2a8ccdc28239a" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>action_spec</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a5eda9be6e375bbe3e2a741972e7c2538" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>game</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab802656870336ea14206423aa14fb31e" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>get_state</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a375770809594b1c3dbbfeb553eaf87d2" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>get_time_step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aa891fe769a1ddedb0bc35ec6b0fa2292" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>is_chance_node</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a29f8479f52fefffb186a1e5801924001" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>is_turn_based</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab0a1d4432531718839681174bfff7475" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>is_turn_based</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a2e9639edb575a67238a912c738028565" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>max_game_length</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a492f84a4c0108f2af0024b0c2e02a1cd" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>mfg_distribution</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a1ef034430a2c9fd145fc126bc30eef27" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>name</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6213af09557fe87e9543bd9809ab7024" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>num_actions_per_step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abe0ef18a489a7cb0c9cee9dbf69394cb" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>num_actions_per_step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a34ce4c3d0934b9ad11134510f1fb4f2b" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>num_players</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a6e640909a93c376b52991722064a6dfe" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>num_players</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab23bfab44b60da9b844ea227d9458062" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>observation_spec</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>reset</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a327f8a1a5aaf068a28eea7849c4bec8b" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>seed</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aefa496c5461824795bc9a1f274df94f8" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>set_state</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a58dee24a7616d6a5648d5bcd55d84a20" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1afceda495233508d0264783c55631b237" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>update_mfg_distribution</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abf762d87fdd5e9c5a87035b45d25d4d1" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_environment::Environment</scope><name>use_observation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

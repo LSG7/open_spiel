@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_sim_move_game" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::SimMoveGame</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_game" prot="public" virt="non-virtual">open_spiel::Game</basecompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1_normal_form_game" prot="public" virt="non-virtual">open_spiel::NormalFormGame</derivedcompoundref>
+    <includes refid="simultaneous__move__game_8h" local="no">simultaneous_move_game.h</includes>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_game_1a20ed26ce994d812630a9e8478c7d0f08" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::SimMoveGame::SimMoveGame</definition>
+        <argsstring>(GameType game_type, GameParameters game_parameters)</argsstring>
+        <name>SimMoveGame</name>
+        <qualifiedname>open_spiel::SimMoveGame::SimMoveGame</qualifiedname>
+        <param>
+          <type><ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref></type>
+          <declname>game_type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+          <declname>game_parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="124" column="3" bodyfile="open_spiel/simultaneous_move_game.h" bodystart="124" bodyend="125"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel::NormalFormGame</label>
+        <link refid="classopen__spiel_1_1_normal_form_game"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::SimMoveGame</label>
+        <link refid="classopen__spiel_1_1_sim_move_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>open_spiel::matrix_game::MatrixGame</label>
+        <link refid="classopen__spiel_1_1matrix__game_1_1_matrix_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>open_spiel::tensor_game::TensorGame</label>
+        <link refid="classopen__spiel_1_1tensor__game_1_1_tensor_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#game_type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel::GameType</label>
+        <link refid="structopen__spiel_1_1_game_type"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::SimMoveGame</label>
+        <link refid="classopen__spiel_1_1_sim_move_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/simultaneous_move_game.h" line="122" column="1" bodyfile="open_spiel/simultaneous_move_game.h" bodystart="122" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_game_1acd86016f8990a05ac6c68b7bb8ce3711" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>ABSL_GUARDED_BY</name></member>
+      <member refid="classopen__spiel_1_1_game_1a3a53334739ff4d4b6b81269ea5518136" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>DeserializeState</name></member>
+      <member refid="classopen__spiel_1_1_game_1a02f9a81ec83227c45b70c6daf6ac09c7" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1ae1b45088cc527add6874e85d4c3a6cc3" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>game_parameters_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>game_type_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>GetParameters</name></member>
+      <member refid="classopen__spiel_1_1_game_1ad8e566fa7343c252e2895a46ef6cdd31" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>GetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41c14e07fcb4939e8b283b1b8c623b23" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>InformationStateTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1_game_1a209f3549db02ccfd23e5f534f49c6b9c" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>InformationStateTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4e260b8faf1879f3bbe8d0bcab31a437" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>InformationStateTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>MakeBuiltInObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a223d65cc15f5961951e2c685a77879d9" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>MakeObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a28537d9c2a657634e611724e12d2f32f" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>MakeRegisteredObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a817f5d34cf3d2bcf5e890357f9c2ef1f" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>MaxChanceNodesInHistory</name></member>
+      <member refid="classopen__spiel_1_1_game_1a23c04050a938cc94e9fa68e285131ac6" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>MaxChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa74315d4db85544a8835269b26ba2966" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveGame</scope><name>MaxGameLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>MaxHistoryLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4b0c5bbf1361734cc6740fc6be893fda" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>MaxMoveNumber</name></member>
+      <member refid="classopen__spiel_1_1_game_1a89bb13e2ab0da0f38c2c24072ac22b5d" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveGame</scope><name>MaxUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab9390e351cfe88541b1057d7b60c6fb5" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveGame</scope><name>MinUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>mutex_defaulted_parameters_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a5696835fab2961be5e2a0a08e36999a5" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveGame</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa76d3480113257e022575019af601df1" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ac46c5cfeeb05478188b382fa4d182efd" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>NewInitialStateForPopulation</name></member>
+      <member refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>NewInitialStates</name></member>
+      <member refid="classopen__spiel_1_1_game_1a01a5c08dfab0c2260a31c78be362476f" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveGame</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveGame</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1_game_1a3ad925d3568e428a6c3e4d601ac0cea0" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>ObservationTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1_game_1a36bc618e4f23f2b81cb479e68dadf310" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>ObservationTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a19ffc4fce853df1f6314fc341472e5c4" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>ObservationTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a24c7b0caccaf0fbaa1e3b5ee313a3720" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>operator=</name></member>
+      <member refid="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>ParameterValue</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41ff35e433f78eabf4ff306257522fbd" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>PolicyTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a04741ccd0d5da41a454501dd2953af69" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>SetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_game_1a20ed26ce994d812630a9e8478c7d0f08" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>SimMoveGame</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveGame</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1_game_1a735212bf068b8461236ccc596664e4da" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>UtilitySum</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1854931cb033de9f16657172659943d3" prot="public" virt="virtual"><scope>open_spiel::SimMoveGame</scope><name>~Game</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

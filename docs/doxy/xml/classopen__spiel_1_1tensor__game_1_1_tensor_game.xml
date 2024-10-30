@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1tensor__game_1_1_tensor_game" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::tensor_game::TensorGame</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_normal_form_game" prot="public" virt="non-virtual">open_spiel::NormalFormGame</basecompoundref>
+    <includes refid="tensor__game_8h" local="no">tensor_game.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a6d03878f8929655a42fb23d50737b406" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; std::vector&lt; std::string &gt; &gt;</type>
+        <definition>const std::vector&lt;std::vector&lt;std::string&gt; &gt; open_spiel::tensor_game::TensorGame::action_names_</definition>
+        <argsstring></argsstring>
+        <name>action_names_</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::action_names_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="165" column="21" bodyfile="open_spiel/tensor_game.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a1de3650f989dd47b6577bed4f5b1fc85" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>const std::vector&lt;std::vector&lt;double&gt; &gt; open_spiel::tensor_game::TensorGame::utilities_</definition>
+        <argsstring></argsstring>
+        <name>utilities_</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::utilities_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="168" column="21" bodyfile="open_spiel/tensor_game.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a932eeee8ea0b00cb31779dade508037a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; open_spiel::tensor_game::TensorGame::shape_</definition>
+        <argsstring></argsstring>
+        <name>shape_</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::shape_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="169" column="15" bodyfile="open_spiel/tensor_game.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a6214cf989feef48561e9c58d250292c6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double open_spiel::tensor_game::TensorGame::min_utility_</definition>
+        <argsstring></argsstring>
+        <name>min_utility_</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::min_utility_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="170" column="10" bodyfile="open_spiel/tensor_game.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a0986c4d4eec5db5079f5cf530baa413c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double open_spiel::tensor_game::TensorGame::max_utility_</definition>
+        <argsstring></argsstring>
+        <name>max_utility_</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::max_utility_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="171" column="10" bodyfile="open_spiel/tensor_game.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a55eb7ffe08a76e4f3beb55af0f2436b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::tensor_game::TensorGame::TensorGame</definition>
+        <argsstring>(GameType game_type, GameParameters game_parameters, std::vector&lt; std::vector&lt; std::string &gt; &gt; action_names, std::vector&lt; std::vector&lt; double &gt; &gt; utilities)</argsstring>
+        <name>TensorGame</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::TensorGame</qualifiedname>
+        <param>
+          <type><ref refid="structopen__spiel_1_1_game_type" kindref="compound">GameType</ref></type>
+          <declname>game_type</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+          <declname>game_parameters</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; std::string &gt; &gt;</type>
+          <declname>action_names</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+          <declname>utilities</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="41" column="3" bodyfile="open_spiel/tensor_game.h" bodystart="41" bodyend="58"/>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a743024a2d64444ffdb58c25b35e674a1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int open_spiel::tensor_game::TensorGame::NumDistinctActions</definition>
+        <argsstring>() const override</argsstring>
+        <name>NumDistinctActions</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::NumDistinctActions</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a01a5c08dfab0c2260a31c78be362476f">NumDistinctActions</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="61" column="7" bodyfile="open_spiel/tensor_game.h" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a93780aa65740267f9d6aa0e0492ebf7f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; State &gt; open_spiel::tensor_game::TensorGame::NewInitialState</definition>
+        <argsstring>() const override</argsstring>
+        <name>NewInitialState</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::NewInitialState</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a5696835fab2961be5e2a0a08e36999a5">NewInitialState</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="65" column="19" bodyfile="open_spiel/tensor_game.cc" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int open_spiel::tensor_game::TensorGame::NumPlayers</definition>
+        <argsstring>() const override</argsstring>
+        <name>NumPlayers</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::NumPlayers</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0">NumPlayers</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="67" column="7" bodyfile="open_spiel/tensor_game.h" bodystart="67" bodyend="67"/>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aca64aaaf4b90a0a755b5d645eb9e7860" compoundref="tensor__game_8h" startline="89" endline="94">ActionName</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a421e14a97cd15a0ba6970c1bde5751d0" compoundref="tensor__game_8h" startline="101" endline="112">ApproxEqual</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a71a2ca91924cdb74c953fc8a4533b6b7" compoundref="tensor__game_8h" startline="130" endline="137">AsMatrixGame</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aa16f1eaae2db037e2bb2e40de106ba9e" compoundref="tensor__game_8h" startline="114" endline="123">GetUtilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1acc2f7e0b961eb96879df56553bc82780" compoundref="tensor__game_8h" startline="84" endline="88">PlayerUtilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a24f7a3aa0c3bd3b05b1f958405f52911" compoundref="tensor__game_8h" startline="78" endline="83">PlayerUtility</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a41f59944fffb4c46db07f19092b1d55a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double open_spiel::tensor_game::TensorGame::MinUtility</definition>
+        <argsstring>() const override</argsstring>
+        <name>MinUtility</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::MinUtility</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1ab9390e351cfe88541b1057d7b60c6fb5">MinUtility</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="69" column="10" bodyfile="open_spiel/tensor_game.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab0f8ec980cc99b2fd7b8c8aa09fa2c90" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double open_spiel::tensor_game::TensorGame::MaxUtility</definition>
+        <argsstring>() const override</argsstring>
+        <name>MaxUtility</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::MaxUtility</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a89bb13e2ab0da0f38c2c24072ac22b5d">MaxUtility</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="71" column="10" bodyfile="open_spiel/tensor_game.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a61789265c5f99c7115b44ee176a22d22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::tensor_game::TensorGame::ActionToString</definition>
+        <argsstring>(Player player, Action action) const override</argsstring>
+        <name>ActionToString</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::ActionToString</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1a3a53334739ff4d4b6b81269ea5518136">ActionToString</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="73" column="15" bodyfile="open_spiel/tensor_game.h" bodystart="73" bodyend="75"/>
+        <references refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aca64aaaf4b90a0a755b5d645eb9e7860" compoundref="tensor__game_8h" startline="89" endline="94">ActionName</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a857b01e3c48ea7c5f7ac64f13e7468f5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; int &gt; &amp;</type>
+        <definition>const std::vector&lt; int &gt; &amp; open_spiel::tensor_game::TensorGame::Shape</definition>
+        <argsstring>() const</argsstring>
+        <name>Shape</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::Shape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="77" column="21" bodyfile="open_spiel/tensor_game.h" bodystart="77" bodyend="77"/>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1ae8fa39ae3a1f038ab47a9a5d98ef66b2" compoundref="tensor__game_8h" startline="216" endline="223">open_spiel::tensor_game::TensorState::DoApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a49efa39f7897a573c57c2c253eb78ae7" compoundref="tensor__game_8h" startline="179" endline="188">open_spiel::tensor_game::TensorState::LegalActions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a24f7a3aa0c3bd3b05b1f958405f52911" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const double</type>
+        <definition>const double open_spiel::tensor_game::TensorGame::PlayerUtility</definition>
+        <argsstring>(const Player player, const std::vector&lt; Action &gt; &amp;actions) const</argsstring>
+        <name>PlayerUtility</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::PlayerUtility</qualifiedname>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="78" column="16" bodyfile="open_spiel/tensor_game.h" bodystart="78" bodyend="83"/>
+        <references refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95" compoundref="tensor__game_8h" startline="67" endline="67">NumPlayers</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a7de4a787fb93518da94697d0b3a324fb" compoundref="tensor__game_8h" startline="125" endline="128">GetUtility</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1afa49d79c58c993523430742469168dbb" compoundref="tensor__game_8h" startline="201" endline="209">open_spiel::tensor_game::TensorState::Returns</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1acc2f7e0b961eb96879df56553bc82780" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; double &gt; &amp;</type>
+        <definition>const std::vector&lt; double &gt; &amp; open_spiel::tensor_game::TensorGame::PlayerUtilities</definition>
+        <argsstring>(const Player player) const</argsstring>
+        <name>PlayerUtilities</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::PlayerUtilities</qualifiedname>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="84" column="21" bodyfile="open_spiel/tensor_game.h" bodystart="84" bodyend="88"/>
+        <references refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95" compoundref="tensor__game_8h" startline="67" endline="67">NumPlayers</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aca64aaaf4b90a0a755b5d645eb9e7860" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; open_spiel::tensor_game::TensorGame::ActionName</definition>
+        <argsstring>(const Player player, const Action &amp;action) const</argsstring>
+        <name>ActionName</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::ActionName</qualifiedname>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &amp;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="89" column="21" bodyfile="open_spiel/tensor_game.h" bodystart="89" bodyend="94"/>
+        <references refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95" compoundref="tensor__game_8h" startline="67" endline="67">NumPlayers</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a61789265c5f99c7115b44ee176a22d22" compoundref="tensor__game_8h" startline="73" endline="75">ActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a10bc3e5563dccfafd58163874274d7f3" compoundref="tensor__game_8h" startline="192" endline="197">open_spiel::tensor_game::TensorState::ActionToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1af8206eecf92a2adf8172a6702c1b1f2b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::tensor_game::TensorGame::operator==</definition>
+        <argsstring>(const Game &amp;other_game) const override</argsstring>
+        <name>operator==</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::operator==</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c">operator==</reimplements>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>other_game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="96" column="8" bodyfile="open_spiel/tensor_game.h" bodystart="96" bodyend="99"/>
+        <references refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" compoundref="spiel__utils_8h" startline="397" endline="408">open_spiel::down_cast</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a421e14a97cd15a0ba6970c1bde5751d0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::tensor_game::TensorGame::ApproxEqual</definition>
+        <argsstring>(const Game &amp;other_game, double tolerance) const</argsstring>
+        <name>ApproxEqual</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::ApproxEqual</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>other_game</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tolerance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="101" column="8" bodyfile="open_spiel/tensor_game.h" bodystart="101" bodyend="112"/>
+        <references refid="namespaceopen__spiel_1ae00c0c4427507797bc362d31541ff684" compoundref="spiel__utils_8h" startline="200" endline="211">open_spiel::AllNear</references>
+        <references refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" compoundref="spiel__utils_8h" startline="397" endline="408">open_spiel::down_cast</references>
+        <references refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95" compoundref="tensor__game_8h" startline="67" endline="67">NumPlayers</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aa16f1eaae2db037e2bb2e40de106ba9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; open_spiel::tensor_game::TensorGame::GetUtilities</definition>
+        <argsstring>(const std::vector&lt; Action &gt; &amp;joint_action) const override</argsstring>
+        <name>GetUtilities</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::GetUtilities</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_normal_form_game_1a636e3d1f642c56ed360e2ebb69853849">GetUtilities</reimplements>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>joint_action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="114" column="15" bodyfile="open_spiel/tensor_game.h" bodystart="114" bodyend="123"/>
+        <references refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95" compoundref="tensor__game_8h" startline="67" endline="67">NumPlayers</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a7de4a787fb93518da94697d0b3a324fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double open_spiel::tensor_game::TensorGame::GetUtility</definition>
+        <argsstring>(Player player, const std::vector&lt; Action &gt; &amp;joint_action) const override</argsstring>
+        <name>GetUtility</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::GetUtility</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_normal_form_game_1a773326bfdbe035e85d9075f84eeb3f66">GetUtility</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>joint_action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="125" column="10" bodyfile="open_spiel/tensor_game.h" bodystart="125" bodyend="128"/>
+        <references refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a24f7a3aa0c3bd3b05b1f958405f52911" compoundref="tensor__game_8h" startline="78" endline="83">PlayerUtility</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a71a2ca91924cdb74c953fc8a4533b6b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" kindref="compound">matrix_game::MatrixGame</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const matrix_game::MatrixGame &gt; open_spiel::tensor_game::TensorGame::AsMatrixGame</definition>
+        <argsstring>() const</argsstring>
+        <name>AsMatrixGame</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::AsMatrixGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="130" column="19" bodyfile="open_spiel/tensor_game.h" bodystart="130" bodyend="137"/>
+        <references refid="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" compoundref="matrix__game_8cc" startline="147" endline="163">open_spiel::matrix_game::CreateMatrixGame</references>
+        <references refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" compoundref="spiel_8h" startline="809" endline="809">open_spiel::Game::GetType</references>
+        <references refid="structopen__spiel_1_1_game_type_1a89c154ac202bd4a659b9e4ea3d28ebbb" compoundref="spiel_8h" startline="55">open_spiel::GameType::long_name</references>
+        <references refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95" compoundref="tensor__game_8h" startline="67" endline="67">NumPlayers</references>
+        <references refid="structopen__spiel_1_1_game_type_1a7dc97c2b88971ea7c5180d3c2fe29cf1" compoundref="spiel_8h" startline="52">open_spiel::GameType::short_name</references>
+        <references refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" compoundref="spiel__utils_8h" startline="259">SPIEL_CHECK_EQ</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a828dcafc9ad0524bed069d540646f1c6" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const int</type>
+        <definition>const int open_spiel::tensor_game::TensorGame::index</definition>
+        <argsstring>(const std::vector&lt; Action &gt; &amp;args) const</argsstring>
+        <name>index</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::index</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="140" column="13" bodyfile="open_spiel/tensor_game.h" bodystart="140" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ad7208b18f7d2ea54e92280da2f88afb4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::tensor_game::TensorGame::ComputeMinMaxUtility</definition>
+        <argsstring>()</argsstring>
+        <name>ComputeMinMaxUtility</name>
+        <qualifiedname>open_spiel::tensor_game::TensorGame::ComputeMinMaxUtility</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.h" line="148" column="8" bodyfile="open_spiel/tensor_game.h" bodystart="148" bodyend="162"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::NormalFormGame</label>
+        <link refid="classopen__spiel_1_1_normal_form_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::SimMoveGame</label>
+        <link refid="classopen__spiel_1_1_sim_move_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::tensor_game::TensorGame</label>
+        <link refid="classopen__spiel_1_1tensor__game_1_1_tensor_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#game_type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>open_spiel::GameType</label>
+        <link refid="structopen__spiel_1_1_game_type"/>
+      </node>
+      <node id="2">
+        <label>open_spiel::NormalFormGame</label>
+        <link refid="classopen__spiel_1_1_normal_form_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::SimMoveGame</label>
+        <link refid="classopen__spiel_1_1_sim_move_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::tensor_game::TensorGame</label>
+        <link refid="classopen__spiel_1_1tensor__game_1_1_tensor_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/tensor_game.h" line="36" column="1" bodyfile="open_spiel/tensor_game.h" bodystart="36" bodyend="172"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_game_1acd86016f8990a05ac6c68b7bb8ce3711" prot="protected" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ABSL_GUARDED_BY</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a6d03878f8929655a42fb23d50737b406" prot="private" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>action_names_</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aca64aaaf4b90a0a755b5d645eb9e7860" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ActionName</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a61789265c5f99c7115b44ee176a22d22" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a421e14a97cd15a0ba6970c1bde5751d0" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ApproxEqual</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a71a2ca91924cdb74c953fc8a4533b6b7" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>AsMatrixGame</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ad7208b18f7d2ea54e92280da2f88afb4" prot="private" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ComputeMinMaxUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>DeserializeState</name></member>
+      <member refid="classopen__spiel_1_1_game_1a02f9a81ec83227c45b70c6daf6ac09c7" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1ae1b45088cc527add6874e85d4c3a6cc3" prot="protected" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" prot="protected" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>game_parameters_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" prot="protected" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>game_type_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>GetParameters</name></member>
+      <member refid="classopen__spiel_1_1_game_1ad8e566fa7343c252e2895a46ef6cdd31" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>GetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aa16f1eaae2db037e2bb2e40de106ba9e" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>GetUtilities</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a7de4a787fb93518da94697d0b3a324fb" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>GetUtility</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a828dcafc9ad0524bed069d540646f1c6" prot="private" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>index</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41c14e07fcb4939e8b283b1b8c623b23" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>InformationStateTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a058411943ab631a5c1961869ba578816" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>InformationStateTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4e260b8faf1879f3bbe8d0bcab31a437" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>InformationStateTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MakeBuiltInObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a223d65cc15f5961951e2c685a77879d9" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MakeObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a28537d9c2a657634e611724e12d2f32f" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MakeRegisteredObserver</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a0986c4d4eec5db5079f5cf530baa413c" prot="private" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>max_utility_</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a7467e615bc2d6b4f06b4b87d947e685a" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MaxChanceNodesInHistory</name></member>
+      <member refid="classopen__spiel_1_1_game_1a23c04050a938cc94e9fa68e285131ac6" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MaxChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a41ad19711e6dad5b43d5dfe2f8746308" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MaxGameLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MaxHistoryLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4b0c5bbf1361734cc6740fc6be893fda" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MaxMoveNumber</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab0f8ec980cc99b2fd7b8c8aa09fa2c90" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MaxUtility</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a6214cf989feef48561e9c58d250292c6" prot="private" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>min_utility_</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a41f59944fffb4c46db07f19092b1d55a" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>MinUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" prot="protected" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>mutex_defaulted_parameters_</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a93780aa65740267f9d6aa0e0492ebf7f" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa76d3480113257e022575019af601df1" prot="public" virt="virtual" ambiguityscope="open_spiel::NormalFormGame::"><scope>open_spiel::tensor_game::TensorGame</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ac46c5cfeeb05478188b382fa4d182efd" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>NewInitialStateForPopulation</name></member>
+      <member refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>NewInitialStates</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1ae73048319c9bcd1309e475795af57aac" prot="protected" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>NormalFormGame</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a743024a2d64444ffdb58c25b35e674a1" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1ab1d5e80c11002ac6095b521f7a9e2a95" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1_game_1a3ad925d3568e428a6c3e4d601ac0cea0" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ObservationTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a407b41a9bf6cb9c45957247bf27bafd8" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ObservationTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a19ffc4fce853df1f6314fc341472e5c4" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ObservationTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a24c7b0caccaf0fbaa1e3b5ee313a3720" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>operator=</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1af8206eecf92a2adf8172a6702c1b1f2b" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" prot="protected" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ParameterValue</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1acc2f7e0b961eb96879df56553bc82780" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>PlayerUtilities</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a24f7a3aa0c3bd3b05b1f958405f52911" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>PlayerUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41ff35e433f78eabf4ff306257522fbd" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>PolicyTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a04741ccd0d5da41a454501dd2953af69" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>SetRNGState</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a857b01e3c48ea7c5f7ac64f13e7468f5" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>Shape</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a932eeee8ea0b00cb31779dade508037a" prot="private" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>shape_</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_game_1a20ed26ce994d812630a9e8478c7d0f08" prot="protected" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>SimMoveGame</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a55eb7ffe08a76e4f3beb55af0f2436b1" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>TensorGame</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" prot="public" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a1de3650f989dd47b6577bed4f5b1fc85" prot="private" virt="non-virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>utilities_</name></member>
+      <member refid="classopen__spiel_1_1_normal_form_game_1a520aa138f4c14bda7b271a51541927bc" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>UtilitySum</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1854931cb033de9f16657172659943d3" prot="public" virt="virtual"><scope>open_spiel::tensor_game::TensorGame</scope><name>~Game</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

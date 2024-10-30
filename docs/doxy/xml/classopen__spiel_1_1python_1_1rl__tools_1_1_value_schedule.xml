@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::rl_tools::ValueSchedule</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">metaclass</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">abc.ABCMeta</basecompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule" prot="public" virt="non-virtual">open_spiel.python.rl_tools.ConstantSchedule</derivedcompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule" prot="public" virt="non-virtual">open_spiel.python.rl_tools.LinearSchedule</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1a760b8b5407894d0eacb389a3c67e2047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_tools.ValueSchedule.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.rl_tools.ValueSchedule.__init__</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1acbd5550557738188892c84fd71cb18e1">__init__</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule_1a9cf4e0ab89ff31977e160d95874a43e9">__init__</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize the value schedule.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_tools.py" line="24" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1a22376b068811a1eac3504d1df0be4b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_tools.ValueSchedule.step</definition>
+        <argsstring>(self)</argsstring>
+        <name>step</name>
+        <qualifiedname>open_spiel.python.rl_tools.ValueSchedule.step</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1ae3def6ebe5d5fd9264047ff7fcb3ded6">step</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule_1a27d0eccc6d039d9c86fb20da48729210">step</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Apply a potential change in the value.
+
+This method should be called every time the agent takes a training step.
+
+Returns:
+  the value after the step.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_tools.py" line="28" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="28" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1adfe3d35afe741339ff6fc4b93daa8231" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_tools.ValueSchedule.value</definition>
+        <argsstring>(self)</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel.python.rl_tools.ValueSchedule.value</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule_1a799eb792334575bc3db7403c38465828">value</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule_1ae4dc703ddc927bbc42f7d00147bcb713">value</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return the current value.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_tools.py" line="39" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="39" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Abstract base class changing (decaying) values.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>abc.ABCMeta</label>
+      </node>
+      <node id="2">
+        <label>metaclass</label>
+      </node>
+      <node id="1">
+        <label>open_spiel.python.rl_tools.ValueSchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel.python.rl_tools.ConstantSchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__tools_1_1_constant_schedule"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>open_spiel.python.rl_tools.LinearSchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__tools_1_1_linear_schedule"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>abc.ABCMeta</label>
+      </node>
+      <node id="2">
+        <label>metaclass</label>
+      </node>
+      <node id="1">
+        <label>open_spiel.python.rl_tools.ValueSchedule</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/rl_tools.py" line="20" column="1" bodyfile="open_spiel/python/rl_tools.py" bodystart="20" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1a760b8b5407894d0eacb389a3c67e2047" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_tools::ValueSchedule</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1a22376b068811a1eac3504d1df0be4b87" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_tools::ValueSchedule</scope><name>step</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__tools_1_1_value_schedule_1adfe3d35afe741339ff6fc4b93daa8231" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_tools::ValueSchedule</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

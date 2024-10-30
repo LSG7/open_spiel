@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="class_socket_server" kind="class" language="C++" prot="public">
+    <compoundname>SocketServer</compoundname>
+    <includes refid="socket__server_8h" local="no">socket_server.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_socket_server_1ae0d0d2c5217ac4fb45e39e35b943b432" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SocketServer::server_fd</definition>
+        <argsstring></argsstring>
+        <name>server_fd</name>
+        <qualifiedname>SocketServer::server_fd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="18" column="9" bodyfile="open_spiel/games/SG/socket_server.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_socket_server_1ac8235a9a5efdd088f566acfae7f59826" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SocketServer::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <qualifiedname>SocketServer::port</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="19" column="9" bodyfile="open_spiel/games/SG/socket_server.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_socket_server_1afb99390cbb81983d78e48f02fc28f7a3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SocketServer::running</definition>
+        <argsstring></argsstring>
+        <name>running</name>
+        <qualifiedname>SocketServer::running</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="20" column="10" bodyfile="open_spiel/games/SG/socket_server.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_socket_server_1a84d16f0ffe16ec2cbc9053181c91b180" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread SocketServer::accept_thread</definition>
+        <argsstring></argsstring>
+        <name>accept_thread</name>
+        <qualifiedname>SocketServer::accept_thread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="21" column="17" bodyfile="open_spiel/games/SG/socket_server.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_socket_server_1a73939197c857f63eede6fc2f0c6ab433" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SocketServer::SocketServer</definition>
+        <argsstring>(int port)</argsstring>
+        <name>SocketServer</name>
+        <qualifiedname>SocketServer::SocketServer</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="8" column="5" bodyfile="open_spiel/games/SG/socket_server.cc" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_socket_server_1af0e595690e453ef4b8e8da174069aba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SocketServer::~SocketServer</definition>
+        <argsstring>()</argsstring>
+        <name>~SocketServer</name>
+        <qualifiedname>SocketServer::~SocketServer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="9" column="5" bodyfile="open_spiel/games/SG/socket_server.cc" bodystart="13" bodyend="15"/>
+        <references refid="class_socket_server_1aecdf8c34e6f043409bcc39818f77bf79" compoundref="socket__server_8cc" startline="54" endline="62">stop</references>
+      </memberdef>
+      <memberdef kind="function" id="class_socket_server_1ae737fdf56e017a06e3eefddbef09446d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SocketServer::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>SocketServer::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="10" column="10" bodyfile="open_spiel/games/SG/socket_server.cc" bodystart="17" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_socket_server_1aecdf8c34e6f043409bcc39818f77bf79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SocketServer::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>SocketServer::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="11" column="10" bodyfile="open_spiel/games/SG/socket_server.cc" bodystart="54" bodyend="62"/>
+        <referencedby refid="class_socket_server_1af0e595690e453ef4b8e8da174069aba9" compoundref="socket__server_8cc" startline="13" endline="15">~SocketServer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_socket_server_1aef629fb0edd5fa6936ae27fa5f87aabe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SocketServer::send</definition>
+        <argsstring>()</argsstring>
+        <name>send</name>
+        <qualifiedname>SocketServer::send</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="12" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_socket_server_1af4e09da1bf7feca1c96a0d8d10a04181" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SocketServer::accept_connections</definition>
+        <argsstring>()</argsstring>
+        <name>accept_connections</name>
+        <qualifiedname>SocketServer::accept_connections</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="15" column="10" bodyfile="open_spiel/games/SG/socket_server.cc" bodystart="64" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_socket_server_1ab14e1b186ecfc5553858a7b4cbeebaed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SocketServer::handle_client</definition>
+        <argsstring>(int client_socket)</argsstring>
+        <name>handle_client</name>
+        <qualifiedname>SocketServer::handle_client</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>client_socket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/socket_server.h" line="16" column="10" bodyfile="open_spiel/games/SG/socket_server.cc" bodystart="82" bodyend="107"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>SocketServer</label>
+        <link refid="class_socket_server"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/games/SG/socket_server.h" line="6" column="1" bodyfile="open_spiel/games/SG/socket_server.h" bodystart="6" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_socket_server_1af4e09da1bf7feca1c96a0d8d10a04181" prot="private" virt="non-virtual"><scope>SocketServer</scope><name>accept_connections</name></member>
+      <member refid="class_socket_server_1a84d16f0ffe16ec2cbc9053181c91b180" prot="private" virt="non-virtual"><scope>SocketServer</scope><name>accept_thread</name></member>
+      <member refid="class_socket_server_1ab14e1b186ecfc5553858a7b4cbeebaed" prot="private" virt="non-virtual"><scope>SocketServer</scope><name>handle_client</name></member>
+      <member refid="class_socket_server_1ac8235a9a5efdd088f566acfae7f59826" prot="private" virt="non-virtual"><scope>SocketServer</scope><name>port</name></member>
+      <member refid="class_socket_server_1afb99390cbb81983d78e48f02fc28f7a3" prot="private" virt="non-virtual"><scope>SocketServer</scope><name>running</name></member>
+      <member refid="class_socket_server_1aef629fb0edd5fa6936ae27fa5f87aabe" prot="public" virt="non-virtual"><scope>SocketServer</scope><name>send</name></member>
+      <member refid="class_socket_server_1ae0d0d2c5217ac4fb45e39e35b943b432" prot="private" virt="non-virtual"><scope>SocketServer</scope><name>server_fd</name></member>
+      <member refid="class_socket_server_1a73939197c857f63eede6fc2f0c6ab433" prot="public" virt="non-virtual"><scope>SocketServer</scope><name>SocketServer</name></member>
+      <member refid="class_socket_server_1ae737fdf56e017a06e3eefddbef09446d" prot="public" virt="non-virtual"><scope>SocketServer</scope><name>start</name></member>
+      <member refid="class_socket_server_1aecdf8c34e6f043409bcc39818f77bf79" prot="public" virt="non-virtual"><scope>SocketServer</scope><name>stop</name></member>
+      <member refid="class_socket_server_1af0e595690e453ef4b8e8da174069aba9" prot="public" virt="non-virtual"><scope>SocketServer</scope><name>~SocketServer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

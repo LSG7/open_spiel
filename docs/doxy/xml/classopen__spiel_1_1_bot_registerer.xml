@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_bot_registerer" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::BotRegisterer</compoundname>
+    <includes refid="spiel__bots_8h" local="no">spiel_bots.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_registerer_1a9b8d59aea79555f769b2ff85464c07a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::BotRegisterer::BotRegisterer</definition>
+        <argsstring>(const std::string &amp;bot_name, std::unique_ptr&lt; BotFactory &gt; factory)</argsstring>
+        <name>BotRegisterer</name>
+        <qualifiedname>open_spiel::BotRegisterer::BotRegisterer</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>bot_name</declname>
+        </param>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_bot_factory" kindref="compound">BotFactory</ref> &gt;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="216" column="3" bodyfile="open_spiel/spiel_bots.cc" bodystart="282" bodyend="285"/>
+        <references refid="classopen__spiel_1_1_bot_registerer_1a3fa1def6359a30e7c2a435606f553648" compoundref="spiel__bots_8cc" startline="328" endline="331">RegisterBot</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_registerer_1a541147e08ab383cd9fb40e58e12789eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_bot" kindref="compound">Bot</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; Bot &gt; open_spiel::BotRegisterer::CreateByName</definition>
+        <argsstring>(const std::string &amp;bot_name, std::shared_ptr&lt; const Game &gt; game, Player player_id, const GameParameters &amp;params)</argsstring>
+        <name>CreateByName</name>
+        <qualifiedname>open_spiel::BotRegisterer::CreateByName</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>bot_name</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+          <declname>game</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="219" column="26" bodyfile="open_spiel/spiel_bots.cc" bodystart="287" bodyend="300"/>
+        <references refid="classopen__spiel_1_1_bot_registerer_1acda325423331a4326b118934c89143ef" compoundref="spiel__bots_8cc" startline="333" endline="337">RegisteredBots</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="namespaceopen__spiel_1adf7d52b8cc21ea6b1bc3963837073829" compoundref="spiel__bots_8cc" startline="363" endline="372">open_spiel::LoadBot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_registerer_1a14f4d786c80eb75555552cf61a9b1074" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; open_spiel::BotRegisterer::BotsThatCanPlayGame</definition>
+        <argsstring>(const Game &amp;game, Player player_id)</argsstring>
+        <name>BotsThatCanPlayGame</name>
+        <qualifiedname>open_spiel::BotRegisterer::BotsThatCanPlayGame</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>game</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="223" column="22" bodyfile="open_spiel/spiel_bots.cc" bodystart="302" bodyend="311"/>
+        <referencedby refid="namespaceopen__spiel_1ad83b581d5a6bd67815e9f878cdd8dafc" compoundref="spiel__bots_8cc" startline="379" endline="381">open_spiel::BotsThatCanPlayGame</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad1a5e5758d75373ec551327b963ca887" compoundref="spiel__bots_8cc" startline="374" endline="377">open_spiel::BotsThatCanPlayGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_registerer_1a08f69cbf8cd553aae6a893d13fb2b18e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; open_spiel::BotRegisterer::BotsThatCanPlayGame</definition>
+        <argsstring>(const Game &amp;game)</argsstring>
+        <name>BotsThatCanPlayGame</name>
+        <qualifiedname>open_spiel::BotRegisterer::BotsThatCanPlayGame</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="225" column="22" bodyfile="open_spiel/spiel_bots.cc" bodystart="313" bodyend="326"/>
+        <references refid="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0">open_spiel::Game::NumPlayers</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_registerer_1acda325423331a4326b118934c89143ef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; open_spiel::BotRegisterer::RegisteredBots</definition>
+        <argsstring>()</argsstring>
+        <name>RegisteredBots</name>
+        <qualifiedname>open_spiel::BotRegisterer::RegisteredBots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="227" column="22" bodyfile="open_spiel/spiel_bots.cc" bodystart="333" bodyend="337"/>
+        <referencedby refid="classopen__spiel_1_1_bot_registerer_1a541147e08ab383cd9fb40e58e12789eb" compoundref="spiel__bots_8cc" startline="287" endline="300">CreateByName</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a28d19e65fe9bd9cd5849dbc620d12d5e" compoundref="spiel__bots_8cc" startline="339" endline="341">open_spiel::RegisteredBots</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_registerer_1a7df6413dfd4fc49e44d163f9c464561a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::BotRegisterer::IsBotRegistered</definition>
+        <argsstring>(const std::string &amp;bot_name)</argsstring>
+        <name>IsBotRegistered</name>
+        <qualifiedname>open_spiel::BotRegisterer::IsBotRegistered</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>bot_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="228" column="15" bodyfile="open_spiel/spiel_bots.cc" bodystart="343" bodyend="345"/>
+        <referencedby refid="namespaceopen__spiel_1a81c2cfd16725f2a50eff8e6db4383e0e" compoundref="spiel__bots_8cc" startline="347" endline="349">open_spiel::IsBotRegistered</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_registerer_1a3fa1def6359a30e7c2a435606f553648" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::BotRegisterer::RegisterBot</definition>
+        <argsstring>(const std::string &amp;bot_name, std::unique_ptr&lt; BotFactory &gt; factory)</argsstring>
+        <name>RegisterBot</name>
+        <qualifiedname>open_spiel::BotRegisterer::RegisterBot</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>bot_name</declname>
+        </param>
+        <param>
+          <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_bot_factory" kindref="compound">BotFactory</ref> &gt;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="229" column="15" bodyfile="open_spiel/spiel_bots.cc" bodystart="328" bodyend="331"/>
+        <referencedby refid="classopen__spiel_1_1_bot_registerer_1a9b8d59aea79555f769b2ff85464c07a7" compoundref="spiel__bots_8cc" startline="282" endline="285">BotRegisterer</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_registerer_1afb6c14a668a813e9e97d7935a0ea38b6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; std::string, std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_bot_factory" kindref="compound">BotFactory</ref> &gt; &gt; &amp;</type>
+        <definition>static std::map&lt; std::string, std::unique_ptr&lt; BotFactory &gt; &gt; &amp; open_spiel::BotRegisterer::factories</definition>
+        <argsstring>()</argsstring>
+        <name>factories</name>
+        <qualifiedname>open_spiel::BotRegisterer::factories</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="237" column="19" bodyfile="open_spiel/spiel_bots.h" bodystart="237" bodyend="240"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::BotRegisterer</label>
+        <link refid="classopen__spiel_1_1_bot_registerer"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel_bots.h" line="214" column="1" bodyfile="open_spiel/spiel_bots.h" bodystart="214" bodyend="241"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_bot_registerer_1a9b8d59aea79555f769b2ff85464c07a7" prot="public" virt="non-virtual"><scope>open_spiel::BotRegisterer</scope><name>BotRegisterer</name></member>
+      <member refid="classopen__spiel_1_1_bot_registerer_1a14f4d786c80eb75555552cf61a9b1074" prot="public" virt="non-virtual"><scope>open_spiel::BotRegisterer</scope><name>BotsThatCanPlayGame</name></member>
+      <member refid="classopen__spiel_1_1_bot_registerer_1a08f69cbf8cd553aae6a893d13fb2b18e" prot="public" virt="non-virtual"><scope>open_spiel::BotRegisterer</scope><name>BotsThatCanPlayGame</name></member>
+      <member refid="classopen__spiel_1_1_bot_registerer_1a541147e08ab383cd9fb40e58e12789eb" prot="public" virt="non-virtual"><scope>open_spiel::BotRegisterer</scope><name>CreateByName</name></member>
+      <member refid="classopen__spiel_1_1_bot_registerer_1afb6c14a668a813e9e97d7935a0ea38b6" prot="private" virt="non-virtual"><scope>open_spiel::BotRegisterer</scope><name>factories</name></member>
+      <member refid="classopen__spiel_1_1_bot_registerer_1a7df6413dfd4fc49e44d163f9c464561a" prot="public" virt="non-virtual"><scope>open_spiel::BotRegisterer</scope><name>IsBotRegistered</name></member>
+      <member refid="classopen__spiel_1_1_bot_registerer_1a3fa1def6359a30e7c2a435606f553648" prot="public" virt="non-virtual"><scope>open_spiel::BotRegisterer</scope><name>RegisterBot</name></member>
+      <member refid="classopen__spiel_1_1_bot_registerer_1acda325423331a4326b118934c89143ef" prot="public" virt="non-virtual"><scope>open_spiel::BotRegisterer</scope><name>RegisteredBots</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

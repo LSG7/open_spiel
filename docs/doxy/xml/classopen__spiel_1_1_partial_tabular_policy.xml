@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_partial_tabular_policy" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::PartialTabularPolicy</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_tabular_policy" prot="public" virt="non-virtual">open_spiel::TabularPolicy</basecompoundref>
+    <includes refid="policy_8h" local="no">policy.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_partial_tabular_policy_1a9cf27b9adb2edcbcad4f1b6863347cb4" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classopen__spiel_1_1_policy" kindref="compound">Policy</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Policy&gt; open_spiel::PartialTabularPolicy::fallback_policy_</definition>
+        <argsstring></argsstring>
+        <name>fallback_policy_</name>
+        <qualifiedname>open_spiel::PartialTabularPolicy::fallback_policy_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="310" column="19" bodyfile="open_spiel/policy.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_partial_tabular_policy_1afab39f02223fcb2247ffd119eba13fba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::PartialTabularPolicy::PartialTabularPolicy</definition>
+        <argsstring>()</argsstring>
+        <name>PartialTabularPolicy</name>
+        <qualifiedname>open_spiel::PartialTabularPolicy::PartialTabularPolicy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="288" column="3" bodyfile="open_spiel/policy.cc" bodystart="231" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_partial_tabular_policy_1a7bf1d724378d13644e34bb3acf4eb9ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::PartialTabularPolicy::PartialTabularPolicy</definition>
+        <argsstring>(const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;table)</argsstring>
+        <name>PartialTabularPolicy</name>
+        <qualifiedname>open_spiel::PartialTabularPolicy::PartialTabularPolicy</qualifiedname>
+        <param>
+          <type>const std::unordered_map&lt; std::string, <ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref> &gt; &amp;</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="292" column="3" bodyfile="open_spiel/policy.cc" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_partial_tabular_policy_1adef166ff4b64bbb68c583ab80eaff1d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::PartialTabularPolicy::PartialTabularPolicy</definition>
+        <argsstring>(const std::unordered_map&lt; std::string, ActionsAndProbs &gt; &amp;table, std::shared_ptr&lt; Policy &gt; fallback_policy)</argsstring>
+        <name>PartialTabularPolicy</name>
+        <qualifiedname>open_spiel::PartialTabularPolicy::PartialTabularPolicy</qualifiedname>
+        <param>
+          <type>const std::unordered_map&lt; std::string, <ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref> &gt; &amp;</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classopen__spiel_1_1_policy" kindref="compound">Policy</ref> &gt;</type>
+          <declname>fallback_policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="297" column="3" bodyfile="open_spiel/policy.cc" bodystart="240" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_partial_tabular_policy_1a10ef080e41044e62f0704153d89ca016" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref></type>
+        <definition>ActionsAndProbs open_spiel::PartialTabularPolicy::GetStatePolicy</definition>
+        <argsstring>(const State &amp;state) const override</argsstring>
+        <name>GetStatePolicy</name>
+        <qualifiedname>open_spiel::PartialTabularPolicy::GetStatePolicy</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_policy_1ab5b6ff779e99ea042f7bb261e78ed6c6">GetStatePolicy</reimplements>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="304" column="19" bodyfile="open_spiel/policy.cc" bodystart="246" bodyend="253"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">open_spiel::TabularPolicy::policy_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_partial_tabular_policy_1a4b45e04a9f0e67e35a0971ce79dba2d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref></type>
+        <definition>ActionsAndProbs open_spiel::PartialTabularPolicy::GetStatePolicy</definition>
+        <argsstring>(const State &amp;state, Player player) const override</argsstring>
+        <name>GetStatePolicy</name>
+        <qualifiedname>open_spiel::PartialTabularPolicy::GetStatePolicy</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_policy_1a17e0b9275e629f68174168f6abfcb54b">GetStatePolicy</reimplements>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="305" column="19" bodyfile="open_spiel/policy.cc" bodystart="255" bodyend="263"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">open_spiel::TabularPolicy::policy_table_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_partial_tabular_policy_1a0dcbfbc352298c4180bfabff8ac9d61a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref></type>
+        <definition>ActionsAndProbs open_spiel::PartialTabularPolicy::GetStatePolicy</definition>
+        <argsstring>(const std::string &amp;info_state) const override</argsstring>
+        <name>GetStatePolicy</name>
+        <qualifiedname>open_spiel::PartialTabularPolicy::GetStatePolicy</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_policy_1abbe4e1b820b5ca95e67b60de92d38370">GetStatePolicy</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>info_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="307" column="19" bodyfile="open_spiel/policy.cc" bodystart="265" bodyend="273"/>
+        <references refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" compoundref="policy_8h" startline="279">open_spiel::TabularPolicy::policy_table_</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel::PartialTabularPolicy</label>
+        <link refid="classopen__spiel_1_1_partial_tabular_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::Policy</label>
+        <link refid="classopen__spiel_1_1_policy"/>
+      </node>
+      <node id="2">
+        <label>open_spiel::TabularPolicy</label>
+        <link refid="classopen__spiel_1_1_tabular_policy"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::PartialTabularPolicy</label>
+        <link refid="classopen__spiel_1_1_partial_tabular_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::Policy</label>
+        <link refid="classopen__spiel_1_1_policy"/>
+      </node>
+      <node id="2">
+        <label>open_spiel::TabularPolicy</label>
+        <link refid="classopen__spiel_1_1_tabular_policy"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/policy.h" line="285" column="1" bodyfile="open_spiel/policy.h" bodystart="285" bodyend="311"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_partial_tabular_policy_1a9cf27b9adb2edcbcad4f1b6863347cb4" prot="private" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>fallback_policy_</name></member>
+      <member refid="classopen__spiel_1_1_partial_tabular_policy_1a10ef080e41044e62f0704153d89ca016" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_partial_tabular_policy_1a4b45e04a9f0e67e35a0971ce79dba2d5" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_partial_tabular_policy_1a0dcbfbc352298c4180bfabff8ac9d61a" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_policy_1a65cde909235df749977cbaa0d3320186" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>GetStatePolicyAsMap</name></member>
+      <member refid="classopen__spiel_1_1_policy_1ac4aa0cf8b821528b20fe70d0f30dbc4e" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>GetStatePolicyAsMap</name></member>
+      <member refid="classopen__spiel_1_1_policy_1acd81eb036ef229697a18cebaa270083b" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>GetStatePolicyAsParallelVectors</name></member>
+      <member refid="classopen__spiel_1_1_policy_1a9acb6d6cb2f40f5ad6ac5490a4ec618c" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>GetStatePolicyAsParallelVectors</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1aadd48620dda02dd41ddabbe9094be3cb" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>ImportPolicy</name></member>
+      <member refid="classopen__spiel_1_1_partial_tabular_policy_1afab39f02223fcb2247ffd119eba13fba" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>PartialTabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_partial_tabular_policy_1a7bf1d724378d13644e34bb3acf4eb9ec" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>PartialTabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_partial_tabular_policy_1adef166ff4b64bbb68c583ab80eaff1d4" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>PartialTabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a93b5d40a770b912d21da8cdc4557f387" prot="protected" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>policy_table_</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1aeb80cea37a604e77f71a6a7c25c5d6de" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>PolicyTable</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1ac085bf612ba9b17e99f502ccb821b204" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>PolicyTable</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a933b8698b3924573c2f1c55b31f3c7a1" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1aecf68dd4e96c21ef396b9c539c81e801" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>SetProb</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a9e49a297648e0c5493b6d637b49ab97a" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>SetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a7934bc1202dd35cf11d4bc9c246bedb7" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>size</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a284747d207ef0f016c771401e074c54a" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1af1b69b6752677681f9c50392197838ca" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1ab3643d854dc4414606c2761a6908aac7" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a99e9d19a6674d0e7631087c3838ee0d8" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a8939f2f427c387090d5b82ccaf9b48cc" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a0d077c4fd7e808b1ff7281bd655e92f2" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>TabularPolicy</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a66508a71bd025c53277794d08ea9b20d" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1_tabular_policy_1a1e05d745134aee24d272f29e883d51e6" prot="public" virt="non-virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>ToStringSorted</name></member>
+      <member refid="classopen__spiel_1_1_policy_1ada2523d991dccc11adc1320d28423629" prot="public" virt="virtual"><scope>open_spiel::PartialTabularPolicy</scope><name>~Policy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,501 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad" kind="namespace" language="Python">
+    <compoundname>open_spiel::python::algorithms::rnad::rnad</compoundname>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_actor_step" prot="public">open_spiel::python::algorithms::rnad::rnad::ActorStep</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_adam_config" prot="public">open_spiel::python::algorithms::rnad::rnad::AdamConfig</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_entropy_schedule" prot="public">open_spiel::python::algorithms::rnad::rnad::EntropySchedule</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" prot="public">open_spiel::python::algorithms::rnad::rnad::EnvStep</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_fine_tuning" prot="public">open_spiel::python::algorithms::rnad::rnad::FineTuning</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_nerd_config" prot="public">open_spiel::python::algorithms::rnad::rnad::NerdConfig</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_config" prot="public">open_spiel::python::algorithms::rnad::rnad::RNaDConfig</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver" prot="public">open_spiel::python::algorithms::rnad::rnad::RNaDSolver</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_state_representation" prot="public">open_spiel::python::algorithms::rnad::rnad::StateRepresentation</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step" prot="public">open_spiel::python::algorithms::rnad::rnad::TimeStep</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel::python::algorithms::rnad::rnad.Params</definition>
+        <argsstring></argsstring>
+        <name>Params</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.Params</qualifiedname>
+        <initializer>=  chex.ArrayTree</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="37" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1aeefc704975bea5c0744ce3cf67bfbda5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel::python::algorithms::rnad::rnad.Optimizer</definition>
+        <argsstring></argsstring>
+        <name>Optimizer</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.Optimizer</qualifiedname>
+        <initializer>=  Callable[[<ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref>, <ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref>], <ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3a13a85848382671bb0525fca7283eac" kindref="member">Params</ref>]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="695" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="695" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a8ac8b8cd71b67616a4dea57f981a5b91" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel::python::algorithms::rnad::rnad.state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="710" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="710" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a7a6f2614b688c26b71aeb30b721b0825" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad._legal_policy</definition>
+        <argsstring>(chex.Array logits, chex.Array legal_actions)</argsstring>
+        <name>_legal_policy</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad._legal_policy</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>logits</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>legal_actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>A soft-max policy that respects legal_actions.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="262" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="262" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a3facb6eae59a330344ca2b62d9f1db50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad.legal_log_policy</definition>
+        <argsstring>(chex.Array logits, chex.Array legal_actions)</argsstring>
+        <name>legal_log_policy</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.legal_log_policy</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>logits</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>legal_actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Return the log of the policy on legal action, 0 on illegal action.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="276" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="277" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a4b23dcb30573c752adb2aad69108ad25" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad._player_others</definition>
+        <argsstring>(chex.Array player_ids, chex.Array valid, int player)</argsstring>
+        <name>_player_others</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad._player_others</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>player_ids</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>valid</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>A vector of 1 for the current player and -1 for others.
+
+Args:
+  player_ids: Tensor [...] containing player ids (0 &lt;= player_id &lt; N).
+  valid: Tensor [...] containing whether these states are valid.
+  player: The player id as int.
+
+Returns:
+  player_other: is 1 for the current player and -1 for others [..., 1].
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="298" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="299" bodyend="317"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" compoundref="rnad_8py" startline="811" endline="865">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1ac4170cd64ce2430ed104b2611230c6ab" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad._policy_ratio</definition>
+        <argsstring>(chex.Array pi, chex.Array mu, chex.Array actions_oh, chex.Array valid)</argsstring>
+        <name>_policy_ratio</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad._policy_ratio</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>pi</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>actions_oh</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>valid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns a ratio of policy pi/mu when selecting action a.
+
+By convention, this ratio is 1 on non valid states
+Args:
+  pi: the policy of shape [..., A].
+  mu: the sampling policy of shape [..., A].
+  actions_oh: a one-hot encoding of the current actions of shape [..., A].
+  valid: 0 if the state is not valid and else 1 of shape [...].
+
+Returns:
+  pi/mu on valid states and 1 otherwise. The shape is the same
+  as pi, mu or actions_oh but without the last dimension A.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="318" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="319" bodyend="344"/>
+        <referencedby refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a81380b95401f321a5f8befcf35147411" compoundref="rnad_8py" startline="413" endline="510">open_spiel.python.algorithms.rnad.rnad.v_trace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1ab7453b1839b4936883bf3200fee642fa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.ArrayTree</type>
+        <definition> chex.ArrayTree open_spiel.python.algorithms.rnad.rnad._where</definition>
+        <argsstring>(chex.Array pred, chex.ArrayTree true_data, chex.ArrayTree false_data)</argsstring>
+        <name>_where</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad._where</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>pred</declname>
+        </param>
+        <param>
+          <type>chex.ArrayTree</type>
+          <declname>true_data</declname>
+        </param>
+        <param>
+          <type>chex.ArrayTree</type>
+          <declname>false_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Similar to jax.where but treats `pred` as a broadcastable prefix.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="345" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="346" bodyend="357"/>
+        <referencedby refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1abb90d97ed8e7c735f4246f3646227b86" compoundref="rnad_8py" startline="359" endline="396">open_spiel.python.algorithms.rnad.rnad._has_played</referencedby>
+        <referencedby refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a81380b95401f321a5f8befcf35147411" compoundref="rnad_8py" startline="413" endline="510">open_spiel.python.algorithms.rnad.rnad.v_trace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1abb90d97ed8e7c735f4246f3646227b86" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad._has_played</definition>
+        <argsstring>(chex.Array valid, chex.Array player_id, int player)</argsstring>
+        <name>_has_played</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad._has_played</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>valid</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>player_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute a mask of states which have a next state in the sequence.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="358" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="359" bodyend="396"/>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1ab7453b1839b4936883bf3200fee642fa" compoundref="rnad_8py" startline="346" endline="357">open_spiel.python.algorithms.rnad.rnad._where</references>
+        <referencedby refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a81380b95401f321a5f8befcf35147411" compoundref="rnad_8py" startline="413" endline="510">open_spiel.python.algorithms.rnad.rnad.v_trace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a81380b95401f321a5f8befcf35147411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Tuple[Any, Any, Any]</type>
+        <definition> Tuple[Any, Any, Any] open_spiel.python.algorithms.rnad.rnad.v_trace</definition>
+        <argsstring>(chex.Array v, chex.Array valid, chex.Array player_id, chex.Array acting_policy, chex.Array merged_policy, chex.Array merged_log_policy, chex.Array player_others, chex.Array actions_oh, chex.Array reward, int player, float eta, float lambda_, float c, float rho)</argsstring>
+        <name>v_trace</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.v_trace</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>valid</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>player_id</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>acting_policy</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>merged_policy</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>merged_log_policy</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>player_others</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>actions_oh</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>reward</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>eta</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lambda_</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rho</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Custom VTrace for trajectories with a mix of different player steps.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="397" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="413" bodyend="510"/>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1abb90d97ed8e7c735f4246f3646227b86" compoundref="rnad_8py" startline="359" endline="396">open_spiel.python.algorithms.rnad.rnad._has_played</references>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1ac4170cd64ce2430ed104b2611230c6ab" compoundref="rnad_8py" startline="319" endline="344">open_spiel.python.algorithms.rnad.rnad._policy_ratio</references>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1ab7453b1839b4936883bf3200fee642fa" compoundref="rnad_8py" startline="346" endline="357">open_spiel.python.algorithms.rnad.rnad._where</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" compoundref="rnad_8py" startline="811" endline="865">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1af8710d79494052c266890bd5afeedffe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad.get_loss_v</definition>
+        <argsstring>(Sequence[chex.Array] v_list, Sequence[chex.Array] v_target_list, Sequence[chex.Array] mask_list)</argsstring>
+        <name>get_loss_v</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.get_loss_v</qualifiedname>
+        <param>
+          <type>Sequence</type>
+          <declname>v_list</declname>
+          <array>[chex.Array]</array>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>v_target_list</declname>
+          <array>[chex.Array]</array>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>mask_list</declname>
+          <array>[chex.Array]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Define the loss function for the critic.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="511" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="513" bodyend="531"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" compoundref="rnad_8py" startline="811" endline="865">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a973cdb770eeee274f8afbce9757a6a5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad.apply_force_with_threshold</definition>
+        <argsstring>(chex.Array decision_outputs, chex.Array force, float threshold, chex.Array threshold_center)</argsstring>
+        <name>apply_force_with_threshold</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.apply_force_with_threshold</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>decision_outputs</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>force</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>threshold_center</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Apply the force with below a given threshold.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="532" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="534" bodyend="544"/>
+        <referencedby refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a4b87ca6049d2cc87d36ab2ce24494567" compoundref="rnad_8py" startline="561" endline="592">open_spiel.python.algorithms.rnad.rnad.get_loss_nerd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1ad41f3aee21a056a353308d48fddeec97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad.renormalize</definition>
+        <argsstring>(chex.Array loss, chex.Array mask)</argsstring>
+        <name>renormalize</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.renormalize</qualifiedname>
+        <param>
+          <type>chex.Array</type>
+          <declname>loss</declname>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>The `normalization` is the number of steps over which loss is computed.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="545" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="545" bodyend="552"/>
+        <referencedby refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a4b87ca6049d2cc87d36ab2ce24494567" compoundref="rnad_8py" startline="561" endline="592">open_spiel.python.algorithms.rnad.rnad.get_loss_nerd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a4b87ca6049d2cc87d36ab2ce24494567" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>chex.Array</type>
+        <definition> chex.Array open_spiel.python.algorithms.rnad.rnad.get_loss_nerd</definition>
+        <argsstring>(Sequence[chex.Array] logit_list, Sequence[chex.Array] policy_list, Sequence[chex.Array] q_vr_list, chex.Array valid, Sequence[chex.Array] player_ids, chex.Array legal_actions, Sequence[chex.Array] importance_sampling_correction, float clip=100, float threshold=2)</argsstring>
+        <name>get_loss_nerd</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.get_loss_nerd</qualifiedname>
+        <param>
+          <type>Sequence</type>
+          <declname>logit_list</declname>
+          <array>[chex.Array]</array>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>policy_list</declname>
+          <array>[chex.Array]</array>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>q_vr_list</declname>
+          <array>[chex.Array]</array>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>valid</declname>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>player_ids</declname>
+          <array>[chex.Array]</array>
+        </param>
+        <param>
+          <type>chex.Array</type>
+          <declname>legal_actions</declname>
+        </param>
+        <param>
+          <type>Sequence</type>
+          <declname>importance_sampling_correction</declname>
+          <array>[chex.Array]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>clip</declname>
+          <defval>100</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>threshold</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Define the nerd loss.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="553" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="561" bodyend="592"/>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a973cdb770eeee274f8afbce9757a6a5d" compoundref="rnad_8py" startline="534" endline="544">open_spiel.python.algorithms.rnad.rnad.apply_force_with_threshold</references>
+        <references refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1ad41f3aee21a056a353308d48fddeec97" compoundref="rnad_8py" startline="545" endline="552">open_spiel.python.algorithms.rnad.rnad.renormalize</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a1cbf7990a16406fd29bd56d1988d5c58" compoundref="rnad_8py" startline="811" endline="865">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.loss</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1a0ff06c6cd882dd14f4d8a0cfa543fc39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1aeefc704975bea5c0744ce3cf67bfbda5" kindref="member">Optimizer</ref></type>
+        <definition> Optimizer open_spiel.python.algorithms.rnad.rnad.optax_optimizer</definition>
+        <argsstring>(chex.ArrayTree params, optax.GradientTransformation init_and_update)</argsstring>
+        <name>optax_optimizer</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.optax_optimizer</qualifiedname>
+        <param>
+          <type>chex.ArrayTree</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>optax.GradientTransformation</type>
+          <declname>init_and_update</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a parameterized function that represents an optimizer.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="698" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="700" bodyend="715"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Python implementation of R-NaD (https://arxiv.org/pdf/2206.15378.pdf).</verbatim> </para>
+    </detaileddescription>
+    <location file="open_spiel/python/algorithms/rnad/rnad.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

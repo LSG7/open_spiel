@@ -1,0 +1,1388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="spiel__utils_8h" kind="file" language="C++">
+    <compoundname>spiel_utils.h</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">array</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">random</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includes local="yes">open_spiel/abseil-cpp/absl/random/uniform_real_distribution.h</includes>
+    <includes local="yes">open_spiel/abseil-cpp/absl/strings/str_cat.h</includes>
+    <includes local="yes">open_spiel/abseil-cpp/absl/time/clock.h</includes>
+    <includes local="yes">open_spiel/abseil-cpp/absl/time/time.h</includes>
+    <includes local="yes">open_spiel/abseil-cpp/absl/types/optional.h</includes>
+    <includes local="yes">open_spiel/abseil-cpp/absl/types/span.h</includes>
+    <includedby refid="action__view_8cc" local="yes">open_spiel/action_view.cc</includedby>
+    <includedby refid="game__parameters_8cc" local="yes">open_spiel/game_parameters.cc</includedby>
+    <includedby refid="game__parameters_8h" local="yes">open_spiel/game_parameters.h</includedby>
+    <includedby refid="base_t_8cc" local="yes">open_spiel/games/SG/baseT.cc</includedby>
+    <includedby refid="base_t__utils_8cc" local="yes">open_spiel/games/SG/baseT_utils.cc</includedby>
+    <includedby refid="kbg__test_8cc" local="yes">open_spiel/games/SG/kbg_test.cc</includedby>
+    <includedby refid="ki__bo__gung_8cc" local="yes">open_spiel/games/SG/ki_bo_gung.cc</includedby>
+    <includedby refid="matrix__game_8cc" local="yes">open_spiel/matrix_game.cc</includedby>
+    <includedby refid="matrix__game_8h" local="yes">open_spiel/matrix_game.h</includedby>
+    <includedby refid="normal__form__game_8h" local="yes">open_spiel/normal_form_game.h</includedby>
+    <includedby refid="observer_8cc" local="yes">open_spiel/observer.cc</includedby>
+    <includedby refid="observer_8h" local="yes">open_spiel/observer.h</includedby>
+    <includedby refid="policy_8cc" local="yes">open_spiel/policy.cc</includedby>
+    <includedby refid="policy_8h" local="yes">open_spiel/policy.h</includedby>
+    <includedby refid="simultaneous__move__game_8cc" local="yes">open_spiel/simultaneous_move_game.cc</includedby>
+    <includedby refid="spiel_8cc" local="yes">open_spiel/spiel.cc</includedby>
+    <includedby refid="spiel_8h" local="yes">open_spiel/spiel.h</includedby>
+    <includedby refid="spiel__bots_8cc" local="yes">open_spiel/spiel_bots.cc</includedby>
+    <includedby refid="spiel__bots_8h" local="yes">open_spiel/spiel_bots.h</includedby>
+    <includedby refid="spiel__globals_8h" local="yes">open_spiel/spiel_globals.h</includedby>
+    <includedby refid="spiel__utils_8cc" local="yes">open_spiel/spiel_utils.cc</includedby>
+    <includedby refid="tensor__game_8cc" local="yes">open_spiel/tensor_game.cc</includedby>
+    <includedby refid="tensor__game_8h" local="yes">open_spiel/tensor_game.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>open_spiel/spiel_utils.h</label>
+        <link refid="spiel__utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+      <node id="3">
+        <label>array</label>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>functional</label>
+      </node>
+      <node id="14">
+        <label>open_spiel/abseil-cpp/absl/random/uniform_real_distribution.h</label>
+      </node>
+      <node id="15">
+        <label>open_spiel/abseil-cpp/absl/strings/str_cat.h</label>
+      </node>
+      <node id="16">
+        <label>open_spiel/abseil-cpp/absl/time/clock.h</label>
+      </node>
+      <node id="17">
+        <label>open_spiel/abseil-cpp/absl/time/time.h</label>
+      </node>
+      <node id="18">
+        <label>open_spiel/abseil-cpp/absl/types/optional.h</label>
+      </node>
+      <node id="19">
+        <label>open_spiel/abseil-cpp/absl/types/span.h</label>
+      </node>
+      <node id="8">
+        <label>random</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>type_traits</label>
+      </node>
+      <node id="12">
+        <label>utility</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>open_spiel/action_view.cc</label>
+        <link refid="action__view_8cc"/>
+      </node>
+      <node id="8">
+        <label>open_spiel/action_view.h</label>
+        <link refid="action__view_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel/game_parameters.cc</label>
+        <link refid="game__parameters_8cc"/>
+      </node>
+      <node id="4">
+        <label>open_spiel/game_parameters.h</label>
+        <link refid="game__parameters_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>open_spiel/games/SG/baseT.cc</label>
+        <link refid="base_t_8cc"/>
+      </node>
+      <node id="10">
+        <label>open_spiel/games/SG/baseT.h</label>
+        <link refid="base_t_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>open_spiel/games/SG/baseT_utils.cc</label>
+        <link refid="base_t__utils_8cc"/>
+      </node>
+      <node id="16">
+        <label>open_spiel/games/SG/baseType.h</label>
+        <link refid="base_type_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>open_spiel/games/SG/kbg_test.cc</label>
+        <link refid="kbg__test_8cc"/>
+      </node>
+      <node id="15">
+        <label>open_spiel/games/SG/ki_bo_gung.cc</label>
+        <link refid="ki__bo__gung_8cc"/>
+      </node>
+      <node id="13">
+        <label>open_spiel/games/SG/ki_bo_gung.h</label>
+        <link refid="ki__bo__gung_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>open_spiel/matrix_game.cc</label>
+        <link refid="matrix__game_8cc"/>
+      </node>
+      <node id="18">
+        <label>open_spiel/matrix_game.h</label>
+        <link refid="matrix__game_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>open_spiel/normal_form_game.h</label>
+        <link refid="normal__form__game_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>open_spiel/observer.cc</label>
+        <link refid="observer_8cc"/>
+      </node>
+      <node id="5">
+        <label>open_spiel/observer.h</label>
+        <link refid="observer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>open_spiel/policy.cc</label>
+        <link refid="policy_8cc"/>
+      </node>
+      <node id="23">
+        <label>open_spiel/policy.h</label>
+        <link refid="policy_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>open_spiel/simultaneous_move_game.cc</label>
+        <link refid="simultaneous__move__game_8cc"/>
+      </node>
+      <node id="26">
+        <label>open_spiel/simultaneous_move_game.h</label>
+        <link refid="simultaneous__move__game_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>open_spiel/spiel.cc</label>
+        <link refid="spiel_8cc"/>
+      </node>
+      <node id="7">
+        <label>open_spiel/spiel.h</label>
+        <link refid="spiel_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>open_spiel/spiel_bots.cc</label>
+        <link refid="spiel__bots_8cc"/>
+      </node>
+      <node id="25">
+        <label>open_spiel/spiel_bots.h</label>
+        <link refid="spiel__bots_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>open_spiel/spiel_globals.h</label>
+        <link refid="spiel__globals_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>open_spiel/spiel_utils.cc</label>
+        <link refid="spiel__utils_8cc"/>
+      </node>
+      <node id="1">
+        <label>open_spiel/spiel_utils.h</label>
+        <link refid="spiel__utils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>open_spiel/tensor_game.cc</label>
+        <link refid="tensor__game_8cc"/>
+      </node>
+      <node id="19">
+        <label>open_spiel/tensor_game.h</label>
+        <link refid="tensor__game_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classopen__spiel_1_1_uniform_probability_sampler" prot="public">open_spiel::UniformProbabilitySampler</innerclass>
+    <innerclass refid="classopen__spiel_1_1_sampler_from_rng" prot="public">open_spiel::SamplerFromRng</innerclass>
+    <innernamespace refid="namespaceopen__spiel">open_spiel</innernamespace>
+    <innernamespace refid="namespaceopen__spiel_1_1internal">open_spiel::internal</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" prot="public" static="no">
+        <name>SPIEL_CHECK_OP</name>
+        <param><defname>x_exp</defname></param>
+        <param><defname>op</defname></param>
+        <param><defname>y_exp</defname></param>
+        <initializer>  do {                                                               \
+    auto x = x_exp;                                                  \
+    auto y = y_exp;                                                  \
+    if (!((x)op(y)))                                                 \
+      <ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">open_spiel::SpielFatalError</ref>(<ref refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" kindref="member">open_spiel::internal::SpielStrCat</ref>( \
+          __FILE__, &quot;:&quot;, __LINE__, &quot; &quot;, #x_exp &quot; &quot; #op &quot; &quot; #y_exp,   \
+          &quot;\n&quot; #x_exp, &quot; = &quot;, x, &quot;, &quot; #y_exp &quot; = &quot;, y));             \
+  } while (false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="223" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="223" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ad7b81fce01bd158b375e0a8c29e65768" prot="public" static="no">
+        <name>SPIEL_CHECK_FN2</name>
+        <param><defname>x_exp</defname></param>
+        <param><defname>y_exp</defname></param>
+        <param><defname>fn</defname></param>
+        <initializer>  do {                                                                    \
+    auto x = x_exp;                                                       \
+    auto y = y_exp;                                                       \
+    if (!fn(x, y))                                                        \
+      <ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">open_spiel::SpielFatalError</ref>(<ref refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" kindref="member">open_spiel::internal::SpielStrCat</ref>(      \
+          __FILE__, &quot;:&quot;, __LINE__, &quot; &quot;, #fn &quot;(&quot; #x_exp &quot;, &quot; #y_exp &quot;)\n&quot;, \
+          #x_exp &quot; = &quot;, x, &quot;, &quot; #y_exp &quot; = &quot;, y));                        \
+  } while (false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="233" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="233" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ae041ef404016241a372f4b6ab84b1e61" prot="public" static="no">
+        <name>SPIEL_CHECK_FN3</name>
+        <param><defname>x_exp</defname></param>
+        <param><defname>y_exp</defname></param>
+        <param><defname>z_exp</defname></param>
+        <param><defname>fn</defname></param>
+        <initializer>  do {                                                                   \
+    auto x = x_exp;                                                      \
+    auto y = y_exp;                                                      \
+    auto z = z_exp;                                                      \
+    if (!fn(x, y, z))                                                    \
+      <ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">open_spiel::SpielFatalError</ref>(<ref refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" kindref="member">open_spiel::internal::SpielStrCat</ref>(     \
+          __FILE__, &quot;:&quot;, __LINE__, &quot; &quot;,                                  \
+          #fn &quot;(&quot; #x_exp &quot;, &quot; #y_exp &quot;, &quot; #z_exp &quot;)\n&quot;, #x_exp &quot; = &quot;, x, \
+          &quot;, &quot; #y_exp &quot; = &quot;, y, &quot;, &quot; #z_exp &quot; = &quot;, z));                  \
+  } while (false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="243" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="243" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" prot="public" static="no">
+        <name>SPIEL_CHECK_GE</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" kindref="member">SPIEL_CHECK_OP</ref>(x, &gt;=, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="255" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="255" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aca64aaaf4b90a0a755b5d645eb9e7860" compoundref="tensor__game_8h" startline="89" endline="94">open_spiel::tensor_game::TensorGame::ActionName</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a42356a06a9bc76e7c88767bdae84afdd" compoundref="matrix__game_8h" startline="90" endline="107">open_spiel::matrix_game::MatrixGame::ActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" compoundref="matrix__game_8h" startline="216" endline="223">open_spiel::matrix_game::MatrixState::DoApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1ae8fa39ae3a1f038ab47a9a5d98ef66b2" compoundref="tensor__game_8h" startline="216" endline="223">open_spiel::tensor_game::TensorState::DoApplyActions</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a5dc710e7fbd94c8c96e616086be2437d" compoundref="policy_8cc" startline="376" endline="430">open_spiel::GetRandomDeterministicPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a5643c5f4b1e20c36a72c85b1e85e5de9" compoundref="normal__form__game_8h" startline="47" endline="58">open_spiel::NFGState::InformationStateString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a4e2d82731a467bd83e5046945f7971d4" compoundref="normal__form__game_8h" startline="83" endline="93">open_spiel::NFGState::InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" compoundref="spiel_8cc" startline="789" endline="800">open_spiel::State::InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" compoundref="spiel_8h" startline="393" endline="397">open_spiel::State::IsPlayerActing</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a8b07a721ec586c32138b105423639f58" compoundref="normal__form__game_8h" startline="60" endline="70">open_spiel::NFGState::ObservationString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a210018fdbd48678de3de3d882c2de701" compoundref="normal__form__game_8h" startline="95" endline="105">open_spiel::NFGState::ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" compoundref="spiel_8cc" startline="770" endline="781">open_spiel::State::ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1ab32ea9872b81db0383b9d7206d1ae3f9" compoundref="spiel_8h" startline="361" endline="366">open_spiel::State::PlayerReturn</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1acc2f7e0b961eb96879df56553bc82780" compoundref="tensor__game_8h" startline="84" endline="88">open_spiel::tensor_game::TensorGame::PlayerUtilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a24f7a3aa0c3bd3b05b1f958405f52911" compoundref="tensor__game_8h" startline="78" endline="83">open_spiel::tensor_game::TensorGame::PlayerUtility</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ae4b6143776ec2ce03945edf965aceb91" compoundref="spiel__utils_8cc" startline="50" endline="67">open_spiel::RankActionMixedBase</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a4dccff40ce79f6186c72a0c0a4dc788e" compoundref="spiel_8cc" startline="274" endline="311">open_spiel::SampleAction</referencedby>
+        <referencedby refid="classopen__spiel_1_1_tabular_policy_1a933b8698b3924573c2f1c55b31f3c7a1" compoundref="policy_8h" startline="198" endline="234">open_spiel::TabularPolicy::Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a948872aa56d9cd14a37c436d9b4d8760" prot="public" static="no">
+        <name>SPIEL_CHECK_GT</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" kindref="member">SPIEL_CHECK_OP</ref>(x, &gt;, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="256" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="256" bodyend="-1"/>
+        <referencedby refid="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" compoundref="matrix__game_8cc" startline="147" endline="163">open_spiel::matrix_game::CreateMatrixGame</referencedby>
+        <referencedby refid="classopen__spiel_1_1_observation_1a4c80d6da14f27eac718ee4b0f237c4d5" compoundref="observer_8cc" startline="311" endline="322">open_spiel::Observation::Decompress</referencedby>
+        <referencedby refid="namespaceopen__spiel_1_1matrix__game_1ac598d47a7f8ba44a9ce78c3cb74488ff" compoundref="matrix__game_8cc" startline="122" endline="145">open_spiel::matrix_game::FlattenMatrix</referencedby>
+        <referencedby refid="namespaceopen__spiel_1aab6328ff82289cc5a639af623b07983f" compoundref="policy_8cc" startline="275" endline="321">open_spiel::GetEmptyTabularPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a0fa54efbbbe01ea0ece4b0323105158c" compoundref="policy_8cc" startline="432" endline="475">open_spiel::GetFirstActionPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a5dc710e7fbd94c8c96e616086be2437d" compoundref="policy_8cc" startline="376" endline="430">open_spiel::GetRandomDeterministicPolicy</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ae4b6143776ec2ce03945edf965aceb91" compoundref="spiel__utils_8cc" startline="50" endline="67">open_spiel::RankActionMixedBase</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a9039e595b94e0462902c6632c4458746" compoundref="spiel__utils_8cc" startline="69" endline="79">open_spiel::UnrankActionMixedBase</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1af180ebf0d85ccf1c871ef0e872c2ea20" prot="public" static="no">
+        <name>SPIEL_CHECK_LE</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" kindref="member">SPIEL_CHECK_OP</ref>(x, &lt;=, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="257" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="257" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_fixed_actions_iterator_1a256fb053d74dd5369b3e3af744326266" compoundref="action__view_8cc" startline="110" endline="120">open_spiel::FixedActionsIterator::operator++</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" prot="public" static="no">
+        <name>SPIEL_CHECK_LT</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" kindref="member">SPIEL_CHECK_OP</ref>(x, &lt;, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="258" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="258" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1aca64aaaf4b90a0a755b5d645eb9e7860" compoundref="tensor__game_8h" startline="89" endline="94">open_spiel::tensor_game::TensorGame::ActionName</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a42356a06a9bc76e7c88767bdae84afdd" compoundref="matrix__game_8h" startline="90" endline="107">open_spiel::matrix_game::MatrixGame::ActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" compoundref="spiel_8cc" startline="409" endline="442">open_spiel::Game::DeserializeState</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" compoundref="matrix__game_8h" startline="216" endline="223">open_spiel::matrix_game::MatrixState::DoApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1ae8fa39ae3a1f038ab47a9a5d98ef66b2" compoundref="tensor__game_8h" startline="216" endline="223">open_spiel::tensor_game::TensorState::DoApplyActions</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a5dc710e7fbd94c8c96e616086be2437d" compoundref="policy_8cc" startline="376" endline="430">open_spiel::GetRandomDeterministicPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a5643c5f4b1e20c36a72c85b1e85e5de9" compoundref="normal__form__game_8h" startline="47" endline="58">open_spiel::NFGState::InformationStateString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a4e2d82731a467bd83e5046945f7971d4" compoundref="normal__form__game_8h" startline="83" endline="93">open_spiel::NFGState::InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" compoundref="spiel_8cc" startline="789" endline="800">open_spiel::State::InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" compoundref="spiel_8h" startline="393" endline="397">open_spiel::State::IsPlayerActing</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a8b07a721ec586c32138b105423639f58" compoundref="normal__form__game_8h" startline="60" endline="70">open_spiel::NFGState::ObservationString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a210018fdbd48678de3de3d882c2de701" compoundref="normal__form__game_8h" startline="95" endline="105">open_spiel::NFGState::ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" compoundref="spiel_8cc" startline="770" endline="781">open_spiel::State::ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1ab32ea9872b81db0383b9d7206d1ae3f9" compoundref="spiel_8h" startline="361" endline="366">open_spiel::State::PlayerReturn</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a510f85123de13949d34186755753e742" compoundref="spiel_8h" startline="353" endline="357">open_spiel::State::PlayerReward</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1acc2f7e0b961eb96879df56553bc82780" compoundref="tensor__game_8h" startline="84" endline="88">open_spiel::tensor_game::TensorGame::PlayerUtilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a24f7a3aa0c3bd3b05b1f958405f52911" compoundref="tensor__game_8h" startline="78" endline="83">open_spiel::tensor_game::TensorGame::PlayerUtility</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ae4b6143776ec2ce03945edf965aceb91" compoundref="spiel__utils_8cc" startline="50" endline="67">open_spiel::RankActionMixedBase</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a4dccff40ce79f6186c72a0c0a4dc788e" compoundref="spiel_8cc" startline="274" endline="311">open_spiel::SampleAction</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" prot="public" static="no">
+        <name>SPIEL_CHECK_EQ</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" kindref="member">SPIEL_CHECK_OP</ref>(x, ==, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="259" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="259" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a71a2ca91924cdb74c953fc8a4533b6b7" compoundref="tensor__game_8h" startline="130" endline="137">open_spiel::tensor_game::TensorGame::AsMatrixGame</referencedby>
+        <referencedby refid="namespaceopen__spiel_1_1matrix__game_1ad0c53d489b3503a2ad022411e4604cdc" compoundref="matrix__game_8cc" startline="167" endline="181">open_spiel::matrix_game::CreateMatrixGame</referencedby>
+        <referencedby refid="structopen__spiel_1_1_binary_compress_1af39b201900da7fb1cdb2205d26a28ad1" compoundref="observer_8cc" startline="271" endline="283">open_spiel::BinaryCompress::Decompress</referencedby>
+        <referencedby refid="structopen__spiel_1_1_no_compress_1ad4a1724352baf560b865ed13d392ae85" compoundref="observer_8cc" startline="296" endline="301">open_spiel::NoCompress::Decompress</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a523877157f33ec65d5c05fe6eb0cfb9e" compoundref="spiel_8cc" startline="467" endline="509">open_spiel::DeserializeGameAndState</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad272c6703ae8bac4d974608f1c58a9e9" compoundref="game__parameters_8cc" startline="93" endline="118">open_spiel::DeserializeGameParameter</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a0ed3e36da1be8bc1313510099d897c06" compoundref="policy_8cc" startline="161" endline="196">open_spiel::DeserializeTabularPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" compoundref="matrix__game_8h" startline="216" endline="223">open_spiel::matrix_game::MatrixState::DoApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1ae8fa39ae3a1f038ab47a9a5d98ef66b2" compoundref="tensor__game_8h" startline="216" endline="223">open_spiel::tensor_game::TensorState::DoApplyActions</referencedby>
+        <referencedby refid="structopen__spiel_1_1_action_view_1ae654aa10475477626ab5c34161600797" compoundref="action__view_8cc" startline="78" endline="92">open_spiel::ActionView::fixed_action</referencedby>
+        <referencedby refid="namespaceopen__spiel_1_1matrix__game_1ac598d47a7f8ba44a9ce78c3cb74488ff" compoundref="matrix__game_8cc" startline="122" endline="145">open_spiel::matrix_game::FlattenMatrix</referencedby>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a4e2d82731a467bd83e5046945f7971d4" compoundref="normal__form__game_8h" startline="83" endline="93">open_spiel::NFGState::InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a210018fdbd48678de3de3d882c2de701" compoundref="normal__form__game_8h" startline="95" endline="105">open_spiel::NFGState::ObservationTensor</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ae4b6143776ec2ce03945edf965aceb91" compoundref="spiel__utils_8cc" startline="50" endline="67">open_spiel::RankActionMixedBase</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a68a316318f5867aa4f369e080c1a31a6" compoundref="observer_8h" startline="115" endline="118">open_spiel::SpanTensor::SpanTensor</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a9039e595b94e0462902c6632c4458746" compoundref="spiel__utils_8cc" startline="69" endline="79">open_spiel::UnrankActionMixedBase</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a32ffad2dd43a12e9d7443bc75f456bbb" prot="public" static="no">
+        <name>SPIEL_CHECK_NE</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" kindref="member">SPIEL_CHECK_OP</ref>(x, !=, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="260" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="260" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" compoundref="spiel_8cc" startline="338" endline="348">open_spiel::State::ApplyAction</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a523877157f33ec65d5c05fe6eb0cfb9e" compoundref="spiel_8cc" startline="467" endline="509">open_spiel::DeserializeGameAndState</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" compoundref="spiel_8cc" startline="409" endline="442">open_spiel::Game::DeserializeState</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a1a6bf403d6d8bcc41b36634a7fa8b1eb" compoundref="spiel_8cc" startline="313" endline="327">open_spiel::State::Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1acd960ab500145e2ff90ef3c382803b32" prot="public" static="no">
+        <name>SPIEL_CHECK_PROB</name>
+        <param><defname>x</defname></param>
+        <initializer>  <ref refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" kindref="member">SPIEL_CHECK_GE</ref>(x, 0);     \
+  <ref refid="spiel__utils_8h_1af180ebf0d85ccf1c871ef0e872c2ea20" kindref="member">SPIEL_CHECK_LE</ref>(x, 1);     \
+  <ref refid="spiel__utils_8h_1aff340fc0f81ce83d807cc1aa674db999" kindref="member">SPIEL_CHECK_FALSE</ref>(std::isnan(x) || std::isinf(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="261" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="261" bodyend="264"/>
+        <referencedby refid="namespaceopen__spiel_1a4dccff40ce79f6186c72a0c0a4dc788e" compoundref="spiel_8cc" startline="274" endline="311">open_spiel::SampleAction</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a3e08c7cbd7c46f352ec6b64f5305e798" prot="public" static="no">
+        <name>SPIEL_CHECK_PROB_TOLERANCE</name>
+        <param><defname>x</defname></param>
+        <param><defname>tol</defname></param>
+        <initializer>  <ref refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" kindref="member">SPIEL_CHECK_GE</ref>(x, -(tol));      \
+  <ref refid="spiel__utils_8h_1af180ebf0d85ccf1c871ef0e872c2ea20" kindref="member">SPIEL_CHECK_LE</ref>(x, 1.0 + (tol)); \
+  <ref refid="spiel__utils_8h_1aff340fc0f81ce83d807cc1aa674db999" kindref="member">SPIEL_CHECK_FALSE</ref>(std::isnan(x) || std::isinf(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="265" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="265" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a1d6eea934e8beba47b04b9b35176e563" prot="public" static="no">
+        <name>SPIEL_CHECK_FLOAT_EQ</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>  <ref refid="spiel__utils_8h_1ad7b81fce01bd158b375e0a8c29e65768" kindref="member">SPIEL_CHECK_FN2</ref>(static_cast&lt;float&gt;(x), static_cast&lt;float&gt;(y), \
+                  <ref refid="namespaceopen__spiel_1ae9813a4514ea28067d143537f9109094" kindref="member">open_spiel::Near</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="273" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="273" bodyend="275"/>
+        <referencedby refid="namespaceopen__spiel_1a4dccff40ce79f6186c72a0c0a4dc788e" compoundref="spiel_8cc" startline="274" endline="311">open_spiel::SampleAction</referencedby>
+        <referencedby refid="namespaceopen__spiel_1aef7d54d21976971293ba4dcef744dd82" compoundref="policy_8cc" startline="328" endline="363">open_spiel::SamplePolicy</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a89f08dd7ca688143b0440c3bb70f5602" prot="public" static="no">
+        <name>SPIEL_CHECK_FLOAT_NEAR</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>epsilon</defname></param>
+        <initializer>  <ref refid="spiel__utils_8h_1ae041ef404016241a372f4b6ab84b1e61" kindref="member">SPIEL_CHECK_FN3</ref>(static_cast&lt;float&gt;(x), static_cast&lt;float&gt;(y), \
+                  static_cast&lt;float&gt;(epsilon), <ref refid="namespaceopen__spiel_1ae9813a4514ea28067d143537f9109094" kindref="member">open_spiel::Near</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="278" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="278" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" prot="public" static="no">
+        <name>SPIEL_CHECK_TRUE</name>
+        <param><defname>x</defname></param>
+        <initializer>  while (!(x))                                                   \
+  <ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">open_spiel::SpielFatalError</ref>(<ref refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" kindref="member">open_spiel::internal::SpielStrCat</ref>( \
+      __FILE__, &quot;:&quot;, __LINE__, &quot; CHECK_TRUE(&quot;, #x, &quot;)&quot;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="282" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="282" bodyend="285"/>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" compoundref="game__parameters_8h" startline="126" endline="129">open_spiel::GameParameter::bool_value</referencedby>
+        <referencedby refid="namespaceopen__spiel_1_1tensor__game_1aeb0f40454ae67a21ed86e2a88f09ab84" compoundref="tensor__game_8cc" startline="109" endline="143">open_spiel::tensor_game::CreateTensorGame</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad272c6703ae8bac4d974608f1c58a9e9" compoundref="game__parameters_8cc" startline="93" endline="118">open_spiel::DeserializeGameParameter</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a0ed3e36da1be8bc1313510099d897c06" compoundref="policy_8cc" startline="161" endline="196">open_spiel::DeserializeTabularPolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" compoundref="game__parameters_8h" startline="116" endline="119">open_spiel::GameParameter::double_value</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" compoundref="game__parameters_8h" startline="131" endline="134">open_spiel::GameParameter::game_value</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a035f482ab5b89b96645f2a9496430f61" compoundref="game__parameters_8cc" startline="172" endline="192">open_spiel::GameParameterFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1abdd13dce1b32767e9b820f7f63638215" compoundref="spiel_8cc" startline="723" endline="768">open_spiel::GameTypeFromString</referencedby>
+        <referencedby refid="namespaceopen__spiel_1ad0ffb6361129cb7a813fc9b9afbf8bac" compoundref="spiel_8cc" startline="670" endline="721">open_spiel::GameTypeToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_first_action_policy_1af1170c5460cac64d6321ab2a6fa1a181" compoundref="policy_8h" startline="339" endline="347">open_spiel::FirstActionPolicy::GetStatePolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_uniform_policy_1af74a3922b9944a32fd4a82024a3b5721" compoundref="policy_8h" startline="320" endline="328">open_spiel::UniformPolicy::GetStatePolicy</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" compoundref="game__parameters_8h" startline="111" endline="114">open_spiel::GameParameter::int_value</referencedby>
+        <referencedby refid="classopen__spiel_1_1_observer_1a769cc10c3d25d370287fc875195bd974" compoundref="observer_8h" startline="324" endline="327">open_spiel::Observer::Observer</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a6399f34abd19d65c91562ca1163e57fd" compoundref="matrix__game_8h" startline="125" endline="129">open_spiel::matrix_game::MatrixGame::PlayerUtilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_game_1a35723b6742e79d6728a2ebb614aa15f6" compoundref="matrix__game_8h" startline="118" endline="122">open_spiel::matrix_game::MatrixGame::PlayerUtility</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" compoundref="game__parameters_8h" startline="121" endline="124">open_spiel::GameParameter::string_value</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a55eb7ffe08a76e4f3beb55af0f2436b1" compoundref="tensor__game_8h" startline="41" endline="58">open_spiel::tensor_game::TensorGame::TensorGame</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a9d4e65df2e25cb6f13ab027a35419458" compoundref="policy_8cc" startline="534" endline="547">open_spiel::ToJointTabularPolicy</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ac4ad1002d81dabc9af37e7eb0cc62381" prot="public" static="no">
+        <name>SPIEL_CHECK_TRUE_WSI</name>
+        <param><defname>x</defname></param>
+        <param><defname>e</defname></param>
+        <param><defname>g</defname></param>
+        <param><defname>s</defname></param>
+        <initializer>  while (!(x))                                                   \
+  <ref refid="namespaceopen__spiel_1aeb956daaab571492f9a18ed99000b016" kindref="member">open_spiel::SpielFatalErrorWithStateInfo</ref>(                      \
+      <ref refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" kindref="member">open_spiel::internal::SpielStrCat</ref>(                         \
+      __FILE__, &quot;:&quot;, __LINE__, &quot; CHECK_TRUE(&quot;, #x, &quot;): &quot;, e),    \
+      (g), (s))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="290" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="290" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1aff340fc0f81ce83d807cc1aa674db999" prot="public" static="no">
+        <name>SPIEL_CHECK_FALSE</name>
+        <param><defname>x</defname></param>
+        <initializer>  while (x)                                                      \
+  <ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">open_spiel::SpielFatalError</ref>(<ref refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" kindref="member">open_spiel::internal::SpielStrCat</ref>( \
+      __FILE__, &quot;:&quot;, __LINE__, &quot; CHECK_FALSE(&quot;, #x, &quot;)&quot;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="297" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="297" bodyend="300"/>
+        <referencedby refid="namespaceopen__spiel_1a76fab47e00dab81b9c71bb5515b240a3" compoundref="spiel__utils_8cc" startline="143" endline="151">open_spiel::Normalize</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" compoundref="spiel_8h" startline="337" endline="344">open_spiel::State::Rewards</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a54f02990f8cb92d30a8e297f42fcc000" prot="public" static="no">
+        <name>SPIEL_DCHECK_OP</name>
+        <param><defname>x_exp</defname></param>
+        <param><defname>op</defname></param>
+        <param><defname>y_exp</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" kindref="member">SPIEL_CHECK_OP</ref>(x_exp, op, y_exp)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="306" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a5a304c30352d1f602295e5ebceee7bf9" prot="public" static="no">
+        <name>SPIEL_DCHECK_FN2</name>
+        <param><defname>x_exp</defname></param>
+        <param><defname>y_exp</defname></param>
+        <param><defname>fn</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1ad7b81fce01bd158b375e0a8c29e65768" kindref="member">SPIEL_CHECK_FN2</ref>(x_exp, y_exp, fn)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="307" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1aff9546ec26b6221add64fcf5c73d9f99" prot="public" static="no">
+        <name>SPIEL_DCHECK_FN3</name>
+        <param><defname>x_exp</defname></param>
+        <param><defname>y_exp</defname></param>
+        <param><defname>z_exp</defname></param>
+        <param><defname>fn</defname></param>
+        <initializer>  <ref refid="spiel__utils_8h_1ae041ef404016241a372f4b6ab84b1e61" kindref="member">SPIEL_CHECK_FN3</ref>(x_exp, y_exp, z_exp, fn)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="308" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="308" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a1fb3786f0d942e21e9c7d23c9aebf5c1" prot="public" static="no">
+        <name>SPIEL_DCHECK_GE</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" kindref="member">SPIEL_CHECK_GE</ref>(x, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="310" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ab75960188a0cf9d47e05482896a12487" prot="public" static="no">
+        <name>SPIEL_DCHECK_GT</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1a948872aa56d9cd14a37c436d9b4d8760" kindref="member">SPIEL_CHECK_GT</ref>(x, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="311" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ac27ebb5dceeb59bfcbcbda40368d2a08" prot="public" static="no">
+        <name>SPIEL_DCHECK_LE</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1af180ebf0d85ccf1c871ef0e872c2ea20" kindref="member">SPIEL_CHECK_LE</ref>(x, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="312" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="312" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_contiguous_allocator_1ad5788d75dc02bdedd831fe1ffc77c849" compoundref="observer_8cc" startline="28" endline="35">open_spiel::ContiguousAllocator::Get</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1afbd63a7f8a3c1ac147655b7121c014b4" prot="public" static="no">
+        <name>SPIEL_DCHECK_LT</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" kindref="member">SPIEL_CHECK_LT</ref>(x, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="313" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ab7b97067e15f6941b08deaae7dc6013a" prot="public" static="no">
+        <name>SPIEL_DCHECK_EQ</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" kindref="member">SPIEL_CHECK_EQ</ref>(x, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="314" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="314" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a84c149089d953972dd02a59bfa462a4c" compoundref="observer_8h" startline="127" endline="130">open_spiel::SpanTensor::at</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1ac308bc8cd13e33cc0f84818cd2d428ce" compoundref="observer_8h" startline="132" endline="135">open_spiel::SpanTensor::at</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a98c5390d859059e4c890a600d36cd791" compoundref="observer_8h" startline="137" endline="140">open_spiel::SpanTensor::at</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a6a545829323e838d8d18fb4b94d5fa94" compoundref="observer_8h" startline="142" endline="145">open_spiel::SpanTensor::at</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1ab583f0b6dd0909226136353dfca8e372" compoundref="observer_8h" startline="147" endline="152">open_spiel::SpanTensor::at</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a172ac7fed24f6d106c77a4d876ccd09e" prot="public" static="no">
+        <name>SPIEL_DCHECK_NE</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1a32ffad2dd43a12e9d7443bc75f456bbb" kindref="member">SPIEL_CHECK_NE</ref>(x, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="315" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1af481c57767be3a0c8d231d2f165c8fed" prot="public" static="no">
+        <name>SPIEL_DCHECK_PROB</name>
+        <param><defname>x</defname></param>
+        <initializer>SPIEL_DCHECK_PROB(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="316" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a61e584b3ffdfa9db367a2b29f0fff73d" prot="public" static="no">
+        <name>SPIEL_DCHECK_FLOAT_EQ</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1a1d6eea934e8beba47b04b9b35176e563" kindref="member">SPIEL_CHECK_FLOAT_EQ</ref>(x, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="317" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1ac9661f48fe8affee0e464d0868cbd8a5" prot="public" static="no">
+        <name>SPIEL_DCHECK_FLOAT_NEAR</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>epsilon</defname></param>
+        <initializer>  <ref refid="spiel__utils_8h_1a89f08dd7ca688143b0440c3bb70f5602" kindref="member">SPIEL_CHECK_FLOAT_NEAR</ref>(x, y, epsilon)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="318" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="318" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a4347e9de74af6457a8509c6d13ab5a2e" prot="public" static="no">
+        <name>SPIEL_DCHECK_TRUE</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" kindref="member">SPIEL_CHECK_TRUE</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="320" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="320" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_tracking_vector_allocator_1ac7a4b3ec53cb80beec25e295d92599a9" compoundref="observer_8cc" startline="192" endline="204">open_spiel::TrackingVectorAllocator::Get</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="spiel__utils_8h_1a6d8cc2617a02adaba11dcd6ce76445b8" prot="public" static="no">
+        <name>SPIEL_DCHECK_FALSE</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="spiel__utils_8h_1aff340fc0f81ce83d807cc1aa674db999" kindref="member">SPIEL_CHECK_FALSE</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="321" column="9" bodyfile="open_spiel/spiel_utils.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2021<sp/>DeepMind<sp/>Technologies<sp/>Limited</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OPEN_SPIEL_SPIEL_UTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPEN_SPIEL_SPIEL_UTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/abseil-cpp/absl/random/uniform_real_distribution.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/abseil-cpp/absl/strings/str_cat.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/abseil-cpp/absl/time/clock.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/abseil-cpp/absl/time/time.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/abseil-cpp/absl/types/optional.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;open_spiel/abseil-cpp/absl/types/span.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Code<sp/>that<sp/>is<sp/>not<sp/>part<sp/>of<sp/>the<sp/>API,<sp/>but<sp/>is<sp/>widely<sp/>useful<sp/>in<sp/>implementations.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel" kindref="compound">open_spiel</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Generic<sp/>ostream<sp/>operator&lt;&lt;<sp/>overloads<sp/>for<sp/>std::<sp/>containers.<sp/>They<sp/>have<sp/>to<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>defined<sp/>here<sp/>before<sp/>call<sp/>sites<sp/>because<sp/>we<sp/>cannot<sp/>rely<sp/>on<sp/>argument-dependent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>lookup<sp/>here<sp/>since<sp/>that<sp/>requires<sp/>putting<sp/>these<sp/>overloads<sp/>into<sp/>std::,<sp/>which<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>not<sp/>allowed<sp/>(only<sp/>template<sp/>specializations<sp/>on<sp/>std::<sp/>template<sp/>classes<sp/>may<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>added<sp/>to<sp/>std::,<sp/>and<sp/>this<sp/>is<sp/>not<sp/>one<sp/>of<sp/>them).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>that<sp/>arbitrary<sp/>structures<sp/>can<sp/>be<sp/>printed<sp/>out.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;T&gt;&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>U&gt;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;T,<sp/>U&gt;&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N&gt;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;T,<sp/>N&gt;&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>absl::optional&lt;T&gt;&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>absl::nullopt_t&amp;<sp/>v);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/>absl::Span&lt;T&gt;<sp/>v);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Actual<sp/>template<sp/>implementations.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="65" refid="namespaceopen__spiel_1af10c7d6ac2e339f096a748b1ca6f8a7e" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/>absl::Span&lt;T&gt;<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>element<sp/>:<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/>element<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="74" refid="namespaceopen__spiel_1ad08dc0d0b9ef5c3cb6dde8afbb322df8" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;&amp;<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream<sp/>&lt;&lt;<sp/>absl::MakeSpan(v);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N&gt;</highlight></codeline>
+<codeline lineno="78" refid="namespaceopen__spiel_1aef60acf7e128b58ecde2b6bc60d1db40" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;T,<sp/>N&gt;&amp;<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>element<sp/>:<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/>element<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="87" refid="namespaceopen__spiel_1ad63540b3b9a3adb7ae4c9b96170cc8f5" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;T&gt;&amp;<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream<sp/>&lt;&lt;<sp/>*v;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="91" refid="namespaceopen__spiel_1a232bc93e26b50e9e808514a5ff406d02" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>absl::optional&lt;T&gt;&amp;<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream<sp/>&lt;&lt;<sp/>*v;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>U&gt;</highlight></codeline>
+<codeline lineno="95" refid="namespaceopen__spiel_1a3c7bd4efc56f1c9d159b16bbf6ade090" refkind="member"><highlight class="normal">std::ostream&amp;<sp/><ref refid="namespaceopen__spiel_1a7a4f3573ff9d467ce5c64eecbe5ea8b9" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;T,<sp/>U&gt;&amp;<sp/>v)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>v.first<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>v.second<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="namespaceopen__spiel_1_1internal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">internal<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SpielStrOut(out,<sp/>a,<sp/>b,<sp/>c)<sp/>is<sp/>equivalent<sp/>to:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/>a<sp/>&lt;&lt;<sp/>b<sp/>&lt;&lt;<sp/>c;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>is<sp/>used<sp/>to<sp/>enable<sp/>SpielStrCat,<sp/>below.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Out,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="105" refid="namespaceopen__spiel_1_1internal_1a0b89016d4868241c8c00def1362207fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1_1internal_1a0b89016d4868241c8c00def1362207fe" kindref="member">SpielStrOut</ref>(Out&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>arg)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>out<sp/>&lt;&lt;<sp/>arg;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Out,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="110" refid="namespaceopen__spiel_1_1internal_1aa5afb648bb3b18a005f7ebf135e2b074" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1_1internal_1a0b89016d4868241c8c00def1362207fe" kindref="member">SpielStrOut</ref>(Out&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>arg1,<sp/>Args&amp;&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>out<sp/>&lt;&lt;<sp/>arg1;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><ref refid="namespaceopen__spiel_1_1internal_1a0b89016d4868241c8c00def1362207fe" kindref="member">SpielStrOut</ref>(out,<sp/>std::forward&lt;Args&gt;(args)...);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Builds<sp/>a<sp/>string<sp/>from<sp/>pieces:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>SpielStrCat(1,<sp/>&quot;<sp/>+<sp/>&quot;,<sp/>1,<sp/>&quot;<sp/>=<sp/>&quot;,<sp/>2)<sp/>--&gt;<sp/>&quot;1<sp/>+<sp/>1<sp/>=<sp/>2&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Converting<sp/>the<sp/>parameters<sp/>to<sp/>strings<sp/>is<sp/>done<sp/>using<sp/>the<sp/>stream<sp/>operator&lt;&lt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>only<sp/>kept<sp/>around<sp/>to<sp/>be<sp/>used<sp/>in<sp/>the<sp/>SPIEL_CHECK_*<sp/>macros<sp/>and<sp/>should</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>not<sp/>be<sp/>called<sp/>by<sp/>any<sp/>code<sp/>outside<sp/>of<sp/>this<sp/>file.<sp/>Prefer<sp/>absl::StrCat<sp/>instead.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>is<sp/>kept<sp/>here<sp/>due<sp/>to<sp/>support<sp/>for<sp/>more<sp/>types,<sp/>including<sp/>char.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="124" refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" refkind="member"><highlight class="normal">std::string<sp/><ref refid="namespaceopen__spiel_1_1internal_1a8bcbdcb0a975ffcdf757709e755ab92e" kindref="member">SpielStrCat</ref>(Args&amp;&amp;...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>std::ostringstream<sp/>out;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><ref refid="namespaceopen__spiel_1_1internal_1a0b89016d4868241c8c00def1362207fe" kindref="member">SpielStrOut</ref>(out,<sp/>std::forward&lt;Args&gt;(args)...);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out.str();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>internal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>=<sp/>int;</highlight></codeline>
+<codeline lineno="133" refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>=<sp/>int64_t;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Default<sp/>floating<sp/>point<sp/>tolerance<sp/>between<sp/>two<sp/>numbers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="namespaceopen__spiel_1a58285a1331f569b904adeb64997e4551" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a58285a1331f569b904adeb64997e4551" kindref="member">FloatingPointDefaultTolerance</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1e-6;<sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Default<sp/>tolerance<sp/>applied<sp/>when<sp/>validating<sp/>variables<sp/>are<sp/>valid<sp/>probability.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="namespaceopen__spiel_1a8f45b953a694ee1f2b061b17d9641f26" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a8f45b953a694ee1f2b061b17d9641f26" kindref="member">ProbabilityDefaultTolerance</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1e-9;<sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helpers<sp/>used<sp/>to<sp/>convert<sp/>actions<sp/>represented<sp/>as<sp/>integers<sp/>in<sp/>mixed<sp/>bases.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//<sp/>E.g.<sp/>RankActionMixedBase({2,<sp/>3,<sp/>6},<sp/>{1,<sp/>1,<sp/>1})<sp/>=<sp/>1*18<sp/>+<sp/>1*6<sp/>+<sp/>1<sp/>=<sp/>25,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>UnrankActioMixedBase(25,<sp/>{2,<sp/>3,<sp/>6},<sp/>&amp;digits)<sp/>sets<sp/>digits<sp/>to<sp/>{1,<sp/>1,<sp/>1}.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>rank,<sp/>both<sp/>vectors<sp/>must<sp/>be<sp/>the<sp/>same<sp/>size.<sp/>For<sp/>the<sp/>unrank,<sp/>the<sp/>digits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>must<sp/>already<sp/>have<sp/>size<sp/>equal<sp/>to<sp/>bases.size().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/><ref refid="namespaceopen__spiel_1ae4b6143776ec2ce03945edf965aceb91" kindref="member">RankActionMixedBase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;&amp;<sp/>bases,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;&amp;<sp/>digits);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">std::vector&lt;int&gt;<sp/><ref refid="namespaceopen__spiel_1a9039e595b94e0462902c6632c4458746" kindref="member">UnrankActionMixedBase</ref>(<ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref><sp/>action,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;&amp;<sp/>bases);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helper<sp/>function<sp/>to<sp/>determine<sp/>the<sp/>next<sp/>player<sp/>in<sp/>a<sp/>round<sp/>robin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a3ec07f0616c12613b3ea6630a891ff79" kindref="member">NextPlayerRoundRobin</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nplayers);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helper<sp/>function<sp/>to<sp/>determine<sp/>the<sp/>previous<sp/>player<sp/>in<sp/>a<sp/>round<sp/>robin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1adbd05d10e217d2315441d4a34ca9a30b" kindref="member">PreviousPlayerRoundRobin</ref>(<ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nplayers);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Finds<sp/>a<sp/>file<sp/>by<sp/>looking<sp/>up<sp/>a<sp/>number<sp/>of<sp/>directories.<sp/>For<sp/>example:<sp/>if<sp/>levels<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//<sp/>3<sp/>and<sp/>filename<sp/>is<sp/>my.txt,<sp/>it<sp/>will<sp/>look<sp/>for<sp/>./my.txt,<sp/>../my.txt,<sp/>../../my.txt,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>../../../my.txt,<sp/>return<sp/>the<sp/>first<sp/>file<sp/>found<sp/>or<sp/>absl::nullopt<sp/>if<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//<sp/>found.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">absl::optional&lt;std::string&gt;<sp/><ref refid="namespaceopen__spiel_1afdcbbde2d768dd78863a5096bf02f9fe" kindref="member">FindFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>levels);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Normalizes<sp/>the<sp/>span.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a76fab47e00dab81b9c71bb5515b240a3" kindref="member">Normalize</ref>(absl::Span&lt;double&gt;<sp/>weights);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Format<sp/>in<sp/>decimal<sp/>format,<sp/>with<sp/>at<sp/>most<sp/>15<sp/>places<sp/>for<sp/>the<sp/>fractional<sp/>part,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//<sp/>adding<sp/>&quot;.0&quot;<sp/>for<sp/>integer<sp/>values,<sp/>and<sp/>removing<sp/>any<sp/>additional<sp/>trailing<sp/>zeroes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">//<sp/>after<sp/>the<sp/>first<sp/>decimal<sp/>place.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">std::string<sp/><ref refid="namespaceopen__spiel_1afd524fdd6cfba8c1bc6055624f5bfe7d" kindref="member">FormatDouble</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Converts<sp/>a<sp/>bool<sp/>to<sp/>either<sp/>&quot;true&quot;<sp/>or<sp/>&quot;false&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">std::string<sp/><ref refid="namespaceopen__spiel_1aec4bf62bb68e2ffac219ae496afd9348" kindref="member">BoolToStr</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Converts<sp/>a<sp/>vector<sp/>of<sp/>pairs<sp/>to<sp/>a<sp/>string.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>A,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>B&gt;</highlight></codeline>
+<codeline lineno="178" refid="namespaceopen__spiel_1a395023729c68459e2f93589a1d875685" refkind="member"><highlight class="normal">std::string<sp/><ref refid="namespaceopen__spiel_1a61a557cb24b0691b2d821e956bb9fb01" kindref="member">VectorOfPairsToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;A,<sp/>B&gt;&gt;&amp;<sp/>vec,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>delimiter,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>pair_delimiter);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>whether<sp/>the<sp/>absolute<sp/>difference<sp/>between<sp/>floating<sp/>point<sp/>values<sp/>a<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">//<sp/>b<sp/>is<sp/>less<sp/>than<sp/>or<sp/>equal<sp/>to.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="185" refid="namespaceopen__spiel_1ae9813a4514ea28067d143537f9109094" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ae9813a4514ea28067d143537f9109094" kindref="member">Near</ref>(T<sp/>a,<sp/>T<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::is_floating_point&lt;T&gt;::value,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Near()<sp/>is<sp/>only<sp/>for<sp/>floating<sp/>point<sp/>args.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fabs(a<sp/>-<sp/>b)<sp/>&lt;=<sp/><ref refid="namespaceopen__spiel_1a58285a1331f569b904adeb64997e4551" kindref="member">FloatingPointDefaultTolerance</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>whether<sp/>|a<sp/>-<sp/>b|<sp/>&lt;=<sp/>epsilon.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="193" refid="namespaceopen__spiel_1a75a8fd3e4d9b82057d3b6ac740fbc385" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ae9813a4514ea28067d143537f9109094" kindref="member">Near</ref>(T<sp/>a,<sp/>T<sp/>b,<sp/>T<sp/>epsilon)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::is_floating_point&lt;T&gt;::value,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Near()<sp/>is<sp/>only<sp/>for<sp/>floating<sp/>point<sp/>args.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fabs(a<sp/>-<sp/>b)<sp/>&lt;=<sp/>epsilon;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="200" refid="namespaceopen__spiel_1ae00c0c4427507797bc362d31541ff684" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1ae00c0c4427507797bc362d31541ff684" kindref="member">AllNear</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;&amp;<sp/>vector1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;&amp;<sp/>vector2,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>epsilon)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vector1.size()<sp/>!=<sp/>vector2.size())<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>vector1.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespaceopen__spiel_1ae9813a4514ea28067d143537f9109094" kindref="member">Near</ref>(vector1[i],<sp/>vector2[i],<sp/>epsilon))<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Some<sp/>string<sp/>helpers.<sp/>We<sp/>should<sp/>remove<sp/>some<sp/>of<sp/>these<sp/>as<sp/>we<sp/>upgrade<sp/>abseil</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">//<sp/>versions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a403f1beb9bb544d9736ac2b6b529a52c" kindref="member">StrContainsIgnoreCase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>haystack,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>needle);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Macros<sp/>to<sp/>check<sp/>for<sp/>error<sp/>conditions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>trigger<sp/>SpielFatalError<sp/>if<sp/>the<sp/>condition<sp/>is<sp/>violated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>macros<sp/>are<sp/>always<sp/>executed.<sp/>If<sp/>you<sp/>want<sp/>to<sp/>use<sp/>checks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">//<sp/>only<sp/>for<sp/>debugging,<sp/>use<sp/>SPIEL_DCHECK_*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="spiel__utils_8h_1aa8e26cffc83f6e5dd7ec9d2fcd06076c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_OP(x_exp,<sp/>op,<sp/>y_exp)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="224"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="225"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>x<sp/>=<sp/>x_exp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="226"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>y<sp/>=<sp/>y_exp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="227"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!((x)op(y)))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="228"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>open_spiel::SpielFatalError(open_spiel::internal::SpielStrCat(<sp/>\</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>&quot;:&quot;,<sp/>__LINE__,<sp/>&quot;<sp/>&quot;,<sp/>#x_exp<sp/>&quot;<sp/>&quot;<sp/>#op<sp/>&quot;<sp/>&quot;<sp/>#y_exp,<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="230"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\n&quot;<sp/>#x_exp,<sp/>&quot;<sp/>=<sp/>&quot;,<sp/>x,<sp/>&quot;,<sp/>&quot;<sp/>#y_exp<sp/>&quot;<sp/>=<sp/>&quot;,<sp/>y));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="spiel__utils_8h_1ad7b81fce01bd158b375e0a8c29e65768" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_FN2(x_exp,<sp/>y_exp,<sp/>fn)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="234"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="235"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>x<sp/>=<sp/>x_exp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>y<sp/>=<sp/>y_exp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="237"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!fn(x,<sp/>y))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>open_spiel::SpielFatalError(open_spiel::internal::SpielStrCat(<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="239"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>&quot;:&quot;,<sp/>__LINE__,<sp/>&quot;<sp/>&quot;,<sp/>#fn<sp/>&quot;(&quot;<sp/>#x_exp<sp/>&quot;,<sp/>&quot;<sp/>#y_exp<sp/>&quot;)\n&quot;,<sp/>\</highlight></codeline>
+<codeline lineno="240"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#x_exp<sp/>&quot;<sp/>=<sp/>&quot;,<sp/>x,<sp/>&quot;,<sp/>&quot;<sp/>#y_exp<sp/>&quot;<sp/>=<sp/>&quot;,<sp/>y));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="241"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="spiel__utils_8h_1ae041ef404016241a372f4b6ab84b1e61" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_FN3(x_exp,<sp/>y_exp,<sp/>z_exp,<sp/>fn)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="244"><highlight class="preprocessor"><sp/><sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="245"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>x<sp/>=<sp/>x_exp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="246"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>y<sp/>=<sp/>y_exp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>auto<sp/>z<sp/>=<sp/>z_exp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="248"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!fn(x,<sp/>y,<sp/>z))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="249"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>open_spiel::SpielFatalError(open_spiel::internal::SpielStrCat(<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="250"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>&quot;:&quot;,<sp/>__LINE__,<sp/>&quot;<sp/>&quot;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="251"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#fn<sp/>&quot;(&quot;<sp/>#x_exp<sp/>&quot;,<sp/>&quot;<sp/>#y_exp<sp/>&quot;,<sp/>&quot;<sp/>#z_exp<sp/>&quot;)\n&quot;,<sp/>#x_exp<sp/>&quot;<sp/>=<sp/>&quot;,<sp/>x,<sp/>\</highlight></codeline>
+<codeline lineno="252"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;,<sp/>&quot;<sp/>#y_exp<sp/>&quot;<sp/>=<sp/>&quot;,<sp/>y,<sp/>&quot;,<sp/>&quot;<sp/>#z_exp<sp/>&quot;<sp/>=<sp/>&quot;,<sp/>z));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="253"><highlight class="preprocessor"><sp/><sp/>}<sp/>while<sp/>(false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_GE(x,<sp/>y)<sp/>SPIEL_CHECK_OP(x,<sp/>&gt;=,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="spiel__utils_8h_1a948872aa56d9cd14a37c436d9b4d8760" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_GT(x,<sp/>y)<sp/>SPIEL_CHECK_OP(x,<sp/>&gt;,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="spiel__utils_8h_1af180ebf0d85ccf1c871ef0e872c2ea20" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_LE(x,<sp/>y)<sp/>SPIEL_CHECK_OP(x,<sp/>&lt;=,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_LT(x,<sp/>y)<sp/>SPIEL_CHECK_OP(x,<sp/>&lt;,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_EQ(x,<sp/>y)<sp/>SPIEL_CHECK_OP(x,<sp/>==,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="spiel__utils_8h_1a32ffad2dd43a12e9d7443bc75f456bbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_NE(x,<sp/>y)<sp/>SPIEL_CHECK_OP(x,<sp/>!=,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="spiel__utils_8h_1acd960ab500145e2ff90ef3c382803b32" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_PROB(x)<sp/>\</highlight></codeline>
+<codeline lineno="262"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_GE(x,<sp/>0);<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="263"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_LE(x,<sp/>1);<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="264"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_FALSE(std::isnan(x)<sp/>||<sp/>std::isinf(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="spiel__utils_8h_1a3e08c7cbd7c46f352ec6b64f5305e798" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_PROB_TOLERANCE(x,<sp/>tol)<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="266"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_GE(x,<sp/>-(tol));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_LE(x,<sp/>1.0<sp/>+<sp/>(tol));<sp/>\</highlight></codeline>
+<codeline lineno="268"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_FALSE(std::isnan(x)<sp/>||<sp/>std::isinf(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Checks<sp/>that<sp/>x<sp/>and<sp/>y<sp/>are<sp/>equal<sp/>to<sp/>the<sp/>default<sp/>dynamic<sp/>threshold<sp/>proportional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>max(|x|,<sp/>|y|).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="spiel__utils_8h_1a1d6eea934e8beba47b04b9b35176e563" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_FLOAT_EQ(x,<sp/>y)<sp/>\</highlight></codeline>
+<codeline lineno="274"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_FN2(static_cast&lt;float&gt;(x),<sp/>static_cast&lt;float&gt;(y),<sp/>\</highlight></codeline>
+<codeline lineno="275"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>open_spiel::Near)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Checks<sp/>that<sp/>x<sp/>and<sp/>y<sp/>are<sp/>epsilon<sp/>apart<sp/>or<sp/>closer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="spiel__utils_8h_1a89f08dd7ca688143b0440c3bb70f5602" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_FLOAT_NEAR(x,<sp/>y,<sp/>epsilon)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="279"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_FN3(static_cast&lt;float&gt;(x),<sp/>static_cast&lt;float&gt;(y),<sp/>\</highlight></codeline>
+<codeline lineno="280"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>static_cast&lt;float&gt;(epsilon),<sp/>open_spiel::Near)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_TRUE(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="283"><highlight class="preprocessor"><sp/><sp/>while<sp/>(!(x))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="284"><highlight class="preprocessor"><sp/><sp/>open_spiel::SpielFatalError(open_spiel::internal::SpielStrCat(<sp/>\</highlight></codeline>
+<codeline lineno="285"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>&quot;:&quot;,<sp/>__LINE__,<sp/>&quot;<sp/>CHECK_TRUE(&quot;,<sp/>#x,<sp/>&quot;)&quot;))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>verbose<sp/>checker<sp/>that<sp/>will<sp/>print<sp/>state<sp/>info:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Use<sp/>as<sp/>SPIEL_CHECK_TRUE_WSI(bool<sp/>cond,<sp/>const<sp/>std::string&amp;<sp/>error_message,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>Game&amp;<sp/>game_ref,<sp/>const<sp/>State&amp;<sp/>state_ref)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="spiel__utils_8h_1ac4ad1002d81dabc9af37e7eb0cc62381" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_TRUE_WSI(x,<sp/>e,<sp/>g,<sp/>s)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="291"><highlight class="preprocessor"><sp/><sp/>while<sp/>(!(x))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="292"><highlight class="preprocessor"><sp/><sp/>open_spiel::SpielFatalErrorWithStateInfo(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="293"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>open_spiel::internal::SpielStrCat(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="294"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>&quot;:&quot;,<sp/>__LINE__,<sp/>&quot;<sp/>CHECK_TRUE(&quot;,<sp/>#x,<sp/>&quot;):<sp/>&quot;,<sp/>e),<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="295"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>(g),<sp/>(s))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="spiel__utils_8h_1aff340fc0f81ce83d807cc1aa674db999" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_CHECK_FALSE(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="298"><highlight class="preprocessor"><sp/><sp/>while<sp/>(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="299"><highlight class="preprocessor"><sp/><sp/>open_spiel::SpielFatalError(open_spiel::internal::SpielStrCat(<sp/>\</highlight></codeline>
+<codeline lineno="300"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>__FILE__,<sp/>&quot;:&quot;,<sp/>__LINE__,<sp/>&quot;<sp/>CHECK_FALSE(&quot;,<sp/>#x,<sp/>&quot;)&quot;))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(NDEBUG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Checks<sp/>that<sp/>are<sp/>executed<sp/>in<sp/>Debug<sp/>/<sp/>Testing<sp/>build<sp/>type,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>turned<sp/>off<sp/>for<sp/>Release<sp/>build<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="spiel__utils_8h_1a54f02990f8cb92d30a8e297f42fcc000" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_OP(x_exp,<sp/>op,<sp/>y_exp)<sp/>SPIEL_CHECK_OP(x_exp,<sp/>op,<sp/>y_exp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="spiel__utils_8h_1a5a304c30352d1f602295e5ebceee7bf9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FN2(x_exp,<sp/>y_exp,<sp/>fn)<sp/>SPIEL_CHECK_FN2(x_exp,<sp/>y_exp,<sp/>fn)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308" refid="spiel__utils_8h_1aff9546ec26b6221add64fcf5c73d9f99" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FN3(x_exp,<sp/>y_exp,<sp/>z_exp,<sp/>fn)<sp/>\</highlight></codeline>
+<codeline lineno="309"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_FN3(x_exp,<sp/>y_exp,<sp/>z_exp,<sp/>fn)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="spiel__utils_8h_1a1fb3786f0d942e21e9c7d23c9aebf5c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_GE(x,<sp/>y)<sp/>SPIEL_CHECK_GE(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311" refid="spiel__utils_8h_1ab75960188a0cf9d47e05482896a12487" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_GT(x,<sp/>y)<sp/>SPIEL_CHECK_GT(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="spiel__utils_8h_1ac27ebb5dceeb59bfcbcbda40368d2a08" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_LE(x,<sp/>y)<sp/>SPIEL_CHECK_LE(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="spiel__utils_8h_1afbd63a7f8a3c1ac147655b7121c014b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_LT(x,<sp/>y)<sp/>SPIEL_CHECK_LT(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="spiel__utils_8h_1ab7b97067e15f6941b08deaae7dc6013a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_EQ(x,<sp/>y)<sp/>SPIEL_CHECK_EQ(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="spiel__utils_8h_1a172ac7fed24f6d106c77a4d876ccd09e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_NE(x,<sp/>y)<sp/>SPIEL_CHECK_NE(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="spiel__utils_8h_1af481c57767be3a0c8d231d2f165c8fed" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_PROB(x)<sp/>SPIEL_DCHECK_PROB(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="spiel__utils_8h_1a61e584b3ffdfa9db367a2b29f0fff73d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FLOAT_EQ(x,<sp/>y)<sp/>SPIEL_CHECK_FLOAT_EQ(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="spiel__utils_8h_1ac9661f48fe8affee0e464d0868cbd8a5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FLOAT_NEAR(x,<sp/>y,<sp/>epsilon)<sp/>\</highlight></codeline>
+<codeline lineno="319"><highlight class="preprocessor"><sp/><sp/>SPIEL_CHECK_FLOAT_NEAR(x,<sp/>y,<sp/>epsilon)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320" refid="spiel__utils_8h_1a4347e9de74af6457a8509c6d13ab5a2e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_TRUE(x)<sp/>SPIEL_CHECK_TRUE(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="spiel__utils_8h_1a6d8cc2617a02adaba11dcd6ce76445b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FALSE(x)<sp/>SPIEL_CHECK_FALSE(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">//<sp/>defined(NDEBUG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Turn<sp/>off<sp/>checks<sp/>for<sp/>the<sp/>(optimized)<sp/>Release<sp/>build<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_OP(x_exp,<sp/>op,<sp/>y_exp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FN2(x_exp,<sp/>y_exp,<sp/>fn)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FN3(x_exp,<sp/>y_exp,<sp/>z_exp,<sp/>fn)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_GE(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_GT(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_LE(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_LT(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_EQ(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_NE(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_PROB(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FLOAT_EQ(x,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FLOAT_NEAR(x,<sp/>y,<sp/>epsilon)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_TRUE(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPIEL_DCHECK_FALSE(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>!defined(NDEBUG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="comment">//<sp/>When<sp/>an<sp/>error<sp/>is<sp/>encountered,<sp/>OpenSpiel<sp/>code<sp/>should<sp/>call<sp/>SpielFatalError()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight><highlight class="comment">//<sp/>which<sp/>will<sp/>forward<sp/>the<sp/>message<sp/>to<sp/>the<sp/>current<sp/>error<sp/>handler.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>error<sp/>handler<sp/>outputs<sp/>the<sp/>error<sp/>message<sp/>to<sp/>stderr,<sp/>and<sp/>exits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>process<sp/>with<sp/>exit<sp/>code<sp/>1.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="comment">//<sp/>When<sp/>called<sp/>from<sp/>Python,<sp/>a<sp/>different<sp/>error<sp/>handled<sp/>is<sp/>used,<sp/>which<sp/>returns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RuntimeException<sp/>to<sp/>the<sp/>caller,<sp/>containing<sp/>the<sp/>error<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Report<sp/>a<sp/>runtime<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal">[[noreturn]]<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">SpielFatalError</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>error_msg);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Specify<sp/>a<sp/>new<sp/>error<sp/>handler.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355" refid="namespaceopen__spiel_1a6ae50259664bd4ee81332e34b49d2ebd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceopen__spiel_1a6ae50259664bd4ee81332e34b49d2ebd" kindref="member">ErrorHandler</ref><sp/>=<sp/>void<sp/>(*)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceopen__spiel_1a89d903f6b3280f76e4e08ea13f07774d" kindref="member">SetErrorHandler</ref>(<ref refid="namespaceopen__spiel_1a6ae50259664bd4ee81332e34b49d2ebd" kindref="member">ErrorHandler</ref><sp/><ref refid="namespaceopen__spiel_1a86dca063f97b8704cfd331658af92261" kindref="member">error_handler</ref>);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>ProbabilitySampler<sp/>that<sp/>samples<sp/>uniformly<sp/>from<sp/>a<sp/>distribution.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359" refid="classopen__spiel_1_1_uniform_probability_sampler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1_uniform_probability_sampler" kindref="compound">UniformProbabilitySampler</ref><sp/>{</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="361" refid="classopen__spiel_1_1_uniform_probability_sampler_1ae9f8067965fe35e4878ac8030fe7e743" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1_uniform_probability_sampler_1ae9f8067965fe35e4878ac8030fe7e743" kindref="member">UniformProbabilitySampler</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min<sp/>=<sp/>0.,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max<sp/>=<sp/>1.)</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>seed_(seed),<sp/>rng_(seed_),<sp/>dist_(min,<sp/>max),<sp/>min_(min),<sp/>max_(max)<sp/>{}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364" refid="classopen__spiel_1_1_uniform_probability_sampler_1a8d4f184b36156ec5460b004cbc7e2ea9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1_uniform_probability_sampler_1a8d4f184b36156ec5460b004cbc7e2ea9" kindref="member">UniformProbabilitySampler</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min<sp/>=<sp/>0.,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max<sp/>=<sp/>1.)</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>rng_(seed_),<sp/>dist_(min,<sp/>max),<sp/>min_(min),<sp/>max_(max)<sp/>{}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>copying,<sp/>we<sp/>reinitialize<sp/>the<sp/>sampler<sp/>to<sp/>have<sp/>the<sp/>initial<sp/>seed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="classopen__spiel_1_1_uniform_probability_sampler_1a102398daa4e74edaeee43add6c91e3ec" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classopen__spiel_1_1_uniform_probability_sampler_1a102398daa4e74edaeee43add6c91e3ec" kindref="member">UniformProbabilitySampler</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_uniform_probability_sampler" kindref="compound">UniformProbabilitySampler</ref>&amp;<sp/>other)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>seed_(other.seed_),</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rng_(other.seed_),</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dist_(other.min_,<sp/>other.max_),</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>min_(other.min_),</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_(other.max_)<sp/>{}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375" refid="classopen__spiel_1_1_uniform_probability_sampler_1adc4a2927060a3774906fc0b0a9a2a3c5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_uniform_probability_sampler_1adc4a2927060a3774906fc0b0a9a2a3c5" kindref="member">operator()</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist_(rng_);<sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>seed<sp/>as<sp/>the<sp/>number<sp/>of<sp/>nanoseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed_<sp/>=<sp/>absl::ToInt64Nanoseconds(absl::Now()<sp/>-<sp/>absl::UnixEpoch());</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/>std::mt19937<sp/>rng_;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/>absl::uniform_real_distribution&lt;double&gt;<sp/>dist_;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max_;</highlight></codeline>
+<codeline lineno="385"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Utility<sp/>functions<sp/>intended<sp/>to<sp/>be<sp/>used<sp/>for<sp/>casting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight><highlight class="comment">//<sp/>from<sp/>a<sp/>Base<sp/>class<sp/>to<sp/>a<sp/>Derived<sp/>subclass.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>functions<sp/>handle<sp/>various<sp/>use<sp/>cases,<sp/>such<sp/>as<sp/>pointers<sp/>and<sp/>const</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="comment">//<sp/>references.<sp/>For<sp/>shared<sp/>or<sp/>unique<sp/>pointers<sp/>you<sp/>can<sp/>get<sp/>the<sp/>underlying<sp/>pointer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="comment">//<sp/>When<sp/>you<sp/>use<sp/>debug<sp/>mode,<sp/>a<sp/>more<sp/>expensive<sp/>dynamic_cast<sp/>is<sp/>used<sp/>and<sp/>it<sp/>checks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="comment">//<sp/>whether<sp/>the<sp/>casting<sp/>has<sp/>been<sp/>successful.<sp/>In<sp/>optimized<sp/>builds<sp/>only<sp/>static_cast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="comment">//<sp/>is<sp/>used<sp/>when<sp/>possible.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use<sp/>like<sp/>this:<sp/>down_cast&lt;T*&gt;(foo);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>To,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>From&gt;</highlight></codeline>
+<codeline lineno="397" refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>To<sp/><ref refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" kindref="member">down_cast</ref>(From*<sp/>f)<sp/>{</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(NDEBUG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(f<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal">To</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(f)<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>from<sp/>=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(From).name();</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>to<sp/>=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(From).name();</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">SpielFatalError</ref>(</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>absl::StrCat(</highlight><highlight class="stringliteral">&quot;Cast<sp/>failure:<sp/>could<sp/>not<sp/>cast<sp/>a<sp/>pointer<sp/>from<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>from,</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>to<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>to,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">To</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(f);</highlight></codeline>
+<codeline lineno="408"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use<sp/>like<sp/>this:<sp/>down_cast&lt;T&amp;&gt;(foo);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>To,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>From&gt;</highlight></codeline>
+<codeline lineno="412" refid="namespaceopen__spiel_1a13e94371d9454bf08643fdb22064a4ae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>To<sp/><ref refid="namespaceopen__spiel_1a2abc2a9bf725d541a7da3b6f3c4c6ec4" kindref="member">down_cast</ref>(From&amp;<sp/>f)<sp/>{</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::remove_reference&lt;To&gt;::type*<sp/>ToAsPointer;</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(NDEBUG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal">ToAsPointer</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;f)<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>from<sp/>=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(From).name();</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>to<sp/>=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(From).name();</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" kindref="member">SpielFatalError</ref>(</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>absl::StrCat(</highlight><highlight class="stringliteral">&quot;Cast<sp/>failure:<sp/>could<sp/>not<sp/>cast<sp/>a<sp/>reference<sp/>from<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>from,</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>to<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>to,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">ToAsPointer</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;f);</highlight></codeline>
+<codeline lineno="424"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Creates<sp/>a<sp/>sampler<sp/>from<sp/>a<sp/>std::function&lt;double()&gt;<sp/>conforming<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight><highlight class="comment">//<sp/>probabilities<sp/>received.<sp/>absl::discrete_distribution<sp/>requires<sp/>a<sp/>URBG<sp/>as<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight><highlight class="comment">//<sp/>source<sp/>of<sp/>randomness<sp/>(as<sp/>opposed<sp/>to<sp/>a<sp/>std::function&lt;double()&gt;)<sp/>so<sp/>cannot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"></highlight><highlight class="comment">//<sp/>be<sp/>used<sp/>directly.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="430" refid="classopen__spiel_1_1_sampler_from_rng" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1_sampler_from_rng" kindref="compound">SamplerFromRng</ref><sp/>{</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="432" refid="classopen__spiel_1_1_sampler_from_rng_1acea8254b33e8b7d5f5c5a8d91fbb5060" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_sampler_from_rng_1acea8254b33e8b7d5f5c5a8d91fbb5060" kindref="member">SamplerFromRng</ref>(std::function&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">()&gt;<sp/>rng)<sp/>:<sp/>rng_(std::move(rng))<sp/>{}</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classopen__spiel_1_1_sampler_from_rng_1a6f5569c54d6bd6f94970ea5cac49ab92" kindref="member">operator()</ref>(absl::Span&lt;const<sp/>double&gt;<sp/>probs);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/>std::function&lt;double()&gt;<sp/>rng_;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>open_spiel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>OPEN_SPIEL_SPIEL_UTILS_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/spiel_utils.h"/>
+  </compounddef>
+</doxygen>

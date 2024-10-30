@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="play__scenario_8md" kind="file" language="Markdown">
+    <compoundname>play_scenario.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">0.<sp/>맵<sp/>초기화,<sp/>유닛<sp/>배치</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>init_first<sp/>-&gt;<sp/>init_map,init_unit</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Player<sp/>별<sp/>돌아가며<sp/>다음을<sp/>한턴<sp/>안에<sp/>수행<sp/>함.</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Observation<sp/>String<sp/>생성<sp/>(유저에게<sp/>보여주기<sp/>위함),<sp/>Obseravation<sp/>|<sp/>Information<sp/>Tensor<sp/>준비<sp/>(매<sp/>액션마다<sp/>갱신하는<sp/>방법<sp/>사용)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>inference<sp/>network<sp/>or<sp/>random<sp/>select(개발중<sp/>사용)<sp/></highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>액션<sp/>선택<sp/>(action_select_tile)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">턴<sp/>넘김</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-----------------------------------</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">0.<sp/>NewInitialState()<sp/>에서<sp/>state<sp/>객체가<sp/>만들어짐</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>state<sp/>객체가<sp/>만들어지면서<sp/>init_first()<sp/>불려서<sp/>초기화<sp/>과정<sp/>시작</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/></highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/games/SG/play_scenario.md"/>
+  </compounddef>
+</doxygen>

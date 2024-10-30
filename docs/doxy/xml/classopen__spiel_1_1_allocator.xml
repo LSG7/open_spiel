@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_allocator" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>open_spiel::Allocator</compoundname>
+    <derivedcompoundref refid="classopen__spiel_1_1_contiguous_allocator" prot="public" virt="non-virtual">open_spiel::ContiguousAllocator</derivedcompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1_tracking_vector_allocator" prot="public" virt="non-virtual">open_spiel::TrackingVectorAllocator</derivedcompoundref>
+    <includes refid="observer_8h" local="no">observer.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_allocator_1abd2b9c82341d4d97233f936bb0c562db" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classopen__spiel_1_1_span_tensor" kindref="compound">SpanTensor</ref></type>
+        <definition>virtual SpanTensor open_spiel::Allocator::Get</definition>
+        <argsstring>(absl::string_view name, const absl::InlinedVector&lt; int, 4 &gt; &amp;shape)=0</argsstring>
+        <name>Get</name>
+        <qualifiedname>open_spiel::Allocator::Get</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1_contiguous_allocator_1ad5788d75dc02bdedd831fe1ffc77c849">Get</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_tracking_vector_allocator_1ac7a4b3ec53cb80beec25e295d92599a9">Get</reimplementedby>
+        <param>
+          <type>absl::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const absl::InlinedVector&lt; int, 4 &gt; &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="165" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_allocator_1aae4b5826e7832d9614c0ee0224526516" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual open_spiel::Allocator::~Allocator</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Allocator</name>
+        <qualifiedname>open_spiel::Allocator::~Allocator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="168" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel::Allocator</label>
+        <link refid="classopen__spiel_1_1_allocator"/>
+      </node>
+      <node id="2">
+        <label>open_spiel::ContiguousAllocator</label>
+        <link refid="classopen__spiel_1_1_contiguous_allocator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::TrackingVectorAllocator</label>
+        <link refid="classopen__spiel_1_1_tracking_vector_allocator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::Allocator</label>
+        <link refid="classopen__spiel_1_1_allocator"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.h" line="160" column="1" bodyfile="open_spiel/observer.h" bodystart="160" bodyend="169"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_allocator_1abd2b9c82341d4d97233f936bb0c562db" prot="public" virt="pure-virtual"><scope>open_spiel::Allocator</scope><name>Get</name></member>
+      <member refid="classopen__spiel_1_1_allocator_1aae4b5826e7832d9614c0ee0224526516" prot="public" virt="virtual"><scope>open_spiel::Allocator</scope><name>~Allocator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

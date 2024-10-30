@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::algorithms::rnad::rnad::TimeStep</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step_1a76357ffde261131a461ece25d261c013" prot="public" static="yes" mutable="no">
+        <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref></type>
+        <definition>EnvStep open_spiel.python.algorithms.rnad.rnad.TimeStep::env</definition>
+        <argsstring></argsstring>
+        <name>env</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.TimeStep.env</qualifiedname>
+        <initializer>=  <ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step" kindref="compound">EnvStep</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="691" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="691" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step_1a4afa09e2cab137aa81f714911bc3921e" prot="public" static="yes" mutable="no">
+        <type><ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_actor_step" kindref="compound">ActorStep</ref></type>
+        <definition>ActorStep open_spiel.python.algorithms.rnad.rnad.TimeStep::actor</definition>
+        <argsstring></argsstring>
+        <name>actor</name>
+        <qualifiedname>open_spiel.python.algorithms.rnad.rnad.TimeStep.actor</qualifiedname>
+        <initializer>=  <ref refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_actor_step" kindref="compound">ActorStep</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/algorithms/rnad/rnad.py" line="692" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="692" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>The tensor data for one game transition (env_step, actor_step).</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.algorithms.rnad.rnad.TimeStep</label>
+        <link refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+env</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+actor</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel.python.algorithms.rnad.rnad.ActorStep</label>
+        <link refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_actor_step"/>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.algorithms.rnad.rnad.EnvStep</label>
+        <link refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_env_step"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/algorithms/rnad/rnad.py" line="689" column="1" bodyfile="open_spiel/python/algorithms/rnad/rnad.py" bodystart="689" bodyend="694"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step_1a4afa09e2cab137aa81f714911bc3921e" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::TimeStep</scope><name>actor</name></member>
+      <member refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_time_step_1a76357ffde261131a461ece25d261c013" prot="public" virt="non-virtual"><scope>open_spiel::python::algorithms::rnad::rnad::TimeStep</scope><name>env</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

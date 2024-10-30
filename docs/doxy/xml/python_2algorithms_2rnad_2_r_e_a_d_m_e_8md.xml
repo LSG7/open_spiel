@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="python_2algorithms_2rnad_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">This<sp/>folder<sp/>contains<sp/>an<sp/>single<sp/>process<sp/>implementation<sp/>of<sp/>[R-NaD]</highlight></codeline>
+<codeline><highlight class="normal">(https://arxiv.org/pdf/2206.15378.pdf)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`rnad.py`<sp/>contains<sp/>a<sp/>reference<sp/>implementation<sp/>of<sp/>the<sp/>actor<sp/>behavior<sp/>and<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">policy<sp/>and<sp/>value<sp/>loss<sp/>used<sp/>in<sp/>to<sp/>train<sp/>DeepNash.<sp/>It<sp/>uses<sp/>much<sp/>smaller<sp/>network</highlight></codeline>
+<codeline><highlight class="normal">architecture<sp/>(an<sp/>MLP)<sp/>and<sp/>is<sp/>only<sp/>able<sp/>to<sp/>run<sp/>on<sp/>smaller<sp/>games.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`rnad_nashconv_leduc.png`<sp/>shows<sp/>the<sp/>evolution<sp/>of<sp/>the<sp/>NashConv<sp/>metric<sp/>(a</highlight></codeline>
+<codeline><highlight class="normal">distance<sp/>to<sp/>the<sp/>Nash<sp/>equilibrium)<sp/>as<sp/>the<sp/>learning<sp/>progress.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>generate<sp/>these<sp/>plots<sp/>we<sp/>used<sp/>the<sp/>following<sp/>parameters:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Hyper-parameter<sp/>|<sp/>Value<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-----------<sp/>|<sp/>-----------<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>policy_network_layers<sp/>|<sp/>(256,<sp/>256)<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>eta_reward_transform<sp/>|<sp/>0.2<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>learning_rate<sp/>|<sp/>5e-5<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>clip_gradient<sp/>|<sp/>10e4<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>beta_neurd<sp/>|<sp/>2.0<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>clip_neurd<sp/>|<sp/>10e4<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>b1_adam<sp/>|<sp/>0.0<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>b2_adam<sp/>|<sp/>0.999<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>epsilon_adam<sp/>|<sp/>10e-8<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>target_network_avg<sp/>|<sp/>10e-3<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>rho_vtrace<sp/>|<sp/>np.inf<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>c_vtrace<sp/>|<sp/>1.0<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>trajectory_max<sp/>|<sp/>10<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>batch_size<sp/>|<sp/>512<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>entropy_schedule_size<sp/>|<sp/>(50000,)<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>entropy_schedule_repeats<sp/>|<sp/>(1,)|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>state_representation<sp/>|<sp/>&quot;info_set&quot;<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>policy_option.threshold<sp/>|<sp/>0.03<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>policy_option.discretization<sp/>|<sp/>32<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>finetune_from<sp/>|<sp/>-1<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Finally,<sp/>the<sp/>seed<sp/>used<sp/>were<sp/>in<sp/>[0,<sp/>1,<sp/>2,<sp/>3,<sp/>4]<sp/>and<sp/>the<sp/>learning<sp/>lasted<sp/>for<sp/>at</highlight></codeline>
+<codeline><highlight class="normal">most<sp/>than<sp/>7M<sp/>steps.</highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/python/algorithms/rnad/README.md"/>
+  </compounddef>
+</doxygen>

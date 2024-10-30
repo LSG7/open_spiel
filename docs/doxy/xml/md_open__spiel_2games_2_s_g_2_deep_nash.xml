@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="md_open__spiel_2games_2_s_g_2_deep_nash" kind="page">
+    <compoundname>md_open__spiel_2games_2_s_g_2_deep_nash</compoundname>
+    <title>DeepNash</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>딥내쉬는 3가지로 이루어짐</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>R-Nad <linebreak/>
+</para>
+</listitem><listitem><para>fine-tuning <linebreak/>
+</para>
+</listitem><listitem><para>test-time improvement <linebreak/>
+</para>
+</listitem></orderedlist>
+<itemizedlist>
+<listitem><para>R-Nad 는 3가지로 이루어져서 iteration 하며 fixed point(Nash E 지점) 까지 반복</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Reward trasformation (보상값을 강화)</para>
+</listitem><listitem><para>dynamic step (한 지점으로 수렴화)</para>
+</listitem><listitem><para>정책값 업데이트</para>
+</listitem></orderedlist>
+<itemizedlist>
+<listitem><para>선택가능 행동은 이동범위+공격범위 <linebreak/>
+</para>
+</listitem><listitem><para>Observation<orderedlist>
+<listitem><para>유닛 마다 2 Action</para>
+</listitem><listitem><para>전장 테이블 크기 만큼 obs tensor 크기가 커진다. 이것은 문제다.<orderedlist>
+<listitem><para>( obs 크기 = 전장 크기 ) 로 할 것이냐 ? 이러면 obs 크기가 엄청 커진다. </para>
+</listitem></orderedlist>
+</para>
+</listitem></orderedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="open_spiel/games/SG/DeepNash.md"/>
+  </compounddef>
+</doxygen>

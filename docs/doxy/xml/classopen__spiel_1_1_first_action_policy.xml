@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_first_action_policy" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::FirstActionPolicy</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_policy" prot="public" virt="non-virtual">open_spiel::Policy</basecompoundref>
+    <includes refid="policy_8h" local="no">policy.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_first_action_policy_1af1170c5460cac64d6321ab2a6fa1a181" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref></type>
+        <definition>ActionsAndProbs open_spiel::FirstActionPolicy::GetStatePolicy</definition>
+        <argsstring>(const State &amp;state, Player player) const override</argsstring>
+        <name>GetStatePolicy</name>
+        <qualifiedname>open_spiel::FirstActionPolicy::GetStatePolicy</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_policy_1a17e0b9275e629f68174168f6abfcb54b">GetStatePolicy</reimplements>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="339" column="19" bodyfile="open_spiel/policy.h" bodystart="339" bodyend="347"/>
+        <references refid="namespaceopen__spiel_1a0ff11c30833a9d4a5c12510080596429" compoundref="policy_8cc" startline="126" endline="128">open_spiel::FirstActionStatePolicy</references>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_first_action_policy_1a4b51bc6754d382aac6f47485a1797e80" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::FirstActionPolicy::Serialize</definition>
+        <argsstring>(int double_precision=-1, std::string delimiter=&quot;&quot;) const override</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>open_spiel::FirstActionPolicy::Serialize</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_policy_1a53e9086029e7365dc2f5d4a3fda33124">Serialize</reimplements>
+        <param>
+          <type>int</type>
+          <declname>double_precision</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>delimiter</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/policy.h" line="349" column="15" bodyfile="open_spiel/policy.h" bodystart="349" bodyend="352"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel::FirstActionPolicy</label>
+        <link refid="classopen__spiel_1_1_first_action_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::Policy</label>
+        <link refid="classopen__spiel_1_1_policy"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::FirstActionPolicy</label>
+        <link refid="classopen__spiel_1_1_first_action_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::Policy</label>
+        <link refid="classopen__spiel_1_1_policy"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/policy.h" line="337" column="1" bodyfile="open_spiel/policy.h" bodystart="337" bodyend="353"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_first_action_policy_1af1170c5460cac64d6321ab2a6fa1a181" prot="public" virt="virtual"><scope>open_spiel::FirstActionPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_policy_1ab5b6ff779e99ea042f7bb261e78ed6c6" prot="public" virt="virtual" ambiguityscope="open_spiel::Policy::"><scope>open_spiel::FirstActionPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_policy_1abbe4e1b820b5ca95e67b60de92d38370" prot="public" virt="virtual" ambiguityscope="open_spiel::Policy::"><scope>open_spiel::FirstActionPolicy</scope><name>GetStatePolicy</name></member>
+      <member refid="classopen__spiel_1_1_policy_1a65cde909235df749977cbaa0d3320186" prot="public" virt="virtual"><scope>open_spiel::FirstActionPolicy</scope><name>GetStatePolicyAsMap</name></member>
+      <member refid="classopen__spiel_1_1_policy_1ac4aa0cf8b821528b20fe70d0f30dbc4e" prot="public" virt="virtual"><scope>open_spiel::FirstActionPolicy</scope><name>GetStatePolicyAsMap</name></member>
+      <member refid="classopen__spiel_1_1_policy_1acd81eb036ef229697a18cebaa270083b" prot="public" virt="virtual"><scope>open_spiel::FirstActionPolicy</scope><name>GetStatePolicyAsParallelVectors</name></member>
+      <member refid="classopen__spiel_1_1_policy_1a9acb6d6cb2f40f5ad6ac5490a4ec618c" prot="public" virt="virtual"><scope>open_spiel::FirstActionPolicy</scope><name>GetStatePolicyAsParallelVectors</name></member>
+      <member refid="classopen__spiel_1_1_first_action_policy_1a4b51bc6754d382aac6f47485a1797e80" prot="public" virt="virtual"><scope>open_spiel::FirstActionPolicy</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_policy_1ada2523d991dccc11adc1320d28423629" prot="public" virt="virtual"><scope>open_spiel::FirstActionPolicy</scope><name>~Policy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

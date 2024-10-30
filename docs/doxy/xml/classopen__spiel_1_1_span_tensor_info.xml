@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_span_tensor_info" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::SpanTensorInfo</compoundname>
+    <includes refid="observer_8h" local="no">observer.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classopen__spiel_1_1_span_tensor_info_1afea1a4cd70be77071f91121a97d8c8ff" prot="public" static="no">
+        <type>absl::InlinedVector&lt; int, 4 &gt;</type>
+        <definition>using open_spiel::SpanTensorInfo::Shape =  absl::InlinedVector&lt;int, 4&gt;</definition>
+        <argsstring></argsstring>
+        <name>Shape</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::Shape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="70" column="3" bodyfile="open_spiel/observer.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_span_tensor_info_1a41087c6ea538b68c9dfb757fe9a3f559" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string open_spiel::SpanTensorInfo::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::name_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="100" column="15" bodyfile="open_spiel/observer.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_span_tensor_info_1a0f2f333e009f0cfd32e25429eb85ca88" prot="private" static="no" mutable="no">
+        <type><ref refid="classopen__spiel_1_1_span_tensor_info_1afea1a4cd70be77071f91121a97d8c8ff" kindref="member">Shape</ref></type>
+        <definition>Shape open_spiel::SpanTensorInfo::shape_</definition>
+        <argsstring></argsstring>
+        <name>shape_</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::shape_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="101" column="9" bodyfile="open_spiel/observer.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_info_1acebcab819f2cb4ed71dee781162fc02c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::SpanTensorInfo::SpanTensorInfo</definition>
+        <argsstring>(absl::string_view name, const Shape &amp;shape)</argsstring>
+        <name>SpanTensorInfo</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::SpanTensorInfo</qualifiedname>
+        <param>
+          <type>absl::string_view</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_span_tensor_info_1afea1a4cd70be77071f91121a97d8c8ff" kindref="member">Shape</ref> &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="72" column="3" bodyfile="open_spiel/observer.h" bodystart="72" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_info_1a53a60f633c4778ede4a8dd8819bd2436" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; open_spiel::SpanTensorInfo::name</definition>
+        <argsstring>() const</argsstring>
+        <name>name</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="75" column="28" bodyfile="open_spiel/observer.h" bodystart="75" bodyend="75"/>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_info_1a89787533e52d6737958605b60a29c277" compoundref="observer_8h" startline="93" endline="97">DebugString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_info_1a3a440d00dc7daa041c25b49e2b3e91d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classopen__spiel_1_1_span_tensor_info_1afea1a4cd70be77071f91121a97d8c8ff" kindref="member">Shape</ref> &amp;</type>
+        <definition>const Shape &amp; open_spiel::SpanTensorInfo::shape</definition>
+        <argsstring>() const</argsstring>
+        <name>shape</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::shape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="76" column="22" bodyfile="open_spiel/observer.h" bodystart="76" bodyend="76"/>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a84c149089d953972dd02a59bfa462a4c" compoundref="observer_8h" startline="127" endline="130">open_spiel::SpanTensor::at</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1ac308bc8cd13e33cc0f84818cd2d428ce" compoundref="observer_8h" startline="132" endline="135">open_spiel::SpanTensor::at</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a98c5390d859059e4c890a600d36cd791" compoundref="observer_8h" startline="137" endline="140">open_spiel::SpanTensor::at</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a6a545829323e838d8d18fb4b94d5fa94" compoundref="observer_8h" startline="142" endline="145">open_spiel::SpanTensor::at</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1ab583f0b6dd0909226136353dfca8e372" compoundref="observer_8h" startline="147" endline="152">open_spiel::SpanTensor::at</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_info_1abfcfbfa5bff0553725ec2ddf54d5f2b4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename int_type</type>
+            <defval>int32_t</defval>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; int_type &gt;</type>
+        <definition>std::vector&lt; int_type &gt; open_spiel::SpanTensorInfo::vector_shape</definition>
+        <argsstring>() const</argsstring>
+        <name>vector_shape</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::vector_shape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="80" column="22" bodyfile="open_spiel/observer.h" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_info_1a8b285f32d9f13ccd8083780760fab2f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t open_spiel::SpanTensorInfo::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="85" column="11" bodyfile="open_spiel/observer.h" bodystart="85" bodyend="88"/>
+        <referencedby refid="classopen__spiel_1_1_tracking_vector_allocator_1ac7a4b3ec53cb80beec25e295d92599a9" compoundref="observer_8cc" startline="192" endline="204">open_spiel::TrackingVectorAllocator::Get</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_info_1ab8f1829fc07afc19cad61098885ebd43" compoundref="observer_8h" startline="91" endline="91">nbytes</referencedby>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a68a316318f5867aa4f369e080c1a31a6" compoundref="observer_8h" startline="115" endline="118">open_spiel::SpanTensor::SpanTensor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_info_1ab8f1829fc07afc19cad61098885ebd43" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t open_spiel::SpanTensorInfo::nbytes</definition>
+        <argsstring>() const</argsstring>
+        <name>nbytes</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::nbytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="91" column="11" bodyfile="open_spiel/observer.h" bodystart="91" bodyend="91"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a8b285f32d9f13ccd8083780760fab2f0" compoundref="observer_8h" startline="85" endline="88">size</references>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_info_1a89787533e52d6737958605b60a29c277" compoundref="observer_8h" startline="93" endline="97">DebugString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_info_1a89787533e52d6737958605b60a29c277" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::SpanTensorInfo::DebugString</definition>
+        <argsstring>() const</argsstring>
+        <name>DebugString</name>
+        <qualifiedname>open_spiel::SpanTensorInfo::DebugString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="93" column="15" bodyfile="open_spiel/observer.h" bodystart="93" bodyend="97"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a53a60f633c4778ede4a8dd8819bd2436" compoundref="observer_8h" startline="75" endline="75">name</references>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1ab8f1829fc07afc19cad61098885ebd43" compoundref="observer_8h" startline="91" endline="91">nbytes</references>
+        <referencedby refid="classopen__spiel_1_1_span_tensor_1a25b62d439d56fac11cabe05e18229eba" compoundref="observer_8h" startline="124" endline="124">open_spiel::SpanTensor::DebugString</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::SpanTensorInfo</label>
+        <link refid="classopen__spiel_1_1_span_tensor_info"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.h" line="68" column="1" bodyfile="open_spiel/observer.h" bodystart="68" bodyend="102"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1a89787533e52d6737958605b60a29c277" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>DebugString</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1a53a60f633c4778ede4a8dd8819bd2436" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>name</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1a41087c6ea538b68c9dfb757fe9a3f559" prot="private" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>name_</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1ab8f1829fc07afc19cad61098885ebd43" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>nbytes</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1afea1a4cd70be77071f91121a97d8c8ff" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>Shape</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1a3a440d00dc7daa041c25b49e2b3e91d6" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>shape</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1a0f2f333e009f0cfd32e25429eb85ca88" prot="private" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>shape_</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1a8b285f32d9f13ccd8083780760fab2f0" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>size</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1acebcab819f2cb4ed71dee781162fc02c" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>SpanTensorInfo</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_info_1abfcfbfa5bff0553725ec2ddf54d5f2b4" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensorInfo</scope><name>vector_shape</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

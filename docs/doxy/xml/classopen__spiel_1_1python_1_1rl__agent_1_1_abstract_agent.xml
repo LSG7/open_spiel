@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::rl_agent::AbstractAgent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">metaclass</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">abc.ABCMeta</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent_1af17e2a06dc592b1d2bbe3d1ee40467b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_agent.AbstractAgent.__init__</definition>
+        <argsstring>(self, player_id, session=None, observation_spec=None, name=&quot;agent&quot;, **agent_specific_kwargs)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.rl_agent.AbstractAgent.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>player_id</type>
+          <defname>player_id</defname>
+        </param>
+        <param>
+          <type>session</type>
+          <defname>session</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>observation_spec</type>
+          <defname>observation_spec</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+          <defval>&quot;agent&quot;</defval>
+        </param>
+        <param>
+          <type>**</type>
+          <declname>agent_specific_kwargs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes agent.
+
+Args:
+  player_id: integer, mandatory. Corresponds to the player position in the
+    game and is used to index the observation list.
+  session: optional Tensorflow session.
+  observation_spec: optional dict containing observation specifications.
+  name: string. Must be used to scope TF variables. Defaults to `agent`.
+  **agent_specific_kwargs: optional extra args.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_agent.py" line="27" column="1" bodyfile="open_spiel/python/rl_agent.py" bodystart="32" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent_1ab97b9d892ae3a1232f3adce55203efea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_agent.AbstractAgent.step</definition>
+        <argsstring>(self, time_step, is_evaluation=False)</argsstring>
+        <name>step</name>
+        <qualifiedname>open_spiel.python.rl_agent.AbstractAgent.step</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>time_step</type>
+          <defname>time_step</defname>
+        </param>
+        <param>
+          <type>is_evaluation</type>
+          <defname>is_evaluation</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns action probabilities and chosen action at `time_step`.
+
+Agents should handle `time_step` and extract the required part of the
+`time_step.observations` field. This flexibility enables algorithms which
+rely on opponent observations / information, e.g. CFR.
+
+`is_evaluation` can be used so agents change their behaviour for evaluation
+purposes, e.g.: preventing exploration rate decaying during test and
+insertion of data to replay buffers.
+
+Arguments:
+  time_step: an instance of rl_environment.TimeStep.
+  is_evaluation: bool indicating whether the step is an evaluation routine,
+    as opposed to a normal training step.
+
+Returns:
+  A `StepOutput` for the current `time_step`.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_agent.py" line="45" column="1" bodyfile="open_spiel/python/rl_agent.py" bodystart="45" bodyend="64"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Abstract base class for Open Spiel RL agents.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>abc::ABCMeta</label>
+      </node>
+      <node id="2">
+        <label>metaclass</label>
+      </node>
+      <node id="1">
+        <label>open_spiel.python.rl_agent.AbstractAgent</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>abc::ABCMeta</label>
+      </node>
+      <node id="2">
+        <label>metaclass</label>
+      </node>
+      <node id="1">
+        <label>open_spiel.python.rl_agent.AbstractAgent</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/rl_agent.py" line="23" column="1" bodyfile="open_spiel/python/rl_agent.py" bodystart="23" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent_1af17e2a06dc592b1d2bbe3d1ee40467b6" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_agent::AbstractAgent</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__agent_1_1_abstract_agent_1ab97b9d892ae3a1232f3adce55203efea" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_agent::AbstractAgent</scope><name>step</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

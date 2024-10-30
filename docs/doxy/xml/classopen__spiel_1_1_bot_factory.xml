@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_bot_factory" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>open_spiel::BotFactory</compoundname>
+    <includes refid="spiel__bots_8h" local="no">spiel_bots.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_factory_1a47bf74defac1968097920dc06d8d6734" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual open_spiel::BotFactory::~BotFactory</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BotFactory</name>
+        <qualifiedname>open_spiel::BotFactory::~BotFactory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="181" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_factory_1a9ad20fc11636edf35f34c0ac42bc9b70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::BotFactory::CanPlayGame</definition>
+        <argsstring>(const Game &amp;game, Player player_id) const =0</argsstring>
+        <name>CanPlayGame</name>
+        <qualifiedname>open_spiel::BotFactory::CanPlayGame</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>game</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="184" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_bot_factory_1ab896d5a22861a891a1410118854b4577" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_bot" kindref="compound">Bot</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; Bot &gt; open_spiel::BotFactory::Create</definition>
+        <argsstring>(std::shared_ptr&lt; const Game &gt; game, Player player_id, const GameParameters &amp;bot_params) const =0</argsstring>
+        <name>Create</name>
+        <qualifiedname>open_spiel::BotFactory::Create</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+          <declname>game</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;</type>
+          <declname>bot_params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_bots.h" line="188" column="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::BotFactory</label>
+        <link refid="classopen__spiel_1_1_bot_factory"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel_bots.h" line="179" column="1" bodyfile="open_spiel/spiel_bots.h" bodystart="179" bodyend="191"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_bot_factory_1a9ad20fc11636edf35f34c0ac42bc9b70" prot="public" virt="pure-virtual"><scope>open_spiel::BotFactory</scope><name>CanPlayGame</name></member>
+      <member refid="classopen__spiel_1_1_bot_factory_1ab896d5a22861a891a1410118854b4577" prot="public" virt="pure-virtual"><scope>open_spiel::BotFactory</scope><name>Create</name></member>
+      <member refid="classopen__spiel_1_1_bot_factory_1a47bf74defac1968097920dc06d8d6734" prot="public" virt="virtual"><scope>open_spiel::BotFactory</scope><name>~BotFactory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

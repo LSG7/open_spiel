@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="_deep_nash_8md" kind="file" language="Markdown">
+    <compoundname>DeepNash.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">*<sp/>딥내쉬는<sp/>3가지로<sp/>이루어짐</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>R-Nad<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>fine-tuning<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>test-time<sp/>improvement<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>R-Nad<sp/>는<sp/>3가지로<sp/>이루어져서<sp/>iteration<sp/>하며<sp/>fixed<sp/>point(Nash<sp/>E<sp/>지점)<sp/>까지<sp/>반복</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Reward<sp/>trasformation<sp/>(보상값을<sp/>강화)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>dynamic<sp/>step<sp/>(한<sp/>지점으로<sp/>수렴화)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>정책값<sp/>업데이트</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>선택가능<sp/>행동은<sp/>이동범위+공격범위<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Observation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>1.<sp/>유닛<sp/>마다<sp/>2<sp/>Action</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>2.<sp/>전장<sp/>테이블<sp/>크기<sp/>만큼<sp/>obs<sp/>tensor<sp/>크기가<sp/>커진다.<sp/>이것은<sp/>문제다.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>1.<sp/>(<sp/>obs<sp/>크기<sp/>=<sp/>전장<sp/>크기<sp/>)<sp/>로<sp/>할<sp/>것이냐<sp/>?</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>이러면<sp/>obs<sp/>크기가<sp/>엄청<sp/>커진다.<sp/></highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/games/SG/DeepNash.md"/>
+  </compounddef>
+</doxygen>

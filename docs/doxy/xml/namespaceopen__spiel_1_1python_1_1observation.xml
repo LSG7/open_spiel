@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceopen__spiel_1_1python_1_1observation" kind="namespace" language="Python">
+    <compoundname>open_spiel::python::observation</compoundname>
+    <innerclass refid="classopen__spiel_1_1python_1_1observation_1_1___observation" prot="protected">open_spiel::python::observation::_Observation</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1observation_1_1_i_i_g_observer_for_public_info_game" prot="public">open_spiel::python::observation::IIGObserverForPublicInfoGame</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceopen__spiel_1_1python_1_1observation_1a7b6e02b3c1b454cd40e079500a33b4d1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel::python::observation.INFO_STATE_OBS_TYPE</definition>
+        <argsstring></argsstring>
+        <name>INFO_STATE_OBS_TYPE</name>
+        <qualifiedname>open_spiel.python.observation.INFO_STATE_OBS_TYPE</qualifiedname>
+        <initializer>=  pyspiel.IIGObservationType(perfect_recall=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/observation.py" line="60" column="1" bodyfile="open_spiel/python/observation.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1observation_1aa20b3ed1cdd56044326e86eb798cbbc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.observation.make_observation</definition>
+        <argsstring>(game, imperfect_information_observation_type=None, params=None)</argsstring>
+        <name>make_observation</name>
+        <qualifiedname>open_spiel.python.observation.make_observation</qualifiedname>
+        <param>
+          <type>game</type>
+          <defname>game</defname>
+        </param>
+        <param>
+          <type>imperfect_information_observation_type</type>
+          <defname>imperfect_information_observation_type</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>params</type>
+          <defname>params</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns an _Observation instance if the imperfect_information_observation_type is supported, otherwise None.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/observation.py" line="94" column="1" bodyfile="open_spiel/python/observation.py" bodystart="98" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>An observation of a game.
+
+This is intended to be the main way to get observations of states in Python.
+The usage pattern is as follows:
+
+0. Create the game we will be playing
+1. Create each kind of observation required, using `make_observation`
+2. Every time a new observation is required, call:
+      `observation.set_from(state, player)`
+   The tensor contained in the Observation class will be updated with an
+   observation of the supplied state. This tensor is updated in-place, so if
+   you wish to retain it, you must make a copy.
+
+The following options are available when creating an Observation:
+ - perfect_recall: if true, each observation must allow the observing player to
+   reconstruct their history of actions and observations.
+ - public_info: if true, the observation should include public information
+ - private_info: specifies for which players private information should be
+   included - all players, the observing player, or no players
+ - params: game-specific parameters for observations
+
+We ultimately aim to have all games support all combinations of these arguments.
+However, initially many games will only support the combinations corresponding
+to ObservationTensor and InformationStateTensor:
+ - ObservationTensor: perfect_recall=False, public_info=True,
+   private_info=SinglePlayer
+ - InformationStateTensor: perfect_recall=True, public_info=True,
+   private_info=SinglePlayer
+
+Three formats of observation are supported:
+a. 1-D numpy array, accessed by `observation.tensor`
+b. Dict of numpy arrays, accessed by `observation.dict`. These are pieces of the
+   1-D array, reshaped. The np.array objects refer to the same memory as the
+   1-D array (no copying!).
+c. String, hopefully human-readable (primarily for debugging purposes)
+
+For usage examples, see `observation_test.py`.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="open_spiel/python/observation.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

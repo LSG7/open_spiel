@@ -1,0 +1,1540 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_state" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>open_spiel::State</compoundname>
+    <derivedcompoundref refid="classopen__spiel_1_1_sim_move_state" prot="public" virt="non-virtual">open_spiel::SimMoveState</derivedcompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1base_t_1_1base_t_state" prot="public" virt="non-virtual">open_spiel::baseT::baseTState</derivedcompoundref>
+    <includes refid="spiel_8h" local="no">spiel.h</includes>
+    <innerclass refid="structopen__spiel_1_1_state_1_1_player_action" prot="public">open_spiel::State::PlayerAction</innerclass>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" prot="protected" static="no" mutable="no">
+        <type>const std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+        <definition>const std::shared_ptr&lt;const Game&gt; open_spiel::State::game_</definition>
+        <argsstring></argsstring>
+        <name>game_</name>
+        <qualifiedname>open_spiel::State::game_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="728" column="25" bodyfile="open_spiel/spiel.h" bodystart="728" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_state_1a7fff989fb01a5d93e849ed6fe406cc3f" compoundref="spiel_8h" startline="602" endline="602">GetGame</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" compoundref="spiel_8cc" startline="789" endline="800">InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a9753ec678915734fe38f4e86e3309894" compoundref="spiel_8cc" startline="802" endline="807">InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1ac024b6c48d8b99a2004532362484efe3" compoundref="spiel_8cc" startline="387" endline="393">LegalActionsMask</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" compoundref="spiel_8cc" startline="770" endline="781">ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1adc0a7f028252d613b8a4ccb6c6b0de15" compoundref="spiel_8cc" startline="783" endline="787">ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a1a6bf403d6d8bcc41b36634a7fa8b1eb" compoundref="spiel_8cc" startline="313" endline="327">Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_state_1a3a374a3e9cbc2993efec3ae375fb1e93" prot="protected" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int open_spiel::State::num_distinct_actions_</definition>
+        <argsstring></argsstring>
+        <name>num_distinct_actions_</name>
+        <qualifiedname>open_spiel::State::num_distinct_actions_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="729" column="13" bodyfile="open_spiel/spiel.h" bodystart="729" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_state_1ac024b6c48d8b99a2004532362484efe3" compoundref="spiel_8cc" startline="387" endline="393">LegalActionsMask</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1ada4c2b6afc305febbe7e52bc569e005e" compoundref="spiel_8h" startline="596" endline="596">NumDistinctActions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" prot="protected" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int open_spiel::State::num_players_</definition>
+        <argsstring></argsstring>
+        <name>num_players_</name>
+        <qualifiedname>open_spiel::State::num_players_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="730" column="13" bodyfile="open_spiel/spiel.h" bodystart="730" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab116dedd343ede7e4f7d6b15547c857b" compoundref="base_t_8cc" startline="821" endline="840">open_spiel::baseT::baseTState::cells_to_obs</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" compoundref="base_t_8cc" startline="700" endline="709">open_spiel::baseT::baseTState::deploy_unit</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" compoundref="simultaneous__move__game_8cc" startline="28" endline="45">open_spiel::SimMoveState::FlatJointActionToActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" compoundref="simultaneous__move__game_8cc" startline="62" endline="76">open_spiel::SimMoveState::FlatJointActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a5643c5f4b1e20c36a72c85b1e85e5de9" compoundref="normal__form__game_8h" startline="47" endline="58">open_spiel::NFGState::InformationStateString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a4e2d82731a467bd83e5046945f7971d4" compoundref="normal__form__game_8h" startline="83" endline="93">open_spiel::NFGState::InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" compoundref="spiel_8cc" startline="789" endline="800">InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">open_spiel::baseT::baseTState::init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1kbg_1_1kbg_state_1a0633ab17163575de9251176dfb42b738" compoundref="ki__bo__gung_8cc" startline="77" endline="104">open_spiel::kbg::kbgState::init_map</referencedby>
+        <referencedby refid="classopen__spiel_1_1kbg_1_1kbg_state_1a2922ebb3a8ff3e500683fc5eb8c9b03d" compoundref="ki__bo__gung_8cc" startline="110" endline="134">open_spiel::kbg::kbgState::init_unit</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a43f01fe8bdbb6292407feb51bc535d4f" compoundref="spiel_8h" startline="599" endline="599">NumPlayers</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a8b07a721ec586c32138b105423639f58" compoundref="normal__form__game_8h" startline="60" endline="70">open_spiel::NFGState::ObservationString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a210018fdbd48678de3de3d882c2de701" compoundref="normal__form__game_8h" startline="95" endline="105">open_spiel::NFGState::ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" compoundref="spiel_8cc" startline="770" endline="781">ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" compoundref="spiel_8h" startline="337" endline="344">Rewards</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" compoundref="base_t_8cc" startline="729" endline="769">open_spiel::baseT::baseTState::set_cell_and_obs</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a57a36566c44ce5ee6d99bdcb0a2d84d5" compoundref="base_t_8cc" startline="195" endline="201">open_spiel::baseT::baseTState::SetNextPlayer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structopen__spiel_1_1_state_1_1_player_action" kindref="compound">PlayerAction</ref> &gt;</type>
+        <definition>std::vector&lt;PlayerAction&gt; open_spiel::State::history_</definition>
+        <argsstring></argsstring>
+        <name>history_</name>
+        <qualifiedname>open_spiel::State::history_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="733" column="15" bodyfile="open_spiel/spiel.h" bodystart="733" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3" compoundref="simultaneous__move__game_8h" startline="66" endline="74">open_spiel::SimMoveState::ApplyAction</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" compoundref="spiel_8cc" startline="338" endline="348">ApplyAction</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" compoundref="spiel_8cc" startline="362" endline="371">ApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a61d84cb66edc9a12fa6d6f46873411d5" compoundref="spiel_8h" startline="416" endline="416">FullHistory</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1ad128b0fe37fa9439328ad27a7ba11cbd" compoundref="spiel_8h" startline="408" endline="413">History</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1acb22b26b3e8134b4380ff329562cf4b2" compoundref="spiel_8h" startline="431" endline="431">IsInitialState</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_state_1a127ada084056b47d96839440dbbe3a2f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::State::move_number_</definition>
+        <argsstring></argsstring>
+        <name>move_number_</name>
+        <qualifiedname>open_spiel::State::move_number_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="734" column="7" bodyfile="open_spiel/spiel.h" bodystart="734" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" compoundref="spiel_8cc" startline="338" endline="348">ApplyAction</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" compoundref="spiel_8cc" startline="362" endline="371">ApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1aea56c32f2cbd62b2a6a280010ddd54ee" compoundref="spiel_8h" startline="428" endline="428">MoveNumber</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1abef057180744ea28a0cd85289ce0761e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual open_spiel::State::~State</definition>
+        <argsstring>()=default</argsstring>
+        <name>~State</name>
+        <qualifiedname>open_spiel::State::~State</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="212" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a246bd5cf1da14d3ab69d479aea0edc03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::State::State</definition>
+        <argsstring>(std::shared_ptr&lt; const Game &gt; game)</argsstring>
+        <name>State</name>
+        <qualifiedname>open_spiel::State::State</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+          <declname>game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="222" column="3" bodyfile="open_spiel/spiel.cc" bodystart="258" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a4c77fe7bf4738cb8bd3bbd6dfadddf9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::State::State</definition>
+        <argsstring>(const State &amp;)=default</argsstring>
+        <name>State</name>
+        <qualifiedname>open_spiel::State::State</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="223" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+        <definition>virtual Player open_spiel::State::CurrentPlayer</definition>
+        <argsstring>() const =0</argsstring>
+        <name>CurrentPlayer</name>
+        <qualifiedname>open_spiel::State::CurrentPlayer</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2">CurrentPlayer</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_n_f_g_state_1aee8769e63a7b5604e86c2e98faf51992">CurrentPlayer</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="228" column="18"/>
+        <referencedby refid="classopen__spiel_1_1_state_1a0467f66e4c157eab1aa4140bcb856e3f" compoundref="spiel_8h" startline="295" endline="297">ActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3" compoundref="simultaneous__move__game_8h" startline="66" endline="74">open_spiel::SimMoveState::ApplyAction</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" compoundref="spiel_8cc" startline="338" endline="348">ApplyAction</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" compoundref="spiel_8cc" startline="350" endline="360">ApplyActionWithLegalityCheck</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1aaf3da3c4030a5563d84ec198f089cd87" compoundref="spiel_8h" startline="673" endline="675">GetHistoriesConsistentWithInfostate</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" compoundref="spiel_8cc" startline="118" endline="128">GetType</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a75f81af7266685a7412960554e3d792e" compoundref="spiel_8h" startline="484" endline="486">InformationStateString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" compoundref="spiel_8h" startline="510" endline="512">InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" compoundref="spiel_8h" startline="371" endline="373">IsChanceNode</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a9fd53f8e7abb3d779b1a3a135ec306f5" compoundref="spiel_8h" startline="378" endline="380">IsMeanFieldNode</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" compoundref="spiel_8h" startline="393" endline="397">IsPlayerActing</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a53434c13daf176733c44502734acf320" compoundref="spiel_8h" startline="383" endline="383">IsPlayerNode</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" compoundref="spiel_8h" startline="388" endline="390">IsSimultaneousNode</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">open_spiel::SimMoveState::LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1" compoundref="spiel_8h" startline="255" endline="261">LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a4f481e63a08d15a060bc35d8ad6e448c" compoundref="spiel_8h" startline="285" endline="287">LegalActionsMask</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" compoundref="spiel_8h" startline="543" endline="545">ObservationString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" compoundref="spiel_8h" startline="557" endline="559">ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1abd0bac25b0d9ced7f5f1009fd56ec1ae" compoundref="spiel_8h" startline="304" endline="306">StringToAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::State::ApplyAction</definition>
+        <argsstring>(Action action_id)</argsstring>
+        <name>ApplyAction</name>
+        <qualifiedname>open_spiel::State::ApplyAction</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3">ApplyAction</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="240" column="16" bodyfile="open_spiel/spiel.cc" bodystart="338" bodyend="348"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1af2b72b90cb27986377e1867bb713f07d" compoundref="spiel_8h" startline="718" endline="720">DoApplyAction</references>
+        <references refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" compoundref="spiel_8h" startline="733">history_</references>
+        <references refid="namespaceopen__spiel_1adbc825960a0651d53f5d6423343fafae" compoundref="spiel__globals_8h" startline="40">open_spiel::kInvalidAction</references>
+        <references refid="classopen__spiel_1_1_state_1a127ada084056b47d96839440dbbe3a2f" compoundref="spiel_8h" startline="734">move_number_</references>
+        <references refid="spiel__utils_8h_1a32ffad2dd43a12e9d7443bc75f456bbb" compoundref="spiel__utils_8h" startline="260">SPIEL_CHECK_NE</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" compoundref="spiel_8cc" startline="350" endline="360">ApplyActionWithLegalityCheck</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::State::ApplyActionWithLegalityCheck</definition>
+        <argsstring>(Action action_id)</argsstring>
+        <name>ApplyActionWithLegalityCheck</name>
+        <qualifiedname>open_spiel::State::ApplyActionWithLegalityCheck</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="243" column="16" bodyfile="open_spiel/spiel.cc" bodystart="350" bodyend="360"/>
+        <references refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477">ActionToString</references>
+        <references refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" compoundref="spiel_8cc" startline="338" endline="348">ApplyAction</references>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df">LegalActions</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>virtual std::vector&lt; Action &gt; open_spiel::State::LegalActions</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>LegalActions</name>
+        <qualifiedname>open_spiel::State::LegalActions</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c">LegalActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_sim_move_state_1a8e2a133c55b0e52662aa547b57a30ada">LegalActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a49efa39f7897a573c57c2c253eb78ae7">LegalActions</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="255" column="23" bodyfile="open_spiel/spiel.h" bodystart="255" bodyend="261"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" compoundref="spiel_8h" startline="371" endline="373">IsChanceNode</references>
+        <references refid="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c">IsTerminal</references>
+        <references refid="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df">LegalActions</references>
+        <references refid="classopen__spiel_1_1_state_1a610b46ccda2eefd984a3716a5219f78a" compoundref="spiel_8h" startline="622" endline="630">LegalChanceOutcomes</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>virtual std::vector&lt; Action &gt; open_spiel::State::LegalActions</definition>
+        <argsstring>() const =0</argsstring>
+        <name>LegalActions</name>
+        <qualifiedname>open_spiel::State::LegalActions</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae1fcc7dea2a058cd9659540a3e183cd0">LegalActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943">LegalActions</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="277" column="23"/>
+        <referencedby refid="classopen__spiel_1_1_state_1a479150baad280f0f236d2cced41ddc13" compoundref="spiel_8cc" startline="373" endline="385">ApplyActionsWithLegalityChecks</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" compoundref="spiel_8cc" startline="350" endline="360">ApplyActionWithLegalityCheck</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1" compoundref="spiel_8h" startline="255" endline="261">LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1ac024b6c48d8b99a2004532362484efe3" compoundref="spiel_8cc" startline="387" endline="393">LegalActionsMask</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1acbd1f66c9496f350693594ad38fc7907" compoundref="spiel_8cc" startline="329" endline="336">StringToAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ac024b6c48d8b99a2004532362484efe3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; open_spiel::State::LegalActionsMask</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>LegalActionsMask</name>
+        <qualifiedname>open_spiel::State::LegalActionsMask</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="282" column="15" bodyfile="open_spiel/spiel.cc" bodystart="387" bodyend="393"/>
+        <references refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" compoundref="spiel_8h" startline="728">game_</references>
+        <references refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a4519a0153efaba2f86929f7e018082fb" compoundref="spiel__globals_8h" startline="28">open_spiel::kChancePlayerId</references>
+        <references refid="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df">LegalActions</references>
+        <references refid="classopen__spiel_1_1_state_1a3a374a3e9cbc2993efec3ae375fb1e93" compoundref="spiel_8h" startline="729">num_distinct_actions_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a4f481e63a08d15a060bc35d8ad6e448c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; open_spiel::State::LegalActionsMask</definition>
+        <argsstring>() const</argsstring>
+        <name>LegalActionsMask</name>
+        <qualifiedname>open_spiel::State::LegalActionsMask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="285" column="15" bodyfile="open_spiel/spiel.h" bodystart="285" bodyend="287"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1a4f481e63a08d15a060bc35d8ad6e448c" compoundref="spiel_8h" startline="285" endline="287">LegalActionsMask</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a4f481e63a08d15a060bc35d8ad6e448c" compoundref="spiel_8h" startline="285" endline="287">LegalActionsMask</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string open_spiel::State::ActionToString</definition>
+        <argsstring>(Player player, Action action_id) const =0</argsstring>
+        <name>ActionToString</name>
+        <qualifiedname>open_spiel::State::ActionToString</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae36794c0d6337e0f5e4cd5dc10788e61">ActionToString</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581">ActionToString</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a10bc3e5563dccfafd58163874274d7f3">ActionToString</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="294" column="23"/>
+        <referencedby refid="classopen__spiel_1_1_state_1a0467f66e4c157eab1aa4140bcb856e3f" compoundref="spiel_8h" startline="295" endline="297">ActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a479150baad280f0f236d2cced41ddc13" compoundref="spiel_8cc" startline="373" endline="385">ApplyActionsWithLegalityChecks</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" compoundref="spiel_8cc" startline="350" endline="360">ApplyActionWithLegalityCheck</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" compoundref="simultaneous__move__game_8cc" startline="62" endline="76">open_spiel::SimMoveState::FlatJointActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1acbd1f66c9496f350693594ad38fc7907" compoundref="spiel_8cc" startline="329" endline="336">StringToAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a0467f66e4c157eab1aa4140bcb856e3f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::State::ActionToString</definition>
+        <argsstring>(Action action_id) const</argsstring>
+        <name>ActionToString</name>
+        <qualifiedname>open_spiel::State::ActionToString</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="295" column="15" bodyfile="open_spiel/spiel.h" bodystart="295" bodyend="297"/>
+        <references refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477">ActionToString</references>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1acbd1f66c9496f350693594ad38fc7907" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+        <definition>Action open_spiel::State::StringToAction</definition>
+        <argsstring>(Player player, const std::string &amp;action_str) const</argsstring>
+        <name>StringToAction</name>
+        <qualifiedname>open_spiel::State::StringToAction</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>action_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="302" column="18" bodyfile="open_spiel/spiel.cc" bodystart="329" bodyend="336"/>
+        <references refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477">ActionToString</references>
+        <references refid="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df">LegalActions</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_state_1abd0bac25b0d9ced7f5f1009fd56ec1ae" compoundref="spiel_8h" startline="304" endline="306">StringToAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1abd0bac25b0d9ced7f5f1009fd56ec1ae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+        <definition>Action open_spiel::State::StringToAction</definition>
+        <argsstring>(const std::string &amp;action_str) const</argsstring>
+        <name>StringToAction</name>
+        <qualifiedname>open_spiel::State::StringToAction</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>action_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="304" column="10" bodyfile="open_spiel/spiel.h" bodystart="304" bodyend="306"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1acbd1f66c9496f350693594ad38fc7907" compoundref="spiel_8cc" startline="329" endline="336">StringToAction</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a0c1bce556da5c9d7314152a2e764198e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string open_spiel::State::ToString</definition>
+        <argsstring>() const =0</argsstring>
+        <name>ToString</name>
+        <qualifiedname>open_spiel::State::ToString</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a3faa248c30ac5235797d881509b9c4b4">ToString</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7">ToString</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_n_f_g_state_1a62b7e3202e5bbf3fb85b77f077ddb9d9">ToString</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a50a825f9876434bd13c6462dd745d1c4">ToString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="310" column="23"/>
+        <referencedby refid="classopen__spiel_1_1_state_1a3e336272587c1c62a8455412b7105ebf" compoundref="spiel_8h" startline="318" endline="320">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a3e336272587c1c62a8455412b7105ebf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::State::operator==</definition>
+        <argsstring>(const State &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>open_spiel::State::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="318" column="16" bodyfile="open_spiel/spiel.h" bodystart="318" bodyend="320"/>
+        <references refid="classopen__spiel_1_1_state_1a0c1bce556da5c9d7314152a2e764198e">ToString</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::State::IsTerminal</definition>
+        <argsstring>() const =0</argsstring>
+        <name>IsTerminal</name>
+        <qualifiedname>open_spiel::State::IsTerminal</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1acf7403b244fc8bf4826d115ee4714039">IsTerminal</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1ab3750fb0ade1544fe54bae8567586f0c">IsTerminal</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a792c9615e12803d3acf51767a7edb610">IsTerminal</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="323" column="16"/>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1aee8769e63a7b5604e86c2e98faf51992" compoundref="normal__form__game_8h" startline="42" endline="44">open_spiel::NFGState::CurrentPlayer</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" compoundref="spiel_8cc" startline="118" endline="128">GetType</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a5643c5f4b1e20c36a72c85b1e85e5de9" compoundref="normal__form__game_8h" startline="47" endline="58">open_spiel::NFGState::InformationStateString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a4e2d82731a467bd83e5046945f7971d4" compoundref="normal__form__game_8h" startline="83" endline="93">open_spiel::NFGState::InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">open_spiel::SimMoveState::LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1" compoundref="spiel_8h" startline="255" endline="261">LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a8b07a721ec586c32138b105423639f58" compoundref="normal__form__game_8h" startline="60" endline="70">open_spiel::NFGState::ObservationString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a210018fdbd48678de3de3d882c2de701" compoundref="normal__form__game_8h" startline="95" endline="105">open_spiel::NFGState::ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" compoundref="spiel_8h" startline="337" endline="344">Rewards</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a62b7e3202e5bbf3fb85b77f077ddb9d9" compoundref="normal__form__game_8h" startline="72" endline="81">open_spiel::NFGState::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>virtual std::vector&lt; double &gt; open_spiel::State::Rewards</definition>
+        <argsstring>() const</argsstring>
+        <name>Rewards</name>
+        <qualifiedname>open_spiel::State::Rewards</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="337" column="23" bodyfile="open_spiel/spiel.h" bodystart="337" bodyend="344"/>
+        <references refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" compoundref="spiel_8h" startline="371" endline="373">IsChanceNode</references>
+        <references refid="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c">IsTerminal</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">num_players_</references>
+        <references refid="classopen__spiel_1_1_state_1a0de4bf25d3763fd7ad920fb4eced5219">Returns</references>
+        <references refid="spiel__utils_8h_1aff340fc0f81ce83d807cc1aa674db999" compoundref="spiel__utils_8h" startline="297" endline="300">SPIEL_CHECK_FALSE</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a510f85123de13949d34186755753e742" compoundref="spiel_8h" startline="353" endline="357">PlayerReward</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a0de4bf25d3763fd7ad920fb4eced5219" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>virtual std::vector&lt; double &gt; open_spiel::State::Returns</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Returns</name>
+        <qualifiedname>open_spiel::State::Returns</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a48c5439902ef0239be7510b9bc56bf59">Returns</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1afefd9e96b863dcd4907d1a86135dbb43">Returns</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1afa49d79c58c993523430742469168dbb">Returns</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="349" column="23"/>
+        <referencedby refid="classopen__spiel_1_1_state_1ab32ea9872b81db0383b9d7206d1ae3f9" compoundref="spiel_8h" startline="361" endline="366">PlayerReturn</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" compoundref="spiel_8h" startline="337" endline="344">Rewards</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a62b7e3202e5bbf3fb85b77f077ddb9d9" compoundref="normal__form__game_8h" startline="72" endline="81">open_spiel::NFGState::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a510f85123de13949d34186755753e742" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double open_spiel::State::PlayerReward</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>PlayerReward</name>
+        <qualifiedname>open_spiel::State::PlayerReward</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="353" column="18" bodyfile="open_spiel/spiel.h" bodystart="353" bodyend="357"/>
+        <references refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" compoundref="spiel_8h" startline="337" endline="344">Rewards</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ab32ea9872b81db0383b9d7206d1ae3f9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double open_spiel::State::PlayerReturn</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>PlayerReturn</name>
+        <qualifiedname>open_spiel::State::PlayerReturn</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="361" column="18" bodyfile="open_spiel/spiel.h" bodystart="361" bodyend="366"/>
+        <references refid="classopen__spiel_1_1_state_1a0de4bf25d3763fd7ad920fb4eced5219">Returns</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::State::IsChanceNode</definition>
+        <argsstring>() const</argsstring>
+        <name>IsChanceNode</name>
+        <qualifiedname>open_spiel::State::IsChanceNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="371" column="16" bodyfile="open_spiel/spiel.h" bodystart="371" bodyend="373"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a4519a0153efaba2f86929f7e018082fb" compoundref="spiel__globals_8h" startline="28">open_spiel::kChancePlayerId</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" compoundref="spiel_8cc" startline="118" endline="128">GetType</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">open_spiel::SimMoveState::LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1" compoundref="spiel_8h" startline="255" endline="261">LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" compoundref="spiel_8h" startline="337" endline="344">Rewards</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a9fd53f8e7abb3d779b1a3a135ec306f5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::State::IsMeanFieldNode</definition>
+        <argsstring>() const</argsstring>
+        <name>IsMeanFieldNode</name>
+        <qualifiedname>open_spiel::State::IsMeanFieldNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="378" column="16" bodyfile="open_spiel/spiel.h" bodystart="378" bodyend="380"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a53f92239d341173f9b7a13d6eb2776f9" compoundref="spiel__globals_8h" startline="36">open_spiel::kMeanFieldPlayerId</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a53434c13daf176733c44502734acf320" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool open_spiel::State::IsPlayerNode</definition>
+        <argsstring>() const</argsstring>
+        <name>IsPlayerNode</name>
+        <qualifiedname>open_spiel::State::IsPlayerNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="383" column="16" bodyfile="open_spiel/spiel.h" bodystart="383" bodyend="383"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::State::IsSimultaneousNode</definition>
+        <argsstring>() const</argsstring>
+        <name>IsSimultaneousNode</name>
+        <qualifiedname>open_spiel::State::IsSimultaneousNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="388" column="8" bodyfile="open_spiel/spiel.h" bodystart="388" bodyend="390"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a98b448895a60295bcb57104abae3e302" compoundref="spiel__globals_8h" startline="30">open_spiel::kSimultaneousPlayerId</references>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3" compoundref="simultaneous__move__game_8h" startline="66" endline="74">open_spiel::SimMoveState::ApplyAction</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" compoundref="spiel_8h" startline="393" endline="397">IsPlayerActing</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">open_spiel::SimMoveState::LegalActions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::State::IsPlayerActing</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>IsPlayerActing</name>
+        <qualifiedname>open_spiel::State::IsPlayerActing</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="393" column="8" bodyfile="open_spiel/spiel.h" bodystart="393" bodyend="397"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" compoundref="spiel_8h" startline="388" endline="390">IsSimultaneousNode</references>
+        <references refid="classopen__spiel_1_1_state_1a43f01fe8bdbb6292407feb51bc535d4f" compoundref="spiel_8h" startline="599" endline="599">NumPlayers</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ad128b0fe37fa9439328ad27a7ba11cbd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>std::vector&lt; Action &gt; open_spiel::State::History</definition>
+        <argsstring>() const</argsstring>
+        <name>History</name>
+        <qualifiedname>open_spiel::State::History</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="408" column="15" bodyfile="open_spiel/spiel.h" bodystart="408" bodyend="413"/>
+        <references refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" compoundref="spiel_8h" startline="733">history_</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a148bf75c2afdad5489b684d2d7014aab" compoundref="spiel_8h" startline="421" endline="421">HistoryString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a1a6bf403d6d8bcc41b36634a7fa8b1eb" compoundref="spiel_8cc" startline="313" endline="327">Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a61d84cb66edc9a12fa6d6f46873411d5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="structopen__spiel_1_1_state_1_1_player_action" kindref="compound">PlayerAction</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; PlayerAction &gt; &amp; open_spiel::State::FullHistory</definition>
+        <argsstring>() const</argsstring>
+        <name>FullHistory</name>
+        <qualifiedname>open_spiel::State::FullHistory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="416" column="21" bodyfile="open_spiel/spiel.h" bodystart="416" bodyend="416"/>
+        <references refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" compoundref="spiel_8h" startline="733">history_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a148bf75c2afdad5489b684d2d7014aab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::State::HistoryString</definition>
+        <argsstring>() const</argsstring>
+        <name>HistoryString</name>
+        <qualifiedname>open_spiel::State::HistoryString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="421" column="15" bodyfile="open_spiel/spiel.h" bodystart="421" bodyend="421"/>
+        <references refid="classopen__spiel_1_1_state_1ad128b0fe37fa9439328ad27a7ba11cbd" compoundref="spiel_8h" startline="408" endline="413">History</references>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a5643c5f4b1e20c36a72c85b1e85e5de9" compoundref="normal__form__game_8h" startline="47" endline="58">open_spiel::NFGState::InformationStateString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a8b07a721ec586c32138b105423639f58" compoundref="normal__form__game_8h" startline="60" endline="70">open_spiel::NFGState::ObservationString</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">open_spiel::matrix_game::MatrixState::ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_n_f_g_state_1a62b7e3202e5bbf3fb85b77f077ddb9d9" compoundref="normal__form__game_8h" startline="72" endline="81">open_spiel::NFGState::ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a50a825f9876434bd13c6462dd745d1c4" compoundref="tensor__game_8cc" startline="79" endline="88">open_spiel::tensor_game::TensorState::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1aea56c32f2cbd62b2a6a280010ddd54ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::State::MoveNumber</definition>
+        <argsstring>() const</argsstring>
+        <name>MoveNumber</name>
+        <qualifiedname>open_spiel::State::MoveNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="428" column="7" bodyfile="open_spiel/spiel.h" bodystart="428" bodyend="428"/>
+        <references refid="classopen__spiel_1_1_state_1a127ada084056b47d96839440dbbe3a2f" compoundref="spiel_8h" startline="734">move_number_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1acb22b26b3e8134b4380ff329562cf4b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::State::IsInitialState</definition>
+        <argsstring>() const</argsstring>
+        <name>IsInitialState</name>
+        <qualifiedname>open_spiel::State::IsInitialState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="431" column="8" bodyfile="open_spiel/spiel.h" bodystart="431" bodyend="431"/>
+        <references refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" compoundref="spiel_8h" startline="733">history_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a31bb588b60127656dbc189c9886e2155" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string open_spiel::State::InformationStateString</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>InformationStateString</name>
+        <qualifiedname>open_spiel::State::InformationStateString</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1_n_f_g_state_1a5643c5f4b1e20c36a72c85b1e85e5de9">InformationStateString</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="481" column="23" bodyfile="open_spiel/spiel.h" bodystart="481" bodyend="483"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a75f81af7266685a7412960554e3d792e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::State::InformationStateString</definition>
+        <argsstring>() const</argsstring>
+        <name>InformationStateString</name>
+        <qualifiedname>open_spiel::State::InformationStateString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="484" column="15" bodyfile="open_spiel/spiel.h" bodystart="484" bodyend="486"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1a75f81af7266685a7412960554e3d792e" compoundref="spiel_8h" startline="484" endline="486">InformationStateString</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a75f81af7266685a7412960554e3d792e" compoundref="spiel_8h" startline="484" endline="486">InformationStateString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ae3c75cd43d2bdc470399171d25bf3f1f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::State::InformationStateTensor</definition>
+        <argsstring>(Player player, absl::Span&lt; float &gt; values) const</argsstring>
+        <name>InformationStateTensor</name>
+        <qualifiedname>open_spiel::State::InformationStateTensor</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1_n_f_g_state_1a4e2d82731a467bd83e5046945f7971d4">InformationStateTensor</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>absl::Span&lt; float &gt;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="505" column="16" bodyfile="open_spiel/spiel.h" bodystart="505" bodyend="508"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; open_spiel::State::InformationStateTensor</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>InformationStateTensor</name>
+        <qualifiedname>open_spiel::State::InformationStateTensor</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="509" column="15" bodyfile="open_spiel/spiel.cc" bodystart="789" bodyend="800"/>
+        <references refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" compoundref="spiel_8h" startline="728">game_</references>
+        <references refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" compoundref="spiel_8h" startline="510" endline="512">InformationStateTensor</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">num_players_</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; open_spiel::State::InformationStateTensor</definition>
+        <argsstring>() const</argsstring>
+        <name>InformationStateTensor</name>
+        <qualifiedname>open_spiel::State::InformationStateTensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="510" column="15" bodyfile="open_spiel/spiel.h" bodystart="510" bodyend="512"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" compoundref="spiel_8h" startline="510" endline="512">InformationStateTensor</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" compoundref="spiel_8h" startline="510" endline="512">InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" compoundref="spiel_8cc" startline="789" endline="800">InformationStateTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a9753ec678915734fe38f4e86e3309894" compoundref="spiel_8cc" startline="802" endline="807">InformationStateTensor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a9753ec678915734fe38f4e86e3309894" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::State::InformationStateTensor</definition>
+        <argsstring>(Player player, std::vector&lt; float &gt; *values) const</argsstring>
+        <name>InformationStateTensor</name>
+        <qualifiedname>open_spiel::State::InformationStateTensor</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; *</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="513" column="16" bodyfile="open_spiel/spiel.cc" bodystart="802" bodyend="807"/>
+        <references refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" compoundref="spiel_8h" startline="728">game_</references>
+        <references refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" compoundref="spiel_8h" startline="510" endline="512">InformationStateTensor</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ad2bbdb6b0d9513ea5f9fc4d8d16a2f8e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string open_spiel::State::ObservationString</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>ObservationString</name>
+        <qualifiedname>open_spiel::State::ObservationString</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a26e6f5018d4f9c75a7bb8679a8623a87">ObservationString</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_n_f_g_state_1a8b07a721ec586c32138b105423639f58">ObservationString</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="540" column="23" bodyfile="open_spiel/spiel.h" bodystart="540" bodyend="542"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::State::ObservationString</definition>
+        <argsstring>() const</argsstring>
+        <name>ObservationString</name>
+        <qualifiedname>open_spiel::State::ObservationString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="543" column="15" bodyfile="open_spiel/spiel.h" bodystart="543" bodyend="545"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" compoundref="spiel_8h" startline="543" endline="545">ObservationString</references>
+        <referencedby refid="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" compoundref="spiel_8h" startline="543" endline="545">ObservationString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a0d367e1c9121ecbf6c0467f200fd4b96" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::State::ObservationTensor</definition>
+        <argsstring>(Player player, absl::Span&lt; float &gt; values) const</argsstring>
+        <name>ObservationTensor</name>
+        <qualifiedname>open_spiel::State::ObservationTensor</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a91a1c26ee2f1857cf0b3991fd2b348b0">ObservationTensor</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_n_f_g_state_1a210018fdbd48678de3de3d882c2de701">ObservationTensor</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>absl::Span&lt; float &gt;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="552" column="16" bodyfile="open_spiel/spiel.h" bodystart="552" bodyend="555"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; open_spiel::State::ObservationTensor</definition>
+        <argsstring>(Player player) const</argsstring>
+        <name>ObservationTensor</name>
+        <qualifiedname>open_spiel::State::ObservationTensor</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="556" column="15" bodyfile="open_spiel/spiel.cc" bodystart="770" bodyend="781"/>
+        <references refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" compoundref="spiel_8h" startline="728">game_</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">num_players_</references>
+        <references refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" compoundref="spiel_8h" startline="557" endline="559">ObservationTensor</references>
+        <references refid="spiel__utils_8h_1a5fa701f61bd5416434d72f3628e093b7" compoundref="spiel__utils_8h" startline="255">SPIEL_CHECK_GE</references>
+        <references refid="spiel__utils_8h_1ad9b10d8a52955f75371525c0f9f21b69" compoundref="spiel__utils_8h" startline="258">SPIEL_CHECK_LT</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt; float &gt; open_spiel::State::ObservationTensor</definition>
+        <argsstring>() const</argsstring>
+        <name>ObservationTensor</name>
+        <qualifiedname>open_spiel::State::ObservationTensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="557" column="15" bodyfile="open_spiel/spiel.h" bodystart="557" bodyend="559"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" compoundref="spiel_8h" startline="557" endline="559">ObservationTensor</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" compoundref="spiel_8h" startline="557" endline="559">ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" compoundref="spiel_8cc" startline="770" endline="781">ObservationTensor</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1adc0a7f028252d613b8a4ccb6c6b0de15" compoundref="spiel_8cc" startline="783" endline="787">ObservationTensor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1adc0a7f028252d613b8a4ccb6c6b0de15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::State::ObservationTensor</definition>
+        <argsstring>(Player player, std::vector&lt; float &gt; *values) const</argsstring>
+        <name>ObservationTensor</name>
+        <qualifiedname>open_spiel::State::ObservationTensor</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; *</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="560" column="8" bodyfile="open_spiel/spiel.cc" bodystart="783" bodyend="787"/>
+        <references refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" compoundref="spiel_8h" startline="728">game_</references>
+        <references refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" compoundref="spiel_8h" startline="557" endline="559">ObservationTensor</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a252ac372f002809f41be1003e50f9ca4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; State &gt; open_spiel::State::Clone</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Clone</name>
+        <qualifiedname>open_spiel::State::Clone</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a88c1baa247493f6ba6a6cd179f10b8e4">Clone</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a1554bebfbd31a4bd7c02994f2e2bb95d">Clone</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a7eade29f389bf2a20e0921adb88498e8">Clone</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="563" column="27"/>
+        <referencedby refid="classopen__spiel_1_1_state_1ae86a2e3710382c2aa7383abe21934825" compoundref="spiel_8h" startline="566" endline="570">Child</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ae86a2e3710382c2aa7383abe21934825" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; State &gt; open_spiel::State::Child</definition>
+        <argsstring>(Action action) const</argsstring>
+        <name>Child</name>
+        <qualifiedname>open_spiel::State::Child</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="566" column="19" bodyfile="open_spiel/spiel.h" bodystart="566" bodyend="570"/>
+        <references refid="classopen__spiel_1_1_state_1a252ac372f002809f41be1003e50f9ca4">Clone</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ab355df7c0595648cb657eb9aa1ab9a50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::State::UndoAction</definition>
+        <argsstring>(Player player, Action action)</argsstring>
+        <name>UndoAction</name>
+        <qualifiedname>open_spiel::State::UndoAction</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="577" column="16" bodyfile="open_spiel/spiel.h" bodystart="577" bodyend="579"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::State::ApplyActions</definition>
+        <argsstring>(const std::vector&lt; Action &gt; &amp;actions)</argsstring>
+        <name>ApplyActions</name>
+        <qualifiedname>open_spiel::State::ApplyActions</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="589" column="8" bodyfile="open_spiel/spiel.cc" bodystart="362" bodyend="371"/>
+        <references refid="classopen__spiel_1_1_state_1aec9dc1eda262140e878bd4dcfedca13b" compoundref="spiel_8h" startline="722" endline="724">DoApplyActions</references>
+        <references refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" compoundref="spiel_8h" startline="733">history_</references>
+        <references refid="classopen__spiel_1_1_state_1a127ada084056b47d96839440dbbe3a2f" compoundref="spiel_8h" startline="734">move_number_</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a479150baad280f0f236d2cced41ddc13" compoundref="spiel_8cc" startline="373" endline="385">ApplyActionsWithLegalityChecks</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a8ea7b3b80e5fc90c6058087342f180a1" compoundref="simultaneous__move__game_8cc" startline="47" endline="49">open_spiel::SimMoveState::ApplyFlatJointAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a479150baad280f0f236d2cced41ddc13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::State::ApplyActionsWithLegalityChecks</definition>
+        <argsstring>(const std::vector&lt; Action &gt; &amp;actions)</argsstring>
+        <name>ApplyActionsWithLegalityChecks</name>
+        <qualifiedname>open_spiel::State::ApplyActionsWithLegalityChecks</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="592" column="8" bodyfile="open_spiel/spiel.cc" bodystart="373" bodyend="385"/>
+        <references refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477">ActionToString</references>
+        <references refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" compoundref="spiel_8cc" startline="362" endline="371">ApplyActions</references>
+        <references refid="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df">LegalActions</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ada4c2b6afc305febbe7e52bc569e005e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::State::NumDistinctActions</definition>
+        <argsstring>() const</argsstring>
+        <name>NumDistinctActions</name>
+        <qualifiedname>open_spiel::State::NumDistinctActions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="596" column="7" bodyfile="open_spiel/spiel.h" bodystart="596" bodyend="596"/>
+        <references refid="classopen__spiel_1_1_state_1a3a374a3e9cbc2993efec3ae375fb1e93" compoundref="spiel_8h" startline="729">num_distinct_actions_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a43f01fe8bdbb6292407feb51bc535d4f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::State::NumPlayers</definition>
+        <argsstring>() const</argsstring>
+        <name>NumPlayers</name>
+        <qualifiedname>open_spiel::State::NumPlayers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="599" column="7" bodyfile="open_spiel/spiel.h" bodystart="599" bodyend="599"/>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">num_players_</references>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1ae8fa39ae3a1f038ab47a9a5d98ef66b2" compoundref="tensor__game_8h" startline="216" endline="223">open_spiel::tensor_game::TensorState::DoApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" compoundref="spiel_8h" startline="393" endline="397">IsPlayerActing</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1afa49d79c58c993523430742469168dbb" compoundref="tensor__game_8h" startline="201" endline="209">open_spiel::tensor_game::TensorState::Returns</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a7fff989fb01a5d93e849ed6fe406cc3f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const Game &gt; open_spiel::State::GetGame</definition>
+        <argsstring>() const</argsstring>
+        <name>GetGame</name>
+        <qualifiedname>open_spiel::State::GetGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="602" column="19" bodyfile="open_spiel/spiel.h" bodystart="602" bodyend="602"/>
+        <references refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" compoundref="spiel_8h" startline="728">game_</references>
+        <referencedby refid="classopen__spiel_1_1_state_1ac721b1cb2b8dccaec4350278fc5cb724" compoundref="spiel_8cc" startline="813" endline="820">MeanFieldPopulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1aa177f864d35f39d38aaa7551e21b9b3b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1ac4ea6d9d7193ac74f6f333b954e3810f" kindref="member">ActionsAndProbs</ref></type>
+        <definition>virtual ActionsAndProbs open_spiel::State::ChanceOutcomes</definition>
+        <argsstring>() const</argsstring>
+        <name>ChanceOutcomes</name>
+        <qualifiedname>open_spiel::State::ChanceOutcomes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="616" column="27" bodyfile="open_spiel/spiel.h" bodystart="616" bodyend="618"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a610b46ccda2eefd984a3716a5219f78a" compoundref="spiel_8h" startline="622" endline="630">LegalChanceOutcomes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a610b46ccda2eefd984a3716a5219f78a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>virtual std::vector&lt; Action &gt; open_spiel::State::LegalChanceOutcomes</definition>
+        <argsstring>() const</argsstring>
+        <name>LegalChanceOutcomes</name>
+        <qualifiedname>open_spiel::State::LegalChanceOutcomes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="622" column="23" bodyfile="open_spiel/spiel.h" bodystart="622" bodyend="630"/>
+        <references refid="classopen__spiel_1_1_state_1aa177f864d35f39d38aaa7551e21b9b3b" compoundref="spiel_8h" startline="616" endline="618">ChanceOutcomes</references>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">open_spiel::SimMoveState::LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1" compoundref="spiel_8h" startline="255" endline="261">LegalActions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceopen__spiel_1a236dc05d070fca4a27a4344aea799332" kindref="member">StateType</ref></type>
+        <definition>StateType open_spiel::State::GetType</definition>
+        <argsstring>() const</argsstring>
+        <name>GetType</name>
+        <qualifiedname>open_spiel::State::GetType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="634" column="13" bodyfile="open_spiel/spiel.cc" bodystart="118" bodyend="128"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" compoundref="spiel_8h" startline="371" endline="373">IsChanceNode</references>
+        <references refid="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c">IsTerminal</references>
+        <references refid="namespaceopen__spiel_1a236dc05d070fca4a27a4344aea799332add0bd69a737669b5dd8d6e357971e2dd">open_spiel::kChance</references>
+        <references refid="namespaceopen__spiel_1a236dc05d070fca4a27a4344aea799332a81d16d84af3281936e1b3a437b2d7385">open_spiel::kDecision</references>
+        <references refid="namespaceopen__spiel_1a236dc05d070fca4a27a4344aea799332a6a40bb1d52ea6251e5ce3b9e7d3577bd">open_spiel::kMeanField</references>
+        <references refid="namespaceopen__spiel_1a5677cc0bb3f0c3d54e59c5df948718d6a53f92239d341173f9b7a13d6eb2776f9" compoundref="spiel__globals_8h" startline="36">open_spiel::kMeanFieldPlayerId</references>
+        <references refid="namespaceopen__spiel_1a236dc05d070fca4a27a4344aea799332a217dd2f6ef26065693bb5043fce241ea">open_spiel::kTerminal</references>
+        <referencedby refid="classopen__spiel_1_1_state_1ac721b1cb2b8dccaec4350278fc5cb724" compoundref="spiel_8cc" startline="813" endline="820">MeanFieldPopulation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a1a6bf403d6d8bcc41b36634a7fa8b1eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::State::Serialize</definition>
+        <argsstring>() const</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>open_spiel::State::Serialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="645" column="23" bodyfile="open_spiel/spiel.cc" bodystart="313" bodyend="327"/>
+        <references refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" compoundref="spiel_8h" startline="728">game_</references>
+        <references refid="classopen__spiel_1_1_state_1ad128b0fe37fa9439328ad27a7ba11cbd" compoundref="spiel_8h" startline="408" endline="413">History</references>
+        <references refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba6a40bb1d52ea6251e5ce3b9e7d3577bd">open_spiel::GameType::kMeanField</references>
+        <references refid="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8ea39686673a19498ee90ed998e494c5bc7">open_spiel::GameType::kSampledStochastic</references>
+        <references refid="spiel__utils_8h_1a32ffad2dd43a12e9d7443bc75f456bbb" compoundref="spiel__utils_8h" startline="260">SPIEL_CHECK_NE</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a1bee92c295ffd0404712cd6004ab9df0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; State &gt; open_spiel::State::ResampleFromInfostate</definition>
+        <argsstring>(int player_id, std::function&lt; double()&gt; rng) const</argsstring>
+        <name>ResampleFromInfostate</name>
+        <qualifiedname>open_spiel::State::ResampleFromInfostate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>player_id</declname>
+        </param>
+        <param>
+          <type>std::function&lt; double()&gt;</type>
+          <declname>rng</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="657" column="27" bodyfile="open_spiel/spiel.h" bodystart="657" bodyend="660"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a0a85ab6f45efdcf19d00531f7c59a3e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="namespaceopen__spiel_1ad03e31d0186baba8fb60b04965c48e86" kindref="member">HistoryDistribution</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; HistoryDistribution &gt; open_spiel::State::GetHistoriesConsistentWithInfostate</definition>
+        <argsstring>(int player_id) const</argsstring>
+        <name>GetHistoriesConsistentWithInfostate</name>
+        <qualifiedname>open_spiel::State::GetHistoriesConsistentWithInfostate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>player_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="668" column="3" bodyfile="open_spiel/spiel.h" bodystart="668" bodyend="670"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1aaf3da3c4030a5563d84ec198f089cd87" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="namespaceopen__spiel_1ad03e31d0186baba8fb60b04965c48e86" kindref="member">HistoryDistribution</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt; HistoryDistribution &gt; open_spiel::State::GetHistoriesConsistentWithInfostate</definition>
+        <argsstring>() const</argsstring>
+        <name>GetHistoriesConsistentWithInfostate</name>
+        <qualifiedname>open_spiel::State::GetHistoriesConsistentWithInfostate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="673" column="3" bodyfile="open_spiel/spiel.h" bodystart="673" bodyend="675"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1aaf3da3c4030a5563d84ec198f089cd87" compoundref="spiel_8h" startline="673" endline="675">GetHistoriesConsistentWithInfostate</references>
+        <referencedby refid="classopen__spiel_1_1_state_1aaf3da3c4030a5563d84ec198f089cd87" compoundref="spiel_8h" startline="673" endline="675">GetHistoriesConsistentWithInfostate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1af8cc963b423ec2a56e6b5292a8d9f6df" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>virtual std::vector&lt; Action &gt; open_spiel::State::ActionsConsistentWithInformationFrom</definition>
+        <argsstring>(Action action) const</argsstring>
+        <name>ActionsConsistentWithInformationFrom</name>
+        <qualifiedname>open_spiel::State::ActionsConsistentWithInformationFrom</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="682" column="23" bodyfile="open_spiel/spiel.h" bodystart="682" bodyend="687"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a51e334578eba7ca7ce10518964021179" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>virtual std::vector&lt; std::string &gt; open_spiel::State::DistributionSupport</definition>
+        <argsstring>()</argsstring>
+        <name>DistributionSupport</name>
+        <qualifiedname>open_spiel::State::DistributionSupport</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="700" column="23" bodyfile="open_spiel/spiel.h" bodystart="700" bodyend="702"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1a0e4105f5d7a425bc9d7393ae56f1f854" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::State::UpdateDistribution</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;distribution)</argsstring>
+        <name>UpdateDistribution</name>
+        <qualifiedname>open_spiel::State::UpdateDistribution</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>distribution</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="707" column="16" bodyfile="open_spiel/spiel.h" bodystart="707" bodyend="709"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1ac721b1cb2b8dccaec4350278fc5cb724" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int open_spiel::State::MeanFieldPopulation</definition>
+        <argsstring>() const</argsstring>
+        <name>MeanFieldPopulation</name>
+        <qualifiedname>open_spiel::State::MeanFieldPopulation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="714" column="15" bodyfile="open_spiel/spiel.cc" bodystart="813" bodyend="820"/>
+        <references refid="classopen__spiel_1_1_state_1a7fff989fb01a5d93e849ed6fe406cc3f" compoundref="spiel_8h" startline="602" endline="602">GetGame</references>
+        <references refid="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" compoundref="spiel_8cc" startline="118" endline="128">GetType</references>
+        <references refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba6a40bb1d52ea6251e5ce3b9e7d3577bd">open_spiel::GameType::kMeanField</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1af2b72b90cb27986377e1867bb713f07d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::State::DoApplyAction</definition>
+        <argsstring>(Action action_id)</argsstring>
+        <name>DoApplyAction</name>
+        <qualifiedname>open_spiel::State::DoApplyAction</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1af654d270b4ab00648c37e9617fcc94a5">DoApplyAction</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="718" column="16" bodyfile="open_spiel/spiel.h" bodystart="718" bodyend="720"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3" compoundref="simultaneous__move__game_8h" startline="66" endline="74">open_spiel::SimMoveState::ApplyAction</referencedby>
+        <referencedby refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" compoundref="spiel_8cc" startline="338" endline="348">ApplyAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_state_1aec9dc1eda262140e878bd4dcfedca13b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::State::DoApplyActions</definition>
+        <argsstring>(const std::vector&lt; Action &gt; &amp;actions)</argsstring>
+        <name>DoApplyActions</name>
+        <qualifiedname>open_spiel::State::DoApplyActions</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd">DoApplyActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1_sim_move_state_1a944ce1b7f2b910580ac8691a8763337e">DoApplyActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1ae8fa39ae3a1f038ab47a9a5d98ef66b2">DoApplyActions</reimplementedby>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel.h" line="722" column="16" bodyfile="open_spiel/spiel.h" bodystart="722" bodyend="724"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" compoundref="spiel_8cc" startline="362" endline="371">ApplyActions</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>open_spiel::NFGState</label>
+        <link refid="classopen__spiel_1_1_n_f_g_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::SimMoveState</label>
+        <link refid="classopen__spiel_1_1_sim_move_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::State</label>
+        <link refid="classopen__spiel_1_1_state"/>
+      </node>
+      <node id="6">
+        <label>open_spiel::baseT::baseTState</label>
+        <link refid="classopen__spiel_1_1base_t_1_1base_t_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>open_spiel::kbg::kbgState</label>
+        <link refid="classopen__spiel_1_1kbg_1_1kbg_state"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel::matrix_game::MatrixState</label>
+        <link refid="classopen__spiel_1_1matrix__game_1_1_matrix_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>open_spiel::tensor_game::TensorState</label>
+        <link refid="classopen__spiel_1_1tensor__game_1_1_tensor_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::State</label>
+        <link refid="classopen__spiel_1_1_state"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel.h" line="210" column="1" bodyfile="open_spiel/spiel.h" bodystart="210" bodyend="735"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_state_1af8cc963b423ec2a56e6b5292a8d9f6df" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>ActionsConsistentWithInformationFrom</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477" prot="public" virt="pure-virtual"><scope>open_spiel::State</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0467f66e4c157eab1aa4140bcb856e3f" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>ApplyAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>ApplyActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a479150baad280f0f236d2cced41ddc13" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>ApplyActionsWithLegalityChecks</name></member>
+      <member refid="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>ApplyActionWithLegalityCheck</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa177f864d35f39d38aaa7551e21b9b3b" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>ChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_state_1ae86a2e3710382c2aa7383abe21934825" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>Child</name></member>
+      <member refid="classopen__spiel_1_1_state_1a252ac372f002809f41be1003e50f9ca4" prot="public" virt="pure-virtual"><scope>open_spiel::State</scope><name>Clone</name></member>
+      <member refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa" prot="public" virt="pure-virtual"><scope>open_spiel::State</scope><name>CurrentPlayer</name></member>
+      <member refid="classopen__spiel_1_1_state_1a51e334578eba7ca7ce10518964021179" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>DistributionSupport</name></member>
+      <member refid="classopen__spiel_1_1_state_1af2b72b90cb27986377e1867bb713f07d" prot="protected" virt="virtual"><scope>open_spiel::State</scope><name>DoApplyAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1aec9dc1eda262140e878bd4dcfedca13b" prot="protected" virt="virtual"><scope>open_spiel::State</scope><name>DoApplyActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a61d84cb66edc9a12fa6d6f46873411d5" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>FullHistory</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" prot="protected" virt="non-virtual"><scope>open_spiel::State</scope><name>game_</name></member>
+      <member refid="classopen__spiel_1_1_state_1a7fff989fb01a5d93e849ed6fe406cc3f" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>GetGame</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0a85ab6f45efdcf19d00531f7c59a3e0" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>GetHistoriesConsistentWithInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1aaf3da3c4030a5563d84ec198f089cd87" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>GetHistoriesConsistentWithInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad128b0fe37fa9439328ad27a7ba11cbd" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>History</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" prot="protected" virt="non-virtual"><scope>open_spiel::State</scope><name>history_</name></member>
+      <member refid="classopen__spiel_1_1_state_1a148bf75c2afdad5489b684d2d7014aab" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>HistoryString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a31bb588b60127656dbc189c9886e2155" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>InformationStateString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a75f81af7266685a7412960554e3d792e" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>InformationStateString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ae3c75cd43d2bdc470399171d25bf3f1f" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a9753ec678915734fe38f4e86e3309894" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>IsChanceNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1acb22b26b3e8134b4380ff329562cf4b2" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>IsInitialState</name></member>
+      <member refid="classopen__spiel_1_1_state_1a9fd53f8e7abb3d779b1a3a135ec306f5" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>IsMeanFieldNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>IsPlayerActing</name></member>
+      <member refid="classopen__spiel_1_1_state_1a53434c13daf176733c44502734acf320" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>IsPlayerNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>IsSimultaneousNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c" prot="public" virt="pure-virtual"><scope>open_spiel::State</scope><name>IsTerminal</name></member>
+      <member refid="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>LegalActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df" prot="public" virt="pure-virtual"><scope>open_spiel::State</scope><name>LegalActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1ac024b6c48d8b99a2004532362484efe3" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>LegalActionsMask</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4f481e63a08d15a060bc35d8ad6e448c" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>LegalActionsMask</name></member>
+      <member refid="classopen__spiel_1_1_state_1a610b46ccda2eefd984a3716a5219f78a" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>LegalChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_state_1ac721b1cb2b8dccaec4350278fc5cb724" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>MeanFieldPopulation</name></member>
+      <member refid="classopen__spiel_1_1_state_1a127ada084056b47d96839440dbbe3a2f" prot="protected" virt="non-virtual"><scope>open_spiel::State</scope><name>move_number_</name></member>
+      <member refid="classopen__spiel_1_1_state_1aea56c32f2cbd62b2a6a280010ddd54ee" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>MoveNumber</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3a374a3e9cbc2993efec3ae375fb1e93" prot="protected" virt="non-virtual"><scope>open_spiel::State</scope><name>num_distinct_actions_</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" prot="protected" virt="non-virtual"><scope>open_spiel::State</scope><name>num_players_</name></member>
+      <member refid="classopen__spiel_1_1_state_1ada4c2b6afc305febbe7e52bc569e005e" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a43f01fe8bdbb6292407feb51bc535d4f" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad2bbdb6b0d9513ea5f9fc4d8d16a2f8e" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>ObservationString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>ObservationString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0d367e1c9121ecbf6c0467f200fd4b96" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1adc0a7f028252d613b8a4ccb6c6b0de15" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3e336272587c1c62a8455412b7105ebf" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab32ea9872b81db0383b9d7206d1ae3f9" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>PlayerReturn</name></member>
+      <member refid="classopen__spiel_1_1_state_1a510f85123de13949d34186755753e742" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>PlayerReward</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1bee92c295ffd0404712cd6004ab9df0" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>ResampleFromInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0de4bf25d3763fd7ad920fb4eced5219" prot="public" virt="pure-virtual"><scope>open_spiel::State</scope><name>Returns</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>Rewards</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1a6bf403d6d8bcc41b36634a7fa8b1eb" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_state_1a246bd5cf1da14d3ab69d479aea0edc03" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>State</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4c77fe7bf4738cb8bd3bbd6dfadddf9c" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>State</name></member>
+      <member refid="classopen__spiel_1_1_state_1acbd1f66c9496f350693594ad38fc7907" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>StringToAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1abd0bac25b0d9ced7f5f1009fd56ec1ae" prot="public" virt="non-virtual"><scope>open_spiel::State</scope><name>StringToAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0c1bce556da5c9d7314152a2e764198e" prot="public" virt="pure-virtual"><scope>open_spiel::State</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab355df7c0595648cb657eb9aa1ab9a50" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>UndoAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0e4105f5d7a425bc9d7393ae56f1f854" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>UpdateDistribution</name></member>
+      <member refid="classopen__spiel_1_1_state_1abef057180744ea28a0cd85289ce0761e" prot="public" virt="virtual"><scope>open_spiel::State</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

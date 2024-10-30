@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_uniform_probability_sampler" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::UniformProbabilitySampler</compoundname>
+    <includes refid="spiel__utils_8h" local="no">spiel_utils.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_uniform_probability_sampler_1aca2685632d74d3b4d8515ceac62bc083" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int open_spiel::UniformProbabilitySampler::seed_</definition>
+        <argsstring></argsstring>
+        <name>seed_</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::seed_</qualifiedname>
+        <initializer>= absl::ToInt64Nanoseconds(absl::Now() - absl::UnixEpoch())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="379" column="13" bodyfile="open_spiel/spiel_utils.h" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_uniform_probability_sampler_1a33edf8835a2fb4ba28a10f1fe2f524fe" prot="private" static="no" mutable="no">
+        <type>std::mt19937</type>
+        <definition>std::mt19937 open_spiel::UniformProbabilitySampler::rng_</definition>
+        <argsstring></argsstring>
+        <name>rng_</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::rng_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="380" column="16" bodyfile="open_spiel/spiel_utils.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_uniform_probability_sampler_1a60fea325a66effd133dad81ce98409c0" prot="private" static="no" mutable="no">
+        <type>absl::uniform_real_distribution&lt; double &gt;</type>
+        <definition>absl::uniform_real_distribution&lt;double&gt; open_spiel::UniformProbabilitySampler::dist_</definition>
+        <argsstring></argsstring>
+        <name>dist_</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::dist_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="381" column="35" bodyfile="open_spiel/spiel_utils.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_uniform_probability_sampler_1aba2c9c355bcf2938d6bd1e67516a4e7c" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double open_spiel::UniformProbabilitySampler::min_</definition>
+        <argsstring></argsstring>
+        <name>min_</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::min_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="383" column="16" bodyfile="open_spiel/spiel_utils.h" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_uniform_probability_sampler_1a581df7e6f3d1d0a86d57d7ed37fc5f2b" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double open_spiel::UniformProbabilitySampler::max_</definition>
+        <argsstring></argsstring>
+        <name>max_</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::max_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="384" column="16" bodyfile="open_spiel/spiel_utils.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_uniform_probability_sampler_1ae9f8067965fe35e4878ac8030fe7e743" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::UniformProbabilitySampler::UniformProbabilitySampler</definition>
+        <argsstring>(int seed, double min=0., double max=1.)</argsstring>
+        <name>UniformProbabilitySampler</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::UniformProbabilitySampler</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>min</declname>
+          <defval>0.</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max</declname>
+          <defval>1.</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="361" column="3" bodyfile="open_spiel/spiel_utils.h" bodystart="361" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_uniform_probability_sampler_1a8d4f184b36156ec5460b004cbc7e2ea9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::UniformProbabilitySampler::UniformProbabilitySampler</definition>
+        <argsstring>(double min=0., double max=1.)</argsstring>
+        <name>UniformProbabilitySampler</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::UniformProbabilitySampler</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>min</declname>
+          <defval>0.</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max</declname>
+          <defval>1.</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="364" column="3" bodyfile="open_spiel/spiel_utils.h" bodystart="364" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_uniform_probability_sampler_1a102398daa4e74edaeee43add6c91e3ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::UniformProbabilitySampler::UniformProbabilitySampler</definition>
+        <argsstring>(const UniformProbabilitySampler &amp;other)</argsstring>
+        <name>UniformProbabilitySampler</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::UniformProbabilitySampler</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_uniform_probability_sampler" kindref="compound">UniformProbabilitySampler</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="368" column="3" bodyfile="open_spiel/spiel_utils.h" bodystart="368" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_uniform_probability_sampler_1adc4a2927060a3774906fc0b0a9a2a3c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double open_spiel::UniformProbabilitySampler::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <qualifiedname>open_spiel::UniformProbabilitySampler::operator()</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/spiel_utils.h" line="375" column="10" bodyfile="open_spiel/spiel_utils.h" bodystart="375" bodyend="375"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::UniformProbabilitySampler</label>
+        <link refid="classopen__spiel_1_1_uniform_probability_sampler"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/spiel_utils.h" line="359" column="1" bodyfile="open_spiel/spiel_utils.h" bodystart="359" bodyend="385"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1a60fea325a66effd133dad81ce98409c0" prot="private" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>dist_</name></member>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1a581df7e6f3d1d0a86d57d7ed37fc5f2b" prot="private" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>max_</name></member>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1aba2c9c355bcf2938d6bd1e67516a4e7c" prot="private" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>min_</name></member>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1adc4a2927060a3774906fc0b0a9a2a3c5" prot="public" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>operator()</name></member>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1a33edf8835a2fb4ba28a10f1fe2f524fe" prot="private" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>rng_</name></member>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1aca2685632d74d3b4d8515ceac62bc083" prot="private" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>seed_</name></member>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1ae9f8067965fe35e4878ac8030fe7e743" prot="public" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>UniformProbabilitySampler</name></member>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1a8d4f184b36156ec5460b004cbc7e2ea9" prot="public" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>UniformProbabilitySampler</name></member>
+      <member refid="classopen__spiel_1_1_uniform_probability_sampler_1a102398daa4e74edaeee43add6c91e3ec" prot="public" virt="non-virtual"><scope>open_spiel::UniformProbabilitySampler</scope><name>UniformProbabilitySampler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

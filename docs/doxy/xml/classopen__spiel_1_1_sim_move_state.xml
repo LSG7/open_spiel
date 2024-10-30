@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_sim_move_state" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>open_spiel::SimMoveState</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_state" prot="public" virt="non-virtual">open_spiel::State</basecompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1_n_f_g_state" prot="public" virt="non-virtual">open_spiel::NFGState</derivedcompoundref>
+    <includes refid="simultaneous__move__game_8h" local="no">simultaneous_move_game.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1a984f5edee8769835a7c322701675394b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::SimMoveState::SimMoveState</definition>
+        <argsstring>(std::shared_ptr&lt; const Game &gt; game)</argsstring>
+        <name>SimMoveState</name>
+        <qualifiedname>open_spiel::SimMoveState::SimMoveState</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+          <declname>game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="42" column="3" bodyfile="open_spiel/simultaneous_move_game.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1ab67c57bafc83f642e1fad5a5365730c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::SimMoveState::SimMoveState</definition>
+        <argsstring>(const SimMoveState &amp;)=default</argsstring>
+        <name>SimMoveState</name>
+        <qualifiedname>open_spiel::SimMoveState::SimMoveState</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_sim_move_state" kindref="compound">SimMoveState</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="43" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1a8e2a133c55b0e52662aa547b57a30ada" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>std::vector&lt; Action &gt; open_spiel::SimMoveState::LegalActions</definition>
+        <argsstring>(Player player) const override=0</argsstring>
+        <name>LegalActions</name>
+        <qualifiedname>open_spiel::SimMoveState::LegalActions</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1">LegalActions</reimplements>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c">LegalActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a49efa39f7897a573c57c2c253eb78ae7">LegalActions</reimplementedby>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="46" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>std::vector&lt; Action &gt; open_spiel::SimMoveState::LegalActions</definition>
+        <argsstring>() const override</argsstring>
+        <name>LegalActions</name>
+        <qualifiedname>open_spiel::SimMoveState::LegalActions</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df">LegalActions</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="52" column="15" bodyfile="open_spiel/simultaneous_move_game.h" bodystart="52" bodyend="62"/>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">open_spiel::State::CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" compoundref="spiel_8h" startline="371" endline="373">open_spiel::State::IsChanceNode</references>
+        <references refid="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" compoundref="spiel_8h" startline="388" endline="390">open_spiel::State::IsSimultaneousNode</references>
+        <references refid="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c">open_spiel::State::IsTerminal</references>
+        <references refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">LegalActions</references>
+        <references refid="classopen__spiel_1_1_state_1a610b46ccda2eefd984a3716a5219f78a" compoundref="spiel_8h" startline="622" endline="630">open_spiel::State::LegalChanceOutcomes</references>
+        <references refid="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" compoundref="simultaneous__move__game_8cc" startline="51" endline="60">LegalFlatJointActions</references>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" compoundref="simultaneous__move__game_8cc" startline="28" endline="45">FlatJointActionToActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" compoundref="simultaneous__move__game_8cc" startline="62" endline="76">FlatJointActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a679990831153fb519cc4f6956dfacff7" compoundref="matrix__game_8cc" startline="92" endline="116">open_spiel::matrix_game::MatrixState::ToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::SimMoveState::ApplyAction</definition>
+        <argsstring>(Action action) override</argsstring>
+        <name>ApplyAction</name>
+        <qualifiedname>open_spiel::SimMoveState::ApplyAction</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825">ApplyAction</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="66" column="8" bodyfile="open_spiel/simultaneous_move_game.h" bodystart="66" bodyend="74"/>
+        <references refid="classopen__spiel_1_1_sim_move_state_1a8ea7b3b80e5fc90c6058087342f180a1" compoundref="simultaneous__move__game_8cc" startline="47" endline="49">ApplyFlatJointAction</references>
+        <references refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">open_spiel::State::CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1_state_1af2b72b90cb27986377e1867bb713f07d" compoundref="spiel_8h" startline="718" endline="720">open_spiel::State::DoApplyAction</references>
+        <references refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" compoundref="spiel_8h" startline="733">open_spiel::State::history_</references>
+        <references refid="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" compoundref="spiel_8h" startline="388" endline="390">open_spiel::State::IsSimultaneousNode</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>std::vector&lt; Action &gt; open_spiel::SimMoveState::FlatJointActionToActions</definition>
+        <argsstring>(Action flat_action) const</argsstring>
+        <name>FlatJointActionToActions</name>
+        <qualifiedname>open_spiel::SimMoveState::FlatJointActionToActions</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>flat_action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="77" column="15" bodyfile="open_spiel/simultaneous_move_game.cc" bodystart="28" bodyend="45"/>
+        <references refid="namespaceopen__spiel_1adbc825960a0651d53f5d6423343fafae" compoundref="spiel__globals_8h" startline="40">open_spiel::kInvalidAction</references>
+        <references refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">LegalActions</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">open_spiel::State::num_players_</references>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a8ea7b3b80e5fc90c6058087342f180a1" compoundref="simultaneous__move__game_8cc" startline="47" endline="49">ApplyFlatJointAction</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::SimMoveState::FlatJointActionToString</definition>
+        <argsstring>(Action flat_action) const</argsstring>
+        <name>FlatJointActionToString</name>
+        <qualifiedname>open_spiel::SimMoveState::FlatJointActionToString</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>flat_action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="111" column="15" bodyfile="open_spiel/simultaneous_move_game.cc" bodystart="62" bodyend="76"/>
+        <references refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477">open_spiel::State::ActionToString</references>
+        <references refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">LegalActions</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">open_spiel::State::num_players_</references>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" compoundref="matrix__game_8h" startline="191" endline="198">open_spiel::matrix_game::MatrixState::ActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a10bc3e5563dccfafd58163874274d7f3" compoundref="tensor__game_8h" startline="192" endline="197">open_spiel::tensor_game::TensorState::ActionToString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>std::vector&lt; Action &gt; open_spiel::SimMoveState::LegalFlatJointActions</definition>
+        <argsstring>() const</argsstring>
+        <name>LegalFlatJointActions</name>
+        <qualifiedname>open_spiel::SimMoveState::LegalFlatJointActions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="114" column="15" bodyfile="open_spiel/simultaneous_move_game.cc" bodystart="51" bodyend="60"/>
+        <references refid="structopen__spiel_1_1_action_view_1a36972503930b7eb28793228c0536da63" compoundref="action__view_8cc" startline="46" endline="52">open_spiel::ActionView::flat_joint_actions</references>
+        <references refid="structopen__spiel_1_1_flat_joint_actions_1ae279ebedd158eb8d4deebbe88e12a8da" compoundref="action__view_8h" startline="64">open_spiel::FlatJointActions::num_flat_joint_actions</references>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" compoundref="matrix__game_8h" startline="177" endline="187">open_spiel::matrix_game::MatrixState::LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" compoundref="simultaneous__move__game_8h" startline="52" endline="62">LegalActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1a49efa39f7897a573c57c2c253eb78ae7" compoundref="tensor__game_8h" startline="179" endline="188">open_spiel::tensor_game::TensorState::LegalActions</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1a8ea7b3b80e5fc90c6058087342f180a1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::SimMoveState::ApplyFlatJointAction</definition>
+        <argsstring>(Action flat_action)</argsstring>
+        <name>ApplyFlatJointAction</name>
+        <qualifiedname>open_spiel::SimMoveState::ApplyFlatJointAction</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>flat_action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="117" column="8" bodyfile="open_spiel/simultaneous_move_game.cc" bodystart="47" bodyend="49"/>
+        <references refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" compoundref="spiel_8cc" startline="362" endline="371">open_spiel::State::ApplyActions</references>
+        <references refid="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" compoundref="simultaneous__move__game_8cc" startline="28" endline="45">FlatJointActionToActions</references>
+        <referencedby refid="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3" compoundref="simultaneous__move__game_8h" startline="66" endline="74">ApplyAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_sim_move_state_1a944ce1b7f2b910580ac8691a8763337e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void open_spiel::SimMoveState::DoApplyActions</definition>
+        <argsstring>(const std::vector&lt; Action &gt; &amp;actions) override=0</argsstring>
+        <name>DoApplyActions</name>
+        <qualifiedname>open_spiel::SimMoveState::DoApplyActions</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1aec9dc1eda262140e878bd4dcfedca13b">DoApplyActions</reimplements>
+        <reimplementedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd">DoApplyActions</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_state_1ae8fa39ae3a1f038ab47a9a5d98ef66b2">DoApplyActions</reimplementedby>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt; &amp;</type>
+          <declname>actions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/simultaneous_move_game.h" line="119" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>open_spiel::NFGState</label>
+        <link refid="classopen__spiel_1_1_n_f_g_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::SimMoveState</label>
+        <link refid="classopen__spiel_1_1_sim_move_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::State</label>
+        <link refid="classopen__spiel_1_1_state"/>
+      </node>
+      <node id="4">
+        <label>open_spiel::matrix_game::MatrixState</label>
+        <link refid="classopen__spiel_1_1matrix__game_1_1_matrix_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>open_spiel::tensor_game::TensorState</label>
+        <link refid="classopen__spiel_1_1tensor__game_1_1_tensor_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::SimMoveState</label>
+        <link refid="classopen__spiel_1_1_sim_move_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::State</label>
+        <link refid="classopen__spiel_1_1_state"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/simultaneous_move_game.h" line="40" column="1" bodyfile="open_spiel/simultaneous_move_game.h" bodystart="40" bodyend="120"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_state_1af8cc963b423ec2a56e6b5292a8d9f6df" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>ActionsConsistentWithInformationFrom</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveState</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0467f66e4c157eab1aa4140bcb856e3f" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a1ed67d6cdf3a7f10c2a66f42d96174a3" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>ApplyAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>ApplyActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a479150baad280f0f236d2cced41ddc13" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>ApplyActionsWithLegalityChecks</name></member>
+      <member refid="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>ApplyActionWithLegalityCheck</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a8ea7b3b80e5fc90c6058087342f180a1" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>ApplyFlatJointAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa177f864d35f39d38aaa7551e21b9b3b" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>ChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_state_1ae86a2e3710382c2aa7383abe21934825" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>Child</name></member>
+      <member refid="classopen__spiel_1_1_state_1a252ac372f002809f41be1003e50f9ca4" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveState</scope><name>Clone</name></member>
+      <member refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveState</scope><name>CurrentPlayer</name></member>
+      <member refid="classopen__spiel_1_1_state_1a51e334578eba7ca7ce10518964021179" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>DistributionSupport</name></member>
+      <member refid="classopen__spiel_1_1_state_1af2b72b90cb27986377e1867bb713f07d" prot="protected" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>DoApplyAction</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a944ce1b7f2b910580ac8691a8763337e" prot="protected" virt="pure-virtual"><scope>open_spiel::SimMoveState</scope><name>DoApplyActions</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a5cbdd19361e73cf27d9c4644efa41c4a" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>FlatJointActionToActions</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a348e919ba63cf62b710928257111f902" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>FlatJointActionToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a61d84cb66edc9a12fa6d6f46873411d5" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>FullHistory</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>game_</name></member>
+      <member refid="classopen__spiel_1_1_state_1a7fff989fb01a5d93e849ed6fe406cc3f" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>GetGame</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0a85ab6f45efdcf19d00531f7c59a3e0" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>GetHistoriesConsistentWithInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1aaf3da3c4030a5563d84ec198f089cd87" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>GetHistoriesConsistentWithInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad128b0fe37fa9439328ad27a7ba11cbd" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>History</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>history_</name></member>
+      <member refid="classopen__spiel_1_1_state_1a148bf75c2afdad5489b684d2d7014aab" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>HistoryString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a31bb588b60127656dbc189c9886e2155" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>InformationStateString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a75f81af7266685a7412960554e3d792e" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>InformationStateString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ae3c75cd43d2bdc470399171d25bf3f1f" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a9753ec678915734fe38f4e86e3309894" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>IsChanceNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1acb22b26b3e8134b4380ff329562cf4b2" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>IsInitialState</name></member>
+      <member refid="classopen__spiel_1_1_state_1a9fd53f8e7abb3d779b1a3a135ec306f5" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>IsMeanFieldNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>IsPlayerActing</name></member>
+      <member refid="classopen__spiel_1_1_state_1a53434c13daf176733c44502734acf320" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>IsPlayerNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>IsSimultaneousNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveState</scope><name>IsTerminal</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a8e2a133c55b0e52662aa547b57a30ada" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveState</scope><name>LegalActions</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1ad89f983530243bcc2f6a003b7a73c943" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>LegalActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1ac024b6c48d8b99a2004532362484efe3" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>LegalActionsMask</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4f481e63a08d15a060bc35d8ad6e448c" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>LegalActionsMask</name></member>
+      <member refid="classopen__spiel_1_1_state_1a610b46ccda2eefd984a3716a5219f78a" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>LegalChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1ad127470877848e35d6f4062976ef990c" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>LegalFlatJointActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1ac721b1cb2b8dccaec4350278fc5cb724" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>MeanFieldPopulation</name></member>
+      <member refid="classopen__spiel_1_1_state_1a127ada084056b47d96839440dbbe3a2f" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>move_number_</name></member>
+      <member refid="classopen__spiel_1_1_state_1aea56c32f2cbd62b2a6a280010ddd54ee" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>MoveNumber</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3a374a3e9cbc2993efec3ae375fb1e93" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>num_distinct_actions_</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" prot="protected" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>num_players_</name></member>
+      <member refid="classopen__spiel_1_1_state_1ada4c2b6afc305febbe7e52bc569e005e" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a43f01fe8bdbb6292407feb51bc535d4f" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad2bbdb6b0d9513ea5f9fc4d8d16a2f8e" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>ObservationString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>ObservationString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0d367e1c9121ecbf6c0467f200fd4b96" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1adc0a7f028252d613b8a4ccb6c6b0de15" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3e336272587c1c62a8455412b7105ebf" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab32ea9872b81db0383b9d7206d1ae3f9" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>PlayerReturn</name></member>
+      <member refid="classopen__spiel_1_1_state_1a510f85123de13949d34186755753e742" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>PlayerReward</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1bee92c295ffd0404712cd6004ab9df0" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>ResampleFromInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0de4bf25d3763fd7ad920fb4eced5219" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveState</scope><name>Returns</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>Rewards</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1a6bf403d6d8bcc41b36634a7fa8b1eb" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1a984f5edee8769835a7c322701675394b" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>SimMoveState</name></member>
+      <member refid="classopen__spiel_1_1_sim_move_state_1ab67c57bafc83f642e1fad5a5365730c0" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>SimMoveState</name></member>
+      <member refid="classopen__spiel_1_1_state_1a246bd5cf1da14d3ab69d479aea0edc03" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>State</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4c77fe7bf4738cb8bd3bbd6dfadddf9c" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>State</name></member>
+      <member refid="classopen__spiel_1_1_state_1acbd1f66c9496f350693594ad38fc7907" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>StringToAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1abd0bac25b0d9ced7f5f1009fd56ec1ae" prot="public" virt="non-virtual"><scope>open_spiel::SimMoveState</scope><name>StringToAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0c1bce556da5c9d7314152a2e764198e" prot="public" virt="pure-virtual"><scope>open_spiel::SimMoveState</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab355df7c0595648cb657eb9aa1ab9a50" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>UndoAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0e4105f5d7a425bc9d7393ae56f1f854" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>UpdateDistribution</name></member>
+      <member refid="classopen__spiel_1_1_state_1abef057180744ea28a0cd85289ce0761e" prot="public" virt="virtual"><scope>open_spiel::SimMoveState</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

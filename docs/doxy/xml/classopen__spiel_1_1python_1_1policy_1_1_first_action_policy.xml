@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::policy::FirstActionPolicy</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1python_1_1policy_1_1_policy" prot="public" virt="non-virtual">open_spiel.python.policy.Policy</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1ab2b57d58876b4a96be3240e50e944c86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.FirstActionPolicy.__init__</definition>
+        <argsstring>(self, game)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.policy.FirstActionPolicy.__init__</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a9bb16da41a11941090e72d076d48964d">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ae972849a1b0e68c8201c45dd6d27f1bd" kindref="member">game</ref></type>
+          <defname>game</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes a policy.
+
+Args:
+  game: the game for which this policy applies
+  player_ids: list of player ids for which this policy applies; each should
+    be in the range 0..game.num_players()-1.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="437" column="1" bodyfile="open_spiel/python/policy.py" bodystart="437" bodyend="440"/>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1ab2b57d58876b4a96be3240e50e944c86" compoundref="policy_8py" startline="437" endline="440">open_spiel.python.policy.FirstActionPolicy.__init__</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1ab2b57d58876b4a96be3240e50e944c86" compoundref="policy_8py" startline="437" endline="440">open_spiel.python.policy.FirstActionPolicy.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1a7083d5df2dd21560210f2d78ddd80ea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.FirstActionPolicy.action_probabilities</definition>
+        <argsstring>(self, state, player_id=None)</argsstring>
+        <name>action_probabilities</name>
+        <qualifiedname>open_spiel.python.policy.FirstActionPolicy.action_probabilities</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a061fd4bbafb4f18987d93bdbc6a0889b">action_probabilities</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <param>
+          <type>player_id</type>
+          <defname>player_id</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns a dictionary {action: prob} for all legal actions.
+
+IMPORTANT: We assume the following properties hold:
+- All probabilities are &gt;=0 and sum to 1
+- TLDR: Policy implementations should list the (action, prob) for all legal
+  actions, but algorithms should not rely on this (yet).
+  Details: Before May 2020, only legal actions were present in the mapping,
+  but it did not have to be exhaustive: missing actions were considered to
+  be associated to a zero probability.
+  For example, a deterministic state-poliy was previously {action: 1.0}.
+  Given this change of convention is new and hard to enforce, algorithms
+  should not rely on the fact that all legal actions should be present.
+
+Args:
+  state: A `pyspiel.State` object.
+  player_id: Optional, the player id for whom we want an action. Optional
+    unless this is a simultaneous state at which multiple players can act.
+
+Returns:
+  A `dict` of `{action: probability}` for the specified player in the
+  supplied state.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="441" column="1" bodyfile="open_spiel/python/policy.py" bodystart="441" bodyend="452"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a5755c0c1868c78cba8d68773d3d32831" compoundref="policy_8py" startline="145" endline="157">open_spiel.python.policy.Policy.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A policy that always takes the lowest-numbered legal action.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel.python.policy.FirstActionPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.policy.Policy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_policy"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.policy.FirstActionPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.policy.Policy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_policy"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/policy.py" line="434" column="1" bodyfile="open_spiel/python/policy.py" bodystart="434" bodyend="452"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1ab2b57d58876b4a96be3240e50e944c86" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::FirstActionPolicy</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1a7083d5df2dd21560210f2d78ddd80ea5" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::FirstActionPolicy</scope><name>action_probabilities</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

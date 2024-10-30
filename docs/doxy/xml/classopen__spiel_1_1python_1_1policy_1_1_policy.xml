@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1policy_1_1_policy" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::policy::Policy</compoundname>
+    <derivedcompoundref refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy" prot="public" virt="non-virtual">open_spiel.python.policy.FirstActionPolicy</derivedcompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy" prot="public" virt="non-virtual">open_spiel.python.policy.TabularPolicy</derivedcompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy" prot="public" virt="non-virtual">open_spiel.python.policy.UniformRandomPolicy</derivedcompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy" prot="public" virt="non-virtual">open_spiel.python.rl_agent_policy.JointRLAgentPolicy</derivedcompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1policy_1_1_policy_1ae972849a1b0e68c8201c45dd6d27f1bd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.policy.Policy::game</definition>
+        <argsstring></argsstring>
+        <name>game</name>
+        <qualifiedname>open_spiel.python.policy.Policy.game</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="117" column="1" bodyfile="open_spiel/python/policy.py" bodystart="117" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy_1ae1b612d442f7a45eb1cee3bcdf80e38d" compoundref="policy_8py" startline="341" endline="368">open_spiel.python.policy.TabularPolicy.__copy__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1aefa496c5461824795bc9a1f274df94f8" compoundref="rl__environment_8py" startline="462" endline="467">open_spiel.python.rl_environment.Environment.set_state</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1policy_1_1_policy_1ab8a5df64ce79c1957078539d1ae40a44" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.policy.Policy::player_ids</definition>
+        <argsstring></argsstring>
+        <name>player_ids</name>
+        <qualifiedname>open_spiel.python.policy.Policy.player_ids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="118" column="1" bodyfile="open_spiel/python/policy.py" bodystart="118" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy_1ae1b612d442f7a45eb1cee3bcdf80e38d" compoundref="policy_8py" startline="341" endline="368">open_spiel.python.policy.TabularPolicy.__copy__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1policy_1_1_policy_1a9bb16da41a11941090e72d076d48964d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.Policy.__init__</definition>
+        <argsstring>(self, game, player_ids)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.policy.Policy.__init__</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1ab2b57d58876b4a96be3240e50e944c86">__init__</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy_1a695190f0d6616aded8ca9f0e5ac43975">__init__</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1a77e8d3d1f75e334508755e2d33e2b832">__init__</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1acdc33df50365949c39488a570276bd11">__init__</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy_1a083d5ce616242d077b77970d2bd24817">__init__</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ae972849a1b0e68c8201c45dd6d27f1bd" kindref="member">game</ref></type>
+          <defname>game</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ab8a5df64ce79c1957078539d1ae40a44" kindref="member">player_ids</ref></type>
+          <defname>player_ids</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes a policy.
+
+Args:
+  game: the game for which this policy applies
+  player_ids: list of player ids for which this policy applies; each should
+    be in the range 0..game.num_players()-1.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="109" column="1" bodyfile="open_spiel/python/policy.py" bodystart="109" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1policy_1_1_policy_1a061fd4bbafb4f18987d93bdbc6a0889b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.Policy.action_probabilities</definition>
+        <argsstring>(self, state, player_id=None)</argsstring>
+        <name>action_probabilities</name>
+        <qualifiedname>open_spiel.python.policy.Policy.action_probabilities</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1a7083d5df2dd21560210f2d78ddd80ea5">action_probabilities</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy_1af3f2eb0efe6093e5811aaf27fc867b5f">action_probabilities</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1ac6060f389cd305bf01a6b74309915fba">action_probabilities</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f">action_probabilities</reimplementedby>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy_1a967b75480ace1fba56768f83cbf6e9aa">action_probabilities</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <param>
+          <type>player_id</type>
+          <defname>player_id</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns a dictionary {action: prob} for all legal actions.
+
+IMPORTANT: We assume the following properties hold:
+- All probabilities are &gt;=0 and sum to 1
+- TLDR: Policy implementations should list the (action, prob) for all legal
+  actions, but algorithms should not rely on this (yet).
+  Details: Before May 2020, only legal actions were present in the mapping,
+  but it did not have to be exhaustive: missing actions were considered to
+  be associated to a zero probability.
+  For example, a deterministic state-poliy was previously {action: 1.0}.
+  Given this change of convention is new and hard to enforce, algorithms
+  should not rely on the fact that all legal actions should be present.
+
+Args:
+  state: A `pyspiel.State` object.
+  player_id: Optional, the player id for whom we want an action. Optional
+    unless this is a simultaneous state at which multiple players can act.
+
+Returns:
+  A `dict` of `{action: probability}` for the specified player in the
+  supplied state.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="120" column="1" bodyfile="open_spiel/python/policy.py" bodystart="120" bodyend="144"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a5755c0c1868c78cba8d68773d3d32831" compoundref="policy_8py" startline="145" endline="157">open_spiel.python.policy.Policy.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1policy_1_1_policy_1a5755c0c1868c78cba8d68773d3d32831" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.Policy.__call__</definition>
+        <argsstring>(self, state, player_id=None)</argsstring>
+        <name>__call__</name>
+        <qualifiedname>open_spiel.python.policy.Policy.__call__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <param>
+          <type>player_id</type>
+          <defname>player_id</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Turns the policy into a callable.
+
+Args:
+  state: The current state of the game.
+  player_id: Optional, the player id for whom we want an action. Optional
+    unless this is a simultaneous state at which multiple players can act.
+
+Returns:
+  Dictionary of action: probability.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="145" column="1" bodyfile="open_spiel/python/policy.py" bodystart="145" bodyend="157"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7897df8492ad475e0c0a2dbb27ca3c" compoundref="rnad_8py" startline="1021" endline="1032">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1a7083d5df2dd21560210f2d78ddd80ea5" compoundref="policy_8py" startline="441" endline="452">open_spiel.python.policy.FirstActionPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a061fd4bbafb4f18987d93bdbc6a0889b" compoundref="policy_8py" startline="120" endline="144">open_spiel.python.policy.Policy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy_1af3f2eb0efe6093e5811aaf27fc867b5f" compoundref="policy_8py" startline="297" endline="306">open_spiel.python.policy.TabularPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1ac6060f389cd305bf01a6b74309915fba" compoundref="policy_8py" startline="412" endline="433">open_spiel.python.policy.UniformRandomPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f" compoundref="rl__agent__policy_8py" startline="53" endline="81">open_spiel.python.rl_agent_policy.JointRLAgentPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy_1a967b75480ace1fba56768f83cbf6e9aa" compoundref="rl__agent__policy_8py" startline="98" endline="101">open_spiel.python.rl_agent_policy.RLAgentPolicy.action_probabilities</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.Policy.to_tabular</definition>
+        <argsstring>(self, states=None)</argsstring>
+        <name>to_tabular</name>
+        <qualifiedname>open_spiel.python.policy.Policy.to_tabular</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>states</type>
+          <defname>states</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns a new `TabularPolicy` equivalent to this policy.
+
+Args:
+  states: States of the game that will be used for the tabular policy. If
+    None, then get_tabular_policy_states() method will be used to generate
+    them.
+
+Returns:
+  a TabularPolicy.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="158" column="1" bodyfile="open_spiel/python/policy.py" bodystart="158" bodyend="177"/>
+        <references refid="classopen__spiel_1_1python_1_1algorithms_1_1rnad_1_1rnad_1_1_r_na_d_solver_1a7f7897df8492ad475e0c0a2dbb27ca3c" compoundref="rnad_8py" startline="1021" endline="1032">open_spiel.python.algorithms.rnad.rnad.RNaDSolver.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy_1a7083d5df2dd21560210f2d78ddd80ea5" compoundref="policy_8py" startline="441" endline="452">open_spiel.python.policy.FirstActionPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a061fd4bbafb4f18987d93bdbc6a0889b" compoundref="policy_8py" startline="120" endline="144">open_spiel.python.policy.Policy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy_1af3f2eb0efe6093e5811aaf27fc867b5f" compoundref="policy_8py" startline="297" endline="306">open_spiel.python.policy.TabularPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1ac6060f389cd305bf01a6b74309915fba" compoundref="policy_8py" startline="412" endline="433">open_spiel.python.policy.UniformRandomPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f" compoundref="rl__agent__policy_8py" startline="53" endline="81">open_spiel.python.rl_agent_policy.JointRLAgentPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy_1a967b75480ace1fba56768f83cbf6e9aa" compoundref="rl__agent__policy_8py" startline="98" endline="101">open_spiel.python.rl_agent_policy.RLAgentPolicy.action_probabilities</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ae972849a1b0e68c8201c45dd6d27f1bd" compoundref="policy_8py" startline="117">open_spiel.python.policy.Policy.game</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a5eda9be6e375bbe3e2a741972e7c2538" compoundref="rl__environment_8py" startline="459" endline="461">open_spiel.python.rl_environment.Environment.game</references>
+        <references refid="namespaceopen__spiel_1_1python_1_1policy_1af790d4355be9443cf04c9a1a206149cd" compoundref="policy_8py" startline="453" endline="474">open_spiel.python.policy.get_tabular_policy_states</references>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ab8a5df64ce79c1957078539d1ae40a44" compoundref="policy_8py" startline="118">open_spiel.python.policy.Policy.player_ids</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Base class for policies.
+
+A policy is something that returns a distribution over possible actions
+given a state of the world.
+
+Attributes:
+  game: the game for which this policy applies
+  player_ids: list of player ids for which this policy applies; each in the
+    interval [0..game.num_players()-1].
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel.python.policy.Policy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_policy"/>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.policy.FirstActionPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_first_action_policy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel.python.policy.TabularPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_tabular_policy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>open_spiel.python.policy.UniformRandomPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>open_spiel.python.rl_agent_policy.JointRLAgentPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>open_spiel.python.rl_agent_policy.RLAgentPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.policy.Policy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_policy"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/policy.py" line="97" column="1" bodyfile="open_spiel/python/policy.py" bodystart="97" bodyend="177"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a5755c0c1868c78cba8d68773d3d32831" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::Policy</scope><name>__call__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a9bb16da41a11941090e72d076d48964d" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::Policy</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a061fd4bbafb4f18987d93bdbc6a0889b" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::Policy</scope><name>action_probabilities</name></member>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ae972849a1b0e68c8201c45dd6d27f1bd" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::Policy</scope><name>game</name></member>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ab8a5df64ce79c1957078539d1ae40a44" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::Policy</scope><name>player_ids</name></member>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::Policy</scope><name>to_tabular</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

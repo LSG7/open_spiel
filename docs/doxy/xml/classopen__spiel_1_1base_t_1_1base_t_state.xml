@@ -1,0 +1,1647 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1base_t_1_1base_t_state" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::baseT::baseTState</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1_state" prot="public" virt="non-virtual">open_spiel::State</basecompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1kbg_1_1kbg_state" prot="public" virt="non-virtual">open_spiel::kbg::kbgState</derivedcompoundref>
+    <includes refid="base_t_8h" local="no">baseT.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" prot="protected" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+        <definition>MapCoord open_spiel::baseT::baseTState::map_size</definition>
+        <argsstring></argsstring>
+        <name>map_size</name>
+        <qualifiedname>open_spiel::baseT::baseTState::map_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="113" column="12" bodyfile="open_spiel/games/SG/baseT.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac636de5cc424cdef50e99e1af612f02b" compoundref="base_t_8cc" startline="516" endline="616">action_select_tile</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab116dedd343ede7e4f7d6b15547c857b" compoundref="base_t_8cc" startline="821" endline="840">cells_to_obs</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae963870fa1777a9cc5bbc3db5919320f" compoundref="base_t_8cc" startline="244" endline="252">crd_to_id</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad28ce776013babd3b3b7844164aa5bc4" compoundref="base_t_8cc" startline="233" endline="242">id_to_crd</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a26e6f5018d4f9c75a7bb8679a8623a87" compoundref="base_t_8cc" startline="460" endline="489">ObservationString</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad2e14532082ba02dc13546031adba3fa" compoundref="base_t_8cc" startline="651" endline="689">scout</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" prot="protected" static="no" mutable="no">
+        <type><ref refid="structopen__spiel_1_1base_t_1_1_map_state" kindref="compound">MapState</ref></type>
+        <definition>MapState open_spiel::baseT::baseTState::msn</definition>
+        <argsstring></argsstring>
+        <name>msn</name>
+        <qualifiedname>open_spiel::baseT::baseTState::msn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="114" column="12" bodyfile="open_spiel/games/SG/baseT.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac636de5cc424cdef50e99e1af612f02b" compoundref="base_t_8cc" startline="516" endline="616">action_select_tile</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab116dedd343ede7e4f7d6b15547c857b" compoundref="base_t_8cc" startline="821" endline="840">cells_to_obs</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2" compoundref="base_t_8cc" startline="121" endline="125">CurrentPlayer</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4aa7a9803410fc0cfb1cfc3e1d21d984" compoundref="base_t_8cc" startline="127" endline="130">CurrentUAS</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2d690c8827f64f5bc07f148dc870c9e2" compoundref="base_t_8cc" startline="132" endline="135">CurrentUniqueUnitId</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a84d182f9b2362a5b9be63f181f1193f4" compoundref="base_t_8cc" startline="137" endline="140">CurrentUnitId</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" compoundref="base_t_8cc" startline="700" endline="709">deploy_unit</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd6c019a2901580f5bb5eb91f9a9ca21" compoundref="base_t_8cc" startline="323" endline="329">get_unit_by_uniqueId</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a26e6f5018d4f9c75a7bb8679a8623a87" compoundref="base_t_8cc" startline="460" endline="489">ObservationString</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad2e14532082ba02dc13546031adba3fa" compoundref="base_t_8cc" startline="651" endline="689">scout</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" compoundref="base_t_8cc" startline="729" endline="769">set_cell_and_obs</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae10e7d5b335b44bb623a0c38a6217cbc" compoundref="base_t_8cc" startline="271" endline="294">set_next_unit_to_action_rand_all_p</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" compoundref="base_t_8cc" startline="296" endline="321">set_next_unit_to_action_rand_per_p</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a57a36566c44ce5ee6d99bdcb0a2d84d5" compoundref="base_t_8cc" startline="195" endline="201">SetNextPlayer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a0567cd25b590bd54d9d09aa9e17f089d" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structopen__spiel_1_1base_t_1_1_map_state" kindref="compound">MapState</ref> &gt;</type>
+        <definition>std::vector&lt;MapState&gt; open_spiel::baseT::baseTState::Map_history</definition>
+        <argsstring></argsstring>
+        <name>Map_history</name>
+        <qualifiedname>open_spiel::baseT::baseTState::Map_history</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="115" column="15" bodyfile="open_spiel/games/SG/baseT.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a0bd6b95f931c88084697b3dd765c3eff" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::max_units</definition>
+        <argsstring></argsstring>
+        <name>max_units</name>
+        <qualifiedname>open_spiel::baseT::baseTState::max_units</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="116" column="7" bodyfile="open_spiel/games/SG/baseT.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6f0ae115ff986d522f90c5e1d18d71b8" compoundref="base_t_8cc" startline="417" endline="458">get_cell_observation_string</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" compoundref="base_t_8cc" startline="296" endline="321">set_next_unit_to_action_rand_per_p</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a0b44e571e7dabfcd48098cf4de22ba5a" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; int8_t &gt;</type>
+        <definition>std::vector&lt;int8_t&gt; open_spiel::baseT::baseTState::unit_id_count</definition>
+        <argsstring></argsstring>
+        <name>unit_id_count</name>
+        <qualifiedname>open_spiel::baseT::baseTState::unit_id_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="117" column="15" bodyfile="open_spiel/games/SG/baseT.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" compoundref="base_t_8cc" startline="700" endline="709">deploy_unit</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a2ae1fb9c3f9dde62caa852eda3a4fbe8" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::unique_unit_id_count</definition>
+        <argsstring></argsstring>
+        <name>unique_unit_id_count</name>
+        <qualifiedname>open_spiel::baseT::baseTState::unique_unit_id_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="118" column="7" bodyfile="open_spiel/games/SG/baseT.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" compoundref="base_t_8cc" startline="700" endline="709">deploy_unit</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae10e7d5b335b44bb623a0c38a6217cbc" compoundref="base_t_8cc" startline="271" endline="294">set_next_unit_to_action_rand_all_p</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1af4a5caa583d02de970ada6a278cc2703" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; int8_t &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;int8_t&gt; &gt; open_spiel::baseT::baseTState::turn_unit_per_p_v</definition>
+        <argsstring></argsstring>
+        <name>turn_unit_per_p_v</name>
+        <qualifiedname>open_spiel::baseT::baseTState::turn_unit_per_p_v</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="119" column="15" bodyfile="open_spiel/games/SG/baseT.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" compoundref="base_t_8cc" startline="296" endline="321">set_next_unit_to_action_rand_per_p</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a43c4868babadab0049677655907f41fc" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; int8_t &gt;</type>
+        <definition>std::vector&lt;int8_t&gt; open_spiel::baseT::baseTState::turn_unit_all_p_v</definition>
+        <argsstring></argsstring>
+        <name>turn_unit_all_p_v</name>
+        <qualifiedname>open_spiel::baseT::baseTState::turn_unit_all_p_v</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="120" column="15" bodyfile="open_spiel/games/SG/baseT.h" bodystart="120" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae10e7d5b335b44bb623a0c38a6217cbc" compoundref="base_t_8cc" startline="271" endline="294">set_next_unit_to_action_rand_all_p</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a04df2aa61d879687013ea9dc347ce641" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193d" kindref="member">PlayerActionState</ref></type>
+        <definition>PlayerActionState open_spiel::baseT::baseTState::current_pas</definition>
+        <argsstring></argsstring>
+        <name>current_pas</name>
+        <qualifiedname>open_spiel::baseT::baseTState::current_pas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="121" column="21" bodyfile="open_spiel/games/SG/baseT.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa0b7b663f43a2b9a4356eff110ace5fe" compoundref="base_t_8cc" startline="141" endline="144">CurrentPAS</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1af0e8bc2cc0b37f5e9b477fe23ee72f3b" compoundref="base_t_8cc" startline="178" endline="194">SetNextPAS</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a10007f185220c4323e2acc82ecd50385" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7e" kindref="member">UnitSelectionOrder</ref></type>
+        <definition>UnitSelectionOrder open_spiel::baseT::baseTState::unit_selection_order</definition>
+        <argsstring></argsstring>
+        <name>unit_selection_order</name>
+        <qualifiedname>open_spiel::baseT::baseTState::unit_selection_order</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="122" column="22" bodyfile="open_spiel/games/SG/baseT.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" compoundref="base_t_8cc" startline="254" endline="269">set_next_unit_to_action</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1aa230dadaa0d199d8b7f2d69bb9b4ef15" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::ground_type_num</definition>
+        <argsstring></argsstring>
+        <name>ground_type_num</name>
+        <qualifiedname>open_spiel::baseT::baseTState::ground_type_num</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="123" column="7" bodyfile="open_spiel/games/SG/baseT.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1afb7f380f98cf7e23364cc6ce3a69d1df" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::land_info_channel_depth</definition>
+        <argsstring></argsstring>
+        <name>land_info_channel_depth</name>
+        <qualifiedname>open_spiel::baseT::baseTState::land_info_channel_depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="126" column="7" bodyfile="open_spiel/games/SG/baseT.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1ac41af26c91b5add5b7c4defe42c4f7c7" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::piece_type_n</definition>
+        <argsstring></argsstring>
+        <name>piece_type_n</name>
+        <qualifiedname>open_spiel::baseT::baseTState::piece_type_n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="127" column="7" bodyfile="open_spiel/games/SG/baseT.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a7a56ad1ae720032d86b2d1509056e462" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; std::vector&lt; std::vector&lt; std::vector&lt; int8_t &gt; &gt; &gt; &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;std::vector&lt;std::vector&lt;std::vector&lt;int8_t&gt; &gt; &gt; &gt; &gt; open_spiel::baseT::baseTState::obs_per_p_v</definition>
+        <argsstring></argsstring>
+        <name>obs_per_p_v</name>
+        <qualifiedname>open_spiel::baseT::baseTState::obs_per_p_v</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="128" column="15" bodyfile="open_spiel/games/SG/baseT.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab116dedd343ede7e4f7d6b15547c857b" compoundref="base_t_8cc" startline="821" endline="840">cells_to_obs</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" compoundref="base_t_8cc" startline="729" endline="769">set_cell_and_obs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a10afd836b7211d3a20dd85f93dd00c25" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::obs_total_channel_depth</definition>
+        <argsstring></argsstring>
+        <name>obs_total_channel_depth</name>
+        <qualifiedname>open_spiel::baseT::baseTState::obs_total_channel_depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="129" column="7" bodyfile="open_spiel/games/SG/baseT.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a887a4094e27fa25d85a9d5217e7ec2db" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::last_move_len</definition>
+        <argsstring></argsstring>
+        <name>last_move_len</name>
+        <qualifiedname>open_spiel::baseT::baseTState::last_move_len</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="130" column="7" bodyfile="open_spiel/games/SG/baseT.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a2dc10f3c7e575edea6c42887c21d03df" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; FP16 &gt;</type>
+        <definition>std::vector&lt;FP16&gt; open_spiel::baseT::baseTState::supply_v</definition>
+        <argsstring></argsstring>
+        <name>supply_v</name>
+        <qualifiedname>open_spiel::baseT::baseTState::supply_v</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="131" column="15" bodyfile="open_spiel/games/SG/baseT.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1ac58e79674f658b353aeeb919f362f939" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structopen__spiel_1_1base_t_1_1_p___unit_id" kindref="compound">P_UnitId</ref> &gt;</type>
+        <definition>std::vector&lt;P_UnitId&gt; open_spiel::baseT::baseTState::unique_id_to_player_id_v</definition>
+        <argsstring></argsstring>
+        <name>unique_id_to_player_id_v</name>
+        <qualifiedname>open_spiel::baseT::baseTState::unique_id_to_player_id_v</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="132" column="15" bodyfile="open_spiel/games/SG/baseT.h" bodystart="132" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" compoundref="base_t_8cc" startline="700" endline="709">deploy_unit</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd6c019a2901580f5bb5eb91f9a9ca21" compoundref="base_t_8cc" startline="323" endline="329">get_unit_by_uniqueId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1ab4329031fc1032d4f6c170947524380d" prot="protected" static="no" mutable="no">
+        <type>enum <ref refid="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820" kindref="member">UnitActionKind</ref></type>
+        <definition>enum UnitActionKind open_spiel::baseT::baseTState::game_uak</definition>
+        <argsstring></argsstring>
+        <name>game_uak</name>
+        <qualifiedname>open_spiel::baseT::baseTState::game_uak</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="133" column="22" bodyfile="open_spiel/games/SG/baseT.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6df22a3f31c04d507b854c9a8aa644d7" compoundref="base_t_8cc" startline="146" endline="157">SetNextUAS</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1base_t_1_1base_t_state_1a32bfa8f11a37ecf5bad70a6c7e335be9" prot="protected" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="class_socket_server" kindref="compound">SocketServer</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;SocketServer&gt; open_spiel::baseT::baseTState::ipc_server</definition>
+        <argsstring></argsstring>
+        <name>ipc_server</name>
+        <qualifiedname>open_spiel::baseT::baseTState::ipc_server</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="136" column="20" bodyfile="open_spiel/games/SG/baseT.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a42cab2176731e93afc6e54b3e195afdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::baseT::baseTState::baseTState</definition>
+        <argsstring>(std::shared_ptr&lt; const Game &gt; game)</argsstring>
+        <name>baseTState</name>
+        <qualifiedname>open_spiel::baseT::baseTState::baseTState</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &gt;</type>
+          <declname>game</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="64" column="3" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1af9862334790cf8f44fa587452a736236" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::baseT::baseTState::baseTState</definition>
+        <argsstring>(const baseTState &amp;)=default</argsstring>
+        <name>baseTState</name>
+        <qualifiedname>open_spiel::baseT::baseTState::baseTState</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1base_t_1_1base_t_state" kindref="compound">baseTState</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="65" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a66671b52e5472d46aa554b7764b14807" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>open_spiel::baseT::baseTState::~baseTState</definition>
+        <argsstring>()</argsstring>
+        <name>~baseTState</name>
+        <qualifiedname>open_spiel::baseT::baseTState::~baseTState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="66" column="11" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1af570bad799dc0575ea3cd2cb3ddda31f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classopen__spiel_1_1base_t_1_1base_t_state" kindref="compound">baseTState</ref> &amp;</type>
+        <definition>virtual baseTState &amp; open_spiel::baseT::baseTState::operator=</definition>
+        <argsstring>(const baseTState &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>open_spiel::baseT::baseTState::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1base_t_1_1base_t_state" kindref="compound">baseTState</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="67" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ae36794c0d6337e0f5e4cd5dc10788e61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::baseT::baseTState::ActionToString</definition>
+        <argsstring>(Player player, Action action_id) const override</argsstring>
+        <name>ActionToString</name>
+        <qualifiedname>open_spiel::baseT::baseTState::ActionToString</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a1eb002ef7abdaf3633d3438c59cc9477">ActionToString</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="68" column="23" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+        <definition>Player open_spiel::baseT::baseTState::CurrentPlayer</definition>
+        <argsstring>() const override</argsstring>
+        <name>CurrentPlayer</name>
+        <qualifiedname>open_spiel::baseT::baseTState::CurrentPlayer</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a229614eafbf9978cbc4109347e5f9efa">CurrentPlayer</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="69" column="18" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="121" bodyend="125"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1af21ca1b8e7fca29bd8c3cbb7c01ae80a" compoundref="base_type_8h" startline="98">open_spiel::baseT::MapState::current_player</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <referencedby refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="kbg__test_8cc" startline="10" endline="64">main</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" compoundref="base_t_8cc" startline="296" endline="321">set_next_unit_to_action_rand_per_p</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1acf7403b244fc8bf4826d115ee4714039" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::baseT::baseTState::IsTerminal</definition>
+        <argsstring>() const override</argsstring>
+        <name>IsTerminal</name>
+        <qualifiedname>open_spiel::baseT::baseTState::IsTerminal</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1ab5b84abeb1ec44715b11690b8acc284c">IsTerminal</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="70" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="203" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ae1fcc7dea2a058cd9659540a3e183cd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; <ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref> &gt;</type>
+        <definition>std::vector&lt; Action &gt; open_spiel::baseT::baseTState::LegalActions</definition>
+        <argsstring>() const override</argsstring>
+        <name>LegalActions</name>
+        <qualifiedname>open_spiel::baseT::baseTState::LegalActions</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1ae876a9b5f00331d660031568c4af13df">LegalActions</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="71" column="23" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="209" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a48c5439902ef0239be7510b9bc56bf59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; open_spiel::baseT::baseTState::Returns</definition>
+        <argsstring>() const</argsstring>
+        <name>Returns</name>
+        <qualifiedname>open_spiel::baseT::baseTState::Returns</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a0de4bf25d3763fd7ad920fb4eced5219">Returns</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="72" column="23" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="215" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a3faa248c30ac5235797d881509b9c4b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::baseT::baseTState::ToString</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToString</name>
+        <qualifiedname>open_spiel::baseT::baseTState::ToString</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a0c1bce556da5c9d7314152a2e764198e">ToString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="73" column="23" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="221" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a88c1baa247493f6ba6a6cd179f10b8e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; State &gt; open_spiel::baseT::baseTState::Clone</definition>
+        <argsstring>() const override</argsstring>
+        <name>Clone</name>
+        <qualifiedname>open_spiel::baseT::baseTState::Clone</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a252ac372f002809f41be1003e50f9ca4">Clone</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="74" column="27" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="227" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a26e6f5018d4f9c75a7bb8679a8623a87" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::baseT::baseTState::ObservationString</definition>
+        <argsstring>(Player player) const override</argsstring>
+        <name>ObservationString</name>
+        <qualifiedname>open_spiel::baseT::baseTState::ObservationString</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1ad2bbdb6b0d9513ea5f9fc4d8d16a2f8e">ObservationString</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="75" column="23" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="460" bodyend="489"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a6422575c75cd24e8444d8938003c0607" compoundref="base_type_8h" startline="96">open_spiel::baseT::MapState::cells_v</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a158af3aecd154cfdc3e1d9498de69a8d" compoundref="base_type_8h" startline="99">open_spiel::baseT::MapState::current_unique_unit_id</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6f0ae115ff986d522f90c5e1d18d71b8" compoundref="base_t_8cc" startline="417" endline="458">get_cell_observation_string</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" compoundref="base_t_8h" startline="113">map_size</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+        <referencedby refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="kbg__test_8cc" startline="10" endline="64">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::set_next_unit_to_action</definition>
+        <argsstring>()</argsstring>
+        <name>set_next_unit_to_action</name>
+        <qualifiedname>open_spiel::baseT::baseTState::set_next_unit_to_action</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="76" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="254" bodyend="269"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae10e7d5b335b44bb623a0c38a6217cbc" compoundref="base_t_8cc" startline="271" endline="294">set_next_unit_to_action_rand_all_p</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" compoundref="base_t_8cc" startline="296" endline="321">set_next_unit_to_action_rand_per_p</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a10007f185220c4323e2acc82ecd50385" compoundref="base_t_8h" startline="122">unit_selection_order</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7eacbe6d04d8a8e7310c02bfc819488d5bb" compoundref="base_type_8h" startline="19">open_spiel::baseT::USO_ALL_P_RAND</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7eaef03e8d46fd57f1d5fcd9ee181a03763" compoundref="base_type_8h" startline="19">open_spiel::baseT::USO_PER_P_RAND</references>
+        <referencedby refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="kbg__test_8cc" startline="10" endline="64">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::deploy_unit</definition>
+        <argsstring>(int player_id, bool is_alive, int shift_dstc, int atk_dstc, int vw_dstc, float hp, float power, UnitClass unit_class, MapCoord crd, std::string name)</argsstring>
+        <name>deploy_unit</name>
+        <qualifiedname>open_spiel::baseT::baseTState::deploy_unit</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>player_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_alive</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>shift_dstc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>atk_dstc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vw_dstc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hp</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>power</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08f" kindref="member">UnitClass</ref></type>
+          <declname>unit_class</declname>
+        </param>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+          <declname>crd</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="77" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="700" bodyend="709"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac636de5cc424cdef50e99e1af612f02b" compoundref="base_t_8cc" startline="516" endline="616">action_select_tile</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">open_spiel::State::num_players_</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac58e79674f658b353aeeb919f362f939" compoundref="base_t_8h" startline="132">unique_id_to_player_id_v</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2ae1fb9c3f9dde62caa852eda3a4fbe8" compoundref="base_t_8h" startline="118">unique_unit_id_count</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0b44e571e7dabfcd48098cf4de22ba5a" compoundref="base_t_8h" startline="117">unit_id_count</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a06578e637777f9491b15b08cf6f4041a" compoundref="base_type_8h" startline="95">open_spiel::baseT::MapState::units_v</references>
+        <referencedby refid="classopen__spiel_1_1kbg_1_1kbg_state_1a2922ebb3a8ff3e500683fc5eb8c9b03d" compoundref="ki__bo__gung_8cc" startline="110" endline="134">open_spiel::kbg::kbgState::init_unit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a4aa7a9803410fc0cfb1cfc3e1d21d984" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210" kindref="member">UnitActionState</ref></type>
+        <definition>UnitActionState open_spiel::baseT::baseTState::CurrentUAS</definition>
+        <argsstring>() const</argsstring>
+        <name>CurrentUAS</name>
+        <qualifiedname>open_spiel::baseT::baseTState::CurrentUAS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="81" column="19" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="127" bodyend="130"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1ab3a35d86f57d82f42ebf16d3b0f42f97" compoundref="base_type_8h" startline="101">open_spiel::baseT::MapState::current_uas</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <referencedby refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="kbg__test_8cc" startline="10" endline="64">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1aa0b7b663f43a2b9a4356eff110ace5fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193d" kindref="member">PlayerActionState</ref></type>
+        <definition>PlayerActionState open_spiel::baseT::baseTState::CurrentPAS</definition>
+        <argsstring>() const</argsstring>
+        <name>CurrentPAS</name>
+        <qualifiedname>open_spiel::baseT::baseTState::CurrentPAS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="82" column="21" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="141" bodyend="144"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a04df2aa61d879687013ea9dc347ce641" compoundref="base_t_8h" startline="121">current_pas</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a2d690c8827f64f5bc07f148dc870c9e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::CurrentUniqueUnitId</definition>
+        <argsstring>() const</argsstring>
+        <name>CurrentUniqueUnitId</name>
+        <qualifiedname>open_spiel::baseT::baseTState::CurrentUniqueUnitId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="83" column="7" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="132" bodyend="135"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a158af3aecd154cfdc3e1d9498de69a8d" compoundref="base_type_8h" startline="99">open_spiel::baseT::MapState::current_unique_unit_id</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <referencedby refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="kbg__test_8cc" startline="10" endline="64">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a84d182f9b2362a5b9be63f181f1193f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::CurrentUnitId</definition>
+        <argsstring>() const</argsstring>
+        <name>CurrentUnitId</name>
+        <qualifiedname>open_spiel::baseT::baseTState::CurrentUnitId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="84" column="7" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="137" bodyend="140"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a7f012f2caab8eaafbe6073c7dd7d1ac0" compoundref="base_type_8h" startline="100">open_spiel::baseT::MapState::current_player_unit_id</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <referencedby refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="kbg__test_8cc" startline="10" endline="64">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a6df22a3f31c04d507b854c9a8aa644d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::SetNextUAS</definition>
+        <argsstring>()</argsstring>
+        <name>SetNextUAS</name>
+        <qualifiedname>open_spiel::baseT::baseTState::SetNextUAS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="85" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="146" bodyend="157"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab4329031fc1032d4f6c170947524380d" compoundref="base_t_8h" startline="133">game_uak</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820ad05f5712d599a7afc4f058176aa852bd" compoundref="base_type_8h" startline="16">open_spiel::baseT::UA_Kind_1step</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820ad641c88c7e8325b65d3a7c197d6b4eaf" compoundref="base_type_8h" startline="16">open_spiel::baseT::UA_Kind_2step</references>
+        <referencedby refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="kbg__test_8cc" startline="10" endline="64">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1af0e8bc2cc0b37f5e9b477fe23ee72f3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::SetNextPAS</definition>
+        <argsstring>()</argsstring>
+        <name>SetNextPAS</name>
+        <qualifiedname>open_spiel::baseT::baseTState::SetNextPAS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="86" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="178" bodyend="194"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a04df2aa61d879687013ea9dc347ce641" compoundref="base_t_8h" startline="121">current_pas</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193daf778252867c88562ee6851a6dc6513b2" compoundref="base_type_8h" startline="14">open_spiel::baseT::PA_Action</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193da9b96ae88b17191fd485914a5105a4f43" compoundref="base_type_8h" startline="14">open_spiel::baseT::PA_None</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193da3e7c7477a30c3a7b0bec3969cd139982" compoundref="base_type_8h" startline="14">open_spiel::baseT::PA_Obs</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193dacbb0e11ffb04ad1af06d4f8cb78bace8" compoundref="base_type_8h" startline="14">open_spiel::baseT::PA_Think</references>
+        <referencedby refid="kbg__test_8cc_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="kbg__test_8cc" startline="10" endline="64">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a57a36566c44ce5ee6d99bdcb0a2d84d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::SetNextPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>SetNextPlayer</name>
+        <qualifiedname>open_spiel::baseT::baseTState::SetNextPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="87" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="195" bodyend="201"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1af21ca1b8e7fca29bd8c3cbb7c01ae80a" compoundref="base_type_8h" startline="98">open_spiel::baseT::MapState::current_player</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">open_spiel::State::num_players_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a4672d2912ae7cb5fda21e160c427a3b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::ObservationTensorBaseT</definition>
+        <argsstring>(Player player)</argsstring>
+        <name>ObservationTensorBaseT</name>
+        <qualifiedname>open_spiel::baseT::baseTState::ObservationTensorBaseT</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="88" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="692" bodyend="698"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1af654d270b4ab00648c37e9617fcc94a5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::DoApplyAction</definition>
+        <argsstring>(Action move) override</argsstring>
+        <name>DoApplyAction</name>
+        <qualifiedname>open_spiel::baseT::baseTState::DoApplyAction</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1af2b72b90cb27986377e1867bb713f07d">DoApplyAction</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="91" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="331" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ac636de5cc424cdef50e99e1af612f02b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::action_select_tile</definition>
+        <argsstring>(int pn, int unit_id, MapCoord tg_crd, bool is_init)</argsstring>
+        <name>action_select_tile</name>
+        <qualifiedname>open_spiel::baseT::baseTState::action_select_tile</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>unit_id</declname>
+        </param>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+          <declname>tg_crd</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_init</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unique_unit_id = UNone;</para>
+<para>msn.cells_v[mine.crd.z][mine.crd.y][mine.crd.x].occupying_unit_id = mine.unit_id;</para>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="93" column="15" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="516" bodyend="616"/>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1af3c7da451b0cc77bca508fc12161ba87" compoundref="base_type_8h" startline="63">open_spiel::baseT::Unit::atk_dstc</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1a289507df3a0baea29cdd6b205a961c26" compoundref="base_type_8h" startline="70">open_spiel::baseT::Unit::being_observed_by</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a6422575c75cd24e8444d8938003c0607" compoundref="base_type_8h" startline="96">open_spiel::baseT::MapState::cells_v</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1afb6c62653e6fe7c31c470b8f94ff7a3b" compoundref="base_type_8h" startline="69">open_spiel::baseT::Unit::crd</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aed1a550468e99047a479f5ed59dabd09" compoundref="base_t_8cc" startline="618" endline="629">get_set_error</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a547d91a883e33e15b821e0430734c4a2" compoundref="base_type_8h" startline="9">open_spiel::baseT::GT_CannotEnter</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a86190289987c5d404dea69ee72253ff5" compoundref="base_type_8h" startline="9">open_spiel::baseT::GT_None</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" compoundref="base_t_8h" startline="113">map_size</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0af15aa1abffcd67bf54739969e394c498" compoundref="base_type_8h" startline="13">open_spiel::baseT::ObsRefDown</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0ae44e8fa055bb247fa19efca6cc2d573d" compoundref="base_type_8h" startline="13">open_spiel::baseT::ObsRefUp</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1a540ef0396a63a601d137914a64ba711b" compoundref="base_type_8h" startline="68">open_spiel::baseT::Unit::player</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a6fedcc3e5dbfaec66517ae083022879ca31ea680d89755f78e27525c6b1d0fffa" compoundref="base_type_8h" startline="17">open_spiel::baseT::PNone</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" compoundref="base_t_8cc" startline="729" endline="769">set_cell_and_obs</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1a2907144e60a12627d0b4addcb605abb0" compoundref="base_type_8h" startline="61">open_spiel::baseT::Unit::unique_unit_id</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1adf844708a40647d52382a5d418f9f744" compoundref="base_type_8h" startline="60">open_spiel::baseT::Unit::unit_id</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a06578e637777f9491b15b08cf6f4041a" compoundref="base_type_8h" startline="95">open_spiel::baseT::MapState::units_v</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a89f89ce09300d96353257fbc0930d474a9440d926c199493eae07c988b20dfb4f" compoundref="base_type_8h" startline="18">open_spiel::baseT::UNone</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" compoundref="base_t_8cc" startline="700" endline="709">deploy_unit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ad2e14532082ba02dc13546031adba3fa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::scout</definition>
+        <argsstring>(int pn, int unit_id, ObsRefCount o_r_c)</argsstring>
+        <name>scout</name>
+        <qualifiedname>open_spiel::baseT::baseTState::scout</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>unit_id</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0" kindref="member">ObsRefCount</ref></type>
+          <declname>o_r_c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="94" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="651" bodyend="689"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a6422575c75cd24e8444d8938003c0607" compoundref="base_type_8h" startline="96">open_spiel::baseT::MapState::cells_v</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1afb6c62653e6fe7c31c470b8f94ff7a3b" compoundref="base_type_8h" startline="69">open_spiel::baseT::Unit::crd</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a86190289987c5d404dea69ee72253ff5" compoundref="base_type_8h" startline="9">open_spiel::baseT::GT_None</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" compoundref="base_t_8h" startline="113">map_size</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0a03b9fc5eaa1b2b4a951a2bb5a00bfd94" compoundref="base_type_8h" startline="13">open_spiel::baseT::ObsRefNone</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a6fedcc3e5dbfaec66517ae083022879ca31ea680d89755f78e27525c6b1d0fffa" compoundref="base_type_8h" startline="17">open_spiel::baseT::PNone</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" compoundref="base_t_8cc" startline="729" endline="769">set_cell_and_obs</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a06578e637777f9491b15b08cf6f4041a" compoundref="base_type_8h" startline="95">open_spiel::baseT::MapState::units_v</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1a20115dacfe834f7d2a608ec49a418aeb" compoundref="base_type_8h" startline="64">open_spiel::baseT::Unit::vw_dstc</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" compoundref="base_t_8cc" startline="729" endline="769">set_cell_and_obs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::init_first</definition>
+        <argsstring>(int max_u, int piece_tn, int last_mn, int supply_n, int land_channel_d, UnitSelectionOrder uso, MapCoord ms, UnitActionKind game_uak)</argsstring>
+        <name>init_first</name>
+        <qualifiedname>open_spiel::baseT::baseTState::init_first</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>max_u</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>piece_tn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>last_mn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>supply_n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>land_channel_d</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7e" kindref="member">UnitSelectionOrder</ref></type>
+          <declname>uso</declname>
+        </param>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+          <declname>ms</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820" kindref="member">UnitActionKind</ref></type>
+          <declname>game_uak</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="95" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="354" bodyend="414"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab116dedd343ede7e4f7d6b15547c857b" compoundref="base_t_8cc" startline="821" endline="840">cells_to_obs</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a04df2aa61d879687013ea9dc347ce641" compoundref="base_t_8h" startline="121">current_pas</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1af21ca1b8e7fca29bd8c3cbb7c01ae80a" compoundref="base_type_8h" startline="98">open_spiel::baseT::MapState::current_player</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1ab3a35d86f57d82f42ebf16d3b0f42f97" compoundref="base_type_8h" startline="101">open_spiel::baseT::MapState::current_uas</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab4329031fc1032d4f6c170947524380d" compoundref="base_t_8h" startline="133">game_uak</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa230dadaa0d199d8b7f2d69bb9b4ef15" compoundref="base_t_8h" startline="123">ground_type_num</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1afb7f380f98cf7e23364cc6ce3a69d1df" compoundref="base_t_8h" startline="126">land_info_channel_depth</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a887a4094e27fa25d85a9d5217e7ec2db" compoundref="base_t_8h" startline="130">last_move_len</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" compoundref="base_t_8h" startline="113">map_size</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0bd6b95f931c88084697b3dd765c3eff" compoundref="base_t_8h" startline="116">max_units</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">open_spiel::State::num_players_</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193da3e7c7477a30c3a7b0bec3969cd139982" compoundref="base_type_8h" startline="14">open_spiel::baseT::PA_Obs</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac41af26c91b5add5b7c4defe42c4f7c7" compoundref="base_t_8h" startline="127">piece_type_n</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2dc10f3c7e575edea6c42887c21d03df" compoundref="base_t_8h" startline="131">supply_v</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1af4a5caa583d02de970ada6a278cc2703" compoundref="base_t_8h" startline="119">turn_unit_per_p_v</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210a12b698b1251998d78d50d80a4cc955c2" compoundref="base_type_8h" startline="15">open_spiel::baseT::UA_Act_0</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2ae1fb9c3f9dde62caa852eda3a4fbe8" compoundref="base_t_8h" startline="118">unique_unit_id_count</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0b44e571e7dabfcd48098cf4de22ba5a" compoundref="base_t_8h" startline="117">unit_id_count</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a10007f185220c4323e2acc82ecd50385" compoundref="base_t_8h" startline="122">unit_selection_order</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a06578e637777f9491b15b08cf6f4041a" compoundref="base_type_8h" startline="95">open_spiel::baseT::MapState::units_v</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a89f89ce09300d96353257fbc0930d474a9440d926c199493eae07c988b20dfb4f" compoundref="base_type_8h" startline="18">open_spiel::baseT::UNone</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7eacbe6d04d8a8e7310c02bfc819488d5bb" compoundref="base_type_8h" startline="19">open_spiel::baseT::USO_ALL_P_RAND</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7eaef03e8d46fd57f1d5fcd9ee181a03763" compoundref="base_type_8h" startline="19">open_spiel::baseT::USO_PER_P_RAND</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+        <referencedby refid="classopen__spiel_1_1kbg_1_1kbg_state_1a526e132880ab17539dee1d8f516fe4b2" compoundref="ki__bo__gung_8cc" startline="55" endline="60">open_spiel::kbg::kbgState::kbgState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a6f0ae115ff986d522f90c5e1d18d71b8" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::baseT::baseTState::get_cell_observation_string</definition>
+        <argsstring>(MapState state, MapCoord crd, int p) const</argsstring>
+        <name>get_cell_observation_string</name>
+        <qualifiedname>open_spiel::baseT::baseTState::get_cell_observation_string</qualifiedname>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_map_state" kindref="compound">MapState</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+          <declname>crd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="98" column="23" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="417" bodyend="458"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a6422575c75cd24e8444d8938003c0607" compoundref="base_type_8h" startline="96">open_spiel::baseT::MapState::cells_v</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a547d91a883e33e15b821e0430734c4a2" compoundref="base_type_8h" startline="9">open_spiel::baseT::GT_CannotEnter</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a7e89b06b9731c34b44613c5d73b23b77" compoundref="base_type_8h" startline="9">open_spiel::baseT::GT_Normal</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0bd6b95f931c88084697b3dd765c3eff" compoundref="base_t_8h" startline="116">max_units</references>
+        <references refid="namespaceopen__spiel_1_1base_t_1a6fedcc3e5dbfaec66517ae083022879ca31ea680d89755f78e27525c6b1d0fffa" compoundref="base_type_8h" startline="17">open_spiel::baseT::PNone</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a26e6f5018d4f9c75a7bb8679a8623a87" compoundref="base_t_8cc" startline="460" endline="489">ObservationString</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1aed1a550468e99047a479f5ed59dabd09" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::baseT::baseTState::get_set_error</definition>
+        <argsstring>(std::string log, bool is_save)</argsstring>
+        <name>get_set_error</name>
+        <qualifiedname>open_spiel::baseT::baseTState::get_set_error</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_save</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="99" column="23" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="618" bodyend="629"/>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac636de5cc424cdef50e99e1af612f02b" compoundref="base_t_8cc" startline="516" endline="616">action_select_tile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ad28ce776013babd3b3b7844164aa5bc4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+        <definition>MapCoord open_spiel::baseT::baseTState::id_to_crd</definition>
+        <argsstring>(Action a)</argsstring>
+        <name>id_to_crd</name>
+        <qualifiedname>open_spiel::baseT::baseTState::id_to_crd</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="100" column="20" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="233" bodyend="242"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" compoundref="base_t_8h" startline="113">map_size</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ae963870fa1777a9cc5bbc3db5919320f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespaceopen__spiel_1a8aa5fc5cff0ef466697b1df5cbfcbd3a" kindref="member">Action</ref></type>
+        <definition>Action open_spiel::baseT::baseTState::crd_to_id</definition>
+        <argsstring>(MapCoord crd)</argsstring>
+        <name>crd_to_id</name>
+        <qualifiedname>open_spiel::baseT::baseTState::crd_to_id</qualifiedname>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+          <declname>crd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="101" column="18" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="244" bodyend="252"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" compoundref="base_t_8h" startline="113">map_size</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a11a113c452cfdfc4e55f93d720821eac" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::ObservationTensorBaseT_Land</definition>
+        <argsstring>(Player player, int last_index)</argsstring>
+        <name>ObservationTensorBaseT_Land</name>
+        <qualifiedname>open_spiel::baseT::baseTState::ObservationTensorBaseT_Land</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>last_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="102" column="7" bodyfile="open_spiel/games/SG/baseT_utils.cc" bodystart="9" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ae10e7d5b335b44bb623a0c38a6217cbc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::set_next_unit_to_action_rand_all_p</definition>
+        <argsstring>()</argsstring>
+        <name>set_next_unit_to_action_rand_all_p</name>
+        <qualifiedname>open_spiel::baseT::baseTState::set_next_unit_to_action_rand_all_p</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="103" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="271" bodyend="294"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1af21ca1b8e7fca29bd8c3cbb7c01ae80a" compoundref="base_type_8h" startline="98">open_spiel::baseT::MapState::current_player</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a7f012f2caab8eaafbe6073c7dd7d1ac0" compoundref="base_type_8h" startline="100">open_spiel::baseT::MapState::current_player_unit_id</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a158af3aecd154cfdc3e1d9498de69a8d" compoundref="base_type_8h" startline="99">open_spiel::baseT::MapState::current_unique_unit_id</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd6c019a2901580f5bb5eb91f9a9ca21" compoundref="base_t_8cc" startline="323" endline="329">get_unit_by_uniqueId</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1a540ef0396a63a601d137914a64ba711b" compoundref="base_type_8h" startline="68">open_spiel::baseT::Unit::player</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a43c4868babadab0049677655907f41fc" compoundref="base_t_8h" startline="120">turn_unit_all_p_v</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2ae1fb9c3f9dde62caa852eda3a4fbe8" compoundref="base_t_8h" startline="118">unique_unit_id_count</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1adf844708a40647d52382a5d418f9f744" compoundref="base_type_8h" startline="60">open_spiel::baseT::Unit::unit_id</references>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" compoundref="base_t_8cc" startline="254" endline="269">set_next_unit_to_action</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::set_next_unit_to_action_rand_per_p</definition>
+        <argsstring>()</argsstring>
+        <name>set_next_unit_to_action_rand_per_p</name>
+        <qualifiedname>open_spiel::baseT::baseTState::set_next_unit_to_action_rand_per_p</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="104" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="296" bodyend="321"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1af21ca1b8e7fca29bd8c3cbb7c01ae80a" compoundref="base_type_8h" startline="98">open_spiel::baseT::MapState::current_player</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a7f012f2caab8eaafbe6073c7dd7d1ac0" compoundref="base_type_8h" startline="100">open_spiel::baseT::MapState::current_player_unit_id</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a158af3aecd154cfdc3e1d9498de69a8d" compoundref="base_type_8h" startline="99">open_spiel::baseT::MapState::current_unique_unit_id</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2" compoundref="base_t_8cc" startline="121" endline="125">CurrentPlayer</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd6c019a2901580f5bb5eb91f9a9ca21" compoundref="base_t_8cc" startline="323" endline="329">get_unit_by_uniqueId</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0bd6b95f931c88084697b3dd765c3eff" compoundref="base_t_8h" startline="116">max_units</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1a540ef0396a63a601d137914a64ba711b" compoundref="base_type_8h" startline="68">open_spiel::baseT::Unit::player</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1af4a5caa583d02de970ada6a278cc2703" compoundref="base_t_8h" startline="119">turn_unit_per_p_v</references>
+        <references refid="classopen__spiel_1_1base_t_1_1_unit_1adf844708a40647d52382a5d418f9f744" compoundref="base_type_8h" startline="60">open_spiel::baseT::Unit::unit_id</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a06578e637777f9491b15b08cf6f4041a" compoundref="base_type_8h" startline="95">open_spiel::baseT::MapState::units_v</references>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" compoundref="base_t_8cc" startline="254" endline="269">set_next_unit_to_action</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1afd6c019a2901580f5bb5eb91f9a9ca21" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classopen__spiel_1_1base_t_1_1_unit" kindref="compound">Unit</ref> &amp;</type>
+        <definition>Unit &amp; open_spiel::baseT::baseTState::get_unit_by_uniqueId</definition>
+        <argsstring>(int unique_id)</argsstring>
+        <name>get_unit_by_uniqueId</name>
+        <qualifiedname>open_spiel::baseT::baseTState::get_unit_by_uniqueId</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>unique_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="105" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="323" bodyend="329"/>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac58e79674f658b353aeeb919f362f939" compoundref="base_t_8h" startline="132">unique_id_to_player_id_v</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a06578e637777f9491b15b08cf6f4041a" compoundref="base_type_8h" startline="95">open_spiel::baseT::MapState::units_v</references>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae10e7d5b335b44bb623a0c38a6217cbc" compoundref="base_t_8cc" startline="271" endline="294">set_next_unit_to_action_rand_all_p</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" compoundref="base_t_8cc" startline="296" endline="321">set_next_unit_to_action_rand_per_p</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a91a1c26ee2f1857cf0b3991fd2b348b0" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::ObservationTensor</definition>
+        <argsstring>(Player player, absl::Span&lt; float &gt; values) const</argsstring>
+        <name>ObservationTensor</name>
+        <qualifiedname>open_spiel::baseT::baseTState::ObservationTensor</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_state_1a0d367e1c9121ecbf6c0467f200fd4b96">ObservationTensor</reimplements>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>absl::Span&lt; float &gt;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="106" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="712" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::set_cell_and_obs</definition>
+        <argsstring>(struct Cell_set_flags flags, struct Cell cell, struct MapCoord crd, int player_n, int8_t ref_c, struct scout_info sc_info)</argsstring>
+        <name>set_cell_and_obs</name>
+        <qualifiedname>open_spiel::baseT::baseTState::set_cell_and_obs</qualifiedname>
+        <param>
+          <type>struct <ref refid="structopen__spiel_1_1base_t_1_1_cell__set__flags" kindref="compound">Cell_set_flags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structopen__spiel_1_1base_t_1_1_cell" kindref="compound">Cell</ref></type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+          <declname>crd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>player_n</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>ref_c</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structopen__spiel_1_1base_t_1_1scout__info" kindref="compound">scout_info</ref></type>
+          <declname>sc_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="107" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="729" bodyend="769"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell_1ad97fbde8c6e13c62bd13fa99721df39f" compoundref="base_type_8h" startline="46">open_spiel::baseT::Cell::being_observed_by</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a6422575c75cd24e8444d8938003c0607" compoundref="base_type_8h" startline="96">open_spiel::baseT::MapState::cells_v</references>
+        <references refid="structopen__spiel_1_1base_t_1_1scout__info_1a8665a6a6104c522b7b47c1fd0b8e9f6b" compoundref="base_type_8h" startline="22">open_spiel::baseT::scout_info::do_scout</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell_1a7d4edc2c8e0f189c25d3684e83287d9a" compoundref="base_type_8h" startline="42">open_spiel::baseT::Cell::ground_type</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell__set__flags_1a2a6200543c4a5538368b1ab6513fc55e" compoundref="base_type_8h" startline="54">open_spiel::baseT::Cell_set_flags::is_bob</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell__set__flags_1a9756abc5238c63a8f6824c2e4ffdfb12" compoundref="base_type_8h" startline="50">open_spiel::baseT::Cell_set_flags::is_gtype</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell__set__flags_1a43c9078997fe9915a34d9df273329305" compoundref="base_type_8h" startline="51">open_spiel::baseT::Cell_set_flags::is_op</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell__set__flags_1aa339b10b80e05833e6d7b0bcf5e6f6a5" compoundref="base_type_8h" startline="52">open_spiel::baseT::Cell_set_flags::is_oui</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell__set__flags_1a8d2ddc3b38a4cf88853f46c643796aa6" compoundref="base_type_8h" startline="53">open_spiel::baseT::Cell_set_flags::is_ouui</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">open_spiel::State::num_players_</references>
+        <references refid="structopen__spiel_1_1base_t_1_1scout__info_1a756a32d86c3ebf35b47dd3947b4854e7" compoundref="base_type_8h" startline="22">open_spiel::baseT::scout_info::o_r_c</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a7a56ad1ae720032d86b2d1509056e462" compoundref="base_t_8h" startline="128">obs_per_p_v</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell_1a0a311e934ce275e7295da73238bce885" compoundref="base_type_8h" startline="43">open_spiel::baseT::Cell::occupying_player</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell_1a58145f0d93a1979f0b0ede8887399afc" compoundref="base_type_8h" startline="45">open_spiel::baseT::Cell::occupying_unique_unit_id</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_cell_1ab364d54174f731d02b20d473a4d5dab1" compoundref="base_type_8h" startline="44">open_spiel::baseT::Cell::occupying_unit_id</references>
+        <references refid="structopen__spiel_1_1base_t_1_1scout__info_1a9d0307dac6bbaeb9ffdc1e3a20e47598" compoundref="base_type_8h" startline="22">open_spiel::baseT::scout_info::p</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad2e14532082ba02dc13546031adba3fa" compoundref="base_t_8cc" startline="651" endline="689">scout</references>
+        <references refid="structopen__spiel_1_1base_t_1_1scout__info_1ac1dcbbfa1c5888ba59e941a3e03d42a1" compoundref="base_type_8h" startline="22">open_spiel::baseT::scout_info::unit_id</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac636de5cc424cdef50e99e1af612f02b" compoundref="base_t_8cc" startline="516" endline="616">action_select_tile</referencedby>
+        <referencedby refid="classopen__spiel_1_1kbg_1_1kbg_state_1a0633ab17163575de9251176dfb42b738" compoundref="ki__bo__gung_8cc" startline="77" endline="104">open_spiel::kbg::kbgState::init_map</referencedby>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad2e14532082ba02dc13546031adba3fa" compoundref="base_t_8cc" startline="651" endline="689">scout</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ab116dedd343ede7e4f7d6b15547c857b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::cells_to_obs</definition>
+        <argsstring>()</argsstring>
+        <name>cells_to_obs</name>
+        <qualifiedname>open_spiel::baseT::baseTState::cells_to_obs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="110" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="821" bodyend="840"/>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_state_1a6422575c75cd24e8444d8938003c0607" compoundref="base_type_8h" startline="96">open_spiel::baseT::MapState::cells_v</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" compoundref="base_t_8h" startline="113">map_size</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" compoundref="base_t_8h" startline="114">msn</references>
+        <references refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" compoundref="spiel_8h" startline="730">open_spiel::State::num_players_</references>
+        <references refid="classopen__spiel_1_1base_t_1_1base_t_state_1a7a56ad1ae720032d86b2d1509056e462" compoundref="base_t_8h" startline="128">obs_per_p_v</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a24c9f6dc187432a9fd2d4b519fe76246" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::x</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1aed7be471d4042dd2100d1686a7e10df0" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::y</references>
+        <references refid="structopen__spiel_1_1base_t_1_1_map_coord_1a021ada6b5f57068e5b02f34bc434279b" compoundref="base_type_8h" startline="27">open_spiel::baseT::MapCoord::z</references>
+        <referencedby refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" compoundref="base_t_8cc" startline="354" endline="414">init_first</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1adae9ff5624af24a548b291b0af6859df" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::is_watched_by_others</definition>
+        <argsstring>(Player player, std::vector&lt; int8_t &gt; &amp;being_observed_by)</argsstring>
+        <name>is_watched_by_others</name>
+        <qualifiedname>open_spiel::baseT::baseTState::is_watched_by_others</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1a8e9bf6a040c687a9f0c8393728dc0121" kindref="member">Player</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; int8_t &gt; &amp;</type>
+          <declname>being_observed_by</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="111" column="7" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="631" bodyend="648"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a19d86a22bdb87cba6a309837fe420579" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::init_cells</definition>
+        <argsstring>()</argsstring>
+        <name>init_cells</name>
+        <qualifiedname>open_spiel::baseT::baseTState::init_cells</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="139" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="842" bodyend="850"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a3929fb909748dac9dc3fb7365872acb9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::init_obs</definition>
+        <argsstring>()</argsstring>
+        <name>init_obs</name>
+        <qualifiedname>open_spiel::baseT::baseTState::init_obs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="140" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="771" bodyend="783"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a2a8c5153056cd06a7454957b67d3f6a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::init_map</definition>
+        <argsstring>()</argsstring>
+        <name>init_map</name>
+        <qualifiedname>open_spiel::baseT::baseTState::init_map</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1kbg_1_1kbg_state_1a0633ab17163575de9251176dfb42b738">init_map</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="141" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="338" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ae8b51f3ae6206e6fa8ad4615dab40113" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::init_unit</definition>
+        <argsstring>()</argsstring>
+        <name>init_unit</name>
+        <qualifiedname>open_spiel::baseT::baseTState::init_unit</qualifiedname>
+        <reimplementedby refid="classopen__spiel_1_1kbg_1_1kbg_state_1a2922ebb3a8ff3e500683fc5eb8c9b03d">init_unit</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="142" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ac01f241ac06b1b925c67c1405f5320f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::init_server</definition>
+        <argsstring>()</argsstring>
+        <name>init_server</name>
+        <qualifiedname>open_spiel::baseT::baseTState::init_server</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="143" column="16" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="348" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a8ef8ec925e857b920d8de7c0bcff1487" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::set_obs_onehot_vector</definition>
+        <argsstring>(std::vector&lt; int8_t &gt; &amp;now_obs_v, Cell &amp;now_cell, int p)</argsstring>
+        <name>set_obs_onehot_vector</name>
+        <qualifiedname>open_spiel::baseT::baseTState::set_obs_onehot_vector</qualifiedname>
+        <param>
+          <type>std::vector&lt; int8_t &gt; &amp;</type>
+          <declname>now_obs_v</declname>
+        </param>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_cell" kindref="compound">Cell</ref> &amp;</type>
+          <declname>now_cell</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="144" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="785" bodyend="819"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1afb60baf226adaa935c7f2a9f315f80b6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::distance_between</definition>
+        <argsstring>(MapCoord crd_0, MapCoord crd_1)</argsstring>
+        <name>distance_between</name>
+        <qualifiedname>open_spiel::baseT::baseTState::distance_between</qualifiedname>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+          <declname>crd_0</declname>
+        </param>
+        <param>
+          <type><ref refid="structopen__spiel_1_1base_t_1_1_map_coord" kindref="compound">MapCoord</ref></type>
+          <declname>crd_1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="145" column="7" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="491" bodyend="506"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a4ecd0ea773482c2aedc4dc250b305824" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::baseT::baseTState::attack</definition>
+        <argsstring>(Unit &amp;target_unit, Unit &amp;src_unit)</argsstring>
+        <name>attack</name>
+        <qualifiedname>open_spiel::baseT::baseTState::attack</qualifiedname>
+        <param>
+          <type><ref refid="classopen__spiel_1_1base_t_1_1_unit" kindref="compound">Unit</ref> &amp;</type>
+          <declname>target_unit</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1base_t_1_1_unit" kindref="compound">Unit</ref> &amp;</type>
+          <declname>src_unit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="146" column="7" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="509" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1a360bed88d61f65ab835e57a3d7c5bdba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::SetNextUAS_1step</definition>
+        <argsstring>()</argsstring>
+        <name>SetNextUAS_1step</name>
+        <qualifiedname>open_spiel::baseT::baseTState::SetNextUAS_1step</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="147" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1base_t_1_1base_t_state_1ab4fd51b9fcd9a124d47a4a276659d8f4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::baseT::baseTState::SetNextUAS_2step</definition>
+        <argsstring>()</argsstring>
+        <name>SetNextUAS_2step</name>
+        <qualifiedname>open_spiel::baseT::baseTState::SetNextUAS_2step</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseT.h" line="148" column="8" bodyfile="open_spiel/games/SG/baseT.cc" bodystart="164" bodyend="177"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>open_spiel::State</label>
+        <link refid="classopen__spiel_1_1_state"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::baseT::baseTState</label>
+        <link refid="classopen__spiel_1_1base_t_1_1base_t_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>open_spiel::kbg::kbgState</label>
+        <link refid="classopen__spiel_1_1kbg_1_1kbg_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>enum</label>
+      </node>
+      <node id="2">
+        <label>open_spiel::State</label>
+        <link refid="classopen__spiel_1_1_state"/>
+      </node>
+      <node id="3">
+        <label>open_spiel::baseT::MapCoord</label>
+        <link refid="structopen__spiel_1_1base_t_1_1_map_coord"/>
+      </node>
+      <node id="4">
+        <label>open_spiel::baseT::MapState</label>
+        <link refid="structopen__spiel_1_1base_t_1_1_map_state"/>
+      </node>
+      <node id="1">
+        <label>open_spiel::baseT::baseTState</label>
+        <link refid="classopen__spiel_1_1base_t_1_1base_t_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#map_size</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#msn</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#game_uak</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/games/SG/baseT.h" line="60" column="1" bodyfile="open_spiel/games/SG/baseT.h" bodystart="60" bodyend="152"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac636de5cc424cdef50e99e1af612f02b" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>action_select_tile</name></member>
+      <member refid="classopen__spiel_1_1_state_1af8cc963b423ec2a56e6b5292a8d9f6df" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ActionsConsistentWithInformationFrom</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae36794c0d6337e0f5e4cd5dc10788e61" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0467f66e4c157eab1aa4140bcb856e3f" prot="public" virt="non-virtual" ambiguityscope="open_spiel::State::"><scope>open_spiel::baseT::baseTState</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1_state_1aafbfbb43035eddbb2d7aa2aeffeed825" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ApplyAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1a18246f9ef0085ec8c93791e8127f0be1" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>ApplyActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a479150baad280f0f236d2cced41ddc13" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>ApplyActionsWithLegalityChecks</name></member>
+      <member refid="classopen__spiel_1_1_state_1a6fcd275fa47ab9d26a473321c60e0a95" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ApplyActionWithLegalityCheck</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4ecd0ea773482c2aedc4dc250b305824" prot="private" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>attack</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a42cab2176731e93afc6e54b3e195afdf" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>baseTState</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1af9862334790cf8f44fa587452a736236" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>baseTState</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab116dedd343ede7e4f7d6b15547c857b" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>cells_to_obs</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa177f864d35f39d38aaa7551e21b9b3b" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1_state_1ae86a2e3710382c2aa7383abe21934825" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>Child</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a88c1baa247493f6ba6a6cd179f10b8e4" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>Clone</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae963870fa1777a9cc5bbc3db5919320f" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>crd_to_id</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a04df2aa61d879687013ea9dc347ce641" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>current_pas</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa0b7b663f43a2b9a4356eff110ace5fe" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>CurrentPAS</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ade6e526922bd837159be18780d1f08f2" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>CurrentPlayer</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4aa7a9803410fc0cfb1cfc3e1d21d984" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>CurrentUAS</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2d690c8827f64f5bc07f148dc870c9e2" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>CurrentUniqueUnitId</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a84d182f9b2362a5b9be63f181f1193f4" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>CurrentUnitId</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1af347937cd719a6154e4f97186d757038" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>deploy_unit</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1afb60baf226adaa935c7f2a9f315f80b6" prot="private" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>distance_between</name></member>
+      <member refid="classopen__spiel_1_1_state_1a51e334578eba7ca7ce10518964021179" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>DistributionSupport</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1af654d270b4ab00648c37e9617fcc94a5" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>DoApplyAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1aec9dc1eda262140e878bd4dcfedca13b" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>DoApplyActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a61d84cb66edc9a12fa6d6f46873411d5" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>FullHistory</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4aed0817448ce100d3f76a7529263e93" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>game_</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab4329031fc1032d4f6c170947524380d" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>game_uak</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6f0ae115ff986d522f90c5e1d18d71b8" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>get_cell_observation_string</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1aed1a550468e99047a479f5ed59dabd09" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>get_set_error</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd6c019a2901580f5bb5eb91f9a9ca21" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>get_unit_by_uniqueId</name></member>
+      <member refid="classopen__spiel_1_1_state_1a7fff989fb01a5d93e849ed6fe406cc3f" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>GetGame</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0a85ab6f45efdcf19d00531f7c59a3e0" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>GetHistoriesConsistentWithInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1aaf3da3c4030a5563d84ec198f089cd87" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>GetHistoriesConsistentWithInfostate</name></member>
+      <member refid="classopen__spiel_1_1_state_1a85fe23e126a3c9f263b4e87922a01b0f" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa230dadaa0d199d8b7f2d69bb9b4ef15" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>ground_type_num</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad128b0fe37fa9439328ad27a7ba11cbd" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>History</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa121d1e77bb8a6219aeaec0b764a2e22" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>history_</name></member>
+      <member refid="classopen__spiel_1_1_state_1a148bf75c2afdad5489b684d2d7014aab" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>HistoryString</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad28ce776013babd3b3b7844164aa5bc4" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>id_to_crd</name></member>
+      <member refid="classopen__spiel_1_1_state_1a31bb588b60127656dbc189c9886e2155" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>InformationStateString</name></member>
+      <member refid="classopen__spiel_1_1_state_1a75f81af7266685a7412960554e3d792e" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>InformationStateString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ae3c75cd43d2bdc470399171d25bf3f1f" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3f36b8d61693315cfd2cfeb6fd8ad8cd" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a7971caff7b5a3506fa53a5e85c01253b" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a9753ec678915734fe38f4e86e3309894" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>InformationStateTensor</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a19d86a22bdb87cba6a309837fe420579" prot="private" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>init_cells</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae7fc3654b0d4b4ce60c8c6d19163871c" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>init_first</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2a8c5153056cd06a7454957b67d3f6a5" prot="private" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>init_map</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a3929fb909748dac9dc3fb7365872acb9" prot="private" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>init_obs</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac01f241ac06b1b925c67c1405f5320f0" prot="private" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>init_server</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae8b51f3ae6206e6fa8ad4615dab40113" prot="private" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>init_unit</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a32bfa8f11a37ecf5bad70a6c7e335be9" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>ipc_server</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1adae9ff5624af24a548b291b0af6859df" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>is_watched_by_others</name></member>
+      <member refid="classopen__spiel_1_1_state_1a8289468cf01f3a8c53b3848957905ec8" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>IsChanceNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1acb22b26b3e8134b4380ff329562cf4b2" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>IsInitialState</name></member>
+      <member refid="classopen__spiel_1_1_state_1a9fd53f8e7abb3d779b1a3a135ec306f5" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>IsMeanFieldNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1a501c7bded99ae4fff9e34dd340e5edd8" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>IsPlayerActing</name></member>
+      <member refid="classopen__spiel_1_1_state_1a53434c13daf176733c44502734acf320" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>IsPlayerNode</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0d4853e33975ff760264dcd2c8399dd7" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>IsSimultaneousNode</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1acf7403b244fc8bf4826d115ee4714039" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>IsTerminal</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1afb7f380f98cf7e23364cc6ce3a69d1df" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>land_info_channel_depth</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a887a4094e27fa25d85a9d5217e7ec2db" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>last_move_len</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae1fcc7dea2a058cd9659540a3e183cd0" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>LegalActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1af177c3229ec75caec0b41d5c799b35e1" prot="public" virt="virtual" ambiguityscope="open_spiel::State::"><scope>open_spiel::baseT::baseTState</scope><name>LegalActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1ac024b6c48d8b99a2004532362484efe3" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>LegalActionsMask</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4f481e63a08d15a060bc35d8ad6e448c" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>LegalActionsMask</name></member>
+      <member refid="classopen__spiel_1_1_state_1a610b46ccda2eefd984a3716a5219f78a" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>LegalChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0567cd25b590bd54d9d09aa9e17f089d" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>Map_history</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1aa7b6b0c7bb3a9fb482d81933f22363ad" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>map_size</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0bd6b95f931c88084697b3dd765c3eff" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>max_units</name></member>
+      <member refid="classopen__spiel_1_1_state_1ac721b1cb2b8dccaec4350278fc5cb724" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>MeanFieldPopulation</name></member>
+      <member refid="classopen__spiel_1_1_state_1a127ada084056b47d96839440dbbe3a2f" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>move_number_</name></member>
+      <member refid="classopen__spiel_1_1_state_1aea56c32f2cbd62b2a6a280010ddd54ee" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>MoveNumber</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a18aa6dbf21f02d80a5fea72d230e8927" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>msn</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3a374a3e9cbc2993efec3ae375fb1e93" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>num_distinct_actions_</name></member>
+      <member refid="classopen__spiel_1_1_state_1aa907ffe3dd80025bd074d95cc87fb7a4" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>num_players_</name></member>
+      <member refid="classopen__spiel_1_1_state_1ada4c2b6afc305febbe7e52bc569e005e" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1_state_1a43f01fe8bdbb6292407feb51bc535d4f" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a7a56ad1ae720032d86b2d1509056e462" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>obs_per_p_v</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a10afd836b7211d3a20dd85f93dd00c25" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>obs_total_channel_depth</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a26e6f5018d4f9c75a7bb8679a8623a87" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ObservationString</name></member>
+      <member refid="classopen__spiel_1_1_state_1ad628d2576aa064b332d813b91de44438" prot="public" virt="non-virtual" ambiguityscope="open_spiel::State::"><scope>open_spiel::baseT::baseTState</scope><name>ObservationString</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a91a1c26ee2f1857cf0b3991fd2b348b0" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a5bca09400e38cffa15eb7a5fb7e73cb6" prot="public" virt="non-virtual" ambiguityscope="open_spiel::State::"><scope>open_spiel::baseT::baseTState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1a2ffb39ff0f133e2cae27bf4bddf8e4ac" prot="public" virt="non-virtual" ambiguityscope="open_spiel::State::"><scope>open_spiel::baseT::baseTState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1_state_1adc0a7f028252d613b8a4ccb6c6b0de15" prot="public" virt="non-virtual" ambiguityscope="open_spiel::State::"><scope>open_spiel::baseT::baseTState</scope><name>ObservationTensor</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a4672d2912ae7cb5fda21e160c427a3b9" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>ObservationTensorBaseT</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a11a113c452cfdfc4e55f93d720821eac" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>ObservationTensorBaseT_Land</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1af570bad799dc0575ea3cd2cb3ddda31f" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>operator=</name></member>
+      <member refid="classopen__spiel_1_1_state_1a3e336272587c1c62a8455412b7105ebf" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac41af26c91b5add5b7c4defe42c4f7c7" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>piece_type_n</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab32ea9872b81db0383b9d7206d1ae3f9" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>PlayerReturn</name></member>
+      <member refid="classopen__spiel_1_1_state_1a510f85123de13949d34186755753e742" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>PlayerReward</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1bee92c295ffd0404712cd6004ab9df0" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ResampleFromInfostate</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a48c5439902ef0239be7510b9bc56bf59" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>Returns</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4be3f52bb42fdf9db3c90a40dd1a60d2" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>Rewards</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ad2e14532082ba02dc13546031adba3fa" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>scout</name></member>
+      <member refid="classopen__spiel_1_1_state_1a1a6bf403d6d8bcc41b36634a7fa8b1eb" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a093277c6dcbc4e7694de8d62fa45aa68" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>set_cell_and_obs</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a55e1e41fad28df46f511cdf6386648ac" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>set_next_unit_to_action</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ae10e7d5b335b44bb623a0c38a6217cbc" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>set_next_unit_to_action_rand_all_p</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1afd8270d0191e221ee5d2a5c28cc757c6" prot="protected" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>set_next_unit_to_action_rand_per_p</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a8ef8ec925e857b920d8de7c0bcff1487" prot="private" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>set_obs_onehot_vector</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1af0e8bc2cc0b37f5e9b477fe23ee72f3b" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>SetNextPAS</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a57a36566c44ce5ee6d99bdcb0a2d84d5" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>SetNextPlayer</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a6df22a3f31c04d507b854c9a8aa644d7" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>SetNextUAS</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a360bed88d61f65ab835e57a3d7c5bdba" prot="private" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>SetNextUAS_1step</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ab4fd51b9fcd9a124d47a4a276659d8f4" prot="private" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>SetNextUAS_2step</name></member>
+      <member refid="classopen__spiel_1_1_state_1a246bd5cf1da14d3ab69d479aea0edc03" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>State</name></member>
+      <member refid="classopen__spiel_1_1_state_1a4c77fe7bf4738cb8bd3bbd6dfadddf9c" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>State</name></member>
+      <member refid="classopen__spiel_1_1_state_1acbd1f66c9496f350693594ad38fc7907" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>StringToAction</name></member>
+      <member refid="classopen__spiel_1_1_state_1abd0bac25b0d9ced7f5f1009fd56ec1ae" prot="public" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>StringToAction</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2dc10f3c7e575edea6c42887c21d03df" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>supply_v</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a3faa248c30ac5235797d881509b9c4b4" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a43c4868babadab0049677655907f41fc" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>turn_unit_all_p_v</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1af4a5caa583d02de970ada6a278cc2703" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>turn_unit_per_p_v</name></member>
+      <member refid="classopen__spiel_1_1_state_1ab355df7c0595648cb657eb9aa1ab9a50" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>UndoAction</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1ac58e79674f658b353aeeb919f362f939" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>unique_id_to_player_id_v</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a2ae1fb9c3f9dde62caa852eda3a4fbe8" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>unique_unit_id_count</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a0b44e571e7dabfcd48098cf4de22ba5a" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>unit_id_count</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a10007f185220c4323e2acc82ecd50385" prot="protected" virt="non-virtual"><scope>open_spiel::baseT::baseTState</scope><name>unit_selection_order</name></member>
+      <member refid="classopen__spiel_1_1_state_1a0e4105f5d7a425bc9d7393ae56f1f854" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>UpdateDistribution</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_state_1a66671b52e5472d46aa554b7764b14807" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>~baseTState</name></member>
+      <member refid="classopen__spiel_1_1_state_1abef057180744ea28a0cd85289ce0761e" prot="public" virt="virtual"><scope>open_spiel::baseT::baseTState</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

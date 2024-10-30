@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceopen__spiel_1_1python_1_1rl__environment" kind="namespace" language="Python">
+    <compoundname>open_spiel::python::rl_environment</compoundname>
+    <innerclass refid="classopen__spiel_1_1python_1_1rl__environment_1_1_chance_event_sampler" prot="public">open_spiel::python::rl_environment::ChanceEventSampler</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment" prot="public">open_spiel::python::rl_environment::Environment</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1rl__environment_1_1_observation_type" prot="public">open_spiel::python::rl_environment::ObservationType</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1rl__environment_1_1_step_type" prot="public">open_spiel::python::rl_environment::StepType</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1rl__environment_1_1_time_step" prot="public">open_spiel::python::rl_environment::TimeStep</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceopen__spiel_1_1python_1_1rl__environment_1a5bb3fae1640112ec92991402f1e0a860" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel::python::rl_environment.SIMULTANEOUS_PLAYER_ID</definition>
+        <argsstring></argsstring>
+        <name>SIMULTANEOUS_PLAYER_ID</name>
+        <qualifiedname>open_spiel.python.rl_environment.SIMULTANEOUS_PLAYER_ID</qualifiedname>
+        <initializer>=  pyspiel.PlayerId.SIMULTANEOUS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="55" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceopen__spiel_1_1python_1_1rl__environment_1a7d8a6f2ba399844f1949c48e2848d18f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_environment.registered_games</definition>
+        <argsstring>()</argsstring>
+        <name>registered_games</name>
+        <qualifiedname>open_spiel.python.rl_environment.registered_games</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_environment.py" line="115" column="1" bodyfile="open_spiel/python/rl_environment.py" bodystart="115" bodyend="118"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Reinforcement Learning (RL) Environment for Open Spiel.
+
+This module wraps Open Spiel Python interface providing an RL-friendly API. It
+covers both turn-based and simultaneous move games. Interactions between agents
+and the underlying game occur mostly through the `reset` and `step` methods,
+which return a `TimeStep` structure (see its docstrings for more info).
+
+The following example illustrates the interaction dynamics. Consider a 2-player
+Kuhn Poker (turn-based game). Agents have access to the `observations` (a dict)
+field from `TimeSpec`, containing the following members:
+ * `info_state`: list containing the game information state for each player. The
+   size of the list always correspond to the number of players. E.g.:
+   [[0, 1, 0, 0, 0, 0], [1, 0, 0, 0, 0, 0]].
+ * `legal_actions`: list containing legal action ID lists (one for each player).
+   E.g.: [[0, 1], [0]], which corresponds to actions 0 and 1 being valid for
+   player 0 (the 1st player) and action 0 being valid for player 1 (2nd player).
+ * `current_player`: zero-based integer representing the player to make a move.
+
+At each `step` call, the environment expects a singleton list with the action
+(as it&apos;s a turn-based game), e.g.: [1]. This (zero-based) action must correspond
+to the player specified at `current_player`. The game (which is at decision
+node) will process the action and take as many steps necessary to cover chance
+nodes, halting at a new decision or final node. Finally, a new `TimeStep`is
+returned to the agent.
+
+Simultaneous-move games follow analogous dynamics. The only differences is the
+environment expects a list of actions, one per player. Note the `current_player`
+field is &quot;irrelevant&quot; here, admitting a constant value defined in spiel.h, which
+defaults to -2 (module level constant `SIMULTANEOUS_PLAYER_ID`).
+
+See open_spiel/python/examples/rl_example.py for example usages.
+</verbatim> </para>
+    </detaileddescription>
+    <location file="open_spiel/python/rl_environment.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

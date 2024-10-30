@@ -1,0 +1,788 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceopen__spiel_1_1base_t" kind="namespace" language="C++">
+    <compoundname>open_spiel::baseT</compoundname>
+    <innerclass refid="classopen__spiel_1_1base_t_1_1base_t_game" prot="public">open_spiel::baseT::baseTGame</innerclass>
+    <innerclass refid="classopen__spiel_1_1base_t_1_1base_t_state" prot="public">open_spiel::baseT::baseTState</innerclass>
+    <innerclass refid="structopen__spiel_1_1base_t_1_1_cell" prot="public">open_spiel::baseT::Cell</innerclass>
+    <innerclass refid="structopen__spiel_1_1base_t_1_1_cell__set__flags" prot="public">open_spiel::baseT::Cell_set_flags</innerclass>
+    <innerclass refid="structopen__spiel_1_1base_t_1_1_map_coord" prot="public">open_spiel::baseT::MapCoord</innerclass>
+    <innerclass refid="structopen__spiel_1_1base_t_1_1_map_state" prot="public">open_spiel::baseT::MapState</innerclass>
+    <innerclass refid="structopen__spiel_1_1base_t_1_1_p___cell" prot="public">open_spiel::baseT::P_Cell</innerclass>
+    <innerclass refid="structopen__spiel_1_1base_t_1_1_p___unit_id" prot="public">open_spiel::baseT::P_UnitId</innerclass>
+    <innerclass refid="structopen__spiel_1_1base_t_1_1scout__info" prot="public">open_spiel::baseT::scout_info</innerclass>
+    <innerclass refid="classopen__spiel_1_1base_t_1_1_unit" prot="public">open_spiel::baseT::Unit</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>GroundType</name>
+        <qualifiedname>open_spiel::baseT::GroundType</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a7e89b06b9731c34b44613c5d73b23b77" prot="public">
+          <name>GT_Normal</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a547d91a883e33e15b821e0430734c4a2" prot="public">
+          <name>GT_CannotEnter</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a86190289987c5d404dea69ee72253ff5" prot="public">
+          <name>GT_None</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a7e89b06b9731c34b44613c5d73b23b77" prot="public">
+          <name>GT_Normal</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a547d91a883e33e15b821e0430734c4a2" prot="public">
+          <name>GT_CannotEnter</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a86190289987c5d404dea69ee72253ff5" prot="public">
+          <name>GT_None</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="9" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1abfa32b13dbb2a5ac0324588dd2e10104" prot="public" static="no" strong="no">
+        <type></type>
+        <name>UnitDirection</name>
+        <qualifiedname>open_spiel::baseT::UnitDirection</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1abfa32b13dbb2a5ac0324588dd2e10104a79294771f938aa6e46fdea2f96be4c7a" prot="public">
+          <name>D_North</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1abfa32b13dbb2a5ac0324588dd2e10104a769dc4f82a40558cd17dd8d7946482fc" prot="public">
+          <name>D_West</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1abfa32b13dbb2a5ac0324588dd2e10104a7ff757994490a03e86d06c30f1796823" prot="public">
+          <name>D_South</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1abfa32b13dbb2a5ac0324588dd2e10104a4de88f339c510c255d2ef46340bfa0cf" prot="public">
+          <name>D_East</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1abfa32b13dbb2a5ac0324588dd2e10104aecbbded97a4d07b6ba56b14439caee50" prot="public">
+          <name>D_None</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="10" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>UnitClass</name>
+        <qualifiedname>open_spiel::baseT::UnitClass</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faa9a80237c33d0f32418b2a9b550f6943" prot="public">
+          <name>C0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa8bf3f5f52869f02ff487444372baef73" prot="public">
+          <name>C1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fadac354e707cc3373a29db4e6dd1ffd7e" prot="public">
+          <name>C2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faffcc08fd8a4101cb58455a3054f1ed6a" prot="public">
+          <name>C3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa27871b92c8fc7f8668d8b1b0ff98cd47" prot="public">
+          <name>C4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa4671c0ad808e3ae8e69909a7be337b49" prot="public">
+          <name>C5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa945a79cc5ed450f9957ef039287120cd" prot="public">
+          <name>C6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa87dc09c9f727d321faefacb12e4ad596" prot="public">
+          <name>C7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fad3a1198c8dc9fcd6a229f29019e39106" prot="public">
+          <name>C8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa48786a71e0586f1e86e28b0b75f65b29" prot="public">
+          <name>C9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa3808b5cb3d3d4780d572f6d8f03788c5" prot="public">
+          <name>CNone</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faa9a80237c33d0f32418b2a9b550f6943" prot="public">
+          <name>C0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa8bf3f5f52869f02ff487444372baef73" prot="public">
+          <name>C1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fadac354e707cc3373a29db4e6dd1ffd7e" prot="public">
+          <name>C2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faffcc08fd8a4101cb58455a3054f1ed6a" prot="public">
+          <name>C3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa27871b92c8fc7f8668d8b1b0ff98cd47" prot="public">
+          <name>C4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa4671c0ad808e3ae8e69909a7be337b49" prot="public">
+          <name>C5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa945a79cc5ed450f9957ef039287120cd" prot="public">
+          <name>C6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa87dc09c9f727d321faefacb12e4ad596" prot="public">
+          <name>C7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fad3a1198c8dc9fcd6a229f29019e39106" prot="public">
+          <name>C8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa48786a71e0586f1e86e28b0b75f65b29" prot="public">
+          <name>C9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa3808b5cb3d3d4780d572f6d8f03788c5" prot="public">
+          <name>CNone</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="11" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1aea20ae7f8e1298882ae55efee17592dc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ActionType</name>
+        <qualifiedname>open_spiel::baseT::ActionType</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1aea20ae7f8e1298882ae55efee17592dca4e4570126cd26d0d9613128e9ea1b709" prot="public">
+          <name>AMove</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1aea20ae7f8e1298882ae55efee17592dcad2c5e4abc54e4b432ac24770ff11eb3a" prot="public">
+          <name>AAttk</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1aea20ae7f8e1298882ae55efee17592dca6225a6c68a4c67cc9ce226a92c6e92d6" prot="public">
+          <name>ANone</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="12" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ObsRefCount</name>
+        <qualifiedname>open_spiel::baseT::ObsRefCount</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0ae44e8fa055bb247fa19efca6cc2d573d" prot="public">
+          <name>ObsRefUp</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0af15aa1abffcd67bf54739969e394c498" prot="public">
+          <name>ObsRefDown</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a13e2ec2cfcc64da2bdf88b6b5177d1f0a03b9fc5eaa1b2b4a951a2bb5a00bfd94" prot="public">
+          <name>ObsRefNone</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="13" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PlayerActionState</name>
+        <qualifiedname>open_spiel::baseT::PlayerActionState</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193da3e7c7477a30c3a7b0bec3969cd139982" prot="public">
+          <name>PA_Obs</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193dacbb0e11ffb04ad1af06d4f8cb78bace8" prot="public">
+          <name>PA_Think</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193daf778252867c88562ee6851a6dc6513b2" prot="public">
+          <name>PA_Action</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a2e15b27a978eadc0f161cbe0bf36193da9b96ae88b17191fd485914a5105a4f43" prot="public">
+          <name>PA_None</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="14" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210" prot="public" static="no" strong="no">
+        <type></type>
+        <name>UnitActionState</name>
+        <qualifiedname>open_spiel::baseT::UnitActionState</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210a12b698b1251998d78d50d80a4cc955c2" prot="public">
+          <name>UA_Act_0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210a6480547d200953f324dbd47c02d84621" prot="public">
+          <name>UA_attk</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a8b64a310e8d3d2adf0c3885844c0c210a308dd28ad1eb209471aedd721b057374" prot="public">
+          <name>UA_None</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="15" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820" prot="public" static="no" strong="no">
+        <type></type>
+        <name>UnitActionKind</name>
+        <qualifiedname>open_spiel::baseT::UnitActionKind</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820ad05f5712d599a7afc4f058176aa852bd" prot="public">
+          <name>UA_Kind_1step</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a1faa1ee3dcc9f4f8142f000a1d10a820ad641c88c7e8325b65d3a7c197d6b4eaf" prot="public">
+          <name>UA_Kind_2step</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="16" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a6fedcc3e5dbfaec66517ae083022879c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PlayerN</name>
+        <qualifiedname>open_spiel::baseT::PlayerN</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a6fedcc3e5dbfaec66517ae083022879ca31ea680d89755f78e27525c6b1d0fffa" prot="public">
+          <name>PNone</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="17" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a89f89ce09300d96353257fbc0930d474" prot="public" static="no" strong="no">
+        <type></type>
+        <name>UnitN</name>
+        <qualifiedname>open_spiel::baseT::UnitN</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a89f89ce09300d96353257fbc0930d474a9440d926c199493eae07c988b20dfb4f" prot="public">
+          <name>UNone</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="18" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>UnitSelectionOrder</name>
+        <qualifiedname>open_spiel::baseT::UnitSelectionOrder</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7eacbe6d04d8a8e7310c02bfc819488d5bb" prot="public">
+          <name>USO_ALL_P_RAND</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7eaef03e8d46fd57f1d5fcd9ee181a03763" prot="public">
+          <name>USO_PER_P_RAND</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a5477112451464b4f5b2dbabed3faac7eac6b0b37706b546ba28db8eef9691a2e1" prot="public">
+          <name>USO_None</name>
+          <initializer>=-1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/baseType.h" line="19" column="1" bodyfile="open_spiel/games/SG/baseType.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5" prot="public" static="no" strong="no">
+        <type></type>
+        <name>GroundType</name>
+        <qualifiedname>open_spiel::baseT::GroundType</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a7e89b06b9731c34b44613c5d73b23b77" prot="public">
+          <name>GT_Normal</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a547d91a883e33e15b821e0430734c4a2" prot="public">
+          <name>GT_CannotEnter</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a86190289987c5d404dea69ee72253ff5" prot="public">
+          <name>GT_None</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a7e89b06b9731c34b44613c5d73b23b77" prot="public">
+          <name>GT_Normal</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a547d91a883e33e15b821e0430734c4a2" prot="public">
+          <name>GT_CannotEnter</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1ad1e9ae7df9a3f8c72ae781ffb6d787b5a86190289987c5d404dea69ee72253ff5" prot="public">
+          <name>GT_None</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/user_specified_type.h" line="7" column="1" bodyfile="open_spiel/games/SG/user_specified_type.h" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>UnitClass</name>
+        <qualifiedname>open_spiel::baseT::UnitClass</qualifiedname>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faa9a80237c33d0f32418b2a9b550f6943" prot="public">
+          <name>C0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa8bf3f5f52869f02ff487444372baef73" prot="public">
+          <name>C1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fadac354e707cc3373a29db4e6dd1ffd7e" prot="public">
+          <name>C2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faffcc08fd8a4101cb58455a3054f1ed6a" prot="public">
+          <name>C3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa27871b92c8fc7f8668d8b1b0ff98cd47" prot="public">
+          <name>C4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa4671c0ad808e3ae8e69909a7be337b49" prot="public">
+          <name>C5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa945a79cc5ed450f9957ef039287120cd" prot="public">
+          <name>C6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa87dc09c9f727d321faefacb12e4ad596" prot="public">
+          <name>C7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fad3a1198c8dc9fcd6a229f29019e39106" prot="public">
+          <name>C8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa48786a71e0586f1e86e28b0b75f65b29" prot="public">
+          <name>C9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa3808b5cb3d3d4780d572f6d8f03788c5" prot="public">
+          <name>CNone</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faa9a80237c33d0f32418b2a9b550f6943" prot="public">
+          <name>C0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa8bf3f5f52869f02ff487444372baef73" prot="public">
+          <name>C1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fadac354e707cc3373a29db4e6dd1ffd7e" prot="public">
+          <name>C2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08faffcc08fd8a4101cb58455a3054f1ed6a" prot="public">
+          <name>C3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa27871b92c8fc7f8668d8b1b0ff98cd47" prot="public">
+          <name>C4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa4671c0ad808e3ae8e69909a7be337b49" prot="public">
+          <name>C5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa945a79cc5ed450f9957ef039287120cd" prot="public">
+          <name>C6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa87dc09c9f727d321faefacb12e4ad596" prot="public">
+          <name>C7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fad3a1198c8dc9fcd6a229f29019e39106" prot="public">
+          <name>C8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa48786a71e0586f1e86e28b0b75f65b29" prot="public">
+          <name>C9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceopen__spiel_1_1base_t_1a36051c579891871042a78fba2c83d08fa3808b5cb3d3d4780d572f6d8f03788c5" prot="public">
+          <name>CNone</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/user_specified_type.h" line="8" column="1" bodyfile="open_spiel/games/SG/user_specified_type.h" bodystart="8" bodyend="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="open_spiel/games/SG/baseT.cc" line="8" column="3"/>
+  </compounddef>
+</doxygen>

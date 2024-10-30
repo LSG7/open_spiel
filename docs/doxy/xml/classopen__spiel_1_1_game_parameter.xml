@@ -1,0 +1,1020 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_game_parameter" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::GameParameter</compoundname>
+    <includes refid="game__parameters_8h" local="no">game_parameters.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>open_spiel::GameParameter::Type</qualifiedname>
+        <enumvalue id="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f" prot="public">
+          <name>kUnset</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0" prot="public">
+          <name>kInt</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28" prot="public">
+          <name>kDouble</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2" prot="public">
+          <name>kString</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc" prot="public">
+          <name>kBool</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca" prot="public">
+          <name>kGame</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="48" column="3" bodyfile="open_spiel/game_parameters.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_parameter_1a3725b691ac2275953b47060ebcfd1290" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::is_mandatory_</definition>
+        <argsstring></argsstring>
+        <name>is_mandatory_</name>
+        <qualifiedname>open_spiel::GameParameter::is_mandatory_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="168" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_parameter_1a0bd4b4bbfe6ff77166480075c9ae2785" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::GameParameter::int_value_</definition>
+        <argsstring></argsstring>
+        <name>int_value_</name>
+        <qualifiedname>open_spiel::GameParameter::int_value_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="177" column="7" bodyfile="open_spiel/game_parameters.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_parameter_1a75437f29a362aebc274219fef78a6159" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double open_spiel::GameParameter::double_value_</definition>
+        <argsstring></argsstring>
+        <name>double_value_</name>
+        <qualifiedname>open_spiel::GameParameter::double_value_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="178" column="10" bodyfile="open_spiel/game_parameters.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_parameter_1ad9cd1255f1d6f5da2ddd3ddd0721dba4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string open_spiel::GameParameter::string_value_</definition>
+        <argsstring></argsstring>
+        <name>string_value_</name>
+        <qualifiedname>open_spiel::GameParameter::string_value_</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="179" column="15" bodyfile="open_spiel/game_parameters.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_parameter_1ad716b97d61396956a449c832e3bd89c9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::bool_value_</definition>
+        <argsstring></argsstring>
+        <name>bool_value_</name>
+        <qualifiedname>open_spiel::GameParameter::bool_value_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="180" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_parameter_1afb306f0ed542fa26f74ca17a95819a57" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+        <definition>GameParameters open_spiel::GameParameter::game_value_</definition>
+        <argsstring></argsstring>
+        <name>game_value_</name>
+        <qualifiedname>open_spiel::GameParameter::game_value_</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="181" column="18" bodyfile="open_spiel/game_parameters.h" bodystart="181" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_game_parameter_1ad891564800d0e67d0397987bd6ad8fce" prot="private" static="no" mutable="no">
+        <type><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref></type>
+        <definition>Type open_spiel::GameParameter::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <qualifiedname>open_spiel::GameParameter::type_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="182" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a5248b0d1cbc4e09ba9f2d861d3925a58" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::GameParameter::GameParameter</definition>
+        <argsstring>(Type type=Type::kUnset, bool is_mandatory=false)</argsstring>
+        <name>GameParameter</name>
+        <qualifiedname>open_spiel::GameParameter::GameParameter</qualifiedname>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f" kindref="member">Type::kUnset</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_mandatory</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="50" column="12" bodyfile="open_spiel/game_parameters.h" bodystart="50" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1ad2948a238f1437429ffcc766ce2b819a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::GameParameter::GameParameter</definition>
+        <argsstring>(int value, bool is_mandatory=false)</argsstring>
+        <name>GameParameter</name>
+        <qualifiedname>open_spiel::GameParameter::GameParameter</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_mandatory</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="53" column="12" bodyfile="open_spiel/game_parameters.h" bodystart="53" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1ac56aa245c1055e62370b17cd322ed2a5" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::GameParameter::GameParameter</definition>
+        <argsstring>(double value, bool is_mandatory=false)</argsstring>
+        <name>GameParameter</name>
+        <qualifiedname>open_spiel::GameParameter::GameParameter</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_mandatory</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="56" column="12" bodyfile="open_spiel/game_parameters.h" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a5e69b201fcaee08c7425a32f13c3bdf0" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::GameParameter::GameParameter</definition>
+        <argsstring>(std::string value, bool is_mandatory=false)</argsstring>
+        <name>GameParameter</name>
+        <qualifiedname>open_spiel::GameParameter::GameParameter</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_mandatory</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="61" column="12" bodyfile="open_spiel/game_parameters.h" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1ae7081167a923e2da62e90ac878f5de6a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::GameParameter::GameParameter</definition>
+        <argsstring>(const char *value, bool is_mandatory=false)</argsstring>
+        <name>GameParameter</name>
+        <qualifiedname>open_spiel::GameParameter::GameParameter</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_mandatory</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="75" column="12" bodyfile="open_spiel/game_parameters.h" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1af22f0bdd56982171b922b37789caa0ce" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::GameParameter::GameParameter</definition>
+        <argsstring>(bool value, bool is_mandatory=false)</argsstring>
+        <name>GameParameter</name>
+        <qualifiedname>open_spiel::GameParameter::GameParameter</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_mandatory</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="80" column="12" bodyfile="open_spiel/game_parameters.h" bodystart="80" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a8bf20b25598bdc0d9946ac3d0a86ae43" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::GameParameter::GameParameter</definition>
+        <argsstring>(GameParameters value, bool is_mandatory=false)</argsstring>
+        <name>GameParameter</name>
+        <qualifiedname>open_spiel::GameParameter::GameParameter</qualifiedname>
+        <param>
+          <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_mandatory</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="83" column="12" bodyfile="open_spiel/game_parameters.h" bodystart="83" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a29f0d36362f3f07c67a91dc6a1ebcca6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::has_int_value</definition>
+        <argsstring>() const</argsstring>
+        <name>has_int_value</name>
+        <qualifiedname>open_spiel::GameParameter::has_int_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="89" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="89" bodyend="89"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0">kInt</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1aa2c522670524f93bf0f3e66d7e54c52c" compoundref="game__parameters_8cc" startline="276" endline="282">value_with_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1afe157eb4411ecf0b00bc214f32059643" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::has_double_value</definition>
+        <argsstring>() const</argsstring>
+        <name>has_double_value</name>
+        <qualifiedname>open_spiel::GameParameter::has_double_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="90" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="90" bodyend="90"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28">kDouble</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a295f5722de5e8187c2edd34274d58c64" compoundref="game__parameters_8cc" startline="284" endline="290">value_with_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a68fa91fd545a38c7b586473e1d1851fb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::has_string_value</definition>
+        <argsstring>() const</argsstring>
+        <name>has_string_value</name>
+        <qualifiedname>open_spiel::GameParameter::has_string_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="91" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="91" bodyend="91"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2">kString</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a91d875682614ad70405656b000efad36" compoundref="game__parameters_8cc" startline="292" endline="299">value_with_default</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1ae0f9099999e280cc64fb3119af3b6ffc" compoundref="game__parameters_8cc" startline="301" endline="307">value_with_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a23c27d6f48a44bc2fa161354e0b54cdb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::has_bool_value</definition>
+        <argsstring>() const</argsstring>
+        <name>has_bool_value</name>
+        <qualifiedname>open_spiel::GameParameter::has_bool_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="92" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="92" bodyend="92"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc">kBool</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a6aa85c9e6c1955ab6592b5c6d275cc59" compoundref="game__parameters_8cc" startline="309" endline="315">value_with_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1aa189ed96c9732997e47b4a8be37f2c03" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::has_game_value</definition>
+        <argsstring>() const</argsstring>
+        <name>has_game_value</name>
+        <qualifiedname>open_spiel::GameParameter::has_game_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="93" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="93" bodyend="93"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a6f0c523fb9eff239d9a82dbc227b907d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" kindref="member">Type</ref></type>
+        <definition>Type open_spiel::GameParameter::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <qualifiedname>open_spiel::GameParameter::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="94" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::is_mandatory</definition>
+        <argsstring>() const</argsstring>
+        <name>is_mandatory</name>
+        <qualifiedname>open_spiel::GameParameter::is_mandatory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="96" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="96" bodyend="96"/>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1ae97b3381b233541cd8890e10fc2ae4f5" compoundref="game__parameters_8cc" startline="77" endline="91">Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::GameParameter::ToString</definition>
+        <argsstring>() const</argsstring>
+        <name>ToString</name>
+        <qualifiedname>open_spiel::GameParameter::ToString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="100" column="15" bodyfile="open_spiel/game_parameters.cc" bodystart="57" bodyend="75"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" compoundref="game__parameters_8h" startline="126" endline="129">bool_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" compoundref="game__parameters_8h" startline="116" endline="119">double_value</references>
+        <references refid="namespaceopen__spiel_1afd524fdd6cfba8c1bc6055624f5bfe7d" compoundref="spiel__utils_8cc" startline="100" endline="117">open_spiel::FormatDouble</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" compoundref="game__parameters_8h" startline="131" endline="134">game_value</references>
+        <references refid="namespaceopen__spiel_1aa0832688fe92be988164cf8e87089ada" compoundref="game__parameters_8cc" startline="153" endline="170">open_spiel::GameParametersToString</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" compoundref="game__parameters_8h" startline="111" endline="114">int_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc">kBool</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28">kDouble</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0">kInt</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2">kString</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f">kUnset</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" compoundref="game__parameters_8h" startline="121" endline="124">string_value</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1ae97b3381b233541cd8890e10fc2ae4f5" compoundref="game__parameters_8cc" startline="77" endline="91">Serialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::GameParameter::ToReprString</definition>
+        <argsstring>() const</argsstring>
+        <name>ToReprString</name>
+        <qualifiedname>open_spiel::GameParameter::ToReprString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="104" column="15" bodyfile="open_spiel/game_parameters.cc" bodystart="35" bodyend="55"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" compoundref="game__parameters_8h" startline="126" endline="129">bool_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" compoundref="game__parameters_8h" startline="116" endline="119">double_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" compoundref="game__parameters_8h" startline="131" endline="134">game_value</references>
+        <references refid="namespaceopen__spiel_1aa0832688fe92be988164cf8e87089ada" compoundref="game__parameters_8cc" startline="153" endline="170">open_spiel::GameParametersToString</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" compoundref="game__parameters_8h" startline="111" endline="114">int_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc">kBool</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28">kDouble</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0">kInt</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2">kString</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f">kUnset</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" compoundref="game__parameters_8h" startline="121" endline="124">string_value</references>
+        <referencedby refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" compoundref="spiel_8h" startline="988" endline="1029">open_spiel::Game::ParameterValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1ae97b3381b233541cd8890e10fc2ae4f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::GameParameter::Serialize</definition>
+        <argsstring>(const std::string &amp;delimiter=kDefaultInternalDelimiter) const</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>open_spiel::GameParameter::Serialize</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>delimiter</declname>
+          <defval><ref refid="namespaceopen__spiel_1a46834d0f5d6fe1c930944e946d8a790e" kindref="member">kDefaultInternalDelimiter</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="108" column="15" bodyfile="open_spiel/game_parameters.cc" bodystart="77" bodyend="91"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" compoundref="game__parameters_8h" startline="131" endline="134">game_value</references>
+        <references refid="namespaceopen__spiel_1a9bc31aee9bea953807b92aa4399d1d10" compoundref="game__parameters_8cc" startline="227" endline="244">open_spiel::GameParameterTypeToString</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" compoundref="game__parameters_8h" startline="96" endline="96">is_mandatory</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2">kString</references>
+        <references refid="namespaceopen__spiel_1af4fbe25f93445525489169ed595bb330" compoundref="game__parameters_8cc" startline="120" endline="134">open_spiel::SerializeGameParameters</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" compoundref="game__parameters_8cc" startline="57" endline="75">ToString</references>
+        <referencedby refid="namespaceopen__spiel_1af4fbe25f93445525489169ed595bb330" compoundref="game__parameters_8cc" startline="120" endline="134">open_spiel::SerializeGameParameters</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int open_spiel::GameParameter::int_value</definition>
+        <argsstring>() const</argsstring>
+        <name>int_value</name>
+        <qualifiedname>open_spiel::GameParameter::int_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="111" column="7" bodyfile="open_spiel/game_parameters.h" bodystart="111" bodyend="114"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0">kInt</references>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" compoundref="game__parameters_8cc" startline="35" endline="55">ToReprString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" compoundref="game__parameters_8cc" startline="57" endline="75">ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a6b6d5eb14682a612f6dd6b5b3f030c0f" compoundref="game__parameters_8cc" startline="247" endline="249">value</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1aa2c522670524f93bf0f3e66d7e54c52c" compoundref="game__parameters_8cc" startline="276" endline="282">value_with_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double open_spiel::GameParameter::double_value</definition>
+        <argsstring>() const</argsstring>
+        <name>double_value</name>
+        <qualifiedname>open_spiel::GameParameter::double_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="116" column="10" bodyfile="open_spiel/game_parameters.h" bodystart="116" bodyend="119"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28">kDouble</references>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" compoundref="game__parameters_8cc" startline="35" endline="55">ToReprString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" compoundref="game__parameters_8cc" startline="57" endline="75">ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a92b31c41e2d4244db840ed3d4a3c804d" compoundref="game__parameters_8cc" startline="251" endline="253">value</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a295f5722de5e8187c2edd34274d58c64" compoundref="game__parameters_8cc" startline="284" endline="290">value_with_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; open_spiel::GameParameter::string_value</definition>
+        <argsstring>() const</argsstring>
+        <name>string_value</name>
+        <qualifiedname>open_spiel::GameParameter::string_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="121" column="21" bodyfile="open_spiel/game_parameters.h" bodystart="121" bodyend="124"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2">kString</references>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" compoundref="game__parameters_8cc" startline="35" endline="55">ToReprString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" compoundref="game__parameters_8cc" startline="57" endline="75">ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1ae5af2d0544af3b60d274dac126326a76" compoundref="game__parameters_8cc" startline="255" endline="257">value</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a91d875682614ad70405656b000efad36" compoundref="game__parameters_8cc" startline="292" endline="299">value_with_default</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1ae0f9099999e280cc64fb3119af3b6ffc" compoundref="game__parameters_8cc" startline="301" endline="307">value_with_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::bool_value</definition>
+        <argsstring>() const</argsstring>
+        <name>bool_value</name>
+        <qualifiedname>open_spiel::GameParameter::bool_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="126" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="126" bodyend="129"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc">kBool</references>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" compoundref="game__parameters_8cc" startline="35" endline="55">ToReprString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" compoundref="game__parameters_8cc" startline="57" endline="75">ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a55192dd17b834b057a0c54c1f36ce99a" compoundref="game__parameters_8cc" startline="263" endline="265">value</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a6aa85c9e6c1955ab6592b5c6d275cc59" compoundref="game__parameters_8cc" startline="309" endline="315">value_with_default</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;</type>
+        <definition>const GameParameters &amp; open_spiel::GameParameter::game_value</definition>
+        <argsstring>() const</argsstring>
+        <name>game_value</name>
+        <qualifiedname>open_spiel::GameParameter::game_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="131" column="24" bodyfile="open_spiel/game_parameters.h" bodystart="131" bodyend="134"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</references>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" compoundref="game__parameters_8h" startline="146" endline="164">operator==</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1ae97b3381b233541cd8890e10fc2ae4f5" compoundref="game__parameters_8cc" startline="77" endline="91">Serialize</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" compoundref="game__parameters_8cc" startline="35" endline="55">ToReprString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" compoundref="game__parameters_8cc" startline="57" endline="75">ToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1_game_parameter_1a2c37f301134a44824254d3f948090bbf" compoundref="game__parameters_8cc" startline="267" endline="269">value</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T open_spiel::GameParameter::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel::GameParameter::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="141" column="5"/>
+        <referencedby refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" compoundref="spiel_8h" startline="988" endline="1029">open_spiel::Game::ParameterValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a91cd85d7d7ec6a84ddfe6e67bf751161" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T open_spiel::GameParameter::value_with_default</definition>
+        <argsstring>(T default_value) const</argsstring>
+        <name>value_with_default</name>
+        <qualifiedname>open_spiel::GameParameter::value_with_default</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="144" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::operator==</definition>
+        <argsstring>(const GameParameter &amp;rhs) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>open_spiel::GameParameter::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game_parameter" kindref="compound">GameParameter</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="146" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="146" bodyend="164"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" compoundref="game__parameters_8h" startline="126" endline="129">bool_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" compoundref="game__parameters_8h" startline="116" endline="119">double_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" compoundref="game__parameters_8h" startline="131" endline="134">game_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a23c27d6f48a44bc2fa161354e0b54cdb" compoundref="game__parameters_8h" startline="92" endline="92">has_bool_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1afe157eb4411ecf0b00bc214f32059643" compoundref="game__parameters_8h" startline="90" endline="90">has_double_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1aa189ed96c9732997e47b4a8be37f2c03" compoundref="game__parameters_8h" startline="93" endline="93">has_game_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a29f0d36362f3f07c67a91dc6a1ebcca6" compoundref="game__parameters_8h" startline="89" endline="89">has_int_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a68fa91fd545a38c7b586473e1d1851fb" compoundref="game__parameters_8h" startline="91" endline="91">has_string_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" compoundref="game__parameters_8h" startline="111" endline="114">int_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a18268c9f691ba5a5f650049d9d0da8dc">kBool</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a7fb3efa35444cd88d5a31dc125ca9c28">kDouble</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871aa0ea15bd49d6b8071efbed0aa70539ca">kGame</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a355088fbd6ac81f051e0bd6ede5ab8e0">kInt</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871a302e56d566a2561033b27c13680ea4b2">kString</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871ac69d34d47bfd5244204004878441d53f">kUnset</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" compoundref="game__parameters_8h" startline="121" endline="124">string_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1ac1e51b6c7c97146d4a364e98ebbbcf00" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::operator!=</definition>
+        <argsstring>(const GameParameter &amp;rhs) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>open_spiel::GameParameter::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game_parameter" kindref="compound">GameParameter</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.h" line="165" column="8" bodyfile="open_spiel/game_parameters.h" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a6b6d5eb14682a612f6dd6b5b3f030c0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int open_spiel::GameParameter::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel::GameParameter::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="247" column="5" bodyfile="open_spiel/game_parameters.cc" bodystart="247" bodyend="249"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" compoundref="game__parameters_8h" startline="111" endline="114">int_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a92b31c41e2d4244db840ed3d4a3c804d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>double</type>
+        <definition>double open_spiel::GameParameter::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel::GameParameter::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="251" column="8" bodyfile="open_spiel/game_parameters.cc" bodystart="251" bodyend="253"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" compoundref="game__parameters_8h" startline="116" endline="119">double_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1ae5af2d0544af3b60d274dac126326a76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; open_spiel::GameParameter::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel::GameParameter::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="255" column="19" bodyfile="open_spiel/game_parameters.cc" bodystart="255" bodyend="257"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" compoundref="game__parameters_8h" startline="121" endline="124">string_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a7e9f2005c092f618a9598458a41eca42" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string open_spiel::GameParameter::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel::GameParameter::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="259" column="13" bodyfile="open_spiel/game_parameters.cc" bodystart="259" bodyend="261"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" compoundref="game__parameters_8h" startline="121" endline="124">string_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a55192dd17b834b057a0c54c1f36ce99a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel::GameParameter::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="263" column="6" bodyfile="open_spiel/game_parameters.cc" bodystart="263" bodyend="265"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" compoundref="game__parameters_8h" startline="126" endline="129">bool_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a2c37f301134a44824254d3f948090bbf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;</type>
+        <definition>const GameParameters &amp; open_spiel::GameParameter::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel::GameParameter::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="267" column="22" bodyfile="open_spiel/game_parameters.cc" bodystart="267" bodyend="269"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" compoundref="game__parameters_8h" startline="131" endline="134">game_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a6383ab0ec4ab2334c3129ced04364c7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type><ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref></type>
+        <definition>GameParameters open_spiel::GameParameter::value</definition>
+        <argsstring>() const</argsstring>
+        <name>value</name>
+        <qualifiedname>open_spiel::GameParameter::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="271" column="16" bodyfile="open_spiel/game_parameters.cc" bodystart="271" bodyend="273"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" compoundref="game__parameters_8h" startline="131" endline="134">game_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1aa2c522670524f93bf0f3e66d7e54c52c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int open_spiel::GameParameter::value_with_default</definition>
+        <argsstring>(int default_value) const</argsstring>
+        <name>value_with_default</name>
+        <qualifiedname>open_spiel::GameParameter::value_with_default</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="276" column="5" bodyfile="open_spiel/game_parameters.cc" bodystart="276" bodyend="282"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a29f0d36362f3f07c67a91dc6a1ebcca6" compoundref="game__parameters_8h" startline="89" endline="89">has_int_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" compoundref="game__parameters_8h" startline="111" endline="114">int_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a295f5722de5e8187c2edd34274d58c64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>double</type>
+        <definition>double open_spiel::GameParameter::value_with_default</definition>
+        <argsstring>(double default_value) const</argsstring>
+        <name>value_with_default</name>
+        <qualifiedname>open_spiel::GameParameter::value_with_default</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="284" column="8" bodyfile="open_spiel/game_parameters.cc" bodystart="284" bodyend="290"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" compoundref="game__parameters_8h" startline="116" endline="119">double_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1afe157eb4411ecf0b00bc214f32059643" compoundref="game__parameters_8h" startline="90" endline="90">has_double_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a91d875682614ad70405656b000efad36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; open_spiel::GameParameter::value_with_default</definition>
+        <argsstring>(const std::string &amp;default_value) const</argsstring>
+        <name>value_with_default</name>
+        <qualifiedname>open_spiel::GameParameter::value_with_default</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="292" column="19" bodyfile="open_spiel/game_parameters.cc" bodystart="292" bodyend="299"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a68fa91fd545a38c7b586473e1d1851fb" compoundref="game__parameters_8h" startline="91" endline="91">has_string_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" compoundref="game__parameters_8h" startline="121" endline="124">string_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1ae0f9099999e280cc64fb3119af3b6ffc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string open_spiel::GameParameter::value_with_default</definition>
+        <argsstring>(std::string default_value) const</argsstring>
+        <name>value_with_default</name>
+        <qualifiedname>open_spiel::GameParameter::value_with_default</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="301" column="13" bodyfile="open_spiel/game_parameters.cc" bodystart="301" bodyend="307"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a68fa91fd545a38c7b586473e1d1851fb" compoundref="game__parameters_8h" startline="91" endline="91">has_string_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" compoundref="game__parameters_8h" startline="121" endline="124">string_value</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_game_parameter_1a6aa85c9e6c1955ab6592b5c6d275cc59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool open_spiel::GameParameter::value_with_default</definition>
+        <argsstring>(bool default_value) const</argsstring>
+        <name>value_with_default</name>
+        <qualifiedname>open_spiel::GameParameter::value_with_default</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/game_parameters.cc" line="309" column="6" bodyfile="open_spiel/game_parameters.cc" bodystart="309" bodyend="315"/>
+        <references refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" compoundref="game__parameters_8h" startline="126" endline="129">bool_value</references>
+        <references refid="classopen__spiel_1_1_game_parameter_1a23c27d6f48a44bc2fa161354e0b54cdb" compoundref="game__parameters_8h" startline="92" endline="92">has_bool_value</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::GameParameter</label>
+        <link refid="classopen__spiel_1_1_game_parameter"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/game_parameters.h" line="46" column="1" bodyfile="open_spiel/game_parameters.h" bodystart="46" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_game_parameter_1a35fab3c8b24e99c515dc5d7a7b340acb" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>bool_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ad716b97d61396956a449c832e3bd89c9" prot="private" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>bool_value_</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a11ef044c02ba43aa1ea2f827856e1259" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>double_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a75437f29a362aebc274219fef78a6159" prot="private" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>double_value_</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a38562873d2eec6cee31ef7dfeb51f257" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>game_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1afb306f0ed542fa26f74ca17a95819a57" prot="private" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>game_value_</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a5248b0d1cbc4e09ba9f2d861d3925a58" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>GameParameter</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ad2948a238f1437429ffcc766ce2b819a" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>GameParameter</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ac56aa245c1055e62370b17cd322ed2a5" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>GameParameter</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a5e69b201fcaee08c7425a32f13c3bdf0" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>GameParameter</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ae7081167a923e2da62e90ac878f5de6a" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>GameParameter</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1af22f0bdd56982171b922b37789caa0ce" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>GameParameter</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a8bf20b25598bdc0d9946ac3d0a86ae43" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>GameParameter</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a23c27d6f48a44bc2fa161354e0b54cdb" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>has_bool_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1afe157eb4411ecf0b00bc214f32059643" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>has_double_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1aa189ed96c9732997e47b4a8be37f2c03" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>has_game_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a29f0d36362f3f07c67a91dc6a1ebcca6" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>has_int_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a68fa91fd545a38c7b586473e1d1851fb" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>has_string_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a848e462d202074d7c854252ac57705c8" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>int_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a0bd4b4bbfe6ff77166480075c9ae2785" prot="private" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>int_value_</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a982bf34c193cda974c3441165d64be26" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>is_mandatory</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a3725b691ac2275953b47060ebcfd1290" prot="private" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>is_mandatory_</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ac1e51b6c7c97146d4a364e98ebbbcf00" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>operator!=</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a5bddec49a5f8f9fbaaa64b9c5837e43a" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ae97b3381b233541cd8890e10fc2ae4f5" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a8350b4465117ac4f6d693da74e2fc1d7" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>string_value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ad9cd1255f1d6f5da2ddd3ddd0721dba4" prot="private" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>string_value_</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1acb636ac727b441b3c9fba4782a4580cb" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>ToReprString</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1af70e5458038ffcdc8a2680404daf9493" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a06c795b6dc1ce7697eb863ad3f491871" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>Type</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a6f0c523fb9eff239d9a82dbc227b907d" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>type</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ad891564800d0e67d0397987bd6ad8fce" prot="private" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>type_</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a065cb4ce517ffd2f475485895c2a9fcf" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a6b6d5eb14682a612f6dd6b5b3f030c0f" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a92b31c41e2d4244db840ed3d4a3c804d" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ae5af2d0544af3b60d274dac126326a76" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a7e9f2005c092f618a9598458a41eca42" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a55192dd17b834b057a0c54c1f36ce99a" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a2c37f301134a44824254d3f948090bbf" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a6383ab0ec4ab2334c3129ced04364c7b" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a91cd85d7d7ec6a84ddfe6e67bf751161" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value_with_default</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1aa2c522670524f93bf0f3e66d7e54c52c" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value_with_default</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a295f5722de5e8187c2edd34274d58c64" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value_with_default</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a91d875682614ad70405656b000efad36" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value_with_default</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1ae0f9099999e280cc64fb3119af3b6ffc" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value_with_default</name></member>
+      <member refid="classopen__spiel_1_1_game_parameter_1a6aa85c9e6c1955ab6592b5c6d275cc59" prot="public" virt="non-virtual"><scope>open_spiel::GameParameter</scope><name>value_with_default</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

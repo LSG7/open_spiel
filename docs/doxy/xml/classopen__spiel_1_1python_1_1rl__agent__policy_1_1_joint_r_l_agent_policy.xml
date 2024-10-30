@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::rl_agent_policy::JointRLAgentPolicy</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1python_1_1policy_1_1_policy" prot="public" virt="non-virtual">open_spiel.python.policy.Policy</basecompoundref>
+    <derivedcompoundref refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy" prot="public" virt="non-virtual">open_spiel.python.rl_agent_policy.RLAgentPolicy</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2021a80c7f04ccc4e1290e177e6bfdc9" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_agent_policy.JointRLAgentPolicy::_agents</definition>
+        <argsstring></argsstring>
+        <name>_agents</name>
+        <qualifiedname>open_spiel.python.rl_agent_policy.JointRLAgentPolicy._agents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_agent_policy.py" line="46" column="1" bodyfile="open_spiel/python/rl_agent_policy.py" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f" compoundref="rl__agent__policy_8py" startline="53" endline="81">open_spiel.python.rl_agent_policy.JointRLAgentPolicy.action_probabilities</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5c8953218beaa4ad87d5eb1c6c6f1cc" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_agent_policy.JointRLAgentPolicy::_obs</definition>
+        <argsstring></argsstring>
+        <name>_obs</name>
+        <qualifiedname>open_spiel.python.rl_agent_policy.JointRLAgentPolicy._obs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_agent_policy.py" line="47" column="1" bodyfile="open_spiel/python/rl_agent_policy.py" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f" compoundref="rl__agent__policy_8py" startline="53" endline="81">open_spiel.python.rl_agent_policy.JointRLAgentPolicy.action_probabilities</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2c84a4cb48d79021776745797399c9e8" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>open_spiel.python.rl_agent_policy.JointRLAgentPolicy::_use_observation</definition>
+        <argsstring></argsstring>
+        <name>_use_observation</name>
+        <qualifiedname>open_spiel.python.rl_agent_policy.JointRLAgentPolicy._use_observation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_agent_policy.py" line="51" column="1" bodyfile="open_spiel/python/rl_agent_policy.py" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f" compoundref="rl__agent__policy_8py" startline="53" endline="81">open_spiel.python.rl_agent_policy.JointRLAgentPolicy.action_probabilities</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1ab23bfab44b60da9b844ea227d9458062" compoundref="rl__environment_8py" startline="384" endline="403">open_spiel.python.rl_environment.Environment.observation_spec</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a26dbd83ee35fa2014b86b34fcb5bb292" compoundref="rl__environment_8py" startline="324" endline="368">open_spiel.python.rl_environment.Environment.reset</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1abf762d87fdd5e9c5a87035b45d25d4d1" compoundref="rl__environment_8py" startline="422" endline="428">open_spiel.python.rl_environment.Environment.use_observation</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1acdc33df50365949c39488a570276bd11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_agent_policy.JointRLAgentPolicy.__init__</definition>
+        <argsstring>(self, game, Dict[int, rl_agent.AbstractAgent] agents, bool use_observation)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.rl_agent_policy.JointRLAgentPolicy.__init__</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a9bb16da41a11941090e72d076d48964d">__init__</reimplements>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy_1a083d5ce616242d077b77970d2bd24817">__init__</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ae972849a1b0e68c8201c45dd6d27f1bd" kindref="member">game</ref></type>
+          <defname>game</defname>
+        </param>
+        <param>
+          <type>Dict</type>
+          <declname>agents</declname>
+          <array>[int, rl_agent.AbstractAgent]</array>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>use_observation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes the joint RL agent policy.
+
+Args:
+  game: The game.
+  agents: Dictionary of agents keyed by the player IDs.
+  use_observation: If true then observation tensor will be used as the
+    `info_state` in the step() calls; otherwise, information state tensor
+    will be used. See `use_observation` property of
+    rl_environment.Environment.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_agent_policy.py" line="32" column="1" bodyfile="open_spiel/python/rl_agent_policy.py" bodystart="33" bodyend="52"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1acdc33df50365949c39488a570276bd11" compoundref="rl__agent__policy_8py" startline="33" endline="52">open_spiel.python.rl_agent_policy.JointRLAgentPolicy.__init__</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1acdc33df50365949c39488a570276bd11" compoundref="rl__agent__policy_8py" startline="33" endline="52">open_spiel.python.rl_agent_policy.JointRLAgentPolicy.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.rl_agent_policy.JointRLAgentPolicy.action_probabilities</definition>
+        <argsstring>(self, state, player_id=None)</argsstring>
+        <name>action_probabilities</name>
+        <qualifiedname>open_spiel.python.rl_agent_policy.JointRLAgentPolicy.action_probabilities</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a061fd4bbafb4f18987d93bdbc6a0889b">action_probabilities</reimplements>
+        <reimplementedby refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy_1a967b75480ace1fba56768f83cbf6e9aa">action_probabilities</reimplementedby>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <param>
+          <type>player_id</type>
+          <defname>player_id</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns a dictionary {action: prob} for all legal actions.
+
+IMPORTANT: We assume the following properties hold:
+- All probabilities are &gt;=0 and sum to 1
+- TLDR: Policy implementations should list the (action, prob) for all legal
+  actions, but algorithms should not rely on this (yet).
+  Details: Before May 2020, only legal actions were present in the mapping,
+  but it did not have to be exhaustive: missing actions were considered to
+  be associated to a zero probability.
+  For example, a deterministic state-poliy was previously {action: 1.0}.
+  Given this change of convention is new and hard to enforce, algorithms
+  should not rely on the fact that all legal actions should be present.
+
+Args:
+  state: A `pyspiel.State` object.
+  player_id: Optional, the player id for whom we want an action. Optional
+    unless this is a simultaneous state at which multiple players can act.
+
+Returns:
+  A `dict` of `{action: probability}` for the specified player in the
+  supplied state.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/rl_agent_policy.py" line="53" column="1" bodyfile="open_spiel/python/rl_agent_policy.py" bodystart="53" bodyend="81"/>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2021a80c7f04ccc4e1290e177e6bfdc9" compoundref="rl__agent__policy_8py" startline="46">open_spiel.python.rl_agent_policy.JointRLAgentPolicy._agents</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5c8953218beaa4ad87d5eb1c6c6f1cc" compoundref="rl__agent__policy_8py" startline="47">open_spiel.python.rl_agent_policy.JointRLAgentPolicy._obs</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2c84a4cb48d79021776745797399c9e8" compoundref="rl__agent__policy_8py" startline="51">open_spiel.python.rl_agent_policy.JointRLAgentPolicy._use_observation</references>
+        <references refid="classopen__spiel_1_1python_1_1rl__environment_1_1_environment_1a881d3b4fc40ccf0b7af5664bbd458a87" compoundref="rl__environment_8py" startline="209">open_spiel.python.rl_environment.Environment._use_observation</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a5755c0c1868c78cba8d68773d3d32831" compoundref="policy_8py" startline="145" endline="157">open_spiel.python.policy.Policy.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Joint policy denoted by the RL agents of a game.
+
+Given a list of RL agents of players for a game, this class can be used derive
+the corresponding (joint) policy. In particular, the distribution over
+possible actions will be those that are returned by the step() method of
+the RL agents given the state.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel.python.rl_agent_policy.JointRLAgentPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.policy.Policy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_policy"/>
+      </node>
+      <node id="3">
+        <label>open_spiel.python.rl_agent_policy.RLAgentPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_r_l_agent_policy"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.rl_agent_policy.JointRLAgentPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.policy.Policy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_policy"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/rl_agent_policy.py" line="23" column="1" bodyfile="open_spiel/python/rl_agent_policy.py" bodystart="23" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1acdc33df50365949c39488a570276bd11" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_agent_policy::JointRLAgentPolicy</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2021a80c7f04ccc4e1290e177e6bfdc9" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_agent_policy::JointRLAgentPolicy</scope><name>_agents</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5c8953218beaa4ad87d5eb1c6c6f1cc" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_agent_policy::JointRLAgentPolicy</scope><name>_obs</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1a2c84a4cb48d79021776745797399c9e8" prot="protected" virt="non-virtual"><scope>open_spiel::python::rl_agent_policy::JointRLAgentPolicy</scope><name>_use_observation</name></member>
+      <member refid="classopen__spiel_1_1python_1_1rl__agent__policy_1_1_joint_r_l_agent_policy_1ac5250795c3e475a382804676ee8d945f" prot="public" virt="non-virtual"><scope>open_spiel::python::rl_agent_policy::JointRLAgentPolicy</scope><name>action_probabilities</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

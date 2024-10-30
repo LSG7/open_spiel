@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_span_tensor" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::SpanTensor</compoundname>
+    <includes refid="observer_8h" local="no">observer.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_span_tensor_1a38cdb26d0dae51119a86b954ff9cf136" prot="private" static="no" mutable="no">
+        <type><ref refid="classopen__spiel_1_1_span_tensor_info" kindref="compound">SpanTensorInfo</ref></type>
+        <definition>SpanTensorInfo open_spiel::SpanTensor::info_</definition>
+        <argsstring></argsstring>
+        <name>info_</name>
+        <qualifiedname>open_spiel::SpanTensor::info_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="155" column="18" bodyfile="open_spiel/observer.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_span_tensor_1a7d1a47092ad4280490989f81b998d795" prot="private" static="no" mutable="no">
+        <type>absl::Span&lt; float &gt;</type>
+        <definition>absl::Span&lt;float&gt; open_spiel::SpanTensor::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <qualifiedname>open_spiel::SpanTensor::data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="156" column="14" bodyfile="open_spiel/observer.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1a68a316318f5867aa4f369e080c1a31a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::SpanTensor::SpanTensor</definition>
+        <argsstring>(SpanTensorInfo info, absl::Span&lt; float &gt; data)</argsstring>
+        <name>SpanTensor</name>
+        <qualifiedname>open_spiel::SpanTensor::SpanTensor</qualifiedname>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_span_tensor_info" kindref="compound">SpanTensorInfo</ref></type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>absl::Span&lt; float &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="115" column="3" bodyfile="open_spiel/observer.h" bodystart="115" bodyend="118"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a8b285f32d9f13ccd8083780760fab2f0" compoundref="observer_8h" startline="85" endline="88">open_spiel::SpanTensorInfo::size</references>
+        <references refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" compoundref="spiel__utils_8h" startline="259">SPIEL_CHECK_EQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1a47da61757928eddeeb3d4c4f3071c38f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classopen__spiel_1_1_span_tensor_info" kindref="compound">SpanTensorInfo</ref> &amp;</type>
+        <definition>const SpanTensorInfo &amp; open_spiel::SpanTensor::info</definition>
+        <argsstring>() const</argsstring>
+        <name>info</name>
+        <qualifiedname>open_spiel::SpanTensor::info</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="120" column="24" bodyfile="open_spiel/observer.h" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1a2729256a5c8df1ac0ebf205962bc142f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>absl::Span&lt; float &gt;</type>
+        <definition>absl::Span&lt; float &gt; open_spiel::SpanTensor::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>open_spiel::SpanTensor::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="122" column="14" bodyfile="open_spiel/observer.h" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1a25b62d439d56fac11cabe05e18229eba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string open_spiel::SpanTensor::DebugString</definition>
+        <argsstring>() const</argsstring>
+        <name>DebugString</name>
+        <qualifiedname>open_spiel::SpanTensor::DebugString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="124" column="15" bodyfile="open_spiel/observer.h" bodystart="124" bodyend="124"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a89787533e52d6737958605b60a29c277" compoundref="observer_8h" startline="93" endline="97">open_spiel::SpanTensorInfo::DebugString</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1a84c149089d953972dd02a59bfa462a4c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float &amp;</type>
+        <definition>float &amp; open_spiel::SpanTensor::at</definition>
+        <argsstring>() const</argsstring>
+        <name>at</name>
+        <qualifiedname>open_spiel::SpanTensor::at</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="127" column="9" bodyfile="open_spiel/observer.h" bodystart="127" bodyend="130"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a3a440d00dc7daa041c25b49e2b3e91d6" compoundref="observer_8h" startline="76" endline="76">open_spiel::SpanTensorInfo::shape</references>
+        <references refid="spiel__utils_8h_1ab7b97067e15f6941b08deaae7dc6013a" compoundref="spiel__utils_8h" startline="314">SPIEL_DCHECK_EQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1ac308bc8cd13e33cc0f84818cd2d428ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float &amp;</type>
+        <definition>float &amp; open_spiel::SpanTensor::at</definition>
+        <argsstring>(int idx) const</argsstring>
+        <name>at</name>
+        <qualifiedname>open_spiel::SpanTensor::at</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="132" column="9" bodyfile="open_spiel/observer.h" bodystart="132" bodyend="135"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a3a440d00dc7daa041c25b49e2b3e91d6" compoundref="observer_8h" startline="76" endline="76">open_spiel::SpanTensorInfo::shape</references>
+        <references refid="spiel__utils_8h_1ab7b97067e15f6941b08deaae7dc6013a" compoundref="spiel__utils_8h" startline="314">SPIEL_DCHECK_EQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1a98c5390d859059e4c890a600d36cd791" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float &amp;</type>
+        <definition>float &amp; open_spiel::SpanTensor::at</definition>
+        <argsstring>(int idx1, int idx2) const</argsstring>
+        <name>at</name>
+        <qualifiedname>open_spiel::SpanTensor::at</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="137" column="9" bodyfile="open_spiel/observer.h" bodystart="137" bodyend="140"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a3a440d00dc7daa041c25b49e2b3e91d6" compoundref="observer_8h" startline="76" endline="76">open_spiel::SpanTensorInfo::shape</references>
+        <references refid="spiel__utils_8h_1ab7b97067e15f6941b08deaae7dc6013a" compoundref="spiel__utils_8h" startline="314">SPIEL_DCHECK_EQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1a6a545829323e838d8d18fb4b94d5fa94" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float &amp;</type>
+        <definition>float &amp; open_spiel::SpanTensor::at</definition>
+        <argsstring>(int idx1, int idx2, int idx3) const</argsstring>
+        <name>at</name>
+        <qualifiedname>open_spiel::SpanTensor::at</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="142" column="9" bodyfile="open_spiel/observer.h" bodystart="142" bodyend="145"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a3a440d00dc7daa041c25b49e2b3e91d6" compoundref="observer_8h" startline="76" endline="76">open_spiel::SpanTensorInfo::shape</references>
+        <references refid="spiel__utils_8h_1ab7b97067e15f6941b08deaae7dc6013a" compoundref="spiel__utils_8h" startline="314">SPIEL_DCHECK_EQ</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_span_tensor_1ab583f0b6dd0909226136353dfca8e372" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float &amp;</type>
+        <definition>float &amp; open_spiel::SpanTensor::at</definition>
+        <argsstring>(int idx1, int idx2, int idx3, int idx4) const</argsstring>
+        <name>at</name>
+        <qualifiedname>open_spiel::SpanTensor::at</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx3</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="147" column="9" bodyfile="open_spiel/observer.h" bodystart="147" bodyend="152"/>
+        <references refid="classopen__spiel_1_1_span_tensor_info_1a3a440d00dc7daa041c25b49e2b3e91d6" compoundref="observer_8h" startline="76" endline="76">open_spiel::SpanTensorInfo::shape</references>
+        <references refid="spiel__utils_8h_1ab7b97067e15f6941b08deaae7dc6013a" compoundref="spiel__utils_8h" startline="314">SPIEL_DCHECK_EQ</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::SpanTensor</label>
+        <link refid="classopen__spiel_1_1_span_tensor"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.h" line="113" column="1" bodyfile="open_spiel/observer.h" bodystart="113" bodyend="157"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_span_tensor_1a84c149089d953972dd02a59bfa462a4c" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>at</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1ac308bc8cd13e33cc0f84818cd2d428ce" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>at</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1a98c5390d859059e4c890a600d36cd791" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>at</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1a6a545829323e838d8d18fb4b94d5fa94" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>at</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1ab583f0b6dd0909226136353dfca8e372" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>at</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1a2729256a5c8df1ac0ebf205962bc142f" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>data</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1a7d1a47092ad4280490989f81b998d795" prot="private" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>data_</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1a25b62d439d56fac11cabe05e18229eba" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>DebugString</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1a47da61757928eddeeb3d4c4f3071c38f" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>info</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1a38cdb26d0dae51119a86b954ff9cf136" prot="private" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>info_</name></member>
+      <member refid="classopen__spiel_1_1_span_tensor_1a68a316318f5867aa4f369e080c1a31a6" prot="public" virt="non-virtual"><scope>open_spiel::SpanTensor</scope><name>SpanTensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

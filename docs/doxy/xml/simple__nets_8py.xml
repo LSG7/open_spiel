@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="simple__nets_8py" kind="file" language="Python">
+    <compoundname>simple_nets.py</compoundname>
+    <innerclass refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear" prot="public">open_spiel::python::simple_nets::Linear</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential" prot="public">open_spiel::python::simple_nets::Sequential</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p" prot="public">open_spiel::python::simple_nets::MLP</innerclass>
+    <innerclass refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso" prot="public">open_spiel::python::simple_nets::MLPTorso</innerclass>
+    <innernamespace refid="namespaceopen__spiel">open_spiel</innernamespace>
+    <innernamespace refid="namespaceopen__spiel_1_1python">open_spiel::python</innernamespace>
+    <innernamespace refid="namespaceopen__spiel_1_1python_1_1simple__nets">open_spiel::python::simple_nets</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceopen__spiel_1_1python_1_1simple__nets" refkind="compound"><highlight class="comment">#<sp/>Copyright<sp/>2019<sp/>DeepMind<sp/>Technologies<sp/>Limited</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">#<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">#<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">#<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">#<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">#<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Simple<sp/>network<sp/>classes<sp/>for<sp/>Tensorflow<sp/>based<sp/>on<sp/>tf.Module.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>math</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>tensorflow.compat.v1<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>tf</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Temporarily<sp/>disable<sp/>TF2<sp/>behavior<sp/>until<sp/>code<sp/>is<sp/>updated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">tf.disable_v2_behavior()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">#<sp/>This<sp/>code<sp/>is<sp/>based<sp/>directly<sp/>on<sp/>the<sp/>TF<sp/>docs:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">#<sp/>https://www.tensorflow.org/versions/r1.15/api_docs/python/tf/Module</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear" kindref="compound">Linear</ref>(tf.Module):</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;A<sp/>simple<sp/>linear<sp/>module.</highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"><sp/><sp/>Always<sp/>includes<sp/>biases<sp/>and<sp/>only<sp/>supports<sp/>ReLU<sp/>activations.</highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral"><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8e268d12ac253134e7e39f39cca5ef5f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8e268d12ac253134e7e39f39cca5ef5f" kindref="member">__init__</ref>(self,<sp/>in_size,<sp/>out_size,<sp/>activate_relu=True,<sp/>name=None):</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Creates<sp/>a<sp/>linear<sp/>layer.</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Args:</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>in_size:<sp/>(int)<sp/>number<sp/>of<sp/>inputs</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>out_size:<sp/>(int)<sp/>number<sp/>of<sp/>outputs</highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>activate_relu:<sp/>(bool)<sp/>whether<sp/>to<sp/>include<sp/>a<sp/>ReLU<sp/>activation<sp/>layer</highlight></codeline>
+<codeline lineno="40"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>name:<sp/>(string):<sp/>the<sp/>name<sp/>to<sp/>give<sp/>to<sp/>this<sp/>layer</highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>super(Linear,<sp/>self).<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8e268d12ac253134e7e39f39cca5ef5f" kindref="member">__init__</ref>(name=name)</highlight></codeline>
+<codeline lineno="44" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a19eaa4752972cabb7c6fa5344f913e4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a19eaa4752972cabb7c6fa5344f913e4d" kindref="member">_activate_relu</ref><sp/>=<sp/>activate_relu</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Weight<sp/>initialization<sp/>inspired<sp/>by<sp/>Sonnet&apos;s<sp/>Linear<sp/>layer,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>which<sp/>cites<sp/>https://arxiv.org/abs/1502.03167v3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>stddev<sp/>=<sp/>1.0<sp/>/<sp/>math.sqrt(in_size)</highlight></codeline>
+<codeline lineno="48" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a98fc28b6708c1c91f5f1182f5e9a0a90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a98fc28b6708c1c91f5f1182f5e9a0a90" kindref="member">_weights</ref><sp/>=<sp/>tf.Variable(</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tf.random.truncated_normal([in_size,<sp/>out_size],<sp/>mean=0.0,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stddev=stddev),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name=</highlight><highlight class="stringliteral">&quot;weights&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8abae2a369231b997ae7e884517a5e7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8abae2a369231b997ae7e884517a5e7e" kindref="member">_bias</ref><sp/>=<sp/>tf.Variable(tf.zeros([out_size]),<sp/>name=</highlight><highlight class="stringliteral">&quot;bias&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a97f96815d7fc7581ddab38e663a2da74" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a97f96815d7fc7581ddab38e663a2da74" kindref="member">__call__</ref>(self,<sp/>tensor):</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>y<sp/>=<sp/>tf.matmul(tensor,<sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a98fc28b6708c1c91f5f1182f5e9a0a90" kindref="member">_weights</ref>)<sp/>+<sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a8abae2a369231b997ae7e884517a5e7e" kindref="member">_bias</ref></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tf.nn.relu(y)<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear_1a19eaa4752972cabb7c6fa5344f913e4d" kindref="member">_activate_relu</ref><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>y</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential" kindref="compound">Sequential</ref>(tf.Module):</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;A<sp/>simple<sp/>sequential<sp/>module.</highlight></codeline>
+<codeline lineno="61"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="62"><highlight class="stringliteral"><sp/><sp/>Always<sp/>includes<sp/>biases<sp/>and<sp/>only<sp/>supports<sp/>ReLU<sp/>activations.</highlight></codeline>
+<codeline lineno="63"><highlight class="stringliteral"><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1af0bf73f90fd110dd49eb392b37b320f0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1af0bf73f90fd110dd49eb392b37b320f0" kindref="member">__init__</ref>(self,<sp/>layers,<sp/>name=None):</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Creates<sp/>a<sp/>model<sp/>from<sp/>successively<sp/>applying<sp/>layers.</highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="68"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Args:</highlight></codeline>
+<codeline lineno="69"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>layers:<sp/>Iterable[tf.Module]<sp/>that<sp/>can<sp/>be<sp/>applied.</highlight></codeline>
+<codeline lineno="70"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>name:<sp/>(string):<sp/>the<sp/>name<sp/>to<sp/>give<sp/>to<sp/>this<sp/>layer</highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>super(Sequential,<sp/>self).<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1af0bf73f90fd110dd49eb392b37b320f0" kindref="member">__init__</ref>(name=name)</highlight></codeline>
+<codeline lineno="74" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1a6c12e3092a8c12a716755042995129e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1a6c12e3092a8c12a716755042995129e4" kindref="member">_layers</ref><sp/>=<sp/>layers</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1ac4ad23b25a0794dd75ae7594aac90c19" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1ac4ad23b25a0794dd75ae7594aac90c19" kindref="member">__call__</ref>(self,<sp/>tensor):</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>layer<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_sequential_1a6c12e3092a8c12a716755042995129e4" kindref="member">_layers</ref>:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tensor<sp/>=<sp/>layer(tensor)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tensor</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p" kindref="compound">MLP</ref>(tf.Module):</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;A<sp/>simple<sp/>dense<sp/>network<sp/>built<sp/>from<sp/>linear<sp/>layers<sp/>above.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a7a2dc164fcfcbf2e4f7110874d8b76b2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a7a2dc164fcfcbf2e4f7110874d8b76b2" kindref="member">__init__</ref>(self,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_size,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hidden_sizes,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_size,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>activate_final=False,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name=None):</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Create<sp/>the<sp/>MLP.</highlight></codeline>
+<codeline lineno="92"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="93"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Args:</highlight></codeline>
+<codeline lineno="94"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>input_size:<sp/>(int)<sp/>number<sp/>of<sp/>inputs</highlight></codeline>
+<codeline lineno="95"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>hidden_sizes:<sp/>(list)<sp/>sizes<sp/>(number<sp/>of<sp/>units)<sp/>of<sp/>each<sp/>hidden<sp/>layer</highlight></codeline>
+<codeline lineno="96"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>output_size:<sp/>(int)<sp/>number<sp/>of<sp/>outputs</highlight></codeline>
+<codeline lineno="97"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>activate_final:<sp/>(bool)<sp/>should<sp/>final<sp/>layer<sp/>should<sp/>include<sp/>a<sp/>ReLU</highlight></codeline>
+<codeline lineno="98"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>name:<sp/>(string):<sp/>the<sp/>name<sp/>to<sp/>give<sp/>to<sp/>this<sp/>network</highlight></codeline>
+<codeline lineno="99"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>super(MLP,<sp/>self).<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a7a2dc164fcfcbf2e4f7110874d8b76b2" kindref="member">__init__</ref>(name=name)</highlight></codeline>
+<codeline lineno="102" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" kindref="member">_layers</ref><sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="103" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a247bc4f927cd4bdd902cec7bc350e7f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a247bc4f927cd4bdd902cec7bc350e7f5" kindref="member">name_scope</ref>:</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Hidden<sp/>layers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>size<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>hidden_sizes:</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" kindref="member">_layers</ref>.append(<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear" kindref="compound">Linear</ref>(in_size=input_size,<sp/>out_size=size))</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_size<sp/>=<sp/>size</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Output<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" kindref="member">_layers</ref>.append(</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear" kindref="compound">Linear</ref>(</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in_size=input_size,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out_size=output_size,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>activate_relu=activate_final))</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="preprocessor">@tf.Module.with_name_scope</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1af30f8eced23027aa012dca28492b3e5e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1af30f8eced23027aa012dca28492b3e5e" kindref="member">__call__</ref>(self,<sp/>x):</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>layer<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_1a466d4d0923276d120d8dde01d0da403c" kindref="member">_layers</ref>:</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>layer(x)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso" kindref="compound">MLPTorso</ref>(tf.Module):</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;A<sp/>specialized<sp/>half-MLP<sp/>module<sp/>when<sp/>constructing<sp/>multiple<sp/>heads.</highlight></codeline>
+<codeline lineno="124"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="125"><highlight class="stringliteral"><sp/><sp/>Note<sp/>that<sp/>every<sp/>layer<sp/>includes<sp/>a<sp/>ReLU<sp/>non-linearity<sp/>activation.</highlight></codeline>
+<codeline lineno="126"><highlight class="stringliteral"><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a3eb1fc8a03384e10edf04fb8c8b627c8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a3eb1fc8a03384e10edf04fb8c8b627c8" kindref="member">__init__</ref>(self,<sp/>input_size,<sp/>hidden_sizes,<sp/>name=None):</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>super(MLPTorso,<sp/>self).<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a3eb1fc8a03384e10edf04fb8c8b627c8" kindref="member">__init__</ref>(name=name)</highlight></codeline>
+<codeline lineno="130" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a99dc2f7dffee1883ddfe2f92a557688c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a99dc2f7dffee1883ddfe2f92a557688c" kindref="member">_layers</ref><sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="131" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a248ae061ddcedc41d9093cff365b5bd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a248ae061ddcedc41d9093cff365b5bd2" kindref="member">name_scope</ref>:</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>size<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>hidden_sizes:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a99dc2f7dffee1883ddfe2f92a557688c" kindref="member">_layers</ref>.append(<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_linear" kindref="compound">Linear</ref>(in_size=input_size,<sp/>out_size=size))</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_size<sp/>=<sp/>size</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="preprocessor">@tf.Module.with_name_scope</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1aa50d5c388f9ce1b16135f36b135ab897" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1aa50d5c388f9ce1b16135f36b135ab897" kindref="member">__call__</ref>(self,<sp/>x):</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>layer<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>self.<ref refid="classopen__spiel_1_1python_1_1simple__nets_1_1_m_l_p_torso_1a99dc2f7dffee1883ddfe2f92a557688c" kindref="member">_layers</ref>:</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>layer(x)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x</highlight></codeline>
+    </programlisting>
+    <location file="open_spiel/python/simple_nets.py"/>
+  </compounddef>
+</doxygen>

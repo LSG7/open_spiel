@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_observer_registerer" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::ObserverRegisterer</compoundname>
+    <includes refid="observer_8h" local="no">observer.h</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classopen__spiel_1_1_observer_registerer_1a3efb02dcd6e75be774796b4e2ebdbf38" prot="public" static="no">
+        <type>std::function&lt; std::shared_ptr&lt; <ref refid="classopen__spiel_1_1_observer" kindref="compound">Observer</ref> &gt;( const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;game, absl::optional&lt; <ref refid="structopen__spiel_1_1_i_i_g_observation_type" kindref="compound">IIGObservationType</ref> &gt; iig_obs_type, const <ref refid="namespaceopen__spiel_1aac43798f2a15711572119a41e8a91466" kindref="member">ObservationParams</ref> &amp;params)&gt;</type>
+        <definition>using open_spiel::ObserverRegisterer::CreateFunc =  std::function&lt;std::shared_ptr&lt;Observer&gt;(
+      const Game&amp; game, absl::optional&lt;IIGObservationType&gt; iig_obs_type,
+      const ObservationParams&amp; params)&gt;</definition>
+        <argsstring></argsstring>
+        <name>CreateFunc</name>
+        <qualifiedname>open_spiel::ObserverRegisterer::CreateFunc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="418" column="3" bodyfile="open_spiel/observer.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_registerer_1a890a9b8d751a79768497750b0766e248" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::ObserverRegisterer::ObserverRegisterer</definition>
+        <argsstring>(const std::string &amp;game_name, const std::string &amp;observer_name, CreateFunc creator)</argsstring>
+        <name>ObserverRegisterer</name>
+        <qualifiedname>open_spiel::ObserverRegisterer::ObserverRegisterer</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>game_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>observer_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_observer_registerer_1a3efb02dcd6e75be774796b4e2ebdbf38" kindref="member">CreateFunc</ref></type>
+          <declname>creator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="422" column="3" bodyfile="open_spiel/observer.cc" bodystart="330" bodyend="334"/>
+        <references refid="classopen__spiel_1_1_observer_registerer_1a39b06045bb6b5017f3496bd379cb7ae8" compoundref="observer_8cc" startline="336" endline="345">RegisterObserver</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_registerer_1a39b06045bb6b5017f3496bd379cb7ae8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void open_spiel::ObserverRegisterer::RegisterObserver</definition>
+        <argsstring>(const std::string &amp;game_name, const std::string &amp;observer_name, CreateFunc creator)</argsstring>
+        <name>RegisterObserver</name>
+        <qualifiedname>open_spiel::ObserverRegisterer::RegisterObserver</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>game_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>observer_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_observer_registerer_1a3efb02dcd6e75be774796b4e2ebdbf38" kindref="member">CreateFunc</ref></type>
+          <declname>creator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="425" column="15" bodyfile="open_spiel/observer.cc" bodystart="336" bodyend="345"/>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_observer_registerer_1a890a9b8d751a79768497750b0766e248" compoundref="observer_8cc" startline="330" endline="334">ObserverRegisterer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_registerer_1a758f476da1265e23e37d42253be73b07" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classopen__spiel_1_1_observer" kindref="compound">Observer</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Observer &gt; open_spiel::ObserverRegisterer::CreateByName</definition>
+        <argsstring>(const std::string &amp;observer_name, const Game &amp;game, absl::optional&lt; IIGObservationType &gt; iig_obs_type, const ObservationParams &amp;params)</argsstring>
+        <name>CreateByName</name>
+        <qualifiedname>open_spiel::ObserverRegisterer::CreateByName</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>observer_name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_game" kindref="compound">Game</ref> &amp;</type>
+          <declname>game</declname>
+        </param>
+        <param>
+          <type>absl::optional&lt; <ref refid="structopen__spiel_1_1_i_i_g_observation_type" kindref="compound">IIGObservationType</ref> &gt;</type>
+          <declname>iig_obs_type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1aac43798f2a15711572119a41e8a91466" kindref="member">ObservationParams</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="429" column="26" bodyfile="open_spiel/observer.cc" bodystart="359" bodyend="371"/>
+        <references refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" compoundref="spiel_8h" startline="809" endline="809">open_spiel::Game::GetType</references>
+        <references refid="structopen__spiel_1_1_game_type_1a7dc97c2b88971ea7c5180d3c2fe29cf1" compoundref="spiel_8h" startline="52">open_spiel::GameType::short_name</references>
+        <references refid="namespaceopen__spiel_1a43513b6f8f3a26ce1a64a1a807df9011" compoundref="spiel__utils_8cc" startline="132" endline="137">open_spiel::SpielFatalError</references>
+        <referencedby refid="classopen__spiel_1_1_game_1a28537d9c2a657634e611724e12d2f32f" compoundref="observer_8cc" startline="125" endline="135">open_spiel::Game::MakeRegisteredObserver</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_registerer_1a92673a3f5ff6b1912a419b14d2b3a526" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; std::pair&lt; std::string, std::string &gt;, <ref refid="classopen__spiel_1_1_observer_registerer_1a3efb02dcd6e75be774796b4e2ebdbf38" kindref="member">CreateFunc</ref> &gt; &amp;</type>
+        <definition>static std::map&lt; std::pair&lt; std::string, std::string &gt;, CreateFunc &gt; &amp; open_spiel::ObserverRegisterer::observers</definition>
+        <argsstring>()</argsstring>
+        <name>observers</name>
+        <qualifiedname>open_spiel::ObserverRegisterer::observers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="441" column="3" bodyfile="open_spiel/observer.h" bodystart="441" bodyend="444"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::ObserverRegisterer</label>
+        <link refid="classopen__spiel_1_1_observer_registerer"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.h" line="414" column="1" bodyfile="open_spiel/observer.h" bodystart="414" bodyend="445"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_observer_registerer_1a758f476da1265e23e37d42253be73b07" prot="public" virt="non-virtual"><scope>open_spiel::ObserverRegisterer</scope><name>CreateByName</name></member>
+      <member refid="classopen__spiel_1_1_observer_registerer_1a3efb02dcd6e75be774796b4e2ebdbf38" prot="public" virt="non-virtual"><scope>open_spiel::ObserverRegisterer</scope><name>CreateFunc</name></member>
+      <member refid="classopen__spiel_1_1_observer_registerer_1a890a9b8d751a79768497750b0766e248" prot="public" virt="non-virtual"><scope>open_spiel::ObserverRegisterer</scope><name>ObserverRegisterer</name></member>
+      <member refid="classopen__spiel_1_1_observer_registerer_1a92673a3f5ff6b1912a419b14d2b3a526" prot="private" virt="non-virtual"><scope>open_spiel::ObserverRegisterer</scope><name>observers</name></member>
+      <member refid="classopen__spiel_1_1_observer_registerer_1a39b06045bb6b5017f3496bd379cb7ae8" prot="public" virt="non-virtual"><scope>open_spiel::ObserverRegisterer</scope><name>RegisterObserver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

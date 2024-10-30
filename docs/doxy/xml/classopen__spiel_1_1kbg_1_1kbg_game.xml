@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1kbg_1_1kbg_game" kind="class" language="C++" prot="public">
+    <compoundname>open_spiel::kbg::kbgGame</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1base_t_1_1base_t_game" prot="public" virt="non-virtual">open_spiel::baseT::baseTGame</basecompoundref>
+    <includes refid="ki__bo__gung_8h" local="no">ki_bo_gung.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1kbg_1_1kbg_game_1a1d396bf12b31e55433b14e9737c91e76" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::kbg::kbgGame::kbgGame</definition>
+        <argsstring>(const GameParameters &amp;params)</argsstring>
+        <name>kbgGame</name>
+        <qualifiedname>open_spiel::kbg::kbgGame::kbgGame</qualifiedname>
+        <param>
+          <type>const <ref refid="namespaceopen__spiel_1ad7c4d931669b5e357cb5c7f84a6de094" kindref="member">GameParameters</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/ki_bo_gung.h" line="42" column="14" bodyfile="open_spiel/games/SG/ki_bo_gung.cc" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1kbg_1_1kbg_game_1a5688d8088c543e4169f57aa92ecf0c1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>open_spiel::kbg::kbgGame::~kbgGame</definition>
+        <argsstring>()</argsstring>
+        <name>~kbgGame</name>
+        <qualifiedname>open_spiel::kbg::kbgGame::~kbgGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/ki_bo_gung.h" line="43" column="13" bodyfile="open_spiel/games/SG/ki_bo_gung.cc" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1kbg_1_1kbg_game_1a2e49bd4be9a7efdb7a72499d8fed2ea8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; State &gt; open_spiel::kbg::kbgGame::NewInitialState</definition>
+        <argsstring>() const override</argsstring>
+        <name>NewInitialState</name>
+        <qualifiedname>open_spiel::kbg::kbgGame::NewInitialState</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1base_t_1_1base_t_game_1a62737f5a7696f708b1ec22f31c1ec5fc">NewInitialState</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/ki_bo_gung.h" line="44" column="21" bodyfile="open_spiel/games/SG/ki_bo_gung.cc" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1kbg_1_1kbg_game_1af49728debda32adef2db40215cd58ffa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int open_spiel::kbg::kbgGame::NumPlayers</definition>
+        <argsstring>() const override</argsstring>
+        <name>NumPlayers</name>
+        <qualifiedname>open_spiel::kbg::kbgGame::NumPlayers</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1_game_1ade22718c6a0360525840cb7f7c68cab0">NumPlayers</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/games/SG/ki_bo_gung.h" line="45" column="17" bodyfile="open_spiel/games/SG/ki_bo_gung.cc" bodystart="49" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel::baseT::baseTGame</label>
+        <link refid="classopen__spiel_1_1base_t_1_1base_t_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::kbg::kbgGame</label>
+        <link refid="classopen__spiel_1_1kbg_1_1kbg_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>open_spiel::Game</label>
+        <link refid="classopen__spiel_1_1_game"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#game_type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>open_spiel::GameType</label>
+        <link refid="structopen__spiel_1_1_game_type"/>
+      </node>
+      <node id="2">
+        <label>open_spiel::baseT::baseTGame</label>
+        <link refid="classopen__spiel_1_1base_t_1_1base_t_game"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>open_spiel::kbg::kbgGame</label>
+        <link refid="classopen__spiel_1_1kbg_1_1kbg_game"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::enable_shared_from_this&lt; Game &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/games/SG/ki_bo_gung.h" line="40" column="1" bodyfile="open_spiel/games/SG/ki_bo_gung.h" bodystart="40" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_game_1acd86016f8990a05ac6c68b7bb8ce3711" prot="protected" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>ABSL_GUARDED_BY</name></member>
+      <member refid="classopen__spiel_1_1_game_1a3a53334739ff4d4b6b81269ea5518136" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>ActionToString</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1a90e93a4cbbc2d8d313a94a160af2bb69" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>baseTGame</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1a44ea2452f518613bba9a06f7895b51d5" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>baseTGame</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4a0e6b899dc09f73c4251f07a823f592" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>DeserializeState</name></member>
+      <member refid="classopen__spiel_1_1_game_1a02f9a81ec83227c45b70c6daf6ac09c7" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1ae1b45088cc527add6874e85d4c3a6cc3" prot="protected" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>Game</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa0256cac5f169b067d69c0b5cb82b8b4" prot="protected" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>game_parameters_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a40968ba04914278a389265b7063aac3f" prot="protected" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>game_type_</name></member>
+      <member refid="classopen__spiel_1_1_game_1a7abf0c828e092399ca08e1881e0bbf54" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>GetParameters</name></member>
+      <member refid="classopen__spiel_1_1_game_1ad8e566fa7343c252e2895a46ef6cdd31" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>GetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab43a710b19e2cebf48ceaeccd3c8961f" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>GetType</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41c14e07fcb4939e8b283b1b8c623b23" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>InformationStateTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1aba247b7d920d5089b123f3f1238ac8f0" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>InformationStateTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4e260b8faf1879f3bbe8d0bcab31a437" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>InformationStateTensorSize</name></member>
+      <member refid="classopen__spiel_1_1kbg_1_1kbg_game_1a1d396bf12b31e55433b14e9737c91e76" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>kbgGame</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa99f0ac0aeb14c3a190ae9fa56f428c3" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MakeBuiltInObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a223d65cc15f5961951e2c685a77879d9" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MakeObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a28537d9c2a657634e611724e12d2f32f" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MakeRegisteredObserver</name></member>
+      <member refid="classopen__spiel_1_1_game_1a817f5d34cf3d2bcf5e890357f9c2ef1f" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MaxChanceNodesInHistory</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1ae926b2b4a88086e76c220ec4aff532eb" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MaxChanceOutcomes</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1afacbdc14c5fdbe5ab688127b96552e1b" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MaxGameLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1af0bbcc085789b58460771b4277e5adb2" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MaxHistoryLength</name></member>
+      <member refid="classopen__spiel_1_1_game_1a4b0c5bbf1361734cc6740fc6be893fda" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MaxMoveNumber</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1aa0b3058250743541e68bcc8b9517b5f7" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MaxUtility</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1afade9ca373d958d0a1f69e7853169937" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>MinUtility</name></member>
+      <member refid="classopen__spiel_1_1_game_1a9f8eed0c692e15bd1d9806647b575f91" prot="protected" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>mutex_defaulted_parameters_</name></member>
+      <member refid="classopen__spiel_1_1kbg_1_1kbg_game_1a2e49bd4be9a7efdb7a72499d8fed2ea8" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1aa76d3480113257e022575019af601df1" prot="public" virt="virtual" ambiguityscope="open_spiel::Game::"><scope>open_spiel::kbg::kbgGame</scope><name>NewInitialState</name></member>
+      <member refid="classopen__spiel_1_1_game_1ac46c5cfeeb05478188b382fa4d182efd" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>NewInitialStateForPopulation</name></member>
+      <member refid="classopen__spiel_1_1_game_1acbc718240c9580d8dbfe5e8ef0282d92" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>NewInitialStates</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1ae772da211ea6b6def3ca9496ec6d3142" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>NumDistinctActions</name></member>
+      <member refid="classopen__spiel_1_1kbg_1_1kbg_game_1af49728debda32adef2db40215cd58ffa" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>NumPlayers</name></member>
+      <member refid="classopen__spiel_1_1_game_1a3ad925d3568e428a6c3e4d601ac0cea0" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>ObservationTensorLayout</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1a4dc3e22a7333c3ae82e3e7c682c04bc7" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>ObservationTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a19ffc4fce853df1f6314fc341472e5c4" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>ObservationTensorSize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a24c7b0caccaf0fbaa1e3b5ee313a3720" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>operator=</name></member>
+      <member refid="classopen__spiel_1_1_game_1afc137887a4ef3ab77988ecea40a8cc9c" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>operator==</name></member>
+      <member refid="classopen__spiel_1_1_game_1ab6156eb0a128486d9de8a054ab7365a9" prot="protected" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>ParameterValue</name></member>
+      <member refid="classopen__spiel_1_1_game_1a41ff35e433f78eabf4ff306257522fbd" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>PolicyTensorShape</name></member>
+      <member refid="classopen__spiel_1_1_game_1a21a64ae854cebf2185bbc7aa1c8348f1" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>Serialize</name></member>
+      <member refid="classopen__spiel_1_1_game_1a04741ccd0d5da41a454501dd2953af69" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>SetRNGState</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1961953c180729dc203b777850f07319" prot="public" virt="non-virtual"><scope>open_spiel::kbg::kbgGame</scope><name>ToString</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1a0357b44456a44e399e55e7f17e99af1e" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>UtilitySum</name></member>
+      <member refid="classopen__spiel_1_1base_t_1_1base_t_game_1a7dbf14dc0dec62e1f3ef78dc52b08a8f" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>~baseTGame</name></member>
+      <member refid="classopen__spiel_1_1_game_1a1854931cb033de9f16657172659943d3" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>~Game</name></member>
+      <member refid="classopen__spiel_1_1kbg_1_1kbg_game_1a5688d8088c543e4169f57aa92ecf0c1a" prot="public" virt="virtual"><scope>open_spiel::kbg::kbgGame</scope><name>~kbgGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy" kind="class" language="Python" prot="public">
+    <compoundname>open_spiel::python::policy::UniformRandomPolicy</compoundname>
+    <basecompoundref refid="classopen__spiel_1_1python_1_1policy_1_1_policy" prot="public" virt="non-virtual">open_spiel.python.policy.Policy</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1a77e8d3d1f75e334508755e2d33e2b832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.UniformRandomPolicy.__init__</definition>
+        <argsstring>(self, game)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>open_spiel.python.policy.UniformRandomPolicy.__init__</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a9bb16da41a11941090e72d076d48964d">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1ae972849a1b0e68c8201c45dd6d27f1bd" kindref="member">game</ref></type>
+          <defname>game</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes a uniform random policy for all players in the game.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="407" column="1" bodyfile="open_spiel/python/policy.py" bodystart="407" bodyend="411"/>
+        <references refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1a77e8d3d1f75e334508755e2d33e2b832" compoundref="policy_8py" startline="407" endline="411">open_spiel.python.policy.UniformRandomPolicy.__init__</references>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1a77e8d3d1f75e334508755e2d33e2b832" compoundref="policy_8py" startline="407" endline="411">open_spiel.python.policy.UniformRandomPolicy.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1ac6060f389cd305bf01a6b74309915fba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel.python.policy.UniformRandomPolicy.action_probabilities</definition>
+        <argsstring>(self, state, player_id=None)</argsstring>
+        <name>action_probabilities</name>
+        <qualifiedname>open_spiel.python.policy.UniformRandomPolicy.action_probabilities</qualifiedname>
+        <reimplements refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a061fd4bbafb4f18987d93bdbc6a0889b">action_probabilities</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <param>
+          <type>player_id</type>
+          <defname>player_id</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns a uniform random policy for a player in a state.
+
+Args:
+  state: A `pyspiel.State` object.
+  player_id: Optional, the player id for which we want an action. Optional
+    unless this is a simultaneous state at which multiple players can act.
+
+Returns:
+  A `dict` of `{action: probability}` for the specified player in the
+  supplied state. This will contain all legal actions, each with the same
+  probability, equal to 1 / num_legal_actions.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/python/policy.py" line="412" column="1" bodyfile="open_spiel/python/policy.py" bodystart="412" bodyend="433"/>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a5755c0c1868c78cba8d68773d3d32831" compoundref="policy_8py" startline="145" endline="157">open_spiel.python.policy.Policy.__call__</referencedby>
+        <referencedby refid="classopen__spiel_1_1python_1_1policy_1_1_policy_1a2761954d5f010b490e108c0bedf4e089" compoundref="policy_8py" startline="158" endline="177">open_spiel.python.policy.Policy.to_tabular</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Policy where the action distribution is uniform over all legal actions.
+
+This is computed as needed, so can be used for games where a tabular policy
+would be unfeasibly large, but incurs a legal action computation every time.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>open_spiel.python.policy.UniformRandomPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.policy.Policy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_policy"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel.python.policy.UniformRandomPolicy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>open_spiel.python.policy.Policy</label>
+        <link refid="classopen__spiel_1_1python_1_1policy_1_1_policy"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/python/policy.py" line="400" column="1" bodyfile="open_spiel/python/policy.py" bodystart="400" bodyend="433"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1a77e8d3d1f75e334508755e2d33e2b832" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::UniformRandomPolicy</scope><name>__init__</name></member>
+      <member refid="classopen__spiel_1_1python_1_1policy_1_1_uniform_random_policy_1ac6060f389cd305bf01a6b74309915fba" prot="public" virt="non-virtual"><scope>open_spiel::python::policy::UniformRandomPolicy</scope><name>action_probabilities</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

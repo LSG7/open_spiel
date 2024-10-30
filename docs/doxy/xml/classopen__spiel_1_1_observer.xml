@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="classopen__spiel_1_1_observer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>open_spiel::Observer</compoundname>
+    <includes refid="observer_8h" local="no">observer.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classopen__spiel_1_1_observer_1a67c3fc2d22bb77735978d452381d5233" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::Observer::has_string_</definition>
+        <argsstring></argsstring>
+        <name>has_string_</name>
+        <qualifiedname>open_spiel::Observer::has_string_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="345" column="8" bodyfile="open_spiel/observer.h" bodystart="345" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_observer_1a094466022685d596b3b440a751d55e7f" compoundref="observer_8h" startline="338" endline="338">HasString</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classopen__spiel_1_1_observer_1a0308fe873fdf62349a48a721db6f0a38" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool open_spiel::Observer::has_tensor_</definition>
+        <argsstring></argsstring>
+        <name>has_tensor_</name>
+        <qualifiedname>open_spiel::Observer::has_tensor_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="346" column="8" bodyfile="open_spiel/observer.h" bodystart="346" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1_observer_1a870173def77c964c3b7eeb8d23b54c35" compoundref="observer_8h" startline="339" endline="339">HasTensor</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_1a769cc10c3d25d370287fc875195bd974" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>open_spiel::Observer::Observer</definition>
+        <argsstring>(bool has_string, bool has_tensor)</argsstring>
+        <name>Observer</name>
+        <qualifiedname>open_spiel::Observer::Observer</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>has_string</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>has_tensor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="324" column="3" bodyfile="open_spiel/observer.h" bodystart="324" bodyend="327"/>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_1aeba70fb78b7502fb6c24182be2db861d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void open_spiel::Observer::WriteTensor</definition>
+        <argsstring>(const State &amp;state, int player, Allocator *allocator) const =0</argsstring>
+        <name>WriteTensor</name>
+        <qualifiedname>open_spiel::Observer::WriteTensor</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="classopen__spiel_1_1_allocator" kindref="compound">Allocator</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="330" column="16"/>
+        <referencedby refid="namespaceopen__spiel_1a03fc20c0c2c07f8c196ebe7dd9f0c251" compoundref="observer_8cc" startline="380" endline="389">open_spiel::ObserverTensorShape</referencedby>
+        <referencedby refid="namespaceopen__spiel_1a91fe25f1b974060eec9ada51abe43b78" compoundref="observer_8cc" startline="373" endline="378">open_spiel::TensorFromObserver</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_1a637a14de332323ccebb1a06bce37bad0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string open_spiel::Observer::StringFrom</definition>
+        <argsstring>(const State &amp;state, int player) const =0</argsstring>
+        <name>StringFrom</name>
+        <qualifiedname>open_spiel::Observer::StringFrom</qualifiedname>
+        <param>
+          <type>const <ref refid="classopen__spiel_1_1_state" kindref="compound">State</ref> &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="335" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_1a094466022685d596b3b440a751d55e7f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::Observer::HasString</definition>
+        <argsstring>() const</argsstring>
+        <name>HasString</name>
+        <qualifiedname>open_spiel::Observer::HasString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="338" column="8" bodyfile="open_spiel/observer.h" bodystart="338" bodyend="338"/>
+        <references refid="classopen__spiel_1_1_observer_1a67c3fc2d22bb77735978d452381d5233" compoundref="observer_8h" startline="345">has_string_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_1a870173def77c964c3b7eeb8d23b54c35" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool open_spiel::Observer::HasTensor</definition>
+        <argsstring>() const</argsstring>
+        <name>HasTensor</name>
+        <qualifiedname>open_spiel::Observer::HasTensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="339" column="8" bodyfile="open_spiel/observer.h" bodystart="339" bodyend="339"/>
+        <references refid="classopen__spiel_1_1_observer_1a0308fe873fdf62349a48a721db6f0a38" compoundref="observer_8h" startline="346">has_tensor_</references>
+      </memberdef>
+      <memberdef kind="function" id="classopen__spiel_1_1_observer_1a9793d10863a1aa1faa0c82a9f670b63f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual open_spiel::Observer::~Observer</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Observer</name>
+        <qualifiedname>open_spiel::Observer::~Observer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/observer.h" line="341" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>open_spiel::Observer</label>
+        <link refid="classopen__spiel_1_1_observer"/>
+      </node>
+    </collaborationgraph>
+    <location file="open_spiel/observer.h" line="322" column="1" bodyfile="open_spiel/observer.h" bodystart="322" bodyend="347"/>
+    <listofallmembers>
+      <member refid="classopen__spiel_1_1_observer_1a67c3fc2d22bb77735978d452381d5233" prot="protected" virt="non-virtual"><scope>open_spiel::Observer</scope><name>has_string_</name></member>
+      <member refid="classopen__spiel_1_1_observer_1a0308fe873fdf62349a48a721db6f0a38" prot="protected" virt="non-virtual"><scope>open_spiel::Observer</scope><name>has_tensor_</name></member>
+      <member refid="classopen__spiel_1_1_observer_1a094466022685d596b3b440a751d55e7f" prot="public" virt="non-virtual"><scope>open_spiel::Observer</scope><name>HasString</name></member>
+      <member refid="classopen__spiel_1_1_observer_1a870173def77c964c3b7eeb8d23b54c35" prot="public" virt="non-virtual"><scope>open_spiel::Observer</scope><name>HasTensor</name></member>
+      <member refid="classopen__spiel_1_1_observer_1a769cc10c3d25d370287fc875195bd974" prot="public" virt="non-virtual"><scope>open_spiel::Observer</scope><name>Observer</name></member>
+      <member refid="classopen__spiel_1_1_observer_1a637a14de332323ccebb1a06bce37bad0" prot="public" virt="pure-virtual"><scope>open_spiel::Observer</scope><name>StringFrom</name></member>
+      <member refid="classopen__spiel_1_1_observer_1aeba70fb78b7502fb6c24182be2db861d" prot="public" virt="pure-virtual"><scope>open_spiel::Observer</scope><name>WriteTensor</name></member>
+      <member refid="classopen__spiel_1_1_observer_1a9793d10863a1aa1faa0c82a9f670b63f" prot="public" virt="virtual"><scope>open_spiel::Observer</scope><name>~Observer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

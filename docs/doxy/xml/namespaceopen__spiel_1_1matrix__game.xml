@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceopen__spiel_1_1matrix__game" kind="namespace" language="C++">
+    <compoundname>open_spiel::matrix_game</compoundname>
+    <innerclass refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" prot="public">open_spiel::matrix_game::MatrixGame</innerclass>
+    <innerclass refid="classopen__spiel_1_1matrix__game_1_1_matrix_state" prot="public">open_spiel::matrix_game::MatrixState</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceopen__spiel_1_1matrix__game_1a95ed707adb1138fc2eb2f9819d62b0cb" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::matrix_game::kRowPlayer</definition>
+        <argsstring></argsstring>
+        <name>kRowPlayer</name>
+        <qualifiedname>open_spiel::matrix_game::kRowPlayer</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="34" column="22" bodyfile="open_spiel/matrix_game.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a86f9edf6a46adfaa02cc5e6b78aad581" compoundref="matrix__game_8h" startline="191" endline="198">open_spiel::matrix_game::MatrixState::ActionToString</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" compoundref="matrix__game_8h" startline="216" endline="223">open_spiel::matrix_game::MatrixState::DoApplyActions</referencedby>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a576a7bdcecbe5fc5a71b25a6304ec64c" compoundref="matrix__game_8h" startline="177" endline="187">open_spiel::matrix_game::MatrixState::LegalActions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceopen__spiel_1_1matrix__game_1a02db67a6c4c253329c156106f8600c4c" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int open_spiel::matrix_game::kColPlayer</definition>
+        <argsstring></argsstring>
+        <name>kColPlayer</name>
+        <qualifiedname>open_spiel::matrix_game::kColPlayer</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.h" line="35" column="22" bodyfile="open_spiel/matrix_game.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classopen__spiel_1_1matrix__game_1_1_matrix_state_1a71a33cd28dca59f6dd966954d60bb4fd" compoundref="matrix__game_8h" startline="216" endline="223">open_spiel::matrix_game::MatrixState::DoApplyActions</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceopen__spiel_1_1matrix__game_1ac598d47a7f8ba44a9ce78c3cb74488ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; open_spiel::matrix_game::FlattenMatrix</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;matrix_rows)</argsstring>
+        <name>FlattenMatrix</name>
+        <qualifiedname>open_spiel::matrix_game::FlattenMatrix</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>matrix_rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.cc" line="122" column="13" bodyfile="open_spiel/matrix_game.cc" bodystart="122" bodyend="145" declfile="open_spiel/matrix_game.h" declline="40" declcolumn="13"/>
+        <references refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" compoundref="spiel__utils_8h" startline="259">SPIEL_CHECK_EQ</references>
+        <references refid="spiel__utils_8h_1a948872aa56d9cd14a37c436d9b4d8760" compoundref="spiel__utils_8h" startline="256">SPIEL_CHECK_GT</references>
+        <referencedby refid="namespaceopen__spiel_1_1matrix__game_1ad0c53d489b3503a2ad022411e4604cdc" compoundref="matrix__game_8cc" startline="167" endline="181">CreateMatrixGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" kindref="compound">MatrixGame</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const MatrixGame &gt; open_spiel::matrix_game::CreateMatrixGame</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;row_player_utils, const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;col_player_utils)</argsstring>
+        <name>CreateMatrixGame</name>
+        <qualifiedname>open_spiel::matrix_game::CreateMatrixGame</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>row_player_utils</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>col_player_utils</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.cc" line="147" column="17" bodyfile="open_spiel/matrix_game.cc" bodystart="147" bodyend="163" declfile="open_spiel/matrix_game.h" declline="252" declcolumn="17"/>
+        <references refid="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" compoundref="matrix__game_8cc" startline="147" endline="163">CreateMatrixGame</references>
+        <references refid="spiel__utils_8h_1a948872aa56d9cd14a37c436d9b4d8760" compoundref="spiel__utils_8h" startline="256">SPIEL_CHECK_GT</references>
+        <referencedby refid="classopen__spiel_1_1tensor__game_1_1_tensor_game_1a71a2ca91924cdb74c953fc8a4533b6b7" compoundref="tensor__game_8h" startline="130" endline="137">open_spiel::tensor_game::TensorGame::AsMatrixGame</referencedby>
+        <referencedby refid="namespaceopen__spiel_1_1matrix__game_1ad0c53d489b3503a2ad022411e4604cdc" compoundref="matrix__game_8cc" startline="167" endline="181">CreateMatrixGame</referencedby>
+        <referencedby refid="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" compoundref="matrix__game_8cc" startline="147" endline="163">CreateMatrixGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1matrix__game_1ad0c53d489b3503a2ad022411e4604cdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" kindref="compound">MatrixGame</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const MatrixGame &gt; open_spiel::matrix_game::CreateMatrixGame</definition>
+        <argsstring>(const std::string &amp;short_name, const std::string &amp;long_name, const std::vector&lt; std::string &gt; &amp;row_names, const std::vector&lt; std::string &gt; &amp;col_names, const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;row_player_utils, const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;col_player_utils)</argsstring>
+        <name>CreateMatrixGame</name>
+        <qualifiedname>open_spiel::matrix_game::CreateMatrixGame</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>short_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>long_name</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>row_names</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>col_names</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>row_player_utils</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>col_player_utils</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.cc" line="167" column="17" bodyfile="open_spiel/matrix_game.cc" bodystart="167" bodyend="181" declfile="open_spiel/matrix_game.h" declline="232" declcolumn="17"/>
+        <references refid="namespaceopen__spiel_1_1matrix__game_1a490bbd5e0048fa156eed430b1c353d70" compoundref="matrix__game_8cc" startline="147" endline="163">CreateMatrixGame</references>
+        <references refid="namespaceopen__spiel_1_1matrix__game_1ac598d47a7f8ba44a9ce78c3cb74488ff" compoundref="matrix__game_8cc" startline="122" endline="145">FlattenMatrix</references>
+        <references refid="spiel__utils_8h_1abcb08ef83297cd8a69ac67d47cfa5da2" compoundref="spiel__utils_8h" startline="259">SPIEL_CHECK_EQ</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1matrix__game_1ab24442bf810708c1cf2408009ffc6c84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1matrix__game_1_1_matrix_game" kindref="compound">MatrixGame</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const MatrixGame &gt; open_spiel::matrix_game::CreateMatrixGame</definition>
+        <argsstring>(const std::string &amp;short_name, const std::string &amp;long_name, const std::vector&lt; std::string &gt; &amp;row_names, const std::vector&lt; std::string &gt; &amp;col_names, const std::vector&lt; double &gt; &amp;flat_row_utils, const std::vector&lt; double &gt; &amp;flat_col_utils)</argsstring>
+        <name>CreateMatrixGame</name>
+        <qualifiedname>open_spiel::matrix_game::CreateMatrixGame</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>short_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>long_name</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>row_names</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>col_names</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>flat_row_utils</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>flat_col_utils</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/matrix_game.cc" line="183" column="17" bodyfile="open_spiel/matrix_game.cc" bodystart="183" bodyend="211" declfile="open_spiel/matrix_game.h" declline="242" declcolumn="17"/>
+        <references refid="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8eab1ebb5017b01aead05321c8dd2107ab0">open_spiel::GameType::kDeterministic</references>
+        <references refid="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522aea21e6a5b3710e0b13334d892e2b8a4be3">open_spiel::GameType::kOneShot</references>
+        <references refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba0ffc281e20028439b1995e0fa983ffcb">open_spiel::GameType::kSimultaneous</references>
+        <references refid="structopen__spiel_1_1_game_type_1a5a5f739de73ade6cfe6961fd4a2f41a5a217dd2f6ef26065693bb5043fce241ea">open_spiel::GameType::kTerminal</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="open_spiel/matrix_game.cc" line="27" column="1"/>
+  </compounddef>
+</doxygen>

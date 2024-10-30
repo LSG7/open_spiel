@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="namespaceopen__spiel_1_1tensor__game" kind="namespace" language="C++">
+    <compoundname>open_spiel::tensor_game</compoundname>
+    <innerclass refid="classopen__spiel_1_1tensor__game_1_1_tensor_game" prot="public">open_spiel::tensor_game::TensorGame</innerclass>
+    <innerclass refid="classopen__spiel_1_1tensor__game_1_1_tensor_state" prot="public">open_spiel::tensor_game::TensorState</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceopen__spiel_1_1tensor__game_1a937748364dc4a23755602e432c8d4d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1tensor__game_1_1_tensor_game" kindref="compound">TensorGame</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const TensorGame &gt; open_spiel::tensor_game::CreateTensorGame</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;utils, const std::vector&lt; int &gt; &amp;shape)</argsstring>
+        <name>CreateTensorGame</name>
+        <qualifiedname>open_spiel::tensor_game::CreateTensorGame</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>utils</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.cc" line="94" column="17" bodyfile="open_spiel/tensor_game.cc" bodystart="94" bodyend="104" declfile="open_spiel/tensor_game.h" declline="246" declcolumn="17"/>
+        <references refid="namespaceopen__spiel_1_1tensor__game_1a937748364dc4a23755602e432c8d4d79" compoundref="tensor__game_8cc" startline="94" endline="104">CreateTensorGame</references>
+        <referencedby refid="namespaceopen__spiel_1_1tensor__game_1a937748364dc4a23755602e432c8d4d79" compoundref="tensor__game_8cc" startline="94" endline="104">CreateTensorGame</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceopen__spiel_1_1tensor__game_1aeb0f40454ae67a21ed86e2a88f09ab84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; const <ref refid="classopen__spiel_1_1tensor__game_1_1_tensor_game" kindref="compound">TensorGame</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; const TensorGame &gt; open_spiel::tensor_game::CreateTensorGame</definition>
+        <argsstring>(const std::string &amp;short_name, const std::string &amp;long_name, const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;action_names, const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;utils)</argsstring>
+        <name>CreateTensorGame</name>
+        <qualifiedname>open_spiel::tensor_game::CreateTensorGame</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>short_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>long_name</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;</type>
+          <declname>action_names</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+          <declname>utils</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="open_spiel/tensor_game.cc" line="109" column="17" bodyfile="open_spiel/tensor_game.cc" bodystart="109" bodyend="143" declfile="open_spiel/tensor_game.h" declline="235" declcolumn="17"/>
+        <references refid="structopen__spiel_1_1_game_type_1a1f22342e8a8c066323b49c0340a06d8eab1ebb5017b01aead05321c8dd2107ab0">open_spiel::GameType::kDeterministic</references>
+        <references refid="structopen__spiel_1_1_game_type_1a0b4230b668f857b0815bd55f11b522aea21e6a5b3710e0b13334d892e2b8a4be3">open_spiel::GameType::kOneShot</references>
+        <references refid="structopen__spiel_1_1_game_type_1a624349737f34cc67d0cf81fd7138c17ba0ffc281e20028439b1995e0fa983ffcb">open_spiel::GameType::kSimultaneous</references>
+        <references refid="structopen__spiel_1_1_game_type_1a5a5f739de73ade6cfe6961fd4a2f41a5a217dd2f6ef26065693bb5043fce241ea">open_spiel::GameType::kTerminal</references>
+        <references refid="spiel__utils_8h_1ac998e613afb013e8bd31b3da80f747ae" compoundref="spiel__utils_8h" startline="282" endline="285">SPIEL_CHECK_TRUE</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="open_spiel/tensor_game.cc" line="29" column="1"/>
+  </compounddef>
+</doxygen>

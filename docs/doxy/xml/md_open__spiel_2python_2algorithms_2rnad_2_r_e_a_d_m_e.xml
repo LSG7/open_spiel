@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="md_open__spiel_2python_2algorithms_2rnad_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_open__spiel_2python_2algorithms_2rnad_2_r_e_a_d_m_e</compoundname>
+    <title>README</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This folder contains an single process implementation of [R-NaD] (<ulink url="https://arxiv.org/pdf/2206.15378.pdf">https://arxiv.org/pdf/2206.15378.pdf</ulink>)</para>
+<para><itemizedlist>
+<listitem><para><computeroutput><ref refid="rnad_8py" kindref="compound">rnad.py</ref></computeroutput> contains a reference implementation of the actor behavior and the policy and value loss used in to train DeepNash. It uses much smaller network architecture (an MLP) and is only able to run on smaller games.</para>
+</listitem><listitem><para><computeroutput>rnad_nashconv_leduc.png</computeroutput> shows the evolution of the NashConv metric (a distance to the Nash equilibrium) as the learning progress.</para>
+</listitem></itemizedlist>
+</para>
+<para>To generate these plots we used the following parameters:</para>
+<para><table rows="21" cols="2"><row>
+<entry thead="yes"><para>Hyper-parameter   </para>
+</entry><entry thead="yes"><para>Value    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>policy_network_layers   </para>
+</entry><entry thead="no"><para>(256, 256)    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>eta_reward_transform   </para>
+</entry><entry thead="no"><para>0.2    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>learning_rate   </para>
+</entry><entry thead="no"><para>5e-5    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>clip_gradient   </para>
+</entry><entry thead="no"><para>10e4    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>beta_neurd   </para>
+</entry><entry thead="no"><para>2.0    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>clip_neurd   </para>
+</entry><entry thead="no"><para>10e4    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>b1_adam   </para>
+</entry><entry thead="no"><para>0.0    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>b2_adam   </para>
+</entry><entry thead="no"><para>0.999    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>epsilon_adam   </para>
+</entry><entry thead="no"><para>10e-8    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>target_network_avg   </para>
+</entry><entry thead="no"><para>10e-3    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>rho_vtrace   </para>
+</entry><entry thead="no"><para>np.inf    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>c_vtrace   </para>
+</entry><entry thead="no"><para>1.0    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>trajectory_max   </para>
+</entry><entry thead="no"><para>10    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>batch_size   </para>
+</entry><entry thead="no"><para>512    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>entropy_schedule_size   </para>
+</entry><entry thead="no"><para>(50000,)    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>entropy_schedule_repeats   </para>
+</entry><entry thead="no"><para>(1,)    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>state_representation   </para>
+</entry><entry thead="no"><para>&quot;info_set&quot;    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>policy_option.threshold   </para>
+</entry><entry thead="no"><para>0.03    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>policy_option.discretization   </para>
+</entry><entry thead="no"><para>32    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>finetune_from   </para>
+</entry><entry thead="no"><para>-1   </para>
+</entry></row>
+</table>
+</para>
+<para>Finally, the seed used were in [0, 1, 2, 3, 4] and the learning lasted for at most than 7M steps. </para>
+    </detaileddescription>
+    <location file="open_spiel/python/algorithms/rnad/README.md"/>
+  </compounddef>
+</doxygen>
